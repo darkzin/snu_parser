@@ -11,14 +11,18 @@ DEPS=scanner.h \
 		 data.h \
 		 symtab.h \
 		 ast.h \
-		 ir.h
+		 ir.h \
+		 first.h \
+		 follow.h
 SCANNER=scanner.cpp
 PARSER=parser.cpp \
 			 type.cpp \
 			 data.cpp \
 			 symtab.cpp \
 			 ast.cpp \
-			 ir.cpp
+			 ir.cpp \
+			 first.cpp \
+			 follow.cpp
 
 DEPS_=$(patsubst %,$(SRC_DIR)/%,$(DEPS))
 LIB_SCANNER=$(patsubst %.cpp,$(LIB_DIR)/%.o,$(SCANNER))

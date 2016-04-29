@@ -104,16 +104,27 @@ class CParser {
     CAstStatIf*       ifStatement(CAstScope *s);
     CAstStatWhile*    whileStatement(CAstScope *s);
     CAstStatement*    statSequence(CAstScope *s);
+    CAstStatCall*     procedureCall(CAstScope *s, CToken *identToken = NULL);
 
-    CAstStatAssign*   assignment(CAstScope *s);
+    CAstStatAssign*   assignment(CAstScope *s, CToken *identToken = NULL);
 
-    CAstExpression*   qualident(CAstScope *s);
+    CAstDesignator*   qualident(CAstScope *s, CToken *identToken = NULL);
     CAstExpression*   expression(CAstScope *s);
     CAstExpression*   simpleexpr(CAstScope *s);
     CAstExpression*   term(CAstScope *s);
     CAstExpression*   factor(CAstScope *s);
 
-    CAstConstant*     number(void);
+    CAstFunctionCall* functionCall(CAstScope *s, CToken *identToken = NULL);
+
+    const CType*      type(const CType *innerType);
+    void              varDeclaration(CAstScope *s);
+    void              varDecl(CAstScope *s, CSymProc *procedureSymbol = NULL);
+    void              subroutineDecl(CAstScope *s);
+
+    CAstConstant*     numberConst(void);
+    CAstConstant*     boolConst(void);
+    CAstConstant*     charConst(void);
+    CAstStringConstant* stringConst(CAstScope *s);
 
     /// @}
 

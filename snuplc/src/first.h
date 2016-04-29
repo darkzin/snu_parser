@@ -25,3 +25,4 @@ namespace First {
   bool FormalParam(EToken type);
   bool SubroutineBody(EToken type);
 }
+#endif // __SnuPL_FIRST_H__

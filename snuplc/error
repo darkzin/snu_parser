@@ -1,0 +1,14 @@
+obj/parser.o: In function `CParser::module()':
+/home/darkzin/Projects/snu_parser/snuplc/src/parser.cpp:193: undefined reference to `Follow::SubroutineDecl(EToken)'
+obj/parser.o: In function `CParser::factor(CAstScope*)':
+/home/darkzin/Projects/snu_parser/snuplc/src/parser.cpp:320: undefined reference to `Follow::Qualident(EToken)'
+obj/parser.o: In function `CParser::returnStatement(CAstScope*)':
+/home/darkzin/Projects/snu_parser/snuplc/src/parser.cpp:659: undefined reference to `First::Expression(EToken)'
+obj/parser.o: In function `CParser::varDeclaration(CAstScope*)':
+/home/darkzin/Projects/snu_parser/snuplc/src/parser.cpp:760: undefined reference to `First::VarDeclaration(EToken)'
+/home/darkzin/Projects/snu_parser/snuplc/src/parser.cpp:763: undefined reference to `First::VarDecl(EToken)'
+/home/darkzin/Projects/snu_parser/snuplc/src/parser.cpp:770: undefined reference to `Follow::VarDeclaration(EToken)'
+obj/parser.o: In function `CParser::subroutineDecl(CAstScope*)':
+/home/darkzin/Projects/snu_parser/snuplc/src/parser.cpp:913: undefined reference to `First::VarDecl(EToken)'
+collect2: error: ld returned 1 exit status
+make: *** [test_parser] Error 1

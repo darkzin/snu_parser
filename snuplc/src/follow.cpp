@@ -63,6 +63,9 @@ namespace Follow {
     return VarDeclSequence(type) ||
            (type == tSemicolon);
   }
+  bool Type(EToken type){
+    return VarDecl(type);
+  }
   bool SubroutineDecl(EToken type){
     return (type == tBegin);
   }
