@@ -1,0 +1,29 @@
+
+/home/darkzin/Projects/snu_parser/test/parser/hell/call_latter_defined_function.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_return.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon10.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon11.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon12.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon13.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon14.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon15.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon16.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon17.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon1.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon2.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon3.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon4.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon5.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon6.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon7.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon8.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon9.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/procedure_return.mod
+/home/darkzin/Projects/snu_parser/test/parser/hell/recursive_call01.mod
+105,106c105,106
+<               or <bool>
+<                 or <bool>
+---
+>               or <INVALID>
+>                 or <INVALID>
+/home/darkzin/Projects/snu_parser/test/parser/hell/reserved_keywords01.mod

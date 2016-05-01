@@ -1,0 +1,9 @@
+digraph AST {
+  graph [fontname="Times New Roman",fontsize=10];
+  node  [fontname="Courier New",fontsize=10];
+  edge  [fontname="Times New Roman",fontsize=10];
+
+  node0 [label="m calling_integer",shape=box];
+  node1 [label="call a",shape=box];
+  node0 -> node1 [style=dotted];
+}
