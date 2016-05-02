@@ -1,4 +1,127 @@
 
+/home/darkzin/Projects/snu_parser/test/parser/array01.mod
+/home/darkzin/Projects/snu_parser/test/parser/array02.mod
+/home/darkzin/Projects/snu_parser/test/parser/array03.mod
+/home/darkzin/Projects/snu_parser/test/parser/array04.mod
+/home/darkzin/Projects/snu_parser/test/parser/array05.mod
+/home/darkzin/Projects/snu_parser/test/parser/array06.mod
+/home/darkzin/Projects/snu_parser/test/parser/array07.mod
+/home/darkzin/Projects/snu_parser/test/parser/array.mod
+16c16
+<           [ *addB(<ptr(4) to <array  of <array  of <int>>>>,<ptr(4) to <array  of <array  of <int>>>>,<ptr(4) to <array  of <array  of <int>>>>) --> <NULL>           ]
+---
+>           [ *addB(<ptr(4) to <array 5  of <array 5  of <int>>>>,<ptr(4) to <array 5  of <array 5  of <int>>>>,<ptr(4) to <array 5  of <array 5  of <int>>>>) --> <NULL>           ]
+72,74c72,74
+<               [ %A        <ptr(4) to <array  of <array  of <int>>>>               ]
+<               [ %B        <ptr(4) to <array  of <array  of <int>>>>               ]
+<               [ %C        <ptr(4) to <array  of <array  of <int>>>>               ]
+---
+>               [ %A        <ptr(4) to <array 5  of <array 5  of <int>>>>               ]
+>               [ %B        <ptr(4) to <array 5  of <array 5  of <int>>>>               ]
+>               [ %C        <ptr(4) to <array 5  of <array 5  of <int>>>>               ]
+96c96
+<                   [ %C        <ptr(4) to <array  of <array  of <int>>>> ] <int>
+---
+>                   [ %C        <ptr(4) to <array 5  of <array 5  of <int>>>> ] <int>
+100c100
+<                     [ %A        <ptr(4) to <array  of <array  of <int>>>> ] <int>
+---
+>                     [ %A        <ptr(4) to <array 5  of <array 5  of <int>>>> ] <int>
+103c103
+<                     [ %B        <ptr(4) to <array  of <array  of <int>>>> ] <int>
+---
+>                     [ %B        <ptr(4) to <array 5  of <array 5  of <int>>>> ] <int>
+/home/darkzin/Projects/snu_parser/test/parser/char01.mod
+/home/darkzin/Projects/snu_parser/test/parser/char02.mod
+/home/darkzin/Projects/snu_parser/test/parser/char03.mod
+/home/darkzin/Projects/snu_parser/test/parser/char04.mod
+/home/darkzin/Projects/snu_parser/test/parser/string01.mod
+/home/darkzin/Projects/snu_parser/test/parser/string02.mod
+/home/darkzin/Projects/snu_parser/test/parser/test01.mod
+/home/darkzin/Projects/snu_parser/test/parser/test02.mod
+/home/darkzin/Projects/snu_parser/test/parser/test03.mod
+/home/darkzin/Projects/snu_parser/test/parser/test04.mod
+/home/darkzin/Projects/snu_parser/test/parser/test05.mod
+/home/darkzin/Projects/snu_parser/test/parser/test06.mod
+69,71c69,71
+<             return <bool>
+<               not <bool>
+<                 or <bool>
+---
+>             return <INVALID>
+>               not <INVALID>
+>                 or <INVALID>
+78c78
+<                   and <bool>
+---
+>                   and <INVALID>
+112,113c112,113
+<               and <bool>
+<                 and <bool>
+---
+>               and <INVALID>
+>                 and <INVALID>
+/home/darkzin/Projects/snu_parser/test/parser/strange/arrayaccessing_nonarray.mod
+28,29c28,29
+<             := <int>
+<               [ @a        <int> ] <int>
+---
+>             := <INVALID>
+>               [ @a        <int> ] <INVALID>
+31c31
+<               [ %A        <int> ] <int>
+---
+>               [ %A        <int> ] <INVALID>
+/home/darkzin/Projects/snu_parser/test/parser/strange/arraylength_notnumber.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/array_out_of_bounds.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/assign_to_undefined.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/calling_integer.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/char_too_long.mod
+2d1
+< got 9:10: tUndefined (\"\'\" expected after character constant)
+/home/darkzin/Projects/snu_parser/test/parser/strange/different_dimensions.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/function_name_different.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/global_local_different_type.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/invalid_invalid_invalid.mod
+25,27c25,27
+<             return <bool>
+<               = <bool>
+<                 add <int>
+---
+>             return <INVALID>
+>               = <INVALID>
+>                 add <INVALID>
+30c30
+<                 add <int>
+---
+>                 add <INVALID>
+/home/darkzin/Projects/snu_parser/test/parser/strange/less_arg.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/module_name_different.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/more_arg.mod
+2,5d1
+< parse error : at 18:3 : not match a number of parameters.
+< 
+< 
+< Done.
+/home/darkzin/Projects/snu_parser/test/parser/strange/multiple_procedure_declaration.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/multiple_type_formalparam.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/multiple_variable_declaration2.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/multiple_variable_declaration3.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/multiple_variable_declaration4.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/multiple_variable_declaration.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/never_ending_char.mod
+2d1
+< got 7:16: tUndefined (\"\'\" expected after character constant)
+/home/darkzin/Projects/snu_parser/test/parser/strange/never_ending_string.mod
+2d1
+< got 7:12: tUndefined (string constant not closed)
+/home/darkzin/Projects/snu_parser/test/parser/strange/null_string.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/passing_dereferenced_array.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/procedure_name_different.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/procedure_variable_samename.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/strange_stuff_in_module.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/undeclared_function.mod
+/home/darkzin/Projects/snu_parser/test/parser/strange/wrong_argument_type.mod
 /home/darkzin/Projects/snu_parser/test/parser/hell/call_latter_defined_function.mod
 /home/darkzin/Projects/snu_parser/test/parser/hell/invalid_return.mod
 /home/darkzin/Projects/snu_parser/test/parser/hell/invalid_semicolon10.mod

@@ -128,6 +128,11 @@ class CParser {
 
     /// @}
 
+    // utility functions.
+    /// @brief utility function to peek next token.
+    /// @retval next token.
+    CToken _NextToken(); ///< Peek next token.
+
 
     CScanner     *_scanner;       ///< CScanner instance
     CAstModule   *_module;        ///< root node of the program
