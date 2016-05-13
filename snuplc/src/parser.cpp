@@ -280,9 +280,13 @@ CAstDesignator* CParser::qualident(CAstScope *s, CToken *identToken) {
     return NULL;
   }
 
-  // If next token is not left braket,
+  // ArrayDesignator has two approch.
+  // 1. Pointer of Array (formal parameter).
+  // 2. Just Array (local variable, global variable).
+  //
+  // If next token is not left braket and symbol also scalar type,
   // this identifier is scalar type.
-  if(_NextToken().GetType() != tLBrak) {
+  if(_NextToken().GetType() != tLBrak && identSymbol->GetDataType()->IsScalar()) {
     lhs = new CAstDesignator(identToken, identSymbol);
   }
 
@@ -386,7 +390,7 @@ CAstExpression* CParser::factor(CAstScope *s) {
 
     // Handling Error.
   default:
-    cout << "got " << _NextToken() << endl;
+    //cout << "got " << _NextToken() << endl;
     SetError(_NextToken(), "factor expected.");
     break;
   }
@@ -468,12 +472,14 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
   CAstUnaryOp *unaryExpression = NULL;
   CAstConstant *number = NULL;
   CToken unaryOpToken, nextToken;
-  EToken nextTokenType, unaryOpTokenType = _NextToken().GetType();
+  EToken nextTokenType;
   EOperation unaryOp, binaryOp;
+
+  nextTokenType = _NextToken().GetType();
 
   // ["+"|"-"]
   // decide which operation we use.
-  if(unaryOpTokenType == tPlusMinus) {
+  if(nextTokenType == tPlusMinus) {
     Consume(tPlusMinus, &unaryOpToken);
 
     if(unaryOpToken.GetValue() == "+"){
@@ -489,8 +495,10 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
     // Negative sign with number is negative number,
     // So change sign of number.
     if(CAstConstant *number = dynamic_cast<CAstConstant *>(n)){
-      int value = (unaryOp == opNeg ? -1 : 1) * ((CAstConstant *)number)->GetValue();
-      n = new CAstConstant(unaryOpToken, n->GetType(), value);
+      long long originalValue = number->GetValue();
+      long long value = ((unaryOp == opNeg ? -1 : 1) * originalValue);
+      //n = new CAstConstant(unaryOpToken, n->GetType(), value);
+      number->SetValue(value);
     }
     // Else neg operation.
     else {
@@ -607,12 +615,13 @@ CAstStatAssign* CParser::assignment(CAstScope *s, CToken *identToken) {
   // }
   //
   // lhs = qualident, rhs = expression.
+  CToken assign;
   CAstDesignator *lhs = qualident(s, identToken);
-  Consume(tAssign);
+  Consume(tAssign, &assign);
 
   CAstExpression *rhs = expression(s);
 
-  return new CAstStatAssign(*identToken, lhs, rhs);
+  return new CAstStatAssign(assign, lhs, rhs);
 }
 
 CAstFunctionCall* CParser::functionCall(CAstScope *s, CToken* identToken) {
@@ -634,12 +643,10 @@ CAstFunctionCall* CParser::functionCall(CAstScope *s, CToken* identToken) {
   //
   CToken identifier;
   CAstFunctionCall *funcCall;
-  CAstExpression *actualParam;
 
   CSymtab *symbolTable = s->GetSymbolTable();
   const CSymProc *subroutineSymbol;
   const CSymParam *paramSymbol = NULL;
-  const CType *actualParamType;
 
   int index = 0, paramCount = 0;
 
@@ -674,53 +681,32 @@ CAstFunctionCall* CParser::functionCall(CAstScope *s, CToken* identToken) {
   // handling function call.
   funcCall = new CAstFunctionCall(*identToken, subroutineSymbol);
 
-  // If function has no param, just close the parentheses and return.
-  if(subroutineSymbol->GetNParams() == 0) {
+  // If function called without params, check whether a size of formal params is zero.
+  // If not, It is error.
+  if (_NextToken().GetType() == tRParens) {
+    // If function has no param, just close the parentheses and return.
     Consume(tRParens);
     return funcCall;
   }
 
   // Else function has params, so check expressions.
   // [ expression
-  actualParam = expression(s);
+  funcCall->AddArg(expression(s));
   paramCount++;
 
-  // if a number of params is greater than a number of formal params,
-  // It is error because a number of params should be equal as formal params.
-  if(paramCount > subroutineSymbol->GetNParams()) {
-    SetError(identifier, "not match a number of parameters.");
-    return NULL;
-  }
-
-  // If param is array and It is not open array, It needs dereferecing.
-  // So we must use special operation.
-  actualParamType = actualParam->GetType();
-  if(actualParamType->IsArray() && ((CArrayType *)actualParamType)->GetNElem() != -1){
-    actualParam = new CAstSpecialOp(identifier, opAddress, actualParam);
-  }
 
   // then add param to function.
-  funcCall->AddArg(actualParam);
 
   // { "," expression }
   while(_NextToken().GetType() == tComma){
     Consume(tComma);
-    actualParam = expression(s);
+    funcCall->AddArg(expression(s));
     paramCount++;
-    if(paramCount > subroutineSymbol->GetNParams()) {
-      SetError(identifier, "not match a number of parameters.");
-      break;
-    }
-
-    actualParamType = actualParam->GetType();
-    if(actualParamType->IsArray() && ((CArrayType *)actualParamType)->GetNElem() != -1){
-      actualParam = new CAstSpecialOp(identifier, opAddress, actualParam);
-    }
-    funcCall->AddArg(actualParam);
   }
 
   // ")"
   Consume(tRParens);
+
   return funcCall;
 }
 
@@ -944,7 +930,7 @@ void CParser::varDeclaration(CAstScope *s) {
   }
 }
 
-const CType* CParser::type(const CType *innerType) {
+const CType* CParser::type(const CType *innerType, CToken *typeToken) {
   //
   // type := basetype | type "[" [ number ] "]".
   // basetype := "boolean" | "char" | "integer"
@@ -955,7 +941,76 @@ const CType* CParser::type(const CType *innerType) {
   //
   CTypeManager *tm = CTypeManager::Get();
   const CType *varType = innerType;
-  CToken nextToken = _NextToken();
+  CToken nextToken = _NextToken(), numberToken;
+
+  // Return type using type manager.
+  // We don't know how many dimension is required,
+  // so handle array dimension recursively.
+  switch(nextToken.GetType()) {
+  // boolean
+  case tBoolean:
+    if(typeToken != NULL) Consume(tBoolean, typeToken);
+    else Consume(tBoolean);
+    varType = type(tm->GetBool());
+    break;
+  // char
+  case tChar:
+    if(typeToken != NULL) Consume(tChar, typeToken);
+    else Consume(tChar);
+    varType = type(tm->GetChar());
+    break;
+  // integer
+  case tInteger:
+    if(typeToken != NULL) Consume(tInteger, typeToken);
+    else Consume(tInteger);
+    varType = type(tm->GetInt());
+    break;
+
+  // "[" number "]"
+    // "["
+    // It means there is a dimension.
+  case tLBrak:
+    Consume(tLBrak);
+    // If innerType is not null,
+    // then we make a dimension of innerType.
+    if(innerType != NULL) {
+      nextToken = _NextToken();
+      int numberOfElement = 0;
+
+      // number
+      Consume(tNumber, &numberToken);
+      numberOfElement = atoi(nextToken.GetValue().c_str());
+      if (numberOfElement < 0) {
+        SetError(numberToken, "index of array should bigger than zero.");
+      }
+      // "]"
+      Consume(tRBrak);
+
+      varType = tm->GetArray(numberOfElement, type(innerType));
+      break;
+    }
+
+  default:
+    if(!Follow::Type(nextToken.GetType())) {
+      SetError(nextToken, "type expected.");
+    }
+  }
+
+  return varType;
+}
+
+const CType* CParser::typep(const CType *innerType) {
+  //
+  // type := basetype | type "[" [ number ] "]".
+  // basetype := "boolean" | "char" | "integer"
+  //
+  // FIRST(type) = { tBoolean, tChar, tInteger }
+  //
+  // FOLLOW(type) = { }
+  //
+  CTypeManager *tm = CTypeManager::Get();
+  const CType *varType = innerType;
+  CToken nextToken = _NextToken(), numberToken;
 
   // Return type using type manager.
   // We don't know how many dimension is required,
@@ -964,17 +1019,17 @@ const CType* CParser::type(const CType *innerType) {
   // boolean
   case tBoolean:
     Consume(tBoolean);
-    varType = type(tm->GetBool());
+    varType = typep(tm->GetBool());
     break;
   // char
   case tChar:
     Consume(tChar);
-    varType = type(tm->GetChar());
+    varType = typep(tm->GetChar());
     break;
   // integer
   case tInteger:
     Consume(tInteger);
-    varType = type(tm->GetInt());
+    varType = typep(tm->GetInt());
     break;
 
   // "[" number "]"
@@ -997,13 +1052,16 @@ const CType* CParser::type(const CType *innerType) {
       // [ number ]
       else {
         // number
-        Consume(tNumber);
+        Consume(tNumber, &numberToken);
         numberOfElement = atoi(nextToken.GetValue().c_str());
+        if (numberOfElement < 0) {
+          SetError(numberToken, "index of array should bigger than zero.");
+        }
         // "]"
         Consume(tRBrak);
       }
 
-      varType = tm->GetArray(numberOfElement, type(innerType));
+      varType = tm->GetArray(numberOfElement, typep(innerType));
       break;
     }
 
@@ -1013,9 +1071,15 @@ const CType* CParser::type(const CType *innerType) {
     }
   }
 
+  // If innerType is null, and final result is array,
+  // this means this turn is the top of the recursive process,
+  // and final result needs to be wrapped by pointer.
+  if(innerType == NULL && varType->IsArray()) {
+    varType = tm->GetPointer(varType);
+  }
+
   return varType;
 }
-
 
 void CParser::varDecl(CAstScope *s, CSymProc *procedureSymbol) {
   //
@@ -1051,7 +1115,13 @@ void CParser::varDecl(CAstScope *s, CSymProc *procedureSymbol) {
 
   // declare identifiers.
   int size = identTokens.size();
-  varType = type(NULL);
+  
+  if(procedureSymbol != NULL){
+    varType = typep(NULL);
+  }
+  else {
+    varType = type(NULL);
+  }
 
   for(int i = 0; i < size; i++){
     // check whether a variable is already declared.
@@ -1066,9 +1136,6 @@ void CParser::varDecl(CAstScope *s, CSymProc *procedureSymbol) {
     if(procedureSymbol != NULL) {
       // if var type is array, this is wrapped with pointer type.
       // because paramter of array should be pointer(reference) of array.
-      if(varType->IsArray()) {
-        varType = CTypeManager::Get()->GetPointer(varType);
-      }
       symbol = new CSymParam(i, identTokens[i].GetValue(), varType);
       procedureSymbol->AddParam(symbol);
       symbolTable->AddSymbol(symbol);
@@ -1091,7 +1158,8 @@ void CParser::subroutineDecl(CAstScope *s) {
   // FOLLOW(subroutineDecl) = { tBegin }
   //
   CTypeManager *tm = CTypeManager::Get();
-  CToken classToken, identToken, endIdentToken;
+  CToken classToken, identToken, endIdentToken, typeToken;
+  const CType *returnType;
 
   // (procedureDecl | functionDecl)
   // "procedure" or "function"
@@ -1141,7 +1209,13 @@ void CParser::subroutineDecl(CAstScope *s) {
   // If this is function declaration, set type.
   if(classToken.GetType() == tFunction) {
     Consume(tColon);
-    procedureSymbol->SetDataType(type(NULL));
+    returnType = type(NULL, &typeToken);
+    if(!returnType->IsScalar()) {
+      SetError(typeToken, "invalid composite type for function.");
+    }
+    else {
+      procedureSymbol->SetDataType(returnType);
+    }
   }
   Consume(tSemicolon);
 

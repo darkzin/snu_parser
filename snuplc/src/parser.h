@@ -116,7 +116,8 @@ class CParser {
 
     CAstFunctionCall* functionCall(CAstScope *s, CToken *identToken = NULL);
 
-    const CType*      type(const CType *innerType);
+    const CType*      type(const CType *innerType, CToken *typeToken = NULL);
+    const CType*      typep(const CType *innerType);
     void              varDeclaration(CAstScope *s);
     void              varDecl(CAstScope *s, CSymProc *procedureSymbol = NULL);
     void              subroutineDecl(CAstScope *s);

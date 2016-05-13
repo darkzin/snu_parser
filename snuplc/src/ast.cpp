@@ -167,6 +167,22 @@ bool CAstScope::TypeCheck(CToken *t, string *msg) const
 {
   bool result = true;
 
+  try {
+    CAstStatement *s = _statseq;
+    while (result && (s != NULL)) {
+      result = s->TypeCheck(t, msg);
+      s = s->GetNext();
+    }
+  
+    vector<CAstScope*>::const_iterator it = _children.begin();
+    while (result && (it != _children.end())) {
+      result = (*it)->TypeCheck(t, msg);
+      it++;
+    }
+  } catch (...) {
+    result = false;
+  }
+
   return result;
 }
 
@@ -378,6 +394,38 @@ CAstExpression* CAstStatAssign::GetRHS(void) const
 
 bool CAstStatAssign::TypeCheck(CToken *t, string *msg) const
 {
+  const CType *lhsType = _lhs->GetType(), *rhsType = _rhs->GetType();
+  stringstream ss;
+
+  // First, check types of right operand and left operand.
+  if(!GetLHS()->TypeCheck(t, msg)) return false;
+  if(!GetRHS()->TypeCheck(t, msg)) return false;
+
+  // If both operand types are array, It means 'array := array'.
+  // SNUPL/1 does not supported assignments to compound types.
+  if (lhsType->IsArray() && rhsType->IsArray()) {
+    if (t != NULL) *t = GetToken();
+    if (msg != NULL) {
+      ss << "assignments to compound types are not supported." << endl;
+      ss << "  LHS: " << lhsType << endl;
+      ss << "  RHS: " << rhsType;
+      *msg = ss.str();
+    }
+    return false;
+  }
+
+  // assignment of incompatible types is not supported.
+  else if (!lhsType->Match(rhsType)) {
+    if (t != NULL) *t = GetToken();
+    if (msg != NULL) {
+      ss << "incompatible types in assignment:" << endl;
+      ss << "  LHS: " << lhsType << endl;
+      ss << "  RHS: " << rhsType;
+      *msg = ss.str();
+    }
+    return false;
+  } 
+
   return true;
 }
 
@@ -494,11 +542,40 @@ CAstExpression* CAstStatReturn::GetExpression(void) const
 
 bool CAstStatReturn::TypeCheck(CToken *t, string *msg) const
 {
+  // These code are exactly same as example in document.
+  const CType *st = GetScope()->GetType();
+  CAstExpression *e = GetExpression();
+
+  if (st->Match(CTypeManager::Get()->GetNull())) {
+    if (e != NULL) {
+      if (t != NULL) *t = e->GetToken();
+      if (msg != NULL) *msg = "superfluous expression after return.";
+      return false;
+    }
+  } else {
+    if (e == NULL) {
+      if (t != NULL) *t = GetToken();
+      if (msg != NULL) *msg = "expression expected after return.";
+      return false;
+    }
+
+    if (!e->TypeCheck(t, msg)) return false;
+
+    if (!st->Match(e->GetType())) {
+      if (t != NULL) *t = e->GetToken();
+      if (msg != NULL) *msg = "return type mismatch.";
+      return false;
+    }
+  }
+
   return true;
 }
 
 const CType* CAstStatReturn::GetType(void) const
 {
+  // If return statement have a expression,
+  // the type of expression is return statement type.
+  // If not, return statement type is null.
   const CType *t = NULL;
 
   if (GetExpression() != NULL) {
@@ -576,6 +653,13 @@ CAstStatement* CAstStatIf::GetElseBody(void) const
 
 bool CAstStatIf::TypeCheck(CToken *t, string *msg) const
 {
+  // Condition of if statement must be bool type.
+  // So check the type of condition.
+  if (!GetCondition()->GetType()->Match(CTypeManager::Get()->GetBool())) {
+    if (t != NULL) *t = GetCondition()->GetToken();
+    if (msg != NULL) *msg = "boolean expression expected.";
+    return false;
+  }
   return true;
 }
 
@@ -676,6 +760,13 @@ CAstStatement* CAstStatWhile::GetBody(void) const
 
 bool CAstStatWhile::TypeCheck(CToken *t, string *msg) const
 {
+  // Condition of if statement must be bool type, same as if statement.
+  // So check the type of condition.
+  if (!GetCondition()->GetType()->Match(CTypeManager::Get()->GetBool())) {
+    if (t != NULL) *t = GetCondition()->GetToken();
+    if (msg != NULL) *msg = "boolean expression expected.";
+    return false;
+  }
   return true;
 }
 
@@ -798,6 +889,50 @@ CAstExpression* CAstBinaryOp::GetRight(void) const
 
 bool CAstBinaryOp::TypeCheck(CToken *t, string *msg) const
 {
+  stringstream ss;
+  const CType *lhs, *rhs;
+  lhs = GetLeft()->GetType();
+  rhs = GetRight()->GetType();
+  EOperation oper = GetOperation();
+
+  // First, check whether right and left operand have a right types.
+  if (!GetLeft()->TypeCheck(t, msg)) return false;
+  if (!GetRight()->TypeCheck(t, msg)) return false;
+
+  // Second, right and left operand must have same type,
+  // because we don't support type casting. So check that.
+  if (!lhs->Match(rhs)) {
+    if (t != NULL) *t = GetToken();
+    if (msg != NULL) {
+      ss << oper << ": type mismatch." << endl;
+      ss << "  left  operand: " << lhs << endl;
+      ss << "  right operand: " << rhs;
+      *msg = ss.str();
+    }
+    return false;
+  }
+
+  // If operand's types are same,
+  // the type of binaryop depends on the operation.
+  // The semantics of the different operations for the three types are in the document.
+  if(lhs->IsInt() && rhs->IsInt()) {
+    if ((oper == opAnd) || (oper == opOr) || (oper == opNot))
+      return false;
+  }
+  if(lhs->IsChar() && rhs->IsChar()) {
+    if ((oper == opAdd)        || (oper == opSub)         ||
+        (oper == opMul)        || (oper == opDiv)         ||
+        (oper == opAnd)        || (oper == opOr)
+      ) return false;
+  }
+  if(lhs->IsBoolean() && rhs->IsBoolean()) {
+    if ((oper == opAdd)        || (oper == opSub)         ||
+        (oper == opMul)        || (oper == opDiv)         ||
+        (oper == opLessThan)   || (oper == opLessEqual)   ||
+        (oper == opBiggerThan) || (oper == opBiggerEqual)
+        ) return false;
+  }
+
   return true;
 }
 
@@ -809,6 +944,9 @@ const CType* CAstBinaryOp::GetType(void) const
   rhs = GetRight()->GetType();
   EOperation oper = GetOperation();
 
+  // the type of binaryop depends on the operation.
+  // The semantics of the different operations for the three types are in the document.
+  // If operand's types are not same, this statement will work incorrectly.
   if(
       ((lhs->IsInt() || lhs->IsChar()) &&
       ((oper == opEqual)      || (oper == opNotEqual)    ||
@@ -816,9 +954,8 @@ const CType* CAstBinaryOp::GetType(void) const
        (oper == opBiggerThan) || (oper == opBiggerEqual)))
     ||
     (lhs->IsBoolean() &&
-    ((oper == opAnd)      || (oper == opOr)    ||
-     (oper == opNot)      || (oper == opEqual) ||
-     (oper == opNotEqual)))){
+    ((oper == opAnd)   || (oper == opOr)    ||
+     (oper == opEqual) || (oper == opNotEqual)))){
     return tm->GetBool();
   }
   else {
@@ -891,11 +1028,34 @@ CAstExpression* CAstUnaryOp::GetOperand(void) const
 
 bool CAstUnaryOp::TypeCheck(CToken *t, string *msg) const
 {
-  return true;
+  const CType *type = GetOperand()->GetType();
+  EOperation oper = GetOperation();
+
+  // First, check that operand expression has right type.
+  if (!GetOperand()->TypeCheck(t, msg)) return false;
+
+  // If operand type is integer, we allow only two operation,
+  // plus and minus.
+  // But this case will be processed by parser,
+  // as positive, or negitive integer constant.
+  else if(type->IsInt()) {
+    if ((oper == opPos) || (oper == opNeg)) return true;
+  }
+
+  // If operand expression type is boolean,
+  // and the operation is Not('!'),
+  // boolean type can be changed by opposite type.
+  else if(type->IsBoolean()) {
+    if ((oper == opNot)) return true;
+  }
+
+  return false;
 }
 
 const CType* CAstUnaryOp::GetType(void) const
 {
+  // If operand's type check is false,
+  // these statement will work incorrectly.
   if(GetOperation() == opNot) {
     return CTypeManager::Get()->GetBool();
   }
@@ -968,11 +1128,19 @@ CAstExpression* CAstSpecialOp::GetOperand(void) const
 
 bool CAstSpecialOp::TypeCheck(CToken *t, string *msg) const
 {
-  return false;
+  // SpecialOp only work correctly when operand expression type is pointer.
+  if (!GetOperand()->GetType()->IsPointer()) {
+    return false;
+  }
+  return true;
 }
 
 const CType* CAstSpecialOp::GetType(void) const
 {
+  // String = Pointer of char array.
+  // Array = Pointer of array.
+  // operand expression have String of array type,
+  // SpecialOp wrap the expression as the pointer.
   if(CAstStringConstant *string = dynamic_cast<CAstStringConstant *>(GetOperand())){
     return CTypeManager::Get()->GetPointer(string->GetType());
   }
@@ -1035,7 +1203,15 @@ const CSymProc* CAstFunctionCall::GetSymbol(void) const
 
 void CAstFunctionCall::AddArg(CAstExpression *arg)
 {
-  _arg.push_back(arg);
+  CAstExpression *actualParam = arg;
+  const CType *actualParamType = actualParam->GetType();
+
+  // If param is an array but not an open array, It needs dereferecing.
+  // So we must use SpecialOp for dereferecing.
+  if(actualParamType->IsArray() && ((CArrayType *)actualParamType)->GetNElem() != -1){
+     actualParam = new CAstSpecialOp(actualParam->GetToken(), opAddress, actualParam);
+  }
+  _arg.push_back(actualParam);
 }
 
 int CAstFunctionCall::GetNArgs(void) const
@@ -1051,6 +1227,72 @@ CAstExpression* CAstFunctionCall::GetArg(int index) const
 
 bool CAstFunctionCall::TypeCheck(CToken *t, string *msg) const
 {
+  stringstream ss;
+  const CType *formalParamType, *actualArgumentType;
+  const CType *formalParamInnerType, *actualArgumentInnerType;
+
+  // if a number of params is greater than a number of formal params,
+  // It is error because a number of params should be equal as formal params.
+  if(GetNArgs() < GetSymbol()->GetNParams()) {
+    if (t != NULL) *t = GetToken();
+    if (msg != NULL) *msg = "not enough arguments.";
+    return false;
+  }
+
+  // if a number of params is less than a number of formal params,
+  // It is error because a number of params should be equal as formal params.
+  else if(GetNArgs() > GetSymbol()->GetNParams()) {
+    if (t != NULL) *t = GetToken();
+    if (msg != NULL) *msg = "too many arguments.";
+    return false;
+  }
+
+  // Check type of all arguments.
+  for(int i = 0; i < GetNArgs(); i++){
+    formalParamType = GetSymbol()->GetParam(i)->GetDataType();
+    actualArgumentType = GetArg(i)->GetType();
+    formalParamInnerType = NULL;
+    actualArgumentInnerType = NULL;
+
+    if(formalParamType != actualArgumentType) {
+      // Check pointer of Null type case.
+      // like DIM(pointer to array; integer) or DOFS(pointer to array),
+      // pointer to array can receive an array which is not decided dimension yet.
+      // So a type of it should be pointer of NULL.
+      // We consider this case.
+      if(formalParamType->IsPointer() && actualArgumentType->IsPointer()) {
+        formalParamInnerType = ((const CPointerType *)formalParamType)->GetBaseType();
+        actualArgumentInnerType = ((const CPointerType *)actualArgumentType)->GetBaseType();
+
+        if(!(formalParamInnerType->IsNull() && actualArgumentInnerType->IsArray())) {
+          if (t != NULL) *t = GetArg(i)->GetToken();
+          if (msg != NULL) {
+            ss << "parameter " << (i + 1) << ": argument type mismatch."<< endl;
+            ss << "  expected " << GetSymbol()->GetParam(i)->GetDataType() << endl;
+            ss << "  got      " << GetArg(i)->GetType();
+            *msg = ss.str();
+          }
+          return false;
+        }
+      }
+
+      // If this is not the pointer to array case,
+      // then else statement means just formal parameter case is not equal actual argument type.
+      // So this is error.
+      else {
+        if (t != NULL) *t = GetArg(i)->GetToken();
+        if (msg != NULL) {
+          ss << "parameter " << (i + 1) << ": argument type mismatch."<< endl;
+          ss << "  expected " << GetSymbol()->GetParam(i)->GetDataType() << endl;
+          ss << "  got      " << GetArg(i)->GetType();
+          *msg = ss.str();
+        }
+        return false;
+      }
+    }
+
+  }
+
   return true;
 }
 
@@ -1132,6 +1374,12 @@ const CSymbol* CAstDesignator::GetSymbol(void) const
 
 bool CAstDesignator::TypeCheck(CToken *t, string *msg) const
 {
+  // Designator should not point to an array.
+  if (GetSymbol()->GetDataType()->IsArray()) {
+    if (t != NULL) *t = GetToken();
+    if (msg != NULL) *msg = "Array needs array designator.";
+    return false;
+  }
   return true;
 }
 
@@ -1214,11 +1462,49 @@ CAstExpression* CAstArrayDesignator::GetIndex(int index) const
 
 bool CAstArrayDesignator::TypeCheck(CToken *t, string *msg) const
 {
-  bool result = true;
-
   assert(_done);
 
-  return result;
+  // Check type of all index expression.
+  // If a type of index expression is not integer,
+  // It is error. Index must be integer.
+  for (int i = 0; i < GetNIndices(); i++) {
+    if (!GetIndex(i)->TypeCheck(t, msg)) return false;
+    if (!GetIndex(i)->GetType()->IsInt()) {
+      if (t != NULL) *t = GetIndex(i)->GetToken();
+      if (msg != NULL) *msg = "invalid array index expression.";
+      return false;
+    }
+  }
+
+  // ArrayDesignator has two approch.
+  // 1. Pointer of Array (formal parameter).
+  // 2. Just Array (local variable, global variable).
+  // 
+  // First case.
+  if (GetSymbol()->GetSymbolType() == stParam) {
+    const CType *formalParamType = GetSymbol()->GetDataType();
+
+    if (!formalParamType->IsPointer() || 
+        !((CPointerType *)formalParamType)->GetBaseType()->IsArray()) {
+      if (t != NULL) *t = GetToken();
+      if (msg != NULL) *msg = "invalid array expression.";
+      return false;
+    }
+    return true;
+  }
+
+  // Second case.
+  if (GetSymbol()->GetSymbolType() == stLocal || 
+      GetSymbol()->GetSymbolType() == stGlobal) {
+    if (!GetSymbol()->GetDataType()->IsArray()) {
+      if (t != NULL) *t = GetToken();
+      if (msg != NULL) *msg = "invalid array expression.";
+      return false;
+    }
+    return true;
+  }
+
+  return true;
 }
 
 const CType* CAstArrayDesignator::GetType(void) const
@@ -1226,10 +1512,15 @@ const CType* CAstArrayDesignator::GetType(void) const
   const CSymbol *symbol = GetSymbol();
   const CType *type = GetSymbol()->GetDataType();
 
+  // If ArrayDesignator is pointer (as formal parameter),
+  // Its type is a type of which pointer point to.
   if(type->IsPointer()) {
     type = ((CPointerType *)type)->GetBaseType();
   }
 
+  // If not, It means this represent an array,
+  // So the type of array is an array finally point to, with index.
+  // Like A[0], one dimension array of integer, expressing an integer value.
   for (int i = 0; i < GetNIndices(); i++) {
     if(type->IsArray()) {
       type = ((CArrayType *)type)->GetInnerType();
@@ -1321,6 +1612,15 @@ string CAstConstant::GetValueStr(void) const
 
 bool CAstConstant::TypeCheck(CToken *t, string *msg) const
 {
+  // Integer range must between 0 ~ (2^32 - 1).
+  if(GetType() == CTypeManager::Get()->GetInt()) {
+    if (GetValue() > 2147483647 || GetValue() < -2147483648) {
+      if (t != NULL) *t = GetToken();
+      if (msg != NULL) *msg = "integer constant outside valid range.";
+      return false;
+    }
+  }
+
   return true;
 }
 
@@ -1397,6 +1697,11 @@ const string CAstStringConstant::GetValueStr(void) const
 
 bool CAstStringConstant::TypeCheck(CToken *t, string *msg) const
 {
+  // String must return char array type.
+  if (!GetType()->IsArray()) return false;
+  else if (!((CArrayType *)GetType())->GetInnerType()->IsChar()) {
+    return false;
+  }
   return true;
 }
 

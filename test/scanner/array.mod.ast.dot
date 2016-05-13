@@ -1,0 +1,39 @@
+digraph AST {
+  graph [fontname="Times New Roman",fontsize=10];
+  node  [fontname="Courier New",fontsize=10];
+  edge  [fontname="Times New Roman",fontsize=10];
+
+  node0 [label="m arrays",shape=box];
+  node15 [label=":=",shape=box];
+  node12 [label="i",shape=ellipse];
+  node15->node12;
+  node13 [label="A[]",shape=ellipse];
+  node14 [label="0",shape=ellipse];
+  node13-> node14;
+  node15->node13;
+  node0 -> node15 [style=dotted];
+  node19 [label=":=",shape=box];
+  node16 [label="b",shape=ellipse];
+  node19->node16;
+  node17 [label="B[]",shape=ellipse];
+  node18 [label="5",shape=ellipse];
+  node17-> node18;
+  node19->node17;
+  node15 -> node19 [style=dotted];
+  node23 [label=":=",shape=box];
+  node20 [label="c",shape=ellipse];
+  node23->node20;
+  node21 [label="C[]",shape=ellipse];
+  node22 [label="-1",shape=ellipse];
+  node21-> node22;
+  node23->node21;
+  node19 -> node23 [style=dotted];
+  node24 [label="call print_array",shape=box];
+  node26 [label="&()",shape=box];
+  node25 [label="A",shape=ellipse];
+  node26->node25;
+  node24->node26;
+  node23 -> node24 [style=dotted];
+  node10 [label="p/f print_array",shape=box];
+  node0 -> node10;
+}
