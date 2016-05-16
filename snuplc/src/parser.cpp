@@ -493,6 +493,7 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
     // term
     n = term(s);
 
+    // If next token left parentheses, just do unary expression.
     if (nextTokenType == tLParens) {
       n = new CAstUnaryOp(unaryOpToken, unaryOp, n);
     }
@@ -505,6 +506,8 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
       number->SetValue(value);
     }
 
+    // Next expression is binaryOp, and left operand is AstConstant(integer),
+    // change sign of value.
     else if (CAstBinaryOp *binaryOp = dynamic_cast<CAstBinaryOp *>(n)) {
       if (CAstConstant *firstOperand = dynamic_cast<CAstConstant *>(binaryOp->GetLeft())) {
         long long originalValue = firstOperand->GetValue();
@@ -516,15 +519,10 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
       }
     }
 
+    // else just do unary expression.
     else {
       n = new CAstUnaryOp(unaryOpToken, unaryOp, n);
     }
-    // Else neg operation.
-    //CAstConstant *number = dynamic_cast<CAstConstant *>(n);
-    //if (number == NULL) {
-      //cout << "not number is " << n << endl;
-      //n = new CAstUnaryOp(unaryOpToken, unaryOp, n);
-    //}
   }
 
   // term
