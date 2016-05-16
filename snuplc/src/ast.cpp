@@ -1030,6 +1030,7 @@ bool CAstUnaryOp::TypeCheck(CToken *t, string *msg) const
 {
   const CType *type = GetOperand()->GetType();
   EOperation oper = GetOperation();
+  stringstream ss;
 
   // First, check that operand expression has right type.
   if (!GetOperand()->TypeCheck(t, msg)) return false;
@@ -1048,7 +1049,13 @@ bool CAstUnaryOp::TypeCheck(CToken *t, string *msg) const
   else if(type->IsBoolean()) {
     if ((oper == opNot)) return true;
   }
-
+  
+  if (t != NULL) *t = GetToken();
+  if (msg != NULL) {
+    ss << oper << ": type mismatch." << endl;
+    ss << "  operand:       " << type << endl;
+    *msg = ss.str();
+  }
   return false;
 }
 
@@ -1254,7 +1261,8 @@ bool CAstFunctionCall::TypeCheck(CToken *t, string *msg) const
     formalParamInnerType = NULL;
     actualArgumentInnerType = NULL;
 
-    if(formalParamType != actualArgumentType) {
+    if(!formalParamType->Match(actualArgumentType)) {
+    //if(!actualArgumentType->Match(formalParamType)) {
       // Check pointer of Null type case.
       // like DIM(pointer to array; integer) or DOFS(pointer to array),
       // pointer to array can receive an array which is not decided dimension yet.

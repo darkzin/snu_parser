@@ -310,7 +310,7 @@ CAstDesignator* CParser::qualident(CAstScope *s, CToken *identToken) {
 }
 
 
-CAstExpression* CParser::factor(CAstScope *s) {
+CAstExpression* CParser::factor(CAstScope *s, bool opNeg) {
   //
   // factor ::= qualident | number | boolean | char |
   //            string | "(" expression ")" | subroutineCall |
@@ -357,7 +357,7 @@ CAstExpression* CParser::factor(CAstScope *s) {
 
     // factor ::= number
   case tNumber:
-    n = numberConst();
+    n = numberConst(opNeg);
     break;
 
     // factor ::= boolean
@@ -398,7 +398,7 @@ CAstExpression* CParser::factor(CAstScope *s) {
   return n;
 }
 
-CAstExpression* CParser::term(CAstScope *s) {
+CAstExpression* CParser::term(CAstScope *s, bool opNeg) {
   //
   // term ::= factor { factOp factor }
   //
@@ -421,7 +421,7 @@ CAstExpression* CParser::term(CAstScope *s) {
   EOperation op;
 
   // factor
-  n = factor(s);
+  n = factor(s, opNeg);
   nextTokenType = _NextToken().GetType();
 
   // { factOp factor }
@@ -474,6 +474,7 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
   CToken unaryOpToken, nextToken;
   EToken nextTokenType;
   EOperation unaryOp, binaryOp;
+  bool opNegative = false;
 
   nextTokenType = _NextToken().GetType();
 
@@ -487,23 +488,45 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
     }
     else {
       unaryOp = opNeg;
+      opNegative = true;
     }
 
+    nextTokenType = _NextToken().GetType();
     // term
     n = term(s);
 
+    if (nextTokenType == tLParens) {
+      n = new CAstUnaryOp(unaryOpToken, unaryOp, n);
+    }
+
     // Negative sign with number is negative number,
     // So change sign of number.
-    if(CAstConstant *number = dynamic_cast<CAstConstant *>(n)){
+    else if(CAstConstant *number = dynamic_cast<CAstConstant *>(n)){
       long long originalValue = number->GetValue();
       long long value = ((unaryOp == opNeg ? -1 : 1) * originalValue);
-      //n = new CAstConstant(unaryOpToken, n->GetType(), value);
       number->SetValue(value);
     }
-    // Else neg operation.
+
+    else if (CAstBinaryOp *binaryOp = dynamic_cast<CAstBinaryOp *>(n)) {
+      if (CAstConstant *firstOperand = dynamic_cast<CAstConstant *>(binaryOp->GetLeft())) {
+        long long originalValue = firstOperand->GetValue();
+        long long value = ((unaryOp == opNeg ? -1 : 1) * originalValue);
+        firstOperand->SetValue(value);
+      }
+      else {
+        n = new CAstUnaryOp(unaryOpToken, unaryOp, n);
+      }
+    }
+
     else {
       n = new CAstUnaryOp(unaryOpToken, unaryOp, n);
     }
+    // Else neg operation.
+    //CAstConstant *number = dynamic_cast<CAstConstant *>(n);
+    //if (number == NULL) {
+      //cout << "not number is " << n << endl;
+      //n = new CAstUnaryOp(unaryOpToken, unaryOp, n);
+    //}
   }
 
   // term
@@ -1237,7 +1260,7 @@ void CParser::subroutineDecl(CAstScope *s) {
   Consume(tSemicolon);
 }
 
-CAstConstant* CParser::numberConst(void) {
+CAstConstant* CParser::numberConst(bool opNeg) {
   CToken t;
 
   Consume(tNumber, &t);
@@ -1245,6 +1268,7 @@ CAstConstant* CParser::numberConst(void) {
   errno = 0;
   long long v = strtoll(t.GetValue().c_str(), NULL, 10);
   if (errno != 0) SetError(t, "invalid number.");
+  if (opNeg) v = -v;
 
   return new CAstConstant(t, CTypeManager::Get()->GetInt(), v);
 }

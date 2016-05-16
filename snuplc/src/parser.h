@@ -111,8 +111,8 @@ class CParser {
     CAstDesignator*   qualident(CAstScope *s, CToken *identToken = NULL);
     CAstExpression*   expression(CAstScope *s);
     CAstExpression*   simpleexpr(CAstScope *s);
-    CAstExpression*   term(CAstScope *s);
-    CAstExpression*   factor(CAstScope *s);
+    CAstExpression*   term(CAstScope *s, bool opNeg = false);
+    CAstExpression*   factor(CAstScope *s, bool opNeg = false);
 
     CAstFunctionCall* functionCall(CAstScope *s, CToken *identToken = NULL);
 
@@ -122,7 +122,7 @@ class CParser {
     void              varDecl(CAstScope *s, CSymProc *procedureSymbol = NULL);
     void              subroutineDecl(CAstScope *s);
 
-    CAstConstant*     numberConst(void);
+    CAstConstant*     numberConst(bool opNeg = false);
     CAstConstant*     boolConst(void);
     CAstConstant*     charConst(void);
     CAstStringConstant* stringConst(CAstScope *s);
