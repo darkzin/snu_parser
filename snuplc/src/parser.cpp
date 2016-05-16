@@ -357,7 +357,7 @@ CAstExpression* CParser::factor(CAstScope *s) {
 
     // factor ::= number
   case tNumber:
-    n = numberConst(opNeg);
+    n = numberConst();
     break;
 
     // factor ::= boolean
@@ -421,7 +421,7 @@ CAstExpression* CParser::term(CAstScope *s) {
   EOperation op;
 
   // factor
-  n = factor(s, opNeg);
+  n = factor(s);
   nextTokenType = _NextToken().GetType();
 
   // { factOp factor }
@@ -1264,7 +1264,6 @@ CAstConstant* CParser::numberConst() {
   errno = 0;
   long long v = strtoll(t.GetValue().c_str(), NULL, 10);
   if (errno != 0) SetError(t, "invalid number.");
-  if (opNeg) v = -v;
 
   return new CAstConstant(t, CTypeManager::Get()->GetInt(), v);
 }
