@@ -13,20 +13,6 @@ begin
   a[0][0][0] := 0
 end p2;
 
-function strcpy(src, dst: char[]): char[];  // fail
-//function strcpy(src, dst: char[]): char[5]; // fail
-//function strcpy(src, dst: char[]): integer; // pass
-var res10: char[10];
-    res5 : char[5];
-begin
-  return res10;                   // fail
-  return res5;                    // fail
-
-  return;                         // fail
-
-  return 1
-end strcpy;
-
 begin
 end arrays.
 

@@ -1,7 +1,7 @@
-parsing 'test/semanal/int_const/int_const_relaxed_custom20.mod'...
+parsing 'test/parser/test06.mod'...
 successfully parsed.
   AST:
-    CAstScope: 'int_const_relaxed_custom'
+    CAstScope: 'test06'
       symbol table:
         [[
           [ *DIM(<ptr(4) to <NULL>>,<int>) --> <int>           ]
@@ -11,225 +11,123 @@ successfully parsed.
           [ *WriteInt(<int>) --> <NULL>           ]
           [ *WriteLn() --> <NULL>           ]
           [ *WriteStr(<ptr(4) to <array of <char>>>) --> <NULL>           ]
-          [ *relaxed_custom() --> <NULL>           ]
+          [ @a        <int>           ]
+          [ @b        <int>           ]
+          [ @b0       <bool>           ]
+          [ @b1       <bool>           ]
+          [ *binop(<int>,<int>) --> <bool>           ]
+          [ @c        <int>           ]
+          [ *compare(<int>,<int>) --> <bool>           ]
+          [ *foo(<int>) --> <NULL>           ]
+          [ *intop(<int>,<int>) --> <int>           ]
+          [ *unary() --> <NULL>           ]
         ]]
       statement list:
         empty.
       nested scopes:
-        CAstScope: 'relaxed_custom'
+        CAstScope: 'foo'
           symbol table:
             [[
-              [ $b        <bool>               ]
-              [ $c        <char>               ]
-              [ $i        <int>               ]
-              [ $j        <int>               ]
+              [ %a        <int>               ]
+              [ $b        <int>               ]
             ]]
           statement list:
             := <int>
-              [ $i        <int> ] <int>
-              -2147483648 <int>
+              [ $b        <int> ] <int>
+              [ @c        <int> ] <int>
             := <int>
-              [ $i        <int> ] <int>
+              [ @c        <int> ] <int>
               add <int>
-                -2147483648 <int>
-                12345 <int>
+                [ %a        <int> ] <int>
+                [ $b        <int> ] <int>
+          nested scopes:
+            empty.
+        
+        CAstScope: 'unary'
+          symbol table:
+            [[
+            ]]
+          statement list:
             := <int>
-              [ $i        <int> ] <int>
-              add <int>
-                -2147483648 <int>
-                2147483647 <int>
-            := <int>
-              [ $i        <int> ] <int>
-              add <int>
-                -2147483648 <int>
-                neg <int>
-                  -2147483647 <int>
-            := <int>
-              [ $i        <int> ] <int>
-              sub <int>
-                neg <int>
-                  -2147483648 <int>
-                2147483647 <int>
-            := <int>
-              [ $i        <int> ] <int>
-              sub <int>
-                neg <int>
-                  neg <int>
-                    2147483647 <int>
-                neg <int>
-                  -2147483648 <int>
-            := <int>
-              [ $i        <int> ] <int>
+              [ @a        <int> ] <int>
               neg <int>
-                mul <int>
-                  neg <int>
-                    2147483647 <int>
-                  2147483647 <int>
-            := <int>
-              [ $i        <int> ] <int>
-              neg <int>
-                div <int>
-                  neg <int>
-                    -2147483648 <int>
-                  neg <int>
-                    -2147483648 <int>
-            := <int>
-              [ $i        <int> ] <int>
-              neg <int>
-                mul <int>
-                  add <int>
-                    neg <int>
-                      mul <int>
-                        2147483647 <int>
-                        -2147483648 <int>
-                    2147483647 <int>
-                  sub <int>
-                    2147483647 <int>
-                    mul <int>
-                      -2147483648 <int>
-                      -2147483648 <int>
-            := <int>
-              [ $i        <int> ] <int>
-              add <int>
-                neg <int>
-                  [ $j        <int> ] <int>
-                mul <int>
-                  neg <int>
-                    [ $i        <int> ] <int>
-                  2147483647 <int>
-            := <int>
-              [ $i        <int> ] <int>
-              sub <int>
-                div <int>
-                  neg <int>
-                    mul <int>
-                      [ $i        <int> ] <int>
-                      neg <int>
-                        neg <int>
-                          [ $j        <int> ] <int>
-                  2147483647 <int>
-                add <int>
-                  neg <int>
-                    [ $j        <int> ] <int>
-                  mul <int>
-                    2147483647 <int>
-                    -2147483648 <int>
-            := <int>
-              [ $i        <int> ] <int>
-              neg <int>
-                mul <int>
-                  neg <int>
-                    mul <int>
-                      sub <int>
-                        add <int>
-                          div <int>
-                            mul <int>
-                              2147483647 <int>
-                              neg <int>
-                                neg <int>
-                                  [ $j        <int> ] <int>
-                            neg <int>
-                              [ $i        <int> ] <int>
-                          2147483647 <int>
-                        -2147483648 <int>
-                      add <int>
-                        neg <int>
-                          [ $i        <int> ] <int>
-                        [ $j        <int> ] <int>
-                  neg <int>
-                    mul <int>
-                      -2147483648 <int>
-                      add <int>
-                        neg <int>
-                          [ $i        <int> ] <int>
-                        mul <int>
-                          [ $j        <int> ] <int>
-                          neg <int>
-                            [ $j        <int> ] <int>
-            := <int>
-              [ $i        <int> ] <int>
-              neg <int>
-                div <int>
-                  neg <int>
-                    mul <int>
-                      add <int>
-                        div <int>
-                          mul <int>
-                            2147483647 <int>
-                            neg <int>
-                              neg <int>
-                                [ $j        <int> ] <int>
-                          neg <int>
-                            [ $i        <int> ] <int>
-                        neg <int>
-                          -2147483648 <int>
-                      add <int>
-                        div <int>
-                          neg <int>
-                            [ $i        <int> ] <int>
-                          [ $i        <int> ] <int>
-                        [ $j        <int> ] <int>
-                  mul <int>
-                    -2147483648 <int>
+                [ @b        <int> ] <int>
+            := <bool>
+              [ @b0       <bool> ] <bool>
+              not <bool>
+                [ @b1       <bool> ] <bool>
+          nested scopes:
+            empty.
+        
+        CAstScope: 'binop'
+          symbol table:
+            [[
+              [ %p0       <int>               ]
+              [ %p1       <int>               ]
+            ]]
+          statement list:
+            return <bool>
+              not <bool>
+                or <bool>
+                  > <bool>
                     add <int>
-                      mul <int>
-                        neg <int>
-                          [ $j        <int> ] <int>
-                        mul <int>
-                          add <int>
-                            neg <int>
-                              [ $i        <int> ] <int>
-                            2147383647 <int>
-                          -2147483648 <int>
                       neg <int>
-                        [ $j        <int> ] <int>
-            := <int>
-              [ $i        <int> ] <int>
+                        [ %p0       <int> ] <int>
+                      [ %p1       <int> ] <int>
+                    0 <int>
+                  and <bool>
+                    > <bool>
+                      [ %p0       <int> ] <int>
+                      0 <int>
+                    < <bool>
+                      [ %p1       <int> ] <int>
+                      0 <int>
+          nested scopes:
+            empty.
+        
+        CAstScope: 'intop'
+          symbol table:
+            [[
+              [ %p0       <int>               ]
+              [ %p1       <int>               ]
+            ]]
+          statement list:
+            return <int>
               add <int>
+                neg <int>
+                  [ %p0       <int> ] <int>
                 pos <int>
-                  [ $i        <int> ] <int>
-                [ $j        <int> ] <int>
-            := <int>
-              [ $i        <int> ] <int>
-              pos <int>
-                mul <int>
-                  pos <int>
-                    [ $i        <int> ] <int>
-                  add <int>
-                    neg <int>
-                      [ $j        <int> ] <int>
-                    [ $i        <int> ] <int>
-            := <int>
-              [ $i        <int> ] <int>
-              add <int>
-                pos <int>
-                  [ $i        <int> ] <int>
-                mul <int>
-                  pos <int>
-                    [ $j        <int> ] <int>
-                  div <int>
-                    pos <int>
-                      [ $i        <int> ] <int>
-                    neg <int>
-                      neg <int>
-                        add <int>
-                          [ $j        <int> ] <int>
-                          pos <int>
-                            neg <int>
-                              pos <int>
-                                sub <int>
-                                  pos <int>
-                                    [ $i        <int> ] <int>
-                                  pos <int>
-                                    neg <int>
-                                      pos <int>
-                                        pos <int>
-                                          [ $j        <int> ] <int>
-            := <int>
-              [ $i        <int> ] <int>
-              add <int>
-                [ $i        <int> ] <int>
-                [ $j        <int> ] <int>
+                  [ %p1       <int> ] <int>
+          nested scopes:
+            empty.
+        
+        CAstScope: 'compare'
+          symbol table:
+            [[
+              [ %a        <int>               ]
+              [ %b        <int>               ]
+            ]]
+          statement list:
+            if cond
+              and <bool>
+                and <bool>
+                  call [ *binop(<int>,<int>) --> <bool> ] <bool>
+                    [ %a        <int> ] <int>
+                    [ %b        <int> ] <int>
+                  < <bool>
+                    call [ *intop(<int>,<int>) --> <int> ] <int>
+                      [ %b        <int> ] <int>
+                      [ %a        <int> ] <int>
+                    [ %a        <int> ] <int>
+                # <bool>
+                  [ %a        <int> ] <int>
+                  [ %b        <int> ] <int>
+            if-body
+              return <bool>
+                true <bool>
+            else-body
+              return <bool>
+                false <bool>
           nested scopes:
             empty.
         
@@ -237,7 +135,7 @@ successfully parsed.
 
 
 run the following command to convert the .dot file into a PDF:
-  dot -Tpdf -otest/semanal/int_const/int_const_relaxed_custom20.mod.ast.pdf test/semanal/int_const/int_const_relaxed_custom20.mod.ast.dot
+  dot -Tpdf -otest/parser/test06.mod.ast.pdf test/parser/test06.mod.ast.dot
 
 
 Done.

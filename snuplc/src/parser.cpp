@@ -310,7 +310,7 @@ CAstDesignator* CParser::qualident(CAstScope *s, CToken *identToken) {
 }
 
 
-CAstExpression* CParser::factor(CAstScope *s, bool opNeg) {
+CAstExpression* CParser::factor(CAstScope *s) {
   //
   // factor ::= qualident | number | boolean | char |
   //            string | "(" expression ")" | subroutineCall |
@@ -398,7 +398,7 @@ CAstExpression* CParser::factor(CAstScope *s, bool opNeg) {
   return n;
 }
 
-CAstExpression* CParser::term(CAstScope *s, bool opNeg) {
+CAstExpression* CParser::term(CAstScope *s) {
   //
   // term ::= factor { factOp factor }
   //
@@ -474,7 +474,6 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
   CToken unaryOpToken, nextToken;
   EToken nextTokenType;
   EOperation unaryOp, binaryOp;
-  bool opNegative = false;
 
   nextTokenType = _NextToken().GetType();
 
@@ -488,7 +487,6 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
     }
     else {
       unaryOp = opNeg;
-      opNegative = true;
     }
 
     nextTokenType = _NextToken().GetType();
@@ -671,7 +669,7 @@ CAstFunctionCall* CParser::functionCall(CAstScope *s, CToken* identToken) {
   const CSymProc *subroutineSymbol;
   const CSymParam *paramSymbol = NULL;
 
-  int index = 0, paramCount = 0;
+  int index = 0;
 
   // ident
   if(identToken == NULL) {
@@ -715,7 +713,6 @@ CAstFunctionCall* CParser::functionCall(CAstScope *s, CToken* identToken) {
   // Else function has params, so check expressions.
   // [ expression
   funcCall->AddArg(expression(s));
-  paramCount++;
 
 
   // then add param to function.
@@ -724,7 +721,6 @@ CAstFunctionCall* CParser::functionCall(CAstScope *s, CToken* identToken) {
   while(_NextToken().GetType() == tComma){
     Consume(tComma);
     funcCall->AddArg(expression(s));
-    paramCount++;
   }
 
   // ")"
@@ -1260,7 +1256,7 @@ void CParser::subroutineDecl(CAstScope *s) {
   Consume(tSemicolon);
 }
 
-CAstConstant* CParser::numberConst(bool opNeg) {
+CAstConstant* CParser::numberConst() {
   CToken t;
 
   Consume(tNumber, &t);
