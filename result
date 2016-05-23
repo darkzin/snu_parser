@@ -637,3 +637,150 @@
 /home/skyseed/Projects/snu_parser/test/semanal/int_const/int_const_strict_distinct1.mod
 /home/skyseed/Projects/snu_parser/test/semanal/int_const/int_const_strict_distinct2.mod
 /home/skyseed/Projects/snu_parser/test/semanal/int_const/int_const_strict.mod
+parsing 'test/tac/test2.mod'...
+converting to TAC...
+<NULL>
+<int>
+[[ module: test2
+  [[ type manager
+    base types:
+      <NULL>
+      <int>
+      <char>
+      <bool>
+      <ptr(4) to <NULL>>
+    pointer types:
+      <ptr(4) to <NULL>>
+      <ptr(4) to <array of <char>>>
+    array types:
+      <array of <char>>
+  ]]
+  [[
+    [ *DIM(<ptr(4) to <NULL>>,<int>) --> <int>     ]
+    [ *DOFS(<ptr(4) to <NULL>>) --> <int>     ]
+    [ *ReadInt() --> <int>     ]
+    [ *WriteChar(<char>) --> <NULL>     ]
+    [ *WriteInt(<int>) --> <NULL>     ]
+    [ *WriteLn() --> <NULL>     ]
+    [ *WriteStr(<ptr(4) to <array of <char>>>) --> <NULL>     ]
+    [ *bar(<int>,<int>,<int>,<int>) --> <int>     ]
+    [ *foo(<int>) --> <NULL>     ]
+    [ @i        <int>     ]
+    [ $t0       <NULL>     ]
+    [ $t1       <NULL>     ]
+    [ $t2       <NULL>     ]
+    [ $t3       <int>     ]
+  ]]
+  [[ test2
+      0:     param  0 <- 1
+      1:     call   t1 <- foo
+      2:     param  3 <- 4
+      3:     param  2 <- 3
+      4:     param  1 <- 2
+      5:     param  0 <- 1
+      6:     call   t3 <- bar
+  ]]
+
+  [[ procedure: foo
+    [[
+      [ $t0       <int>       ]
+      [ $t1       <int>       ]
+      [ %v        <int>       ]
+    ]]
+    [[ foo
+        0:     add    t0 <- 1, 2
+        1:     mul    t1 <- t0, v
+        2:     assign i <- t1
+    ]]
+  ]]
+
+  [[ procedure: bar
+    [[
+      [ %p1       <int>       ]
+      [ %p2       <int>       ]
+      [ %p3       <int>       ]
+      [ %p4       <int>       ]
+    ]]
+    [[ bar
+    ]]
+  ]]
+]]
+
+run the following command to convert the .dot file into a PDF:
+  dot -Tpdf -otest/tac/test2.mod.pdf test/tac/test2.mod.dot
+
+
+Done.
+parsing 'test/tac/test2.mod'...
+converting to TAC...
+<NULL>
+<int>
+[[ module: test2
+  [[ type manager
+    base types:
+      <NULL>
+      <int>
+      <char>
+      <bool>
+      <ptr(4) to <NULL>>
+    pointer types:
+      <ptr(4) to <NULL>>
+      <ptr(4) to <array of <char>>>
+    array types:
+      <array of <char>>
+  ]]
+  [[
+    [ *DIM(<ptr(4) to <NULL>>,<int>) --> <int>     ]
+    [ *DOFS(<ptr(4) to <NULL>>) --> <int>     ]
+    [ *ReadInt() --> <int>     ]
+    [ *WriteChar(<char>) --> <NULL>     ]
+    [ *WriteInt(<int>) --> <NULL>     ]
+    [ *WriteLn() --> <NULL>     ]
+    [ *WriteStr(<ptr(4) to <array of <char>>>) --> <NULL>     ]
+    [ *bar(<int>,<int>,<int>,<int>) --> <int>     ]
+    [ *foo(<int>) --> <NULL>     ]
+    [ @i        <int>     ]
+    [ $t0       <NULL>     ]
+    [ $t1       <NULL>     ]
+    [ $t2       <int>     ]
+  ]]
+  [[ test2
+      0:     param  0 <- 1
+      1:     call   foo
+      2:     param  3 <- 4
+      3:     param  2 <- 3
+      4:     param  1 <- 2
+      5:     param  0 <- 1
+      6:     call   t2 <- bar
+  ]]
+
+  [[ procedure: foo
+    [[
+      [ $t0       <int>       ]
+      [ $t1       <int>       ]
+      [ %v        <int>       ]
+    ]]
+    [[ foo
+        0:     add    t0 <- 1, 2
+        1:     mul    t1 <- t0, v
+        2:     assign i <- t1
+    ]]
+  ]]
+
+  [[ procedure: bar
+    [[
+      [ %p1       <int>       ]
+      [ %p2       <int>       ]
+      [ %p3       <int>       ]
+      [ %p4       <int>       ]
+    ]]
+    [[ bar
+    ]]
+  ]]
+]]
+
+run the following command to convert the .dot file into a PDF:
+  dot -Tpdf -otest/tac/test2.mod.pdf test/tac/test2.mod.dot
+
+
+Done.
