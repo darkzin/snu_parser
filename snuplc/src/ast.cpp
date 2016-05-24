@@ -540,7 +540,6 @@ void CAstStatCall::toDot(ostream &out, int indent) const
 CTacAddr* CAstStatCall::ToTac(CCodeBlock *cb, CTacLabel *next)
 {
   int numberOfArgs = GetCall()->GetNArgs();
-  CTacAddr* temp = cb->CreateTemp(GetType());
 
   for(int i = (numberOfArgs-1); i >= 0; i--) {
     cb->AddInstr(new CTacInstr(opParam, new CTacConst(i), GetCall()->GetArg(i)->ToTac(cb)));
@@ -787,18 +786,31 @@ CTacAddr* CAstStatIf::ToTac(CCodeBlock *cb, CTacLabel *next)
   CTacLabel *ifFalseLabel = cb->CreateLabel("if_false");
 
   if (CAstBinaryOp *binaryOp = dynamic_cast<CAstBinaryOp *>(_cond)) {
-    leftExprTac = binaryOp->GetLeft()->ToTac(cb);
-    rightExprTac = binaryOp->GetRight()->ToTac(cb);
     oper = binaryOp->GetOperation();
 
-    if(IsRelOp(oper)) {
-      cb->AddInstr(new CTacInstr(oper, ifTrueLabel, leftExprTac, rightExprTac));
+    if(IsRelOp(oper) || oper == opAnd || oper == opOr) {
+      binaryOp->ToTac(cb, ifTrueLabel, ifFalseLabel);
     }
+    else if(oper == opAnd || oper == opOr) {
+      binaryOp->ToTac(cb);
+    }
+    cb->AddInstr(ifTrueLabel);
+    _ifBody->ToTac(cb, next);
+    cb->AddInstr(ifFalseLabel);
+    if (_elseBody != NULL) {
+      _elseBody->ToTac(cb, next);
+    }
+  }
+
+  else {
+    cb->AddInstr(new CTacInstr(opEqual, ifTrueLabel, _cond->ToTac(cb), new CTacConst(1)));
     cb->AddInstr(new CTacInstr(opGoto, ifFalseLabel));
     cb->AddInstr(ifTrueLabel);
     _ifBody->ToTac(cb, next);
     cb->AddInstr(ifFalseLabel);
-    _elseBody->ToTac(cb, next);
+    if (_elseBody != NULL) {
+      _elseBody->ToTac(cb, next);
+    }
   }
 
   return NULL;
@@ -1087,18 +1099,137 @@ void CAstBinaryOp::toDot(ostream &out, int indent) const
 
 CTacAddr* CAstBinaryOp::ToTac(CCodeBlock *cb)
 {
-  CTacAddr *leftTac = _left->ToTac(cb);
-  CTacAddr *rightTac =_right->ToTac(cb);
-  CTacAddr *temp = cb->CreateTemp(GetType());
-  CTacInstr *instruction = new CTacInstr(GetOperation(), temp, leftTac, rightTac);
-  cb->AddInstr(instruction);
-  return temp;
+  CTacAddr *leftExprTac, *rightExprTac, *result;
+  CTacAddr *ofLeftExprTac, *ofRightExprTac;
+  CTacLabel *trueLabel, *falseLabel, *returnLabel, *nextLabel;
+  EOperation op = GetOperation();
+
+  if (IsRelOp(GetOperation())) {
+    trueLabel = cb->CreateLabel();
+    falseLabel = cb->CreateLabel();
+    returnLabel = cb->CreateLabel();
+
+    leftExprTac = _left->ToTac(cb);
+    rightExprTac = _right->ToTac(cb);
+
+    result = cb->CreateTemp(CTypeManager::Get()->GetBool());
+
+    cb->AddInstr(new CTacInstr(GetOperation(), trueLabel, leftExprTac, rightExprTac));
+    cb->AddInstr(new CTacInstr(opGoto, falseLabel));
+
+    cb->AddInstr(trueLabel);
+    cb->AddInstr(new CTacInstr(opAssign, result, new CTacConst(1)));
+    cb->AddInstr(new CTacInstr(opGoto, returnLabel));
+
+    cb->AddInstr(falseLabel);
+    cb->AddInstr(new CTacInstr(opAssign, result, new CTacConst(0)));
+
+    cb->AddInstr(returnLabel);
+
+    return result;
+  }
+
+  else if (op == opAnd || op == opOr) {
+    trueLabel = cb->CreateLabel();
+    falseLabel = cb->CreateLabel();
+    returnLabel = cb->CreateLabel();
+    nextLabel = cb->CreateLabel();
+
+    result = cb->CreateTemp(CTypeManager::Get()->GetBool());
+
+    leftExprTac = _left->ToTac(cb, nextLabel, falseLabel);
+    cb->AddInstr(nextLabel);
+    rightExprTac = _right->ToTac(cb, trueLabel, falseLabel);
+
+    cb->AddInstr(trueLabel);
+    cb->AddInstr(new CTacInstr(opAssign, result, new CTacConst(1)));
+    cb->AddInstr(new CTacInstr(opGoto, returnLabel));
+
+    cb->AddInstr(falseLabel);
+    cb->AddInstr(new CTacInstr(opAssign, result, new CTacConst(0)));
+
+    cb->AddInstr(returnLabel);
+
+    return result;
+  }
+
+  else {
+    leftExprTac = _left->ToTac(cb);
+    rightExprTac =_right->ToTac(cb);
+    result = cb->CreateTemp(GetType());
+    CTacInstr *instruction = new CTacInstr(GetOperation(), result, leftExprTac, rightExprTac);
+    cb->AddInstr(instruction);
+  }
+
+  return result;
 }
 
 CTacAddr* CAstBinaryOp::ToTac(CCodeBlock *cb,
                               CTacLabel *ltrue, CTacLabel *lfalse)
 {
+  CTacAddr *leftExprTac, *rightExprTac, *result;
+  CTacAddr *ofLeftExprTac, *ofRightExprTac;
+  CTacLabel *trueLabel, *falseLabel, *returnLabel;
+  EOperation op = GetOperation();
+
+  if (IsRelOp(GetOperation())) {
+    trueLabel = ltrue;
+    falseLabel = lfalse;
+
+    leftExprTac = _left->ToTac(cb);
+    rightExprTac = _right->ToTac(cb);
+
+    cb->AddInstr(new CTacInstr(GetOperation(), trueLabel, leftExprTac, rightExprTac));
+    cb->AddInstr(new CTacInstr(opGoto, falseLabel));
+  }
+
+  else if (op == opAnd || op == opOr) {
+    trueLabel = ltrue;
+    falseLabel = lfalse;
+
+    leftExprTac = _left->ToTac(cb, trueLabel, falseLabel);
+    rightExprTac = _right->ToTac(cb, trueLabel, falseLabel);
+  }
+
+  else {
+    leftExprTac = _left->ToTac(cb);
+    rightExprTac =_right->ToTac(cb);
+    result = cb->CreateTemp(GetType());
+    CTacInstr *instruction = new CTacInstr(GetOperation(), result, leftExprTac, rightExprTac);
+    cb->AddInstr(instruction);
+  }
+
   return NULL;
+
+  //CTacAddr *ofLeftExprTac, *ofRightExprTac, *temp;
+  //EOperation oper;
+  //CTacLabel *trueLabel = cb->CreateLabel();
+  
+  //if (CAstBinaryOp *leftBinaryOp = dynamic_cast<CAstBinaryOp *>(_left)) {
+    //oper = leftBinaryOp->GetOperation();
+
+    //if (IsRelOp(oper)) {
+      //ofLeftExprTac = leftBinaryOp->GetLeft()->ToTac(cb);
+      //ofRightExprTac = leftBinaryOp->GetRight()->ToTac(cb);
+      //cb->AddInstr(new CTacInstr(oper, trueLabel, ofLeftExprTac, ofRightExprTac));
+      //cb->AddInstr(new CTacInstr(opGoto, lfalse));
+    //}
+  //}
+
+  //cb->AddInstr(trueLabel);
+
+  //if (CAstBinaryOp *rightBinaryOp = dynamic_cast<CAstBinaryOp *>(_right)) {
+    //oper = rightBinaryOp->GetOperation();
+
+    //if (IsRelOp(oper)) {
+      //ofLeftExprTac = rightBinaryOp->GetLeft()->ToTac(cb);
+      //ofRightExprTac = rightBinaryOp->GetRight()->ToTac(cb);
+      //cb->AddInstr(new CTacInstr(oper, ltrue, ofLeftExprTac, ofRightExprTac));
+      //cb->AddInstr(new CTacInstr(opGoto, lfalse));
+    //}
+  //}
+
+  //return NULL;
 }
 
 
@@ -1281,7 +1412,10 @@ void CAstSpecialOp::toDot(ostream &out, int indent) const
 
 CTacAddr* CAstSpecialOp::ToTac(CCodeBlock *cb)
 {
-  return NULL;
+  CTacAddr *arrayName = new CTacName(((CAstArrayDesignator *)GetOperand())->GetSymbol());
+  CTacAddr *derefAddress = cb->CreateTemp(GetType());
+  cb->AddInstr(new CTacInstr(opAddress, derefAddress, arrayName));
+  return derefAddress;
 }
 
 
@@ -1677,37 +1811,65 @@ void CAstArrayDesignator::toDot(ostream &out, int indent) const
 
 CTacAddr* CAstArrayDesignator::ToTac(CCodeBlock *cb)
 {
-  CTacAddr *array = new CTacName(GetSymbol());
-  CTacAddr *arrayTemp1 = cb->CreateTemp(GetType());
-  CTacAddr *arrayTemp2 = cb->CreateTemp(GetType());
-  CTacAddr *resultDIM = cb->CreateTemp(GetType());
-  CTacAddr *multiplyArrayIndex = cb->CreateTemp(CTypeManager::Get()->GetInt());
-  CTacAddr *addArrayIndex = cb->CreateTemp(CTypeManager::Get()->GetInt());
-  CTacAddr *multiplyArraySize = cb->CreateTemp(CTypeManager::Get()->GetInt());
-  CTacAddr *arrayTemp3 = cb->CreateTemp(GetType());
-  CTacAddr *resultDOFS = cb->CreateTemp(GetType());
-  CTacAddr *callDIM = new CTacName(cb->GetOwner()->GetSymbolTable()->FindSymbol("DIM"));
-  CTacAddr *callDOFS = new CTacName(cb->GetOwner()->GetSymbolTable()->FindSymbol("DOFS"));
-  CTacAddr *addressOfArray = cb->CreateTemp(CTypeManager::Get()->GetInt());
-  CTacAddr *finalAddress = cb->CreateTemp(CTypeManager::Get()->GetInt());
+  CTacAddr *finalAddress;
 
-  cb->AddInstr(new CTacInstr(opAddress, arrayTemp1, array));
+  if(GetSymbol()->GetSymbolType() == stParam) {
+    CTacAddr *array = new CTacName(GetSymbol());
+    CTacAddr *resultDIM = cb->CreateTemp(GetType());
+    CTacAddr *multiplyArrayIndex = cb->CreateTemp(CTypeManager::Get()->GetInt());
+    CTacAddr *addArrayIndex = cb->CreateTemp(CTypeManager::Get()->GetInt());
+    CTacAddr *multiplyArraySize = cb->CreateTemp(CTypeManager::Get()->GetInt());
+    CTacAddr *resultDOFS = cb->CreateTemp(GetType());
+    CTacAddr *callDIM = new CTacName(cb->GetOwner()->GetSymbolTable()->FindSymbol("DIM"));
+    CTacAddr *callDOFS = new CTacName(cb->GetOwner()->GetSymbolTable()->FindSymbol("DOFS"));
+    CTacAddr *addressOfArray = cb->CreateTemp(CTypeManager::Get()->GetInt());
+    finalAddress = cb->CreateTemp(CTypeManager::Get()->GetInt());
 
-  cb->AddInstr(new CTacInstr(opParam, new CTacConst(1), new CTacConst(GetNIndices())));
-  cb->AddInstr(new CTacInstr(opAddress, arrayTemp2, array));
-  cb->AddInstr(new CTacInstr(opParam, new CTacConst(0), arrayTemp2));
-  cb->AddInstr(new CTacInstr(opCall, resultDIM, callDIM));
+    cb->AddInstr(new CTacInstr(opParam, new CTacConst(1), new CTacConst(GetNIndices())));
+    cb->AddInstr(new CTacInstr(opParam, new CTacConst(0), array));
+    cb->AddInstr(new CTacInstr(opCall, resultDIM, callDIM));
 
-  cb->AddInstr(new CTacInstr(opMul, multiplyArrayIndex, GetIndex(0)->ToTac(cb), resultDIM));
-  cb->AddInstr(new CTacInstr(opAdd, addArrayIndex, multiplyArrayIndex, GetIndex(1)->ToTac(cb)));
-  cb->AddInstr(new CTacInstr(opMul, multiplyArraySize, addArrayIndex, new CTacConst(4)));
+    cb->AddInstr(new CTacInstr(opMul, multiplyArrayIndex, GetIndex(0)->ToTac(cb), resultDIM));
+    cb->AddInstr(new CTacInstr(opAdd, addArrayIndex, multiplyArrayIndex, GetIndex(1)->ToTac(cb)));
+    cb->AddInstr(new CTacInstr(opMul, multiplyArraySize, addArrayIndex, new CTacConst(4)));
 
-  cb->AddInstr(new CTacInstr(opAddress, arrayTemp3, array));
-  cb->AddInstr(new CTacInstr(opParam, new CTacConst(0), arrayTemp3));
-  cb->AddInstr(new CTacInstr(opCall, resultDOFS, callDOFS));
-  cb->AddInstr(new CTacInstr(opAdd, addressOfArray, multiplyArraySize, resultDOFS));
-  cb->AddInstr(new CTacInstr(opAdd, finalAddress, arrayTemp1, addressOfArray));
-  //cb->AddInstr(new CTacInstr(opAssign, new CTacReference(finalAddress->, multiplyArraySize, resultDOFS));
+    cb->AddInstr(new CTacInstr(opParam, new CTacConst(0), array));
+    cb->AddInstr(new CTacInstr(opCall, resultDOFS, callDOFS));
+    cb->AddInstr(new CTacInstr(opAdd, addressOfArray, multiplyArraySize, resultDOFS));
+    cb->AddInstr(new CTacInstr(opAdd, finalAddress, array, addressOfArray));
+  }
+  else {
+    CTacAddr *array = new CTacName(GetSymbol());
+    CTacAddr *arrayTemp1 = cb->CreateTemp(GetType());
+    CTacAddr *arrayTemp2 = cb->CreateTemp(GetType());
+    CTacAddr *resultDIM = cb->CreateTemp(GetType());
+    CTacAddr *multiplyArrayIndex = cb->CreateTemp(CTypeManager::Get()->GetInt());
+    CTacAddr *addArrayIndex = cb->CreateTemp(CTypeManager::Get()->GetInt());
+    CTacAddr *multiplyArraySize = cb->CreateTemp(CTypeManager::Get()->GetInt());
+    CTacAddr *arrayTemp3 = cb->CreateTemp(GetType());
+    CTacAddr *resultDOFS = cb->CreateTemp(GetType());
+    CTacAddr *callDIM = new CTacName(cb->GetOwner()->GetSymbolTable()->FindSymbol("DIM"));
+    CTacAddr *callDOFS = new CTacName(cb->GetOwner()->GetSymbolTable()->FindSymbol("DOFS"));
+    CTacAddr *addressOfArray = cb->CreateTemp(CTypeManager::Get()->GetInt());
+    finalAddress = cb->CreateTemp(CTypeManager::Get()->GetInt());
+
+    cb->AddInstr(new CTacInstr(opAddress, arrayTemp1, array));
+
+    cb->AddInstr(new CTacInstr(opParam, new CTacConst(1), new CTacConst(GetNIndices())));
+    cb->AddInstr(new CTacInstr(opAddress, arrayTemp2, array));
+    cb->AddInstr(new CTacInstr(opParam, new CTacConst(0), arrayTemp2));
+    cb->AddInstr(new CTacInstr(opCall, resultDIM, callDIM));
+
+    cb->AddInstr(new CTacInstr(opMul, multiplyArrayIndex, GetIndex(0)->ToTac(cb), resultDIM));
+    cb->AddInstr(new CTacInstr(opAdd, addArrayIndex, multiplyArrayIndex, GetIndex(1)->ToTac(cb)));
+    cb->AddInstr(new CTacInstr(opMul, multiplyArraySize, addArrayIndex, new CTacConst(4)));
+
+    cb->AddInstr(new CTacInstr(opAddress, arrayTemp3, array));
+    cb->AddInstr(new CTacInstr(opParam, new CTacConst(0), arrayTemp3));
+    cb->AddInstr(new CTacInstr(opCall, resultDOFS, callDOFS));
+    cb->AddInstr(new CTacInstr(opAdd, addressOfArray, multiplyArraySize, resultDOFS));
+    cb->AddInstr(new CTacInstr(opAdd, finalAddress, arrayTemp1, addressOfArray));
+  }
   return finalAddress;
 }
 
