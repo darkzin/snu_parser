@@ -4,5 +4,5 @@ digraph IR {
   edge  [fontname="Times New Roman",fontsize=10];
 
   // scope 'test9'
-  test9_cb [label="test9\r  0:     if     3 < i goto 1\l  1:     goto   2\l  2: 1:\l  3:     assign t0 <- 1\l  4:     goto   3\l  5: 2:\l  6:     assign t0 <- 0\l  7: 3:\l  8:     assign b <- t0\l",shape=box]
+  test9_cb [label="test9\r  0:     &()    t0 <- b\l  1:     mul    t1 <- 3, 4\l  2:     &()    t2 <- b\l  3:     param  0 <- t2\l  4:     call   t3 <- DOFS\l  5:     add    t4 <- t1, t3\l  6:     add    t5 <- t0, t4\l  7:     assign @t5 <- i\l",shape=box]
 };

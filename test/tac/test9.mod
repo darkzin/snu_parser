@@ -7,8 +7,8 @@
 module test9;
 
 var i: integer;
-    b: boolean;
+    b: integer[5];
 
 begin
-  b := (3 < i)
+  b[3] := i
 end test9.
