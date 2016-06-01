@@ -523,6 +523,12 @@ CAstExpression* CParser::simpleexpr(CAstScope *s)
     else {
       n = new CAstUnaryOp(unaryOpToken, unaryOp, n);
     }
+    // Else neg operation.
+    //CAstConstant *number = dynamic_cast<CAstConstant *>(n);
+    //if (number == NULL) {
+      //cout << "not number is " << n << endl;
+      //n = new CAstUnaryOp(unaryOpToken, unaryOp, n);
+    //}
   }
 
   // term

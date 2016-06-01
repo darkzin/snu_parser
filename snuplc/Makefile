@@ -8,17 +8,18 @@ LIB_DIR=lib
 DEPS=scanner.h \
 		 parser.h \
 		 type.h \
-		 data.h \
 		 symtab.h \
+		 data.h \
 		 ast.h \
 		 ir.h \
 		 first.h \
-		 follow.h
+		 follow.h \
+		 backend.h
 SCANNER=scanner.cpp
 PARSER=parser.cpp \
 			 type.cpp \
-			 data.cpp \
 			 symtab.cpp \
+			 data.cpp \
 			 ast.cpp \
 			 ir.cpp \
 			 first.cpp \
@@ -28,18 +29,19 @@ BACKEND=backend.cpp
 
 DEPS_=$(patsubst %,$(SRC_DIR)/%,$(DEPS))
 LIB_SCANNER=$(patsubst %.cpp,$(LIB_DIR)/%.o,$(SCANNER))
-OBJ_SCANNER=$(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SCANNER))
-OBJ_PARSER=$(patsubst %.cpp,$(OBJ_DIR)/%.o,$(PARSER) $(SCANNER))
+OBJ_PARSER=$(patsubst %.cpp,$(OBJ_DIR)/%.o,$(PARSER))
 OBJ_IR=$(patsubst %.cpp,$(OBJ_DIR)/%.o,$(IR) $(PARSER))
+OBJ_SNUPLC=$(patsubst %.cpp,$(OBJ_DIR)/%.o, \
+					 $(BACKEND) $(IR) $(PARSER))
 
 .PHONY: clean doc
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(DEPS_)
 	$(CC) $(CCFLAGS) -c -o $@ $<
 
-all: test_ir
+all: snuplc
 
-test_scanner: $(OBJ_DIR)/test_scanner.o
+test_scanner: $(OBJ_DIR)/test_scanner.o $(LIB_SCANNER)
 	$(CC) $(CCFLAGS) -o $@ $(OBJ_DIR)/test_scanner.o $(LIB_SCANNER)
 
 test_parser: $(OBJ_DIR)/test_parser.o $(OBJ_PARSER)
@@ -48,11 +50,14 @@ test_parser: $(OBJ_DIR)/test_parser.o $(OBJ_PARSER)
 test_ir: $(OBJ_DIR)/test_ir.o $(OBJ_IR)
 	$(CC) $(CCFLAGS) -o $@ $(OBJ_DIR)/test_ir.o $(LIB_SCANNER) $(OBJ_IR)
 
+snuplc: $(OBJ_DIR)/snuplc.o $(OBJ_SNUPLC)
+	$(CC) $(CCFLAGS) -o $@ $(OBJ_DIR)/snuplc.o $(LIB_SCANNER) $(OBJ_SNUPLC)
+
 doc:
 	doxygen
 
 clean:
-	rm -rf $(OBJ_DIR)/*.o test_scanner test_parser test_ir
+	rm -rf $(OBJ_DIR)/*.o test_scanner test_parser test_ir snuplc
 
 mrproper: clean
 	rm -rf doc/*

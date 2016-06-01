@@ -1,4 +1,4 @@
-// 
+//
 // File name : test07.mod
 // Description : This test intensively tests about array expressions, by making matrix addition, subtraction and multiplications.
 //

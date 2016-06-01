@@ -4,7 +4,7 @@ PWD=$(pwd)
 RESULT=$(pwd)/result
 
 cd $PWD/snuplc/
-make
+make test_ir
 cd ..
 echo > $RESULT
 
