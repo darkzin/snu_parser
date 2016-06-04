@@ -1408,24 +1408,40 @@ CTacAddr* CAstUnaryOp::ToTac(CCodeBlock *cb)
 CTacAddr* CAstUnaryOp::ToTac(CCodeBlock *cb,
                              CTacLabel *ltrue, CTacLabel *lfalse)
 {
+  CTacAddr *operandTac = _operand->ToTac(cb, lfalse, ltrue);
+
+  if (operandTac == NULL) {
+    return NULL;
+  }
+
   // This part needs for optimization. If the condition just true or false value,
   // true value just ignore(not being evaluated),
   // and false value goto falseLabel directly.
-  //if (CAstConstant *boolValue = dynamic_cast<CAstConstant *>(_operand)){
-    //if (boolValue->GetValue() == 1) {
-      //cb->AddInstr(new CTacInstr(opGoto, lfalse));
-    //}
-    //else {
-    //}
-  //}
-  if (CAstDesignator *operand = dynamic_cast<CAstDesignator *>(_operand)) {
-    cb->AddInstr(new CTacInstr(opEqual, lfalse, operand->ToTac(cb), new CTacConst(1)));
-    cb->AddInstr(new CTacInstr(opGoto, ltrue));
+  else if (CTacConst *boolValue = dynamic_cast<CTacConst *>(operandTac)) {
+    if (boolValue->GetValue() == 1) {
+      cb->AddInstr(new CTacInstr(opGoto, lfalse));
+      return NULL;
+    }
+    else {
+      return NULL;
+    }
+  }
+
+  // This case, operand just a CTacTemp. It must be.
+  else {
+    //cb->AddInstr(new CTacInstr(opEqual, lfalse, operandTac, new CTacConst(1)));
+    //cb->AddInstr(new CTacInstr(opGoto, ltrue));
     return NULL;
   }
-  else {
-    return _operand->ToTac(cb, lfalse, ltrue);
-  }
+
+  //if (CAstDesignator *operand = dynamic_cast<CAstDesignator *>(_operand)) {
+    //cb->AddInstr(new CTacInstr(opEqual, lfalse, operand->ToTac(cb), new CTacConst(1)));
+    //cb->AddInstr(new CTacInstr(opGoto, ltrue));
+    //return NULL;
+  //}
+  //else {
+    //return _operand->ToTac(cb, lfalse, ltrue);
+  //}
 }
 
 //------------------------------------------------------------------------------
@@ -1685,12 +1701,6 @@ CTacAddr* CAstFunctionCall::ToTac(CCodeBlock *cb)
   // Parameter assignment is reverse order.
   for(int i = (numberOfArgs-1); i >= 0; i--) {
     argument = GetArg(i)->ToTac(cb);
-    //if(CTacReference *deref = dynamic_cast<CTacReference *>(argument)) {
-      //cout << deref << endl;
-      //CTacAddr *temp = cb->CreateTemp(deref->GetSymbol()->GetDataType());
-      //cb->AddInstr(new CTacInstr(opAddress, temp, deref));
-      //argument = temp;
-    //}
     cb->AddInstr(new CTacInstr(opParam, new CTacConst(i), argument));
   }
 
@@ -1709,7 +1719,7 @@ CTacAddr* CAstFunctionCall::ToTac(CCodeBlock *cb,
   cb->AddInstr(new CTacInstr(opEqual, ltrue, temp, new CTacConst(1)));
   cb->AddInstr(new CTacInstr(opGoto, lfalse));
 
-  return temp;
+  return NULL;
 }
 
 
@@ -2020,7 +2030,7 @@ CTacAddr* CAstArrayDesignator::ToTac(CCodeBlock *cb)
       cb->AddInstr(new CTacInstr(opParam, new CTacConst(0), arrayStartAddress));
 
       // Set temp variable which is saved actual size of dimension by Calling DIM.
-      sizeOfDim = cb->CreateTemp(GetType());
+      sizeOfDim = cb->CreateTemp(CTypeManager::Get()->GetInt());
       functionDIM = new CTacName(cb->GetOwner()->GetSymbolTable()->FindSymbol("DIM"));
       cb->AddInstr(new CTacInstr(opCall, sizeOfDim, functionDIM));
 
@@ -2170,9 +2180,19 @@ CTacAddr* CAstConstant::ToTac(CCodeBlock *cb)
 CTacAddr* CAstConstant::ToTac(CCodeBlock *cb,
                                 CTacLabel *ltrue, CTacLabel *lfalse)
 {
+  // If CAstConstant use this, It means that this constant is boolean type.
   CTacAddr *result = new CTacConst(GetValue());
-  cb->AddInstr(new CTacInstr(opEqual, ltrue, result, new CTacConst(1)));
-  return result;
+  if (GetValue() == 1) {
+    cb->AddInstr(new CTacInstr(opGoto, ltrue));
+    return NULL;
+  }
+  //else {
+    //return NULL;
+  //}
+  //else {
+    //cb->AddInstr(new CTacInstr(opEqual, ltrue, result, new CTacConst(1)));
+  //}
+  return NULL;
 }
 
 

@@ -1,20 +1,20 @@
 
-/home/skyseed/Projects/snu_parser/test/tac/test10.mod
-/home/skyseed/Projects/snu_parser/test/tac/test1.mod
-/home/skyseed/Projects/snu_parser/test/tac/test2.mod
-/home/skyseed/Projects/snu_parser/test/tac/test3.mod
-/home/skyseed/Projects/snu_parser/test/tac/test4.mod
-/home/skyseed/Projects/snu_parser/test/tac/test5.mod
-/home/skyseed/Projects/snu_parser/test/tac/test6.mod
-/home/skyseed/Projects/snu_parser/test/tac/test7.mod
-/home/skyseed/Projects/snu_parser/test/tac/test8.mod
-/home/skyseed/Projects/snu_parser/test/tac/test9.mod
-/home/skyseed/Projects/snu_parser/test/tac/woong_test1.mod
+/home/darkzin/Projects/snu_parser/test/tac/test10.mod
+/home/darkzin/Projects/snu_parser/test/tac/test1.mod
+/home/darkzin/Projects/snu_parser/test/tac/test2.mod
+/home/darkzin/Projects/snu_parser/test/tac/test3.mod
+/home/darkzin/Projects/snu_parser/test/tac/test4.mod
+/home/darkzin/Projects/snu_parser/test/tac/test5.mod
+/home/darkzin/Projects/snu_parser/test/tac/test6.mod
+/home/darkzin/Projects/snu_parser/test/tac/test7.mod
+/home/darkzin/Projects/snu_parser/test/tac/test8.mod
+/home/darkzin/Projects/snu_parser/test/tac/test9.mod
+/home/darkzin/Projects/snu_parser/test/tac/woong_test1.mod
 15d14
 <       <ptr(4) to <array 21 of <char>>>
 21a21
 >       <ptr(4) to <array 21 of <char>>>
-/home/skyseed/Projects/snu_parser/test/tac/woong_test2.mod
+/home/darkzin/Projects/snu_parser/test/tac/woong_test2.mod
 17,18d16
 <       <ptr(4) to <array 23 of <char>>>
 <       <ptr(4) to <array 5 of <array 5 of <array 5 of <bool>>>>>
@@ -27,367 +27,27 @@
 <     [ $t100     <ptr(4) to <array 5 of <bool>>>     ]
 ---
 >     [ $t100     <ptr(4) to <bool>>     ]
-104c105
-<     [ $t103     <bool>     ]
----
->     [ $t103     <int>     ]
-123c124
-<     [ $t120     <array 5 of <bool>>     ]
----
->     [ $t120     <int>     ]
-127c128
-<     [ $t124     <array 5 of <bool>>     ]
----
->     [ $t124     <int>     ]
 136c137
 <     [ $t132     <ptr(4) to <array 5 of <bool>>>     ]
 ---
 >     [ $t132     <ptr(4) to <bool>>     ]
-139c140
-<     [ $t135     <array 5 of <bool>>     ]
----
->     [ $t135     <int>     ]
-143,144c144,145
-<     [ $t139     <array 5 of <bool>>     ]
-<     [ $t14      <bool>     ]
----
->     [ $t139     <int>     ]
->     [ $t14      <int>     ]
 152c153
 <     [ $t147     <ptr(4) to <array 5 of <bool>>>     ]
 ---
 >     [ $t147     <ptr(4) to <bool>>     ]
-156c157
-<     [ $t150     <bool>     ]
----
->     [ $t150     <int>     ]
-160c161
-<     [ $t154     <bool>     ]
----
->     [ $t154     <int>     ]
-171c172
-<     [ $t164     <bool>     ]
----
->     [ $t164     <int>     ]
-184c185
-<     [ $t176     <array 5 of <bool>>     ]
----
->     [ $t176     <int>     ]
-189c190
-<     [ $t180     <array 5 of <bool>>     ]
----
->     [ $t180     <int>     ]
 197c198
 <     [ $t188     <ptr(4) to <array 5 of <bool>>>     ]
 ---
 >     [ $t188     <ptr(4) to <bool>>     ]
-201c202
-<     [ $t191     <array 5 of <bool>>     ]
----
->     [ $t191     <int>     ]
-205c206
-<     [ $t195     <array 5 of <bool>>     ]
----
->     [ $t195     <int>     ]
 215c216
 <     [ $t203     <ptr(4) to <array 5 of <bool>>>     ]
 ---
 >     [ $t203     <ptr(4) to <bool>>     ]
-241c242
-<     [ $t24      <bool>     ]
----
->     [ $t24      <int>     ]
-245c246
-<     [ $t28      <bool>     ]
----
->     [ $t28      <int>     ]
-263c264
-<     [ $t44      <bool>     ]
----
->     [ $t44      <int>     ]
-267c268
-<     [ $t48      <bool>     ]
----
->     [ $t48      <int>     ]
-283c284
-<     [ $t62      <array 5 of <array 5 of <bool>>>     ]
----
->     [ $t62      <int>     ]
-287c288
-<     [ $t66      <array 5 of <array 5 of <bool>>>     ]
----
->     [ $t66      <int>     ]
 296c297
 <     [ $t74      <ptr(4) to <array 5 of <array 5 of <bool>>>>     ]
 ---
 >     [ $t74      <ptr(4) to <bool>>     ]
-299c300
-<     [ $t77      <array 5 of <bool>>     ]
----
->     [ $t77      <int>     ]
-304c305
-<     [ $t81      <array 5 of <bool>>     ]
----
->     [ $t81      <int>     ]
 312c313
 <     [ $t89      <ptr(4) to <array 5 of <bool>>>     ]
 ---
 >     [ $t89      <ptr(4) to <bool>>     ]
-316c317
-<     [ $t92      <array 5 of <bool>>     ]
----
->     [ $t92      <int>     ]
-1171c1172
-<       [ $t101     <bool>       ]
----
->       [ $t101     <int>       ]
-1175c1176
-<       [ $t105     <bool>       ]
----
->       [ $t105     <int>       ]
-1186c1187
-<       [ $t115     <bool>       ]
----
->       [ $t115     <int>       ]
-1202c1203
-<       [ $t13      <bool>       ]
----
->       [ $t13      <int>       ]
-1204c1205
-<       [ $t131     <bool>       ]
----
->       [ $t131     <int>       ]
-1208c1209
-<       [ $t135     <bool>       ]
----
->       [ $t135     <int>       ]
-1221c1222
-<       [ $t147     <bool>       ]
----
->       [ $t147     <int>       ]
-1232c1233
-<       [ $t157     <bool>       ]
----
->       [ $t157     <int>       ]
-1237c1238
-<       [ $t161     <bool>       ]
----
->       [ $t161     <int>       ]
-1246c1247
-<       [ $t17      <bool>       ]
----
->       [ $t17      <int>       ]
-1250c1251
-<       [ $t173     <bool>       ]
----
->       [ $t173     <int>       ]
-1254c1255
-<       [ $t177     <bool>       ]
----
->       [ $t177     <int>       ]
-1265c1266
-<       [ $t187     <bool>       ]
----
->       [ $t187     <int>       ]
-1284c1285
-<       [ $t203     <bool>       ]
----
->       [ $t203     <int>       ]
-1288c1289
-<       [ $t207     <bool>       ]
----
->       [ $t207     <int>       ]
-1307c1308
-<       [ $t224     <bool>       ]
----
->       [ $t224     <int>       ]
-1311c1312
-<       [ $t228     <bool>       ]
----
->       [ $t228     <int>       ]
-1329c1330
-<       [ $t244     <bool>       ]
----
->       [ $t244     <int>       ]
-1344c1345
-<       [ $t258     <bool>       ]
----
->       [ $t258     <int>       ]
-1349c1350
-<       [ $t262     <bool>       ]
----
->       [ $t262     <int>       ]
-1366,1367c1367,1368
-<       [ $t29      <bool>       ]
-<       [ $t3       <bool>       ]
----
->       [ $t29      <int>       ]
->       [ $t3       <int>       ]
-1371c1372
-<       [ $t33      <bool>       ]
----
->       [ $t33      <int>       ]
-1382c1383
-<       [ $t43      <bool>       ]
----
->       [ $t43      <int>       ]
-1399c1400
-<       [ $t59      <bool>       ]
----
->       [ $t59      <int>       ]
-1404c1405
-<       [ $t63      <bool>       ]
----
->       [ $t63      <int>       ]
-1417c1418
-<       [ $t75      <bool>       ]
----
->       [ $t75      <int>       ]
-1428c1429
-<       [ $t85      <bool>       ]
----
->       [ $t85      <int>       ]
-1432c1433
-<       [ $t89      <bool>       ]
----
->       [ $t89      <int>       ]
-1976c1977
-<       530:     if     1 = 1 goto 116
----
->       530:     goto   116
-1983,2042c1984,2041
-<       537:     if     0 = 1 goto 120
-<       538:     assign t253 <- 1
-<       539:     goto   121
-<       540: 120:
-<       541:     assign t253 <- 0
-<       542: 121:
-<       543:     assign p2 <- t253
-<       544:     if     b0 = 1 goto 124
-<       545:     assign t254 <- 1
-<       546:     goto   125
-<       547: 124:
-<       548:     assign t254 <- 0
-<       549: 125:
-<       550:     assign p1 <- t254
-<       551:     if     p2 = 1 goto 128
-<       552:     assign t255 <- 1
-<       553:     goto   129
-<       554: 128:
-<       555:     assign t255 <- 0
-<       556: 129:
-<       557:     assign p2 <- t255
-<       558:     if     p2 = 1 goto 132
-<       559:     &()    t256 <- BoolArr2
-<       560:     param  1 <- 2
-<       561:     &()    t257 <- BoolArr2
-<       562:     param  0 <- t257
-<       563:     call   t258 <- DIM
-<       564:     mul    t259 <- 3, t258
-<       565:     add    t260 <- t259, 2
-<       566:     param  1 <- 3
-<       567:     &()    t261 <- BoolArr2
-<       568:     param  0 <- t261
-<       569:     call   t262 <- DIM
-<       570:     mul    t263 <- t260, t262
-<       571:     add    t264 <- t263, 1
-<       572:     mul    t265 <- t264, 1
-<       573:     &()    t266 <- BoolArr2
-<       574:     param  0 <- t266
-<       575:     call   t267 <- DOFS
-<       576:     add    t268 <- t265, t267
-<       577:     add    t269 <- t256, t268
-<       578:     if     @t269 = 1 goto 135
-<       579:     goto   131
-<       580: 135:
-<       581:     &()    t270 <- BoolArr0
-<       582:     mul    t271 <- 1, 1
-<       583:     &()    t272 <- BoolArr0
-<       584:     param  0 <- t272
-<       585:     call   t273 <- DOFS
-<       586:     add    t274 <- t271, t273
-<       587:     add    t275 <- t270, t274
-<       588:     if     @t275 = 1 goto 132
-<       589: 131:
-<       590:     assign t276 <- 1
-<       591:     goto   133
-<       592: 132:
-<       593:     assign t276 <- 0
-<       594: 133:
-<       595:     assign p2 <- t276
-<       596:     return 
----
->       537:     assign t253 <- 1
->       538:     goto   121
->       539:     assign t253 <- 0
->       540: 121:
->       541:     assign p2 <- t253
->       542:     if     b0 = 1 goto 124
->       543:     assign t254 <- 1
->       544:     goto   125
->       545: 124:
->       546:     assign t254 <- 0
->       547: 125:
->       548:     assign p1 <- t254
->       549:     if     p2 = 1 goto 128
->       550:     assign t255 <- 1
->       551:     goto   129
->       552: 128:
->       553:     assign t255 <- 0
->       554: 129:
->       555:     assign p2 <- t255
->       556:     if     p2 = 1 goto 132
->       557:     &()    t256 <- BoolArr2
->       558:     param  1 <- 2
->       559:     &()    t257 <- BoolArr2
->       560:     param  0 <- t257
->       561:     call   t258 <- DIM
->       562:     mul    t259 <- 3, t258
->       563:     add    t260 <- t259, 2
->       564:     param  1 <- 3
->       565:     &()    t261 <- BoolArr2
->       566:     param  0 <- t261
->       567:     call   t262 <- DIM
->       568:     mul    t263 <- t260, t262
->       569:     add    t264 <- t263, 1
->       570:     mul    t265 <- t264, 1
->       571:     &()    t266 <- BoolArr2
->       572:     param  0 <- t266
->       573:     call   t267 <- DOFS
->       574:     add    t268 <- t265, t267
->       575:     add    t269 <- t256, t268
->       576:     if     @t269 = 1 goto 135
->       577:     goto   131
->       578: 135:
->       579:     &()    t270 <- BoolArr0
->       580:     mul    t271 <- 1, 1
->       581:     &()    t272 <- BoolArr0
->       582:     param  0 <- t272
->       583:     call   t273 <- DOFS
->       584:     add    t274 <- t271, t273
->       585:     add    t275 <- t270, t274
->       586:     if     @t275 = 1 goto 132
->       587: 131:
->       588:     assign t276 <- 1
->       589:     goto   133
->       590: 132:
->       591:     assign t276 <- 0
->       592: 133:
->       593:     assign p2 <- t276
->       594:     return 
-2063c2062
-<       [ $t19      <bool>       ]
----
->       [ $t19      <int>       ]
-2074c2073
-<       [ $t29      <bool>       ]
----
->       [ $t29      <int>       ]
-2079c2078
-<       [ $t33      <bool>       ]
----
->       [ $t33      <int>       ]
-2229c2228
-<       [ $t6       <bool>       ]
----
->       [ $t6       <int>       ]

@@ -137,7 +137,6 @@ void CBackendx86::EmitCode(void)
   // forall s in subscopes do
   //   EmitScope(s)
   // EmitScope(program)
-  EmitScope(_m);
 
   _out << _ind << "# end of text section" << endl
        << _ind << "#-----------------------------------------" << endl
@@ -198,24 +197,6 @@ void CBackendx86::EmitScope(CScope *scope)
   //   EmitInstruction(i)
   //
   // emit function epilogue
-  ComputeStackOffsets(scope->GetSymbolTable(), 0, -16);
-  _out << _ind << "# prologue " << endl;
-  _out << _ind << "pushl" << _ind << "%ebp" << endl;
-  _out << _ind << "movl" << _ind << "%esp, %ebp" << endl;
-  _out << _ind << "pushl" << _ind << "%ebx" << endl;
-  _out << _ind << "pushl" << _ind << "%esi" << endl;
-  _out << _ind << "pushl" << _ind << "%edi" << endl;
-  _out << _ind << "subl" << _ind << "$16, $esp" << endl;
-  _out << endl;
-  _out << _ind << "xorl" << _ind << "%eax, %eax" << endl;
-  _out << _ind << "movl" << _ind << "%eax, 12(%esp)" << endl;
-  _out << _ind << "movl" << _ind << "%eax, 8(%esp)" << endl;
-  _out << _ind << "movl" << _ind << "%eax, 4(%esp)" << endl;
-  _out << _ind << "movl" << _ind << "%eax, 0(%esp)" << endl;
-  _out << endl;
-  _out << _ind << "# function body" << endl;
-  _out << _ind << "# epilogue " << endl;
-
 
   _out << endl;
 }
@@ -323,7 +304,6 @@ void CBackendx86::EmitInstruction(CTacInstr *i)
   cmt << i;
 
   EOperation op = i->GetOperation();
-  _out << i << endl;
 
   switch (op) {
     // binary operators
@@ -488,9 +468,6 @@ size_t CBackendx86::ComputeStackOffsets(CSymtab *symtab,
 {
   assert(symtab != NULL);
   vector<CSymbol*> slist = symtab->GetSymbols();
-  int size = 4;
-  int localIndex = 0;
-  int currentOffset = local_ofs;
 
   // TODO
   // foreach local symbol l in slist do
@@ -504,74 +481,6 @@ size_t CBackendx86::ComputeStackOffsets(CSymtab *symtab,
   // align size
   //
   // dump stack frame to assembly file
-  _out << _ind << "# stack offsets:  " << endl;
-
-  for (size_t i=0; i<slist.size(); i++) {
-    CSymbol *s = slist[i];
-    const CType *t = s->GetDataType();
-    string regName = "%ebp";
-
-    if (s->GetSymbolType() == stLocal) {
-      currentOffset = local_ofs - t->GetSize()*localIndex;
-
-      _out << _ind << "#" << setw(4) << currentOffset;
-      _out << "(" << regName << ")";
-      _out << setw(4) << t->GetSize();
-      _out << _ind << "[ " << setw(4) << s->GetName() << " ";
-      _out << t << regName << currentOffset;
-      _out << _ind << " ]" << endl;
-
-      localIndex++;
-    }
-
-    if (s->GetSymbolType() == stGlobal) {
-      //if (!header) {
-        //_out << _ind << "# scope: " << scope->GetName() << endl;
-        //header = true;
-      //}
-
-      //if ((t->GetAlign() > 1) && (size % t->GetAlign() != 0)) {
-        //size += t->GetAlign() - size % t->GetAlign();
-        //_out << setw(4) << " " << ".align "
-             //<< right << setw(3) << t->GetAlign() << endl;
-      //}
-
-      //_out << left << setw(36) << s->GetName() + ":" << "# " << t << endl;
-
-      //if (t->IsArray()) {
-        //const CArrayType *a = dynamic_cast<const CArrayType*>(t);
-        //assert(a != NULL);
-        //int dim = a->GetNDim();
-
-        //_out << setw(4) << " "
-          //<< ".long " << right << setw(4) << dim << endl;
-
-        //for (int d=0; d<dim; d++) {
-          //assert(a != NULL);
-
-          //_out << setw(4) << " "
-            //<< ".long " << right << setw(4) << a->GetNElem() << endl;
-
-          //a = dynamic_cast<const CArrayType*>(a->GetInnerType());
-        //}
-      //}
-
-      //const CDataInitializer *di = s->GetData();
-      //if (di != NULL) {
-        //const CDataInitString *sdi = dynamic_cast<const CDataInitString*>(di);
-        //assert(sdi != NULL);
-
-        //_out << left << setw(4) << " "
-          //<< ".asciz " << '"' << sdi->GetData() << '"' << endl;
-      //} else {
-        //_out  << left << setw(4) << " "
-          //<< ".skip " << dec << right << setw(4) << t->GetDataSize()
-          //<< endl;
-      //}
-
-      //size += t->GetSize();
-    }
-  }
 
   return size;
 }
