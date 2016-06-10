@@ -214,8 +214,8 @@ void CBackendx86::EmitScope(CScope *scope)
   // emit function epilogue
   //
   // ComputeStackOffsets(scope)
-  // -12는 불려지는 함수가 저장하는 레지스터가 3개 * 4바이트
-  //
+  // local offset 12 means : esi, edi, ebx
+  // param offset 8 means : return, ebp
   size_t stackSize = ComputeStackOffsets(scope->GetSymbolTable(), 8, -12);
   size_t absStackSize = ( stackSize >= 0 ? stackSize : stackSize * -1 );
 
