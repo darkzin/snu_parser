@@ -1,0 +1,8 @@
++     jmp     l_f0_1                  #   3:     goto   1
+-     jmp     l_f0_2_while_cond       #   4:     goto   2_while_cond
++     jmp     l_f0_2_while_cond       #   5:     goto   2_while_cond
++ l_f0_1:
+-     call    ReadInt                 #   5:     call   t1 <- ReadInt
++     call    ReadInt                 #   7:     call   t1 <- ReadInt
+-     addl    $9, %esp               
++     addl    $12, %esp              

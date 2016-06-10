@@ -1,0 +1,10 @@
+-     #   -808(%ebp) 780  [ $v4       <array 7 of <array 9 of <array 3 of <array 2 of <array 2 of <char>>>>>> %ebp-808 ]
++     #   -808(%ebp)  780  [ $v4       <array 7 of <array 9 of <array 3 of <array 2 of <array 2 of <char>>>>>> %ebp-808 ]
+-     # -12084(%ebp)11274  [ $v5       <array 9 of <array 5 of <array 5 of <array 5 of <array 10 of <bool>>>>>> %ebp-12084 ]
++     #   -12084(%ebp)  11274  [ $v5       <array 9 of <array 5 of <array 5 of <array 5 of <array 10 of <bool>>>>>> %ebp-12084 ]
+-     addl    $10, %esp              
++     addl    $16, %esp              
++     jmp     l_test_5_if_false       #   4:     goto   5_if_false
+-     jmp     l_test_3                #   7:     goto   3
++     jmp     l_test_3                #   8:     goto   3
++ l_test_5_if_false:

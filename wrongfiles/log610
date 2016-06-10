@@ -1,0 +1,6 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_f2_5                  #   1:     goto   5
++     jmp     l_f2_6                  #   1:     goto   6
+- l_f2_5:
++ l_f2_6:

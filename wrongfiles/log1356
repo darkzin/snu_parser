@@ -1,0 +1,40 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f2_7                  #  10:     goto   7
++     jmp     l_f2_7                  #  11:     goto   7
++     jmp     l_f2_7                  #  12:     goto   7
+-     movl    $1, %eax                #  10:     assign t3 <- 1
++     movl    $1, %eax                #  13:     assign t3 <- 1
+-     jmp     l_f2_8                  #  11:     goto   8
++     jmp     l_f2_8                  #  14:     goto   8
++ l_f2_7:
+-     movl    $0, %eax                #  12:     assign t3 <- 0
++     movl    $0, %eax                #  16:     assign t3 <- 0
+-     movzbl  -18(%ebp), %eax         #  14:     return t3
++     movzbl  -18(%ebp), %eax         #  18:     return t3
+-     jmp     l_f2_15                 #  15:     goto   15
++     jmp     l_f2_16                 #  19:     goto   16
+- l_f2_15:
++ l_f2_16:
+-     movl    $1, %eax                #  17:     assign t4 <- 1
++     movl    $1, %eax                #  21:     assign t4 <- 1
+-     jmp     l_f2_17                 #  18:     goto   17
++     jmp     l_f2_18                 #  22:     goto   18
+-     movl    $0, %eax                #  19:     assign t4 <- 0
++     movl    $0, %eax                #  23:     assign t4 <- 0
+- l_f2_17:
++ l_f2_18:
+-     movzbl  -19(%ebp), %eax         #  21:     if     t4 # 1 goto 12
++     movzbl  -19(%ebp), %eax         #  25:     if     t4 # 1 goto 12
+-     jmp     l_f2_13                 #  22:     goto   13
++     jmp     l_f2_13                 #  26:     goto   13
+-     movl    $1, %eax                #  24:     assign t5 <- 1
++     movl    $1, %eax                #  28:     assign t5 <- 1
+-     jmp     l_f2_14                 #  25:     goto   14
++     jmp     l_f2_14                 #  29:     goto   14
+-     movl    $0, %eax                #  27:     assign t5 <- 0
++     movl    $0, %eax                #  31:     assign t5 <- 0
+-     movzbl  -20(%ebp), %eax         #  29:     assign v2 <- t5
++     movzbl  -20(%ebp), %eax         #  33:     assign v2 <- t5

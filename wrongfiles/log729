@@ -1,0 +1,17 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_15               #  38:     goto   15
+-     jmp     l_test_16_while_cond    #  38:     goto   16_while_cond
++     jmp     l_test_16_while_cond    #  39:     goto   16_while_cond
+-     movl    $86771, %eax            #  41:     mul    t7 <- 86771, 65993
++     movl    $86771, %eax            #  42:     mul    t7 <- 86771, 65993
+-     movl    -28(%ebp), %eax         #  42:     mul    t8 <- t7, 87132
++     movl    -28(%ebp), %eax         #  43:     mul    t8 <- t7, 87132
+-     movl    -32(%ebp), %eax         #  43:     add    t9 <- t8, 4612
++     movl    -32(%ebp), %eax         #  44:     add    t9 <- t8, 4612
+-     movl    -36(%ebp), %eax         #  44:     if     t9 > 22863 goto 27_while_body
++     movl    -36(%ebp), %eax         #  45:     if     t9 > 22863 goto 27_while_body
+-     jmp     l_test_25               #  45:     goto   25
++     jmp     l_test_25               #  46:     goto   25
+-     jmp     l_test_26_while_cond    #  47:     goto   26_while_cond
++     jmp     l_test_26_while_cond    #  48:     goto   26_while_cond

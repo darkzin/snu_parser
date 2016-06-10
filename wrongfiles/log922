@@ -1,0 +1,48 @@
+-     jmp     l_f2_4                  #   2:     goto   4
++     jmp     l_f2_5                  #   2:     goto   5
+-     jmp     l_f2_4                  #   3:     goto   4
++     jmp     l_f2_5                  #   3:     goto   5
++     jmp     l_f2_6                  #   4:     goto   6
+- l_f2_4:
++ l_f2_5:
+-     movl    $1, %eax                #   5:     assign t5 <- 1
++     movl    $1, %eax                #   6:     assign t5 <- 1
+-     jmp     l_f2_6                  #   6:     goto   6
++     jmp     l_f2_7                  #   7:     goto   7
++ l_f2_6:
+-     movl    $0, %eax                #   7:     assign t5 <- 0
++     movl    $0, %eax                #   9:     assign t5 <- 0
+- l_f2_6:
++ l_f2_7:
+-     movzbl  -13(%ebp), %eax         #   9:     if     t5 = 1 goto 3_while_body
++     movzbl  -13(%ebp), %eax         #  11:     if     t5 = 1 goto 3_while_body
+-     jmp     l_f2_1                  #  10:     goto   1
++     jmp     l_f2_1                  #  12:     goto   1
+-     movl    $99, %eax               #  13:     if     99 >= 98 goto 14_while_body
++     movl    $99, %eax               #  15:     if     99 >= 98 goto 14_while_body
+-     jmp     l_f2_12                 #  14:     goto   12
++     jmp     l_f2_12                 #  16:     goto   12
+-     jmp     l_f2_13_while_cond      #  16:     goto   13_while_cond
++     jmp     l_f2_13_while_cond      #  18:     goto   13_while_cond
+-     movl    $76405, %eax            #  18:     return 76405
++     movl    $76405, %eax            #  20:     return 76405
+-     call    dummyProcedure          #  19:     call   dummyProcedure
++     call    dummyProcedure          #  21:     call   dummyProcedure
+-     jmp     l_f2_18                 #  21:     goto   18
++     jmp     l_f2_18                 #  23:     goto   18
+-     jmp     l_f2_19_while_cond      #  22:     goto   19_while_cond
++     jmp     l_f2_19_while_cond      #  24:     goto   19_while_cond
+-     movl    $82756, %eax            #  24:     return 82756
++     movl    $82756, %eax            #  26:     return 82756
+-     jmp     l_f2_2_while_cond       #  25:     goto   2_while_cond
++     jmp     l_f2_2_while_cond       #  27:     goto   2_while_cond
+-     movl    $99, %eax               #  28:     if     99 <= 97 goto 24_while_body
++     movl    $99, %eax               #  30:     if     99 <= 97 goto 24_while_body
+-     jmp     l_f2_22                 #  29:     goto   22
++     jmp     l_f2_22                 #  31:     goto   22
+-     movl    $65876, %eax            #  31:     return 65876
++     movl    $65876, %eax            #  33:     return 65876
+-     jmp     l_f2_23_while_cond      #  32:     goto   23_while_cond
++     jmp     l_f2_23_while_cond      #  34:     goto   23_while_cond
+-     addl    $1, %esp               
++     addl    $4, %esp               

@@ -1,0 +1,24 @@
+-     #  -1256(%ebp)1224  [ $v6       <array 1 of <array 5 of <array 10 of <array 3 of <array 8 of <char>>>>>> %ebp-1256 ]
++     #   -1256(%ebp)  1224  [ $v6       <array 1 of <array 5 of <array 10 of <array 3 of <array 8 of <char>>>>>> %ebp-1256 ]
+-     # -79680(%ebp)78424  [ $v7       <array 7 of <array 10 of <array 10 of <array 4 of <array 7 of <int>>>>>> %ebp-79680 ]
++     #   -79680(%ebp)  78424  [ $v7       <array 7 of <array 10 of <array 10 of <array 4 of <array 7 of <int>>>>>> %ebp-79680 ]
+-     # -87264(%ebp)7584  [ $v8       <array 9 of <array 6 of <array 10 of <array 2 of <array 7 of <bool>>>>>> %ebp-87264 ]
++     #   -87264(%ebp)  7584  [ $v8       <array 9 of <array 6 of <array 10 of <array 2 of <array 7 of <bool>>>>>> %ebp-87264 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              
+-     movl    $99, %eax               #  20:     if     99 > 97 goto 22
++     movl    $99, %eax               #  20:     if     99 > 97 goto 23
+-     jg      l_test_22              
++     jg      l_test_23              
+-     jmp     l_test_23               #  21:     goto   23
++     jmp     l_test_24               #  21:     goto   24
+- l_test_22:
++ l_test_23:
+-     jmp     l_test_24               #  24:     goto   24
++     jmp     l_test_25               #  24:     goto   25
+- l_test_23:
++ l_test_24:
+- l_test_24:
++ l_test_25:
+-     addl    $10, %esp              
++     addl    $16, %esp              

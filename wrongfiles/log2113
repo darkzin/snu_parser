@@ -1,0 +1,30 @@
++     jmp     l_f1_0                  #   1:     goto   0
+-     jmp     l_f1_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   2:     goto   1_while_cond
++ l_f1_0:
+-     jmp     l_f1_6_if_true          #   2:     goto   6_if_true
++     jmp     l_f1_6_if_true          #   4:     goto   6_if_true
+-     jmp     l_f1_6_if_true          #   3:     goto   6_if_true
++     jmp     l_f1_6_if_true          #   5:     goto   6_if_true
++     jmp     l_f1_7_if_false         #   6:     goto   7_if_false
+-     movl    $84359, %eax            #   5:     if     84359 < 10811 goto 11
++     movl    $84359, %eax            #   8:     if     84359 < 10811 goto 11
+-     jmp     l_f1_12                 #   6:     goto   12
++     jmp     l_f1_12                 #   9:     goto   12
+-     movl    $1, %eax                #   8:     assign t2 <- 1
++     movl    $1, %eax                #  11:     assign t2 <- 1
+-     jmp     l_f1_13                 #   9:     goto   13
++     jmp     l_f1_13                 #  12:     goto   13
+-     movl    $0, %eax                #  11:     assign t2 <- 0
++     movl    $0, %eax                #  14:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #  13:     return t2
++     movzbl  -13(%ebp), %eax         #  16:     return t2
+-     jmp     l_f1_16_while_cond      #  15:     goto   16_while_cond
++     jmp     l_f1_16_while_cond      #  18:     goto   16_while_cond
+-     jmp     l_f1_5                  #  16:     goto   5
++     jmp     l_f1_5                  #  19:     goto   5
++ l_f1_7_if_false:
+-     call    ReadInt                 #  18:     call   t3 <- ReadInt
++     call    ReadInt                 #  22:     call   t3 <- ReadInt
+-     addl    $1, %esp               
++     addl    $4, %esp               

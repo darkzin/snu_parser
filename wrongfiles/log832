@@ -1,0 +1,15 @@
++     jmp     l_f2_2_if_false         #   0:     goto   2_if_false
++     jmp     l_f2_2_if_false         #   1:     goto   2_if_false
+-     jmp     l_f2_0                  #   1:     goto   0
++     jmp     l_f2_0                  #   3:     goto   0
++ l_f2_2_if_false:
+-     jmp     l_f2_10_if_false        #   3:     goto   10_if_false
++     jmp     l_f2_10_if_false        #   6:     goto   10_if_false
+-     call    dummyBOOLfunc           #   4:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   7:     call   t6 <- dummyBOOLfunc
+-     call    dummyBOOLfunc           #   6:     call   t7 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   9:     call   t7 <- dummyBOOLfunc
+-     jmp     l_f2_8                  #   7:     goto   8
++     jmp     l_f2_8                  #  10:     goto   8
+-     addl    $1, %esp               
++     addl    $4, %esp               

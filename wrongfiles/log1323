@@ -1,0 +1,18 @@
++     jmp     l_test_30_if_false      #  38:     goto   30_if_false
+-     jmp     l_test_28               #  39:     goto   28
++     jmp     l_test_28               #  40:     goto   28
++ l_test_30_if_false:
+-     jmp     l_test_35_if_true       #  41:     goto   35_if_true
+-     jmp     l_test_35_if_true       #  42:     goto   35_if_true
++     jmp     l_test_35_if_true       #  44:     goto   35_if_true
++     jmp     l_test_35_if_true       #  45:     goto   35_if_true
++     jmp     l_test_36_if_false      #  46:     goto   36_if_false
+-     movl    $97, %eax               #  46:     if     97 # 100 goto 43_while_body
++     movl    $97, %eax               #  49:     if     97 # 100 goto 43_while_body
+-     jmp     l_test_41               #  47:     goto   41
++     jmp     l_test_41               #  50:     goto   41
+-     jmp     l_test_42_while_cond    #  49:     goto   42_while_cond
++     jmp     l_test_42_while_cond    #  52:     goto   42_while_cond
+-     jmp     l_test_34               #  51:     goto   34
++     jmp     l_test_34               #  54:     goto   34
++ l_test_36_if_false:

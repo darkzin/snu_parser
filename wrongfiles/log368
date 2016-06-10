@@ -1,0 +1,16 @@
++     jmp     l_f2_0                  #   2:     goto   0
+-     jmp     l_f2_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f2_1_while_cond       #   4:     goto   1_while_cond
++ l_f2_0:
+-     movl    $24431, %eax            #   4:     sub    t2 <- 24431, 76725
++     movl    $24431, %eax            #   6:     sub    t2 <- 24431, 76725
+-     call    ReadInt                 #   5:     call   t3 <- ReadInt
++     call    ReadInt                 #   7:     call   t3 <- ReadInt
+-     movl    -16(%ebp), %eax         #   6:     sub    t4 <- t2, t3
++     movl    -16(%ebp), %eax         #   8:     sub    t4 <- t2, t3
+-     movl    -24(%ebp), %eax         #   7:     param  0 <- t4
++     movl    -24(%ebp), %eax         #   9:     param  0 <- t4
+-     call    WriteInt                #   8:     call   WriteInt
++     call    WriteInt                #  10:     call   WriteInt
+-     call    dummyCHARfunc           #   9:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #  11:     call   t5 <- dummyCHARfunc

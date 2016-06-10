@@ -1,0 +1,22 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     #  -6528(%ebp)6504  [ $v3       <array 3 of <array 8 of <array 5 of <array 9 of <array 6 of <char>>>>>> %ebp-6528 ]
++     #   -6528(%ebp)  6504  [ $v3       <array 3 of <array 8 of <array 5 of <array 9 of <array 6 of <char>>>>>> %ebp-6528 ]
++     jmp     l_f2_12                 #  12:     goto   12
++ l_f2_12:
++     jmp     l_f2_10                 #  14:     goto   10
+-     movl    $1, %eax                #  12:     assign t1 <- 1
++     movl    $1, %eax                #  15:     assign t1 <- 1
+-     jmp     l_f2_11                 #  13:     goto   11
++     jmp     l_f2_11                 #  16:     goto   11
++ l_f2_10:
+-     movl    $0, %eax                #  14:     assign t1 <- 0
++     movl    $0, %eax                #  18:     assign t1 <- 0
+-     movzbl  -13(%ebp), %eax         #  16:     return t1
++     movzbl  -13(%ebp), %eax         #  20:     return t1
+-     leal    -6528(%ebp), %eax       #  17:     &()    t2 <- v3
++     leal    -6528(%ebp), %eax       #  21:     &()    t2 <- v3
+-     movl    -20(%ebp), %eax         #  18:     param  0 <- t2
++     movl    -20(%ebp), %eax         #  22:     param  0 <- t2
+-     call    f0                      #  19:     call   t3 <- f0
++     call    f0                      #  23:     call   t3 <- f0

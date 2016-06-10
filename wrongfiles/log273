@@ -1,0 +1,34 @@
++     jmp     l_f0_2                  #   0:     goto   2
+-     movl    $1, %eax                #   0:     assign t2 <- 1
++     movl    $1, %eax                #   1:     assign t2 <- 1
+-     jmp     l_f0_3                  #   1:     goto   3
++     jmp     l_f0_3                  #   2:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   2:     assign t2 <- 0
++     movl    $0, %eax                #   4:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     return t2
++     movzbl  -13(%ebp), %eax         #   6:     return t2
+-     movl    $90227, %eax            #   5:     if     90227 < 14604 goto 11
++     movl    $90227, %eax            #   7:     if     90227 < 14604 goto 11
+-     jmp     l_f0_8                  #   6:     goto   8
++     jmp     l_f0_8                  #   8:     goto   8
+-     movl    $1, %eax                #   8:     assign t3 <- 1
++     movl    $1, %eax                #  10:     assign t3 <- 1
+-     jmp     l_f0_9                  #   9:     goto   9
++     jmp     l_f0_9                  #  11:     goto   9
+-     movl    $0, %eax                #  11:     assign t3 <- 0
++     movl    $0, %eax                #  13:     assign t3 <- 0
+-     movzbl  -14(%ebp), %eax         #  13:     return t3
++     movzbl  -14(%ebp), %eax         #  15:     return t3
+-     call    dummyProcedure          #  14:     call   dummyProcedure
++     call    dummyProcedure          #  16:     call   dummyProcedure
++     jmp     l_f2_11_if_false        #  21:     goto   11_if_false
+-     movl    $100, %eax              #  23:     if     100 < 100 goto 15_while_body
++     movl    $100, %eax              #  24:     if     100 < 100 goto 15_while_body
+-     jmp     l_f2_13                 #  24:     goto   13
++     jmp     l_f2_13                 #  25:     goto   13
+-     jmp     l_f2_14_while_cond      #  26:     goto   14_while_cond
++     jmp     l_f2_14_while_cond      #  27:     goto   14_while_cond
+-     jmp     l_f2_9                  #  28:     goto   9
++     jmp     l_f2_9                  #  29:     goto   9
++ l_f2_11_if_false:

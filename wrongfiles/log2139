@@ -1,0 +1,21 @@
++     jmp     l_f1_4                  #   6:     goto   4
++     jmp     l_f1_4                  #   7:     goto   4
+-     movl    $1, %eax                #   7:     assign t4 <- 1
++     movl    $1, %eax                #   9:     assign t4 <- 1
+-     jmp     l_f1_5                  #   8:     goto   5
++     jmp     l_f1_5                  #  10:     goto   5
++ l_f1_4:
+-     movl    $0, %eax                #   9:     assign t4 <- 0
++     movl    $0, %eax                #  12:     assign t4 <- 0
+-     movzbl  -17(%ebp), %eax         #  11:     assign v2 <- t4
++     movzbl  -17(%ebp), %eax         #  14:     assign v2 <- t4
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_test_15               #  16:     goto   15
++     jmp     l_test_16               #  16:     goto   16
+- l_test_15:
++ l_test_16:
+-     jmp     l_test_17               #  19:     goto   17
++     jmp     l_test_18               #  19:     goto   18
+- l_test_17:
++ l_test_18:

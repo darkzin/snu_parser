@@ -1,0 +1,34 @@
++     jmp     l_f0_13                 #  42:     goto   13
+-     movl    $1, %eax                #  43:     assign t16 <- 1
++     movl    $1, %eax                #  44:     assign t16 <- 1
+-     jmp     l_f0_14                 #  44:     goto   14
++     jmp     l_f0_14                 #  45:     goto   14
++ l_f0_13:
+-     movl    $0, %eax                #  45:     assign t16 <- 0
++     movl    $0, %eax                #  47:     assign t16 <- 0
+-     movzbl  -45(%ebp), %eax         #  47:     return t16
++     movzbl  -45(%ebp), %eax         #  49:     return t16
+-     movl    $100, %eax              #  48:     if     100 > 97 goto 20_if_true
++     movl    $100, %eax              #  50:     if     100 > 97 goto 20_if_true
+-     jmp     l_f0_21_if_false        #  49:     goto   21_if_false
++     jmp     l_f0_21_if_false        #  51:     goto   21_if_false
+-     call    WriteLn                 #  51:     call   WriteLn
++     call    WriteLn                 #  53:     call   WriteLn
+-     movl    $1, %eax                #  52:     return 1
++     movl    $1, %eax                #  54:     return 1
+-     movl    $6223, %eax             #  53:     assign v0 <- 6223
++     movl    $6223, %eax             #  55:     assign v0 <- 6223
+-     movl    $43135, %eax            #  54:     if     43135 < 44206 goto 27
++     movl    $43135, %eax            #  56:     if     43135 < 44206 goto 27
+-     jmp     l_f0_28                 #  55:     goto   28
++     jmp     l_f0_28                 #  57:     goto   28
+-     movl    $1, %eax                #  57:     assign t17 <- 1
++     movl    $1, %eax                #  59:     assign t17 <- 1
+-     jmp     l_f0_29                 #  58:     goto   29
++     jmp     l_f0_29                 #  60:     goto   29
+-     movl    $0, %eax                #  60:     assign t17 <- 0
++     movl    $0, %eax                #  62:     assign t17 <- 0
+-     movzbl  -46(%ebp), %eax         #  62:     return t17
++     movzbl  -46(%ebp), %eax         #  64:     return t17
+-     jmp     l_f0_19                 #  63:     goto   19
++     jmp     l_f0_19                 #  65:     goto   19

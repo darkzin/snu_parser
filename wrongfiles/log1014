@@ -1,0 +1,40 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_0                #   2:     goto   0
+-     jmp     l_test_1_while_cond     #   3:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   4:     goto   1_while_cond
++ l_test_0:
+-     movl    $5872, %eax             #   4:     mul    t0 <- 5872, 30011
++     movl    $5872, %eax             #   6:     mul    t0 <- 5872, 30011
+-     movl    $19185, %eax            #   5:     sub    t1 <- 19185, t0
++     movl    $19185, %eax            #   7:     sub    t1 <- 19185, t0
+-     movl    -20(%ebp), %eax         #   6:     assign v0 <- t1
++     movl    -20(%ebp), %eax         #   8:     assign v0 <- t1
+-     call    f1                      #   8:     call   t2 <- f1
++     call    f1                      #  10:     call   t2 <- f1
+-     movzbl  -21(%ebp), %eax         #   9:     if     t2 < 99 goto 8_while_body
++     movzbl  -21(%ebp), %eax         #  11:     if     t2 < 99 goto 8_while_body
+-     jmp     l_test_6                #  10:     goto   6
++     jmp     l_test_6                #  12:     goto   6
+-     jmp     l_test_7_while_cond     #  12:     goto   7_while_cond
++     jmp     l_test_7_while_cond     #  14:     goto   7_while_cond
+-     movl    $12935, %eax            #  14:     if     12935 = 10943 goto 11_if_true
++     movl    $12935, %eax            #  16:     if     12935 = 10943 goto 11_if_true
+-     jmp     l_test_12_if_false      #  15:     goto   12_if_false
++     jmp     l_test_12_if_false      #  17:     goto   12_if_false
+-     movl    $99, %eax               #  17:     assign v1 <- 99
++     movl    $99, %eax               #  19:     assign v1 <- 99
+-     jmp     l_test_17_if_false      #  18:     goto   17_if_false
++     jmp     l_test_17_if_false      #  20:     goto   17_if_false
+-     jmp     l_test_15               #  19:     goto   15
++     jmp     l_test_15               #  21:     goto   15
+-     movl    $59292, %eax            #  22:     assign v0 <- 59292
++     movl    $59292, %eax            #  24:     assign v0 <- 59292
+-     jmp     l_test_10               #  23:     goto   10
++     jmp     l_test_10               #  25:     goto   10
+-     movl    $100, %eax              #  26:     if     100 < 99 goto 20_if_true
++     movl    $100, %eax              #  28:     if     100 < 99 goto 20_if_true
+-     jmp     l_test_21_if_false      #  27:     goto   21_if_false
++     jmp     l_test_21_if_false      #  29:     goto   21_if_false
+-     jmp     l_test_19               #  29:     goto   19
++     jmp     l_test_19               #  31:     goto   19

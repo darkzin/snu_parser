@@ -1,0 +1,16 @@
++     jmp     l_f1_8                  #  13:     goto   8
+-     movl    $9750, %eax             #  13:     if     9750 >= 64593 goto 13_if_true
++     movl    $9750, %eax             #  14:     if     9750 >= 64593 goto 13_if_true
+-     jmp     l_f1_14_if_false        #  14:     goto   14_if_false
++     jmp     l_f1_14_if_false        #  15:     goto   14_if_false
+-     jmp     l_f1_12                 #  16:     goto   12
++     jmp     l_f1_12                 #  17:     goto   12
+-     movl    $99, %eax               #  19:     if     99 >= 99 goto 17_if_true
++     movl    $99, %eax               #  20:     if     99 >= 99 goto 17_if_true
+-     jmp     l_f1_18_if_false        #  20:     goto   18_if_false
++     jmp     l_f1_18_if_false        #  21:     goto   18_if_false
+-     jmp     l_f1_16                 #  22:     goto   16
++     jmp     l_f1_16                 #  23:     goto   16
+-     jmp     l_f1_9_while_cond       #  25:     goto   9_while_cond
++     jmp     l_f1_9_while_cond       #  26:     goto   9_while_cond
++ l_f1_8:

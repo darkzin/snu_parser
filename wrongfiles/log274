@@ -1,0 +1,22 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_0                #   3:     goto   0
+-     jmp     l_test_1_while_cond     #   4:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   5:     goto   1_while_cond
++ l_test_0:
+-     movl    $70462, %eax            #   5:     add    t0 <- 70462, 74090
++     movl    $70462, %eax            #   7:     add    t0 <- 70462, 74090
+-     movl    -16(%ebp), %eax         #   6:     sub    t1 <- t0, 49250
++     movl    -16(%ebp), %eax         #   8:     sub    t1 <- t0, 49250
+-     movl    -20(%ebp), %eax         #   7:     add    t2 <- t1, 65700
++     movl    -20(%ebp), %eax         #   9:     add    t2 <- t1, 65700
+-     movl    -24(%ebp), %eax         #   8:     add    t3 <- t2, 52919
++     movl    -24(%ebp), %eax         #  10:     add    t3 <- t2, 52919
+-     movl    -28(%ebp), %eax         #   9:     assign v0 <- t3
++     movl    -28(%ebp), %eax         #  11:     assign v0 <- t3
+-     movl    $24505, %eax            #  10:     param  0 <- 24505
++     movl    $24505, %eax            #  12:     param  0 <- 24505
+-     call    f1                      #  11:     call   f1
++     call    f1                      #  13:     call   f1
+-     movl    $99, %eax               #  12:     assign v1 <- 99
++     movl    $99, %eax               #  14:     assign v1 <- 99

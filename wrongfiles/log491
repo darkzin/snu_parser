@@ -1,0 +1,14 @@
++     jmp     l_test_0                #   2:     goto   0
+-     jmp     l_test_5_while_cond     #   4:     goto   5_while_cond
++     jmp     l_test_5_while_cond     #   5:     goto   5_while_cond
+-     call    dummyINTfunc            #   5:     call   t0 <- dummyINTfunc
++     call    dummyINTfunc            #   6:     call   t0 <- dummyINTfunc
+-     jmp     l_test_1_while_cond     #   7:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   8:     goto   1_while_cond
++ l_test_0:
++     jmp     l_test_11_if_false      #  10:     goto   11_if_false
+-     call    dummyINTfunc            #   8:     call   t1 <- dummyINTfunc
++     call    dummyINTfunc            #  11:     call   t1 <- dummyINTfunc
+-     jmp     l_test_9                #   9:     goto   9
++     jmp     l_test_9                #  12:     goto   9
++ l_test_11_if_false:

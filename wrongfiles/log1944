@@ -1,0 +1,22 @@
++     jmp     l_test_3_if_false       #  10:     goto   3_if_false
+-     jmp     l_test_5                #  11:     goto   5
++     jmp     l_test_5                #  12:     goto   5
+-     jmp     l_test_8                #  13:     goto   8
++     jmp     l_test_8                #  14:     goto   8
+-     jmp     l_test_1                #  15:     goto   1
++     jmp     l_test_1                #  16:     goto   1
++ l_test_3_if_false:
+-     jmp     l_test_12_if_true       #  17:     goto   12_if_true
++     jmp     l_test_12_if_true       #  19:     goto   12_if_true
++     jmp     l_test_13_if_false      #  20:     goto   13_if_false
+-     call    dummyBOOLfunc           #  19:     call   t8 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  22:     call   t8 <- dummyBOOLfunc
+-     movl    $100, %eax              #  20:     assign v1 <- 100
++     movl    $100, %eax              #  23:     assign v1 <- 100
+-     jmp     l_test_11               #  21:     goto   11
++     jmp     l_test_11               #  24:     goto   11
++ l_test_13_if_false:
+-     call    dummyProcedure          #  23:     call   dummyProcedure
++     call    dummyProcedure          #  27:     call   dummyProcedure
+-     call    f0                      #  25:     call   t9 <- f0
++     call    f0                      #  29:     call   t9 <- f0

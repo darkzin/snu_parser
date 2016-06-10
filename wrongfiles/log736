@@ -1,0 +1,4 @@
++     jmp     l_test_4                #  12:     goto   4
+-     jmp     l_test_5_while_cond     #  13:     goto   5_while_cond
++     jmp     l_test_5_while_cond     #  14:     goto   5_while_cond
++ l_test_4:

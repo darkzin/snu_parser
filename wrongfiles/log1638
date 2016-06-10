@@ -1,0 +1,41 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_2                #   0:     goto   2
++     jmp     l_test_2                #   1:     goto   2
+-     movl    $1, %eax                #   0:     assign t0 <- 1
++     movl    $1, %eax                #   2:     assign t0 <- 1
+-     jmp     l_test_3                #   1:     goto   3
++     jmp     l_test_3                #   3:     goto   3
++ l_test_2:
+-     movl    $0, %eax                #   2:     assign t0 <- 0
++     movl    $0, %eax                #   5:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v0 <- t0
++     movzbl  -13(%ebp), %eax         #   7:     assign v0 <- t0
+-     jmp     l_test_8                #   5:     goto   8
++     jmp     l_test_8                #   8:     goto   8
+-     leal    v2, %eax                #   8:     &()    t1 <- v2
++     leal    v2, %eax                #  11:     &()    t1 <- v2
+-     movl    -20(%ebp), %eax         #   9:     param  1 <- t1
++     movl    -20(%ebp), %eax         #  12:     param  1 <- t1
+-     leal    v1, %eax                #  10:     &()    t2 <- v1
++     leal    v1, %eax                #  13:     &()    t2 <- v1
+-     movl    -24(%ebp), %eax         #  11:     param  0 <- t2
++     movl    -24(%ebp), %eax         #  14:     param  0 <- t2
+-     call    f2                      #  12:     call   t3 <- f2
++     call    f2                      #  15:     call   t3 <- f2
+-     jmp     l_test_5                #  13:     goto   5
++     jmp     l_test_5                #  16:     goto   5
+-     movl    $91655, %eax            #  15:     add    t4 <- 91655, 60375
++     movl    $91655, %eax            #  18:     add    t4 <- 91655, 60375
+-     movl    -32(%ebp), %eax         #  16:     add    t5 <- t4, 18875
++     movl    -32(%ebp), %eax         #  19:     add    t5 <- t4, 18875
+-     movl    -36(%ebp), %eax         #  17:     add    t6 <- t5, 75532
++     movl    -36(%ebp), %eax         #  20:     add    t6 <- t5, 75532
+-     movl    -40(%ebp), %eax         #  18:     if     t6 < 54047 goto 14_if_true
++     movl    -40(%ebp), %eax         #  21:     if     t6 < 54047 goto 14_if_true
+-     jmp     l_test_15_if_false      #  19:     goto   15_if_false
++     jmp     l_test_15_if_false      #  22:     goto   15_if_false
+-     jmp     l_test_18_while_cond    #  22:     goto   18_while_cond
++     jmp     l_test_18_while_cond    #  25:     goto   18_while_cond
+-     jmp     l_test_13               #  24:     goto   13
++     jmp     l_test_13               #  27:     goto   13

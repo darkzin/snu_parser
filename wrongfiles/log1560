@@ -1,0 +1,24 @@
++     jmp     l_f2_0                  #   1:     goto   0
+-     jmp     l_f2_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f2_1_while_cond       #   2:     goto   1_while_cond
++ l_f2_0:
+-     movl    $30756, %eax            #   4:     mul    t2 <- 30756, 46856
++     movl    $30756, %eax            #   6:     mul    t2 <- 30756, 46856
+-     movl    -16(%ebp), %eax         #   5:     if     t2 = 82919 goto 7_while_body
++     movl    -16(%ebp), %eax         #   7:     if     t2 = 82919 goto 7_while_body
+-     jmp     l_f2_5                  #   6:     goto   5
++     jmp     l_f2_5                  #   8:     goto   5
+-     jmp     l_f2_6_while_cond       #  12:     goto   6_while_cond
++     jmp     l_f2_6_while_cond       #  14:     goto   6_while_cond
++     jmp     l_test_6                #  10:     goto   6
+-     movl    $98, %eax               #  10:     if     98 < 100 goto 11_if_true
++     movl    $98, %eax               #  11:     if     98 < 100 goto 11_if_true
+-     jmp     l_test_12_if_false      #  11:     goto   12_if_false
++     jmp     l_test_12_if_false      #  12:     goto   12_if_false
+-     jmp     l_test_10               #  13:     goto   10
++     jmp     l_test_10               #  14:     goto   10
+-     jmp     l_test_7_while_cond     #  16:     goto   7_while_cond
++     jmp     l_test_7_while_cond     #  17:     goto   7_while_cond
++ l_test_6:
+-     movl    $1, %eax                #  17:     assign v0 <- 1
++     movl    $1, %eax                #  19:     assign v0 <- 1

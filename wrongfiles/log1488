@@ -1,0 +1,16 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movl    $72694, %eax            #   2:     if     72694 < 65426 goto 6
++     movl    $72694, %eax            #   2:     if     72694 < 65426 goto 7
+-     jl      l_f1_6                 
++     jl      l_f1_7                 
+-     jmp     l_f1_7                  #   3:     goto   7
++     jmp     l_f1_8                  #   3:     goto   8
+- l_f1_6:
++ l_f1_7:
+-     jmp     l_f1_8                  #   6:     goto   8
++     jmp     l_f1_9                  #   6:     goto   9
+- l_f1_7:
++ l_f1_8:
+- l_f1_8:
++ l_f1_9:

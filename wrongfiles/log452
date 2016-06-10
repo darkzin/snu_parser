@@ -1,0 +1,44 @@
+-     addl    $9, %esp               
++     addl    $12, %esp              
++     jmp     l_test_2                #   0:     goto   2
++     jmp     l_test_2                #   1:     goto   2
++     jmp     l_test_2                #   2:     goto   2
+-     movl    $1, %eax                #   0:     assign t0 <- 1
++     movl    $1, %eax                #   3:     assign t0 <- 1
+-     jmp     l_test_3                #   1:     goto   3
++     jmp     l_test_3                #   4:     goto   3
++ l_test_2:
+-     movl    $0, %eax                #   2:     assign t0 <- 0
++     movl    $0, %eax                #   6:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v0 <- t0
++     movzbl  -13(%ebp), %eax         #   8:     assign v0 <- t0
+-     call    ReadInt                 #   6:     call   t1 <- ReadInt
++     call    ReadInt                 #  10:     call   t1 <- ReadInt
+-     movl    $6636, %eax             #   8:     param  2 <- 6636
++     movl    $6636, %eax             #  12:     param  2 <- 6636
+-     movl    $1, %eax                #   9:     param  1 <- 1
++     movl    $1, %eax                #  13:     param  1 <- 1
+-     movl    $33006, %eax            #  10:     sub    t2 <- 33006, 71266
++     movl    $33006, %eax            #  14:     sub    t2 <- 33006, 71266
+-     movl    -24(%ebp), %eax         #  11:     add    t3 <- t2, 91311
++     movl    -24(%ebp), %eax         #  15:     add    t3 <- t2, 91311
+-     movl    -28(%ebp), %eax         #  12:     sub    t4 <- t3, 96451
++     movl    -28(%ebp), %eax         #  16:     sub    t4 <- t3, 96451
+-     movl    -32(%ebp), %eax         #  13:     add    t5 <- t4, 96758
++     movl    -32(%ebp), %eax         #  17:     add    t5 <- t4, 96758
+-     movl    -36(%ebp), %eax         #  14:     param  0 <- t5
++     movl    -36(%ebp), %eax         #  18:     param  0 <- t5
+-     call    f0                      #  15:     call   t6 <- f0
++     call    f0                      #  19:     call   t6 <- f0
+-     addl    $9, %esp               
++     addl    $12, %esp              
++     jmp     l_test_11               #  21:     goto   11
+-     leal    _str_2, %eax            #  17:     &()    t7 <- _str_2
++     leal    _str_2, %eax            #  22:     &()    t7 <- _str_2
+-     movl    -44(%ebp), %eax         #  18:     param  0 <- t7
++     movl    -44(%ebp), %eax         #  23:     param  0 <- t7
+-     call    WriteStr                #  19:     call   WriteStr
++     call    WriteStr                #  24:     call   WriteStr
+-     jmp     l_test_12_while_cond    #  21:     goto   12_while_cond
++     jmp     l_test_12_while_cond    #  26:     goto   12_while_cond
++ l_test_11:

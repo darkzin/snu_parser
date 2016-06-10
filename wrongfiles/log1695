@@ -1,0 +1,38 @@
+-     jmp     l_f0_5                  #   1:     goto   5
++     jmp     l_f0_6                  #   1:     goto   6
+- l_f0_5:
++ l_f0_6:
++     jmp     l_f0_9                  #   4:     goto   9
+-     movl    $1, %eax                #   4:     assign t6 <- 1
++     movl    $1, %eax                #   5:     assign t6 <- 1
+-     jmp     l_f0_9                  #   5:     goto   9
++     jmp     l_f0_10                 #   6:     goto   10
++ l_f0_9:
+-     movl    $0, %eax                #   6:     assign t6 <- 0
++     movl    $0, %eax                #   8:     assign t6 <- 0
+- l_f0_9:
++ l_f0_10:
+-     movzbl  -13(%ebp), %eax         #   8:     if     t5 # t6 goto 1_if_true
++     movzbl  -13(%ebp), %eax         #  10:     if     t5 # t6 goto 1_if_true
+-     jmp     l_f0_2_if_false         #   9:     goto   2_if_false
++     jmp     l_f0_2_if_false         #  11:     goto   2_if_false
+-     jmp     l_f0_0                  #  11:     goto   0
++     jmp     l_f0_0                  #  13:     goto   0
+-     call    dummyCHARfunc           #  15:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  17:     call   t7 <- dummyCHARfunc
+-     movzbl  -15(%ebp), %eax         #  16:     if     t7 = 100 goto 15_while_body
++     movzbl  -15(%ebp), %eax         #  18:     if     t7 = 100 goto 15_while_body
+-     jmp     l_f0_13                 #  17:     goto   13
++     jmp     l_f0_13                 #  19:     goto   13
+-     jmp     l_f0_14_while_cond      #  19:     goto   14_while_cond
++     jmp     l_f0_14_while_cond      #  21:     goto   14_while_cond
+-     jmp     l_f0_19_while_body      #  22:     goto   19_while_body
++     jmp     l_f0_19_while_body      #  24:     goto   19_while_body
+-     jmp     l_f0_18_while_cond      #  24:     goto   18_while_cond
++     jmp     l_f0_18_while_cond      #  26:     goto   18_while_cond
+-     jmp     l_f1_36                 #  41:     goto   36
++     jmp     l_f1_37                 #  41:     goto   37
+- l_f1_36:
++ l_f1_37:
+-     addl    $1, %esp               
++     addl    $4, %esp               

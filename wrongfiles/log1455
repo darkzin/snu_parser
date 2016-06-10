@@ -1,0 +1,13 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     #-163071352(%ebp)163071324  [ $v1       <array 19 of <array 61 of <array 25 of <array 67 of <array 84 of <char>>>>>> %ebp-163071352 ]
++     #   -163071352(%ebp)  163071324  [ $v1       <array 19 of <array 61 of <array 25 of <array 67 of <array 84 of <char>>>>>> %ebp-163071352 ]
+-     #1251734416(%ebp)-1414805768  [ $v2       <array 97 of <array 98 of <array 30 of <array 85 of <array 74 of <int>>>>>> %ebp+1251734416 ]
++     #   1251734416(%ebp)  -1414805768  [ $v2       <array 97 of <array 98 of <array 30 of <array 85 of <array 74 of <int>>>>>> %ebp+1251734416 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $-312933607, %ecx      
++     mov     %esp, %edi             
++     rep     stosl                  
+-     addl    $13, %esp              
++     addl    $16, %esp              

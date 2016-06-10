@@ -1,0 +1,18 @@
++     jmp     l_f0_2_if_false         #   0:     goto   2_if_false
+-     jmp     l_f0_0                  #   0:     goto   0
++     jmp     l_f0_0                  #   1:     goto   0
++ l_f0_2_if_false:
+-     call    dummyINTfunc            #   2:     call   t1 <- dummyINTfunc
++     call    dummyINTfunc            #   4:     call   t1 <- dummyINTfunc
+-     call    ReadInt                 #   3:     call   t2 <- ReadInt
++     call    ReadInt                 #   5:     call   t2 <- ReadInt
++     jmp     l_test_13               #  17:     goto   13
+-     movl    $1, %eax                #  18:     assign t0 <- 1
++     movl    $1, %eax                #  19:     assign t0 <- 1
+-     jmp     l_test_14               #  19:     goto   14
++     jmp     l_test_14               #  20:     goto   14
++ l_test_13:
+-     movl    $0, %eax                #  20:     assign t0 <- 0
++     movl    $0, %eax                #  22:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #  22:     assign v2 <- t0
++     movzbl  -13(%ebp), %eax         #  24:     assign v2 <- t0

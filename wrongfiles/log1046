@@ -1,0 +1,26 @@
++     jmp     l_f0_0                  #   1:     goto   0
+-     movl    $51974, %eax            #   1:     assign v1 <- 51974
++     movl    $51974, %eax            #   2:     assign v1 <- 51974
+-     call    dummyCHARfunc           #   2:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #   3:     call   t5 <- dummyCHARfunc
+-     jmp     l_f0_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   4:     goto   1_while_cond
++ l_f0_0:
+-     call    dummyBOOLfunc           #   4:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   6:     call   t6 <- dummyBOOLfunc
+-     leal    _str_1, %eax            #   5:     &()    t7 <- _str_1
++     leal    _str_1, %eax            #   7:     &()    t7 <- _str_1
+-     movl    -20(%ebp), %eax         #   6:     param  0 <- t7
++     movl    -20(%ebp), %eax         #   8:     param  0 <- t7
+-     call    WriteStr                #   7:     call   WriteStr
++     call    WriteStr                #   9:     call   WriteStr
+-     call    dummyCHARfunc           #   8:     call   t8 <- dummyCHARfunc
++     call    dummyCHARfunc           #  10:     call   t8 <- dummyCHARfunc
+-     jmp     l_f0_8                  #   9:     goto   8
++     jmp     l_f0_8                  #  11:     goto   8
+-     movl    $66238, %eax            #  11:     assign v1 <- 66238
++     movl    $66238, %eax            #  13:     assign v1 <- 66238
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               

@@ -1,0 +1,29 @@
++     jmp     l_f0_2_if_false         #   0:     goto   2_if_false
++     jmp     l_f0_2_if_false         #   1:     goto   2_if_false
+-     jmp     l_f0_0                  #   0:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
++ l_f0_2_if_false:
+-     movl    $1, %eax                #   3:     return 1
++     movl    $1, %eax                #   6:     return 1
+-     jmp     l_f0_6_while_cond       #   4:     goto   6_while_cond
++     jmp     l_f0_6_while_cond       #   7:     goto   6_while_cond
++     jmp     l_f0_12                 #   8:     goto   12
+-     movl    $1, %eax                #   5:     assign t0 <- 1
++     movl    $1, %eax                #   9:     assign t0 <- 1
+-     jmp     l_f0_13                 #   6:     goto   13
++     jmp     l_f0_13                 #  10:     goto   13
++ l_f0_12:
+-     movl    $0, %eax                #   7:     assign t0 <- 0
++     movl    $0, %eax                #  12:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #   9:     return t0
++     movzbl  -13(%ebp), %eax         #  14:     return t0
+-     #  -4968(%ebp)4924  [ $v1       <array 7 of <array 1 of <array 5 of <array 5 of <array 7 of <int>>>>>> %ebp-4968 ]
++     #   -4968(%ebp)  4924  [ $v1       <array 7 of <array 1 of <array 5 of <array 5 of <array 7 of <int>>>>>> %ebp-4968 ]
+-     #  -5532(%ebp) 564  [ $v2       <array 3 of <array 10 of <array 1 of <array 2 of <array 9 of <bool>>>>>> %ebp-5532 ]
++     #   -5532(%ebp)  564  [ $v2       <array 3 of <array 10 of <array 1 of <array 2 of <array 9 of <bool>>>>>> %ebp-5532 ]
+-     # -22836(%ebp)17304  [ $v3       <array 10 of <array 9 of <array 1 of <array 6 of <array 8 of <int>>>>>> %ebp-22836 ]
++     #   -22836(%ebp)  17304  [ $v3       <array 10 of <array 9 of <array 1 of <array 6 of <array 8 of <int>>>>>> %ebp-22836 ]
+-     # -22840(%ebp)   4  [ $v4       <int> %ebp-22840 ]
++     #   -22840(%ebp)   4  [ $v4       <int> %ebp-22840 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              

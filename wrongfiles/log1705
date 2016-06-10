@@ -1,0 +1,9 @@
++     jmp     l_f2_3_if_false         #   2:     goto   3_if_false
++     jmp     l_f2_3_if_false         #   3:     goto   3_if_false
+-     jmp     l_f2_1                  #   2:     goto   1
++     jmp     l_f2_1                  #   4:     goto   1
++ l_f2_3_if_false:
+-     movl    $98, %eax               #   4:     return 98
++     movl    $98, %eax               #   7:     return 98
+-     addl    $5, %esp               
++     addl    $8, %esp               

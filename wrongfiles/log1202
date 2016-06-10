@@ -1,0 +1,38 @@
++     jmp     l_f0_1                  #   7:     goto   1
+-     jmp     l_f0_2_while_cond       #   8:     goto   2_while_cond
++     jmp     l_f0_2_while_cond       #   9:     goto   2_while_cond
++ l_f0_1:
+-     movl    $99, %eax               #   9:     assign v4 <- 99
++     movl    $99, %eax               #  11:     assign v4 <- 99
++     jmp     l_f2_2                  #   4:     goto   2
++     jmp     l_f2_2                  #   5:     goto   2
++     jmp     l_f2_2                  #   6:     goto   2
++     jmp     l_f2_2                  #   7:     goto   2
+-     movl    $1, %eax                #   4:     assign t14 <- 1
++     movl    $1, %eax                #   8:     assign t14 <- 1
+-     jmp     l_f2_3                  #   5:     goto   3
++     jmp     l_f2_3                  #   9:     goto   3
+-     movl    $0, %eax                #   7:     assign t14 <- 0
++     movl    $0, %eax                #  11:     assign t14 <- 0
+-     movzbl  -14(%ebp), %eax         #   9:     return t14
++     movzbl  -14(%ebp), %eax         #  13:     return t14
+-     movl    $320, %eax              #  10:     assign v3 <- 320
++     movl    $320, %eax              #  14:     assign v3 <- 320
+-     jmp     l_f2_19_if_false        #  11:     goto   19_if_false
++     jmp     l_f2_19_if_false        #  15:     goto   19_if_false
+-     jmp     l_f2_17                 #  12:     goto   17
++     jmp     l_f2_17                 #  16:     goto   17
+-     movl    $4337, %eax             #  16:     if     4337 # 33557 goto 22_while_body
++     movl    $4337, %eax             #  20:     if     4337 # 33557 goto 22_while_body
+-     jmp     l_f2_20                 #  17:     goto   20
++     jmp     l_f2_20                 #  21:     goto   20
+-     jmp     l_f2_21_while_cond      #  19:     goto   21_while_cond
++     jmp     l_f2_21_while_cond      #  23:     goto   21_while_cond
+-     jmp     l_f2_14                 #  21:     goto   14
++     jmp     l_f2_14                 #  25:     goto   14
++     jmp     l_test_11               #  29:     goto   11
+-     jmp     l_test_12_while_cond    #  29:     goto   12_while_cond
++     jmp     l_test_12_while_cond    #  30:     goto   12_while_cond
++ l_test_11:
+-     call    dummyBOOLfunc           #  30:     call   t12 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  32:     call   t12 <- dummyBOOLfunc

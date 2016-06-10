@@ -1,0 +1,28 @@
++     jmp     l_f1_0                  #   1:     goto   0
++     jmp     l_f1_0                  #   2:     goto   0
++     jmp     l_f1_0                  #   3:     goto   0
++     jmp     l_f1_0                  #   4:     goto   0
++     jmp     l_f1_0                  #   5:     goto   0
+-     movl    $100, %eax              #   1:     return 100
++     movl    $100, %eax              #   6:     return 100
+-     movl    $2694, %eax             #   3:     if     2694 # 39129 goto 13_while_body
++     movl    $2694, %eax             #   8:     if     2694 # 39129 goto 13_while_body
+-     jmp     l_f1_11                 #   4:     goto   11
++     jmp     l_f1_11                 #   9:     goto   11
+-     jmp     l_f1_12_while_cond      #   6:     goto   12_while_cond
++     jmp     l_f1_12_while_cond      #  11:     goto   12_while_cond
+-     movl    $1, %eax                #   8:     assign v1 <- 1
++     movl    $1, %eax                #  13:     assign v1 <- 1
+-     jmp     l_f1_1_while_cond       #   9:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #  14:     goto   1_while_cond
++ l_f1_0:
+-     movl    $98, %eax               #  10:     assign v3 <- 98
++     movl    $98, %eax               #  16:     assign v3 <- 98
+-     call    ReadInt                 #  11:     call   t6 <- ReadInt
++     call    ReadInt                 #  17:     call   t6 <- ReadInt
+-     movl    $98, %eax               #  12:     return 98
++     movl    $98, %eax               #  18:     return 98
+-     jmp     l_f1_17                 #  13:     goto   17
++     jmp     l_f1_17                 #  19:     goto   17
+-     addl    $9, %esp               
++     addl    $12, %esp              

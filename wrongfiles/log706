@@ -1,0 +1,29 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_f2_3_while_body       #   2:     goto   3_while_body
+-     jmp     l_f2_3_while_body       #   3:     goto   3_while_body
++     jmp     l_f2_8                  #   2:     goto   8
++     jmp     l_f2_8                  #   3:     goto   8
++ l_f2_8:
++     jmp     l_f2_3_while_body       #   6:     goto   3_while_body
++     jmp     l_f2_3_while_body       #   7:     goto   3_while_body
+-     jmp     l_f2_2_while_cond       #   6:     goto   2_while_cond
++     jmp     l_f2_2_while_cond       #   9:     goto   2_while_cond
+-     movl    $52644, %eax            #   8:     mul    t5 <- 52644, 69166
++     movl    $52644, %eax            #  11:     mul    t5 <- 52644, 69166
+-     movl    -20(%ebp), %eax         #   9:     mul    t6 <- t5, 75903
++     movl    -20(%ebp), %eax         #  12:     mul    t6 <- t5, 75903
+-     movl    -24(%ebp), %eax         #  10:     div    t7 <- t6, 1074
++     movl    -24(%ebp), %eax         #  13:     div    t7 <- t6, 1074
+-     movl    $75568, %eax            #  11:     mul    t8 <- 75568, 7670
++     movl    $75568, %eax            #  14:     mul    t8 <- 75568, 7670
+-     movl    -32(%ebp), %eax         #  12:     div    t9 <- t8, 65850
++     movl    -32(%ebp), %eax         #  15:     div    t9 <- t8, 65850
+-     movl    -28(%ebp), %eax         #  13:     if     t7 > t9 goto 13_while_body
++     movl    -28(%ebp), %eax         #  16:     if     t7 > t9 goto 13_while_body
+-     jmp     l_f2_11                 #  14:     goto   11
++     jmp     l_f2_11                 #  17:     goto   11
+-     jmp     l_f2_12_while_cond      #  16:     goto   12_while_cond
++     jmp     l_f2_12_while_cond      #  19:     goto   12_while_cond
+-     addl    $13, %esp              
++     addl    $16, %esp              

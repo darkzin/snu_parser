@@ -1,0 +1,28 @@
++     jmp     l_f1_2                  #   3:     goto   2
++     jmp     l_f1_2                  #   4:     goto   2
++     jmp     l_f1_2                  #   5:     goto   2
++     jmp     l_f1_2                  #   6:     goto   2
++     jmp     l_f1_2                  #   7:     goto   2
+-     jmp     l_f1_3_while_cond       #   3:     goto   3_while_cond
++     jmp     l_f1_3_while_cond       #   8:     goto   3_while_cond
++ l_f1_2:
++     jmp     l_f2_9_if_false         #   9:     goto   9_if_false
+-     jmp     l_f2_7                  #  10:     goto   7
++     jmp     l_f2_7                  #  11:     goto   7
++ l_f2_9_if_false:
+-     jmp     l_f2_5_while_cond       #  12:     goto   5_while_cond
++     jmp     l_f2_5_while_cond       #  14:     goto   5_while_cond
+-     call    dummyCHARfunc           #  13:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  15:     call   t1 <- dummyCHARfunc
+-     movl    $97, %eax               #  14:     if     97 > t1 goto 15
++     movl    $97, %eax               #  16:     if     97 > t1 goto 15
+-     jmp     l_f2_16                 #  15:     goto   16
++     jmp     l_f2_16                 #  17:     goto   16
+-     movl    $1, %eax                #  17:     assign t2 <- 1
++     movl    $1, %eax                #  19:     assign t2 <- 1
+-     jmp     l_f2_17                 #  18:     goto   17
++     jmp     l_f2_17                 #  20:     goto   17
+-     movl    $0, %eax                #  20:     assign t2 <- 0
++     movl    $0, %eax                #  22:     assign t2 <- 0
+-     movzbl  -15(%ebp), %eax         #  22:     assign v2 <- t2
++     movzbl  -15(%ebp), %eax         #  24:     assign v2 <- t2

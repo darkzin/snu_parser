@@ -1,0 +1,35 @@
++     jmp     l_f0_10                 #  16:     goto   10
++     jmp     l_f0_10                 #  17:     goto   10
+-     movl    $100, %eax              #  16:     return 100
++     movl    $100, %eax              #  18:     return 100
+-     movl    $100, %eax              #  17:     assign v2 <- 100
++     movl    $100, %eax              #  19:     assign v2 <- 100
+-     jmp     l_f0_11_while_cond      #  18:     goto   11_while_cond
++     jmp     l_f0_11_while_cond      #  20:     goto   11_while_cond
++ l_f0_10:
++     jmp     l_f1_0                  #   2:     goto   0
+-     jmp     l_f1_8_if_false         #   3:     goto   8_if_false
++     jmp     l_f1_8_if_false         #   4:     goto   8_if_false
+-     jmp     l_f1_6                  #   4:     goto   6
++     jmp     l_f1_6                  #   5:     goto   6
+-     movl    $48321, %eax            #   8:     if     48321 >= 5013 goto 11_while_body
++     movl    $48321, %eax            #   9:     if     48321 >= 5013 goto 11_while_body
+-     jmp     l_f1_9                  #   9:     goto   9
++     jmp     l_f1_9                  #  10:     goto   9
+-     jmp     l_f1_10_while_cond      #  11:     goto   10_while_cond
++     jmp     l_f1_10_while_cond      #  12:     goto   10_while_cond
+-     jmp     l_f1_1_while_cond       #  13:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #  14:     goto   1_while_cond
++ l_f1_0:
+-     call    ReadInt                 #  14:     call   t4 <- ReadInt
++     call    ReadInt                 #  16:     call   t4 <- ReadInt
+-     movl    $1, %eax                #  15:     if     1 # 0 goto 15_if_true
++     movl    $1, %eax                #  17:     if     1 # 0 goto 15_if_true
+-     jmp     l_f1_16_if_false        #  16:     goto   16_if_false
++     jmp     l_f1_16_if_false        #  18:     goto   16_if_false
+-     call    WriteLn                 #  18:     call   WriteLn
++     call    WriteLn                 #  20:     call   WriteLn
+-     jmp     l_f1_14                 #  19:     goto   14
++     jmp     l_f1_14                 #  21:     goto   14
+-     #-132256924(%ebp)132256896  [ $v1       <array 57 of <array 22 of <array 47 of <array 17 of <array 33 of <int>>>>>> %ebp-132256924 ]
++     #   -132256924(%ebp)  132256896  [ $v1       <array 57 of <array 22 of <array 47 of <array 17 of <array 33 of <int>>>>>> %ebp-132256924 ]

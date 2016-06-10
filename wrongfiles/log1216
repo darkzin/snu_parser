@@ -1,0 +1,38 @@
+-     #-243437548(%ebp)243437524  [ $v1       <array 50 of <array 25 of <array 25 of <array 95 of <array 82 of <char>>>>>> %ebp-243437548 ]
++     #   -243437548(%ebp)  243437524  [ $v1       <array 50 of <array 25 of <array 25 of <array 95 of <array 82 of <char>>>>>> %ebp-243437548 ]
+-     #-282196072(%ebp)38758524  [ $v2       <array 11 of <array 6 of <array 75 of <array 87 of <array 90 of <bool>>>>>> %ebp-282196072 ]
++     #   -282196072(%ebp)  38758524  [ $v2       <array 11 of <array 6 of <array 75 of <array 87 of <array 90 of <bool>>>>>> %ebp-282196072 ]
+-     addl    $10, %esp              
++     addl    $16, %esp              
++     jmp     l_test_1                #   2:     goto   1
++     jmp     l_test_1                #   3:     goto   1
++     jmp     l_test_1                #   4:     goto   1
+-     jmp     l_test_8_while_cond     #   3:     goto   8_while_cond
++     jmp     l_test_8_while_cond     #   6:     goto   8_while_cond
+-     jmp     l_test_2_while_cond     #   4:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #   7:     goto   2_while_cond
++ l_test_1:
+-     call    WriteLn                 #   5:     call   WriteLn
++     call    WriteLn                 #   9:     call   WriteLn
+-     movl    $100, %eax              #   8:     if     100 = 99 goto 17_while_body
++     movl    $100, %eax              #  12:     if     100 = 99 goto 17_while_body
+-     jmp     l_test_15               #   9:     goto   15
++     jmp     l_test_15               #  13:     goto   15
+-     jmp     l_test_16_while_cond    #  11:     goto   16_while_cond
++     jmp     l_test_16_while_cond    #  15:     goto   16_while_cond
+-     leal    v0, %eax                #  13:     &()    t0 <- v0
++     leal    v0, %eax                #  17:     &()    t0 <- v0
+-     movl    -16(%ebp), %eax         #  14:     param  0 <- t0
++     movl    -16(%ebp), %eax         #  18:     param  0 <- t0
+-     call    f2                      #  15:     call   t1 <- f2
++     call    f2                      #  19:     call   t1 <- f2
+-     call    ReadInt                 #  16:     call   t2 <- ReadInt
++     call    ReadInt                 #  20:     call   t2 <- ReadInt
+-     movl    $15432, %eax            #  17:     param  0 <- 15432
++     movl    $15432, %eax            #  21:     param  0 <- 15432
+-     call    WriteInt                #  18:     call   WriteInt
++     call    WriteInt                #  22:     call   WriteInt
+-     movl    $97, %eax               #  19:     assign v1 <- 97
++     movl    $97, %eax               #  23:     assign v1 <- 97
+-     jmp     l_test_12               #  20:     goto   12
++     jmp     l_test_12               #  24:     goto   12

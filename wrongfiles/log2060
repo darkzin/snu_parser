@@ -1,0 +1,20 @@
++     jmp     l_test_13_if_false      #  14:     goto   13_if_false
+-     call    dummyCHARfunc           #  14:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  15:     call   t1 <- dummyCHARfunc
+-     movl    $83000, %eax            #  16:     if     83000 < 20711 goto 19_while_body
++     movl    $83000, %eax            #  17:     if     83000 < 20711 goto 19_while_body
+-     jmp     l_test_17               #  17:     goto   17
++     jmp     l_test_17               #  18:     goto   17
+-     jmp     l_test_18_while_cond    #  19:     goto   18_while_cond
++     jmp     l_test_18_while_cond    #  20:     goto   18_while_cond
+-     jmp     l_test_11               #  21:     goto   11
++     jmp     l_test_11               #  22:     goto   11
++ l_test_13_if_false:
+-     movl    $44979, %eax            #  24:     if     44979 = 49183 goto 23_while_body
++     movl    $44979, %eax            #  26:     if     44979 = 49183 goto 23_while_body
+-     jmp     l_test_21               #  25:     goto   21
++     jmp     l_test_21               #  27:     goto   21
+-     jmp     l_test_22_while_cond    #  29:     goto   22_while_cond
++     jmp     l_test_22_while_cond    #  31:     goto   22_while_cond
+-     call    dummyCHARfunc           #  32:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  34:     call   t2 <- dummyCHARfunc

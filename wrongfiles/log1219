@@ -1,0 +1,40 @@
++     jmp     l_f0_4                  #   0:     goto   4
++ l_f0_4:
+-     jmp     l_f0_1_if_true          #   0:     goto   1_if_true
++     jmp     l_f0_1_if_true          #   2:     goto   1_if_true
++     jmp     l_f0_2_if_false         #   3:     goto   2_if_false
+-     jmp     l_f0_0                  #   2:     goto   0
++     jmp     l_f0_0                  #   5:     goto   0
++ l_f0_2_if_false:
+-     leal    _str_1, %eax            #   4:     &()    t4 <- _str_1
++     leal    _str_1, %eax            #   8:     &()    t4 <- _str_1
+-     movl    -16(%ebp), %eax         #   5:     param  0 <- t4
++     movl    -16(%ebp), %eax         #   9:     param  0 <- t4
+-     call    WriteStr                #   6:     call   WriteStr
++     call    WriteStr                #  10:     call   WriteStr
+-     call    dummyBOOLfunc           #   8:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  12:     call   t5 <- dummyBOOLfunc
+-     movzbl  -17(%ebp), %eax         #   9:     if     t5 = 1 goto 10
++     movzbl  -17(%ebp), %eax         #  13:     if     t5 = 1 goto 10
+-     jmp     l_f0_7                  #  10:     goto   7
++     jmp     l_f0_7                  #  14:     goto   7
+-     jmp     l_f0_8_while_cond       #  12:     goto   8_while_cond
++     jmp     l_f0_8_while_cond       #  16:     goto   8_while_cond
++     jmp     l_f1_14                 #  16:     goto   14
++     jmp     l_f1_14                 #  17:     goto   14
++     jmp     l_f1_14                 #  18:     goto   14
+-     movl    $1, %eax                #  16:     assign t7 <- 1
++     movl    $1, %eax                #  19:     assign t7 <- 1
+-     jmp     l_f1_14                 #  17:     goto   14
++     jmp     l_f1_15                 #  20:     goto   15
++ l_f1_14:
+-     movl    $0, %eax                #  18:     assign t7 <- 0
++     movl    $0, %eax                #  22:     assign t7 <- 0
+- l_f1_14:
++ l_f1_15:
+-     movl    $1, %eax                #  20:     if     1 # t7 goto 10_if_true
++     movl    $1, %eax                #  24:     if     1 # t7 goto 10_if_true
+-     jmp     l_f1_11_if_false        #  21:     goto   11_if_false
++     jmp     l_f1_11_if_false        #  25:     goto   11_if_false
+-     jmp     l_f1_9                  #  23:     goto   9
++     jmp     l_f1_9                  #  27:     goto   9

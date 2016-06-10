@@ -1,0 +1,12 @@
+-     #   -592(%ebp) 564  [ $v0       <array 6 of <array 1 of <array 2 of <array 9 of <array 5 of <char>>>>>> %ebp-592 ]
++     #   -592(%ebp)  564  [ $v0       <array 6 of <array 1 of <array 2 of <array 9 of <array 5 of <char>>>>>> %ebp-592 ]
+-     # -10336(%ebp)9744  [ $v1       <array 10 of <array 9 of <array 6 of <array 9 of <array 2 of <bool>>>>>> %ebp-10336 ]
++     #   -10336(%ebp)  9744  [ $v1       <array 10 of <array 9 of <array 6 of <array 9 of <array 2 of <bool>>>>>> %ebp-10336 ]
++     jmp     l_test_1                #   3:     goto   1
+-     jmp     l_test_2_while_cond     #   4:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #   5:     goto   2_while_cond
++ l_test_1:
+-     movl    $97, %eax               #   6:     assign v0 <- 97
++     movl    $97, %eax               #   8:     assign v0 <- 97
+-     call    ReadInt                 #   7:     call   t1 <- ReadInt
++     call    ReadInt                 #   9:     call   t1 <- ReadInt

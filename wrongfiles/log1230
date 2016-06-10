@@ -1,0 +1,37 @@
++     jmp     l_f0_0                  #   1:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
+-     movl    $0, %eax                #   1:     assign v0 <- 0
++     movl    $0, %eax                #   3:     assign v0 <- 0
+-     movl    $100, %eax              #   2:     assign v1 <- 100
++     movl    $100, %eax              #   4:     assign v1 <- 100
+-     jmp     l_f0_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   5:     goto   1_while_cond
++ l_f0_0:
+-     movl    $100, %eax              #   5:     if     100 >= 98 goto 8_while_body
++     movl    $100, %eax              #   8:     if     100 >= 98 goto 8_while_body
+-     jmp     l_f0_6                  #   6:     goto   6
++     jmp     l_f0_6                  #   9:     goto   6
+-     call    dummyCHARfunc           #   8:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #  11:     call   t5 <- dummyCHARfunc
+-     jmp     l_f0_12                 #   9:     goto   12
+-     jmp     l_f0_12                 #  10:     goto   12
++     jmp     l_f0_12                 #  12:     goto   12
+-     jmp     l_f0_12                 #  11:     goto   12
++     jmp     l_f0_12                 #  13:     goto   12
++     jmp     l_f0_12                 #  14:     goto   12
++     jmp     l_f0_13                 #  15:     goto   13
+-     movl    $1, %eax                #  13:     assign t6 <- 1
++     movl    $1, %eax                #  17:     assign t6 <- 1
+-     jmp     l_f0_14                 #  14:     goto   14
++     jmp     l_f0_14                 #  18:     goto   14
++ l_f0_13:
+-     movl    $0, %eax                #  15:     assign t6 <- 0
++     movl    $0, %eax                #  20:     assign t6 <- 0
+-     movzbl  -14(%ebp), %eax         #  17:     assign v0 <- t6
++     movzbl  -14(%ebp), %eax         #  22:     assign v0 <- t6
+-     jmp     l_f0_7_while_cond       #  18:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  23:     goto   7_while_cond
+-     call    dummyBOOLfunc           #  20:     call   t7 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  25:     call   t7 <- dummyBOOLfunc
+-     addl    $1, %esp               
++     addl    $4, %esp               

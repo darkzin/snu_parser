@@ -1,0 +1,22 @@
++     jmp     l_test_10               #  13:     goto   10
+-     call    dummyBOOLfunc           #  13:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  14:     call   t2 <- dummyBOOLfunc
+-     jmp     l_test_11_while_cond    #  14:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  15:     goto   11_while_cond
++ l_test_10:
+-     call    dummyProcedure          #  15:     call   dummyProcedure
++     call    dummyProcedure          #  17:     call   dummyProcedure
+-     jmp     l_test_19_if_false      #  17:     goto   19_if_false
++     jmp     l_test_19_if_false      #  19:     goto   19_if_false
+-     movl    $31062, %eax            #  18:     if     31062 = 20887 goto 21_if_true
++     movl    $31062, %eax            #  20:     if     31062 = 20887 goto 21_if_true
+-     jmp     l_test_22_if_false      #  19:     goto   22_if_false
++     jmp     l_test_22_if_false      #  21:     goto   22_if_false
+-     jmp     l_test_20               #  21:     goto   20
++     jmp     l_test_20               #  23:     goto   20
+-     jmp     l_test_26_if_false      #  24:     goto   26_if_false
++     jmp     l_test_26_if_false      #  26:     goto   26_if_false
+-     jmp     l_test_24               #  25:     goto   24
++     jmp     l_test_24               #  27:     goto   24
+-     jmp     l_test_17               #  29:     goto   17
++     jmp     l_test_17               #  31:     goto   17

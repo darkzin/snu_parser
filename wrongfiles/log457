@@ -1,0 +1,12 @@
++     jmp     l_f0_28                 #  68:     goto   28
+-     jmp     l_f0_29_while_cond      #  69:     goto   29_while_cond
++     jmp     l_f0_29_while_cond      #  70:     goto   29_while_cond
++ l_f0_28:
+-     jmp     l_f2_17                 #  17:     goto   17
++     jmp     l_f2_18                 #  17:     goto   18
+- l_f2_17:
++ l_f2_18:
+-     jmp     l_f2_19                 #  20:     goto   19
++     jmp     l_f2_20                 #  20:     goto   20
+- l_f2_19:
++ l_f2_20:

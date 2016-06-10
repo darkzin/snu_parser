@@ -1,0 +1,22 @@
+digraph IR {
+  graph [fontname="Times New Roman",fontsize=10];
+  node  [fontname="Courier New",fontsize=10];
+  edge  [fontname="Times New Roman",fontsize=10];
+
+  // scope 'test'
+  test_cb [label="test\r  0:     if     98 = 99 goto 1\l  1:     goto   2\l  2: 1:\l  3:     assign t0 <- 1\l  4:     goto   3\l  5: 2:\l  6:     assign t0 <- 0\l  7: 3:\l  8:     assign v0 <- t0\l  9:     return \l 10:     goto   12\l 11:     assign t1 <- 1\l 12:     goto   13\l 13: 12:\l 14:     assign t1 <- 0\l 15: 13:\l 16:     if     t1 # 1 goto 7\l 17:     goto   8\l 18: 7:\l 19:     assign t2 <- 1\l 20:     goto   9\l 21: 8:\l 22:     assign t2 <- 0\l 23: 9:\l 24:     assign v0 <- t2\l 25:     return \l 26:     call   t3 <- ReadInt\l 27:     if     t3 = 90580 goto 18\l 28:     goto   19\l 29: 18:\l 30:     assign t4 <- 1\l 31:     goto   20\l 32: 19:\l 33:     assign t4 <- 0\l 34: 20:\l 35:     assign v0 <- t4\l",shape=box]
+  // scope 'dummyINTfunc'
+  dummyINTfunc_cb [label="dummyINTfunc\r",shape=box]
+  // scope 'dummyCHARfunc'
+  dummyCHARfunc_cb [label="dummyCHARfunc\r",shape=box]
+  // scope 'dummyBOOLfunc'
+  dummyBOOLfunc_cb [label="dummyBOOLfunc\r",shape=box]
+  // scope 'dummyProcedure'
+  dummyProcedure_cb [label="dummyProcedure\r",shape=box]
+  // scope 'f0'
+  f0_cb [label="f0\r  0:     call   dummyProcedure\l  1:     goto   3\l  2:     assign t5 <- 1\l  3:     goto   4\l  4: 3:\l  5:     assign t5 <- 0\l  6: 4:\l  7:     return t5\l  8: 11_while_cond:\l  9:     if     97 # 99 goto 12_while_body\l 10:     goto   10\l 11: 12_while_body:\l 12:     call   t6 <- dummyCHARfunc\l 13:     goto   11_while_cond\l 14: 10:\l",shape=box]
+  // scope 'f1'
+  f1_cb [label="f1\r  0:     call   t5 <- dummyCHARfunc\l  1:     mul    t6 <- 92969, 54363\l  2:     mul    t7 <- t6, 11347\l  3:     add    t8 <- 68711, t7\l  4:     return t8\l  5:     add    t9 <- 72806, 34754\l  6:     return t9\l",shape=box]
+  // scope 'f2'
+  f2_cb [label="f2\r  0:     assign v2 <- 58313\l  1:     &()    t5 <- v4\l  2:     param  3 <- t5\l  3:     &()    t6 <- v3\l  4:     param  2 <- t6\l  5:     param  1 <- 99\l  6:     param  0 <- 97\l  7:     call   t7 <- f1\l  8:     call   t8 <- dummyCHARfunc\l  9:     &()    t9 <- v3\l 10:     param  1 <- 2\l 11:     &()    t10 <- v3\l 12:     param  0 <- t10\l 13:     call   t11 <- DIM\l 14:     mul    t12 <- 27099, t11\l 15:     add    t13 <- t12, 2230\l 16:     param  1 <- 3\l 17:     &()    t14 <- v3\l 18:     param  0 <- t14\l 19:     call   t15 <- DIM\l 20:     mul    t16 <- t13, t15\l 21:     add    t17 <- t16, 72654\l 22:     param  1 <- 4\l 23:     &()    t18 <- v3\l 24:     param  0 <- t18\l 25:     call   t19 <- DIM\l 26:     mul    t20 <- t17, t19\l 27:     add    t21 <- t20, 27276\l 28:     param  1 <- 5\l 29:     &()    t22 <- v3\l 30:     param  0 <- t22\l 31:     call   t23 <- DIM\l 32:     mul    t24 <- t21, t23\l 33:     add    t25 <- t24, 66227\l 34:     mul    t26 <- t25, 1\l 35:     &()    t27 <- v3\l 36:     param  0 <- t27\l 37:     call   t28 <- DOFS\l 38:     add    t29 <- t26, t28\l 39:     add    t30 <- t9, t29\l 40:     assign @t30 <- t8\l",shape=box]
+};

@@ -1,0 +1,74 @@
++     jmp     l_f0_2                  #   0:     goto   2
+-     movl    $1, %eax                #   0:     assign t8 <- 1
++     movl    $1, %eax                #   1:     assign t8 <- 1
+-     jmp     l_f0_3                  #   1:     goto   3
++     jmp     l_f0_3                  #   2:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   2:     assign t8 <- 0
++     movl    $0, %eax                #   4:     assign t8 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v0 <- t8
++     movzbl  -13(%ebp), %eax         #   6:     assign v0 <- t8
+-     movl    $99, %eax               #   5:     if     99 = 99 goto 8_if_true
++     movl    $99, %eax               #   7:     if     99 = 99 goto 8_if_true
+-     jmp     l_f0_9_if_false         #   6:     goto   9_if_false
++     jmp     l_f0_9_if_false         #   8:     goto   9_if_false
+-     movl    $98, %eax               #   8:     assign v1 <- 98
++     movl    $98, %eax               #  10:     assign v1 <- 98
+-     movl    $68716, %eax            #   9:     return 68716
++     movl    $68716, %eax            #  11:     return 68716
+-     jmp     l_f0_7                  #  10:     goto   7
++     jmp     l_f0_7                  #  12:     goto   7
+-     call    dummyBOOLfunc           #  14:     call   t9 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  16:     call   t9 <- dummyBOOLfunc
+-     movzbl  -14(%ebp), %eax         #  15:     if     t9 = 1 goto 15_while_body
++     movzbl  -14(%ebp), %eax         #  17:     if     t9 = 1 goto 15_while_body
+-     jmp     l_f0_13                 #  16:     goto   13
++     jmp     l_f0_13                 #  18:     goto   13
+-     movl    $18798, %eax            #  18:     return 18798
++     movl    $18798, %eax            #  20:     return 18798
+-     movl    $97, %eax               #  19:     if     97 <= 98 goto 18_if_true
++     movl    $97, %eax               #  21:     if     97 <= 98 goto 18_if_true
+-     jmp     l_f0_19_if_false        #  20:     goto   19_if_false
++     jmp     l_f0_19_if_false        #  22:     goto   19_if_false
+-     jmp     l_f0_17                 #  22:     goto   17
++     jmp     l_f0_17                 #  24:     goto   17
+-     jmp     l_f0_14_while_cond      #  25:     goto   14_while_cond
++     jmp     l_f0_14_while_cond      #  27:     goto   14_while_cond
++     jmp     l_f2_2                  #   0:     goto   2
+-     movl    $1, %eax                #   0:     assign t8 <- 1
++     movl    $1, %eax                #   1:     assign t8 <- 1
+-     jmp     l_f2_3                  #   1:     goto   3
++     jmp     l_f2_3                  #   2:     goto   3
++ l_f2_2:
+-     movl    $0, %eax                #   2:     assign t8 <- 0
++     movl    $0, %eax                #   4:     assign t8 <- 0
+-     movzbl  -22(%ebp), %eax         #   4:     assign v0 <- t8
++     movzbl  -22(%ebp), %eax         #   6:     assign v0 <- t8
+-     movl    $93991, %eax            #   5:     div    t9 <- 93991, 13291
++     movl    $93991, %eax            #   7:     div    t9 <- 93991, 13291
+-     movl    -28(%ebp), %eax         #   6:     add    t10 <- t9, 58658
++     movl    -28(%ebp), %eax         #   8:     add    t10 <- t9, 58658
+-     movl    -16(%ebp), %eax         #   7:     add    t11 <- t10, 48429
++     movl    -16(%ebp), %eax         #   9:     add    t11 <- t10, 48429
+-     movl    -20(%ebp), %eax         #   8:     assign v1 <- t11
++     movl    -20(%ebp), %eax         #  10:     assign v1 <- t11
+-     call    dummyBOOLfunc           #   9:     call   t12 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  11:     call   t12 <- dummyBOOLfunc
+-     movzbl  -21(%ebp), %eax         #  10:     if     t12 = 1 goto 9_if_true
++     movzbl  -21(%ebp), %eax         #  12:     if     t12 = 1 goto 9_if_true
+-     jmp     l_f2_10_if_false        #  11:     goto   10_if_false
++     jmp     l_f2_10_if_false        #  13:     goto   10_if_false
+-     movl    $99, %eax               #  13:     assign v2 <- 99
++     movl    $99, %eax               #  15:     assign v2 <- 99
+-     jmp     l_f2_12                 #  14:     goto   12
++     jmp     l_f2_12                 #  16:     goto   12
+-     jmp     l_f2_17_if_false        #  16:     goto   17_if_false
++     jmp     l_f2_17_if_false        #  18:     goto   17_if_false
+-     jmp     l_f2_15                 #  17:     goto   15
++     jmp     l_f2_15                 #  19:     goto   15
+-     jmp     l_f2_8                  #  20:     goto   8
++     jmp     l_f2_8                  #  22:     goto   8
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               

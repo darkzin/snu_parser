@@ -1,0 +1,59 @@
++     jmp     l_f0_0                  #   3:     goto   0
+-     call    dummyINTfunc            #   4:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #   5:     call   t2 <- dummyINTfunc
+-     jmp     l_f0_1_while_cond       #   5:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   6:     goto   1_while_cond
++ l_f0_0:
+-     call    dummyCHARfunc           #   6:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t3 <- dummyCHARfunc
+-     movzbl  -17(%ebp), %eax         #   7:     param  0 <- t3
++     movzbl  -17(%ebp), %eax         #   9:     param  0 <- t3
+-     call    WriteChar               #   8:     call   WriteChar
++     call    WriteChar               #  10:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movl    $14887, %eax            #   9:     mul    t4 <- 14887, 26977
++     movl    $14887, %eax            #  11:     mul    t4 <- 14887, 26977
+-     movl    -24(%ebp), %eax         #  10:     sub    t5 <- t4, 3632
++     movl    -24(%ebp), %eax         #  12:     sub    t5 <- t4, 3632
+-     movl    -28(%ebp), %eax         #  11:     sub    t6 <- t5, 13231
++     movl    -28(%ebp), %eax         #  13:     sub    t6 <- t5, 13231
+-     movl    -32(%ebp), %eax         #  12:     sub    t7 <- t6, 21171
++     movl    -32(%ebp), %eax         #  14:     sub    t7 <- t6, 21171
+-     movl    -36(%ebp), %eax         #  13:     add    t8 <- t7, 32845
++     movl    -36(%ebp), %eax         #  15:     add    t8 <- t7, 32845
+-     movl    -40(%ebp), %eax         #  14:     return t8
++     movl    -40(%ebp), %eax         #  16:     return t8
++     jmp     l_f1_0                  #   1:     goto   0
+-     movl    $70366, %eax            #   1:     return 70366
++     movl    $70366, %eax            #   2:     return 70366
+-     jmp     l_f1_1_while_cond       #   2:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   3:     goto   1_while_cond
++ l_f1_0:
+-     call    ReadInt                 #   3:     call   t2 <- ReadInt
++     call    ReadInt                 #   5:     call   t2 <- ReadInt
+-     movl    -16(%ebp), %eax         #   4:     add    t3 <- t2, 59629
++     movl    -16(%ebp), %eax         #   6:     add    t3 <- t2, 59629
+-     movl    -20(%ebp), %eax         #   5:     return t3
++     movl    -20(%ebp), %eax         #   7:     return t3
+-     jmp     l_f1_6                  #   7:     goto   6
++     jmp     l_f1_6                  #   9:     goto   6
+-     call    dummyBOOLfunc           #   8:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  10:     call   t4 <- dummyBOOLfunc
+-     movl    $43538, %eax            #   9:     if     43538 >= 72036 goto 11_if_true
++     movl    $43538, %eax            #  11:     if     43538 >= 72036 goto 11_if_true
+-     jmp     l_f1_12_if_false        #  10:     goto   12_if_false
++     jmp     l_f1_12_if_false        #  12:     goto   12_if_false
+-     jmp     l_f1_10                 #  12:     goto   10
++     jmp     l_f1_10                 #  14:     goto   10
+-     jmp     l_f1_7_while_cond       #  15:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #  17:     goto   7_while_cond
++     jmp     l_f2_1                  #   3:     goto   1
++     jmp     l_f2_1                  #   4:     goto   1
++     jmp     l_f2_1                  #   5:     goto   1
++     jmp     l_f2_1                  #   6:     goto   1
+-     jmp     l_f2_2_while_cond       #   3:     goto   2_while_cond
++     jmp     l_f2_2_while_cond       #   7:     goto   2_while_cond
++ l_f2_1:
+-     call    dummyBOOLfunc           #   4:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   9:     call   t3 <- dummyBOOLfunc

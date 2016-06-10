@@ -1,0 +1,32 @@
++     jmp     l_f0_2_if_false         #   0:     goto   2_if_false
+-     movl    $1, %eax                #   1:     if     1 # 0 goto 6_while_body
++     movl    $1, %eax                #   2:     if     1 # 0 goto 6_while_body
+-     jmp     l_f0_4                  #   2:     goto   4
++     jmp     l_f0_4                  #   3:     goto   4
+-     jmp     l_f0_5_while_cond       #   4:     goto   5_while_cond
++     jmp     l_f0_5_while_cond       #   5:     goto   5_while_cond
+-     jmp     l_f0_0                  #   6:     goto   0
++     jmp     l_f0_0                  #   7:     goto   0
++ l_f0_2_if_false:
+-     call    dummyCHARfunc           #   8:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #  10:     call   t5 <- dummyCHARfunc
+-     call    dummyINTfunc            #   9:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  11:     call   t6 <- dummyINTfunc
+-     movl    -20(%ebp), %eax         #  10:     assign v1 <- t6
++     movl    -20(%ebp), %eax         #  12:     assign v1 <- t6
+-     #-48909360(%ebp)48909336  [ $v1       <array 2 of <array 87 of <array 96 of <array 61 of <array 12 of <int>>>>>> %ebp-48909360 ]
++     #   -48909360(%ebp)  48909336  [ $v1       <array 2 of <array 87 of <array 96 of <array 61 of <array 12 of <int>>>>>> %ebp-48909360 ]
+-     #-84761928(%ebp)35852568  [ $v2       <array 13 of <array 7 of <array 76 of <array 54 of <array 96 of <char>>>>>> %ebp-84761928 ]
++     #   -84761928(%ebp)  35852568  [ $v2       <array 13 of <array 7 of <array 76 of <array 54 of <array 96 of <char>>>>>> %ebp-84761928 ]
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_5                #  14:     goto   5
+-     movl    $43216, %eax            #  15:     if     43216 # 13627 goto 11_while_body
++     movl    $43216, %eax            #  16:     if     43216 # 13627 goto 11_while_body
+-     jmp     l_test_9                #  16:     goto   9
++     jmp     l_test_9                #  17:     goto   9
+-     jmp     l_test_10_while_cond    #  18:     goto   10_while_cond
++     jmp     l_test_10_while_cond    #  19:     goto   10_while_cond
+-     jmp     l_test_6_while_cond     #  20:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #  21:     goto   6_while_cond
++ l_test_5:

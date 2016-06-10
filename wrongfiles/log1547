@@ -1,0 +1,34 @@
++     jmp     l_f0_7                  #   6:     goto   7
+-     jmp     l_f0_6_while_body       #   6:     goto   6_while_body
++     jmp     l_f0_6_while_body       #   7:     goto   6_while_body
++ l_f0_7:
+-     jmp     l_f0_5_while_cond       #   8:     goto   5_while_cond
++     jmp     l_f0_5_while_cond       #  10:     goto   5_while_cond
+-     movl    $90741, %eax            #   9:     sub    t6 <- 90741, 63606
++     movl    $90741, %eax            #  11:     sub    t6 <- 90741, 63606
+-     movl    -20(%ebp), %eax         #  10:     sub    t7 <- t6, 16373
++     movl    -20(%ebp), %eax         #  12:     sub    t7 <- t6, 16373
+-     movl    -24(%ebp), %eax         #  11:     if     t7 > 29664 goto 12_if_true
++     movl    -24(%ebp), %eax         #  13:     if     t7 > 29664 goto 12_if_true
+-     jmp     l_f0_13_if_false        #  12:     goto   13_if_false
++     jmp     l_f0_13_if_false        #  14:     goto   13_if_false
+-     movl    $19130, %eax            #  14:     return 19130
++     movl    $19130, %eax            #  16:     return 19130
+-     jmp     l_f0_11                 #  15:     goto   11
++     jmp     l_f0_11                 #  17:     goto   11
++     jmp     l_f1_11                 #  19:     goto   11
+-     jmp     l_f1_19_if_false        #  20:     goto   19_if_false
++     jmp     l_f1_19_if_false        #  21:     goto   19_if_false
+-     jmp     l_f1_17                 #  21:     goto   17
++     jmp     l_f1_17                 #  22:     goto   17
+-     jmp     l_f1_12_while_cond      #  24:     goto   12_while_cond
++     jmp     l_f1_12_while_cond      #  25:     goto   12_while_cond
++ l_f1_11:
+-     call    dummyINTfunc            #  25:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  27:     call   t6 <- dummyINTfunc
+-     #-496584052(%ebp)496584024  [ $v4       <array 38 of <array 99 of <array 55 of <array 12 of <array 50 of <int>>>>>> %ebp-496584052 ]
++     #   -496584052(%ebp)  496584024  [ $v4       <array 38 of <array 99 of <array 55 of <array 12 of <array 50 of <int>>>>>> %ebp-496584052 ]
+-     #-1111761436(%ebp)615177384  [ $v5       <array 90 of <array 94 of <array 49 of <array 7 of <array 53 of <int>>>>>> %ebp-1111761436 ]
++     #   -1111761436(%ebp)  615177384  [ $v5       <array 90 of <array 94 of <array 49 of <array 7 of <array 53 of <int>>>>>> %ebp-1111761436 ]
+-     addl    $1, %esp               
++     addl    $4, %esp               

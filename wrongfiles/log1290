@@ -1,0 +1,9 @@
++     jmp     l_f2_3_if_false         #   1:     goto   3_if_false
++     jmp     l_f2_3_if_false         #   2:     goto   3_if_false
+-     call    dummyBOOLfunc           #   2:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   4:     call   t5 <- dummyBOOLfunc
+-     jmp     l_f2_1                  #   3:     goto   1
++     jmp     l_f2_1                  #   5:     goto   1
++ l_f2_3_if_false:
+-     movl    $97, %eax               #   5:     assign v1 <- 97
++     movl    $97, %eax               #   8:     assign v1 <- 97

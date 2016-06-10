@@ -1,0 +1,4 @@
+-     #  -3900(%ebp)3864  [ $v3       <array 4 of <array 3 of <array 4 of <array 8 of <array 10 of <char>>>>>> %ebp-3900 ]
++     #   -3900(%ebp)  3864  [ $v3       <array 4 of <array 3 of <array 4 of <array 8 of <array 10 of <char>>>>>> %ebp-3900 ]
+-     #  -5076(%ebp)1176  [ $v4       <array 3 of <array 6 of <array 2 of <array 8 of <array 4 of <bool>>>>>> %ebp-5076 ]
++     #   -5076(%ebp)  1176  [ $v4       <array 3 of <array 6 of <array 2 of <array 8 of <array 4 of <bool>>>>>> %ebp-5076 ]

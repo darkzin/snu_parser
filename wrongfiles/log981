@@ -1,0 +1,34 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     #   -260(%ebp) 234  [ $v1       <array 1 of <array 6 of <array 1 of <array 5 of <array 7 of <char>>>>>> %ebp-260 ]
++     #   -260(%ebp)  234  [ $v1       <array 1 of <array 6 of <array 1 of <array 5 of <array 7 of <char>>>>>> %ebp-260 ]
+-     #  -2300(%ebp)2040  [ $v2       <array 2 of <array 6 of <array 4 of <array 6 of <array 7 of <char>>>>>> %ebp-2300 ]
++     #   -2300(%ebp)  2040  [ $v2       <array 2 of <array 6 of <array 4 of <array 6 of <array 7 of <char>>>>>> %ebp-2300 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              
++     jmp     l_test_16               #  25:     goto   16
+-     movl    $1, %eax                #  26:     assign t3 <- 1
++     movl    $1, %eax                #  27:     assign t3 <- 1
+-     jmp     l_test_17               #  27:     goto   17
++     jmp     l_test_17               #  28:     goto   17
++ l_test_16:
+-     movl    $0, %eax                #  28:     assign t3 <- 0
++     movl    $0, %eax                #  30:     assign t3 <- 0
+-     movzbl  -16(%ebp), %eax         #  30:     assign v0 <- t3
++     movzbl  -16(%ebp), %eax         #  32:     assign v0 <- t3
+-     movl    $1, %eax                #  31:     param  2 <- 1
++     movl    $1, %eax                #  33:     param  2 <- 1
+-     leal    v2, %eax                #  32:     &()    t4 <- v2
++     leal    v2, %eax                #  34:     &()    t4 <- v2
+-     movl    -20(%ebp), %eax         #  33:     param  1 <- t4
++     movl    -20(%ebp), %eax         #  35:     param  1 <- t4
+-     leal    v1, %eax                #  34:     &()    t5 <- v1
++     leal    v1, %eax                #  36:     &()    t5 <- v1
+-     movl    -24(%ebp), %eax         #  35:     param  0 <- t5
++     movl    -24(%ebp), %eax         #  37:     param  0 <- t5
+-     call    f1                      #  36:     call   t6 <- f1
++     call    f1                      #  38:     call   t6 <- f1
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     call    dummyBOOLfunc           #  37:     call   t7 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  39:     call   t7 <- dummyBOOLfunc

@@ -1,0 +1,42 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_7                #   3:     goto   7
+-     movl    $1, %eax                #   3:     assign t0 <- 1
++     movl    $1, %eax                #   4:     assign t0 <- 1
+-     jmp     l_test_7                #   4:     goto   7
++     jmp     l_test_8                #   5:     goto   8
++ l_test_7:
+-     movl    $0, %eax                #   5:     assign t0 <- 0
++     movl    $0, %eax                #   7:     assign t0 <- 0
+- l_test_7:
++ l_test_8:
+-     movl    $1, %eax                #   7:     if     1 = t0 goto 4_while_body
++     movl    $1, %eax                #   9:     if     1 = t0 goto 4_while_body
+-     jmp     l_test_2                #   8:     goto   2
++     jmp     l_test_2                #  10:     goto   2
+-     movl    $97, %eax               #  10:     assign v0 <- 97
++     movl    $97, %eax               #  12:     assign v0 <- 97
+-     jmp     l_test_3_while_cond     #  11:     goto   3_while_cond
++     jmp     l_test_3_while_cond     #  13:     goto   3_while_cond
++     jmp     l_test_11               #  16:     goto   11
+-     movl    $79467, %eax            #  14:     if     79467 >= 63002 goto 16
++     movl    $79467, %eax            #  17:     if     79467 >= 63002 goto 16
+-     jmp     l_test_17               #  15:     goto   17
++     jmp     l_test_17               #  18:     goto   17
+-     movl    $1, %eax                #  17:     assign t1 <- 1
++     movl    $1, %eax                #  20:     assign t1 <- 1
+-     jmp     l_test_18               #  18:     goto   18
++     jmp     l_test_18               #  21:     goto   18
+-     movl    $0, %eax                #  20:     assign t1 <- 0
++     movl    $0, %eax                #  23:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #  22:     assign v1 <- t1
++     movzbl  -14(%ebp), %eax         #  25:     assign v1 <- t1
+-     jmp     l_test_12_while_cond    #  23:     goto   12_while_cond
++     jmp     l_test_12_while_cond    #  26:     goto   12_while_cond
++ l_test_11:
+-     movl    $61001, %eax            #  24:     add    t2 <- 61001, 81592
++     movl    $61001, %eax            #  28:     add    t2 <- 61001, 81592
+-     movl    -20(%ebp), %eax         #  25:     assign v2 <- t2
++     movl    -20(%ebp), %eax         #  29:     assign v2 <- t2

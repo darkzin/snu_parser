@@ -1,0 +1,14 @@
++     jmp     l_test_5                #  12:     goto   5
++     jmp     l_test_5                #  13:     goto   5
++     jmp     l_test_5                #  14:     goto   5
+-     call    dummyCHARfunc           #  12:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  15:     call   t3 <- dummyCHARfunc
+-     jmp     l_test_6_while_cond     #  13:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #  16:     goto   6_while_cond
++ l_test_5:
+-     call    dummyBOOLfunc           #  14:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  18:     call   t4 <- dummyBOOLfunc
+-     movl    $98, %eax               #  15:     assign v0 <- 98
++     movl    $98, %eax               #  19:     assign v0 <- 98
+-     call    dummyCHARfunc           #  16:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #  20:     call   t5 <- dummyCHARfunc

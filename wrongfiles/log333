@@ -1,0 +1,18 @@
+-     # -32304(%ebp)32280  [ $v3       <array 3 of <array 7 of <array 8 of <array 6 of <array 8 of <int>>>>>> %ebp-32304 ]
++     #   -32304(%ebp)  32280  [ $v3       <array 3 of <array 7 of <array 8 of <array 6 of <array 8 of <int>>>>>> %ebp-32304 ]
++     jmp     l_f1_4                  #   8:     goto   4
+-     jmp     l_f1_5_while_cond       #   8:     goto   5_while_cond
++     jmp     l_f1_5_while_cond       #   9:     goto   5_while_cond
++ l_f1_4:
+-     movl    $97, %eax               #   9:     param  2 <- 97
++     movl    $97, %eax               #  11:     param  2 <- 97
+-     movl    $40300, %eax            #  10:     param  1 <- 40300
++     movl    $40300, %eax            #  12:     param  1 <- 40300
+-     leal    -32304(%ebp), %eax      #  11:     &()    t3 <- v3
++     leal    -32304(%ebp), %eax      #  13:     &()    t3 <- v3
+-     movl    -20(%ebp), %eax         #  12:     param  0 <- t3
++     movl    -20(%ebp), %eax         #  14:     param  0 <- t3
+-     call    f0                      #  13:     call   t4 <- f0
++     call    f0                      #  15:     call   t4 <- f0
+-     addl    $9, %esp               
++     addl    $12, %esp              

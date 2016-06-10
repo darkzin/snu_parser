@@ -1,0 +1,44 @@
+-     jmp     l_f0_10                 #  12:     goto   10
++     jmp     l_f0_11                 #  12:     goto   11
+-     jmp     l_f0_10                 #  13:     goto   10
++     jmp     l_f0_11                 #  13:     goto   11
+- l_f0_10:
++ l_f0_11:
+-     jmp     l_f0_12                 #  16:     goto   12
++     jmp     l_f0_13                 #  16:     goto   13
+- l_f0_12:
++ l_f0_13:
+-     jmp     l_f0_16                 #  19:     goto   16
++     jmp     l_f0_17                 #  19:     goto   17
+-     jmp     l_f0_16                 #  20:     goto   16
++     jmp     l_f0_17                 #  20:     goto   17
+-     jmp     l_f0_16                 #  21:     goto   16
++     jmp     l_f0_17                 #  21:     goto   17
+-     jmp     l_f0_16                 #  22:     goto   16
++     jmp     l_f0_17                 #  22:     goto   17
++     jmp     l_f0_18                 #  23:     goto   18
+- l_f0_16:
++ l_f0_17:
+-     movl    $1, %eax                #  24:     assign t7 <- 1
++     movl    $1, %eax                #  25:     assign t7 <- 1
+-     jmp     l_f0_18                 #  25:     goto   18
++     jmp     l_f0_19                 #  26:     goto   19
++ l_f0_18:
+-     movl    $0, %eax                #  26:     assign t7 <- 0
++     movl    $0, %eax                #  28:     assign t7 <- 0
+- l_f0_18:
++ l_f0_19:
+-     movzbl  -22(%ebp), %eax         #  28:     if     t6 # t7 goto 7
++     movzbl  -22(%ebp), %eax         #  30:     if     t6 # t7 goto 7
+-     jmp     l_f0_8                  #  29:     goto   8
++     jmp     l_f0_8                  #  31:     goto   8
+-     movl    $1, %eax                #  31:     assign t8 <- 1
++     movl    $1, %eax                #  33:     assign t8 <- 1
+-     jmp     l_f0_9                  #  32:     goto   9
++     jmp     l_f0_9                  #  34:     goto   9
+-     movl    $0, %eax                #  34:     assign t8 <- 0
++     movl    $0, %eax                #  36:     assign t8 <- 0
+-     movzbl  -24(%ebp), %eax         #  36:     return t8
++     movzbl  -24(%ebp), %eax         #  38:     return t8
+-     addl    $1, %esp               
++     addl    $4, %esp               

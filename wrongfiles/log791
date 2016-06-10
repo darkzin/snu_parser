@@ -1,0 +1,20 @@
++     jmp     l_f1_3_if_false         #   1:     goto   3_if_false
+-     movl    $100, %eax              #   1:     assign v3 <- 100
++     movl    $100, %eax              #   2:     assign v3 <- 100
+-     jmp     l_f1_1                  #   2:     goto   1
++     jmp     l_f1_1                  #   3:     goto   1
++ l_f1_3_if_false:
+-     movl    $45228, %eax            #   4:     if     45228 > 54437 goto 9
++     movl    $45228, %eax            #   6:     if     45228 > 54437 goto 9
+-     jmp     l_f1_10                 #   5:     goto   10
++     jmp     l_f1_10                 #   7:     goto   10
+-     movl    $1, %eax                #   7:     assign t2 <- 1
++     movl    $1, %eax                #   9:     assign t2 <- 1
+-     jmp     l_f1_11                 #   8:     goto   11
++     jmp     l_f1_11                 #  10:     goto   11
+-     movl    $0, %eax                #  10:     assign t2 <- 0
++     movl    $0, %eax                #  12:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #  12:     assign v4 <- t2
++     movzbl  -13(%ebp), %eax         #  14:     assign v4 <- t2
+-     addl    $1, %esp               
++     addl    $4, %esp               

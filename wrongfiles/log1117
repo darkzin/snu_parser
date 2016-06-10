@@ -1,0 +1,39 @@
++     jmp     l_f1_0                  #   2:     goto   0
+-     call    dummyINTfunc            #   3:     call   t4 <- dummyINTfunc
++     call    dummyINTfunc            #   4:     call   t4 <- dummyINTfunc
+-     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   5:     goto   1_while_cond
++ l_f1_0:
+-     movl    $99, %eax               #   5:     if     99 > 98 goto 6_if_true
++     movl    $99, %eax               #   7:     if     99 > 98 goto 6_if_true
+-     jmp     l_f1_7_if_false         #   6:     goto   7_if_false
++     jmp     l_f1_7_if_false         #   8:     goto   7_if_false
+-     movl    $99, %eax               #   8:     assign v2 <- 99
++     movl    $99, %eax               #  10:     assign v2 <- 99
+-     movl    $1, %eax                #   9:     assign t5 <- 1
++     movl    $1, %eax                #  11:     assign t5 <- 1
+-     jmp     l_f1_13                 #  10:     goto   13
++     jmp     l_f1_13                 #  12:     goto   13
+-     movl    $0, %eax                #  11:     assign t5 <- 0
++     movl    $0, %eax                #  13:     assign t5 <- 0
+-     movzbl  -17(%ebp), %eax         #  13:     assign v1 <- t5
++     movzbl  -17(%ebp), %eax         #  15:     assign v1 <- t5
+-     jmp     l_f1_5                  #  14:     goto   5
++     jmp     l_f1_5                  #  16:     goto   5
+-     jmp     l_f1_20                 #  19:     goto   20
++     jmp     l_f1_20                 #  21:     goto   20
+-     jmp     l_f1_21_while_cond      #  20:     goto   21_while_cond
++     jmp     l_f1_21_while_cond      #  22:     goto   21_while_cond
++     jmp     l_f1_23                 #  25:     goto   23
++     jmp     l_f1_23                 #  26:     goto   23
++     jmp     l_f1_23                 #  27:     goto   23
++     jmp     l_f1_23                 #  28:     goto   23
+-     jmp     l_f1_24_while_cond      #  23:     goto   24_while_cond
++     jmp     l_f1_24_while_cond      #  29:     goto   24_while_cond
++ l_f1_23:
+-     jmp     l_f1_18_while_cond      #  24:     goto   18_while_cond
++     jmp     l_f1_18_while_cond      #  31:     goto   18_while_cond
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               

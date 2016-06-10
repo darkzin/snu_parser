@@ -1,0 +1,14 @@
++     jmp     l_f2_2_if_false         #   2:     goto   2_if_false
+-     jmp     l_f2_0                  #   3:     goto   0
++     jmp     l_f2_0                  #   4:     goto   0
++ l_f2_2_if_false:
+-     movl    $77962, %eax            #   5:     add    t6 <- 77962, 97603
++     movl    $77962, %eax            #   7:     add    t6 <- 77962, 97603
+-     movl    -16(%ebp), %eax         #   6:     add    t7 <- t6, 32465
++     movl    -16(%ebp), %eax         #   8:     add    t7 <- t6, 32465
+-     movl    -20(%ebp), %eax         #   7:     sub    t8 <- t7, 55990
++     movl    -20(%ebp), %eax         #   9:     sub    t8 <- t7, 55990
+-     movl    -24(%ebp), %eax         #   8:     assign v3 <- t8
++     movl    -24(%ebp), %eax         #  10:     assign v3 <- t8
+-     movl    $98, %eax               #   9:     assign v0 <- 98
++     movl    $98, %eax               #  11:     assign v0 <- 98

@@ -1,0 +1,19 @@
++     jmp     l_f0_4                  #   0:     goto   4
++     jmp     l_f0_4                  #   1:     goto   4
++ l_f0_4:
+-     movl    $1, %eax                #   0:     assign t6 <- 1
++     movl    $1, %eax                #   3:     assign t6 <- 1
+-     jmp     l_f0_3                  #   1:     goto   3
++     jmp     l_f0_3                  #   4:     goto   3
+-     movl    $0, %eax                #   2:     assign t6 <- 0
++     movl    $0, %eax                #   5:     assign t6 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     return t6
++     movzbl  -13(%ebp), %eax         #   7:     return t6
+-     jmp     l_f0_10_while_body      #   6:     goto   10_while_body
++     jmp     l_f0_10_while_body      #   9:     goto   10_while_body
++     jmp     l_f0_8                  #  10:     goto   8
+-     jmp     l_f0_9_while_cond       #   8:     goto   9_while_cond
++     jmp     l_f0_9_while_cond       #  12:     goto   9_while_cond
++ l_f0_8:
+-     call    ReadInt                 #   9:     call   t7 <- ReadInt
++     call    ReadInt                 #  14:     call   t7 <- ReadInt

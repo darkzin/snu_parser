@@ -1,0 +1,16 @@
++     jmp     l_f1_3_if_false         #   3:     goto   3_if_false
+-     movl    $41897, %eax            #   4:     if     41897 = 8449 goto 6_if_true
++     movl    $41897, %eax            #   5:     if     41897 = 8449 goto 6_if_true
+-     jmp     l_f1_7_if_false         #   5:     goto   7_if_false
++     jmp     l_f1_7_if_false         #   6:     goto   7_if_false
+-     jmp     l_f1_5                  #   7:     goto   5
++     jmp     l_f1_5                  #   8:     goto   5
+-     jmp     l_f1_1                  #  10:     goto   1
++     jmp     l_f1_1                  #  11:     goto   1
++ l_f1_3_if_false:
+-     leal    _str_1, %eax            #  12:     &()    t2 <- _str_1
++     leal    _str_1, %eax            #  14:     &()    t2 <- _str_1
+-     movl    -20(%ebp), %eax         #  13:     param  0 <- t2
++     movl    -20(%ebp), %eax         #  15:     param  0 <- t2
+-     call    WriteStr                #  14:     call   WriteStr
++     call    WriteStr                #  16:     call   WriteStr

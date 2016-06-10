@@ -1,0 +1,22 @@
++     jmp     l_test_2_if_false       #   0:     goto   2_if_false
+-     call    dummyCHARfunc           #   0:     call   t0 <- dummyCHARfunc
++     call    dummyCHARfunc           #   1:     call   t0 <- dummyCHARfunc
+-     movzbl  -13(%ebp), %eax         #   1:     param  0 <- t0
++     movzbl  -13(%ebp), %eax         #   2:     param  0 <- t0
+-     call    WriteChar               #   2:     call   WriteChar
++     call    WriteChar               #   3:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_test_0                #   3:     goto   0
++     jmp     l_test_0                #   4:     goto   0
++ l_test_2_if_false:
+-     call    dummyProcedure          #   5:     call   dummyProcedure
++     call    dummyProcedure          #   7:     call   dummyProcedure
+-     call    ReadInt                 #   6:     call   t1 <- ReadInt
++     call    ReadInt                 #   8:     call   t1 <- ReadInt
+-     movl    -20(%ebp), %eax         #   7:     if     t1 = 72367 goto 7_if_true
++     movl    -20(%ebp), %eax         #   9:     if     t1 = 72367 goto 7_if_true
+-     jmp     l_test_8_if_false       #   8:     goto   8_if_false
++     jmp     l_test_8_if_false       #  10:     goto   8_if_false
+-     jmp     l_test_6                #  10:     goto   6
++     jmp     l_test_6                #  12:     goto   6

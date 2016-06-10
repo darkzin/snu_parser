@@ -1,0 +1,34 @@
++     jmp     l_f2_15                 #  19:     goto   15
++     jmp     l_f2_15                 #  20:     goto   15
++     jmp     l_f2_15                 #  21:     goto   15
++     jmp     l_f2_15                 #  22:     goto   15
++     jmp     l_f2_15                 #  23:     goto   15
++ l_f2_15:
+-     jmp     l_f2_12_while_body      #  19:     goto   12_while_body
++     jmp     l_f2_12_while_body      #  25:     goto   12_while_body
++     jmp     l_f2_10                 #  26:     goto   10
+-     jmp     l_f2_11_while_cond      #  21:     goto   11_while_cond
++     jmp     l_f2_11_while_cond      #  28:     goto   11_while_cond
++ l_f2_10:
++     jmp     l_test_25_if_false      #  29:     goto   25_if_false
+-     call    dummyCHARfunc           #  30:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  31:     call   t1 <- dummyCHARfunc
+-     call    dummyBOOLfunc           #  31:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  32:     call   t2 <- dummyBOOLfunc
+-     jmp     l_test_30               #  32:     goto   30
++     jmp     l_test_30               #  33:     goto   30
+-     movl    $85234, %eax            #  34:     if     85234 < 52943 goto 34
++     movl    $85234, %eax            #  35:     if     85234 < 52943 goto 34
+-     jmp     l_test_35               #  35:     goto   35
++     jmp     l_test_35               #  36:     goto   35
+-     movl    $1, %eax                #  37:     assign t3 <- 1
++     movl    $1, %eax                #  38:     assign t3 <- 1
+-     jmp     l_test_36               #  38:     goto   36
++     jmp     l_test_36               #  39:     goto   36
+-     movl    $0, %eax                #  40:     assign t3 <- 0
++     movl    $0, %eax                #  41:     assign t3 <- 0
+-     movzbl  -16(%ebp), %eax         #  42:     assign v1 <- t3
++     movzbl  -16(%ebp), %eax         #  43:     assign v1 <- t3
+-     jmp     l_test_23               #  43:     goto   23
++     jmp     l_test_23               #  44:     goto   23
++ l_test_25_if_false:

@@ -1,0 +1,29 @@
++     jmp     l_f1_0                  #   1:     goto   0
++     jmp     l_f1_0                  #   2:     goto   0
+-     movl    $99047, %eax            #   1:     assign v3 <- 99047
++     movl    $99047, %eax            #   3:     assign v3 <- 99047
+-     jmp     l_f1_1_while_cond       #   2:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++ l_f1_0:
+-     movl    $17838, %eax            #   4:     sub    t5 <- 17838, 73278
++     movl    $17838, %eax            #   7:     sub    t5 <- 17838, 73278
+-     movl    -24(%ebp), %eax         #   5:     add    t6 <- t5, 60315
++     movl    -24(%ebp), %eax         #   8:     add    t6 <- t5, 60315
+-     movl    $87628, %eax            #   6:     div    t7 <- 87628, 32861
++     movl    $87628, %eax            #   9:     div    t7 <- 87628, 32861
+-     movl    -32(%ebp), %eax         #   7:     div    t8 <- t7, 97899
++     movl    -32(%ebp), %eax         #  10:     div    t8 <- t7, 97899
+-     movl    -36(%ebp), %eax         #   8:     mul    t9 <- t8, 39907
++     movl    -36(%ebp), %eax         #  11:     mul    t9 <- t8, 39907
+-     movl    -28(%ebp), %eax         #   9:     sub    t10 <- t6, t9
++     movl    -28(%ebp), %eax         #  12:     sub    t10 <- t6, t9
+-     movl    -16(%ebp), %eax         #  10:     if     t10 # 95864 goto 7_while_body
++     movl    -16(%ebp), %eax         #  13:     if     t10 # 95864 goto 7_while_body
+-     jmp     l_f1_5                  #  11:     goto   5
++     jmp     l_f1_5                  #  14:     goto   5
+-     jmp     l_f1_6_while_cond       #  13:     goto   6_while_cond
++     jmp     l_f1_6_while_cond       #  16:     goto   6_while_cond
+-     call    dummyCHARfunc           #  15:     call   t11 <- dummyCHARfunc
++     call    dummyCHARfunc           #  18:     call   t11 <- dummyCHARfunc
+-     addl    $7, %esp               
++     addl    $16, %esp              

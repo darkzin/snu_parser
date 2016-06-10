@@ -1,0 +1,48 @@
+-     #-268749056(%ebp)268748952  [ $v3       <array 46 of <array 4 of <array 98 of <array 54 of <array 69 of <int>>>>>> %ebp-268749056 ]
++     #   -268749056(%ebp)  268748952  [ $v3       <array 46 of <array 4 of <array 98 of <array 54 of <array 69 of <int>>>>>> %ebp-268749056 ]
+-     #-268749057(%ebp)   1  [ $v4       <char> %ebp-268749057 ]
++     #   -268749057(%ebp)   1  [ $v4       <char> %ebp-268749057 ]
+-     #-268749058(%ebp)   1  [ $v5       <bool> %ebp-268749058 ]
++     #   -268749058(%ebp)   1  [ $v5       <bool> %ebp-268749058 ]
++     jmp     l_test_9                #   4:     goto   9
+-     movl    $1, %eax                #   4:     assign t2 <- 1
++     movl    $1, %eax                #   5:     assign t2 <- 1
+-     jmp     l_test_9                #   5:     goto   9
++     jmp     l_test_10               #   6:     goto   10
++ l_test_9:
+-     movl    $0, %eax                #   6:     assign t2 <- 0
++     movl    $0, %eax                #   8:     assign t2 <- 0
+- l_test_9:
++ l_test_10:
+-     movl    $0, %eax                #   8:     if     0 # t2 goto 5_if_true
++     movl    $0, %eax                #  10:     if     0 # t2 goto 5_if_true
+-     jmp     l_test_6_if_false       #   9:     goto   6_if_false
++     jmp     l_test_6_if_false       #  11:     goto   6_if_false
+-     jmp     l_test_4                #  11:     goto   4
++     jmp     l_test_4                #  13:     goto   4
+-     leal    v2, %eax                #  14:     &()    t3 <- v2
++     leal    v2, %eax                #  16:     &()    t3 <- v2
+-     movl    -24(%ebp), %eax         #  15:     param  2 <- t3
++     movl    -24(%ebp), %eax         #  17:     param  2 <- t3
+-     leal    v1, %eax                #  16:     &()    t4 <- v1
++     leal    v1, %eax                #  18:     &()    t4 <- v1
+-     movl    -28(%ebp), %eax         #  17:     param  1 <- t4
++     movl    -28(%ebp), %eax         #  19:     param  1 <- t4
+-     leal    v0, %eax                #  18:     &()    t5 <- v0
++     leal    v0, %eax                #  20:     &()    t5 <- v0
+-     movl    -32(%ebp), %eax         #  19:     param  0 <- t5
++     movl    -32(%ebp), %eax         #  21:     param  0 <- t5
+-     call    f1                      #  20:     call   t6 <- f1
++     call    f1                      #  22:     call   t6 <- f1
+-     movzbl  -33(%ebp), %eax         #  21:     if     t6 = 1 goto 13_if_true
++     movzbl  -33(%ebp), %eax         #  23:     if     t6 = 1 goto 13_if_true
+-     jmp     l_test_14_if_false      #  22:     goto   14_if_false
++     jmp     l_test_14_if_false      #  24:     goto   14_if_false
+-     leal    _str_2, %eax            #  24:     &()    t7 <- _str_2
++     leal    _str_2, %eax            #  26:     &()    t7 <- _str_2
+-     movl    -40(%ebp), %eax         #  25:     param  0 <- t7
++     movl    -40(%ebp), %eax         #  27:     param  0 <- t7
+-     call    WriteStr                #  26:     call   WriteStr
++     call    WriteStr                #  28:     call   WriteStr
+-     jmp     l_test_12               #  27:     goto   12
++     jmp     l_test_12               #  29:     goto   12

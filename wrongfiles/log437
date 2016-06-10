@@ -1,0 +1,16 @@
++     jmp     l_f1_5                  #   4:     goto   5
+-     jmp     l_f1_3_while_body       #   4:     goto   3_while_body
++     jmp     l_f1_3_while_body       #   5:     goto   3_while_body
++ l_f1_5:
++     jmp     l_f1_1                  #   7:     goto   1
+-     jmp     l_f1_2_while_cond       #   6:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #   9:     goto   2_while_cond
++ l_f1_1:
+-     movl    $43173, %eax            #   7:     div    t4 <- 43173, 26531
++     movl    $43173, %eax            #  11:     div    t4 <- 43173, 26531
+-     movl    -24(%ebp), %eax         #   8:     assign v1 <- t4
++     movl    -24(%ebp), %eax         #  12:     assign v1 <- t4
+-     # -16080(%ebp)16024  [ $v0       <array 10 of <array 8 of <array 10 of <array 1 of <array 5 of <int>>>>>> %ebp-16080 ]
++     #   -16080(%ebp)  16024  [ $v0       <array 10 of <array 8 of <array 10 of <array 1 of <array 5 of <int>>>>>> %ebp-16080 ]
+-     # -16081(%ebp)   1  [ $v1       <char> %ebp-16081 ]
++     #   -16081(%ebp)   1  [ $v1       <char> %ebp-16081 ]

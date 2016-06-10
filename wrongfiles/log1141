@@ -1,0 +1,18 @@
++     jmp     l_f0_2_if_false         #   1:     goto   2_if_false
+-     call    ReadInt                 #   2:     call   t9 <- ReadInt
++     call    ReadInt                 #   3:     call   t9 <- ReadInt
+-     movl    $32207, %eax            #   3:     assign v1 <- 32207
++     movl    $32207, %eax            #   4:     assign v1 <- 32207
+-     jmp     l_f0_0                  #   5:     goto   0
++     jmp     l_f0_0                  #   6:     goto   0
++ l_f0_2_if_false:
+-     call    dummyCHARfunc           #   7:     call   t10 <- dummyCHARfunc
++     call    dummyCHARfunc           #   9:     call   t10 <- dummyCHARfunc
+-     movzbl  -13(%ebp), %eax         #   8:     assign v2 <- t10
++     movzbl  -13(%ebp), %eax         #  10:     assign v2 <- t10
+-     jmp     l_f2_36                 #  47:     goto   36
++     jmp     l_f2_37                 #  47:     goto   37
+- l_f2_36:
++ l_f2_37:
+-     addl    $1, %esp               
++     addl    $4, %esp               

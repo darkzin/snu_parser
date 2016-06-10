@@ -1,0 +1,34 @@
++     jmp     l_f0_2                  #   3:     goto   2
+-     movl    $1, %eax                #   4:     assign t3 <- 1
++     movl    $1, %eax                #   5:     assign t3 <- 1
+-     jmp     l_f0_3                  #   5:     goto   3
++     jmp     l_f0_3                  #   6:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   6:     assign t3 <- 0
++     movl    $0, %eax                #   8:     assign t3 <- 0
+-     movzbl  -13(%ebp), %eax         #   8:     assign v1 <- t3
++     movzbl  -13(%ebp), %eax         #  10:     assign v1 <- t3
+-     call    dummyBOOLfunc           #   9:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  11:     call   t4 <- dummyBOOLfunc
+-     call    dummyINTfunc            #  10:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #  12:     call   t5 <- dummyINTfunc
++     jmp     l_f1_4                  #   2:     goto   4
+-     jmp     l_f1_3_while_body       #   2:     goto   3_while_body
++     jmp     l_f1_3_while_body       #   3:     goto   3_while_body
++ l_f1_4:
++     jmp     l_f1_1                  #   5:     goto   1
+-     jmp     l_f1_2_while_cond       #   4:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #   7:     goto   2_while_cond
++ l_f1_1:
+-     call    ReadInt                 #   5:     call   t3 <- ReadInt
++     call    ReadInt                 #   9:     call   t3 <- ReadInt
+-     #-556174132(%ebp)556174104  [ $v1       <array 66 of <array 14 of <array 44 of <array 90 of <array 38 of <int>>>>>> %ebp-556174132 ]
++     #   -556174132(%ebp)  556174104  [ $v1       <array 66 of <array 14 of <array 44 of <array 90 of <array 38 of <int>>>>>> %ebp-556174132 ]
+-     #-556174133(%ebp)   1  [ $v2       <char> %ebp-556174133 ]
++     #   -556174133(%ebp)   1  [ $v2       <char> %ebp-556174133 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              
+-     addl    $6, %esp               
++     addl    $12, %esp              
+-     addl    $1, %esp               
++     addl    $4, %esp               

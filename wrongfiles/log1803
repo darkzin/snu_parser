@@ -1,0 +1,26 @@
++     jmp     l_f1_0                  #   1:     goto   0
+-     jmp     l_f1_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   2:     goto   1_while_cond
++ l_f1_0:
+-     movl    $43975, %eax            #   2:     add    t27 <- 43975, 25213
++     movl    $43975, %eax            #   4:     add    t27 <- 43975, 25213
+-     movl    $79793, %eax            #   3:     mul    t28 <- 79793, 40573
++     movl    $79793, %eax            #   5:     mul    t28 <- 79793, 40573
+-     movl    -16(%ebp), %eax         #   4:     if     t27 <= t28 goto 8
++     movl    -16(%ebp), %eax         #   6:     if     t27 <= t28 goto 8
+-     jmp     l_f1_9                  #   5:     goto   9
++     jmp     l_f1_9                  #   7:     goto   9
+-     movl    $1, %eax                #   7:     assign t29 <- 1
++     movl    $1, %eax                #   9:     assign t29 <- 1
+-     jmp     l_f1_10                 #   8:     goto   10
++     jmp     l_f1_10                 #  10:     goto   10
+-     movl    $0, %eax                #  10:     assign t29 <- 0
++     movl    $0, %eax                #  12:     assign t29 <- 0
+-     movzbl  -21(%ebp), %eax         #  12:     return t29
++     movzbl  -21(%ebp), %eax         #  14:     return t29
+-     leal    _str_1, %eax            #  13:     &()    t30 <- _str_1
++     leal    _str_1, %eax            #  15:     &()    t30 <- _str_1
+-     movl    -28(%ebp), %eax         #  14:     param  0 <- t30
++     movl    -28(%ebp), %eax         #  16:     param  0 <- t30
+-     call    WriteStr                #  15:     call   WriteStr
++     call    WriteStr                #  17:     call   WriteStr

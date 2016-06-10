@@ -1,0 +1,22 @@
+-     jmp     l_f0_4                  #   3:     goto   4
++     jmp     l_f0_5                  #   3:     goto   5
+- l_f0_4:
++ l_f0_5:
+-     jmp     l_f0_6                  #   6:     goto   6
++     jmp     l_f0_7                  #   6:     goto   7
+- l_f0_6:
++ l_f0_7:
++     jmp     l_f1_9                  #  12:     goto   9
+-     jmp     l_f1_10_while_cond      #  14:     goto   10_while_cond
++     jmp     l_f1_10_while_cond      #  15:     goto   10_while_cond
++ l_f1_9:
+-     call    dummyCHARfunc           #  15:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  17:     call   t3 <- dummyCHARfunc
++     jmp     l_f2_11_if_false        #  12:     goto   11_if_false
+-     jmp     l_f2_16_while_cond      #  14:     goto   16_while_cond
++     jmp     l_f2_16_while_cond      #  15:     goto   16_while_cond
+-     jmp     l_f2_18                 #  15:     goto   18
++     jmp     l_f2_18                 #  16:     goto   18
+-     jmp     l_f2_9                  #  17:     goto   9
++     jmp     l_f2_9                  #  18:     goto   9
++ l_f2_11_if_false:

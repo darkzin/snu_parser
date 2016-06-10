@@ -1,0 +1,40 @@
++     jmp     l_f1_2_if_false         #   0:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   1:     goto   2_if_false
+-     jmp     l_f1_0                  #   0:     goto   0
++     jmp     l_f1_0                  #   2:     goto   0
++ l_f1_2_if_false:
+-     movl    $1127, %eax             #   2:     add    t8 <- 1127, 88785
++     movl    $1127, %eax             #   5:     add    t8 <- 1127, 88785
+-     movl    -28(%ebp), %eax         #   3:     sub    t9 <- t8, 30483
++     movl    -28(%ebp), %eax         #   6:     sub    t9 <- t8, 30483
+-     movl    $50321, %eax            #   4:     div    t10 <- 50321, 75301
++     movl    $50321, %eax            #   7:     div    t10 <- 50321, 75301
+-     movl    -16(%ebp), %eax         #   5:     div    t11 <- t10, 25719
++     movl    -16(%ebp), %eax         #   8:     div    t11 <- t10, 25719
+-     movl    -32(%ebp), %eax         #   6:     sub    t12 <- t9, t11
++     movl    -32(%ebp), %eax         #   9:     sub    t12 <- t9, t11
+-     movl    -24(%ebp), %eax         #   7:     return t12
++     movl    -24(%ebp), %eax         #  10:     return t12
++     jmp     l_f1_7_if_false         #  11:     goto   7_if_false
++     jmp     l_f1_7_if_false         #  12:     goto   7_if_false
+-     movl    $56486, %eax            #   8:     return 56486
++     movl    $56486, %eax            #  13:     return 56486
+-     jmp     l_f1_10                 #   9:     goto   10
++     jmp     l_f1_10                 #  14:     goto   10
+-     jmp     l_f1_5                  #  11:     goto   5
++     jmp     l_f1_5                  #  16:     goto   5
++ l_f1_7_if_false:
+-     movl    $40894, %eax            #   0:     if     40894 = 18064 goto 4
++     movl    $40894, %eax            #   0:     if     40894 = 18064 goto 5
+-     je      l_test_4               
++     je      l_test_5               
+-     jmp     l_test_4                #   1:     goto   4
++     jmp     l_test_5                #   1:     goto   5
+-     jmp     l_test_4                #   2:     goto   4
++     jmp     l_test_5                #   2:     goto   5
+- l_test_4:
++ l_test_5:
+-     jmp     l_test_6                #   5:     goto   6
++     jmp     l_test_7                #   5:     goto   7
+- l_test_6:
++ l_test_7:

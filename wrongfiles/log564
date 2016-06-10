@@ -1,0 +1,102 @@
++     jmp     l_f0_2                  #   0:     goto   2
++     jmp     l_f0_2                  #   1:     goto   2
++     jmp     l_f0_2                  #   2:     goto   2
+-     movl    $1, %eax                #   0:     assign t1 <- 1
++     movl    $1, %eax                #   3:     assign t1 <- 1
+-     jmp     l_f0_3                  #   1:     goto   3
++     jmp     l_f0_3                  #   4:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   2:     assign t1 <- 0
++     movl    $0, %eax                #   6:     assign t1 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v4 <- t1
++     movzbl  -13(%ebp), %eax         #   8:     assign v4 <- t1
+-     movl    $59012, %eax            #   5:     div    t2 <- 59012, 83622
++     movl    $59012, %eax            #   9:     div    t2 <- 59012, 83622
+-     movl    -20(%ebp), %eax         #   6:     div    t3 <- t2, 9211
++     movl    -20(%ebp), %eax         #  10:     div    t3 <- t2, 9211
+-     movl    $99042, %eax            #   7:     if     99042 <= t3 goto 10_if_true
++     movl    $99042, %eax            #  11:     if     99042 <= t3 goto 10_if_true
+-     jmp     l_f0_11_if_false        #   8:     goto   11_if_false
++     jmp     l_f0_11_if_false        #  12:     goto   11_if_false
+-     movl    $98, %eax               #  11:     if     98 < 98 goto 15_while_body
++     movl    $98, %eax               #  15:     if     98 < 98 goto 15_while_body
+-     jmp     l_f0_13                 #  12:     goto   13
++     jmp     l_f0_13                 #  16:     goto   13
+-     jmp     l_f0_14_while_cond      #  14:     goto   14_while_cond
++     jmp     l_f0_14_while_cond      #  18:     goto   14_while_cond
+-     jmp     l_f0_9                  #  16:     goto   9
++     jmp     l_f0_9                  #  20:     goto   9
+-     jmp     l_f0_20                 #  19:     goto   20
++     jmp     l_f0_21                 #  23:     goto   21
++     jmp     l_f0_22                 #  24:     goto   22
+- l_f0_20:
++ l_f0_21:
+-     movl    $1, %eax                #  21:     assign t4 <- 1
++     movl    $1, %eax                #  26:     assign t4 <- 1
+-     jmp     l_f0_22                 #  22:     goto   22
++     jmp     l_f0_23                 #  27:     goto   23
++ l_f0_22:
+-     movl    $0, %eax                #  23:     assign t4 <- 0
++     movl    $0, %eax                #  29:     assign t4 <- 0
+- l_f0_22:
++ l_f0_23:
+-     movl    $1, %eax                #  25:     assign t5 <- 1
++     movl    $1, %eax                #  31:     assign t5 <- 1
+-     jmp     l_f0_27                 #  26:     goto   27
++     jmp     l_f0_28                 #  32:     goto   28
+-     movl    $0, %eax                #  27:     assign t5 <- 0
++     movl    $0, %eax                #  33:     assign t5 <- 0
+- l_f0_27:
++ l_f0_28:
+-     movzbl  -25(%ebp), %eax         #  29:     if     t4 # t5 goto 18_if_true
++     movzbl  -25(%ebp), %eax         #  35:     if     t4 # t5 goto 18_if_true
+-     jmp     l_f0_19_if_false        #  30:     goto   19_if_false
++     jmp     l_f0_19_if_false        #  36:     goto   19_if_false
+-     jmp     l_f0_17                 #  32:     goto   17
++     jmp     l_f0_17                 #  38:     goto   17
++     jmp     l_f1_5                  #   0:     goto   5
+-     movl    $1, %eax                #   0:     assign t1 <- 1
++     movl    $1, %eax                #   1:     assign t1 <- 1
+-     jmp     l_f1_5                  #   1:     goto   5
++     jmp     l_f1_6                  #   2:     goto   6
++ l_f1_5:
+-     movl    $0, %eax                #   2:     assign t1 <- 0
++     movl    $0, %eax                #   4:     assign t1 <- 0
+- l_f1_5:
++ l_f1_6:
+-     movl    $1, %eax                #   4:     if     1 = t1 goto 1_if_true
++     movl    $1, %eax                #   6:     if     1 = t1 goto 1_if_true
+-     jmp     l_f1_2_if_false         #   5:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   7:     goto   2_if_false
+-     call    dummyCHARfunc           #   7:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #   9:     call   t2 <- dummyCHARfunc
+-     jmp     l_f1_0                  #   8:     goto   0
++     jmp     l_f1_0                  #  10:     goto   0
+-     jmp     l_f1_13                 #  11:     goto   13
++     jmp     l_f1_13                 #  13:     goto   13
++     jmp     l_f1_14                 #  14:     goto   14
+-     movl    $1, %eax                #  13:     assign t3 <- 1
++     movl    $1, %eax                #  16:     assign t3 <- 1
+-     jmp     l_f1_15                 #  14:     goto   15
++     jmp     l_f1_15                 #  17:     goto   15
++ l_f1_14:
+-     movl    $0, %eax                #  15:     assign t3 <- 0
++     movl    $0, %eax                #  19:     assign t3 <- 0
+-     movzbl  -15(%ebp), %eax         #  17:     assign v3 <- t3
++     movzbl  -15(%ebp), %eax         #  21:     assign v3 <- t3
+-     jmp     l_f1_9                  #  18:     goto   9
++     jmp     l_f1_9                  #  22:     goto   9
+-     movl    $5306, %eax             #  20:     if     5306 >= 10104 goto 19_if_true
++     movl    $5306, %eax             #  24:     if     5306 >= 10104 goto 19_if_true
+-     jmp     l_f1_20_if_false        #  21:     goto   20_if_false
++     jmp     l_f1_20_if_false        #  25:     goto   20_if_false
+-     movl    $61856, %eax            #  23:     if     61856 = 48952 goto 23_if_true
++     movl    $61856, %eax            #  27:     if     61856 = 48952 goto 23_if_true
+-     jmp     l_f1_24_if_false        #  24:     goto   24_if_false
++     jmp     l_f1_24_if_false        #  28:     goto   24_if_false
+-     jmp     l_f1_22                 #  26:     goto   22
++     jmp     l_f1_22                 #  30:     goto   22
+-     movl    $97, %eax               #  29:     return 97
++     movl    $97, %eax               #  33:     return 97
+-     jmp     l_f1_18                 #  30:     goto   18
++     jmp     l_f1_18                 #  34:     goto   18

@@ -1,0 +1,14 @@
++     jmp     l_f1_3                  #   1:     goto   3
+-     jmp     l_f1_2_while_body       #   1:     goto   2_while_body
++     jmp     l_f1_2_while_body       #   2:     goto   2_while_body
++ l_f1_3:
++     jmp     l_f1_0                  #   4:     goto   0
+-     jmp     l_f1_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   6:     goto   1_while_cond
++ l_f1_0:
+-     call    dummyBOOLfunc           #   4:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   8:     call   t5 <- dummyBOOLfunc
+-     movl    $97, %eax               #   5:     assign v0 <- 97
++     movl    $97, %eax               #   9:     assign v0 <- 97
+-     addl    $9, %esp               
++     addl    $12, %esp              

@@ -1,0 +1,49 @@
+-     jmp     l_f1_13                 #  22:     goto   13
++     jmp     l_f1_14                 #  22:     goto   14
+-     jmp     l_f1_13                 #  23:     goto   13
++     jmp     l_f1_14                 #  23:     goto   14
+-     jmp     l_f1_13                 #  24:     goto   13
++     jmp     l_f1_14                 #  24:     goto   14
+- l_f1_13:
++ l_f1_14:
+-     jmp     l_f1_15                 #  27:     goto   15
++     jmp     l_f1_16                 #  27:     goto   16
+- l_f1_15:
++ l_f1_16:
+-     movzbl  -13(%ebp), %eax         #   2:     if     t2 = 1 goto 10
++     movzbl  -13(%ebp), %eax         #   2:     if     t2 = 1 goto 11
+-     je      l_f2_10                
++     je      l_f2_11                
+-     jmp     l_f2_4                  #   3:     goto   4
++     jmp     l_f2_5                  #   3:     goto   5
+- l_f2_10:
++ l_f2_11:
++     jmp     l_f2_5                  #   5:     goto   5
+-     movl    $1, %eax                #   5:     assign t3 <- 1
++     movl    $1, %eax                #   6:     assign t3 <- 1
+-     jmp     l_f2_5                  #   6:     goto   5
++     jmp     l_f2_6                  #   7:     goto   6
+- l_f2_4:
++ l_f2_5:
+-     movl    $0, %eax                #   8:     assign t3 <- 0
++     movl    $0, %eax                #   9:     assign t3 <- 0
+- l_f2_5:
++ l_f2_6:
+-     movl    $1, %eax                #  10:     if     1 # t3 goto 2_while_body
++     movl    $1, %eax                #  11:     if     1 # t3 goto 2_while_body
+-     jmp     l_f2_0                  #  11:     goto   0
++     jmp     l_f2_0                  #  12:     goto   0
+-     jmp     l_f2_1_while_cond       #  13:     goto   1_while_cond
++     jmp     l_f2_1_while_cond       #  14:     goto   1_while_cond
+-     movl    $24227, %eax            #  15:     sub    t4 <- 24227, 68241
++     movl    $24227, %eax            #  16:     sub    t4 <- 24227, 68241
+-     movl    $81847, %eax            #  16:     mul    t5 <- 81847, 34702
++     movl    $81847, %eax            #  17:     mul    t5 <- 81847, 34702
+-     movl    -24(%ebp), %eax         #  17:     div    t6 <- t5, 38103
++     movl    -24(%ebp), %eax         #  18:     div    t6 <- t5, 38103
+-     movl    -20(%ebp), %eax         #  18:     add    t7 <- t4, t6
++     movl    -20(%ebp), %eax         #  19:     add    t7 <- t4, t6
+-     movl    -32(%ebp), %eax         #  19:     return t7
++     movl    -32(%ebp), %eax         #  20:     return t7
+-     call    WriteLn                 #  20:     call   WriteLn
++     call    WriteLn                 #  21:     call   WriteLn

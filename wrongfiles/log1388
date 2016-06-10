@@ -1,0 +1,9 @@
++     jmp     l_f0_15                 #  20:     goto   15
++     jmp     l_f0_15                 #  21:     goto   15
+-     movl    $100, %eax              #  20:     assign v2 <- 100
++     movl    $100, %eax              #  22:     assign v2 <- 100
+-     call    dummyBOOLfunc           #  21:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  23:     call   t3 <- dummyBOOLfunc
+-     jmp     l_f0_16_while_cond      #  22:     goto   16_while_cond
++     jmp     l_f0_16_while_cond      #  24:     goto   16_while_cond
++ l_f0_15:

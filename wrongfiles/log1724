@@ -1,0 +1,63 @@
+-     #-268137656(%ebp)268137624  [ $v1       <array 53 of <array 10 of <array 80 of <array 93 of <array 68 of <char>>>>>> %ebp-268137656 ]
++     #   -268137656(%ebp)  268137624  [ $v1       <array 53 of <array 10 of <array 80 of <array 93 of <array 68 of <char>>>>>> %ebp-268137656 ]
++     jmp     l_f2_11                 #  13:     goto   11
++     jmp     l_f2_11                 #  14:     goto   11
+-     movl    $1, %eax                #  13:     assign t2 <- 1
++     movl    $1, %eax                #  15:     assign t2 <- 1
+-     jmp     l_f2_12                 #  14:     goto   12
++     jmp     l_f2_12                 #  16:     goto   12
++ l_f2_11:
+-     movl    $0, %eax                #  15:     assign t2 <- 0
++     movl    $0, %eax                #  18:     assign t2 <- 0
+-     movzbl  -14(%ebp), %eax         #  17:     return t2
++     movzbl  -14(%ebp), %eax         #  20:     return t2
+-     movl    $83547, %eax            #  18:     param  3 <- 83547
++     movl    $83547, %eax            #  21:     param  3 <- 83547
+-     leal    -268137656(%ebp), %eax  #  19:     &()    t3 <- v1
++     leal    -268137656(%ebp), %eax  #  22:     &()    t3 <- v1
+-     movl    -20(%ebp), %eax         #  20:     param  2 <- t3
++     movl    -20(%ebp), %eax         #  23:     param  2 <- t3
+-     movl    $70816, %eax            #  21:     param  3 <- 70816
++     movl    $70816, %eax            #  24:     param  3 <- 70816
+-     leal    -268137656(%ebp), %eax  #  22:     &()    t4 <- v1
++     leal    -268137656(%ebp), %eax  #  25:     &()    t4 <- v1
+-     movl    -24(%ebp), %eax         #  23:     param  2 <- t4
++     movl    -24(%ebp), %eax         #  26:     param  2 <- t4
+-     movl    $99, %eax               #  24:     param  1 <- 99
++     movl    $99, %eax               #  27:     param  1 <- 99
+-     call    dummyCHARfunc           #  25:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #  28:     call   t5 <- dummyCHARfunc
+-     movl    $98, %eax               #  26:     if     98 < t5 goto 17
++     movl    $98, %eax               #  29:     if     98 < t5 goto 17
+-     jmp     l_f2_18                 #  27:     goto   18
++     jmp     l_f2_18                 #  30:     goto   18
+-     movl    $1, %eax                #  29:     assign t6 <- 1
++     movl    $1, %eax                #  32:     assign t6 <- 1
+-     jmp     l_f2_19                 #  30:     goto   19
++     jmp     l_f2_19                 #  33:     goto   19
+-     movl    $0, %eax                #  32:     assign t6 <- 0
++     movl    $0, %eax                #  35:     assign t6 <- 0
+-     movzbl  -26(%ebp), %eax         #  34:     param  0 <- t6
++     movzbl  -26(%ebp), %eax         #  37:     param  0 <- t6
+-     call    f0                      #  35:     call   t7 <- f0
++     call    f0                      #  38:     call   t7 <- f0
+-     addl    $10, %esp              
++     addl    $16, %esp              
+-     movzbl  -27(%ebp), %eax         #  36:     param  1 <- t7
++     movzbl  -27(%ebp), %eax         #  39:     param  1 <- t7
+-     movl    $1, %eax                #  37:     if     1 # 0 goto 21
++     movl    $1, %eax                #  40:     if     1 # 0 goto 21
+-     jmp     l_f2_22                 #  38:     goto   22
++     jmp     l_f2_22                 #  41:     goto   22
+-     movl    $1, %eax                #  40:     assign t8 <- 1
++     movl    $1, %eax                #  43:     assign t8 <- 1
+-     jmp     l_f2_23                 #  41:     goto   23
++     jmp     l_f2_23                 #  44:     goto   23
+-     movl    $0, %eax                #  43:     assign t8 <- 0
++     movl    $0, %eax                #  46:     assign t8 <- 0
+-     movzbl  -28(%ebp), %eax         #  45:     param  0 <- t8
++     movzbl  -28(%ebp), %eax         #  48:     param  0 <- t8
+-     call    f0                      #  46:     call   t9 <- f0
++     call    f0                      #  49:     call   t9 <- f0
+-     addl    $10, %esp              
++     addl    $16, %esp              

@@ -1,0 +1,20 @@
++     jmp     l_f2_9                  #   7:     goto   9
+-     jmp     l_f2_8_while_body       #   7:     goto   8_while_body
++     jmp     l_f2_8_while_body       #   8:     goto   8_while_body
++ l_f2_9:
+-     jmp     l_f2_7_while_cond       #   9:     goto   7_while_cond
++     jmp     l_f2_7_while_cond       #  11:     goto   7_while_cond
+-     addl    $13, %esp              
++     addl    $16, %esp              
++     jmp     l_test_9_if_false       #  21:     goto   9_if_false
+-     movl    $98467, %eax            #  21:     assign v3 <- 98467
++     movl    $98467, %eax            #  22:     assign v3 <- 98467
+-     jmp     l_test_12               #  23:     goto   12
++     jmp     l_test_12               #  24:     goto   12
+-     jmp     l_test_13_while_cond    #  24:     goto   13_while_cond
++     jmp     l_test_13_while_cond    #  25:     goto   13_while_cond
+-     call    dummyCHARfunc           #  26:     call   t9 <- dummyCHARfunc
++     call    dummyCHARfunc           #  27:     call   t9 <- dummyCHARfunc
+-     jmp     l_test_7                #  27:     goto   7
++     jmp     l_test_7                #  28:     goto   7
++ l_test_9_if_false:

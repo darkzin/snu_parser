@@ -1,0 +1,20 @@
++     jmp     l_f0_10_if_false        #  15:     goto   10_if_false
+-     jmp     l_f0_15_if_false        #  16:     goto   15_if_false
++     jmp     l_f0_15_if_false        #  17:     goto   15_if_false
+-     jmp     l_f0_13                 #  17:     goto   13
++     jmp     l_f0_13                 #  18:     goto   13
+-     call    WriteLn                 #  20:     call   WriteLn
++     call    WriteLn                 #  21:     call   WriteLn
+-     movl    $98, %eax               #  21:     assign v0 <- 98
++     movl    $98, %eax               #  22:     assign v0 <- 98
+-     movl    $97, %eax               #  22:     if     97 < 97 goto 19_if_true
++     movl    $97, %eax               #  23:     if     97 < 97 goto 19_if_true
+-     jmp     l_f0_20_if_false        #  23:     goto   20_if_false
++     jmp     l_f0_20_if_false        #  24:     goto   20_if_false
+-     jmp     l_f0_18                 #  25:     goto   18
++     jmp     l_f0_18                 #  26:     goto   18
+-     jmp     l_f0_8                  #  28:     goto   8
++     jmp     l_f0_8                  #  29:     goto   8
++ l_f0_10_if_false:
+-     call    dummyCHARfunc           #  30:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  32:     call   t4 <- dummyCHARfunc

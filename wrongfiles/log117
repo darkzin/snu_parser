@@ -1,0 +1,28 @@
+-     movl    $97, %eax               #   9:     if     97 > 99 goto 6
++     movl    $97, %eax               #   9:     if     97 > 99 goto 7
+-     jg      l_f1_6                 
++     jg      l_f1_7                 
+-     jmp     l_f1_7                  #  10:     goto   7
++     jmp     l_f1_8                  #  10:     goto   8
+- l_f1_6:
++ l_f1_7:
+-     jmp     l_f1_8                  #  13:     goto   8
++     jmp     l_f1_9                  #  13:     goto   9
+- l_f1_7:
++ l_f1_8:
+- l_f1_8:
++ l_f1_9:
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_9                #  13:     goto   9
++     jmp     l_test_9                #  14:     goto   9
++     jmp     l_test_9                #  15:     goto   9
++     jmp     l_test_9                #  16:     goto   9
++     jmp     l_test_9                #  17:     goto   9
+-     call    ReadInt                 #  13:     call   t2 <- ReadInt
++     call    ReadInt                 #  18:     call   t2 <- ReadInt
+-     movl    $49513, %eax            #  14:     assign v0 <- 49513
++     movl    $49513, %eax            #  19:     assign v0 <- 49513
+-     jmp     l_test_10_while_cond    #  15:     goto   10_while_cond
++     jmp     l_test_10_while_cond    #  20:     goto   10_while_cond
++ l_test_9:

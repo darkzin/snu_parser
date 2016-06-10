@@ -1,0 +1,63 @@
+-     #-113664076(%ebp)113664024  [ $v1       <array 96 of <array 64 of <array 25 of <array 74 of <array 10 of <bool>>>>>> %ebp-113664076 ]
++     #   -113664076(%ebp)  113664024  [ $v1       <array 96 of <array 64 of <array 25 of <array 74 of <array 10 of <bool>>>>>> %ebp-113664076 ]
+-     #-1343544804(%ebp)1229880728  [ $v2       <array 80 of <array 49 of <array 81 of <array 58 of <array 75 of <int>>>>>> %ebp-1343544804 ]
++     #   -1343544804(%ebp)  1229880728  [ $v2       <array 80 of <array 49 of <array 81 of <array 58 of <array 75 of <int>>>>>> %ebp-1343544804 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              
+-     addl    $13, %esp              
++     addl    $16, %esp              
+-     addl    $13, %esp              
++     addl    $16, %esp              
++     jmp     l_f1_1                  #  25:     goto   1
++     jmp     l_f1_1                  #  26:     goto   1
++     jmp     l_f1_1                  #  27:     goto   1
++     jmp     l_f1_1                  #  28:     goto   1
+-     call    dummyBOOLfunc           #  25:     call   t14 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  29:     call   t14 <- dummyBOOLfunc
+-     call    WriteLn                 #  26:     call   WriteLn
++     call    WriteLn                 #  30:     call   WriteLn
+-     jmp     l_f1_2_while_cond       #  27:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #  31:     goto   2_while_cond
++ l_f1_1:
+-     #-113664052(%ebp)113664024  [ $v1       <array 96 of <array 64 of <array 25 of <array 74 of <array 10 of <bool>>>>>> %ebp-113664052 ]
++     #   -113664052(%ebp)  113664024  [ $v1       <array 96 of <array 64 of <array 25 of <array 74 of <array 10 of <bool>>>>>> %ebp-113664052 ]
+-     #-1343544780(%ebp)1229880728  [ $v2       <array 80 of <array 49 of <array 81 of <array 58 of <array 75 of <int>>>>>> %ebp-1343544780 ]
++     #   -1343544780(%ebp)  1229880728  [ $v2       <array 80 of <array 49 of <array 81 of <array 58 of <array 75 of <int>>>>>> %ebp-1343544780 ]
+-     #-1343544781(%ebp)   1  [ $v3       <char> %ebp-1343544781 ]
++     #   -1343544781(%ebp)   1  [ $v3       <char> %ebp-1343544781 ]
++     jmp     l_f2_2                  #   2:     goto   2
+-     movl    $1, %eax                #   3:     assign t3 <- 1
++     movl    $1, %eax                #   4:     assign t3 <- 1
+-     jmp     l_f2_3                  #   4:     goto   3
++     jmp     l_f2_3                  #   5:     goto   3
++ l_f2_2:
+-     movl    $0, %eax                #   5:     assign t3 <- 0
++     movl    $0, %eax                #   7:     assign t3 <- 0
+-     movzbl  -13(%ebp), %eax         #   7:     return t3
++     movzbl  -13(%ebp), %eax         #   9:     return t3
+-     jmp     l_f2_8                  #   9:     goto   8
++     jmp     l_f2_8                  #  11:     goto   8
+-     movl    $0, %eax                #  10:     assign v0 <- 0
++     movl    $0, %eax                #  12:     assign v0 <- 0
+-     leal    -1343544780(%ebp), %eax #  11:     &()    t4 <- v2
++     leal    -1343544780(%ebp), %eax #  13:     &()    t4 <- v2
+-     movl    -20(%ebp), %eax         #  12:     param  3 <- t4
++     movl    -20(%ebp), %eax         #  14:     param  3 <- t4
+-     movl    $43694, %eax            #  13:     param  2 <- 43694
++     movl    $43694, %eax            #  15:     param  2 <- 43694
+-     leal    -113664052(%ebp), %eax  #  14:     &()    t5 <- v1
++     leal    -113664052(%ebp), %eax  #  16:     &()    t5 <- v1
+-     movl    -24(%ebp), %eax         #  15:     param  1 <- t5
++     movl    -24(%ebp), %eax         #  17:     param  1 <- t5
+-     movl    $99, %eax               #  16:     param  0 <- 99
++     movl    $99, %eax               #  18:     param  0 <- 99
+-     call    f0                      #  17:     call   t6 <- f0
++     call    f0                      #  19:     call   t6 <- f0
+-     addl    $13, %esp              
++     addl    $16, %esp              
+-     jmp     l_f2_9_while_cond       #  18:     goto   9_while_cond
++     jmp     l_f2_9_while_cond       #  20:     goto   9_while_cond
+-     call    dummyCHARfunc           #  20:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  22:     call   t7 <- dummyCHARfunc
+-     movzbl  -26(%ebp), %eax         #  21:     assign v3 <- t7
++     movzbl  -26(%ebp), %eax         #  23:     assign v3 <- t7

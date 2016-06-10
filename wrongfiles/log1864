@@ -1,0 +1,64 @@
++     jmp     l_f1_2_if_false         #   2:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   3:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   4:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   5:     goto   2_if_false
+-     jmp     l_f1_0                  #   3:     goto   0
++     jmp     l_f1_0                  #   7:     goto   0
++ l_f1_2_if_false:
+-     movl    $98, %eax               #   5:     if     98 # 99 goto 14_if_true
++     movl    $98, %eax               #  10:     if     98 # 99 goto 14_if_true
+-     jmp     l_f1_15_if_false        #   6:     goto   15_if_false
++     jmp     l_f1_15_if_false        #  11:     goto   15_if_false
+-     jmp     l_f1_13                 #   8:     goto   13
++     jmp     l_f1_13                 #  13:     goto   13
+-     call    dummyBOOLfunc           #  11:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  16:     call   t2 <- dummyBOOLfunc
+-     movl    $98, %eax               #  12:     return 98
++     movl    $98, %eax               #  17:     return 98
+-     jmp     l_f1_21_if_false        #  13:     goto   21_if_false
++     jmp     l_f1_21_if_false        #  18:     goto   21_if_false
+-     jmp     l_f1_19                 #  14:     goto   19
++     jmp     l_f1_19                 #  19:     goto   19
+-     movl    $46521, %eax            #  17:     if     46521 > 80375 goto 23_if_true
++     movl    $46521, %eax            #  22:     if     46521 > 80375 goto 23_if_true
+-     jmp     l_f1_24_if_false        #  18:     goto   24_if_false
++     jmp     l_f1_24_if_false        #  23:     goto   24_if_false
+-     jmp     l_f1_22                 #  20:     goto   22
++     jmp     l_f1_22                 #  25:     goto   22
+-     jmp     l_f1_10                 #  23:     goto   10
++     jmp     l_f1_10                 #  28:     goto   10
++     jmp     l_f1_28_if_false        #  30:     goto   28_if_false
++     jmp     l_f1_28_if_false        #  31:     goto   28_if_false
+-     movl    $40496, %eax            #  25:     assign v2 <- 40496
++     movl    $40496, %eax            #  32:     assign v2 <- 40496
+-     jmp     l_f1_26                 #  26:     goto   26
++     jmp     l_f1_26                 #  33:     goto   26
++ l_f1_28_if_false:
++     jmp     l_f2_9                  #  17:     goto   9
+-     movl    $99, %eax               #  19:     if     99 <= 98 goto 16_while_body
++     movl    $99, %eax               #  20:     if     99 <= 98 goto 16_while_body
+-     jmp     l_f2_14                 #  20:     goto   14
++     jmp     l_f2_14                 #  21:     goto   14
+-     jmp     l_f2_15_while_cond      #  22:     goto   15_while_cond
++     jmp     l_f2_15_while_cond      #  23:     goto   15_while_cond
+-     jmp     l_f2_10_while_cond      #  24:     goto   10_while_cond
++     jmp     l_f2_10_while_cond      #  25:     goto   10_while_cond
++ l_f2_9:
+-     movl    $98, %eax               #  25:     if     98 # 98 goto 19_if_true
++     movl    $98, %eax               #  27:     if     98 # 98 goto 19_if_true
+-     jmp     l_f2_20_if_false        #  26:     goto   20_if_false
++     jmp     l_f2_20_if_false        #  28:     goto   20_if_false
+-     movl    $63108, %eax            #  28:     if     63108 < 72242 goto 23
++     movl    $63108, %eax            #  30:     if     63108 < 72242 goto 23
+-     jmp     l_f2_24                 #  29:     goto   24
++     jmp     l_f2_24                 #  31:     goto   24
+-     movl    $1, %eax                #  31:     assign t3 <- 1
++     movl    $1, %eax                #  33:     assign t3 <- 1
+-     jmp     l_f2_25                 #  32:     goto   25
++     jmp     l_f2_25                 #  34:     goto   25
+-     movl    $0, %eax                #  34:     assign t3 <- 0
++     movl    $0, %eax                #  36:     assign t3 <- 0
+-     movzbl  -14(%ebp), %eax         #  36:     return t3
++     movzbl  -14(%ebp), %eax         #  38:     return t3
+-     jmp     l_f2_18                 #  37:     goto   18
++     jmp     l_f2_18                 #  39:     goto   18

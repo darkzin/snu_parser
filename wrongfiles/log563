@@ -1,0 +1,13 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f0_22                 #  56:     goto   22
++     jmp     l_f0_22                 #  57:     goto   22
+-     movl    $98, %eax               #  56:     if     98 # 100 goto 28_if_true
++     movl    $98, %eax               #  58:     if     98 # 100 goto 28_if_true
+-     jmp     l_f0_29_if_false        #  57:     goto   29_if_false
++     jmp     l_f0_29_if_false        #  59:     goto   29_if_false
+-     jmp     l_f0_27                 #  59:     goto   27
++     jmp     l_f0_27                 #  61:     goto   27
+-     jmp     l_f0_23_while_cond      #  62:     goto   23_while_cond
++     jmp     l_f0_23_while_cond      #  64:     goto   23_while_cond
++ l_f0_22:

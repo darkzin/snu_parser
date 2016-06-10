@@ -1,0 +1,27 @@
++     jmp     l_f1_2_if_false         #   0:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   1:     goto   2_if_false
+-     movl    $1, %eax                #   0:     return 1
++     movl    $1, %eax                #   2:     return 1
+-     call    dummyINTfunc            #   1:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #   3:     call   t5 <- dummyINTfunc
+-     jmp     l_f1_0                  #   2:     goto   0
++     jmp     l_f1_0                  #   4:     goto   0
++ l_f1_2_if_false:
+-     call    ReadInt                 #   4:     call   t6 <- ReadInt
++     call    ReadInt                 #   7:     call   t6 <- ReadInt
+-     movl    $97, %eax               #   5:     if     97 <= 99 goto 14_if_true
++     movl    $97, %eax               #   8:     if     97 <= 99 goto 14_if_true
+-     jmp     l_f1_15_if_false        #   6:     goto   15_if_false
++     jmp     l_f1_15_if_false        #   9:     goto   15_if_false
+-     jmp     l_f1_13                 #   8:     goto   13
++     jmp     l_f1_13                 #  11:     goto   13
+-     movl    $72932, %eax            #  11:     if     72932 >= 78580 goto 18_if_true
++     movl    $72932, %eax            #  14:     if     72932 >= 78580 goto 18_if_true
+-     jmp     l_f1_19_if_false        #  12:     goto   19_if_false
++     jmp     l_f1_19_if_false        #  15:     goto   19_if_false
+-     jmp     l_f1_17                 #  14:     goto   17
++     jmp     l_f1_17                 #  17:     goto   17
+-     jmp     l_f1_10                 #  17:     goto   10
++     jmp     l_f1_10                 #  20:     goto   10
+-     addl    $2, %esp               
++     addl    $8, %esp               

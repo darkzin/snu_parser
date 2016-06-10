@@ -1,0 +1,20 @@
+-     #-202849972(%ebp)202849944  [ $v1       <array 40 of <array 21 of <array 86 of <array 9 of <array 78 of <int>>>>>> %ebp-202849972 ]
++     #   -202849972(%ebp)  202849944  [ $v1       <array 40 of <array 21 of <array 86 of <array 9 of <array 78 of <int>>>>>> %ebp-202849972 ]
++     jmp     l_test_5                #  12:     goto   5
+-     jmp     l_test_6_while_cond     #  13:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #  14:     goto   6_while_cond
++ l_test_5:
+-     movl    $1, %eax                #  14:     assign t1 <- 1
++     movl    $1, %eax                #  16:     assign t1 <- 1
+-     jmp     l_test_19               #  15:     goto   19
++     jmp     l_test_20               #  17:     goto   20
+-     movl    $0, %eax                #  16:     assign t1 <- 0
++     movl    $0, %eax                #  18:     assign t1 <- 0
+- l_test_19:
++ l_test_20:
+-     movzbl  -14(%ebp), %eax         #  18:     if     t1 = 0 goto 15_if_true
++     movzbl  -14(%ebp), %eax         #  20:     if     t1 = 0 goto 15_if_true
+-     jmp     l_test_16_if_false      #  19:     goto   16_if_false
++     jmp     l_test_16_if_false      #  21:     goto   16_if_false
+-     jmp     l_test_14               #  21:     goto   14
++     jmp     l_test_14               #  23:     goto   14

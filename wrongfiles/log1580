@@ -1,0 +1,60 @@
++     jmp     l_f0_21                 #  22:     goto   21
+-     movl    $1, %eax                #  23:     assign t4 <- 1
++     movl    $1, %eax                #  24:     assign t4 <- 1
+-     jmp     l_f0_22                 #  24:     goto   22
++     jmp     l_f0_22                 #  25:     goto   22
++ l_f0_21:
+-     movl    $0, %eax                #  25:     assign t4 <- 0
++     movl    $0, %eax                #  27:     assign t4 <- 0
+-     movzbl  -14(%ebp), %eax         #  27:     assign v0 <- t4
++     movzbl  -14(%ebp), %eax         #  29:     assign v0 <- t4
++     jmp     l_f1_0                  #   1:     goto   0
+-     call    dummyBOOLfunc           #   1:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   2:     call   t3 <- dummyBOOLfunc
+-     jmp     l_f1_1_while_cond       #   2:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   3:     goto   1_while_cond
++ l_f1_0:
+-     movl    $59641, %eax            #   3:     div    t4 <- 59641, 53054
++     movl    $59641, %eax            #   5:     div    t4 <- 59641, 53054
+-     movl    -20(%ebp), %eax         #   4:     assign v1 <- t4
++     movl    -20(%ebp), %eax         #   6:     assign v1 <- t4
+-     movl    $13897, %eax            #   6:     if     13897 > 26690 goto 12_while_body
++     movl    $13897, %eax            #   8:     if     13897 > 26690 goto 12_while_body
+-     jmp     l_f1_10                 #   7:     goto   10
++     jmp     l_f1_10                 #   9:     goto   10
+-     jmp     l_f1_11_while_cond      #   9:     goto   11_while_cond
++     jmp     l_f1_11_while_cond      #  11:     goto   11_while_cond
+-     jmp     l_f1_7                  #  11:     goto   7
++     jmp     l_f1_7                  #  13:     goto   7
+-     #-15075772(%ebp)15075744  [ $v3       <array 11 of <array 12 of <array 27 of <array 90 of <array 47 of <char>>>>>> %ebp-15075772 ]
++     #   -15075772(%ebp)  15075744  [ $v3       <array 11 of <array 12 of <array 27 of <array 90 of <array 47 of <char>>>>>> %ebp-15075772 ]
+-     movl    $97, %eax               #  32:     if     97 > 100 goto 26
++     movl    $97, %eax               #  32:     if     97 > 100 goto 27
+-     jg      l_test_26              
++     jg      l_test_27              
+-     jmp     l_test_27               #  33:     goto   27
++     jmp     l_test_28               #  33:     goto   28
+- l_test_26:
++ l_test_27:
+-     jmp     l_test_28               #  36:     goto   28
++     jmp     l_test_29               #  36:     goto   29
+- l_test_27:
++ l_test_28:
+- l_test_28:
++ l_test_29:
+-     movl    $94812, %eax            #  42:     if     94812 < 43445 goto 30
++     movl    $94812, %eax            #  42:     if     94812 < 43445 goto 31
+-     jl      l_test_30              
++     jl      l_test_31              
+-     jmp     l_test_31               #  43:     goto   31
++     jmp     l_test_32               #  43:     goto   32
+- l_test_30:
++ l_test_31:
+-     jmp     l_test_32               #  46:     goto   32
++     jmp     l_test_33               #  46:     goto   33
+- l_test_31:
++ l_test_32:
+- l_test_32:
++ l_test_33:
+-     addl    $3, %esp               
++     addl    $12, %esp              

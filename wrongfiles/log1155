@@ -1,0 +1,30 @@
++     jmp     l_f1_2_if_false         #   0:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   1:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   2:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   3:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   4:     goto   2_if_false
+-     jmp     l_f1_10_if_false        #   0:     goto   10_if_false
++     jmp     l_f1_10_if_false        #   5:     goto   10_if_false
+-     jmp     l_f1_8                  #   1:     goto   8
++     jmp     l_f1_8                  #   6:     goto   8
+-     jmp     l_f1_0                  #   4:     goto   0
++     jmp     l_f1_0                  #   9:     goto   0
++ l_f1_2_if_false:
+-     movl    $98, %eax               #   6:     param  1 <- 98
++     movl    $98, %eax               #  12:     param  1 <- 98
+-     movl    $100, %eax              #   7:     param  0 <- 100
++     movl    $100, %eax              #  13:     param  0 <- 100
+-     call    f0                      #   8:     call   t2 <- f0
++     call    f0                      #  14:     call   t2 <- f0
+-     addl    $2, %esp               
++     addl    $8, %esp               
+-     movl    -16(%ebp), %eax         #   9:     return t2
++     movl    -16(%ebp), %eax         #  15:     return t2
+-     jmp     l_f1_14_if_false        #  10:     goto   14_if_false
++     jmp     l_f1_14_if_false        #  16:     goto   14_if_false
+-     call    dummyProcedure          #  11:     call   dummyProcedure
++     call    dummyProcedure          #  17:     call   dummyProcedure
+-     movl    $36914, %eax            #  12:     return 36914
++     movl    $36914, %eax            #  18:     return 36914
+-     jmp     l_f1_12                 #  13:     goto   12
++     jmp     l_f1_12                 #  19:     goto   12

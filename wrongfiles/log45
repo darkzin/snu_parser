@@ -1,0 +1,6 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_34_if_false      #  46:     goto   34_if_false
+-     jmp     l_test_32               #  47:     goto   32
++     jmp     l_test_32               #  48:     goto   32
++ l_test_34_if_false:

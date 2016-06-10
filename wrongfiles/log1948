@@ -1,0 +1,12 @@
++     jmp     l_f2_3                  #   1:     goto   3
+-     movl    $1, %eax                #   1:     assign t3 <- 1
++     movl    $1, %eax                #   2:     assign t3 <- 1
+-     jmp     l_f2_4                  #   2:     goto   4
++     jmp     l_f2_4                  #   3:     goto   4
++ l_f2_3:
+-     movl    $0, %eax                #   3:     assign t3 <- 0
++     movl    $0, %eax                #   5:     assign t3 <- 0
+-     movzbl  -13(%ebp), %eax         #   5:     assign v2 <- t3
++     movzbl  -13(%ebp), %eax         #   7:     assign v2 <- t3
+-     call    dummyINTfunc            #   6:     call   t4 <- dummyINTfunc
++     call    dummyINTfunc            #   8:     call   t4 <- dummyINTfunc

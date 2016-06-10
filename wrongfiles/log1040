@@ -1,0 +1,20 @@
++     jmp     l_f1_1                  #   2:     goto   1
++     jmp     l_f1_1                  #   3:     goto   1
++     jmp     l_f1_1                  #   4:     goto   1
+-     jmp     l_f1_2_while_cond       #   2:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #   5:     goto   2_while_cond
++ l_f1_1:
+-     movl    $50379, %eax            #   3:     add    t3 <- 50379, 96840
++     movl    $50379, %eax            #   7:     add    t3 <- 50379, 96840
+-     movl    -16(%ebp), %eax         #   4:     if     t3 < 30866 goto 9
++     movl    -16(%ebp), %eax         #   8:     if     t3 < 30866 goto 9
+-     jmp     l_f1_10                 #   5:     goto   10
++     jmp     l_f1_10                 #   9:     goto   10
+-     movl    $1, %eax                #   7:     assign t4 <- 1
++     movl    $1, %eax                #  11:     assign t4 <- 1
+-     jmp     l_f1_11                 #   8:     goto   11
++     jmp     l_f1_11                 #  12:     goto   11
+-     movl    $0, %eax                #  10:     assign t4 <- 0
++     movl    $0, %eax                #  14:     assign t4 <- 0
+-     movzbl  -17(%ebp), %eax         #  12:     assign v3 <- t4
++     movzbl  -17(%ebp), %eax         #  16:     assign v3 <- t4

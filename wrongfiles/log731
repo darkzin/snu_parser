@@ -1,0 +1,25 @@
++     jmp     l_f1_7                  #  11:     goto   7
++     jmp     l_f1_7                  #  12:     goto   7
++     jmp     l_f1_7                  #  13:     goto   7
+-     call    dummyBOOLfunc           #  11:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  14:     call   t4 <- dummyBOOLfunc
+-     movzbl  -22(%ebp), %eax         #  12:     if     t4 = 1 goto 6
++     movzbl  -22(%ebp), %eax         #  15:     if     t4 = 1 goto 6
+-     jmp     l_f1_7                  #  13:     goto   7
++     jmp     l_f1_7                  #  16:     goto   7
+-     movl    $1, %eax                #  15:     assign t5 <- 1
++     movl    $1, %eax                #  18:     assign t5 <- 1
+-     jmp     l_f1_8                  #  16:     goto   8
++     jmp     l_f1_8                  #  19:     goto   8
+-     movl    $0, %eax                #  18:     assign t5 <- 0
++     movl    $0, %eax                #  21:     assign t5 <- 0
+-     movzbl  -23(%ebp), %eax         #  20:     return t5
++     movzbl  -23(%ebp), %eax         #  23:     return t5
+-     call    ReadInt                 #  21:     call   t6 <- ReadInt
++     call    ReadInt                 #  24:     call   t6 <- ReadInt
+-     movl    -28(%ebp), %eax         #  22:     add    t7 <- t6, 55875
++     movl    -28(%ebp), %eax         #  25:     add    t7 <- t6, 55875
+-     movl    -32(%ebp), %eax         #  23:     sub    t8 <- t7, 30864
++     movl    -32(%ebp), %eax         #  26:     sub    t8 <- t7, 30864
+-     movl    -36(%ebp), %eax         #  24:     assign v2 <- t8
++     movl    -36(%ebp), %eax         #  27:     assign v2 <- t8

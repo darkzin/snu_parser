@@ -1,0 +1,22 @@
+-     jmp     l_f0_5                  #   2:     goto   5
++     jmp     l_f0_6                  #   2:     goto   6
+- l_f0_5:
++ l_f0_6:
+-     #-4293940(%ebp)4293834  [ $v6       <array 5 of <array 57 of <array 81 of <array 31 of <array 6 of <bool>>>>>> %ebp-4293940 ]
++     #   -4293940(%ebp)  4293834  [ $v6       <array 5 of <array 57 of <array 81 of <array 31 of <array 6 of <bool>>>>>> %ebp-4293940 ]
++     jmp     l_test_2                #   0:     goto   2
++     jmp     l_test_2                #   1:     goto   2
++     jmp     l_test_2                #   2:     goto   2
+-     movl    $1, %eax                #   0:     assign t0 <- 1
++     movl    $1, %eax                #   3:     assign t0 <- 1
+-     jmp     l_test_3                #   1:     goto   3
++     jmp     l_test_3                #   4:     goto   3
++ l_test_2:
+-     movl    $0, %eax                #   2:     assign t0 <- 0
++     movl    $0, %eax                #   6:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v0 <- t0
++     movzbl  -13(%ebp), %eax         #   8:     assign v0 <- t0
+-     movl    $91700, %eax            #   5:     assign v1 <- 91700
++     movl    $91700, %eax            #   9:     assign v1 <- 91700
+-     call    dummyCHARfunc           #   7:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  11:     call   t1 <- dummyCHARfunc

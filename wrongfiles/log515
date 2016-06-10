@@ -1,0 +1,58 @@
++     jmp     l_f1_8                  #   8:     goto   8
+-     movl    $1, %eax                #   8:     assign t14 <- 1
++     movl    $1, %eax                #   9:     assign t14 <- 1
+-     jmp     l_f1_9                  #   9:     goto   9
++     jmp     l_f1_9                  #  10:     goto   9
++ l_f1_8:
+-     movl    $0, %eax                #  10:     assign t14 <- 0
++     movl    $0, %eax                #  12:     assign t14 <- 0
+-     movzbl  -14(%ebp), %eax         #  12:     return t14
++     movzbl  -14(%ebp), %eax         #  14:     return t14
++     jmp     l_f1_13                 #  15:     goto   13
+-     movl    $1, %eax                #  13:     assign t15 <- 1
++     movl    $1, %eax                #  16:     assign t15 <- 1
+-     jmp     l_f1_14                 #  14:     goto   14
++     jmp     l_f1_14                 #  17:     goto   14
++ l_f1_13:
+-     movl    $0, %eax                #  15:     assign t15 <- 0
++     movl    $0, %eax                #  19:     assign t15 <- 0
+-     movzbl  -15(%ebp), %eax         #  17:     return t15
++     movzbl  -15(%ebp), %eax         #  21:     return t15
+-     movl    $97, %eax               #  13:     if     97 >= 97 goto 12
++     movl    $97, %eax               #  13:     if     97 >= 97 goto 13
+-     jge     l_f2_12                
++     jge     l_f2_13                
+-     jmp     l_f2_13                 #  14:     goto   13
++     jmp     l_f2_14                 #  14:     goto   14
+- l_f2_12:
++ l_f2_13:
+-     jmp     l_f2_14                 #  17:     goto   14
++     jmp     l_f2_15                 #  17:     goto   15
+- l_f2_13:
++ l_f2_14:
+- l_f2_14:
++ l_f2_15:
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movl    $99, %eax               #  44:     if     99 # 99 goto 30
++     movl    $99, %eax               #  44:     if     99 # 99 goto 31
+-     jne     l_test_30              
++     jne     l_test_31              
+-     jmp     l_test_31               #  45:     goto   31
++     jmp     l_test_32               #  45:     goto   32
+- l_test_30:
++ l_test_31:
+-     jmp     l_test_32               #  48:     goto   32
++     jmp     l_test_33               #  48:     goto   33
+- l_test_31:
++ l_test_32:
+- l_test_32:
++ l_test_33:
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $9, %esp               
++     addl    $12, %esp              

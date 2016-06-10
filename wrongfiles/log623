@@ -1,0 +1,20 @@
++     jmp     l_f2_1                  #   3:     goto   1
+-     call    dummyBOOLfunc           #   4:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   5:     call   t4 <- dummyBOOLfunc
+-     jmp     l_f2_2_while_cond       #   5:     goto   2_while_cond
++     jmp     l_f2_2_while_cond       #   6:     goto   2_while_cond
++ l_f2_1:
+-     call    dummyINTfunc            #   7:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #   9:     call   t5 <- dummyINTfunc
+-     movl    -20(%ebp), %eax         #   8:     if     t5 # 51091 goto 8_while_body
++     movl    -20(%ebp), %eax         #  10:     if     t5 # 51091 goto 8_while_body
+-     jmp     l_f2_6                  #   9:     goto   6
++     jmp     l_f2_6                  #  11:     goto   6
+-     jmp     l_f2_10                 #  12:     goto   10
++     jmp     l_f2_10                 #  14:     goto   10
+-     jmp     l_f2_11_while_cond      #  13:     goto   11_while_cond
++     jmp     l_f2_11_while_cond      #  15:     goto   11_while_cond
+-     jmp     l_f2_7_while_cond       #  15:     goto   7_while_cond
++     jmp     l_f2_7_while_cond       #  17:     goto   7_while_cond
+-     addl    $1, %esp               
++     addl    $4, %esp               

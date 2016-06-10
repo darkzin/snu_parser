@@ -1,0 +1,41 @@
++     jmp     l_f0_3_if_false         #   1:     goto   3_if_false
++     jmp     l_f0_3_if_false         #   2:     goto   3_if_false
+-     call    dummyCHARfunc           #   2:     call   t8 <- dummyCHARfunc
++     call    dummyCHARfunc           #   4:     call   t8 <- dummyCHARfunc
+-     jmp     l_f0_10_if_false        #   4:     goto   10_if_false
++     jmp     l_f0_10_if_false        #   6:     goto   10_if_false
+-     jmp     l_f0_8                  #   5:     goto   8
++     jmp     l_f0_8                  #   7:     goto   8
+-     jmp     l_f0_13_if_false        #   8:     goto   13_if_false
++     jmp     l_f0_13_if_false        #  10:     goto   13_if_false
+-     jmp     l_f0_11                 #   9:     goto   11
++     jmp     l_f0_11                 #  11:     goto   11
+-     jmp     l_f0_1                  #  12:     goto   1
++     jmp     l_f0_1                  #  14:     goto   1
++ l_f0_3_if_false:
+-     call    ReadInt                 #  14:     call   t9 <- ReadInt
++     call    ReadInt                 #  17:     call   t9 <- ReadInt
+-     jmp     l_f2_27                 #  36:     goto   27
++     jmp     l_f2_28                 #  36:     goto   28
+-     jmp     l_f2_27                 #  37:     goto   27
++     jmp     l_f2_28                 #  37:     goto   28
+- l_f2_27:
++ l_f2_28:
+-     jmp     l_f2_29                 #  40:     goto   29
++     jmp     l_f2_30                 #  40:     goto   30
+- l_f2_29:
++ l_f2_30:
+-     movl    $30438, %eax            #  43:     if     30438 < 46733 goto 33
++     movl    $30438, %eax            #  43:     if     30438 < 46733 goto 34
+-     jl      l_f2_33                
++     jl      l_f2_34                
+-     jmp     l_f2_34                 #  44:     goto   34
++     jmp     l_f2_35                 #  44:     goto   35
+- l_f2_33:
++ l_f2_34:
+-     jmp     l_f2_35                 #  47:     goto   35
++     jmp     l_f2_36                 #  47:     goto   36
+- l_f2_34:
++ l_f2_35:
+- l_f2_35:
++ l_f2_36:

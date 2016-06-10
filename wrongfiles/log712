@@ -1,0 +1,58 @@
+-     #  -9352(%ebp)9240  [ $v6       <array 9 of <array 1 of <array 8 of <array 4 of <array 8 of <int>>>>>> %ebp-9352 ]
++     #   -9352(%ebp)  9240  [ $v6       <array 9 of <array 1 of <array 8 of <array 4 of <array 8 of <int>>>>>> %ebp-9352 ]
+-     #  -9456(%ebp) 104  [ $v7       <array 1 of <array 1 of <array 10 of <array 2 of <array 1 of <int>>>>>> %ebp-9456 ]
++     #   -9456(%ebp)  104  [ $v7       <array 1 of <array 1 of <array 10 of <array 2 of <array 1 of <int>>>>>> %ebp-9456 ]
+-     # -10600(%ebp)1144  [ $v8       <array 8 of <array 4 of <array 5 of <array 7 of <array 1 of <char>>>>>> %ebp-10600 ]
++     #   -10600(%ebp)  1144  [ $v8       <array 8 of <array 4 of <array 5 of <array 7 of <array 1 of <char>>>>>> %ebp-10600 ]
+-     # -10604(%ebp)   4  [ $v9       <int> %ebp-10604 ]
++     #   -10604(%ebp)   4  [ $v9       <int> %ebp-10604 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              
+-     addl    $13, %esp              
++     addl    $16, %esp              
++     jmp     l_test_2_if_false       #   1:     goto   2_if_false
+-     movl    $33859, %eax            #   3:     if     33859 < 76999 goto 6_while_body
++     movl    $33859, %eax            #   4:     if     33859 < 76999 goto 6_while_body
+-     jmp     l_test_4                #   4:     goto   4
++     jmp     l_test_4                #   5:     goto   4
+-     jmp     l_test_5_while_cond     #   6:     goto   5_while_cond
++     jmp     l_test_5_while_cond     #   7:     goto   5_while_cond
+-     movl    $99, %eax               #   8:     param  0 <- 99
++     movl    $99, %eax               #   9:     param  0 <- 99
+-     call    WriteChar               #   9:     call   WriteChar
++     call    WriteChar               #  10:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     call    ReadInt                 #  10:     call   t0 <- ReadInt
++     call    ReadInt                 #  11:     call   t0 <- ReadInt
+-     movl    $27947, %eax            #  11:     if     27947 # 48349 goto 11
++     movl    $27947, %eax            #  12:     if     27947 # 48349 goto 11
+-     jmp     l_test_12               #  12:     goto   12
++     jmp     l_test_12               #  13:     goto   12
+-     movl    $1, %eax                #  14:     assign t1 <- 1
++     movl    $1, %eax                #  15:     assign t1 <- 1
+-     jmp     l_test_13               #  15:     goto   13
++     jmp     l_test_13               #  16:     goto   13
+-     movl    $0, %eax                #  17:     assign t1 <- 0
++     movl    $0, %eax                #  18:     assign t1 <- 0
+-     movzbl  -17(%ebp), %eax         #  19:     assign v0 <- t1
++     movzbl  -17(%ebp), %eax         #  20:     assign v0 <- t1
+-     jmp     l_test_0                #  20:     goto   0
++     jmp     l_test_0                #  21:     goto   0
++ l_test_2_if_false:
+-     movl    $99, %eax               #  23:     if     99 > 98 goto 17_while_body
++     movl    $99, %eax               #  25:     if     99 > 98 goto 17_while_body
+-     jmp     l_test_15               #  24:     goto   15
++     jmp     l_test_15               #  26:     goto   15
+-     call    dummyBOOLfunc           #  27:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  29:     call   t2 <- dummyBOOLfunc
+-     movzbl  -18(%ebp), %eax         #  28:     if     t2 = 1 goto 21_while_body
++     movzbl  -18(%ebp), %eax         #  30:     if     t2 = 1 goto 21_while_body
+-     jmp     l_test_19               #  29:     goto   19
++     jmp     l_test_19               #  31:     goto   19
+-     jmp     l_test_20_while_cond    #  31:     goto   20_while_cond
++     jmp     l_test_20_while_cond    #  33:     goto   20_while_cond
+-     jmp     l_test_16_while_cond    #  33:     goto   16_while_cond
++     jmp     l_test_16_while_cond    #  35:     goto   16_while_cond
+-     movl    $100, %eax              #  35:     assign v1 <- 100
++     movl    $100, %eax              #  37:     assign v1 <- 100

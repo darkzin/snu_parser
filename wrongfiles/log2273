@@ -1,0 +1,32 @@
++     jmp     l_f1_3                  #   1:     goto   3
+-     jmp     l_f1_2_while_body       #   1:     goto   2_while_body
++     jmp     l_f1_2_while_body       #   2:     goto   2_while_body
++ l_f1_3:
+-     jmp     l_f1_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   5:     goto   1_while_cond
+-     jmp     l_f1_6                  #   5:     goto   6
++     jmp     l_f1_6                  #   7:     goto   6
+-     movl    $100, %eax              #   6:     param  2 <- 100
++     movl    $100, %eax              #   8:     param  2 <- 100
+-     movl    $43888, %eax            #   7:     param  1 <- 43888
++     movl    $43888, %eax            #   9:     param  1 <- 43888
+-     movl    $0, %eax                #   8:     param  0 <- 0
++     movl    $0, %eax                #  10:     param  0 <- 0
+-     call    f0                      #   9:     call   t4 <- f0
++     call    f0                      #  11:     call   t4 <- f0
+-     addl    $6, %esp               
++     addl    $12, %esp              
+-     movl    $99, %eax               #  11:     if     99 <= 99 goto 12_while_body
++     movl    $99, %eax               #  13:     if     99 <= 99 goto 12_while_body
+-     jmp     l_f1_10                 #  12:     goto   10
++     jmp     l_f1_10                 #  14:     goto   10
+-     jmp     l_f1_11_while_cond      #  14:     goto   11_while_cond
++     jmp     l_f1_11_while_cond      #  16:     goto   11_while_cond
+-     jmp     l_f1_7_while_cond       #  16:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #  18:     goto   7_while_cond
+-     call    WriteLn                 #  18:     call   WriteLn
++     call    WriteLn                 #  20:     call   WriteLn
+-     jmp     l_f1_14                 #  19:     goto   14
++     jmp     l_f1_14                 #  21:     goto   14
+-     addl    $6, %esp               
++     addl    $12, %esp              

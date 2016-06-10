@@ -1,0 +1,47 @@
++     jmp     l_f1_3                  #   1:     goto   3
++     jmp     l_f1_3                  #   2:     goto   3
+-     jmp     l_f1_4_while_cond       #   1:     goto   4_while_cond
++     jmp     l_f1_4_while_cond       #   3:     goto   4_while_cond
++ l_f1_3:
+-     jmp     l_f1_0                  #   2:     goto   0
++     jmp     l_f1_0                  #   5:     goto   0
+-     call    dummyINTfunc            #   4:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #   7:     call   t6 <- dummyINTfunc
+-     call    dummyCHARfunc           #   5:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t7 <- dummyCHARfunc
+-     movzbl  -17(%ebp), %eax         #   6:     assign v1 <- t7
++     movzbl  -17(%ebp), %eax         #   9:     assign v1 <- t7
++     jmp     l_test_10               #  13:     goto   10
+-     jmp     l_test_11_while_cond    #  13:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  14:     goto   11_while_cond
++ l_test_10:
+-     jmp     l_test_1                #  14:     goto   1
++     jmp     l_test_1                #  16:     goto   1
+-     jmp     l_test_17_if_false      #  17:     goto   17_if_false
++     jmp     l_test_17_if_false      #  19:     goto   17_if_false
+-     movl    $99, %eax               #  19:     assign v1 <- 99
++     movl    $99, %eax               #  21:     assign v1 <- 99
+-     jmp     l_test_15               #  20:     goto   15
++     jmp     l_test_15               #  22:     goto   15
+-     jmp     l_test_22_while_body    #  24:     goto   22_while_body
++     jmp     l_test_22_while_body    #  26:     goto   22_while_body
+-     call    f0                      #  26:     call   t1 <- f0
++     call    f0                      #  28:     call   t1 <- f0
+-     call    dummyCHARfunc           #  27:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  29:     call   t2 <- dummyCHARfunc
+-     movl    $99, %eax               #  28:     param  0 <- 99
++     movl    $99, %eax               #  30:     param  0 <- 99
+-     call    f1                      #  29:     call   t3 <- f1
++     call    f1                      #  31:     call   t3 <- f1
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movzbl  -22(%ebp), %eax         #  30:     param  0 <- t3
++     movzbl  -22(%ebp), %eax         #  32:     param  0 <- t3
+-     call    f1                      #  31:     call   t4 <- f1
++     call    f1                      #  33:     call   t4 <- f1
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_test_21_while_cond    #  32:     goto   21_while_cond
++     jmp     l_test_21_while_cond    #  34:     goto   21_while_cond
+-     call    dummyBOOLfunc           #  33:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  35:     call   t5 <- dummyBOOLfunc

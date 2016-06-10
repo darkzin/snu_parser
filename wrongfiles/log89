@@ -1,0 +1,29 @@
+-     jmp     l_test_2_while_body     #   1:     goto   2_while_body
++     jmp     l_test_5                #   1:     goto   5
++ l_test_5:
++     jmp     l_test_2_while_body     #   4:     goto   2_while_body
+-     jmp     l_test_1_while_cond     #   4:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   6:     goto   1_while_cond
++     jmp     l_test_14               #   8:     goto   14
++     jmp     l_test_14               #   9:     goto   14
++ l_test_14:
+-     jmp     l_test_10_while_body    #   6:     goto   10_while_body
++     jmp     l_test_10_while_body    #  11:     goto   10_while_body
+-     jmp     l_test_10_while_body    #   7:     goto   10_while_body
++     jmp     l_test_10_while_body    #  12:     goto   10_while_body
++     jmp     l_test_8                #  13:     goto   8
+-     jmp     l_test_9_while_cond     #   9:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #  15:     goto   9_while_cond
++ l_test_8:
+-     movl    $98, %eax               #  10:     if     98 < 97 goto 23_if_true
++     movl    $98, %eax               #  17:     if     98 < 97 goto 23_if_true
+-     jmp     l_test_24_if_false      #  11:     goto   24_if_false
++     jmp     l_test_24_if_false      #  18:     goto   24_if_false
+-     jmp     l_test_28_if_false      #  13:     goto   28_if_false
++     jmp     l_test_28_if_false      #  20:     goto   28_if_false
+-     jmp     l_test_26               #  14:     goto   26
++     jmp     l_test_26               #  21:     goto   26
+-     jmp     l_test_29               #  17:     goto   29
++     jmp     l_test_29               #  24:     goto   29
+-     jmp     l_test_22               #  19:     goto   22
++     jmp     l_test_22               #  26:     goto   22

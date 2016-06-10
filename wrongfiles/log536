@@ -1,0 +1,35 @@
++     jmp     l_f1_4                  #   0:     goto   4
++     jmp     l_f1_4                  #   1:     goto   4
++ l_f1_4:
++     jmp     l_f1_2                  #   3:     goto   2
+-     movl    $1, %eax                #   0:     assign t2 <- 1
++     movl    $1, %eax                #   4:     assign t2 <- 1
+-     jmp     l_f1_3                  #   1:     goto   3
++     jmp     l_f1_3                  #   5:     goto   3
++ l_f1_2:
+-     movl    $0, %eax                #   2:     assign t2 <- 0
++     movl    $0, %eax                #   7:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v3 <- t2
++     movzbl  -13(%ebp), %eax         #   9:     assign v3 <- t2
+-     jmp     l_f1_13_if_true         #   5:     goto   13_if_true
++     jmp     l_f1_13_if_true         #  10:     goto   13_if_true
+-     call    dummyCHARfunc           #   7:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  12:     call   t3 <- dummyCHARfunc
+-     movl    $97, %eax               #   8:     if     97 <= 98 goto 19_if_true
++     movl    $97, %eax               #  13:     if     97 <= 98 goto 19_if_true
+-     jmp     l_f1_20_if_false        #   9:     goto   20_if_false
++     jmp     l_f1_20_if_false        #  14:     goto   20_if_false
+-     jmp     l_f1_18                 #  11:     goto   18
++     jmp     l_f1_18                 #  16:     goto   18
+-     jmp     l_f1_12                 #  15:     goto   12
++     jmp     l_f1_12                 #  20:     goto   12
+-     call    dummyCHARfunc           #  17:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  22:     call   t4 <- dummyCHARfunc
+-     # -14048(%ebp)14024  [ $v2       <array 5 of <array 10 of <array 8 of <array 7 of <array 5 of <char>>>>>> %ebp-14048 ]
++     #   -14048(%ebp)  14024  [ $v2       <array 5 of <array 10 of <array 8 of <array 7 of <array 5 of <char>>>>>> %ebp-14048 ]
+-     # -14052(%ebp)   4  [ $v3       <int> %ebp-14052 ]
++     #   -14052(%ebp)   4  [ $v3       <int> %ebp-14052 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              
+-     addl    $1, %esp               
++     addl    $4, %esp               

@@ -1,0 +1,38 @@
++     jmp     l_test_7                #   1:     goto   7
+-     movl    $1, %eax                #   1:     assign t0 <- 1
++     movl    $1, %eax                #   2:     assign t0 <- 1
+-     jmp     l_test_7                #   2:     goto   7
++     jmp     l_test_8                #   3:     goto   8
++ l_test_7:
+-     movl    $0, %eax                #   3:     assign t0 <- 0
++     movl    $0, %eax                #   5:     assign t0 <- 0
+- l_test_7:
++ l_test_8:
+-     movzbl  -13(%ebp), %eax         #   5:     if     t0 = 0 goto 2
++     movzbl  -13(%ebp), %eax         #   7:     if     t0 = 0 goto 2
+-     jmp     l_test_3                #   6:     goto   3
++     jmp     l_test_3                #   8:     goto   3
+-     movl    $1, %eax                #   8:     assign t1 <- 1
++     movl    $1, %eax                #  10:     assign t1 <- 1
+-     jmp     l_test_4                #   9:     goto   4
++     jmp     l_test_4                #  11:     goto   4
+-     movl    $0, %eax                #  11:     assign t1 <- 0
++     movl    $0, %eax                #  13:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #  13:     assign v0 <- t1
++     movzbl  -14(%ebp), %eax         #  15:     assign v0 <- t1
+-     leal    v3, %eax                #  14:     &()    t2 <- v3
++     leal    v3, %eax                #  16:     &()    t2 <- v3
+-     movl    -20(%ebp), %eax         #  15:     param  2 <- t2
++     movl    -20(%ebp), %eax         #  17:     param  2 <- t2
+-     leal    v2, %eax                #  16:     &()    t3 <- v2
++     leal    v2, %eax                #  18:     &()    t3 <- v2
+-     movl    -24(%ebp), %eax         #  17:     param  1 <- t3
++     movl    -24(%ebp), %eax         #  19:     param  1 <- t3
+-     leal    v1, %eax                #  18:     &()    t4 <- v1
++     leal    v1, %eax                #  20:     &()    t4 <- v1
+-     movl    -28(%ebp), %eax         #  19:     param  0 <- t4
++     movl    -28(%ebp), %eax         #  21:     param  0 <- t4
+-     call    f2                      #  20:     call   t5 <- f2
++     call    f2                      #  22:     call   t5 <- f2
+-     call    dummyINTfunc            #  21:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  23:     call   t6 <- dummyINTfunc

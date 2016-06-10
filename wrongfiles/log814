@@ -1,0 +1,33 @@
+-     #  -8468(%ebp)8424  [ $v3       <array 7 of <array 5 of <array 6 of <array 8 of <array 5 of <char>>>>>> %ebp-8468 ]
++     #   -8468(%ebp)  8424  [ $v3       <array 7 of <array 5 of <array 6 of <array 8 of <array 5 of <char>>>>>> %ebp-8468 ]
+-     # -17900(%ebp)9432  [ $v4       <array 2 of <array 7 of <array 4 of <array 6 of <array 7 of <int>>>>>> %ebp-17900 ]
++     #   -17900(%ebp)  9432  [ $v4       <array 2 of <array 7 of <array 4 of <array 6 of <array 7 of <int>>>>>> %ebp-17900 ]
+-     # -19124(%ebp)1224  [ $v5       <array 5 of <array 3 of <array 5 of <array 8 of <array 2 of <char>>>>>> %ebp-19124 ]
++     #   -19124(%ebp)  1224  [ $v5       <array 5 of <array 3 of <array 5 of <array 8 of <array 2 of <char>>>>>> %ebp-19124 ]
++     jmp     l_f2_10                 #  12:     goto   10
++     jmp     l_f2_10                 #  13:     goto   10
+-     movl    $1, %eax                #  12:     assign t6 <- 1
++     movl    $1, %eax                #  14:     assign t6 <- 1
+-     jmp     l_f2_11                 #  13:     goto   11
++     jmp     l_f2_11                 #  15:     goto   11
++ l_f2_10:
+-     movl    $0, %eax                #  14:     assign t6 <- 0
++     movl    $0, %eax                #  17:     assign t6 <- 0
+-     movzbl  -13(%ebp), %eax         #  16:     return t6
++     movzbl  -13(%ebp), %eax         #  19:     return t6
+-     movl    $0, %eax                #  17:     if     0 = 0 goto 17_if_true
++     movl    $0, %eax                #  20:     if     0 = 0 goto 17_if_true
+-     jmp     l_f2_18_if_false        #  18:     goto   18_if_false
++     jmp     l_f2_18_if_false        #  21:     goto   18_if_false
+-     movl    $0, %eax                #  20:     return 0
++     movl    $0, %eax                #  23:     return 0
+-     jmp     l_f2_22_while_cond      #  22:     goto   22_while_cond
++     jmp     l_f2_22_while_cond      #  25:     goto   22_while_cond
+-     movl    $0, %eax                #  23:     return 0
++     movl    $0, %eax                #  26:     return 0
+-     jmp     l_f2_16                 #  24:     goto   16
++     jmp     l_f2_16                 #  27:     goto   16
+-     addl    $10, %esp              
++     addl    $16, %esp              
+-     addl    $1, %esp               
++     addl    $4, %esp               

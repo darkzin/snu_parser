@@ -1,0 +1,15 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_2                #   7:     goto   2
+-     movl    $1, %eax                #   7:     assign t2 <- 1
++     movl    $1, %eax                #   8:     assign t2 <- 1
+-     jmp     l_test_3                #   8:     goto   3
++     jmp     l_test_3                #   9:     goto   3
+-     movl    $0, %eax                #  10:     assign t2 <- 0
++     movl    $0, %eax                #  11:     assign t2 <- 0
+-     movzbl  -18(%ebp), %eax         #  12:     param  0 <- t2
++     movzbl  -18(%ebp), %eax         #  13:     param  0 <- t2
+-     call    f0                      #  13:     call   t3 <- f0
++     call    f0                      #  14:     call   t3 <- f0
+-     addl    $6, %esp               
++     addl    $12, %esp              

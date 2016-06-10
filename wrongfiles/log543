@@ -1,0 +1,36 @@
++     jmp     l_test_3                #   7:     goto   3
+-     movl    $1, %eax                #   8:     assign t4 <- 1
++     movl    $1, %eax                #   9:     assign t4 <- 1
+-     jmp     l_test_4                #   9:     goto   4
++     jmp     l_test_4                #  10:     goto   4
++ l_test_3:
+-     movl    $0, %eax                #  10:     assign t4 <- 0
++     movl    $0, %eax                #  12:     assign t4 <- 0
+-     movzbl  -46(%ebp), %eax         #  12:     assign v0 <- t4
++     movzbl  -46(%ebp), %eax         #  14:     assign v0 <- t4
+-     movl    $35210, %eax            #  14:     mul    t5 <- 35210, 27707
++     movl    $35210, %eax            #  16:     mul    t5 <- 35210, 27707
+-     movl    -52(%ebp), %eax         #  15:     add    t6 <- t5, 96894
++     movl    -52(%ebp), %eax         #  17:     add    t6 <- t5, 96894
+-     movl    -56(%ebp), %eax         #  16:     add    t7 <- t6, 88938
++     movl    -56(%ebp), %eax         #  18:     add    t7 <- t6, 88938
+-     movl    -60(%ebp), %eax         #  17:     add    t8 <- t7, 31698
++     movl    -60(%ebp), %eax         #  19:     add    t8 <- t7, 31698
+-     movl    -64(%ebp), %eax         #  18:     add    t9 <- t8, 84522
++     movl    -64(%ebp), %eax         #  20:     add    t9 <- t8, 84522
+-     movl    -68(%ebp), %eax         #  19:     sub    t10 <- t9, 13346
++     movl    -68(%ebp), %eax         #  21:     sub    t10 <- t9, 13346
+-     movl    -24(%ebp), %eax         #  20:     add    t11 <- t10, 840
++     movl    -24(%ebp), %eax         #  22:     add    t11 <- t10, 840
+-     movl    -28(%ebp), %eax         #  21:     sub    t12 <- t11, 60389
++     movl    -28(%ebp), %eax         #  23:     sub    t12 <- t11, 60389
+-     movl    -32(%ebp), %eax         #  22:     sub    t13 <- t12, 25507
++     movl    -32(%ebp), %eax         #  24:     sub    t13 <- t12, 25507
+-     movl    -36(%ebp), %eax         #  23:     add    t14 <- t13, 80626
++     movl    -36(%ebp), %eax         #  25:     add    t14 <- t13, 80626
+-     movl    $3215, %eax             #  24:     if     3215 = t14 goto 8_while_body
++     movl    $3215, %eax             #  26:     if     3215 = t14 goto 8_while_body
+-     jmp     l_test_6                #  25:     goto   6
++     jmp     l_test_6                #  27:     goto   6
+-     jmp     l_test_7_while_cond     #  27:     goto   7_while_cond
++     jmp     l_test_7_while_cond     #  29:     goto   7_while_cond

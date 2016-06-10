@@ -1,0 +1,4 @@
+-     jmp     l_f0_6                  #   3:     goto   6
++     jmp     l_f0_7                  #   3:     goto   7
+- l_f0_6:
++ l_f0_7:

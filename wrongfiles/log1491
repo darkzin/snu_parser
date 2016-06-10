@@ -1,0 +1,14 @@
+-     jmp     l_f1_11                 #  12:     goto   11
++     jmp     l_f1_12                 #  12:     goto   12
+- l_f1_11:
++ l_f1_12:
++     jmp     l_test_15               #  28:     goto   15
+-     jmp     l_test_16_while_cond    #  29:     goto   16_while_cond
++     jmp     l_test_16_while_cond    #  30:     goto   16_while_cond
++ l_test_15:
+-     movl    $99, %eax               #  31:     if     99 > 97 goto 22_while_body
++     movl    $99, %eax               #  33:     if     99 > 97 goto 22_while_body
+-     jmp     l_test_20               #  32:     goto   20
++     jmp     l_test_20               #  34:     goto   20
+-     jmp     l_test_21_while_cond    #  34:     goto   21_while_cond
++     jmp     l_test_21_while_cond    #  36:     goto   21_while_cond

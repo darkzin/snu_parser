@@ -1,0 +1,8 @@
+-     addl    $7, %esp               
++     addl    $16, %esp              
++     jmp     l_test_0                #   2:     goto   0
+-     jmp     l_test_1_while_cond     #   3:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   4:     goto   1_while_cond
++ l_test_0:
+-     movl    $99, %eax               #   4:     assign v0 <- 99
++     movl    $99, %eax               #   6:     assign v0 <- 99

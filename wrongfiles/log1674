@@ -1,0 +1,48 @@
++     jmp     l_f0_4                  #   0:     goto   4
+-     jmp     l_f0_1                  #   0:     goto   1
++     jmp     l_f0_1                  #   1:     goto   1
++ l_f0_4:
++     jmp     l_f0_2                  #   3:     goto   2
+-     movl    $1, %eax                #   2:     assign t2 <- 1
++     movl    $1, %eax                #   5:     assign t2 <- 1
+-     jmp     l_f0_3                  #   3:     goto   3
++     jmp     l_f0_3                  #   6:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   4:     assign t2 <- 0
++     movl    $0, %eax                #   8:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     return t2
++     movzbl  -13(%ebp), %eax         #  10:     return t2
+-     jmp     l_f0_8                  #   7:     goto   8
++     jmp     l_f0_8                  #  11:     goto   8
++     jmp     l_f0_9                  #  12:     goto   9
+-     movl    $1, %eax                #   9:     assign t3 <- 1
++     movl    $1, %eax                #  14:     assign t3 <- 1
+-     jmp     l_f0_10                 #  10:     goto   10
++     jmp     l_f0_10                 #  15:     goto   10
++ l_f0_9:
+-     movl    $0, %eax                #  11:     assign t3 <- 0
++     movl    $0, %eax                #  17:     assign t3 <- 0
+-     movzbl  -14(%ebp), %eax         #  13:     assign v0 <- t3
++     movzbl  -14(%ebp), %eax         #  19:     assign v0 <- t3
+-     movl    $71673, %eax            #  15:     if     71673 # 62518 goto 16_while_body
++     movl    $71673, %eax            #  21:     if     71673 # 62518 goto 16_while_body
+-     jmp     l_f0_14                 #  16:     goto   14
++     jmp     l_f0_14                 #  22:     goto   14
+-     movl    $1, %eax                #  18:     return 1
++     movl    $1, %eax                #  24:     return 1
+-     jmp     l_f0_15_while_cond      #  19:     goto   15_while_cond
++     jmp     l_f0_15_while_cond      #  25:     goto   15_while_cond
+-     addl    $10, %esp              
++     addl    $16, %esp              
++     jmp     l_test_0                #   1:     goto   0
+-     jmp     l_test_1_while_cond     #   2:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   3:     goto   1_while_cond
++ l_test_0:
+-     call    dummyCHARfunc           #   3:     call   t0 <- dummyCHARfunc
++     call    dummyCHARfunc           #   5:     call   t0 <- dummyCHARfunc
+-     leal    _str_1, %eax            #   4:     &()    t1 <- _str_1
++     leal    _str_1, %eax            #   6:     &()    t1 <- _str_1
+-     movl    -20(%ebp), %eax         #   5:     param  0 <- t1
++     movl    -20(%ebp), %eax         #   7:     param  0 <- t1
+-     call    WriteStr                #   6:     call   WriteStr
++     call    WriteStr                #   8:     call   WriteStr

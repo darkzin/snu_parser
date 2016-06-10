@@ -1,0 +1,30 @@
++     jmp     l_f1_3                  #   1:     goto   3
++     jmp     l_f1_3                  #   2:     goto   3
++     jmp     l_f1_3                  #   3:     goto   3
+-     jmp     l_f1_2_while_body       #   1:     goto   2_while_body
++     jmp     l_f1_2_while_body       #   4:     goto   2_while_body
++ l_f1_3:
+-     jmp     l_f1_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   7:     goto   1_while_cond
+-     call    ReadInt                 #   4:     call   t2 <- ReadInt
++     call    ReadInt                 #   8:     call   t2 <- ReadInt
+-     movl    $54926, %eax            #   5:     div    t3 <- 54926, 22361
++     movl    $54926, %eax            #   9:     div    t3 <- 54926, 22361
+-     movl    -20(%ebp), %eax         #   6:     mul    t4 <- t3, 80811
++     movl    -20(%ebp), %eax         #  10:     mul    t4 <- t3, 80811
+-     movl    -24(%ebp), %eax         #   7:     div    t5 <- t4, 61468
++     movl    -24(%ebp), %eax         #  11:     div    t5 <- t4, 61468
+-     movl    -28(%ebp), %eax         #   8:     div    t6 <- t5, 91702
++     movl    -28(%ebp), %eax         #  12:     div    t6 <- t5, 91702
+-     movl    -32(%ebp), %eax         #   9:     if     t6 < 45718 goto 11
++     movl    -32(%ebp), %eax         #  13:     if     t6 < 45718 goto 11
+-     jmp     l_f1_12                 #  10:     goto   12
++     jmp     l_f1_12                 #  14:     goto   12
+-     movl    $1, %eax                #  12:     assign t7 <- 1
++     movl    $1, %eax                #  16:     assign t7 <- 1
+-     jmp     l_f1_13                 #  13:     goto   13
++     jmp     l_f1_13                 #  17:     goto   13
+-     movl    $0, %eax                #  15:     assign t7 <- 0
++     movl    $0, %eax                #  19:     assign t7 <- 0
+-     movzbl  -33(%ebp), %eax         #  17:     assign v1 <- t7
++     movzbl  -33(%ebp), %eax         #  21:     assign v1 <- t7

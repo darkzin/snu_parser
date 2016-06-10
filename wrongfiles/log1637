@@ -1,0 +1,22 @@
++     jmp     l_f2_5                  #  14:     goto   5
+-     movl    $97, %eax               #  16:     if     97 > 100 goto 14_while_body
++     movl    $97, %eax               #  17:     if     97 > 100 goto 14_while_body
+-     jmp     l_f2_12                 #  17:     goto   12
++     jmp     l_f2_12                 #  18:     goto   12
+-     jmp     l_f2_13_while_cond      #  19:     goto   13_while_cond
++     jmp     l_f2_13_while_cond      #  20:     goto   13_while_cond
+-     movl    $18856, %eax            #  22:     if     18856 >= 67775 goto 18_while_body
++     movl    $18856, %eax            #  23:     if     18856 >= 67775 goto 18_while_body
+-     jmp     l_f2_16                 #  23:     goto   16
++     jmp     l_f2_16                 #  24:     goto   16
+-     jmp     l_f2_17_while_cond      #  25:     goto   17_while_cond
++     jmp     l_f2_17_while_cond      #  26:     goto   17_while_cond
+-     jmp     l_f2_6_while_cond       #  27:     goto   6_while_cond
++     jmp     l_f2_6_while_cond       #  28:     goto   6_while_cond
++ l_f2_5:
++     jmp     l_f2_23                 #  31:     goto   23
+-     jmp     l_f2_22_while_body      #  29:     goto   22_while_body
++     jmp     l_f2_22_while_body      #  32:     goto   22_while_body
++ l_f2_23:
+-     jmp     l_f2_21_while_cond      #  31:     goto   21_while_cond
++     jmp     l_f2_21_while_cond      #  35:     goto   21_while_cond

@@ -1,0 +1,52 @@
++     jmp     l_f0_22                 #  31:     goto   22
++     jmp     l_f0_22                 #  32:     goto   22
++     jmp     l_f0_22                 #  33:     goto   22
++     jmp     l_f0_22                 #  34:     goto   22
++     jmp     l_f0_22                 #  35:     goto   22
+-     jmp     l_f0_23_while_cond      #  31:     goto   23_while_cond
++     jmp     l_f0_23_while_cond      #  36:     goto   23_while_cond
+-     movl    $70016, %eax            #  34:     if     70016 >= 93023 goto 34_while_body
++     movl    $70016, %eax            #  39:     if     70016 >= 93023 goto 34_while_body
+-     jmp     l_f0_32                 #  35:     goto   32
++     jmp     l_f0_32                 #  40:     goto   32
+-     call    WriteLn                 #  37:     call   WriteLn
++     call    WriteLn                 #  42:     call   WriteLn
+-     movl    $97, %eax               #  38:     assign v2 <- 97
++     movl    $97, %eax               #  43:     assign v2 <- 97
+-     movl    $97, %eax               #  39:     if     97 <= 97 goto 39_if_true
++     movl    $97, %eax               #  44:     if     97 <= 97 goto 39_if_true
+-     jmp     l_f0_40_if_false        #  40:     goto   40_if_false
++     jmp     l_f0_40_if_false        #  45:     goto   40_if_false
+-     jmp     l_f0_38                 #  42:     goto   38
++     jmp     l_f0_38                 #  47:     goto   38
+-     movl    $98, %eax               #  45:     assign v0 <- 98
++     movl    $98, %eax               #  50:     assign v0 <- 98
+-     movl    $54939, %eax            #  46:     assign v1 <- 54939
++     movl    $54939, %eax            #  51:     assign v1 <- 54939
+-     jmp     l_f0_45_while_cond      #  48:     goto   45_while_cond
++     jmp     l_f0_45_while_cond      #  53:     goto   45_while_cond
+-     movl    $0, %eax                #  50:     if     0 = 0 goto 49_while_body
++     movl    $0, %eax                #  55:     if     0 = 0 goto 49_while_body
+-     jmp     l_f0_47                 #  51:     goto   47
++     jmp     l_f0_47                 #  56:     goto   47
+-     jmp     l_f0_48_while_cond      #  53:     goto   48_while_cond
++     jmp     l_f0_48_while_cond      #  58:     goto   48_while_cond
+-     jmp     l_f0_53_if_false        #  55:     goto   53_if_false
++     jmp     l_f0_53_if_false        #  60:     goto   53_if_false
+-     jmp     l_f0_51                 #  56:     goto   51
++     jmp     l_f0_51                 #  61:     goto   51
+-     movl    $0, %eax                #  59:     assign v3 <- 0
++     movl    $0, %eax                #  64:     assign v3 <- 0
+-     jmp     l_f0_33_while_cond      #  60:     goto   33_while_cond
++     jmp     l_f0_33_while_cond      #  65:     goto   33_while_cond
+-     addl    $6, %esp               
++     addl    $12, %esp              
++     jmp     l_test_15_if_false      #  21:     goto   15_if_false
++     jmp     l_test_15_if_false      #  22:     goto   15_if_false
+-     jmp     l_test_21               #  23:     goto   21
++     jmp     l_test_21               #  25:     goto   21
+-     jmp     l_test_22_while_cond    #  24:     goto   22_while_cond
++     jmp     l_test_22_while_cond    #  26:     goto   22_while_cond
+-     jmp     l_test_13               #  26:     goto   13
++     jmp     l_test_13               #  28:     goto   13
++ l_test_15_if_false:

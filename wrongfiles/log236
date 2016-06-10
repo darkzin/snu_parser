@@ -1,0 +1,20 @@
++     jmp     l_test_4                #  13:     goto   4
+-     jmp     l_test_5_while_cond     #  14:     goto   5_while_cond
++     jmp     l_test_5_while_cond     #  15:     goto   5_while_cond
++ l_test_4:
+-     call    dummyCHARfunc           #  15:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #  17:     call   t6 <- dummyCHARfunc
+-     call    dummyCHARfunc           #  16:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  18:     call   t7 <- dummyCHARfunc
+-     movzbl  -38(%ebp), %eax         #  17:     if     t7 <= 97 goto 13
++     movzbl  -38(%ebp), %eax         #  19:     if     t7 <= 97 goto 13
+-     jmp     l_test_14               #  18:     goto   14
++     jmp     l_test_14               #  20:     goto   14
+-     movl    $1, %eax                #  20:     assign t8 <- 1
++     movl    $1, %eax                #  22:     assign t8 <- 1
+-     jmp     l_test_15               #  21:     goto   15
++     jmp     l_test_15               #  23:     goto   15
+-     movl    $0, %eax                #  23:     assign t8 <- 0
++     movl    $0, %eax                #  25:     assign t8 <- 0
+-     movzbl  -39(%ebp), %eax         #  25:     assign v0 <- t8
++     movzbl  -39(%ebp), %eax         #  27:     assign v0 <- t8

@@ -1,0 +1,74 @@
+-     jmp     l_f1_3                  #   1:     goto   3
++     jmp     l_f1_4                  #   1:     goto   4
+-     jmp     l_f1_3                  #   2:     goto   3
++     jmp     l_f1_4                  #   2:     goto   4
++     jmp     l_f1_5                  #   3:     goto   5
+- l_f1_3:
++ l_f1_4:
+-     movl    $1, %eax                #   4:     assign t3 <- 1
++     movl    $1, %eax                #   5:     assign t3 <- 1
+-     jmp     l_f1_5                  #   5:     goto   5
++     jmp     l_f1_6                  #   6:     goto   6
++ l_f1_5:
+-     movl    $0, %eax                #   6:     assign t3 <- 0
++     movl    $0, %eax                #   8:     assign t3 <- 0
+- l_f1_5:
++ l_f1_6:
+-     movzbl  -13(%ebp), %eax         #   8:     if     t3 = 0 goto 2_while_body
++     movzbl  -13(%ebp), %eax         #  10:     if     t3 = 0 goto 2_while_body
+-     jmp     l_f1_0                  #   9:     goto   0
++     jmp     l_f1_0                  #  11:     goto   0
+-     movl    $0, %eax                #  11:     return 0
++     movl    $0, %eax                #  13:     return 0
+-     jmp     l_f1_12_if_false        #  12:     goto   12_if_false
++     jmp     l_f1_12_if_false        #  14:     goto   12_if_false
+-     jmp     l_f1_10                 #  13:     goto   10
++     jmp     l_f1_10                 #  15:     goto   10
+-     movl    $53847, %eax            #  16:     assign v0 <- 53847
++     movl    $53847, %eax            #  18:     assign v0 <- 53847
+-     movl    $1, %eax                #  17:     return 1
++     movl    $1, %eax                #  19:     return 1
+-     jmp     l_f1_1_while_cond       #  18:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #  20:     goto   1_while_cond
+-     call    dummyCHARfunc           #  20:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  22:     call   t4 <- dummyCHARfunc
+-     call    dummyCHARfunc           #  21:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #  23:     call   t5 <- dummyCHARfunc
++     jmp     l_test_14               #  15:     goto   14
+-     movl    $99, %eax               #  16:     if     99 >= 97 goto 21_while_body
++     movl    $99, %eax               #  17:     if     99 >= 97 goto 21_while_body
+-     jmp     l_test_19               #  17:     goto   19
++     jmp     l_test_19               #  18:     goto   19
+-     jmp     l_test_20_while_cond    #  19:     goto   20_while_cond
++     jmp     l_test_20_while_cond    #  20:     goto   20_while_cond
+-     movl    $0, %eax                #  21:     if     0 # 1 goto 24_if_true
++     movl    $0, %eax                #  22:     if     0 # 1 goto 24_if_true
+-     jmp     l_test_25_if_false      #  22:     goto   25_if_false
++     jmp     l_test_25_if_false      #  23:     goto   25_if_false
+-     jmp     l_test_23               #  24:     goto   23
++     jmp     l_test_23               #  25:     goto   23
+-     jmp     l_test_15_while_cond    #  27:     goto   15_while_cond
++     jmp     l_test_15_while_cond    #  28:     goto   15_while_cond
++ l_test_14:
+-     jmp     l_test_29_if_false      #  28:     goto   29_if_false
++     jmp     l_test_29_if_false      #  30:     goto   29_if_false
+-     movl    $100, %eax              #  29:     if     100 = 97 goto 31_if_true
++     movl    $100, %eax              #  31:     if     100 = 97 goto 31_if_true
+-     jmp     l_test_32_if_false      #  30:     goto   32_if_false
++     jmp     l_test_32_if_false      #  32:     goto   32_if_false
+-     call    dummyCHARfunc           #  32:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  34:     call   t2 <- dummyCHARfunc
+-     jmp     l_test_30               #  34:     goto   30
++     jmp     l_test_30               #  36:     goto   30
+-     jmp     l_test_27               #  37:     goto   27
++     jmp     l_test_27               #  39:     goto   27
+-     call    WriteLn                 #  40:     call   WriteLn
++     call    WriteLn                 #  42:     call   WriteLn
+-     jmp     l_test_39_if_false      #  41:     goto   39_if_false
++     jmp     l_test_39_if_false      #  43:     goto   39_if_false
+-     jmp     l_test_42_if_false      #  42:     goto   42_if_false
++     jmp     l_test_42_if_false      #  44:     goto   42_if_false
+-     jmp     l_test_40               #  43:     goto   40
++     jmp     l_test_40               #  45:     goto   40
+-     jmp     l_test_37               #  47:     goto   37
++     jmp     l_test_37               #  49:     goto   37

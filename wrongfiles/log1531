@@ -1,0 +1,46 @@
++     jmp     l_f0_6                  #   0:     goto   6
+-     jmp     l_f0_1                  #   0:     goto   1
++     jmp     l_f0_1                  #   1:     goto   1
++ l_f0_6:
+-     movl    $1, %eax                #   2:     assign t1 <- 1
++     movl    $1, %eax                #   4:     assign t1 <- 1
+-     jmp     l_f0_3                  #   3:     goto   3
++     jmp     l_f0_3                  #   5:     goto   3
+-     movl    $0, %eax                #   4:     assign t1 <- 0
++     movl    $0, %eax                #   6:     assign t1 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     assign v0 <- t1
++     movzbl  -13(%ebp), %eax         #   8:     assign v0 <- t1
+-     jmp     l_f0_10_while_body      #   8:     goto   10_while_body
++     jmp     l_f0_10_while_body      #  10:     goto   10_while_body
+-     jmp     l_f0_19                 #  11:     goto   19
++     jmp     l_f0_19                 #  13:     goto   19
+-     jmp     l_f0_22                 #  14:     goto   22
++     jmp     l_f0_22                 #  16:     goto   22
+-     jmp     l_f0_23_while_cond      #  15:     goto   23_while_cond
++     jmp     l_f0_23_while_cond      #  17:     goto   23_while_cond
+-     movl    $54573, %eax            #  17:     if     54573 = 2536 goto 26_if_true
++     movl    $54573, %eax            #  19:     if     54573 = 2536 goto 26_if_true
+-     jmp     l_f0_27_if_false        #  18:     goto   27_if_false
++     jmp     l_f0_27_if_false        #  20:     goto   27_if_false
+-     jmp     l_f0_25                 #  20:     goto   25
++     jmp     l_f0_25                 #  22:     goto   25
+-     jmp     l_f0_9_while_cond       #  23:     goto   9_while_cond
++     jmp     l_f0_9_while_cond       #  25:     goto   9_while_cond
+-     call    dummyCHARfunc           #  24:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  26:     call   t2 <- dummyCHARfunc
+-     #-683126832(%ebp)683126808  [ $v3       <array 58 of <array 48 of <array 64 of <array 54 of <array 71 of <char>>>>>> %ebp-683126832 ]
++     #   -683126832(%ebp)  683126808  [ $v3       <array 58 of <array 48 of <array 64 of <array 54 of <array 71 of <char>>>>>> %ebp-683126832 ]
++     jmp     l_f2_1                  #   4:     goto   1
+-     jmp     l_f2_2_while_cond       #   5:     goto   2_while_cond
++     jmp     l_f2_2_while_cond       #   6:     goto   2_while_cond
++ l_f2_1:
+-     movl    $80676, %eax            #   7:     mul    t3 <- 80676, 26412
++     movl    $80676, %eax            #   9:     mul    t3 <- 80676, 26412
+-     movl    $21469, %eax            #   8:     if     21469 <= t3 goto 11_while_body
++     movl    $21469, %eax            #  10:     if     21469 <= t3 goto 11_while_body
+-     jmp     l_f2_9                  #   9:     goto   9
++     jmp     l_f2_9                  #  11:     goto   9
+-     jmp     l_f2_13                 #  11:     goto   13
++     jmp     l_f2_13                 #  13:     goto   13
+-     jmp     l_f2_10_while_cond      #  13:     goto   10_while_cond
++     jmp     l_f2_10_while_cond      #  15:     goto   10_while_cond

@@ -1,0 +1,24 @@
++     jmp     l_f0_0                  #   1:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
++     jmp     l_f0_0                  #   3:     goto   0
+-     jmp     l_f0_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   4:     goto   1_while_cond
++ l_f0_0:
+-     call    ReadInt                 #   2:     call   t3 <- ReadInt
++     call    ReadInt                 #   6:     call   t3 <- ReadInt
+-     movl    -16(%ebp), %eax         #   3:     sub    t4 <- t3, 70462
++     movl    -16(%ebp), %eax         #   7:     sub    t4 <- t3, 70462
+-     movl    -20(%ebp), %eax         #   4:     assign v0 <- t4
++     movl    -20(%ebp), %eax         #   8:     assign v0 <- t4
+-     movl    $97, %eax               #   6:     if     97 >= 97 goto 9_while_body
++     movl    $97, %eax               #  10:     if     97 >= 97 goto 9_while_body
+-     jmp     l_f0_7                  #   7:     goto   7
++     jmp     l_f0_7                  #  11:     goto   7
+-     jmp     l_f0_8_while_cond       #   9:     goto   8_while_cond
++     jmp     l_f0_8_while_cond       #  13:     goto   8_while_cond
+-     #-35437552(%ebp)35437524  [ $v1       <array 100 of <array 45 of <array 5 of <array 25 of <array 63 of <bool>>>>>> %ebp-35437552 ]
++     #   -35437552(%ebp)  35437524  [ $v1       <array 100 of <array 45 of <array 5 of <array 25 of <array 63 of <bool>>>>>> %ebp-35437552 ]
+-     #-334811016(%ebp)299373462  [ $v2       <array 78 of <array 49 of <array 37 of <array 73 of <array 29 of <char>>>>>> %ebp-334811016 ]
++     #   -334811016(%ebp)  299373462  [ $v2       <array 78 of <array 49 of <array 37 of <array 73 of <array 29 of <char>>>>>> %ebp-334811016 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              

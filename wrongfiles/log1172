@@ -1,0 +1,34 @@
++     jmp     l_f1_0                  #   2:     goto   0
+-     jmp     l_f1_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++ l_f1_0:
+-     movl    $97, %eax               #   4:     if     97 >= 99 goto 5_if_true
++     movl    $97, %eax               #   6:     if     97 >= 99 goto 5_if_true
+-     jmp     l_f1_6_if_false         #   5:     goto   6_if_false
++     jmp     l_f1_6_if_false         #   7:     goto   6_if_false
+-     movl    $58220, %eax            #   8:     if     58220 < 79094 goto 10_while_body
++     movl    $58220, %eax            #  10:     if     58220 < 79094 goto 10_while_body
+-     jmp     l_f1_8                  #   9:     goto   8
++     jmp     l_f1_8                  #  11:     goto   8
+-     jmp     l_f1_9_while_cond       #  11:     goto   9_while_cond
++     jmp     l_f1_9_while_cond       #  13:     goto   9_while_cond
+-     call    WriteLn                 #  13:     call   WriteLn
++     call    WriteLn                 #  15:     call   WriteLn
+-     jmp     l_f1_4                  #  14:     goto   4
++     jmp     l_f1_4                  #  16:     goto   4
+-     movl    $22667, %eax            #  17:     add    t1 <- 22667, 49789
++     movl    $22667, %eax            #  19:     add    t1 <- 22667, 49789
+-     movl    -16(%ebp), %eax         #  18:     sub    t2 <- t1, 76550
++     movl    -16(%ebp), %eax         #  20:     sub    t2 <- t1, 76550
+-     movl    -20(%ebp), %eax         #  19:     add    t3 <- t2, 68148
++     movl    -20(%ebp), %eax         #  21:     add    t3 <- t2, 68148
+-     movl    -24(%ebp), %eax         #  20:     sub    t4 <- t3, 19941
++     movl    -24(%ebp), %eax         #  22:     sub    t4 <- t3, 19941
+-     movl    -28(%ebp), %eax         #  21:     assign v0 <- t4
++     movl    -28(%ebp), %eax         #  23:     assign v0 <- t4
++     jmp     l_test_15               #  20:     goto   15
+-     jmp     l_test_16_while_cond    #  22:     goto   16_while_cond
++     jmp     l_test_16_while_cond    #  23:     goto   16_while_cond
++ l_test_15:
+-     call    dummyBOOLfunc           #  23:     call   t0 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  25:     call   t0 <- dummyBOOLfunc

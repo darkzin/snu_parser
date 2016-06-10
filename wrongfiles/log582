@@ -1,0 +1,34 @@
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     addl    $5, %esp               
++     addl    $8, %esp               
++     jmp     l_test_19_if_false      #  21:     goto   19_if_false
+-     call    dummyCHARfunc           #  21:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  22:     call   t1 <- dummyCHARfunc
+-     call    dummyCHARfunc           #  22:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  23:     call   t2 <- dummyCHARfunc
+-     movl    $100, %eax              #  24:     if     100 < 100 goto 25_while_body
++     movl    $100, %eax              #  25:     if     100 < 100 goto 25_while_body
+-     jmp     l_test_23               #  25:     goto   23
++     jmp     l_test_23               #  26:     goto   23
+-     jmp     l_test_24_while_cond    #  27:     goto   24_while_cond
++     jmp     l_test_24_while_cond    #  28:     goto   24_while_cond
+-     call    dummyProcedure          #  29:     call   dummyProcedure
++     call    dummyProcedure          #  30:     call   dummyProcedure
+-     jmp     l_test_28               #  30:     goto   28
++     jmp     l_test_28               #  31:     goto   28
+-     jmp     l_test_17               #  32:     goto   17
++     jmp     l_test_17               #  33:     goto   17
++ l_test_19_if_false:
+-     call    dummyINTfunc            #  34:     call   t3 <- dummyINTfunc
++     call    dummyINTfunc            #  36:     call   t3 <- dummyINTfunc
+-     jmp     l_test_34_while_body    #  36:     goto   34_while_body
++     jmp     l_test_34_while_body    #  38:     goto   34_while_body
+-     jmp     l_test_34_while_body    #  37:     goto   34_while_body
++     jmp     l_test_34_while_body    #  39:     goto   34_while_body
++     jmp     l_test_32               #  40:     goto   32
+-     call    dummyINTfunc            #  39:     call   t4 <- dummyINTfunc
++     call    dummyINTfunc            #  42:     call   t4 <- dummyINTfunc
+-     jmp     l_test_33_while_cond    #  40:     goto   33_while_cond
++     jmp     l_test_33_while_cond    #  43:     goto   33_while_cond
++ l_test_32:

@@ -1,0 +1,24 @@
+-     #   -484(%ebp) 456  [ $v1       <array 3 of <array 6 of <array 2 of <array 3 of <array 4 of <char>>>>>> %ebp-484 ]
++     #   -484(%ebp)  456  [ $v1       <array 3 of <array 6 of <array 2 of <array 3 of <array 4 of <char>>>>>> %ebp-484 ]
+-     #   -844(%ebp) 360  [ $v2       <array 3 of <array 7 of <array 4 of <array 1 of <array 4 of <bool>>>>>> %ebp-844 ]
++     #   -844(%ebp)  360  [ $v2       <array 3 of <array 7 of <array 4 of <array 1 of <array 4 of <bool>>>>>> %ebp-844 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              
++     jmp     l_test_12               #  10:     goto   12
+-     movl    $1, %eax                #  10:     assign t2 <- 1
++     movl    $1, %eax                #  11:     assign t2 <- 1
+-     jmp     l_test_12               #  11:     goto   12
++     jmp     l_test_13               #  12:     goto   13
++ l_test_12:
+-     movl    $0, %eax                #  12:     assign t2 <- 0
++     movl    $0, %eax                #  14:     assign t2 <- 0
+- l_test_12:
++ l_test_13:
+-     movzbl  -18(%ebp), %eax         #  14:     if     t2 # 0 goto 9_while_body
++     movzbl  -18(%ebp), %eax         #  16:     if     t2 # 0 goto 9_while_body
+-     jmp     l_test_7                #  15:     goto   7
++     jmp     l_test_7                #  17:     goto   7
+-     jmp     l_test_8_while_cond     #  19:     goto   8_while_cond
++     jmp     l_test_8_while_cond     #  21:     goto   8_while_cond
+-     movl    $100, %eax              #  21:     assign v1 <- 100
++     movl    $100, %eax              #  23:     assign v1 <- 100

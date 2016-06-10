@@ -1,0 +1,28 @@
++     jmp     l_f0_2_if_false         #   0:     goto   2_if_false
+-     jmp     l_f0_0                  #   0:     goto   0
++     jmp     l_f0_0                  #   1:     goto   0
++ l_f0_2_if_false:
+-     call    ReadInt                 #   2:     call   t4 <- ReadInt
++     call    ReadInt                 #   4:     call   t4 <- ReadInt
+-     movl    -16(%ebp), %eax         #   3:     div    t5 <- t4, 45748
++     movl    -16(%ebp), %eax         #   5:     div    t5 <- t4, 45748
+-     movl    -20(%ebp), %eax         #   4:     return t5
++     movl    -20(%ebp), %eax         #   6:     return t5
+-     movl    $91787, %eax            #   5:     if     91787 = 37742 goto 7_if_true
++     movl    $91787, %eax            #   7:     if     91787 = 37742 goto 7_if_true
+-     jmp     l_f0_8_if_false         #   6:     goto   8_if_false
++     jmp     l_f0_8_if_false         #   8:     goto   8_if_false
+-     jmp     l_f0_12_if_false        #   8:     goto   12_if_false
++     jmp     l_f0_12_if_false        #  10:     goto   12_if_false
+-     jmp     l_f0_10                 #   9:     goto   10
++     jmp     l_f0_10                 #  11:     goto   10
+-     movl    $56919, %eax            #  12:     return 56919
++     movl    $56919, %eax            #  14:     return 56919
+-     movl    $99, %eax               #  13:     if     99 >= 97 goto 15_if_true
++     movl    $99, %eax               #  15:     if     99 >= 97 goto 15_if_true
+-     jmp     l_f0_16_if_false        #  14:     goto   16_if_false
++     jmp     l_f0_16_if_false        #  16:     goto   16_if_false
+-     jmp     l_f0_14                 #  16:     goto   14
++     jmp     l_f0_14                 #  18:     goto   14
+-     jmp     l_f0_6                  #  19:     goto   6
++     jmp     l_f0_6                  #  21:     goto   6

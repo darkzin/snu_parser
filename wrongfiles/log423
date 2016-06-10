@@ -1,0 +1,39 @@
++     jmp     l_f1_6                  #   0:     goto   6
++     jmp     l_f1_6                  #   1:     goto   6
+-     movl    $1, %eax                #   0:     assign t0 <- 1
++     movl    $1, %eax                #   2:     assign t0 <- 1
+-     jmp     l_f1_6                  #   1:     goto   6
++     jmp     l_f1_7                  #   3:     goto   7
++ l_f1_6:
+-     movl    $0, %eax                #   2:     assign t0 <- 0
++     movl    $0, %eax                #   5:     assign t0 <- 0
+- l_f1_6:
++ l_f1_7:
+-     call    dummyBOOLfunc           #   4:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   7:     call   t1 <- dummyBOOLfunc
+-     movzbl  -13(%ebp), %eax         #   5:     if     t0 # t1 goto 1
++     movzbl  -13(%ebp), %eax         #   8:     if     t0 # t1 goto 1
+-     jmp     l_f1_2                  #   6:     goto   2
++     jmp     l_f1_2                  #   9:     goto   2
+-     movl    $1, %eax                #   8:     assign t2 <- 1
++     movl    $1, %eax                #  11:     assign t2 <- 1
+-     jmp     l_f1_3                  #   9:     goto   3
++     jmp     l_f1_3                  #  12:     goto   3
+-     movl    $0, %eax                #  11:     assign t2 <- 0
++     movl    $0, %eax                #  14:     assign t2 <- 0
+-     movzbl  -15(%ebp), %eax         #  13:     return t2
++     movzbl  -15(%ebp), %eax         #  16:     return t2
+-     movl    $94133, %eax            #  14:     if     94133 >= 64539 goto 10_if_true
++     movl    $94133, %eax            #  17:     if     94133 >= 64539 goto 10_if_true
+-     jmp     l_f1_11_if_false        #  15:     goto   11_if_false
++     jmp     l_f1_11_if_false        #  18:     goto   11_if_false
+-     movl    $12028, %eax            #  17:     assign v1 <- 12028
++     movl    $12028, %eax            #  20:     assign v1 <- 12028
+-     jmp     l_f1_14                 #  19:     goto   14
++     jmp     l_f1_14                 #  22:     goto   14
+-     jmp     l_f1_15_while_cond      #  20:     goto   15_while_cond
++     jmp     l_f1_15_while_cond      #  23:     goto   15_while_cond
+-     jmp     l_f1_9                  #  22:     goto   9
++     jmp     l_f1_9                  #  25:     goto   9
+-     movl    $48576, %eax            #  25:     assign v1 <- 48576
++     movl    $48576, %eax            #  28:     assign v1 <- 48576

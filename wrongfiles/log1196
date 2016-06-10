@@ -1,0 +1,8 @@
++     jmp     l_f0_1                  #   2:     goto   1
+-     movl    $97, %eax               #   2:     assign v2 <- 97
++     movl    $97, %eax               #   3:     assign v2 <- 97
+-     jmp     l_f0_2_while_cond       #   3:     goto   2_while_cond
++     jmp     l_f0_2_while_cond       #   4:     goto   2_while_cond
++ l_f0_1:
+-     call    WriteLn                 #   4:     call   WriteLn
++     call    WriteLn                 #   6:     call   WriteLn

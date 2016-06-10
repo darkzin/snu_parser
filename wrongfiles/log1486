@@ -1,0 +1,24 @@
++     jmp     l_test_0                #   2:     goto   0
+-     jmp     l_test_6                #   3:     goto   6
++     jmp     l_test_6                #   4:     goto   6
+-     movl    $1, %eax                #   6:     if     1 # 0 goto 11_while_body
++     movl    $1, %eax                #   7:     if     1 # 0 goto 11_while_body
+-     jmp     l_test_9                #   7:     goto   9
++     jmp     l_test_9                #   8:     goto   9
+-     jmp     l_test_10_while_cond    #   9:     goto   10_while_cond
++     jmp     l_test_10_while_cond    #  10:     goto   10_while_cond
+-     jmp     l_test_1_while_cond     #  12:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #  13:     goto   1_while_cond
++ l_test_0:
+-     movl    $36304, %eax            #  14:     sub    t0 <- 36304, 81414
++     movl    $36304, %eax            #  16:     sub    t0 <- 36304, 81414
+-     call    dummyINTfunc            #  15:     call   t1 <- dummyINTfunc
++     call    dummyINTfunc            #  17:     call   t1 <- dummyINTfunc
+-     movl    -16(%ebp), %eax         #  16:     if     t0 > t1 goto 16_if_true
++     movl    -16(%ebp), %eax         #  18:     if     t0 > t1 goto 16_if_true
+-     jmp     l_test_17_if_false      #  17:     goto   17_if_false
++     jmp     l_test_17_if_false      #  19:     goto   17_if_false
+-     jmp     l_test_15               #  19:     goto   15
++     jmp     l_test_15               #  21:     goto   15
+-     jmp     l_test_20_while_cond    #  23:     goto   20_while_cond
++     jmp     l_test_20_while_cond    #  25:     goto   20_while_cond

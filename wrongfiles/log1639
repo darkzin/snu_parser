@@ -1,0 +1,9 @@
+-     #1455169484(%ebp)-1455169512  [ $v2       <array 80 of <array 82 of <array 19 of <array 89 of <array 64 of <int>>>>>> %ebp+1455169484 ]
++     #   1455169484(%ebp)  -1455169512  [ $v2       <array 80 of <array 82 of <array 19 of <array 89 of <array 64 of <int>>>>>> %ebp+1455169484 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $-363792374, %ecx      
++     mov     %esp, %edi             
++     rep     stosl                  
+-     addl    $1, %esp               
++     addl    $4, %esp               

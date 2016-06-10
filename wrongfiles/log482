@@ -1,0 +1,6 @@
+-     # -25264(%ebp)25224  [ $v3       <array 9 of <array 10 of <array 8 of <array 5 of <array 7 of <bool>>>>>> %ebp-25264 ]
++     #   -25264(%ebp)  25224  [ $v3       <array 9 of <array 10 of <array 8 of <array 5 of <array 7 of <bool>>>>>> %ebp-25264 ]
+-     # -25372(%ebp) 105  [ $v4       <array 1 of <array 1 of <array 9 of <array 9 of <array 1 of <char>>>>>> %ebp-25372 ]
++     #   -25372(%ebp)  105  [ $v4       <array 1 of <array 1 of <array 9 of <array 9 of <array 1 of <char>>>>>> %ebp-25372 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              

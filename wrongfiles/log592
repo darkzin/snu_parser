@@ -1,0 +1,22 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movl    -24(%ebp), %eax         #   2:     if     t7 < 85213 goto 4
++     movl    -24(%ebp), %eax         #   2:     if     t7 < 85213 goto 5
+-     jl      l_f1_4                 
++     jl      l_f1_5                 
+-     jmp     l_f1_5                  #   3:     goto   5
++     jmp     l_f1_6                  #   3:     goto   6
+- l_f1_4:
++ l_f1_5:
+-     jmp     l_f1_6                  #   6:     goto   6
++     jmp     l_f1_7                  #   6:     goto   7
+- l_f1_5:
++ l_f1_6:
+- l_f1_6:
++ l_f1_7:
+-     addl    $4, %esp               
++     addl    $16, %esp              
+-     addl    $4, %esp               
++     addl    $16, %esp              
+-     addl    $4, %esp               
++     addl    $16, %esp              

@@ -1,0 +1,24 @@
+-     jmp     l_f1_11                 #  10:     goto   11
++     jmp     l_f1_12                 #  10:     goto   12
+- l_f1_11:
++ l_f1_12:
+-     addl    $7, %esp               
++     addl    $16, %esp              
+-     movl    $1, %eax                #  19:     if     1 # 0 goto 13
++     movl    $1, %eax                #  19:     if     1 # 0 goto 14
+-     jne     l_f1_13                
++     jne     l_f1_14                
+-     jmp     l_f1_14                 #  20:     goto   14
++     jmp     l_f1_15                 #  20:     goto   15
+- l_f1_13:
++ l_f1_14:
+-     jmp     l_f1_15                 #  23:     goto   15
++     jmp     l_f1_16                 #  23:     goto   16
+- l_f1_14:
++ l_f1_15:
+- l_f1_15:
++ l_f1_16:
+-     addl    $7, %esp               
++     addl    $16, %esp              
+-     addl    $7, %esp               
++     addl    $16, %esp              

@@ -1,0 +1,29 @@
++     jmp     l_f2_18                 #  11:     goto   18
++     jmp     l_f2_18                 #  12:     goto   18
++     jmp     l_f2_18                 #  13:     goto   18
+-     movl    $1, %eax                #  11:     assign t7 <- 1
++     movl    $1, %eax                #  14:     assign t7 <- 1
+-     jmp     l_f2_18                 #  12:     goto   18
++     jmp     l_f2_19                 #  15:     goto   19
++ l_f2_18:
+-     movl    $0, %eax                #  13:     assign t7 <- 0
++     movl    $0, %eax                #  17:     assign t7 <- 0
+- l_f2_18:
++ l_f2_19:
++     jmp     l_f2_23                 #  19:     goto   23
++     jmp     l_f2_23                 #  20:     goto   23
+-     movl    $1, %eax                #  15:     assign t8 <- 1
++     movl    $1, %eax                #  21:     assign t8 <- 1
+-     jmp     l_f2_23                 #  16:     goto   23
++     jmp     l_f2_24                 #  22:     goto   24
++ l_f2_23:
+-     movl    $0, %eax                #  17:     assign t8 <- 0
++     movl    $0, %eax                #  24:     assign t8 <- 0
+- l_f2_23:
++ l_f2_24:
+-     movzbl  -25(%ebp), %eax         #  19:     if     t7 # t8 goto 15_while_body
++     movzbl  -25(%ebp), %eax         #  26:     if     t7 # t8 goto 15_while_body
+-     jmp     l_f2_13                 #  20:     goto   13
++     jmp     l_f2_13                 #  27:     goto   13
+-     jmp     l_f2_14_while_cond      #  22:     goto   14_while_cond
++     jmp     l_f2_14_while_cond      #  29:     goto   14_while_cond

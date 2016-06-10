@@ -1,0 +1,12 @@
++     jmp     l_f1_11                 #  12:     goto   11
+-     jmp     l_f1_12_while_cond      #  12:     goto   12_while_cond
++     jmp     l_f1_12_while_cond      #  13:     goto   12_while_cond
++ l_f1_11:
+-     jmp     l_f1_7                  #  13:     goto   7
++     jmp     l_f1_7                  #  15:     goto   7
+-     leal    _str_1, %eax            #  16:     &()    t2 <- _str_1
++     leal    _str_1, %eax            #  18:     &()    t2 <- _str_1
+-     movl    -20(%ebp), %eax         #  17:     param  0 <- t2
++     movl    -20(%ebp), %eax         #  19:     param  0 <- t2
+-     call    WriteStr                #  18:     call   WriteStr
++     call    WriteStr                #  20:     call   WriteStr

@@ -1,0 +1,25 @@
++     jmp     l_f0_5                  #   3:     goto   5
++     jmp     l_f0_5                  #   4:     goto   5
++     jmp     l_f0_5                  #   5:     goto   5
++     jmp     l_f0_5                  #   6:     goto   5
+-     jmp     l_f0_3_while_body       #   3:     goto   3_while_body
++     jmp     l_f0_3_while_body       #   7:     goto   3_while_body
++ l_f0_5:
+-     jmp     l_f0_3_while_body       #   4:     goto   3_while_body
++     jmp     l_f0_3_while_body       #   9:     goto   3_while_body
+-     jmp     l_f0_2_while_cond       #   6:     goto   2_while_cond
++     jmp     l_f0_2_while_cond       #  11:     goto   2_while_cond
+-     call    ReadInt                 #   7:     call   t1 <- ReadInt
++     call    ReadInt                 #  12:     call   t1 <- ReadInt
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     # -15476(%ebp)15384  [ $v5       <array 8 of <array 2 of <array 6 of <array 4 of <array 10 of <int>>>>>> %ebp-15476 ]
++     #   -15476(%ebp)  15384  [ $v5       <array 8 of <array 2 of <array 6 of <array 4 of <array 10 of <int>>>>>> %ebp-15476 ]
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_10               #  14:     goto   10
+-     movl    $25085, %eax            #  14:     assign v1 <- 25085
++     movl    $25085, %eax            #  15:     assign v1 <- 25085
+-     jmp     l_test_11_while_cond    #  15:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  16:     goto   11_while_cond
++ l_test_10:

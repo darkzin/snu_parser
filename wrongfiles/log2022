@@ -1,0 +1,19 @@
++     jmp     l_f1_14                 #  45:     goto   14
++     jmp     l_f1_14                 #  46:     goto   14
+-     jmp     l_f1_15_while_cond      #  45:     goto   15_while_cond
++     jmp     l_f1_15_while_cond      #  47:     goto   15_while_cond
++ l_f1_14:
++     jmp     l_f2_2_if_false         #   0:     goto   2_if_false
++     jmp     l_f2_2_if_false         #   1:     goto   2_if_false
++     jmp     l_f2_2_if_false         #   2:     goto   2_if_false
+-     call    dummyCHARfunc           #   0:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #   3:     call   t2 <- dummyCHARfunc
+-     jmp     l_f2_0                  #   1:     goto   0
++     jmp     l_f2_0                  #   4:     goto   0
++ l_f2_2_if_false:
+-     movl    $72539, %eax            #   3:     mul    t3 <- 72539, 94892
++     movl    $72539, %eax            #   7:     mul    t3 <- 72539, 94892
+-     movl    -20(%ebp), %eax         #   4:     assign v4 <- t3
++     movl    -20(%ebp), %eax         #   8:     assign v4 <- t3
+-     call    ReadInt                 #   5:     call   t4 <- ReadInt
++     call    ReadInt                 #   9:     call   t4 <- ReadInt

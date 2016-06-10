@@ -1,0 +1,20 @@
++     jmp     l_f0_18                 #  49:     goto   18
+-     movl    $1, %eax                #  50:     assign t24 <- 1
++     movl    $1, %eax                #  51:     assign t24 <- 1
+-     jmp     l_f0_19                 #  51:     goto   19
++     jmp     l_f0_19                 #  52:     goto   19
++ l_f0_18:
+-     movl    $0, %eax                #  52:     assign t24 <- 0
++     movl    $0, %eax                #  54:     assign t24 <- 0
+-     movzbl  -66(%ebp), %eax         #  54:     return t24
++     movzbl  -66(%ebp), %eax         #  56:     return t24
+-     jmp     l_f0_7_while_cond       #  55:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  57:     goto   7_while_cond
+-     #  -5304(%ebp)5274  [ $v4       <array 3 of <array 5 of <array 7 of <array 5 of <array 10 of <char>>>>>> %ebp-5304 ]
++     #   -5304(%ebp)  5274  [ $v4       <array 3 of <array 5 of <array 7 of <array 5 of <array 10 of <char>>>>>> %ebp-5304 ]
+-     # -16528(%ebp)11224  [ $v5       <array 1 of <array 7 of <array 10 of <array 5 of <array 8 of <int>>>>>> %ebp-16528 ]
++     #   -16528(%ebp)  11224  [ $v5       <array 1 of <array 7 of <array 10 of <array 5 of <array 8 of <int>>>>>> %ebp-16528 ]
+-     # -24328(%ebp)7800  [ $v6       <array 6 of <array 6 of <array 3 of <array 6 of <array 3 of <int>>>>>> %ebp-24328 ]
++     #   -24328(%ebp)  7800  [ $v6       <array 6 of <array 6 of <array 3 of <array 6 of <array 3 of <int>>>>>> %ebp-24328 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              

@@ -1,0 +1,33 @@
++     jmp     l_f0_3_if_false         #   2:     goto   3_if_false
+-     movl    $2970, %eax             #   2:     if     2970 < 18837 goto 6_if_true
++     movl    $2970, %eax             #   3:     if     2970 < 18837 goto 6_if_true
+-     jmp     l_f0_7_if_false         #   3:     goto   7_if_false
++     jmp     l_f0_7_if_false         #   4:     goto   7_if_false
+-     jmp     l_f0_5                  #   5:     goto   5
++     jmp     l_f0_5                  #   6:     goto   5
+-     jmp     l_f0_1                  #   8:     goto   1
++     jmp     l_f0_1                  #   9:     goto   1
++ l_f0_3_if_false:
+-     jmp     l_f0_10_if_true         #  10:     goto   10_if_true
++     jmp     l_f0_10_if_true         #  12:     goto   10_if_true
+-     jmp     l_f0_13                 #  13:     goto   13
++     jmp     l_f0_13                 #  15:     goto   13
+-     jmp     l_f0_14_while_cond      #  14:     goto   14_while_cond
++     jmp     l_f0_14_while_cond      #  16:     goto   14_while_cond
+-     movl    $97, %eax               #  16:     return 97
++     movl    $97, %eax               #  18:     return 97
+-     movl    $98, %eax               #  17:     return 98
++     movl    $98, %eax               #  19:     return 98
+-     jmp     l_f0_9                  #  18:     goto   9
++     jmp     l_f0_9                  #  20:     goto   9
++     jmp     l_f2_13                 #  11:     goto   13
++     jmp     l_f2_13                 #  12:     goto   13
++     jmp     l_f2_13                 #  13:     goto   13
++     jmp     l_f2_13                 #  14:     goto   13
+-     jmp     l_f2_19                 #  12:     goto   19
++     jmp     l_f2_19                 #  16:     goto   19
+-     jmp     l_f2_20_while_cond      #  13:     goto   20_while_cond
++     jmp     l_f2_20_while_cond      #  17:     goto   20_while_cond
+-     jmp     l_f2_14_while_cond      #  15:     goto   14_while_cond
++     jmp     l_f2_14_while_cond      #  19:     goto   14_while_cond
++ l_f2_13:

@@ -1,0 +1,55 @@
++     jmp     l_f0_2_if_false         #   0:     goto   2_if_false
+-     call    dummyBOOLfunc           #   0:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   1:     call   t5 <- dummyBOOLfunc
+-     jmp     l_f0_0                  #   1:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
++ l_f0_2_if_false:
++     jmp     l_f0_5                  #   6:     goto   5
++     jmp     l_f0_5                  #   7:     goto   5
+-     jmp     l_f0_6_while_cond       #   4:     goto   6_while_cond
++     jmp     l_f0_6_while_cond       #   8:     goto   6_while_cond
++ l_f0_5:
+-     call    ReadInt                 #   5:     call   t6 <- ReadInt
++     call    ReadInt                 #  10:     call   t6 <- ReadInt
+-     # -42392(%ebp)42360  [ $v2       <array 4 of <array 9 of <array 6 of <array 7 of <array 7 of <int>>>>>> %ebp-42392 ]
++     #   -42392(%ebp)  42360  [ $v2       <array 4 of <array 9 of <array 6 of <array 7 of <array 7 of <int>>>>>> %ebp-42392 ]
+-     # -47456(%ebp)5064  [ $v3       <array 2 of <array 5 of <array 8 of <array 9 of <array 7 of <char>>>>>> %ebp-47456 ]
++     #   -47456(%ebp)  5064  [ $v3       <array 2 of <array 5 of <array 8 of <array 9 of <array 7 of <char>>>>>> %ebp-47456 ]
+-     # -47457(%ebp)   1  [ $v4       <bool> %ebp-47457 ]
++     #   -47457(%ebp)   1  [ $v4       <bool> %ebp-47457 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              
++     jmp     l_test_4_if_false       #   3:     goto   4_if_false
+-     call    dummyCHARfunc           #   4:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #   5:     call   t1 <- dummyCHARfunc
+-     jmp     l_test_11_if_false      #   5:     goto   11_if_false
++     jmp     l_test_11_if_false      #   6:     goto   11_if_false
+-     jmp     l_test_9                #   6:     goto   9
++     jmp     l_test_9                #   7:     goto   9
+-     jmp     l_test_14_if_false      #   9:     goto   14_if_false
++     jmp     l_test_14_if_false      #  10:     goto   14_if_false
+-     jmp     l_test_12               #  10:     goto   12
++     jmp     l_test_12               #  11:     goto   12
+-     movl    $98, %eax               #  13:     param  2 <- 98
++     movl    $98, %eax               #  14:     param  2 <- 98
+-     leal    v2, %eax                #  14:     &()    t2 <- v2
++     leal    v2, %eax                #  15:     &()    t2 <- v2
+-     movl    -20(%ebp), %eax         #  15:     param  1 <- t2
++     movl    -20(%ebp), %eax         #  16:     param  1 <- t2
+-     leal    v1, %eax                #  16:     &()    t3 <- v1
++     leal    v1, %eax                #  17:     &()    t3 <- v1
+-     movl    -24(%ebp), %eax         #  17:     param  0 <- t3
++     movl    -24(%ebp), %eax         #  18:     param  0 <- t3
+-     call    f1                      #  18:     call   t4 <- f1
++     call    f1                      #  19:     call   t4 <- f1
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     movl    $100, %eax              #  19:     if     100 >= 97 goto 17_if_true
++     movl    $100, %eax              #  20:     if     100 >= 97 goto 17_if_true
+-     jmp     l_test_18_if_false      #  20:     goto   18_if_false
++     jmp     l_test_18_if_false      #  21:     goto   18_if_false
+-     jmp     l_test_16               #  22:     goto   16
++     jmp     l_test_16               #  23:     goto   16
+-     jmp     l_test_2                #  25:     goto   2
++     jmp     l_test_2                #  26:     goto   2
++ l_test_4_if_false:

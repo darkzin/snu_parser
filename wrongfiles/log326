@@ -1,0 +1,26 @@
++     jmp     l_f1_12_if_false        #  36:     goto   12_if_false
+-     call    dummyBOOLfunc           #  36:     call   t18 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  37:     call   t18 <- dummyBOOLfunc
+-     movl    $76891, %eax            #  38:     if     76891 >= 97388 goto 17_while_body
++     movl    $76891, %eax            #  39:     if     76891 >= 97388 goto 17_while_body
+-     jmp     l_f1_15                 #  39:     goto   15
++     jmp     l_f1_15                 #  40:     goto   15
+-     jmp     l_f1_16_while_cond      #  41:     goto   16_while_cond
++     jmp     l_f1_16_while_cond      #  42:     goto   16_while_cond
+-     call    dummyBOOLfunc           #  43:     call   t19 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  44:     call   t19 <- dummyBOOLfunc
+-     jmp     l_f1_10                 #  44:     goto   10
++     jmp     l_f1_10                 #  45:     goto   10
++ l_f1_12_if_false:
+-     call    dummyINTfunc            #  46:     call   t20 <- dummyINTfunc
++     call    dummyINTfunc            #  48:     call   t20 <- dummyINTfunc
+-     movl    -56(%ebp), %eax         #  47:     div    t21 <- t20, 98042
++     movl    -56(%ebp), %eax         #  49:     div    t21 <- t20, 98042
+-     movl    -60(%ebp), %eax         #  48:     div    t22 <- t21, 12743
++     movl    -60(%ebp), %eax         #  50:     div    t22 <- t21, 12743
+-     movl    -64(%ebp), %eax         #  49:     if     t22 <= 62113 goto 21_if_true
++     movl    -64(%ebp), %eax         #  51:     if     t22 <= 62113 goto 21_if_true
+-     jmp     l_f1_22_if_false        #  50:     goto   22_if_false
++     jmp     l_f1_22_if_false        #  52:     goto   22_if_false
+-     jmp     l_f1_20                 #  52:     goto   20
++     jmp     l_f1_20                 #  54:     goto   20

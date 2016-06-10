@@ -1,0 +1,61 @@
++     jmp     l_f0_8                  #  12:     goto   8
++     jmp     l_f0_8                  #  13:     goto   8
+-     movl    $1, %eax                #  13:     assign t3 <- 1
++     movl    $1, %eax                #  15:     assign t3 <- 1
+-     jmp     l_f0_9                  #  14:     goto   9
++     jmp     l_f0_9                  #  16:     goto   9
++ l_f0_8:
+-     movl    $0, %eax                #  15:     assign t3 <- 0
++     movl    $0, %eax                #  18:     assign t3 <- 0
+-     movl    $2, %eax                #  17:     param  1 <- 2
++     movl    $2, %eax                #  20:     param  1 <- 2
+-     movl    12(%ebp), %eax          #  18:     param  0 <- v2
++     movl    12(%ebp), %eax          #  21:     param  0 <- v2
+-     call    DIM                     #  19:     call   t4 <- DIM
++     call    DIM                     #  22:     call   t4 <- DIM
+-     movl    $17034, %eax            #  20:     mul    t5 <- 17034, t4
++     movl    $17034, %eax            #  23:     mul    t5 <- 17034, t4
+-     movl    -76(%ebp), %eax         #  21:     add    t6 <- t5, 76319
++     movl    -76(%ebp), %eax         #  24:     add    t6 <- t5, 76319
+-     movl    $3, %eax                #  22:     param  1 <- 3
++     movl    $3, %eax                #  25:     param  1 <- 3
+-     movl    12(%ebp), %eax          #  23:     param  0 <- v2
++     movl    12(%ebp), %eax          #  26:     param  0 <- v2
+-     call    DIM                     #  24:     call   t7 <- DIM
++     call    DIM                     #  27:     call   t7 <- DIM
+-     movl    -80(%ebp), %eax         #  25:     mul    t8 <- t6, t7
++     movl    -80(%ebp), %eax         #  28:     mul    t8 <- t6, t7
+-     movl    -88(%ebp), %eax         #  26:     add    t9 <- t8, 20195
++     movl    -88(%ebp), %eax         #  29:     add    t9 <- t8, 20195
+-     movl    $4, %eax                #  27:     param  1 <- 4
++     movl    $4, %eax                #  30:     param  1 <- 4
+-     movl    12(%ebp), %eax          #  28:     param  0 <- v2
++     movl    12(%ebp), %eax          #  31:     param  0 <- v2
+-     call    DIM                     #  29:     call   t10 <- DIM
++     call    DIM                     #  32:     call   t10 <- DIM
+-     movl    -92(%ebp), %eax         #  30:     mul    t11 <- t9, t10
++     movl    -92(%ebp), %eax         #  33:     mul    t11 <- t9, t10
+-     movl    -28(%ebp), %eax         #  31:     add    t12 <- t11, 83239
++     movl    -28(%ebp), %eax         #  34:     add    t12 <- t11, 83239
+-     movl    $5, %eax                #  32:     param  1 <- 5
++     movl    $5, %eax                #  35:     param  1 <- 5
+-     movl    12(%ebp), %eax          #  33:     param  0 <- v2
++     movl    12(%ebp), %eax          #  36:     param  0 <- v2
+-     call    DIM                     #  34:     call   t13 <- DIM
++     call    DIM                     #  37:     call   t13 <- DIM
+-     movl    -32(%ebp), %eax         #  35:     mul    t14 <- t12, t13
++     movl    -32(%ebp), %eax         #  38:     mul    t14 <- t12, t13
+-     movl    -40(%ebp), %eax         #  36:     add    t15 <- t14, 49143
++     movl    -40(%ebp), %eax         #  39:     add    t15 <- t14, 49143
+-     movl    -44(%ebp), %eax         #  37:     mul    t16 <- t15, 1
++     movl    -44(%ebp), %eax         #  40:     mul    t16 <- t15, 1
+-     movl    12(%ebp), %eax          #  38:     param  0 <- v2
++     movl    12(%ebp), %eax          #  41:     param  0 <- v2
+-     call    DOFS                    #  39:     call   t17 <- DOFS
++     call    DOFS                    #  42:     call   t17 <- DOFS
+-     movl    -48(%ebp), %eax         #  40:     add    t18 <- t16, t17
++     movl    -48(%ebp), %eax         #  43:     add    t18 <- t16, t17
+-     movl    12(%ebp), %eax          #  41:     add    t19 <- v2, t18
++     movl    12(%ebp), %eax          #  44:     add    t19 <- v2, t18
+-     movzbl  -65(%ebp), %eax         #  42:     assign @t19 <- t3
++     movzbl  -65(%ebp), %eax         #  45:     assign @t19 <- t3

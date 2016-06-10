@@ -1,0 +1,28 @@
+-     addl    $5, %esp               
++     addl    $8, %esp               
++     jmp     l_test_17               #  23:     goto   17
+-     movl    $1, %eax                #  24:     assign t4 <- 1
++     movl    $1, %eax                #  25:     assign t4 <- 1
+-     jmp     l_test_18               #  25:     goto   18
++     jmp     l_test_18               #  26:     goto   18
++ l_test_17:
+-     movl    $0, %eax                #  26:     assign t4 <- 0
++     movl    $0, %eax                #  28:     assign t4 <- 0
+-     movzbl  -29(%ebp), %eax         #  28:     param  1 <- t4
++     movzbl  -29(%ebp), %eax         #  30:     param  1 <- t4
+-     leal    v3, %eax                #  29:     &()    t5 <- v3
++     leal    v3, %eax                #  31:     &()    t5 <- v3
+-     movl    -36(%ebp), %eax         #  30:     param  0 <- t5
++     movl    -36(%ebp), %eax         #  32:     param  0 <- t5
+-     call    f2                      #  31:     call   t6 <- f2
++     call    f2                      #  33:     call   t6 <- f2
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     movl    $97, %eax               #  33:     if     97 < 98 goto 22_while_body
++     movl    $97, %eax               #  35:     if     97 < 98 goto 22_while_body
+-     jmp     l_test_20               #  34:     goto   20
++     jmp     l_test_20               #  36:     goto   20
+-     call    dummyBOOLfunc           #  37:     call   t7 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  39:     call   t7 <- dummyBOOLfunc
+-     jmp     l_test_21_while_cond    #  38:     goto   21_while_cond
++     jmp     l_test_21_while_cond    #  40:     goto   21_while_cond

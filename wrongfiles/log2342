@@ -1,0 +1,53 @@
+-     addl    $6, %esp               
++     addl    $12, %esp              
++     jmp     l_test_0                #   1:     goto   0
++     jmp     l_test_0                #   2:     goto   0
++     jmp     l_test_0                #   3:     goto   0
+-     movl    $97, %eax               #   1:     param  0 <- 97
++     movl    $97, %eax               #   4:     param  0 <- 97
+-     call    WriteChar               #   2:     call   WriteChar
++     call    WriteChar               #   5:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     call    ReadInt                 #   4:     call   t0 <- ReadInt
++     call    ReadInt                 #   7:     call   t0 <- ReadInt
+-     call    dummyBOOLfunc           #   5:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   8:     call   t1 <- dummyBOOLfunc
+-     jmp     l_test_10               #   6:     goto   10
++     jmp     l_test_10               #   9:     goto   10
+-     jmp     l_test_1_while_cond     #   9:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #  12:     goto   1_while_cond
++ l_test_0:
+-     call    dummyBOOLfunc           #  10:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  14:     call   t2 <- dummyBOOLfunc
+-     jmp     l_test_14               #  11:     goto   14
++     jmp     l_test_14               #  15:     goto   14
++     jmp     l_test_26               #  19:     goto   26
++     jmp     l_test_26               #  20:     goto   26
+-     movl    $1, %eax                #  15:     assign t3 <- 1
++     movl    $1, %eax                #  21:     assign t3 <- 1
+-     jmp     l_test_26               #  16:     goto   26
++     jmp     l_test_27               #  22:     goto   27
++ l_test_26:
+-     movl    $0, %eax                #  17:     assign t3 <- 0
++     movl    $0, %eax                #  24:     assign t3 <- 0
+- l_test_26:
++ l_test_27:
+-     movzbl  -19(%ebp), %eax         #  19:     if     t3 # 1 goto 23_while_body
++     movzbl  -19(%ebp), %eax         #  26:     if     t3 # 1 goto 23_while_body
+-     jmp     l_test_21               #  20:     goto   21
++     jmp     l_test_21               #  27:     goto   21
+-     jmp     l_test_22_while_cond    #  22:     goto   22_while_cond
++     jmp     l_test_22_while_cond    #  29:     goto   22_while_cond
+-     jmp     l_test_19_while_cond    #  24:     goto   19_while_cond
++     jmp     l_test_19_while_cond    #  31:     goto   19_while_cond
+-     movl    $0, %eax                #  25:     assign v0 <- 0
++     movl    $0, %eax                #  32:     assign v0 <- 0
+-     movl    $100, %eax              #  26:     if     100 < 97 goto 36_if_true
++     movl    $100, %eax              #  33:     if     100 < 97 goto 36_if_true
+-     jmp     l_test_37_if_false      #  27:     goto   37_if_false
++     jmp     l_test_37_if_false      #  34:     goto   37_if_false
+-     jmp     l_test_35               #  29:     goto   35
++     jmp     l_test_35               #  36:     goto   35
+-     jmp     l_test_31               #  32:     goto   31
++     jmp     l_test_31               #  39:     goto   31

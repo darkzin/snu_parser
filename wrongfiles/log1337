@@ -1,0 +1,14 @@
++     jmp     l_f0_8                  #  12:     goto   8
+-     movl    $1, %eax                #  13:     assign t7 <- 1
++     movl    $1, %eax                #  14:     assign t7 <- 1
+-     jmp     l_f0_9                  #  14:     goto   9
++     jmp     l_f0_9                  #  15:     goto   9
++ l_f0_8:
+-     movl    $0, %eax                #  15:     assign t7 <- 0
++     movl    $0, %eax                #  17:     assign t7 <- 0
+-     movzbl  -15(%ebp), %eax         #  17:     assign v2 <- t7
++     movzbl  -15(%ebp), %eax         #  19:     assign v2 <- t7
+-     #-87463016(%ebp)87462984  [ $v0       <array 51 of <array 13 of <array 97 of <array 20 of <array 17 of <int>>>>>> %ebp-87463016 ]
++     #   -87463016(%ebp)  87462984  [ $v0       <array 51 of <array 13 of <array 97 of <array 20 of <array 17 of <int>>>>>> %ebp-87463016 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               

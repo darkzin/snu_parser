@@ -1,0 +1,40 @@
++     jmp     l_test_2_if_false       #   3:     goto   2_if_false
+-     jmp     l_test_0                #   4:     goto   0
++     jmp     l_test_0                #   5:     goto   0
++ l_test_2_if_false:
+-     movl    $18189, %eax            #   7:     mul    t0 <- 18189, 27866
++     movl    $18189, %eax            #   9:     mul    t0 <- 18189, 27866
+-     movl    $39705, %eax            #   8:     sub    t1 <- 39705, 71074
++     movl    $39705, %eax            #  10:     sub    t1 <- 39705, 71074
+-     movl    -16(%ebp), %eax         #   9:     if     t0 > t1 goto 10_while_body
++     movl    -16(%ebp), %eax         #  11:     if     t0 > t1 goto 10_while_body
+-     jmp     l_test_8                #  10:     goto   8
++     jmp     l_test_8                #  12:     goto   8
+-     jmp     l_test_9_while_cond     #  12:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #  14:     goto   9_while_cond
+-     movl    $97, %eax               #  15:     if     97 < 100 goto 14_while_body
++     movl    $97, %eax               #  17:     if     97 < 100 goto 14_while_body
+-     jmp     l_test_12               #  16:     goto   12
++     jmp     l_test_12               #  18:     goto   12
+-     call    WriteLn                 #  18:     call   WriteLn
++     call    WriteLn                 #  20:     call   WriteLn
+-     jmp     l_test_17               #  19:     goto   17
++     jmp     l_test_17               #  21:     goto   17
+-     jmp     l_test_13_while_cond    #  21:     goto   13_while_cond
++     jmp     l_test_13_while_cond    #  23:     goto   13_while_cond
+-     jmp     l_test_22_if_false      #  23:     goto   22_if_false
++     jmp     l_test_22_if_false      #  25:     goto   22_if_false
+-     jmp     l_test_24_while_cond    #  25:     goto   24_while_cond
++     jmp     l_test_24_while_cond    #  27:     goto   24_while_cond
+-     movl    $99, %eax               #  26:     if     99 < 98 goto 27_if_true
++     movl    $99, %eax               #  28:     if     99 < 98 goto 27_if_true
+-     jmp     l_test_28_if_false      #  27:     goto   28_if_false
++     jmp     l_test_28_if_false      #  29:     goto   28_if_false
+-     jmp     l_test_26               #  29:     goto   26
++     jmp     l_test_26               #  31:     goto   26
+-     jmp     l_test_32               #  35:     goto   32
++     jmp     l_test_32               #  37:     goto   32
+-     jmp     l_test_33_while_cond    #  36:     goto   33_while_cond
++     jmp     l_test_33_while_cond    #  38:     goto   33_while_cond
+-     jmp     l_test_20               #  38:     goto   20
++     jmp     l_test_20               #  40:     goto   20

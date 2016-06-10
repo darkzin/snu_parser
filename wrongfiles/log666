@@ -1,0 +1,38 @@
++     jmp     l_f1_0                  #   2:     goto   0
+-     movl    $76966, %eax            #   3:     param  0 <- 76966
++     movl    $76966, %eax            #   4:     param  0 <- 76966
+-     call    WriteInt                #   4:     call   WriteInt
++     call    WriteInt                #   5:     call   WriteInt
+-     call    dummyINTfunc            #   5:     call   t4 <- dummyINTfunc
++     call    dummyINTfunc            #   6:     call   t4 <- dummyINTfunc
+-     movl    $89958, %eax            #   7:     if     89958 <= 81020 goto 8_while_body
++     movl    $89958, %eax            #   8:     if     89958 <= 81020 goto 8_while_body
+-     jmp     l_f1_6                  #   8:     goto   6
++     jmp     l_f1_6                  #   9:     goto   6
+-     jmp     l_f1_7_while_cond       #  10:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #  11:     goto   7_while_cond
+-     jmp     l_f1_1_while_cond       #  12:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #  13:     goto   1_while_cond
++ l_f1_0:
+-     movl    $64782, %eax            #  13:     mul    t5 <- 64782, 66481
++     movl    $64782, %eax            #  15:     mul    t5 <- 64782, 66481
+-     movl    -20(%ebp), %eax         #  14:     mul    t6 <- t5, 15597
++     movl    -20(%ebp), %eax         #  16:     mul    t6 <- t5, 15597
+-     movl    -24(%ebp), %eax         #  15:     mul    t7 <- t6, 69301
++     movl    -24(%ebp), %eax         #  17:     mul    t7 <- t6, 69301
+-     movl    -28(%ebp), %eax         #  16:     return t7
++     movl    -28(%ebp), %eax         #  18:     return t7
+-     call    dummyProcedure          #  17:     call   dummyProcedure
++     call    dummyProcedure          #  19:     call   dummyProcedure
+-     # -46140(%ebp)46104  [ $v2       <array 10 of <array 2 of <array 9 of <array 8 of <array 8 of <int>>>>>> %ebp-46140 ]
++     #   -46140(%ebp)  46104  [ $v2       <array 10 of <array 2 of <array 9 of <array 8 of <array 8 of <int>>>>>> %ebp-46140 ]
+-     # -46836(%ebp) 696  [ $v3       <array 3 of <array 4 of <array 8 of <array 1 of <array 7 of <bool>>>>>> %ebp-46836 ]
++     #   -46836(%ebp)  696  [ $v3       <array 3 of <array 4 of <array 8 of <array 1 of <array 7 of <bool>>>>>> %ebp-46836 ]
+-     # -74860(%ebp)28024  [ $v4       <array 7 of <array 10 of <array 5 of <array 10 of <array 2 of <int>>>>>> %ebp-74860 ]
++     #   -74860(%ebp)  28024  [ $v4       <array 7 of <array 10 of <array 5 of <array 10 of <array 2 of <int>>>>>> %ebp-74860 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     addl    $13, %esp              
++     addl    $16, %esp              
+-     addl    $5, %esp               
++     addl    $8, %esp               

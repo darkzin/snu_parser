@@ -1,0 +1,32 @@
++     jmp     l_f1_3                  #   1:     goto   3
+-     movl    $27351, %eax            #   1:     if     27351 > 12576 goto 2
++     movl    $27351, %eax            #   2:     if     27351 > 12576 goto 2
+-     jmp     l_f1_3                  #   2:     goto   3
++     jmp     l_f1_3                  #   3:     goto   3
+-     movl    $1, %eax                #   4:     assign t13 <- 1
++     movl    $1, %eax                #   5:     assign t13 <- 1
+-     jmp     l_f1_4                  #   5:     goto   4
++     jmp     l_f1_4                  #   6:     goto   4
+-     movl    $0, %eax                #   7:     assign t13 <- 0
++     movl    $0, %eax                #   8:     assign t13 <- 0
+-     movzbl  -13(%ebp), %eax         #   9:     assign v4 <- t13
++     movzbl  -13(%ebp), %eax         #  10:     assign v4 <- t13
+-     movl    $60814, %eax            #  11:     if     60814 # 67782 goto 10_while_body
++     movl    $60814, %eax            #  12:     if     60814 # 67782 goto 10_while_body
+-     jmp     l_f1_8                  #  12:     goto   8
++     jmp     l_f1_8                  #  13:     goto   8
+-     call    ReadInt                 #  15:     call   t14 <- ReadInt
++     call    ReadInt                 #  16:     call   t14 <- ReadInt
+-     movl    $99, %eax               #  16:     assign v0 <- 99
++     movl    $99, %eax               #  17:     assign v0 <- 99
+-     jmp     l_f1_13_while_cond      #  17:     goto   13_while_cond
++     jmp     l_f1_13_while_cond      #  18:     goto   13_while_cond
+-     jmp     l_f1_9_while_cond       #  18:     goto   9_while_cond
++     jmp     l_f1_9_while_cond       #  19:     goto   9_while_cond
++     jmp     l_f2_2                  #   3:     goto   2
++     jmp     l_f2_2                  #   4:     goto   2
+-     jmp     l_f2_3_while_cond       #   3:     goto   3_while_cond
++     jmp     l_f2_3_while_cond       #   5:     goto   3_while_cond
++ l_f2_2:
+-     addl    $9, %esp               
++     addl    $12, %esp              

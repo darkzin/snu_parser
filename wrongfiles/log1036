@@ -1,0 +1,18 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f2_5                  #  13:     goto   5
+-     jmp     l_f2_6_while_cond       #  14:     goto   6_while_cond
++     jmp     l_f2_6_while_cond       #  15:     goto   6_while_cond
++ l_f2_5:
+-     movl    $98602, %eax            #  15:     sub    t2 <- 98602, 18987
++     movl    $98602, %eax            #  17:     sub    t2 <- 98602, 18987
+-     movl    -20(%ebp), %eax         #  16:     add    t3 <- t2, 47499
++     movl    -20(%ebp), %eax         #  18:     add    t3 <- t2, 47499
+-     movl    -24(%ebp), %eax         #  17:     sub    t4 <- t3, 49931
++     movl    -24(%ebp), %eax         #  19:     sub    t4 <- t3, 49931
+-     movl    -28(%ebp), %eax         #  18:     add    t5 <- t4, 4781
++     movl    -28(%ebp), %eax         #  20:     add    t5 <- t4, 4781
+-     movl    -32(%ebp), %eax         #  19:     param  0 <- t5
++     movl    -32(%ebp), %eax         #  21:     param  0 <- t5
+-     call    WriteInt                #  20:     call   WriteInt
++     call    WriteInt                #  22:     call   WriteInt

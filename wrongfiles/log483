@@ -1,0 +1,50 @@
+-     jmp     l_f1_3                  #   1:     goto   3
++     jmp     l_f1_8                  #   1:     goto   8
+- l_f1_3:
++ l_f1_8:
++     jmp     l_f1_4                  #   3:     goto   4
++     jmp     l_f1_5                  #   4:     goto   5
++ l_f1_4:
+-     movl    $1, %eax                #   3:     assign t1 <- 1
++     movl    $1, %eax                #   6:     assign t1 <- 1
+-     jmp     l_f1_5                  #   4:     goto   5
++     jmp     l_f1_6                  #   7:     goto   6
++ l_f1_5:
+-     movl    $0, %eax                #   5:     assign t1 <- 0
++     movl    $0, %eax                #   9:     assign t1 <- 0
+- l_f1_5:
++ l_f1_6:
+-     movl    $1, %eax                #   7:     if     1 # t1 goto 2_while_body
++     movl    $1, %eax                #  11:     if     1 # t1 goto 2_while_body
+-     jmp     l_f1_0                  #   8:     goto   0
++     jmp     l_f1_0                  #  12:     goto   0
+-     jmp     l_f1_1_while_cond       #  10:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #  14:     goto   1_while_cond
+-     jmp     l_f1_16_if_false        #  12:     goto   16_if_false
++     jmp     l_f1_16_if_false        #  16:     goto   16_if_false
+-     call    ReadInt                 #  13:     call   t2 <- ReadInt
++     call    ReadInt                 #  17:     call   t2 <- ReadInt
+-     jmp     l_f1_18                 #  14:     goto   18
++     jmp     l_f1_18                 #  18:     goto   18
+-     movl    $1, %eax                #  16:     if     1 = 1 goto 22_if_true
++     movl    $1, %eax                #  20:     if     1 = 1 goto 22_if_true
+-     jmp     l_f1_23_if_false        #  17:     goto   23_if_false
++     jmp     l_f1_23_if_false        #  21:     goto   23_if_false
+-     jmp     l_f1_21                 #  19:     goto   21
++     jmp     l_f1_21                 #  23:     goto   21
+-     jmp     l_f1_27_if_false        #  22:     goto   27_if_false
++     jmp     l_f1_27_if_false        #  26:     goto   27_if_false
+-     jmp     l_f1_25                 #  23:     goto   25
++     jmp     l_f1_25                 #  27:     goto   25
+-     jmp     l_f1_14                 #  26:     goto   14
++     jmp     l_f1_14                 #  30:     goto   14
+-     call    f0                      #  30:     call   t3 <- f0
++     call    f0                      #  34:     call   t3 <- f0
+-     call    f0                      #  31:     call   t4 <- f0
++     call    f0                      #  35:     call   t4 <- f0
+-     movzbl  -21(%ebp), %eax         #  32:     if     t3 # t4 goto 30_while_body
++     movzbl  -21(%ebp), %eax         #  36:     if     t3 # t4 goto 30_while_body
+-     jmp     l_f1_28                 #  33:     goto   28
++     jmp     l_f1_28                 #  37:     goto   28
+-     jmp     l_f1_29_while_cond      #  35:     goto   29_while_cond
++     jmp     l_f1_29_while_cond      #  39:     goto   29_while_cond

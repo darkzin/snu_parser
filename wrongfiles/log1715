@@ -1,0 +1,27 @@
+-     jmp     l_f0_8                  #  15:     goto   8
++     jmp     l_f0_9                  #  15:     goto   9
+- l_f0_8:
++ l_f0_9:
+-     jmp     l_f0_10                 #  18:     goto   10
++     jmp     l_f0_11                 #  18:     goto   11
+- l_f0_10:
++ l_f0_11:
++     jmp     l_f1_3_if_false         #   1:     goto   3_if_false
+-     call    dummyBOOLfunc           #   2:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   3:     call   t4 <- dummyBOOLfunc
+-     jmp     l_f1_1                  #   3:     goto   1
++     jmp     l_f1_1                  #   4:     goto   1
++ l_f1_3_if_false:
+-     #-125167840(%ebp)125167794  [ $v0       <array 13 of <array 85 of <array 63 of <array 58 of <array 31 of <bool>>>>>> %ebp-125167840 ]
++     #   -125167840(%ebp)  125167794  [ $v0       <array 13 of <array 85 of <array 63 of <array 58 of <array 31 of <bool>>>>>> %ebp-125167840 ]
+-     #1655417352(%ebp)-1780585192  [ $v1       <array 83 of <array 96 of <array 70 of <array 98 of <array 46 of <bool>>>>>> %ebp+1655417352 ]
++     #   1655417352(%ebp)  -1780585192  [ $v1       <array 83 of <array 96 of <array 70 of <array 98 of <array 46 of <bool>>>>>> %ebp+1655417352 ]
+-     #1655417348(%ebp)   4  [ $v2       <int> %ebp+1655417348 ]
++     #   1655417348(%ebp)   4  [ $v2       <int> %ebp+1655417348 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $-413854340, %ecx      
++     mov     %esp, %edi             
++     rep     stosl                  
+-     addl    $10, %esp              
++     addl    $16, %esp              

@@ -1,0 +1,14 @@
++     jmp     l_f1_22                 #  82:     goto   22
+-     movl    $16322, %eax            #  82:     assign v2 <- 16322
++     movl    $16322, %eax            #  83:     assign v2 <- 16322
+-     movl    $96671, %eax            #  83:     assign v2 <- 96671
++     movl    $96671, %eax            #  84:     assign v2 <- 96671
+-     jmp     l_f1_23_while_cond      #  84:     goto   23_while_cond
++     jmp     l_f1_23_while_cond      #  85:     goto   23_while_cond
++ l_f1_22:
+-     movl    $100, %eax              #  85:     param  0 <- 100
++     movl    $100, %eax              #  87:     param  0 <- 100
+-     call    WriteChar               #  86:     call   WriteChar
++     call    WriteChar               #  88:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               

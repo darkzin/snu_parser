@@ -1,0 +1,18 @@
++     jmp     l_f0_0                  #   1:     goto   0
+-     movl    $2855, %eax             #   1:     assign v0 <- 2855
++     movl    $2855, %eax             #   2:     assign v0 <- 2855
+-     jmp     l_f0_1_while_cond       #   2:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   3:     goto   1_while_cond
++ l_f0_0:
+-     call    dummyBOOLfunc           #   3:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   5:     call   t3 <- dummyBOOLfunc
+-     call    dummyCHARfunc           #   5:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #   7:     call   t4 <- dummyCHARfunc
+-     movzbl  -14(%ebp), %eax         #   6:     if     t4 < 99 goto 9_while_body
++     movzbl  -14(%ebp), %eax         #   8:     if     t4 < 99 goto 9_while_body
+-     jmp     l_f0_7                  #   7:     goto   7
++     jmp     l_f0_7                  #   9:     goto   7
+-     jmp     l_f0_8_while_cond       #   9:     goto   8_while_cond
++     jmp     l_f0_8_while_cond       #  11:     goto   8_while_cond
+-     addl    $2, %esp               
++     addl    $8, %esp               

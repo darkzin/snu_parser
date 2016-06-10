@@ -1,0 +1,13 @@
++     jmp     l_f0_6                  #  12:     goto   6
++     jmp     l_f0_6                  #  13:     goto   6
+-     movl    $99, %eax               #  13:     if     99 = 97 goto 13_while_body
++     movl    $99, %eax               #  15:     if     99 = 97 goto 13_while_body
+-     jmp     l_f0_11                 #  14:     goto   11
++     jmp     l_f0_11                 #  16:     goto   11
+-     jmp     l_f0_12_while_cond      #  16:     goto   12_while_cond
++     jmp     l_f0_12_while_cond      #  18:     goto   12_while_cond
+-     jmp     l_f0_7_while_cond       #  18:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  20:     goto   7_while_cond
++ l_f0_6:
+-     addl    $3, %esp               
++     addl    $12, %esp              

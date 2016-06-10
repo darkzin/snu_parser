@@ -1,0 +1,38 @@
+-     #  -1016(%ebp) 984  [ $v4       <array 2 of <array 6 of <array 10 of <array 2 of <array 4 of <char>>>>>> %ebp-1016 ]
++     #   -1016(%ebp)  984  [ $v4       <array 2 of <array 6 of <array 10 of <array 2 of <array 4 of <char>>>>>> %ebp-1016 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              
++     jmp     l_test_15               #  24:     goto   15
+-     jmp     l_test_24_if_false      #  25:     goto   24_if_false
++     jmp     l_test_24_if_false      #  26:     goto   24_if_false
+-     jmp     l_test_22               #  26:     goto   22
++     jmp     l_test_22               #  27:     goto   22
+-     movl    $95318, %eax            #  30:     if     95318 < 50927 goto 27_while_body
++     movl    $95318, %eax            #  31:     if     95318 < 50927 goto 27_while_body
+-     jmp     l_test_25               #  31:     goto   25
++     jmp     l_test_25               #  32:     goto   25
+-     jmp     l_test_26_while_cond    #  33:     goto   26_while_cond
++     jmp     l_test_26_while_cond    #  34:     goto   26_while_cond
+-     call    dummyBOOLfunc           #  35:     call   t0 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  36:     call   t0 <- dummyBOOLfunc
+-     jmp     l_test_16_while_cond    #  37:     goto   16_while_cond
++     jmp     l_test_16_while_cond    #  38:     goto   16_while_cond
++ l_test_15:
+-     call    dummyBOOLfunc           #  39:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  41:     call   t1 <- dummyBOOLfunc
+-     movzbl  -14(%ebp), %eax         #  40:     if     t1 = 1 goto 33_while_body
++     movzbl  -14(%ebp), %eax         #  42:     if     t1 = 1 goto 33_while_body
+-     jmp     l_test_31               #  41:     goto   31
++     jmp     l_test_31               #  43:     goto   31
+-     jmp     l_test_32_while_cond    #  43:     goto   32_while_cond
++     jmp     l_test_32_while_cond    #  45:     goto   32_while_cond
+-     call    dummyCHARfunc           #  45:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  47:     call   t2 <- dummyCHARfunc
+-     movl    $99, %eax               #  46:     if     99 >= t2 goto 35_if_true
++     movl    $99, %eax               #  48:     if     99 >= t2 goto 35_if_true
+-     jmp     l_test_36_if_false      #  47:     goto   36_if_false
++     jmp     l_test_36_if_false      #  49:     goto   36_if_false
+-     jmp     l_test_34               #  50:     goto   34
++     jmp     l_test_34               #  52:     goto   34
+-     call    dummyCHARfunc           #  53:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  55:     call   t3 <- dummyCHARfunc

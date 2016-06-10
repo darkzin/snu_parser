@@ -1,0 +1,103 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     #1182756300(%ebp)-1182756328  [ $v3       <array 96 of <array 41 of <array 76 of <array 51 of <array 51 of <int>>>>>> %ebp+1182756300 ]
++     #   1182756300(%ebp)  -1182756328  [ $v3       <array 96 of <array 41 of <array 76 of <array 51 of <array 51 of <int>>>>>> %ebp+1182756300 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $-295689078, %ecx      
++     mov     %esp, %edi             
++     rep     stosl                  
++     jmp     l_test_2_if_false       #   1:     goto   2_if_false
+-     movl    $99, %eax               #   2:     if     99 < 100 goto 8
++     movl    $99, %eax               #   3:     if     99 < 100 goto 8
+-     jmp     l_test_9                #   3:     goto   9
++     jmp     l_test_9                #   4:     goto   9
+-     movl    $1, %eax                #   5:     assign t0 <- 1
++     movl    $1, %eax                #   6:     assign t0 <- 1
+-     jmp     l_test_10               #   6:     goto   10
++     jmp     l_test_10               #   7:     goto   10
+-     movl    $0, %eax                #   8:     assign t0 <- 0
++     movl    $0, %eax                #   9:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #  10:     assign v0 <- t0
++     movzbl  -13(%ebp), %eax         #  11:     assign v0 <- t0
+-     call    dummyCHARfunc           #  11:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  12:     call   t1 <- dummyCHARfunc
+-     movl    $0, %eax                #  13:     if     0 # 0 goto 15_while_body
++     movl    $0, %eax                #  14:     if     0 # 0 goto 15_while_body
+-     jmp     l_test_13               #  14:     goto   13
++     jmp     l_test_13               #  15:     goto   13
+-     jmp     l_test_14_while_cond    #  16:     goto   14_while_cond
++     jmp     l_test_14_while_cond    #  17:     goto   14_while_cond
+-     movl    $24932, %eax            #  18:     if     24932 < 14434 goto 18
++     movl    $24932, %eax            #  19:     if     24932 < 14434 goto 18
+-     jmp     l_test_19               #  19:     goto   19
++     jmp     l_test_19               #  20:     goto   19
+-     movl    $1, %eax                #  21:     assign t2 <- 1
++     movl    $1, %eax                #  22:     assign t2 <- 1
+-     jmp     l_test_20               #  22:     goto   20
++     jmp     l_test_20               #  23:     goto   20
+-     movl    $0, %eax                #  24:     assign t2 <- 0
++     movl    $0, %eax                #  25:     assign t2 <- 0
+-     movzbl  -15(%ebp), %eax         #  26:     assign v0 <- t2
++     movzbl  -15(%ebp), %eax         #  27:     assign v0 <- t2
+-     jmp     l_test_0                #  27:     goto   0
++     jmp     l_test_0                #  28:     goto   0
++ l_test_2_if_false:
+-     call    dummyINTfunc            #  29:     call   t3 <- dummyINTfunc
++     call    dummyINTfunc            #  31:     call   t3 <- dummyINTfunc
+-     jmp     l_test_26               #  31:     goto   26
++     jmp     l_test_27               #  33:     goto   27
++     jmp     l_test_28               #  34:     goto   28
+- l_test_26:
++ l_test_27:
+-     movl    $1, %eax                #  33:     assign t4 <- 1
++     movl    $1, %eax                #  36:     assign t4 <- 1
+-     jmp     l_test_28               #  34:     goto   28
++     jmp     l_test_29               #  37:     goto   29
++ l_test_28:
+-     movl    $0, %eax                #  35:     assign t4 <- 0
++     movl    $0, %eax                #  39:     assign t4 <- 0
+- l_test_28:
++ l_test_29:
+-     movzbl  -21(%ebp), %eax         #  37:     if     t4 = 1 goto 25_while_body
++     movzbl  -21(%ebp), %eax         #  41:     if     t4 = 1 goto 25_while_body
+-     jmp     l_test_23               #  38:     goto   23
++     jmp     l_test_23               #  42:     goto   23
+-     jmp     l_test_33_while_cond    #  41:     goto   33_while_cond
++     jmp     l_test_33_while_cond    #  45:     goto   33_while_cond
+-     movl    $0, %eax                #  43:     if     0 = 0 goto 37_while_body
++     movl    $0, %eax                #  47:     if     0 = 0 goto 37_while_body
+-     jmp     l_test_35               #  44:     goto   35
++     jmp     l_test_35               #  48:     goto   35
+-     jmp     l_test_36_while_cond    #  46:     goto   36_while_cond
++     jmp     l_test_36_while_cond    #  50:     goto   36_while_cond
+-     movl    $3000, %eax             #  48:     if     3000 > 5439 goto 40_if_true
++     movl    $3000, %eax             #  52:     if     3000 > 5439 goto 40_if_true
+-     jmp     l_test_41_if_false      #  49:     goto   41_if_false
++     jmp     l_test_41_if_false      #  53:     goto   41_if_false
+-     jmp     l_test_39               #  51:     goto   39
++     jmp     l_test_39               #  55:     goto   39
+-     jmp     l_test_24_while_cond    #  54:     goto   24_while_cond
++     jmp     l_test_24_while_cond    #  58:     goto   24_while_cond
+-     movl    $78857, %eax            #  57:     assign v1 <- 78857
++     movl    $78857, %eax            #  61:     assign v1 <- 78857
+-     jmp     l_test_49_if_false      #  58:     goto   49_if_false
++     jmp     l_test_49_if_false      #  62:     goto   49_if_false
+-     jmp     l_test_47               #  59:     goto   47
++     jmp     l_test_47               #  63:     goto   47
+-     jmp     l_test_44_while_cond    #  62:     goto   44_while_cond
++     jmp     l_test_44_while_cond    #  66:     goto   44_while_cond
+-     movl    $85716, %eax            #  63:     if     85716 < 79033 goto 51_if_true
++     movl    $85716, %eax            #  67:     if     85716 < 79033 goto 51_if_true
+-     jmp     l_test_52_if_false      #  64:     goto   52_if_false
++     jmp     l_test_52_if_false      #  68:     goto   52_if_false
+-     call    dummyINTfunc            #  66:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #  70:     call   t5 <- dummyINTfunc
+-     jmp     l_test_55               #  68:     goto   55
++     jmp     l_test_55               #  72:     goto   55
+-     jmp     l_test_56_while_cond    #  69:     goto   56_while_cond
++     jmp     l_test_56_while_cond    #  73:     goto   56_while_cond
+-     movl    $0, %eax                #  71:     assign v0 <- 0
++     movl    $0, %eax                #  75:     assign v0 <- 0
+-     jmp     l_test_50               #  72:     goto   50
++     jmp     l_test_50               #  76:     goto   50

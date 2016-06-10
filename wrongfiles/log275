@@ -1,0 +1,40 @@
++     jmp     l_f0_5                  #   0:     goto   5
+-     movl    $1, %eax                #   0:     assign t2 <- 1
++     movl    $1, %eax                #   1:     assign t2 <- 1
+-     jmp     l_f0_5                  #   1:     goto   5
++     jmp     l_f0_6                  #   2:     goto   6
++ l_f0_5:
+-     movl    $0, %eax                #   2:     assign t2 <- 0
++     movl    $0, %eax                #   4:     assign t2 <- 0
+- l_f0_5:
++ l_f0_6:
+-     movzbl  -13(%ebp), %eax         #   4:     if     t2 # 1 goto 1_if_true
++     movzbl  -13(%ebp), %eax         #   6:     if     t2 # 1 goto 1_if_true
+-     jmp     l_f0_2_if_false         #   5:     goto   2_if_false
++     jmp     l_f0_2_if_false         #   7:     goto   2_if_false
+-     movl    $98, %eax               #   7:     if     98 = 98 goto 9_if_true
++     movl    $98, %eax               #   9:     if     98 = 98 goto 9_if_true
+-     jmp     l_f0_10_if_false        #   8:     goto   10_if_false
++     jmp     l_f0_10_if_false        #  10:     goto   10_if_false
+-     jmp     l_f0_8                  #  10:     goto   8
++     jmp     l_f0_8                  #  12:     goto   8
+-     movl    $76275, %eax            #  13:     if     76275 # 43166 goto 13_if_true
++     movl    $76275, %eax            #  15:     if     76275 # 43166 goto 13_if_true
+-     jmp     l_f0_14_if_false        #  14:     goto   14_if_false
++     jmp     l_f0_14_if_false        #  16:     goto   14_if_false
+-     jmp     l_f0_12                 #  16:     goto   12
++     jmp     l_f0_12                 #  18:     goto   12
+-     jmp     l_f0_0                  #  19:     goto   0
++     jmp     l_f0_0                  #  21:     goto   0
+-     call    dummyBOOLfunc           #  22:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  24:     call   t3 <- dummyBOOLfunc
+-     call    dummyBOOLfunc           #  23:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  25:     call   t4 <- dummyBOOLfunc
+-     #   -260(%ebp) 168  [ $v2       <array 3 of <array 8 of <array 2 of <array 1 of <array 3 of <char>>>>>> %ebp-260 ]
++     #   -260(%ebp)  168  [ $v2       <array 3 of <array 8 of <array 2 of <array 1 of <array 3 of <char>>>>>> %ebp-260 ]
++     jmp     l_test_15               #  19:     goto   15
++     jmp     l_test_15               #  20:     goto   15
++     jmp     l_test_15               #  21:     goto   15
+-     jmp     l_test_16_while_cond    #  20:     goto   16_while_cond
++     jmp     l_test_16_while_cond    #  23:     goto   16_while_cond
++ l_test_15:

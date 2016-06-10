@@ -1,0 +1,13 @@
+-     #-1978925180(%ebp)1978925154  [ $v6       <array 97 of <array 91 of <array 90 of <array 53 of <array 47 of <bool>>>>>> %ebp-1978925180 ]
++     #   -1978925180(%ebp)  1978925154  [ $v6       <array 97 of <array 91 of <array 90 of <array 53 of <array 47 of <bool>>>>>> %ebp-1978925180 ]
+-     #2125018532(%ebp)191023584  [ $v7       <array 13 of <array 98 of <array 85 of <array 21 of <array 84 of <bool>>>>>> %ebp+2125018532 ]
++     #   2125018532(%ebp)  191023584  [ $v7       <array 13 of <array 98 of <array 85 of <array 21 of <array 84 of <bool>>>>>> %ebp+2125018532 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $542487188, %ecx       
++     mov     %esp, %edi             
++     rep     stosl                  
+-     addl    $7, %esp               
++     addl    $16, %esp              
+-     addl    $7, %esp               
++     addl    $16, %esp              

@@ -1,0 +1,35 @@
++     jmp     l_f1_5                  #   0:     goto   5
++     jmp     l_f1_5                  #   1:     goto   5
+-     movl    $1, %eax                #   0:     assign t6 <- 1
++     movl    $1, %eax                #   2:     assign t6 <- 1
+-     jmp     l_f1_5                  #   1:     goto   5
++     jmp     l_f1_6                  #   3:     goto   6
++ l_f1_5:
+-     movl    $0, %eax                #   2:     assign t6 <- 0
++     movl    $0, %eax                #   5:     assign t6 <- 0
+- l_f1_5:
++ l_f1_6:
+-     movl    $1, %eax                #   4:     assign t7 <- 1
++     movl    $1, %eax                #   7:     assign t7 <- 1
+-     jmp     l_f1_11                 #   5:     goto   11
++     jmp     l_f1_12                 #   8:     goto   12
+-     movl    $0, %eax                #   6:     assign t7 <- 0
++     movl    $0, %eax                #   9:     assign t7 <- 0
+- l_f1_11:
++ l_f1_12:
+-     movzbl  -13(%ebp), %eax         #   8:     if     t6 = t7 goto 1_if_true
++     movzbl  -13(%ebp), %eax         #  11:     if     t6 = t7 goto 1_if_true
+-     jmp     l_f1_2_if_false         #   9:     goto   2_if_false
++     jmp     l_f1_2_if_false         #  12:     goto   2_if_false
+-     jmp     l_f1_0                  #  11:     goto   0
++     jmp     l_f1_0                  #  14:     goto   0
+-     call    dummyCHARfunc           #  14:     call   t8 <- dummyCHARfunc
++     call    dummyCHARfunc           #  17:     call   t8 <- dummyCHARfunc
+-     movl    $98, %eax               #  15:     param  0 <- 98
++     movl    $98, %eax               #  18:     param  0 <- 98
+-     call    WriteChar               #  16:     call   WriteChar
++     call    WriteChar               #  19:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $9, %esp               
++     addl    $12, %esp              

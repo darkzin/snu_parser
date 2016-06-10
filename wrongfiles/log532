@@ -1,0 +1,13 @@
++     jmp     l_test_16               #  19:     goto   16
++     jmp     l_test_16               #  20:     goto   16
+-     jmp     l_test_17_while_cond    #  19:     goto   17_while_cond
++     jmp     l_test_17_while_cond    #  21:     goto   17_while_cond
++ l_test_16:
+-     jmp     l_test_22_if_true       #  20:     goto   22_if_true
++     jmp     l_test_22_if_true       #  23:     goto   22_if_true
+-     call    dummyINTfunc            #  23:     call   t0 <- dummyINTfunc
++     call    dummyINTfunc            #  26:     call   t0 <- dummyINTfunc
+-     movl    $88741, %eax            #  24:     assign v1 <- 88741
++     movl    $88741, %eax            #  27:     assign v1 <- 88741
+-     jmp     l_test_21               #  25:     goto   21
++     jmp     l_test_21               #  28:     goto   21

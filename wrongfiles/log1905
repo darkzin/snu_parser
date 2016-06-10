@@ -1,0 +1,16 @@
++     jmp     l_f1_16                 #  23:     goto   16
+-     jmp     l_f1_17_while_cond      #  23:     goto   17_while_cond
++     jmp     l_f1_17_while_cond      #  24:     goto   17_while_cond
++ l_f1_16:
+-     call    ReadInt                 #  24:     call   t5 <- ReadInt
++     call    ReadInt                 #  26:     call   t5 <- ReadInt
+-     movl    $100, %eax              #  26:     if     100 # 97 goto 28_while_body
++     movl    $100, %eax              #  28:     if     100 # 97 goto 28_while_body
+-     jmp     l_f1_26                 #  27:     goto   26
++     jmp     l_f1_26                 #  29:     goto   26
+-     jmp     l_f1_27_while_cond      #  29:     goto   27_while_cond
++     jmp     l_f1_27_while_cond      #  31:     goto   27_while_cond
+-     jmp     l_f1_21                 #  31:     goto   21
++     jmp     l_f1_21                 #  33:     goto   21
+-     addl    $2, %esp               
++     addl    $8, %esp               

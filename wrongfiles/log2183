@@ -1,0 +1,28 @@
++     jmp     l_f0_2                  #   1:     goto   2
+-     movl    $1, %eax                #   2:     assign t4 <- 1
++     movl    $1, %eax                #   3:     assign t4 <- 1
+-     jmp     l_f0_3                  #   3:     goto   3
++     jmp     l_f0_3                  #   4:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   4:     assign t4 <- 0
++     movl    $0, %eax                #   6:     assign t4 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     return t4
++     movzbl  -13(%ebp), %eax         #   8:     return t4
+-     leal    _str_1, %eax            #   7:     &()    t5 <- _str_1
++     leal    _str_1, %eax            #   9:     &()    t5 <- _str_1
+-     movl    -20(%ebp), %eax         #   8:     param  0 <- t5
++     movl    -20(%ebp), %eax         #  10:     param  0 <- t5
+-     call    WriteStr                #   9:     call   WriteStr
++     call    WriteStr                #  11:     call   WriteStr
+-     call    dummyINTfunc            #  10:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  12:     call   t6 <- dummyINTfunc
++     jmp     l_f2_17                 #  23:     goto   17
+-     movl    $1, %eax                #  24:     assign t5 <- 1
++     movl    $1, %eax                #  25:     assign t5 <- 1
+-     jmp     l_f2_18                 #  25:     goto   18
++     jmp     l_f2_18                 #  26:     goto   18
++ l_f2_17:
+-     movl    $0, %eax                #  26:     assign t5 <- 0
++     movl    $0, %eax                #  28:     assign t5 <- 0
+-     movzbl  -14(%ebp), %eax         #  28:     return t5
++     movzbl  -14(%ebp), %eax         #  30:     return t5

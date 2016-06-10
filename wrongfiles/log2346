@@ -1,0 +1,14 @@
++     jmp     l_test_10_if_false      #   8:     goto   10_if_false
+-     movl    $20729, %eax            #  10:     if     20729 <= 63892 goto 15_while_body
++     movl    $20729, %eax            #  11:     if     20729 <= 63892 goto 15_while_body
+-     jmp     l_test_13               #  11:     goto   13
++     jmp     l_test_13               #  12:     goto   13
+-     jmp     l_test_14_while_cond    #  13:     goto   14_while_cond
++     jmp     l_test_14_while_cond    #  14:     goto   14_while_cond
+-     jmp     l_test_18_while_cond    #  16:     goto   18_while_cond
++     jmp     l_test_18_while_cond    #  17:     goto   18_while_cond
+-     jmp     l_test_20               #  17:     goto   20
++     jmp     l_test_20               #  18:     goto   20
+-     jmp     l_test_8                #  20:     goto   8
++     jmp     l_test_8                #  21:     goto   8
++ l_test_10_if_false:

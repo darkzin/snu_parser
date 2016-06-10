@@ -1,0 +1,64 @@
++     jmp     l_f1_1                  #   4:     goto   1
+-     jmp     l_f1_2_while_cond       #   5:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #   6:     goto   2_while_cond
++ l_f1_1:
+-     movl    $74020, %eax            #   6:     sub    t14 <- 74020, 72790
++     movl    $74020, %eax            #   8:     sub    t14 <- 74020, 72790
+-     movl    -16(%ebp), %eax         #   7:     sub    t15 <- t14, 79577
++     movl    -16(%ebp), %eax         #   9:     sub    t15 <- t14, 79577
+-     movl    -20(%ebp), %eax         #   8:     add    t16 <- t15, 93310
++     movl    -20(%ebp), %eax         #  10:     add    t16 <- t15, 93310
+-     movl    -24(%ebp), %eax         #   9:     return t16
++     movl    -24(%ebp), %eax         #  11:     return t16
++     jmp     l_test_1                #   2:     goto   1
+-     call    dummyBOOLfunc           #   3:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   4:     call   t1 <- dummyBOOLfunc
+-     jmp     l_test_2_while_cond     #   4:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #   5:     goto   2_while_cond
++ l_test_1:
+-     call    dummyINTfunc            #   5:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #   7:     call   t2 <- dummyINTfunc
+-     movl    -36(%ebp), %eax         #   6:     div    t3 <- t2, 84151
++     movl    -36(%ebp), %eax         #   8:     div    t3 <- t2, 84151
+-     movl    -40(%ebp), %eax         #   7:     mul    t4 <- t3, 99859
++     movl    -40(%ebp), %eax         #   9:     mul    t4 <- t3, 99859
+-     movl    -44(%ebp), %eax         #   8:     mul    t5 <- t4, 30864
++     movl    -44(%ebp), %eax         #  10:     mul    t5 <- t4, 30864
+-     movl    -48(%ebp), %eax         #   9:     div    t6 <- t5, 87131
++     movl    -48(%ebp), %eax         #  11:     div    t6 <- t5, 87131
+-     movl    -52(%ebp), %eax         #  10:     mul    t7 <- t6, 15391
++     movl    -52(%ebp), %eax         #  12:     mul    t7 <- t6, 15391
+-     movl    -56(%ebp), %eax         #  11:     div    t8 <- t7, 53081
++     movl    -56(%ebp), %eax         #  13:     div    t8 <- t7, 53081
+-     movl    -60(%ebp), %eax         #  12:     mul    t9 <- t8, 80103
++     movl    -60(%ebp), %eax         #  14:     mul    t9 <- t8, 80103
+-     movl    -64(%ebp), %eax         #  13:     div    t10 <- t9, 58201
++     movl    -64(%ebp), %eax         #  15:     div    t10 <- t9, 58201
+-     movl    -20(%ebp), %eax         #  14:     assign v0 <- t10
++     movl    -20(%ebp), %eax         #  16:     assign v0 <- t10
++     jmp     l_test_13               #  17:     goto   13
++     jmp     l_test_13               #  18:     goto   13
++     jmp     l_test_13               #  19:     goto   13
+-     movl    $1, %eax                #  15:     assign t11 <- 1
++     movl    $1, %eax                #  20:     assign t11 <- 1
+-     jmp     l_test_13               #  16:     goto   13
++     jmp     l_test_14               #  21:     goto   14
++ l_test_13:
+-     movl    $0, %eax                #  17:     assign t11 <- 0
++     movl    $0, %eax                #  23:     assign t11 <- 0
+- l_test_13:
++ l_test_14:
+-     movl    $1, %eax                #  19:     if     1 # t11 goto 9_if_true
++     movl    $1, %eax                #  25:     if     1 # t11 goto 9_if_true
+-     jmp     l_test_10_if_false      #  20:     goto   10_if_false
++     jmp     l_test_10_if_false      #  26:     goto   10_if_false
+-     call    dummyINTfunc            #  22:     call   t12 <- dummyINTfunc
++     call    dummyINTfunc            #  28:     call   t12 <- dummyINTfunc
+-     jmp     l_test_8                #  24:     goto   8
++     jmp     l_test_8                #  30:     goto   8
+-     call    dummyBOOLfunc           #  28:     call   t13 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  34:     call   t13 <- dummyBOOLfunc
+-     movzbl  -29(%ebp), %eax         #  29:     if     t13 = 1 goto 21_while_body
++     movzbl  -29(%ebp), %eax         #  35:     if     t13 = 1 goto 21_while_body
+-     jmp     l_test_20_while_cond    #  31:     goto   20_while_cond
++     jmp     l_test_20_while_cond    #  37:     goto   20_while_cond

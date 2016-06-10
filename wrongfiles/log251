@@ -1,0 +1,28 @@
++     jmp     l_f0_12                 #  17:     goto   12
++     jmp     l_f0_12                 #  18:     goto   12
+-     movl    $1, %eax                #  18:     assign t8 <- 1
++     movl    $1, %eax                #  20:     assign t8 <- 1
+-     jmp     l_f0_13                 #  19:     goto   13
++     jmp     l_f0_13                 #  21:     goto   13
++ l_f0_12:
+-     movl    $0, %eax                #  20:     assign t8 <- 0
++     movl    $0, %eax                #  23:     assign t8 <- 0
+-     movzbl  -21(%ebp), %eax         #  22:     return t8
++     movzbl  -21(%ebp), %eax         #  25:     return t8
++     jmp     l_test_39               #  44:     goto   39
++     jmp     l_test_39               #  45:     goto   39
++     jmp     l_test_39               #  46:     goto   39
++     jmp     l_test_39               #  47:     goto   39
+-     jmp     l_test_36               #  44:     goto   36
++     jmp     l_test_36               #  48:     goto   36
++ l_test_39:
++     jmp     l_test_37               #  50:     goto   37
+-     movl    $1, %eax                #  46:     assign t4 <- 1
++     movl    $1, %eax                #  52:     assign t4 <- 1
+-     jmp     l_test_38               #  47:     goto   38
++     jmp     l_test_38               #  53:     goto   38
++ l_test_37:
+-     movl    $0, %eax                #  48:     assign t4 <- 0
++     movl    $0, %eax                #  55:     assign t4 <- 0
+-     movzbl  -29(%ebp), %eax         #  50:     assign v1 <- t4
++     movzbl  -29(%ebp), %eax         #  57:     assign v1 <- t4

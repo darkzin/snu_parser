@@ -1,0 +1,8 @@
+-     #  -3492(%ebp)3384  [ $v1       <array 10 of <array 2 of <array 7 of <array 8 of <array 3 of <bool>>>>>> %ebp-3492 ]
++     #   -3492(%ebp)  3384  [ $v1       <array 10 of <array 2 of <array 7 of <array 8 of <array 3 of <bool>>>>>> %ebp-3492 ]
+-     #  -3496(%ebp)   4  [ $v2       <int> %ebp-3496 ]
++     #   -3496(%ebp)   4  [ $v2       <int> %ebp-3496 ]
+-     #  -3497(%ebp)   1  [ $v3       <bool> %ebp-3497 ]
++     #   -3497(%ebp)   1  [ $v3       <bool> %ebp-3497 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              

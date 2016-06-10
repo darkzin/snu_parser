@@ -1,0 +1,26 @@
++     jmp     l_f0_18_if_false        #  29:     goto   18_if_false
++     jmp     l_f0_18_if_false        #  30:     goto   18_if_false
++     jmp     l_f0_18_if_false        #  31:     goto   18_if_false
+-     movl    $0, %eax                #  29:     return 0
++     movl    $0, %eax                #  32:     return 0
+-     leal    _str_1, %eax            #  30:     &()    t8 <- _str_1
++     leal    _str_1, %eax            #  33:     &()    t8 <- _str_1
+-     movl    -32(%ebp), %eax         #  31:     param  0 <- t8
++     movl    -32(%ebp), %eax         #  34:     param  0 <- t8
+-     call    WriteStr                #  32:     call   WriteStr
++     call    WriteStr                #  35:     call   WriteStr
+-     movl    $1, %eax                #  34:     if     1 # 1 goto 26_while_body
++     movl    $1, %eax                #  37:     if     1 # 1 goto 26_while_body
+-     jmp     l_f0_24                 #  35:     goto   24
++     jmp     l_f0_24                 #  38:     goto   24
+-     jmp     l_f0_25_while_cond      #  37:     goto   25_while_cond
++     jmp     l_f0_25_while_cond      #  40:     goto   25_while_cond
+-     movl    $98, %eax               #  39:     param  0 <- 98
++     movl    $98, %eax               #  42:     param  0 <- 98
+-     call    WriteChar               #  40:     call   WriteChar
++     call    WriteChar               #  43:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_f0_16                 #  41:     goto   16
++     jmp     l_f0_16                 #  44:     goto   16
++ l_f0_18_if_false:

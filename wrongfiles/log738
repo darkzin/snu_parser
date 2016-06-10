@@ -1,0 +1,8 @@
++     jmp     l_f1_3_if_false         #   1:     goto   3_if_false
+-     jmp     l_f1_1                  #   2:     goto   1
++     jmp     l_f1_1                  #   3:     goto   1
++ l_f1_3_if_false:
+-     call    dummyINTfunc            #   4:     call   t4 <- dummyINTfunc
++     call    dummyINTfunc            #   6:     call   t4 <- dummyINTfunc
+-     addl    $1, %esp               
++     addl    $4, %esp               

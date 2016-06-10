@@ -1,0 +1,17 @@
++     jmp     l_f0_4                  #   9:     goto   4
++     jmp     l_f0_4                  #  10:     goto   4
+-     jmp     l_f0_5_while_cond       #  10:     goto   5_while_cond
++     jmp     l_f0_5_while_cond       #  12:     goto   5_while_cond
++ l_f0_4:
+-     call    dummyCHARfunc           #  12:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  15:     call   t1 <- dummyCHARfunc
+-     movl    $100, %eax              #  13:     if     100 < t1 goto 11_while_body
++     movl    $100, %eax              #  16:     if     100 < t1 goto 11_while_body
+-     jmp     l_f0_9                  #  14:     goto   9
++     jmp     l_f0_9                  #  17:     goto   9
+-     jmp     l_f0_10_while_cond      #  16:     goto   10_while_cond
++     jmp     l_f0_10_while_cond      #  19:     goto   10_while_cond
+-     # -28864(%ebp)28824  [ $v2       <array 10 of <array 9 of <array 2 of <array 4 of <array 10 of <int>>>>>> %ebp-28864 ]
++     #   -28864(%ebp)  28824  [ $v2       <array 10 of <array 9 of <array 2 of <array 4 of <array 10 of <int>>>>>> %ebp-28864 ]
+-     addl    $1, %esp               
++     addl    $4, %esp               

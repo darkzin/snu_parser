@@ -1,0 +1,16 @@
+-     movl    $99123, %eax            #  38:     if     99123 <= 17167 goto 29
++     movl    $99123, %eax            #  38:     if     99123 <= 17167 goto 30
+-     jle     l_test_29              
++     jle     l_test_30              
+-     jmp     l_test_30               #  39:     goto   30
++     jmp     l_test_31               #  39:     goto   31
+- l_test_29:
++ l_test_30:
+-     jmp     l_test_31               #  42:     goto   31
++     jmp     l_test_32               #  42:     goto   32
+- l_test_30:
++ l_test_31:
+- l_test_31:
++ l_test_32:
+-     addl    $10, %esp              
++     addl    $16, %esp              

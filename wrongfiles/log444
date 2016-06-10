@@ -1,0 +1,10 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_5                #  11:     goto   5
++     jmp     l_test_5                #  12:     goto   5
++     jmp     l_test_5                #  13:     goto   5
+-     jmp     l_test_6_while_cond     #  12:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #  15:     goto   6_while_cond
++ l_test_5:
+-     movl    $99, %eax               #  13:     assign v1 <- 99
++     movl    $99, %eax               #  17:     assign v1 <- 99

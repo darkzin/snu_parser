@@ -1,0 +1,38 @@
+-     movl    $98, %eax               #   1:     if     98 >= 97 goto 3
++     movl    $98, %eax               #   1:     if     98 >= 97 goto 4
+-     jge     l_f1_3                 
++     jge     l_f1_4                 
+-     jmp     l_f1_4                  #   2:     goto   4
++     jmp     l_f1_5                  #   2:     goto   5
+- l_f1_3:
++ l_f1_4:
+-     jmp     l_f1_5                  #   5:     goto   5
++     jmp     l_f1_6                  #   5:     goto   6
+- l_f1_4:
++ l_f1_5:
+- l_f1_5:
++ l_f1_6:
++     jmp     l_f1_17_if_false        #  20:     goto   17_if_false
+-     movl    $99, %eax               #  20:     param  0 <- 99
++     movl    $99, %eax               #  21:     param  0 <- 99
+-     call    WriteChar               #  21:     call   WriteChar
++     call    WriteChar               #  22:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_f1_15                 #  22:     goto   15
++     jmp     l_f1_15                 #  23:     goto   15
++ l_f1_17_if_false:
+-     movl    $84946, %eax            #  24:     add    t11 <- 84946, 38364
++     movl    $84946, %eax            #  26:     add    t11 <- 84946, 38364
+-     movl    $6109, %eax             #  25:     if     6109 > t11 goto 22_if_true
++     movl    $6109, %eax             #  27:     if     6109 > t11 goto 22_if_true
+-     jmp     l_f1_23_if_false        #  26:     goto   23_if_false
++     jmp     l_f1_23_if_false        #  28:     goto   23_if_false
+-     movl    $98, %eax               #  29:     if     98 > 100 goto 27_while_body
++     movl    $98, %eax               #  31:     if     98 > 100 goto 27_while_body
+-     jmp     l_f1_25                 #  30:     goto   25
++     jmp     l_f1_25                 #  32:     goto   25
+-     jmp     l_f1_26_while_cond      #  32:     goto   26_while_cond
++     jmp     l_f1_26_while_cond      #  34:     goto   26_while_cond
+-     jmp     l_f1_21                 #  34:     goto   21
++     jmp     l_f1_21                 #  36:     goto   21

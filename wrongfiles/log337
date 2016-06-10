@@ -1,0 +1,29 @@
++     jmp     l_test_13               #  16:     goto   13
++     jmp     l_test_13               #  17:     goto   13
+-     movl    $1, %eax                #  16:     assign t0 <- 1
++     movl    $1, %eax                #  18:     assign t0 <- 1
+-     jmp     l_test_14               #  17:     goto   14
++     jmp     l_test_14               #  19:     goto   14
++ l_test_13:
+-     movl    $0, %eax                #  18:     assign t0 <- 0
++     movl    $0, %eax                #  21:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #  20:     assign v0 <- t0
++     movzbl  -13(%ebp), %eax         #  23:     assign v0 <- t0
+-     movl    $15770, %eax            #  21:     if     15770 < 34679 goto 19_if_true
++     movl    $15770, %eax            #  24:     if     15770 < 34679 goto 19_if_true
+-     jmp     l_test_20_if_false      #  22:     goto   20_if_false
++     jmp     l_test_20_if_false      #  25:     goto   20_if_false
+-     movl    $30165, %eax            #  25:     assign v1 <- 30165
++     movl    $30165, %eax            #  28:     assign v1 <- 30165
+-     jmp     l_test_24               #  26:     goto   24
++     jmp     l_test_24               #  29:     goto   24
+-     jmp     l_test_18               #  28:     goto   18
++     jmp     l_test_18               #  31:     goto   18
+-     leal    _str_1, %eax            #  31:     &()    t1 <- _str_1
++     leal    _str_1, %eax            #  34:     &()    t1 <- _str_1
+-     movl    -20(%ebp), %eax         #  32:     param  0 <- t1
++     movl    -20(%ebp), %eax         #  35:     param  0 <- t1
+-     call    WriteStr                #  33:     call   WriteStr
++     call    WriteStr                #  36:     call   WriteStr
+-     call    dummyINTfunc            #  34:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #  37:     call   t2 <- dummyINTfunc

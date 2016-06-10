@@ -1,0 +1,229 @@
++     jmp     l_f0_4                  #   0:     goto   4
++ l_f0_4:
+-     movl    $1, %eax                #   0:     assign t5 <- 1
++     movl    $1, %eax                #   2:     assign t5 <- 1
+-     jmp     l_f0_3                  #   1:     goto   3
++     jmp     l_f0_3                  #   3:     goto   3
+-     movl    $0, %eax                #   2:     assign t5 <- 0
++     movl    $0, %eax                #   4:     assign t5 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v2 <- t5
++     movzbl  -13(%ebp), %eax         #   6:     assign v2 <- t5
+-     movl    $97, %eax               #   5:     if     97 >= 99 goto 8_if_true
++     movl    $97, %eax               #   7:     if     97 >= 99 goto 8_if_true
+-     jmp     l_f0_9_if_false         #   6:     goto   9_if_false
++     jmp     l_f0_9_if_false         #   8:     goto   9_if_false
+-     jmp     l_f0_13_if_false        #   8:     goto   13_if_false
++     jmp     l_f0_13_if_false        #  10:     goto   13_if_false
+-     jmp     l_f0_11                 #   9:     goto   11
++     jmp     l_f0_11                 #  11:     goto   11
+-     call    dummyINTfunc            #  12:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  14:     call   t6 <- dummyINTfunc
+-     jmp     l_f0_7                  #  13:     goto   7
++     jmp     l_f0_7                  #  15:     goto   7
+-     jmp     l_f0_18                 #  17:     goto   18
++     jmp     l_f0_18                 #  19:     goto   18
+-     jmp     l_f0_19_while_cond      #  18:     goto   19_while_cond
++     jmp     l_f0_19_while_cond      #  20:     goto   19_while_cond
++     jmp     l_f0_27                 #  22:     goto   27
+-     movl    $1, %eax                #  20:     assign t7 <- 1
++     movl    $1, %eax                #  23:     assign t7 <- 1
+-     jmp     l_f0_27                 #  21:     goto   27
++     jmp     l_f0_28                 #  24:     goto   28
++ l_f0_27:
+-     movl    $0, %eax                #  22:     assign t7 <- 0
++     movl    $0, %eax                #  26:     assign t7 <- 0
+- l_f0_27:
++ l_f0_28:
+-     movzbl  -21(%ebp), %eax         #  24:     if     t7 # 1 goto 22
++     movzbl  -21(%ebp), %eax         #  28:     if     t7 # 1 goto 22
+-     jmp     l_f0_23                 #  25:     goto   23
++     jmp     l_f0_23                 #  29:     goto   23
+-     movl    $1, %eax                #  27:     assign t8 <- 1
++     movl    $1, %eax                #  31:     assign t8 <- 1
+-     jmp     l_f0_24                 #  28:     goto   24
++     jmp     l_f0_24                 #  32:     goto   24
+-     movl    $0, %eax                #  30:     assign t8 <- 0
++     movl    $0, %eax                #  34:     assign t8 <- 0
+-     movzbl  -22(%ebp), %eax         #  32:     assign v2 <- t8
++     movzbl  -22(%ebp), %eax         #  36:     assign v2 <- t8
+-     jmp     l_f0_15                 #  33:     goto   15
++     jmp     l_f0_15                 #  37:     goto   15
+-     #    -64(%ebp)   4  [ $t22      <int> %ebp-64 ]
+-     #    -65(%ebp)   1  [ $t23      <bool> %ebp-65 ]
++     #    -61(%ebp)   1  [ $t22      <bool> %ebp-61 ]
+-     #    -66(%ebp)   1  [ $t24      <char> %ebp-66 ]
++     #    -62(%ebp)   1  [ $t23      <char> %ebp-62 ]
++     #    -68(%ebp)   4  [ $t5       <int> %ebp-68 ]
+-     #    -72(%ebp)   4  [ $t5       <int> %ebp-72 ]
++     #    -72(%ebp)   4  [ $t6       <int> %ebp-72 ]
+-     #    -76(%ebp)   4  [ $t6       <int> %ebp-76 ]
++     #    -76(%ebp)   4  [ $t7       <int> %ebp-76 ]
+-     #    -80(%ebp)   4  [ $t7       <int> %ebp-80 ]
++     #    -80(%ebp)   4  [ $t8       <int> %ebp-80 ]
+-     #    -84(%ebp)   4  [ $t8       <int> %ebp-84 ]
++     #    -84(%ebp)   4  [ $t9       <int> %ebp-84 ]
+-     #    -88(%ebp)   4  [ $t9       <int> %ebp-88 ]
+-     subl    $76, %esp               # make room for locals
++     subl    $72, %esp               # make room for locals
+-     movl    $19, %ecx              
++     movl    $18, %ecx              
++     movl    %eax, -68(%ebp)        
++     movl    $21416, %eax            #   3:     mul    t6 <- 21416, t5
++     movl    -68(%ebp), %ebx        
++     imull   %ebx                   
+-     movl    $21416, %eax            #   3:     mul    t6 <- 21416, t5
+-     movl    -72(%ebp), %ebx        
+-     imull   %ebx                   
+-     movl    %eax, -76(%ebp)        
++     movl    %eax, -76(%ebp)        
++     movl    -72(%ebp), %eax         #   5:     add    t8 <- t6, t7
++     movl    -76(%ebp), %ebx        
++     addl    %ebx, %eax             
+-     movl    -76(%ebp), %eax         #   5:     add    t8 <- t6, t7
+-     movl    -80(%ebp), %ebx        
+-     addl    %ebx, %eax             
+-     movl    %eax, -84(%ebp)        
+-     movl    %eax, -88(%ebp)        
++     movl    %eax, -84(%ebp)        
+-     movl    $50868, %eax            #   9:     mul    t11 <- 50868, 38059
+-     movl    $38059, %ebx           
+-     imull   %ebx                   
+-     movl    %eax, -20(%ebp)        
+-     movl    -84(%ebp), %eax         #  10:     mul    t10 <- t8, t9
++     movl    -80(%ebp), %eax         #   9:     mul    t10 <- t8, t9
+-     movl    -88(%ebp), %ebx        
++     movl    -84(%ebp), %ebx        
+-     movl    -16(%ebp), %eax         #  11:     add    t12 <- t10, 63431
++     movl    -16(%ebp), %eax         #  10:     add    t11 <- t10, 63431
++     movl    %eax, -20(%ebp)        
++     movl    $4, %eax                #  11:     param  1 <- 4
++     pushl   %eax                   
++     movl    12(%ebp), %eax          #  12:     param  0 <- v2
++     pushl   %eax                   
++     call    DIM                     #  13:     call   t12 <- DIM
++     addl    $8, %esp               
++     movl    -20(%ebp), %eax         #  14:     mul    t13 <- t11, t12
++     movl    -24(%ebp), %ebx        
++     imull   %ebx                   
++     movl    %eax, -28(%ebp)        
++     movl    -28(%ebp), %eax         #  15:     add    t14 <- t13, 42483
++     movl    $42483, %ebx           
++     addl    %ebx, %eax             
++     movl    %eax, -32(%ebp)        
+-     movl    $4, %eax                #  12:     param  1 <- 4
++     movl    $5, %eax                #  16:     param  1 <- 5
+-     movl    12(%ebp), %eax          #  13:     param  0 <- v2
++     movl    12(%ebp), %eax          #  17:     param  0 <- v2
+-     call    DIM                     #  14:     call   t13 <- DIM
++     call    DIM                     #  18:     call   t15 <- DIM
+-     movl    %eax, -28(%ebp)        
++     movl    %eax, -36(%ebp)        
+-     movl    -24(%ebp), %eax         #  15:     mul    t14 <- t12, t13
++     movl    -32(%ebp), %eax         #  19:     mul    t16 <- t14, t15
+-     movl    -28(%ebp), %ebx        
++     movl    -36(%ebp), %ebx        
+-     movl    %eax, -32(%ebp)        
+-     movl    -32(%ebp), %eax         #  16:     add    t15 <- t14, 42483
+-     movl    $42483, %ebx           
+-     addl    %ebx, %eax             
+-     movl    %eax, -36(%ebp)        
+-     movl    $5, %eax                #  17:     param  1 <- 5
+-     pushl   %eax                   
+-     movl    12(%ebp), %eax          #  18:     param  0 <- v2
+-     pushl   %eax                   
+-     call    DIM                     #  19:     call   t16 <- DIM
+-     addl    $8, %esp               
+-     movl    -36(%ebp), %eax         #  20:     mul    t17 <- t15, t16
++     movl    -40(%ebp), %eax         #  20:     add    t17 <- t16, 89894
+-     movl    -40(%ebp), %ebx        
++     movl    $89894, %ebx           
+-     imull   %ebx                   
++     addl    %ebx, %eax             
+-     movl    -44(%ebp), %eax         #  21:     add    t18 <- t17, 89894
+-     movl    $89894, %ebx           
+-     addl    %ebx, %eax             
+-     movl    %eax, -48(%ebp)        
+-     movl    -48(%ebp), %eax         #  22:     mul    t19 <- t18, 1
++     movl    -44(%ebp), %eax         #  21:     mul    t18 <- t17, 1
++     movl    %eax, -48(%ebp)        
++     movl    12(%ebp), %eax          #  22:     param  0 <- v2
++     pushl   %eax                   
++     call    DOFS                    #  23:     call   t19 <- DOFS
++     addl    $4, %esp               
+-     movl    12(%ebp), %eax          #  23:     param  0 <- v2
++     movl    -48(%ebp), %eax         #  24:     add    t20 <- t18, t19
++     movl    -52(%ebp), %ebx        
+-     pushl   %eax                   
+-     call    DOFS                    #  24:     call   t20 <- DOFS
+-     addl    $4, %esp               
++     addl    %ebx, %eax             
+-     movl    -52(%ebp), %eax         #  25:     add    t21 <- t19, t20
++     movl    12(%ebp), %eax          #  25:     add    t21 <- v2, t20
+-     movl    12(%ebp), %eax          #  26:     add    t22 <- v2, t21
+-     movl    -60(%ebp), %ebx        
+-     addl    %ebx, %eax             
+-     movl    %eax, -64(%ebp)        
+-     movl    $99, %eax               #  27:     assign @t22 <- 99
++     movl    $99, %eax               #  26:     assign @t21 <- 99
+-     movl    -64(%ebp), %edi        
++     movl    -60(%ebp), %edi        
+-     call    dummyBOOLfunc           #  29:     call   t23 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  28:     call   t22 <- dummyBOOLfunc
+-     movb    %al, -65(%ebp)         
++     movb    %al, -61(%ebp)         
+-     movzbl  -65(%ebp), %eax         #  30:     if     t23 = 1 goto 3_while_body
++     movzbl  -61(%ebp), %eax         #  29:     if     t22 = 1 goto 3_while_body
+-     jmp     l_f2_2_while_cond       #  32:     goto   2_while_cond
++     jmp     l_f2_2_while_cond       #  31:     goto   2_while_cond
+-     call    dummyCHARfunc           #  33:     call   t24 <- dummyCHARfunc
++     call    dummyCHARfunc           #  32:     call   t23 <- dummyCHARfunc
+-     movb    %al, -66(%ebp)         
++     movb    %al, -62(%ebp)         
+-     addl    $76, %esp               # remove locals
++     addl    $72, %esp               # remove locals
++     jmp     l_test_4_if_false       #   4:     goto   4_if_false
+-     call    dummyINTfunc            #   6:     call   t1 <- dummyINTfunc
++     call    dummyINTfunc            #   7:     call   t1 <- dummyINTfunc
+-     jmp     l_test_2                #   8:     goto   2
++     jmp     l_test_2                #   9:     goto   2
++ l_test_4_if_false:
+-     movl    $98, %eax               #  11:     if     98 > 99 goto 11_while_body
++     movl    $98, %eax               #  13:     if     98 > 99 goto 11_while_body
+-     jmp     l_test_9                #  12:     goto   9
++     jmp     l_test_9                #  14:     goto   9
+-     jmp     l_test_10_while_cond    #  14:     goto   10_while_cond
++     jmp     l_test_10_while_cond    #  16:     goto   10_while_cond
+-     movl    $93051, %eax            #  16:     sub    t2 <- 93051, 2628
++     movl    $93051, %eax            #  18:     sub    t2 <- 93051, 2628
+-     movl    -24(%ebp), %eax         #  17:     if     t2 <= 50232 goto 14
++     movl    -24(%ebp), %eax         #  19:     if     t2 <= 50232 goto 14
+-     jmp     l_test_15               #  18:     goto   15
++     jmp     l_test_15               #  20:     goto   15
+-     movl    $1, %eax                #  20:     assign t3 <- 1
++     movl    $1, %eax                #  22:     assign t3 <- 1
+-     jmp     l_test_16               #  21:     goto   16
++     jmp     l_test_16               #  23:     goto   16
+-     movl    $0, %eax                #  23:     assign t3 <- 0
++     movl    $0, %eax                #  25:     assign t3 <- 0
+-     movzbl  -25(%ebp), %eax         #  25:     assign v1 <- t3
++     movzbl  -25(%ebp), %eax         #  27:     assign v1 <- t3
+-     movl    $1, %eax                #  26:     if     1 = 0 goto 19_if_true
++     movl    $1, %eax                #  28:     if     1 = 0 goto 19_if_true
+-     jmp     l_test_20_if_false      #  27:     goto   20_if_false
++     jmp     l_test_20_if_false      #  29:     goto   20_if_false
+-     jmp     l_test_22               #  30:     goto   22
++     jmp     l_test_22               #  32:     goto   22
+-     jmp     l_test_23_while_cond    #  31:     goto   23_while_cond
++     jmp     l_test_23_while_cond    #  33:     goto   23_while_cond
+-     movl    $100, %eax              #  34:     param  0 <- 100
++     movl    $100, %eax              #  36:     param  0 <- 100
+-     call    WriteChar               #  35:     call   WriteChar
++     call    WriteChar               #  37:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movl    $78833, %eax            #  36:     assign v0 <- 78833
++     movl    $78833, %eax            #  38:     assign v0 <- 78833
+-     call    dummyBOOLfunc           #  37:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  39:     call   t4 <- dummyBOOLfunc
+-     jmp     l_test_18               #  38:     goto   18
++     jmp     l_test_18               #  40:     goto   18

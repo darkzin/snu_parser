@@ -1,0 +1,6 @@
+-     #  -1996(%ebp)1968  [ $v5       <array 3 of <array 9 of <array 8 of <array 9 of <array 1 of <char>>>>>> %ebp-1996 ]
++     #   -1996(%ebp)  1968  [ $v5       <array 3 of <array 9 of <array 8 of <array 9 of <array 1 of <char>>>>>> %ebp-1996 ]
+-     #  -5020(%ebp)3024  [ $v6       <array 6 of <array 5 of <array 1 of <array 5 of <array 5 of <int>>>>>> %ebp-5020 ]
++     #   -5020(%ebp)  3024  [ $v6       <array 6 of <array 5 of <array 1 of <array 5 of <array 5 of <int>>>>>> %ebp-5020 ]
+-     #  -7732(%ebp)2712  [ $v7       <array 8 of <array 2 of <array 7 of <array 6 of <array 4 of <bool>>>>>> %ebp-7732 ]
++     #   -7732(%ebp)  2712  [ $v7       <array 8 of <array 2 of <array 7 of <array 6 of <array 4 of <bool>>>>>> %ebp-7732 ]

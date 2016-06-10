@@ -1,0 +1,40 @@
+-     jmp     l_f0_6                  #   3:     goto   6
++     jmp     l_f0_7                  #   3:     goto   7
+- l_f0_6:
++ l_f0_7:
+-     jmp     l_f0_8                  #   6:     goto   8
++     jmp     l_f0_9                  #   6:     goto   9
+- l_f0_8:
++ l_f0_9:
++     jmp     l_test_2_if_false       #   1:     goto   2_if_false
+-     call    dummyCHARfunc           #   2:     call   t0 <- dummyCHARfunc
++     call    dummyCHARfunc           #   3:     call   t0 <- dummyCHARfunc
+-     movl    $58150, %eax            #   3:     assign v0 <- 58150
++     movl    $58150, %eax            #   4:     assign v0 <- 58150
+-     jmp     l_test_0                #   4:     goto   0
++     jmp     l_test_0                #   5:     goto   0
++ l_test_2_if_false:
+-     movl    $70781, %eax            #   7:     mul    t1 <- 70781, 8251
++     movl    $70781, %eax            #   9:     mul    t1 <- 70781, 8251
+-     movl    -20(%ebp), %eax         #   8:     div    t2 <- t1, 4038
++     movl    -20(%ebp), %eax         #  10:     div    t2 <- t1, 4038
+-     movl    $74956, %eax            #   9:     if     74956 >= t2 goto 8_while_body
++     movl    $74956, %eax            #  11:     if     74956 >= t2 goto 8_while_body
+-     jmp     l_test_6                #  10:     goto   6
++     jmp     l_test_6                #  12:     goto   6
+-     call    dummyBOOLfunc           #  12:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  14:     call   t3 <- dummyBOOLfunc
+-     jmp     l_test_7_while_cond     #  13:     goto   7_while_cond
++     jmp     l_test_7_while_cond     #  15:     goto   7_while_cond
+-     movl    $86649, %eax            #  15:     assign v0 <- 86649
++     movl    $86649, %eax            #  17:     assign v0 <- 86649
+-     call    dummyBOOLfunc           #  18:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  20:     call   t4 <- dummyBOOLfunc
+-     movzbl  -26(%ebp), %eax         #  19:     if     t4 = 1 goto 15_while_body
++     movzbl  -26(%ebp), %eax         #  21:     if     t4 = 1 goto 15_while_body
+-     jmp     l_test_15_while_body    #  20:     goto   15_while_body
++     jmp     l_test_15_while_body    #  22:     goto   15_while_body
+-     jmp     l_test_15_while_body    #  21:     goto   15_while_body
++     jmp     l_test_15_while_body    #  23:     goto   15_while_body
+-     jmp     l_test_14_while_cond    #  23:     goto   14_while_cond
++     jmp     l_test_14_while_cond    #  25:     goto   14_while_cond

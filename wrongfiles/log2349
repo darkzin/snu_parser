@@ -1,0 +1,14 @@
++     jmp     l_f1_3                  #   4:     goto   3
++     jmp     l_f1_3                  #   5:     goto   3
++     jmp     l_f1_3                  #   6:     goto   3
+-     movl    $1, %eax                #   5:     assign t3 <- 1
++     movl    $1, %eax                #   8:     assign t3 <- 1
+-     jmp     l_f1_4                  #   6:     goto   4
++     jmp     l_f1_4                  #   9:     goto   4
++ l_f1_3:
+-     movl    $0, %eax                #   7:     assign t3 <- 0
++     movl    $0, %eax                #  11:     assign t3 <- 0
+-     movzbl  -13(%ebp), %eax         #   9:     assign v4 <- t3
++     movzbl  -13(%ebp), %eax         #  13:     assign v4 <- t3
+-     call    dummyCHARfunc           #  10:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  14:     call   t4 <- dummyCHARfunc

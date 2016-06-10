@@ -1,0 +1,21 @@
++     jmp     l_f1_18                 #  24:     goto   18
+-     call    dummyBOOLfunc           #  24:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  25:     call   t4 <- dummyBOOLfunc
+-     movzbl  -14(%ebp), %eax         #  25:     if     t4 = 1 goto 20_while_body
++     movzbl  -14(%ebp), %eax         #  26:     if     t4 = 1 goto 20_while_body
+-     jmp     l_f1_18                 #  26:     goto   18
++     jmp     l_f1_18                 #  27:     goto   18
+-     jmp     l_f1_19_while_cond      #  28:     goto   19_while_cond
++     jmp     l_f1_19_while_cond      #  29:     goto   19_while_cond
++     jmp     l_f2_9                  #  20:     goto   9
+-     movl    $97, %eax               #  21:     if     97 > 99 goto 20_if_true
++     movl    $97, %eax               #  22:     if     97 > 99 goto 20_if_true
+-     jmp     l_f2_21_if_false        #  22:     goto   21_if_false
++     jmp     l_f2_21_if_false        #  23:     goto   21_if_false
+-     jmp     l_f2_19                 #  24:     goto   19
++     jmp     l_f2_19                 #  25:     goto   19
+-     movl    $0, %eax                #  27:     return 0
++     movl    $0, %eax                #  28:     return 0
+-     jmp     l_f2_10_while_cond      #  28:     goto   10_while_cond
++     jmp     l_f2_10_while_cond      #  29:     goto   10_while_cond
++ l_f2_9:

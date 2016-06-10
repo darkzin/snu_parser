@@ -1,0 +1,18 @@
++     jmp     l_f0_2                  #   2:     goto   2
+-     movl    $1, %eax                #   3:     assign t2 <- 1
++     movl    $1, %eax                #   4:     assign t2 <- 1
+-     jmp     l_f0_3                  #   4:     goto   3
++     jmp     l_f0_3                  #   5:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   5:     assign t2 <- 0
++     movl    $0, %eax                #   7:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #   7:     assign v1 <- t2
++     movzbl  -13(%ebp), %eax         #   9:     assign v1 <- t2
+-     call    ReadInt                 #   8:     call   t3 <- ReadInt
++     call    ReadInt                 #  10:     call   t3 <- ReadInt
+-     movl    $40336, %eax            #   9:     add    t4 <- 40336, 96431
++     movl    $40336, %eax            #  11:     add    t4 <- 40336, 96431
+-     movl    -24(%ebp), %eax         #  10:     assign v2 <- t4
++     movl    -24(%ebp), %eax         #  12:     assign v2 <- t4
+-     #  -1740(%ebp)1704  [ $v2       <array 1 of <array 3 of <array 10 of <array 8 of <array 7 of <char>>>>>> %ebp-1740 ]
++     #   -1740(%ebp)  1704  [ $v2       <array 1 of <array 3 of <array 10 of <array 8 of <array 7 of <char>>>>>> %ebp-1740 ]

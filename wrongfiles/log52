@@ -1,0 +1,40 @@
++     jmp     l_f0_11                 #   9:     goto   11
+-     movl    $1, %eax                #  10:     assign t4 <- 1
++     movl    $1, %eax                #  11:     assign t4 <- 1
+-     jmp     l_f0_12                 #  11:     goto   12
++     jmp     l_f0_12                 #  12:     goto   12
++ l_f0_11:
+-     movl    $0, %eax                #  12:     assign t4 <- 0
++     movl    $0, %eax                #  14:     assign t4 <- 0
+-     movzbl  -15(%ebp), %eax         #  14:     return t4
++     movzbl  -15(%ebp), %eax         #  16:     return t4
+-     movl    $100, %eax              #  15:     if     100 <= 97 goto 15_if_true
++     movl    $100, %eax              #  17:     if     100 <= 97 goto 15_if_true
+-     jmp     l_f0_16_if_false        #  16:     goto   16_if_false
++     jmp     l_f0_16_if_false        #  18:     goto   16_if_false
+-     jmp     l_f0_18                 #  19:     goto   18
++     jmp     l_f0_18                 #  21:     goto   18
+-     jmp     l_f0_19_while_cond      #  20:     goto   19_while_cond
++     jmp     l_f0_19_while_cond      #  22:     goto   19_while_cond
+-     movl    $4608, %eax             #  23:     if     4608 <= 86112 goto 23_while_body
++     movl    $4608, %eax             #  25:     if     4608 <= 86112 goto 23_while_body
+-     jmp     l_f0_21                 #  24:     goto   21
++     jmp     l_f0_21                 #  26:     goto   21
+-     jmp     l_f0_22_while_cond      #  26:     goto   22_while_cond
++     jmp     l_f0_22_while_cond      #  28:     goto   22_while_cond
+-     movl    $56697, %eax            #  28:     if     56697 < 71169 goto 26_if_true
++     movl    $56697, %eax            #  30:     if     56697 < 71169 goto 26_if_true
+-     jmp     l_f0_27_if_false        #  29:     goto   27_if_false
++     jmp     l_f0_27_if_false        #  31:     goto   27_if_false
+-     jmp     l_f0_25                 #  31:     goto   25
++     jmp     l_f0_25                 #  33:     goto   25
+-     call    dummyINTfunc            #  34:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #  36:     call   t5 <- dummyINTfunc
+-     jmp     l_f0_31_while_cond      #  36:     goto   31_while_cond
++     jmp     l_f0_31_while_cond      #  38:     goto   31_while_cond
+-     jmp     l_f0_14                 #  37:     goto   14
++     jmp     l_f0_14                 #  39:     goto   14
+-     #   -924(%ebp) 824  [ $v7       <array 4 of <array 5 of <array 2 of <array 4 of <array 5 of <char>>>>>> %ebp-924 ]
++     #   -924(%ebp)  824  [ $v7       <array 4 of <array 5 of <array 2 of <array 4 of <array 5 of <char>>>>>> %ebp-924 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              

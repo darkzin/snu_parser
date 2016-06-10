@@ -1,0 +1,26 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_7                #   5:     goto   7
+-     movl    $1, %eax                #   5:     assign t2 <- 1
++     movl    $1, %eax                #   6:     assign t2 <- 1
+-     jmp     l_test_7                #   6:     goto   7
++     jmp     l_test_8                #   7:     goto   8
++ l_test_7:
+-     movl    $0, %eax                #   7:     assign t2 <- 0
++     movl    $0, %eax                #   9:     assign t2 <- 0
+- l_test_7:
++ l_test_8:
+-     movl    $0, %eax                #   9:     if     0 = t2 goto 4_while_body
++     movl    $0, %eax                #  11:     if     0 = t2 goto 4_while_body
+-     jmp     l_test_2                #  10:     goto   2
++     jmp     l_test_2                #  12:     goto   2
+-     jmp     l_test_3_while_cond     #  13:     goto   3_while_cond
++     jmp     l_test_3_while_cond     #  15:     goto   3_while_cond
+-     call    dummyCHARfunc           #  16:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  18:     call   t3 <- dummyCHARfunc
+-     movzbl  -22(%ebp), %eax         #  17:     param  0 <- t3
++     movzbl  -22(%ebp), %eax         #  19:     param  0 <- t3
+-     call    WriteChar               #  18:     call   WriteChar
++     call    WriteChar               #  20:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               

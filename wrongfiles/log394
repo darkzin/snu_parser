@@ -1,0 +1,12 @@
++     jmp     l_f1_1                  #   2:     goto   1
+-     movl    $40961, %eax            #   2:     return 40961
++     movl    $40961, %eax            #   3:     return 40961
+-     movl    $87393, %eax            #   3:     return 87393
++     movl    $87393, %eax            #   4:     return 87393
+-     jmp     l_f1_2_while_cond       #   4:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #   5:     goto   2_while_cond
++ l_f1_1:
+-     movl    $25729, %eax            #   5:     mul    t2 <- 25729, 35005
++     movl    $25729, %eax            #   7:     mul    t2 <- 25729, 35005
+-     movl    -20(%ebp), %eax         #   6:     return t2
++     movl    -20(%ebp), %eax         #   8:     return t2

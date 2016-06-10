@@ -1,0 +1,52 @@
++     jmp     l_f0_0                  #   1:     goto   0
+-     movl    $71810, %eax            #   1:     return 71810
++     movl    $71810, %eax            #   2:     return 71810
+-     jmp     l_f0_1_while_cond       #   2:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   3:     goto   1_while_cond
++ l_f0_0:
+-     movl    $15492, %eax            #   3:     sub    t2 <- 15492, 95949
++     movl    $15492, %eax            #   5:     sub    t2 <- 15492, 95949
+-     movl    -16(%ebp), %eax         #   4:     add    t3 <- t2, 95046
++     movl    -16(%ebp), %eax         #   6:     add    t3 <- t2, 95046
+-     movl    -20(%ebp), %eax         #   5:     if     t3 >= 41665 goto 6_if_true
++     movl    -20(%ebp), %eax         #   7:     if     t3 >= 41665 goto 6_if_true
+-     jmp     l_f0_7_if_false         #   6:     goto   7_if_false
++     jmp     l_f0_7_if_false         #   8:     goto   7_if_false
+-     jmp     l_f0_9                  #   8:     goto   9
++     jmp     l_f0_9                  #  10:     goto   9
+-     jmp     l_f0_5                  #  10:     goto   5
++     jmp     l_f0_5                  #  12:     goto   5
+-     movl    $93662, %eax            #  13:     div    t4 <- 93662, 35863
++     movl    $93662, %eax            #  15:     div    t4 <- 93662, 35863
+-     movl    $78400, %eax            #  14:     sub    t5 <- 78400, t4
++     movl    $78400, %eax            #  16:     sub    t5 <- 78400, t4
+-     movl    -28(%ebp), %eax         #  15:     return t5
++     movl    -28(%ebp), %eax         #  17:     return t5
++     jmp     l_f1_0                  #   2:     goto   0
+-     call    dummyBOOLfunc           #   3:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   4:     call   t2 <- dummyBOOLfunc
+-     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   5:     goto   1_while_cond
++ l_f1_0:
+-     movl    $94016, %eax            #   5:     mul    t3 <- 94016, 97094
++     movl    $94016, %eax            #   7:     mul    t3 <- 94016, 97094
+-     movl    -20(%ebp), %eax         #   6:     div    t4 <- t3, 23615
++     movl    -20(%ebp), %eax         #   8:     div    t4 <- t3, 23615
+-     call    dummyINTfunc            #   7:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #   9:     call   t5 <- dummyINTfunc
+-     movl    -24(%ebp), %eax         #   8:     div    t6 <- t4, t5
++     movl    -24(%ebp), %eax         #  10:     div    t6 <- t4, t5
+-     movl    -32(%ebp), %eax         #   9:     if     t6 < 1661 goto 7
++     movl    -32(%ebp), %eax         #  11:     if     t6 < 1661 goto 7
+-     jmp     l_f1_8                  #  10:     goto   8
++     jmp     l_f1_8                  #  12:     goto   8
+-     movl    $1, %eax                #  12:     assign t7 <- 1
++     movl    $1, %eax                #  14:     assign t7 <- 1
+-     jmp     l_f1_9                  #  13:     goto   9
++     jmp     l_f1_9                  #  15:     goto   9
+-     movl    $0, %eax                #  15:     assign t7 <- 0
++     movl    $0, %eax                #  17:     assign t7 <- 0
+-     movzbl  -33(%ebp), %eax         #  17:     return t7
++     movzbl  -33(%ebp), %eax         #  19:     return t7
+-     call    dummyBOOLfunc           #  18:     call   t8 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  20:     call   t8 <- dummyBOOLfunc

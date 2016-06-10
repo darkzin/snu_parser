@@ -1,0 +1,10 @@
+-     jmp     l_test_7                #   4:     goto   7
++     jmp     l_test_8                #   4:     goto   8
+- l_test_7:
++ l_test_8:
+-     jmp     l_test_9                #   7:     goto   9
++     jmp     l_test_10               #   7:     goto   10
+- l_test_9:
++ l_test_10:
+-     addl    $5, %esp               
++     addl    $8, %esp               

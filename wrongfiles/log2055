@@ -1,0 +1,18 @@
++     jmp     l_f0_5                  #   1:     goto   5
++     jmp     l_f0_5                  #   2:     goto   5
+-     jmp     l_f0_2_if_true          #   1:     goto   2_if_true
++     jmp     l_f0_2_if_true          #   3:     goto   2_if_true
++ l_f0_5:
+-     jmp     l_f0_1                  #   3:     goto   1
++     jmp     l_f0_1                  #   6:     goto   1
+-     call    dummyCHARfunc           #   5:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t1 <- dummyCHARfunc
+-     #-35393088(%ebp)35392920  [ $v5       <array 3 of <array 19 of <array 66 of <array 96 of <array 98 of <bool>>>>>> %ebp-35393088 ]
++     #   -35393088(%ebp)  35392920  [ $v5       <array 3 of <array 19 of <array 66 of <array 96 of <array 98 of <bool>>>>>> %ebp-35393088 ]
+-     #820076584(%ebp)-855469672  [ $v6       <array 36 of <array 50 of <array 66 of <array 77 of <array 94 of <int>>>>>> %ebp+820076584 ]
++     #   820076584(%ebp)  -855469672  [ $v6       <array 36 of <array 50 of <array 66 of <array 77 of <array 94 of <int>>>>>> %ebp+820076584 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $-205019149, %ecx      
++     mov     %esp, %edi             
++     rep     stosl                  

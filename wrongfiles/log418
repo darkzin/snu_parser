@@ -1,0 +1,34 @@
++     jmp     l_f0_9                  #  15:     goto   9
+-     call    WriteLn                 #  15:     call   WriteLn
++     call    WriteLn                 #  16:     call   WriteLn
+-     jmp     l_f0_10_while_cond      #  16:     goto   10_while_cond
++     jmp     l_f0_10_while_cond      #  17:     goto   10_while_cond
++ l_f0_9:
+-     jmp     l_f1_11                 #  12:     goto   11
++     jmp     l_f1_12                 #  12:     goto   12
+- l_f1_11:
++ l_f1_12:
+-     jmp     l_f1_13                 #  15:     goto   13
++     jmp     l_f1_14                 #  15:     goto   14
+- l_f1_13:
++ l_f1_14:
+-     jmp     l_test_31               #  36:     goto   31
++     jmp     l_test_32               #  36:     goto   32
++     jmp     l_test_33               #  37:     goto   33
+- l_test_31:
++ l_test_32:
+-     movl    $1, %eax                #  38:     assign t2 <- 1
++     movl    $1, %eax                #  39:     assign t2 <- 1
+-     jmp     l_test_33               #  39:     goto   33
++     jmp     l_test_34               #  40:     goto   34
++ l_test_33:
+-     movl    $0, %eax                #  40:     assign t2 <- 0
++     movl    $0, %eax                #  42:     assign t2 <- 0
+- l_test_33:
++ l_test_34:
+-     movzbl  -21(%ebp), %eax         #  42:     if     t2 # 1 goto 30_while_body
++     movzbl  -21(%ebp), %eax         #  44:     if     t2 # 1 goto 30_while_body
+-     jmp     l_test_28               #  43:     goto   28
++     jmp     l_test_28               #  45:     goto   28
+-     jmp     l_test_29_while_cond    #  45:     goto   29_while_cond
++     jmp     l_test_29_while_cond    #  47:     goto   29_while_cond

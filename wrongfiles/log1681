@@ -1,0 +1,32 @@
+-     #-12894616(%ebp)12894576  [ $v2       <array 18 of <array 11 of <array 12 of <array 67 of <array 81 of <char>>>>>> %ebp-12894616 ]
++     #   -12894616(%ebp)  12894576  [ $v2       <array 18 of <array 11 of <array 12 of <array 67 of <array 81 of <char>>>>>> %ebp-12894616 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              
++     jmp     l_test_4                #   4:     goto   4
+-     movl    $1, %eax                #   5:     assign t1 <- 1
++     movl    $1, %eax                #   6:     assign t1 <- 1
+-     jmp     l_test_5                #   6:     goto   5
++     jmp     l_test_5                #   7:     goto   5
++ l_test_4:
+-     movl    $0, %eax                #   7:     assign t1 <- 0
++     movl    $0, %eax                #   9:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #   9:     assign v0 <- t1
++     movzbl  -14(%ebp), %eax         #  11:     assign v0 <- t1
+-     movl    $100, %eax              #  10:     if     100 <= 97 goto 8_if_true
++     movl    $100, %eax              #  12:     if     100 <= 97 goto 8_if_true
+-     jmp     l_test_9_if_false       #  11:     goto   9_if_false
++     jmp     l_test_9_if_false       #  13:     goto   9_if_false
+-     call    dummyCHARfunc           #  13:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  15:     call   t2 <- dummyCHARfunc
+-     jmp     l_test_7                #  14:     goto   7
++     jmp     l_test_7                #  16:     goto   7
+-     call    dummyCHARfunc           #  17:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  19:     call   t3 <- dummyCHARfunc
+-     movl    $99565, %eax            #  18:     assign v1 <- 99565
++     movl    $99565, %eax            #  20:     assign v1 <- 99565
+-     movl    $100, %eax              #  20:     assign v2 <- 100
++     movl    $100, %eax              #  22:     assign v2 <- 100
+-     jmp     l_test_12               #  21:     goto   12
++     jmp     l_test_12               #  23:     goto   12
+-     call    dummyINTfunc            #  23:     call   t4 <- dummyINTfunc
++     call    dummyINTfunc            #  25:     call   t4 <- dummyINTfunc

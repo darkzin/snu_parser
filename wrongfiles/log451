@@ -1,0 +1,20 @@
++     jmp     l_f0_5                  #   1:     goto   5
+-     jmp     l_f0_2                  #   1:     goto   2
++     jmp     l_f0_2                  #   2:     goto   2
++ l_f0_5:
++     jmp     l_f0_3                  #   4:     goto   3
+-     movl    $1, %eax                #   3:     assign t5 <- 1
++     movl    $1, %eax                #   6:     assign t5 <- 1
+-     jmp     l_f0_4                  #   4:     goto   4
++     jmp     l_f0_4                  #   7:     goto   4
++ l_f0_3:
+-     movl    $0, %eax                #   5:     assign t5 <- 0
++     movl    $0, %eax                #   9:     assign t5 <- 0
+-     movzbl  -13(%ebp), %eax         #   7:     return t5
++     movzbl  -13(%ebp), %eax         #  11:     return t5
+-     call    dummyBOOLfunc           #   8:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  12:     call   t6 <- dummyBOOLfunc
+-     # -11584(%ebp)11544  [ $v5       <array 4 of <array 2 of <array 5 of <array 9 of <array 8 of <int>>>>>> %ebp-11584 ]
++     #   -11584(%ebp)  11544  [ $v5       <array 4 of <array 2 of <array 5 of <array 9 of <array 8 of <int>>>>>> %ebp-11584 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              

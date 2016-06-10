@@ -1,0 +1,56 @@
++     jmp     l_f0_0                  #   1:     goto   0
+-     jmp     l_f0_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   2:     goto   1_while_cond
++ l_f0_0:
+-     call    dummyBOOLfunc           #   3:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   5:     call   t6 <- dummyBOOLfunc
+-     movzbl  -13(%ebp), %eax         #   4:     if     t6 = 1 goto 7_while_body
++     movzbl  -13(%ebp), %eax         #   6:     if     t6 = 1 goto 7_while_body
+-     jmp     l_f0_5                  #   5:     goto   5
++     jmp     l_f0_5                  #   7:     goto   5
+-     jmp     l_f0_6_while_cond       #   7:     goto   6_while_cond
++     jmp     l_f0_6_while_cond       #   9:     goto   6_while_cond
+-     movl    $90485, %eax            #   9:     add    t7 <- 90485, 96752
++     movl    $90485, %eax            #  11:     add    t7 <- 90485, 96752
+-     movl    -20(%ebp), %eax         #  10:     sub    t8 <- t7, 91798
++     movl    -20(%ebp), %eax         #  12:     sub    t8 <- t7, 91798
+-     movl    -24(%ebp), %eax         #  11:     assign v3 <- t8
++     movl    -24(%ebp), %eax         #  13:     assign v3 <- t8
+-     #-15523256(%ebp)15523224  [ $v2       <array 5 of <array 66 of <array 30 of <array 32 of <array 49 of <bool>>>>>> %ebp-15523256 ]
++     #   -15523256(%ebp)  15523224  [ $v2       <array 5 of <array 66 of <array 30 of <array 32 of <array 49 of <bool>>>>>> %ebp-15523256 ]
+-     #-52011032(%ebp)36487776  [ $v3       <array 69 of <array 98 of <array 71 of <array 1 of <array 76 of <char>>>>>> %ebp-52011032 ]
++     #   -52011032(%ebp)  36487776  [ $v3       <array 69 of <array 98 of <array 71 of <array 1 of <array 76 of <char>>>>>> %ebp-52011032 ]
+-     #-721182104(%ebp)669171072  [ $v4       <array 74 of <array 78 of <array 91 of <array 13 of <array 98 of <bool>>>>>> %ebp-721182104 ]
++     #   -721182104(%ebp)  669171072  [ $v4       <array 74 of <array 78 of <array 91 of <array 13 of <array 98 of <bool>>>>>> %ebp-721182104 ]
+-     #-1898939408(%ebp)1177757304  [ $v5       <array 58 of <array 54 of <array 79 of <array 70 of <array 17 of <int>>>>>> %ebp-1898939408 ]
++     #   -1898939408(%ebp)  1177757304  [ $v5       <array 58 of <array 54 of <array 79 of <array 70 of <array 17 of <int>>>>>> %ebp-1898939408 ]
++     jmp     l_test_0                #   3:     goto   0
+-     jmp     l_test_7_if_false       #   4:     goto   7_if_false
++     jmp     l_test_7_if_false       #   5:     goto   7_if_false
+-     jmp     l_test_5                #   5:     goto   5
++     jmp     l_test_5                #   6:     goto   5
+-     jmp     l_test_1_while_cond     #   8:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   9:     goto   1_while_cond
++ l_test_0:
+-     call    ReadInt                 #  10:     call   t0 <- ReadInt
++     call    ReadInt                 #  12:     call   t0 <- ReadInt
+-     movl    -16(%ebp), %eax         #  11:     div    t1 <- t0, 87429
++     movl    -16(%ebp), %eax         #  13:     div    t1 <- t0, 87429
+-     movl    -20(%ebp), %eax         #  12:     div    t2 <- t1, 49399
++     movl    -20(%ebp), %eax         #  14:     div    t2 <- t1, 49399
+-     movl    -24(%ebp), %eax         #  13:     div    t3 <- t2, 57302
++     movl    -24(%ebp), %eax         #  15:     div    t3 <- t2, 57302
+-     movl    -28(%ebp), %eax         #  14:     if     t3 # 82756 goto 10_while_body
++     movl    -28(%ebp), %eax         #  16:     if     t3 # 82756 goto 10_while_body
+-     jmp     l_test_8                #  15:     goto   8
++     jmp     l_test_8                #  17:     goto   8
+-     jmp     l_test_9_while_cond     #  17:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #  19:     goto   9_while_cond
+-     movl    $47339, %eax            #  19:     div    t4 <- 47339, 50330
++     movl    $47339, %eax            #  21:     div    t4 <- 47339, 50330
+-     movl    -32(%ebp), %eax         #  20:     sub    t5 <- t4, 50666
++     movl    -32(%ebp), %eax         #  22:     sub    t5 <- t4, 50666
+-     movl    -36(%ebp), %eax         #  21:     param  0 <- t5
++     movl    -36(%ebp), %eax         #  23:     param  0 <- t5
+-     call    WriteInt                #  22:     call   WriteInt
++     call    WriteInt                #  24:     call   WriteInt

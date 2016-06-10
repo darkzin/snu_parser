@@ -1,0 +1,16 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f1_1                  #   4:     goto   1
+-     jmp     l_f1_2_while_cond       #   5:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #   6:     goto   2_while_cond
++ l_f1_1:
+-     leal    _str_1, %eax            #   6:     &()    t3 <- _str_1
++     leal    _str_1, %eax            #   8:     &()    t3 <- _str_1
+-     movl    -20(%ebp), %eax         #   7:     param  0 <- t3
++     movl    -20(%ebp), %eax         #   9:     param  0 <- t3
+-     call    WriteStr                #   8:     call   WriteStr
++     call    WriteStr                #  10:     call   WriteStr
+-     #   -944(%ebp) 888  [ $v2       <array 1 of <array 8 of <array 9 of <array 2 of <array 6 of <char>>>>>> %ebp-944 ]
++     #   -944(%ebp)  888  [ $v2       <array 1 of <array 8 of <array 9 of <array 2 of <array 6 of <char>>>>>> %ebp-944 ]
+-     addl    $10, %esp              
++     addl    $16, %esp              

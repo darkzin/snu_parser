@@ -1,0 +1,20 @@
++     jmp     l_f1_2                  #   1:     goto   2
+-     movl    $1, %eax                #   2:     assign t6 <- 1
++     movl    $1, %eax                #   3:     assign t6 <- 1
+-     jmp     l_f1_3                  #   3:     goto   3
++     jmp     l_f1_3                  #   4:     goto   3
++ l_f1_2:
+-     movl    $0, %eax                #   4:     assign t6 <- 0
++     movl    $0, %eax                #   6:     assign t6 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     assign v0 <- t6
++     movzbl  -13(%ebp), %eax         #   8:     assign v0 <- t6
+-     movl    $63623, %eax            #   7:     assign v3 <- 63623
++     movl    $63623, %eax            #   9:     assign v3 <- 63623
+-     movl    $98, %eax               #   9:     if     98 = 97 goto 8_while_body
++     movl    $98, %eax               #  11:     if     98 = 97 goto 8_while_body
+-     jmp     l_f1_6                  #  10:     goto   6
++     jmp     l_f1_6                  #  12:     goto   6
+-     jmp     l_f1_7_while_cond       #  12:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #  14:     goto   7_while_cond
+-     addl    $1, %esp               
++     addl    $4, %esp               

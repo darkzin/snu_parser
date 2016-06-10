@@ -1,0 +1,41 @@
+-     movl    $0, %eax                #   1:     if     0 # 1 goto 3
++     movl    $0, %eax                #   1:     if     0 # 1 goto 4
+-     jne     l_f0_3                 
++     jne     l_f0_4                 
+-     jmp     l_f0_4                  #   2:     goto   4
++     jmp     l_f0_5                  #   2:     goto   5
+- l_f0_3:
++ l_f0_4:
+-     jmp     l_f0_5                  #   5:     goto   5
++     jmp     l_f0_6                  #   5:     goto   6
+- l_f0_4:
++ l_f0_5:
+- l_f0_5:
++ l_f0_6:
++     jmp     l_f1_5                  #  16:     goto   5
+-     jmp     l_f1_6_while_cond       #  16:     goto   6_while_cond
++     jmp     l_f1_6_while_cond       #  17:     goto   6_while_cond
+-     call    dummyCHARfunc           #  18:     call   t8 <- dummyCHARfunc
++     call    dummyCHARfunc           #  19:     call   t8 <- dummyCHARfunc
+-     movl    $97, %eax               #  19:     if     97 < t8 goto 12_if_true
++     movl    $97, %eax               #  20:     if     97 < t8 goto 12_if_true
+-     jmp     l_f1_13_if_false        #  20:     goto   13_if_false
++     jmp     l_f1_13_if_false        #  21:     goto   13_if_false
+-     movl    $1, %eax                #  22:     if     1 = 1 goto 16_if_true
++     movl    $1, %eax                #  23:     if     1 = 1 goto 16_if_true
+-     jmp     l_f1_17_if_false        #  23:     goto   17_if_false
++     jmp     l_f1_17_if_false        #  24:     goto   17_if_false
+-     jmp     l_f1_15                 #  25:     goto   15
++     jmp     l_f1_15                 #  26:     goto   15
+-     movl    $0, %eax                #  29:     if     0 # 1 goto 21_while_body
++     movl    $0, %eax                #  30:     if     0 # 1 goto 21_while_body
+-     jmp     l_f1_19                 #  30:     goto   19
++     jmp     l_f1_19                 #  31:     goto   19
+-     jmp     l_f1_20_while_cond      #  32:     goto   20_while_cond
++     jmp     l_f1_20_while_cond      #  33:     goto   20_while_cond
+-     movl    $55327, %eax            #  34:     assign v3 <- 55327
++     movl    $55327, %eax            #  35:     assign v3 <- 55327
+-     movl    $23650, %eax            #  35:     return 23650
++     movl    $23650, %eax            #  36:     return 23650
+-     jmp     l_f1_11                 #  36:     goto   11
++     jmp     l_f1_11                 #  37:     goto   11

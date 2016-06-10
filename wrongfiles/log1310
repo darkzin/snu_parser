@@ -1,0 +1,44 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f2_2                  #   0:     goto   2
++     jmp     l_f2_2                  #   1:     goto   2
++     jmp     l_f2_2                  #   2:     goto   2
+-     movl    $1, %eax                #   0:     assign t8 <- 1
++     movl    $1, %eax                #   3:     assign t8 <- 1
+-     jmp     l_f2_3                  #   1:     goto   3
++     jmp     l_f2_3                  #   4:     goto   3
++ l_f2_2:
+-     movl    $0, %eax                #   2:     assign t8 <- 0
++     movl    $0, %eax                #   6:     assign t8 <- 0
+-     movzbl  -18(%ebp), %eax         #   4:     assign v1 <- t8
++     movzbl  -18(%ebp), %eax         #   8:     assign v1 <- t8
+-     call    dummyBOOLfunc           #   6:     call   t9 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  10:     call   t9 <- dummyBOOLfunc
+-     movzbl  -19(%ebp), %eax         #   7:     if     t9 = 1 goto 9_while_body
++     movzbl  -19(%ebp), %eax         #  11:     if     t9 = 1 goto 9_while_body
+-     jmp     l_f2_7                  #   8:     goto   7
++     jmp     l_f2_7                  #  12:     goto   7
+-     movl    $99, %eax               #  10:     assign v2 <- 99
++     movl    $99, %eax               #  14:     assign v2 <- 99
+-     leal    _str_1, %eax            #  11:     &()    t10 <- _str_1
++     leal    _str_1, %eax            #  15:     &()    t10 <- _str_1
+-     movl    -16(%ebp), %eax         #  12:     param  0 <- t10
++     movl    -16(%ebp), %eax         #  16:     param  0 <- t10
+-     call    WriteStr                #  13:     call   WriteStr
++     call    WriteStr                #  17:     call   WriteStr
+-     jmp     l_f2_8_while_cond       #  14:     goto   8_while_cond
++     jmp     l_f2_8_while_cond       #  18:     goto   8_while_cond
+-     call    dummyBOOLfunc           #  17:     call   t11 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  21:     call   t11 <- dummyBOOLfunc
+-     movzbl  -17(%ebp), %eax         #  18:     if     t11 = 1 goto 14_while_body
++     movzbl  -17(%ebp), %eax         #  22:     if     t11 = 1 goto 14_while_body
+-     jmp     l_f2_12                 #  19:     goto   12
++     jmp     l_f2_12                 #  23:     goto   12
+-     movl    $96451, %eax            #  21:     assign v3 <- 96451
++     movl    $96451, %eax            #  25:     assign v3 <- 96451
+-     movl    $99, %eax               #  22:     return 99
++     movl    $99, %eax               #  26:     return 99
+-     movl    $98, %eax               #  23:     return 98
++     movl    $98, %eax               #  27:     return 98
+-     jmp     l_f2_13_while_cond      #  24:     goto   13_while_cond
++     jmp     l_f2_13_while_cond      #  28:     goto   13_while_cond

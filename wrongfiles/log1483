@@ -1,0 +1,36 @@
++     jmp     l_f2_9_if_false         #   9:     goto   9_if_false
+-     jmp     l_f2_14                 #  11:     goto   14
++     jmp     l_f2_14                 #  12:     goto   14
+-     jmp     l_f2_15_while_cond      #  12:     goto   15_while_cond
++     jmp     l_f2_15_while_cond      #  13:     goto   15_while_cond
+-     jmp     l_f2_7                  #  14:     goto   7
++     jmp     l_f2_7                  #  15:     goto   7
++ l_f2_9_if_false:
+-     movl    $99, %eax               #  17:     if     99 = 100 goto 19_while_body
++     movl    $99, %eax               #  19:     if     99 = 100 goto 19_while_body
+-     jmp     l_f2_17                 #  18:     goto   17
++     jmp     l_f2_17                 #  20:     goto   17
+-     leal    _str_2, %eax            #  20:     &()    t7 <- _str_2
++     leal    _str_2, %eax            #  22:     &()    t7 <- _str_2
+-     movl    -20(%ebp), %eax         #  21:     param  0 <- t7
++     movl    -20(%ebp), %eax         #  23:     param  0 <- t7
+-     call    WriteStr                #  22:     call   WriteStr
++     call    WriteStr                #  24:     call   WriteStr
+-     movl    $100, %eax              #  24:     if     100 <= 99 goto 24_while_body
++     movl    $100, %eax              #  26:     if     100 <= 99 goto 24_while_body
+-     jmp     l_f2_22                 #  25:     goto   22
++     jmp     l_f2_22                 #  27:     goto   22
+-     jmp     l_f2_23_while_cond      #  27:     goto   23_while_cond
++     jmp     l_f2_23_while_cond      #  29:     goto   23_while_cond
+-     movl    $99, %eax               #  29:     param  0 <- 99
++     movl    $99, %eax               #  31:     param  0 <- 99
+-     call    WriteChar               #  30:     call   WriteChar
++     call    WriteChar               #  32:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     call    dummyINTfunc            #  31:     call   t8 <- dummyINTfunc
++     call    dummyINTfunc            #  33:     call   t8 <- dummyINTfunc
+-     jmp     l_f2_18_while_cond      #  32:     goto   18_while_cond
++     jmp     l_f2_18_while_cond      #  34:     goto   18_while_cond
+-     addl    $5, %esp               
++     addl    $8, %esp               

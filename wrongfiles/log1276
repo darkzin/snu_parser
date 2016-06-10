@@ -1,0 +1,20 @@
++     jmp     l_f1_36_if_false        #  43:     goto   36_if_false
+-     movl    $85081, %eax            #  43:     param  0 <- 85081
++     movl    $85081, %eax            #  44:     param  0 <- 85081
+-     call    WriteInt                #  44:     call   WriteInt
++     call    WriteInt                #  45:     call   WriteInt
+-     movl    $75980, %eax            #  45:     if     75980 >= 74225 goto 40
++     movl    $75980, %eax            #  46:     if     75980 >= 74225 goto 40
+-     jmp     l_f1_41                 #  46:     goto   41
++     jmp     l_f1_41                 #  47:     goto   41
+-     movl    $1, %eax                #  48:     assign t4 <- 1
++     movl    $1, %eax                #  49:     assign t4 <- 1
+-     jmp     l_f1_42                 #  49:     goto   42
++     jmp     l_f1_42                 #  50:     goto   42
+-     movl    $0, %eax                #  51:     assign t4 <- 0
++     movl    $0, %eax                #  52:     assign t4 <- 0
+-     movzbl  -14(%ebp), %eax         #  53:     assign v0 <- t4
++     movzbl  -14(%ebp), %eax         #  54:     assign v0 <- t4
+-     jmp     l_f1_34                 #  54:     goto   34
++     jmp     l_f1_34                 #  55:     goto   34
++ l_f1_36_if_false:

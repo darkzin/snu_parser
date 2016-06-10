@@ -1,0 +1,53 @@
+-     jmp     l_f1_7                  #   5:     goto   7
++     jmp     l_f1_8                  #   5:     goto   8
+- l_f1_7:
++ l_f1_8:
+-     jmp     l_f2_10                 #   7:     goto   10
++     jmp     l_f2_11                 #   7:     goto   11
+- l_f2_10:
++ l_f2_11:
++     jmp     l_f2_19                 #  17:     goto   19
+-     movl    $1, %eax                #  17:     assign t4 <- 1
++     movl    $1, %eax                #  18:     assign t4 <- 1
+-     jmp     l_f2_20                 #  18:     goto   20
++     jmp     l_f2_20                 #  19:     goto   20
++ l_f2_19:
+-     movl    $0, %eax                #  19:     assign t4 <- 0
++     movl    $0, %eax                #  21:     assign t4 <- 0
+-     movzbl  -14(%ebp), %eax         #  21:     assign v1 <- t4
++     movzbl  -14(%ebp), %eax         #  23:     assign v1 <- t4
++     jmp     l_f2_27                 #  25:     goto   27
+-     movl    $1, %eax                #  23:     assign t5 <- 1
++     movl    $1, %eax                #  26:     assign t5 <- 1
+-     jmp     l_f2_27                 #  24:     goto   27
++     jmp     l_f2_28                 #  27:     goto   28
++ l_f2_27:
+-     movl    $0, %eax                #  25:     assign t5 <- 0
++     movl    $0, %eax                #  29:     assign t5 <- 0
+- l_f2_27:
++ l_f2_28:
+-     movl    $0, %eax                #  27:     if     0 = t5 goto 24_while_body
++     movl    $0, %eax                #  31:     if     0 = t5 goto 24_while_body
+-     jmp     l_f2_22                 #  28:     goto   22
++     jmp     l_f2_22                 #  32:     goto   22
+-     jmp     l_f2_23_while_cond      #  30:     goto   23_while_cond
++     jmp     l_f2_23_while_cond      #  34:     goto   23_while_cond
++     jmp     l_test_24_if_false      #  27:     goto   24_if_false
++     jmp     l_test_24_if_false      #  28:     goto   24_if_false
+-     movl    $100, %eax              #  27:     if     100 <= 97 goto 27
++     movl    $100, %eax              #  29:     if     100 <= 97 goto 27
+-     jmp     l_test_28               #  28:     goto   28
++     jmp     l_test_28               #  30:     goto   28
+-     movl    $1, %eax                #  30:     assign t1 <- 1
++     movl    $1, %eax                #  32:     assign t1 <- 1
+-     jmp     l_test_29               #  31:     goto   29
++     jmp     l_test_29               #  33:     goto   29
+-     movl    $0, %eax                #  33:     assign t1 <- 0
++     movl    $0, %eax                #  35:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #  35:     assign v1 <- t1
++     movzbl  -14(%ebp), %eax         #  37:     assign v1 <- t1
+-     call    dummyINTfunc            #  36:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #  38:     call   t2 <- dummyINTfunc
+-     jmp     l_test_22               #  37:     goto   22
++     jmp     l_test_22               #  39:     goto   22
++ l_test_24_if_false:

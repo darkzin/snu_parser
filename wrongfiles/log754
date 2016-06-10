@@ -1,0 +1,18 @@
+-     addl    $6, %esp               
++     addl    $12, %esp              
++     jmp     l_f1_11                 #  13:     goto   11
++ l_f1_11:
++     jmp     l_f1_8                  #  15:     goto   8
+-     jmp     l_f1_9_while_cond       #  13:     goto   9_while_cond
++     jmp     l_f1_9_while_cond       #  16:     goto   9_while_cond
++ l_f1_8:
++     jmp     l_f2_8                  #  13:     goto   8
+-     movl    $1, %eax                #  13:     assign t5 <- 1
++     movl    $1, %eax                #  14:     assign t5 <- 1
+-     jmp     l_f2_9                  #  14:     goto   9
++     jmp     l_f2_9                  #  15:     goto   9
++ l_f2_8:
+-     movl    $0, %eax                #  15:     assign t5 <- 0
++     movl    $0, %eax                #  17:     assign t5 <- 0
+-     movzbl  -22(%ebp), %eax         #  17:     return t5
++     movzbl  -22(%ebp), %eax         #  19:     return t5

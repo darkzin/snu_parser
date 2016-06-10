@@ -1,0 +1,30 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f0_2                  #   5:     goto   2
++     jmp     l_f0_2                  #   6:     goto   2
++     jmp     l_f0_2                  #   7:     goto   2
+-     movl    $28289, %eax            #   5:     if     28289 = 55176 goto 8_if_true
++     movl    $28289, %eax            #   8:     if     28289 = 55176 goto 8_if_true
+-     jmp     l_f0_9_if_false         #   6:     goto   9_if_false
++     jmp     l_f0_9_if_false         #   9:     goto   9_if_false
+-     jmp     l_f0_7                  #   8:     goto   7
++     jmp     l_f0_7                  #  11:     goto   7
+-     jmp     l_f0_3_while_cond       #  11:     goto   3_while_cond
++     jmp     l_f0_3_while_cond       #  14:     goto   3_while_cond
++ l_f0_2:
++     jmp     l_f1_2_if_false         #   2:     goto   2_if_false
+-     jmp     l_f1_0                  #   3:     goto   0
++     jmp     l_f1_0                  #   4:     goto   0
++ l_f1_2_if_false:
++     jmp     l_f1_9_if_false         #   7:     goto   9_if_false
+-     movl    $24645, %eax            #   5:     return 24645
++     movl    $24645, %eax            #   8:     return 24645
+-     jmp     l_f1_7                  #   6:     goto   7
++     jmp     l_f1_7                  #   9:     goto   7
++ l_f1_9_if_false:
+-     call    ReadInt                 #   8:     call   t2 <- ReadInt
++     call    ReadInt                 #  12:     call   t2 <- ReadInt
+-     movl    -16(%ebp), %eax         #   9:     mul    t3 <- t2, 75450
++     movl    -16(%ebp), %eax         #  13:     mul    t3 <- t2, 75450
+-     movl    -20(%ebp), %eax         #  10:     return t3
++     movl    -20(%ebp), %eax         #  14:     return t3

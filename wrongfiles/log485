@@ -1,0 +1,6 @@
+-     #   -904(%ebp) 744  [ $v4       <array 9 of <array 2 of <array 1 of <array 4 of <array 10 of <bool>>>>>> %ebp-904 ]
++     #   -904(%ebp)  744  [ $v4       <array 9 of <array 2 of <array 1 of <array 4 of <array 10 of <bool>>>>>> %ebp-904 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              
+-     addl    $1, %esp               
++     addl    $4, %esp               

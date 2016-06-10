@@ -1,0 +1,38 @@
++     jmp     l_f0_3                  #   1:     goto   3
+-     movl    $1, %eax                #   1:     assign t2 <- 1
++     movl    $1, %eax                #   2:     assign t2 <- 1
+-     jmp     l_f0_4                  #   2:     goto   4
++     jmp     l_f0_4                  #   3:     goto   4
++ l_f0_3:
+-     movl    $0, %eax                #   3:     assign t2 <- 0
++     movl    $0, %eax                #   5:     assign t2 <- 0
+-     movzbl  -14(%ebp), %eax         #   5:     assign v3 <- t2
++     movzbl  -14(%ebp), %eax         #   7:     assign v3 <- t2
+-     call    dummyCHARfunc           #   6:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t3 <- dummyCHARfunc
+-     movzbl  -15(%ebp), %eax         #   7:     assign v4 <- t3
++     movzbl  -15(%ebp), %eax         #   9:     assign v4 <- t3
++     jmp     l_f1_30                 #  37:     goto   30
++     jmp     l_f1_30                 #  38:     goto   30
++     jmp     l_f1_30                 #  39:     goto   30
+-     movl    $1, %eax                #  37:     assign t5 <- 1
++     movl    $1, %eax                #  40:     assign t5 <- 1
+-     jmp     l_f1_30                 #  38:     goto   30
++     jmp     l_f1_31                 #  41:     goto   31
++ l_f1_30:
+-     movl    $0, %eax                #  39:     assign t5 <- 0
++     movl    $0, %eax                #  43:     assign t5 <- 0
+- l_f1_30:
++ l_f1_31:
+-     movl    $0, %eax                #  41:     if     0 = t5 goto 27_while_body
++     movl    $0, %eax                #  45:     if     0 = t5 goto 27_while_body
+-     jmp     l_f1_25                 #  42:     goto   25
++     jmp     l_f1_25                 #  46:     goto   25
+-     jmp     l_f1_38_if_false        #  44:     goto   38_if_false
++     jmp     l_f1_38_if_false        #  48:     goto   38_if_false
+-     jmp     l_f1_36                 #  45:     goto   36
++     jmp     l_f1_36                 #  49:     goto   36
+-     call    dummyProcedure          #  48:     call   dummyProcedure
++     call    dummyProcedure          #  52:     call   dummyProcedure
+-     jmp     l_f1_26_while_cond      #  49:     goto   26_while_cond
++     jmp     l_f1_26_while_cond      #  53:     goto   26_while_cond

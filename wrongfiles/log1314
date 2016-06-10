@@ -1,0 +1,38 @@
++     jmp     l_f0_5                  #   1:     goto   5
+-     jmp     l_f0_2                  #   1:     goto   2
++     jmp     l_f0_2                  #   2:     goto   2
++ l_f0_5:
+-     movl    $1, %eax                #   3:     assign t0 <- 1
++     movl    $1, %eax                #   5:     assign t0 <- 1
+-     jmp     l_f0_4                  #   4:     goto   4
++     jmp     l_f0_4                  #   6:     goto   4
+-     movl    $0, %eax                #   5:     assign t0 <- 0
++     movl    $0, %eax                #   7:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #   7:     return t0
++     movzbl  -13(%ebp), %eax         #   9:     return t0
+-     call    dummyCHARfunc           #   9:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  11:     call   t1 <- dummyCHARfunc
+-     call    dummyCHARfunc           #  10:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  12:     call   t2 <- dummyCHARfunc
+-     movzbl  -14(%ebp), %eax         #  11:     if     t1 > t2 goto 10_while_body
++     movzbl  -14(%ebp), %eax         #  13:     if     t1 > t2 goto 10_while_body
+-     jmp     l_f0_8                  #  12:     goto   8
++     jmp     l_f0_8                  #  14:     goto   8
+-     jmp     l_f0_9_while_cond       #  14:     goto   9_while_cond
++     jmp     l_f0_9_while_cond       #  16:     goto   9_while_cond
++     jmp     l_f1_3                  #   8:     goto   3
++     jmp     l_f1_3                  #   9:     goto   3
+-     movl    $1, %eax                #   8:     assign t4 <- 1
++     movl    $1, %eax                #  10:     assign t4 <- 1
+-     jmp     l_f1_4                  #   9:     goto   4
++     jmp     l_f1_4                  #  11:     goto   4
+-     movl    $0, %eax                #  11:     assign t4 <- 0
++     movl    $0, %eax                #  13:     assign t4 <- 0
+-     movzbl  -26(%ebp), %eax         #  13:     assign v2 <- t4
++     movzbl  -26(%ebp), %eax         #  15:     assign v2 <- t4
+-     movl    $100, %eax              #  14:     assign v3 <- 100
++     movl    $100, %eax              #  16:     assign v3 <- 100
+-     #-1052318136(%ebp)1052318104  [ $v2       <array 67 of <array 44 of <array 23 of <array 40 of <array 97 of <int>>>>>> %ebp-1052318136 ]
++     #   -1052318136(%ebp)  1052318104  [ $v2       <array 67 of <array 44 of <array 23 of <array 40 of <array 97 of <int>>>>>> %ebp-1052318136 ]
+-     #-1066472400(%ebp)14154264  [ $v3       <array 97 of <array 80 of <array 6 of <array 4 of <array 76 of <char>>>>>> %ebp-1066472400 ]
++     #   -1066472400(%ebp)  14154264  [ $v3       <array 97 of <array 80 of <array 6 of <array 4 of <array 76 of <char>>>>>> %ebp-1066472400 ]

@@ -1,0 +1,36 @@
++     jmp     l_test_2_if_false       #   3:     goto   2_if_false
+-     jmp     l_test_0                #   4:     goto   0
++     jmp     l_test_0                #   5:     goto   0
++ l_test_2_if_false:
+-     jmp     l_test_11               #   6:     goto   11
++     jmp     l_test_11               #   8:     goto   11
+-     call    dummyBOOLfunc           #   8:     call   t0 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  10:     call   t0 <- dummyBOOLfunc
+-     call    dummyINTfunc            #   9:     call   t1 <- dummyINTfunc
++     call    dummyINTfunc            #  11:     call   t1 <- dummyINTfunc
+-     call    dummyBOOLfunc           #  10:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  12:     call   t2 <- dummyBOOLfunc
+-     jmp     l_test_8                #  11:     goto   8
++     jmp     l_test_8                #  13:     goto   8
+-     jmp     l_test_18_if_true       #  13:     goto   18_if_true
++     jmp     l_test_18_if_true       #  15:     goto   18_if_true
+-     jmp     l_test_18_if_true       #  14:     goto   18_if_true
++     jmp     l_test_18_if_true       #  16:     goto   18_if_true
++     jmp     l_test_19_if_false      #  17:     goto   19_if_false
+-     movl    $75456, %eax            #  16:     assign v0 <- 75456
++     movl    $75456, %eax            #  19:     assign v0 <- 75456
+-     jmp     l_test_17               #  17:     goto   17
++     jmp     l_test_17               #  20:     goto   17
++ l_test_19_if_false:
+-     movl    $100, %eax              #  19:     if     100 <= 100 goto 24_if_true
++     movl    $100, %eax              #  23:     if     100 <= 100 goto 24_if_true
+-     jmp     l_test_25_if_false      #  20:     goto   25_if_false
++     jmp     l_test_25_if_false      #  24:     goto   25_if_false
+-     movl    $98, %eax               #  22:     assign v1 <- 98
++     movl    $98, %eax               #  26:     assign v1 <- 98
+-     jmp     l_test_23               #  23:     goto   23
++     jmp     l_test_23               #  27:     goto   23
+-     call    dummyCHARfunc           #  26:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  30:     call   t3 <- dummyCHARfunc
+-     movzbl  -22(%ebp), %eax         #  27:     assign v1 <- t3
++     movzbl  -22(%ebp), %eax         #  31:     assign v1 <- t3

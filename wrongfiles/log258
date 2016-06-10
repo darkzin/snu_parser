@@ -1,0 +1,29 @@
+-     jmp     l_f0_4                  #   1:     goto   4
++     jmp     l_f0_5                  #   1:     goto   5
+-     jmp     l_f0_4                  #   2:     goto   4
++     jmp     l_f0_5                  #   2:     goto   5
+-     jmp     l_f0_4                  #   3:     goto   4
++     jmp     l_f0_5                  #   3:     goto   5
+- l_f0_4:
++ l_f0_5:
+-     jmp     l_f0_6                  #   6:     goto   6
++     jmp     l_f0_7                  #   6:     goto   7
+- l_f0_6:
++ l_f0_7:
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f1_15                 #  17:     goto   15
++     jmp     l_f1_15                 #  18:     goto   15
+-     movl    $1, %eax                #  17:     assign t9 <- 1
++     movl    $1, %eax                #  19:     assign t9 <- 1
+-     jmp     l_f1_16                 #  18:     goto   16
++     jmp     l_f1_16                 #  20:     goto   16
++ l_f1_15:
+-     movl    $0, %eax                #  19:     assign t9 <- 0
++     movl    $0, %eax                #  22:     assign t9 <- 0
+-     movzbl  -18(%ebp), %eax         #  21:     assign v2 <- t9
++     movzbl  -18(%ebp), %eax         #  24:     assign v2 <- t9
+-     #  -1096(%ebp)1074  [ $v1       <array 1 of <array 5 of <array 5 of <array 7 of <array 6 of <char>>>>>> %ebp-1096 ]
++     #   -1096(%ebp)  1074  [ $v1       <array 1 of <array 5 of <array 5 of <array 7 of <array 6 of <char>>>>>> %ebp-1096 ]
+-     #  -1100(%ebp)   4  [ $v2       <int> %ebp-1100 ]
++     #   -1100(%ebp)   4  [ $v2       <int> %ebp-1100 ]

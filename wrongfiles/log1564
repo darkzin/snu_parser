@@ -1,0 +1,34 @@
++     jmp     l_f0_2                  #   1:     goto   2
+-     movl    $1, %eax                #   2:     assign t2 <- 1
++     movl    $1, %eax                #   3:     assign t2 <- 1
+-     jmp     l_f0_3                  #   3:     goto   3
++     jmp     l_f0_3                  #   4:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   4:     assign t2 <- 0
++     movl    $0, %eax                #   6:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     return t2
++     movzbl  -13(%ebp), %eax         #   8:     return t2
+-     movl    $30192, %eax            #   7:     assign v2 <- 30192
++     movl    $30192, %eax            #   9:     assign v2 <- 30192
+-     movl    $16053, %eax            #   9:     if     16053 <= 72012 goto 10_while_body
++     movl    $16053, %eax            #  11:     if     16053 <= 72012 goto 10_while_body
+-     jmp     l_f0_8                  #  10:     goto   8
++     jmp     l_f0_8                  #  12:     goto   8
+-     call    dummyINTfunc            #  12:     call   t3 <- dummyINTfunc
++     call    dummyINTfunc            #  14:     call   t3 <- dummyINTfunc
+-     movl    $100, %eax              #  13:     assign v3 <- 100
++     movl    $100, %eax              #  15:     assign v3 <- 100
+-     jmp     l_f0_9_while_cond       #  14:     goto   9_while_cond
++     jmp     l_f0_9_while_cond       #  16:     goto   9_while_cond
+-     addl    $5, %esp               
++     addl    $8, %esp               
++     jmp     l_test_16_if_false      #  21:     goto   16_if_false
+-     jmp     l_test_14               #  22:     goto   14
++     jmp     l_test_14               #  23:     goto   14
++ l_test_16_if_false:
+-     movl    $36762, %eax            #  24:     if     36762 <= 72613 goto 21_if_true
++     movl    $36762, %eax            #  26:     if     36762 <= 72613 goto 21_if_true
+-     jmp     l_test_22_if_false      #  25:     goto   22_if_false
++     jmp     l_test_22_if_false      #  27:     goto   22_if_false
+-     jmp     l_test_20               #  28:     goto   20
++     jmp     l_test_20               #  30:     goto   20

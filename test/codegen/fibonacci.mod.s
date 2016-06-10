@@ -155,7 +155,7 @@ main:
     rep     stosl                  
 
     # function body
-    leal    _str_6, %eax            #   0:     &()    t0 <- _str_6
+    leal    _str_1, %eax            #   0:     &()    t0 <- _str_1
     movl    %eax, -16(%ebp)        
     movl    -16(%ebp), %eax         #   1:     param  0 <- t0
     pushl   %eax                   
@@ -163,7 +163,7 @@ main:
     addl    $4, %esp               
     call    WriteLn                 #   3:     call   WriteLn
     call    WriteLn                 #   4:     call   WriteLn
-    leal    _str_7, %eax            #   5:     &()    t1 <- _str_7
+    leal    _str_2, %eax            #   5:     &()    t1 <- _str_2
     movl    %eax, -20(%ebp)        
     movl    -20(%ebp), %eax         #   6:     param  0 <- t1
     pushl   %eax                   
@@ -179,7 +179,7 @@ l_fibonacci_5_while_cond:
     jg      l_fibonacci_6_while_body
     jmp     l_fibonacci_4           #  11:     goto   4
 l_fibonacci_6_while_body:
-    leal    _str_8, %eax            #  13:     &()    t3 <- _str_8
+    leal    _str_3, %eax            #  13:     &()    t3 <- _str_3
     movl    %eax, -28(%ebp)        
     movl    -28(%ebp), %eax         #  14:     param  0 <- t3
     pushl   %eax                   
@@ -189,7 +189,7 @@ l_fibonacci_6_while_body:
     pushl   %eax                   
     call    WriteInt                #  17:     call   WriteInt
     addl    $4, %esp               
-    leal    _str_9, %eax            #  18:     &()    t4 <- _str_9
+    leal    _str_4, %eax            #  18:     &()    t4 <- _str_4
     movl    %eax, -32(%ebp)        
     movl    -32(%ebp), %eax         #  19:     param  0 <- t4
     pushl   %eax                   
@@ -205,7 +205,7 @@ l_fibonacci_6_while_body:
     call    WriteInt                #  24:     call   WriteInt
     addl    $4, %esp               
     call    WriteLn                 #  25:     call   WriteLn
-    leal    _str_10, %eax           #  26:     &()    t6 <- _str_10
+    leal    _str_5, %eax            #  26:     &()    t6 <- _str_5
     movl    %eax, -40(%ebp)        
     movl    -40(%ebp), %eax         #  27:     param  0 <- t6
     pushl   %eax                   
@@ -236,30 +236,30 @@ l_fibonacci_exit:
     .align 4
 
     # scope: fibonacci
-_str_10:                            # <array 29 of <char>>
-    .long    1
-    .long   29
-    .asciz "Enter a number (0 to exit): "
-    .align   4
-_str_6:                             # <array 18 of <char>>
+_str_1:                             # <array 18 of <char>>
     .long    1
     .long   18
     .asciz "Fibonacci numbers"
     .align   4
-_str_7:                             # <array 29 of <char>>
+_str_2:                             # <array 29 of <char>>
     .long    1
     .long   29
     .asciz "Enter a number (0 to exit): "
     .align   4
-_str_8:                             # <array 11 of <char>>
+_str_3:                             # <array 11 of <char>>
     .long    1
     .long   11
     .asciz "fibonacci("
     .align   4
-_str_9:                             # <array 5 of <char>>
+_str_4:                             # <array 5 of <char>>
     .long    1
     .long    5
     .asciz ") = "
+    .align   4
+_str_5:                             # <array 29 of <char>>
+    .long    1
+    .long   29
+    .asciz "Enter a number (0 to exit): "
     .align   4
 i:                                  # <int>
     .skip    4

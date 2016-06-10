@@ -1,0 +1,70 @@
++     jmp     l_f1_0                  #   1:     goto   0
+-     movl    $0, %eax                #   1:     assign v1 <- 0
++     movl    $0, %eax                #   2:     assign v1 <- 0
+-     movl    $75118, %eax            #   2:     if     75118 >= 43815 goto 6_if_true
++     movl    $75118, %eax            #   3:     if     75118 >= 43815 goto 6_if_true
+-     jmp     l_f1_7_if_false         #   3:     goto   7_if_false
++     jmp     l_f1_7_if_false         #   4:     goto   7_if_false
+-     jmp     l_f1_5                  #   5:     goto   5
++     jmp     l_f1_5                  #   6:     goto   5
+-     jmp     l_f1_1_while_cond       #   8:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   9:     goto   1_while_cond
++ l_f1_0:
+-     movl    $68828, %eax            #   9:     mul    t3 <- 68828, 6494
++     movl    $68828, %eax            #  11:     mul    t3 <- 68828, 6494
+-     movl    -16(%ebp), %eax         #  10:     return t3
++     movl    -16(%ebp), %eax         #  12:     return t3
+-     movl    $90314, %eax            #  12:     if     90314 # 50 goto 12_while_body
++     movl    $90314, %eax            #  14:     if     90314 # 50 goto 12_while_body
+-     jmp     l_f1_10                 #  13:     goto   10
++     jmp     l_f1_10                 #  15:     goto   10
+-     movl    $98, %eax               #  15:     param  0 <- 98
++     movl    $98, %eax               #  17:     param  0 <- 98
+-     call    WriteChar               #  16:     call   WriteChar
++     call    WriteChar               #  18:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     call    dummyINTfunc            #  17:     call   t4 <- dummyINTfunc
++     call    dummyINTfunc            #  19:     call   t4 <- dummyINTfunc
+-     jmp     l_f1_19                 #  19:     goto   19
++     jmp     l_f1_19                 #  21:     goto   19
+-     jmp     l_f1_20_while_cond      #  20:     goto   20_while_cond
++     jmp     l_f1_20_while_cond      #  22:     goto   20_while_cond
+-     jmp     l_f1_15                 #  22:     goto   15
++     jmp     l_f1_15                 #  24:     goto   15
+-     jmp     l_f1_11_while_cond      #  24:     goto   11_while_cond
++     jmp     l_f1_11_while_cond      #  26:     goto   11_while_cond
++     jmp     l_test_1                #   5:     goto   1
+-     jmp     l_test_2_while_cond     #   6:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #   7:     goto   2_while_cond
++ l_test_1:
+-     jmp     l_test_7_if_false       #   7:     goto   7_if_false
++     jmp     l_test_7_if_false       #   9:     goto   7_if_false
+-     jmp     l_test_9_if_true        #   8:     goto   9_if_true
++     jmp     l_test_9_if_true        #  10:     goto   9_if_true
+-     jmp     l_test_8                #  10:     goto   8
++     jmp     l_test_8                #  12:     goto   8
+-     jmp     l_test_5                #  12:     goto   5
++     jmp     l_test_5                #  14:     goto   5
+-     movl    $99, %eax               #  15:     assign v0 <- 99
++     movl    $99, %eax               #  17:     assign v0 <- 99
+-     jmp     l_test_16_while_body    #  17:     goto   16_while_body
++     jmp     l_test_16_while_body    #  19:     goto   16_while_body
++     jmp     l_test_14               #  20:     goto   14
+-     movl    $99067, %eax            #  19:     if     99067 >= 14033 goto 20_if_true
++     movl    $99067, %eax            #  22:     if     99067 >= 14033 goto 20_if_true
+-     jmp     l_test_21_if_false      #  20:     goto   21_if_false
++     jmp     l_test_21_if_false      #  23:     goto   21_if_false
+-     jmp     l_test_19               #  22:     goto   19
++     jmp     l_test_19               #  25:     goto   19
+-     jmp     l_test_15_while_cond    #  25:     goto   15_while_cond
++     jmp     l_test_15_while_cond    #  28:     goto   15_while_cond
++ l_test_14:
+-     call    dummyCHARfunc           #  26:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  30:     call   t2 <- dummyCHARfunc
+-     movzbl  -15(%ebp), %eax         #  27:     param  0 <- t2
++     movzbl  -15(%ebp), %eax         #  31:     param  0 <- t2
+-     call    WriteChar               #  28:     call   WriteChar
++     call    WriteChar               #  32:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               

@@ -800,11 +800,11 @@ CTacAddr* CAstStatIf::ToTac(CCodeBlock *cb, CTacLabel *next)
   // This part needs for optimization. If the condition just true or false value,
   // true value just ignore(not being evaluated),
   // and false value goto falseLabel directly.
-  if (CAstConstant *boolValue = dynamic_cast<CAstConstant *>(_cond)){
-    if (boolValue->GetValue() == 0) {
-      cb->AddInstr(new CTacInstr(opGoto, ifFalseLabel));
-    }
-  }
+  //if (CAstConstant *boolValue = dynamic_cast<CAstConstant *>(_cond)){
+    //if (boolValue->GetValue() == 0) {
+      //cb->AddInstr(new CTacInstr(opGoto, ifFalseLabel));
+    //}
+  //}
 
   // evaluate the condition. It is boolean operation, so call with true and false label.
   // If the condition is true, then go to body label,
@@ -935,17 +935,17 @@ CTacAddr* CAstStatWhile::ToTac(CCodeBlock *cb, CTacLabel *next)
   // This part needs for optimization. If the condition just true or false value,
   // true value just ignore(not being evaluated),
   // and false value goto falseLabel directly.
-  if (CAstConstant *boolValue = dynamic_cast<CAstConstant *>(_cond)){
-    if (boolValue->GetValue() == 0) {
-      cb->AddInstr(new CTacInstr(opGoto, next));
-    }
-    else {
-      _cond->ToTac(cb, bodyLabel, next);
-    }
-  }
-  else {
+  //if (CAstConstant *boolValue = dynamic_cast<CAstConstant *>(_cond)){
+    //if (boolValue->GetValue() == 0) {
+      //cb->AddInstr(new CTacInstr(opGoto, next));
+    //}
+    //else {
+      //_cond->ToTac(cb, bodyLabel, next);
+    //}
+  //}
+  //else {
     _cond->ToTac(cb, bodyLabel, next);
-  }
+  //}
 
   // this is body part.
   // Each statement must have exit flow point(next parameter),
@@ -1157,6 +1157,7 @@ CTacAddr* CAstBinaryOp::ToTac(CCodeBlock *cb)
     // That case, we call TaTac(cb, true, false).
     // This is first call of expression, so we must prepare true and false branch.
     // Then call ToTac(cb, true, false).
+    
     trueLabel = cb->CreateLabel();
     falseLabel = cb->CreateLabel();
     returnLabel = cb->CreateLabel();
@@ -1248,9 +1249,9 @@ CTacAddr* CAstBinaryOp::ToTac(CCodeBlock *cb,
   // Just do operation. If it is true, go to true branch.
   // If not, let it flow, then next instruction move the flow to false branch.
   if (IsRelOp(GetOperation())) {
+    cb->CreateLabel();
     leftExprTac = _left->ToTac(cb);
     rightExprTac = _right->ToTac(cb);
-    cb->CreateLabel();
 
     cb->AddInstr(new CTacInstr(GetOperation(), ltrue, leftExprTac, rightExprTac));
     cb->AddInstr(new CTacInstr(opGoto, lfalse));
@@ -1384,63 +1385,74 @@ CTacAddr* CAstUnaryOp::ToTac(CCodeBlock *cb)
   // if value is 1, return 0,
   // else, return 1.
   
-  CTacLabel *trueLabel = cb->CreateLabel();
-  CTacLabel *falseLabel = cb->CreateLabel();
-  CTacLabel *exitLabel = cb->CreateLabel();
+  EOperation unaryOp = GetOperation();
+    
+  if (unaryOp == opNeg || unaryOp == opPos) {
+    CTacAddr* operandTac = GetOperand()->ToTac(cb);
+    CTacTemp* temp = cb->CreateTemp(GetType());
+    cb->AddInstr(new CTacInstr(GetOperation(), temp, operandTac, NULL));
+    return temp;
+  }
+  if (unaryOp == opNot) {
+    CTacLabel *trueLabel = cb->CreateLabel();
+    CTacLabel *falseLabel = cb->CreateLabel();
+    CTacLabel *exitLabel = cb->CreateLabel();
 
-  CAstExpression *operand = _operand;
+    CAstExpression *operand = _operand;
 
-  operand->ToTac(cb, falseLabel, trueLabel);
-  CTacAddr *result = cb->CreateTemp(_operand->GetType());
+    operand->ToTac(cb, falseLabel, trueLabel);
+    CTacAddr *result = cb->CreateTemp(_operand->GetType());
 
-  cb->AddInstr(trueLabel);
-  cb->AddInstr(new CTacInstr(opAssign, result, new CTacConst(1)));
-  cb->AddInstr(new CTacInstr(opGoto, exitLabel));
+    cb->AddInstr(trueLabel);
+    cb->AddInstr(new CTacInstr(opAssign, result, new CTacConst(1)));
+    cb->AddInstr(new CTacInstr(opGoto, exitLabel));
 
-  cb->AddInstr(falseLabel);
-  cb->AddInstr(new CTacInstr(opAssign, result, new CTacConst(0)));
+    cb->AddInstr(falseLabel);
+    cb->AddInstr(new CTacInstr(opAssign, result, new CTacConst(0)));
 
-  cb->AddInstr(exitLabel);
+    cb->AddInstr(exitLabel);
 
-  return result;
+    return result;
+  }
+  else {
+   return NULL;
+  }
 }
 
 CTacAddr* CAstUnaryOp::ToTac(CCodeBlock *cb,
                              CTacLabel *ltrue, CTacLabel *lfalse)
 {
+  //EOperation unaryOp = GetOperation();
   CTacAddr *operandTac = _operand->ToTac(cb, lfalse, ltrue);
+  return NULL;
 
-  if (operandTac == NULL) {
+  //if (unaryOp == opNeg || unaryOp == opPos) {
+    //CTacAddr *operandTac = _operand->ToTac(cb, lfalse, ltrue);
+    //return NULL;
+  //}
+
+  /*if (operandTac == NULL) {
     return NULL;
-  }
+  }*/
 
   // This part needs for optimization. If the condition just true or false value,
   // true value just ignore(not being evaluated),
   // and false value goto falseLabel directly.
-  else if (CTacConst *boolValue = dynamic_cast<CTacConst *>(operandTac)) {
-    if (boolValue->GetValue() == 1) {
-      cb->AddInstr(new CTacInstr(opGoto, lfalse));
-      return NULL;
-    }
-    else {
-      return NULL;
-    }
-  }
+  //if (CTacConst *boolValue = dynamic_cast<CTacConst *>(operandTac)) {
+    //if (boolValue->GetValue() == 1) {
+      //cb->AddInstr(new CTacInstr(opGoto, lfalse));
+      //return NULL;
+    //}
+    //else {
+      //return NULL;
+    //}
+  //}
 
-  // This case, operand just a CTacTemp. It must be.
-  else {
+   //This case, operand just a CTacTemp. It must be.
+  //else {
     //cb->AddInstr(new CTacInstr(opEqual, lfalse, operandTac, new CTacConst(1)));
     //cb->AddInstr(new CTacInstr(opGoto, ltrue));
-    return NULL;
-  }
-
-  //if (CAstDesignator *operand = dynamic_cast<CAstDesignator *>(_operand)) {
-    //cb->AddInstr(new CTacInstr(opEqual, lfalse, operand->ToTac(cb), new CTacConst(1)));
-    //cb->AddInstr(new CTacInstr(opGoto, ltrue));
     //return NULL;
-  //}
-  //else {
-    //return _operand->ToTac(cb, lfalse, ltrue);
   //}
 }
 
@@ -2047,7 +2059,13 @@ CTacAddr* CAstArrayDesignator::ToTac(CCodeBlock *cb)
         higherDimensionArrayIndex = new CTacConst(0);
       }
       else {
-        higherDimensionArrayIndex = GetIndex(i-2)->ToTac(cb);
+        if (i == 2) {
+          higherDimensionArrayIndex = nextArrayIndex;
+        }
+        else {
+          higherDimensionArrayIndex = currentDimensionArrayIndex;
+        }
+
       }
 
       //cb->AddInstr(new CTacInstr(opMul, arrayDimIndex, higherDimensionArrayIndex, sizeOfDim));
@@ -2184,6 +2202,10 @@ CTacAddr* CAstConstant::ToTac(CCodeBlock *cb,
   CTacAddr *result = new CTacConst(GetValue());
   if (GetValue() == 1) {
     cb->AddInstr(new CTacInstr(opGoto, ltrue));
+    return NULL;
+  }
+  else {
+    cb->AddInstr(new CTacInstr(opGoto, lfalse));
     return NULL;
   }
   //else {

@@ -1,0 +1,18 @@
++     jmp     l_f2_6                  #   9:     goto   6
+-     movl    $100, %eax              #  10:     if     100 >= 99 goto 13_while_body
++     movl    $100, %eax              #  11:     if     100 >= 99 goto 13_while_body
+-     jmp     l_f2_11                 #  11:     goto   11
++     jmp     l_f2_11                 #  12:     goto   11
+-     jmp     l_f2_12_while_cond      #  13:     goto   12_while_cond
++     jmp     l_f2_12_while_cond      #  14:     goto   12_while_cond
+-     movl    $98, %eax               #  15:     if     98 < 99 goto 16_if_true
++     movl    $98, %eax               #  16:     if     98 < 99 goto 16_if_true
+-     jmp     l_f2_17_if_false        #  16:     goto   17_if_false
++     jmp     l_f2_17_if_false        #  17:     goto   17_if_false
+-     jmp     l_f2_15                 #  18:     goto   15
++     jmp     l_f2_15                 #  19:     goto   15
+-     jmp     l_f2_7_while_cond       #  22:     goto   7_while_cond
++     jmp     l_f2_7_while_cond       #  23:     goto   7_while_cond
++ l_f2_6:
+-     addl    $2, %esp               
++     addl    $8, %esp               

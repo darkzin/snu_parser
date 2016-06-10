@@ -1,0 +1,33 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f1_5                  #   5:     goto   5
+-     jmp     l_f1_6_while_cond       #   5:     goto   6_while_cond
++     jmp     l_f1_6_while_cond       #   6:     goto   6_while_cond
++ l_f1_5:
+-     jmp     l_f1_1                  #   6:     goto   1
++     jmp     l_f1_1                  #   8:     goto   1
+-     call    dummyINTfunc            #   9:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #  11:     call   t2 <- dummyINTfunc
+-     movl    -16(%ebp), %eax         #  10:     assign v3 <- t2
++     movl    -16(%ebp), %eax         #  12:     assign v3 <- t2
++     jmp     l_f2_9_if_false         #  11:     goto   9_if_false
++     jmp     l_f2_9_if_false         #  12:     goto   9_if_false
+-     movl    $70434, %eax            #  11:     assign v0 <- 70434
++     movl    $70434, %eax            #  13:     assign v0 <- 70434
+-     movl    $97, %eax               #  12:     return 97
++     movl    $97, %eax               #  14:     return 97
+-     jmp     l_f2_13                 #  14:     goto   13
++     jmp     l_f2_13                 #  16:     goto   13
+-     jmp     l_f2_14_while_cond      #  15:     goto   14_while_cond
++     jmp     l_f2_14_while_cond      #  17:     goto   14_while_cond
+-     movl    $99, %eax               #  17:     assign v2 <- 99
++     movl    $99, %eax               #  19:     assign v2 <- 99
+-     movl    $100, %eax              #  18:     assign v2 <- 100
++     movl    $100, %eax              #  20:     assign v2 <- 100
+-     call    dummyINTfunc            #  19:     call   t3 <- dummyINTfunc
++     call    dummyINTfunc            #  21:     call   t3 <- dummyINTfunc
+-     movl    $98, %eax               #  20:     assign v2 <- 98
++     movl    $98, %eax               #  22:     assign v2 <- 98
+-     jmp     l_f2_7                  #  21:     goto   7
++     jmp     l_f2_7                  #  23:     goto   7
++ l_f2_9_if_false:

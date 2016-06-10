@@ -1,0 +1,88 @@
++     jmp     l_f1_13                 #  10:     goto   13
+-     jmp     l_f1_10                 #  10:     goto   10
++     jmp     l_f1_10                 #  11:     goto   10
++ l_f1_13:
+-     movl    $1, %eax                #  12:     assign t0 <- 1
++     movl    $1, %eax                #  14:     assign t0 <- 1
+-     jmp     l_f1_12                 #  13:     goto   12
++     jmp     l_f1_12                 #  15:     goto   12
+-     movl    $0, %eax                #  14:     assign t0 <- 0
++     movl    $0, %eax                #  16:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #  16:     return t0
++     movzbl  -13(%ebp), %eax         #  18:     return t0
+-     call    dummyCHARfunc           #  17:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  19:     call   t1 <- dummyCHARfunc
+-     movzbl  -14(%ebp), %eax         #  18:     if     t1 <= 99 goto 16
++     movzbl  -14(%ebp), %eax         #  20:     if     t1 <= 99 goto 16
+-     jmp     l_f1_17                 #  19:     goto   17
++     jmp     l_f1_17                 #  21:     goto   17
+-     movl    $1, %eax                #  21:     assign t2 <- 1
++     movl    $1, %eax                #  23:     assign t2 <- 1
+-     jmp     l_f1_18                 #  22:     goto   18
++     jmp     l_f1_18                 #  24:     goto   18
+-     movl    $0, %eax                #  24:     assign t2 <- 0
++     movl    $0, %eax                #  26:     assign t2 <- 0
+-     movzbl  -15(%ebp), %eax         #  26:     return t2
++     movzbl  -15(%ebp), %eax         #  28:     return t2
+-     #-314496088(%ebp)314496024  [ $v4       <array 90 of <array 16 of <array 91 of <array 50 of <array 48 of <char>>>>>> %ebp-314496088 ]
++     #   -314496088(%ebp)  314496024  [ $v4       <array 90 of <array 16 of <array 91 of <array 50 of <array 48 of <char>>>>>> %ebp-314496088 ]
+-     #-334406512(%ebp)19910424  [ $v5       <array 16 of <array 61 of <array 6 of <array 68 of <array 50 of <bool>>>>>> %ebp-334406512 ]
++     #   -334406512(%ebp)  19910424  [ $v5       <array 16 of <array 61 of <array 6 of <array 68 of <array 50 of <bool>>>>>> %ebp-334406512 ]
++     jmp     l_f2_6_if_false         #  12:     goto   6_if_false
+-     movl    $91260, %eax            #  13:     assign v3 <- 91260
++     movl    $91260, %eax            #  14:     assign v3 <- 91260
+-     movl    $0, %eax                #  14:     if     0 = 0 goto 10
++     movl    $0, %eax                #  15:     if     0 = 0 goto 10
+-     jmp     l_f2_11                 #  15:     goto   11
++     jmp     l_f2_11                 #  16:     goto   11
+-     movl    $1, %eax                #  17:     assign t5 <- 1
++     movl    $1, %eax                #  18:     assign t5 <- 1
+-     jmp     l_f2_12                 #  18:     goto   12
++     jmp     l_f2_12                 #  19:     goto   12
+-     movl    $0, %eax                #  20:     assign t5 <- 0
++     movl    $0, %eax                #  21:     assign t5 <- 0
+-     movzbl  -41(%ebp), %eax         #  22:     assign v1 <- t5
++     movzbl  -41(%ebp), %eax         #  23:     assign v1 <- t5
+-     leal    -334406512(%ebp), %eax  #  23:     &()    t6 <- v5
++     leal    -334406512(%ebp), %eax  #  24:     &()    t6 <- v5
+-     movl    -48(%ebp), %eax         #  24:     param  2 <- t6
++     movl    -48(%ebp), %eax         #  25:     param  2 <- t6
+-     leal    -314496088(%ebp), %eax  #  25:     &()    t7 <- v4
++     leal    -314496088(%ebp), %eax  #  26:     &()    t7 <- v4
+-     movl    -52(%ebp), %eax         #  26:     param  1 <- t7
++     movl    -52(%ebp), %eax         #  27:     param  1 <- t7
+-     movl    $0, %eax                #  27:     param  0 <- 0
++     movl    $0, %eax                #  28:     param  0 <- 0
+-     call    f1                      #  28:     call   t8 <- f1
++     call    f1                      #  29:     call   t8 <- f1
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     movl    $78490, %eax            #  29:     return 78490
++     movl    $78490, %eax            #  30:     return 78490
+-     jmp     l_f2_17_while_cond      #  31:     goto   17_while_cond
++     jmp     l_f2_17_while_cond      #  32:     goto   17_while_cond
+-     jmp     l_f2_4                  #  32:     goto   4
++     jmp     l_f2_4                  #  33:     goto   4
++ l_f2_6_if_false:
+-     leal    -334406512(%ebp), %eax  #  34:     &()    t9 <- v5
++     leal    -334406512(%ebp), %eax  #  36:     &()    t9 <- v5
+-     movl    -60(%ebp), %eax         #  35:     param  2 <- t9
++     movl    -60(%ebp), %eax         #  37:     param  2 <- t9
+-     leal    -314496088(%ebp), %eax  #  36:     &()    t10 <- v4
++     leal    -314496088(%ebp), %eax  #  38:     &()    t10 <- v4
+-     movl    -24(%ebp), %eax         #  37:     param  1 <- t10
++     movl    -24(%ebp), %eax         #  39:     param  1 <- t10
++     jmp     l_f2_21                 #  40:     goto   21
+-     movl    $1, %eax                #  38:     assign t11 <- 1
++     movl    $1, %eax                #  41:     assign t11 <- 1
+-     jmp     l_f2_22                 #  39:     goto   22
++     jmp     l_f2_22                 #  42:     goto   22
++ l_f2_21:
+-     movl    $0, %eax                #  40:     assign t11 <- 0
++     movl    $0, %eax                #  44:     assign t11 <- 0
+-     movzbl  -25(%ebp), %eax         #  42:     param  0 <- t11
++     movzbl  -25(%ebp), %eax         #  46:     param  0 <- t11
+-     call    f1                      #  43:     call   t12 <- f1
++     call    f1                      #  47:     call   t12 <- f1
+-     addl    $9, %esp               
++     addl    $12, %esp              

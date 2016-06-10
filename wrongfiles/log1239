@@ -1,0 +1,12 @@
++     jmp     l_f0_3                  #   5:     goto   3
+-     movl    $1, %eax                #   6:     assign t4 <- 1
++     movl    $1, %eax                #   7:     assign t4 <- 1
+-     jmp     l_f0_4                  #   7:     goto   4
++     jmp     l_f0_4                  #   8:     goto   4
++ l_f0_3:
+-     movl    $0, %eax                #   8:     assign t4 <- 0
++     movl    $0, %eax                #  10:     assign t4 <- 0
+-     movzbl  -14(%ebp), %eax         #  10:     assign v1 <- t4
++     movzbl  -14(%ebp), %eax         #  12:     assign v1 <- t4
+-     call    dummyBOOLfunc           #  11:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  13:     call   t5 <- dummyBOOLfunc

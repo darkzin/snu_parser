@@ -1,0 +1,10 @@
++     jmp     l_f0_6                  #  11:     goto   6
++     jmp     l_f0_6                  #  12:     goto   6
+-     movl    $94539, %eax            #  11:     if     94539 <= 6893 goto 8_while_body
++     movl    $94539, %eax            #  13:     if     94539 <= 6893 goto 8_while_body
+-     jmp     l_f0_6                  #  12:     goto   6
++     jmp     l_f0_6                  #  14:     goto   6
+-     jmp     l_f0_7_while_cond       #  14:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  16:     goto   7_while_cond
+-     #   -316(%ebp) 216  [ $v6       <array 1 of <array 2 of <array 4 of <array 4 of <array 6 of <char>>>>>> %ebp-316 ]
++     #   -316(%ebp)  216  [ $v6       <array 1 of <array 2 of <array 4 of <array 4 of <array 6 of <char>>>>>> %ebp-316 ]

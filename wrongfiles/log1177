@@ -1,0 +1,24 @@
+-     addl    $13, %esp              
++     addl    $16, %esp              
+-     jmp     l_test_31               #  36:     goto   31
++     jmp     l_test_32               #  36:     goto   32
++     jmp     l_test_33               #  37:     goto   33
+- l_test_31:
++ l_test_32:
+-     movl    $1, %eax                #  38:     assign t5 <- 1
++     movl    $1, %eax                #  39:     assign t5 <- 1
+-     jmp     l_test_33               #  39:     goto   33
++     jmp     l_test_34               #  40:     goto   34
++ l_test_33:
+-     movl    $0, %eax                #  40:     assign t5 <- 0
++     movl    $0, %eax                #  42:     assign t5 <- 0
+- l_test_33:
++ l_test_34:
+-     movl    $0, %eax                #  42:     if     0 = t5 goto 30_while_body
++     movl    $0, %eax                #  44:     if     0 = t5 goto 30_while_body
+-     jmp     l_test_28               #  43:     goto   28
++     jmp     l_test_28               #  45:     goto   28
+-     movl    $94275, %eax            #  45:     assign v0 <- 94275
++     movl    $94275, %eax            #  47:     assign v0 <- 94275
+-     jmp     l_test_29_while_cond    #  46:     goto   29_while_cond
++     jmp     l_test_29_while_cond    #  48:     goto   29_while_cond

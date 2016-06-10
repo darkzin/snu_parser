@@ -1,0 +1,14 @@
++     jmp     l_f2_5                  #   5:     goto   5
++     jmp     l_f2_5                  #   6:     goto   5
++     jmp     l_f2_5                  #   7:     goto   5
+-     jmp     l_f2_6_while_cond       #   5:     goto   6_while_cond
++     jmp     l_f2_6_while_cond       #   8:     goto   6_while_cond
++ l_f2_5:
++     jmp     l_test_16               #  23:     goto   16
+-     jmp     l_test_22_if_false      #  23:     goto   22_if_false
++     jmp     l_test_22_if_false      #  24:     goto   22_if_false
+-     jmp     l_test_20               #  24:     goto   20
++     jmp     l_test_20               #  25:     goto   20
+-     jmp     l_test_17_while_cond    #  27:     goto   17_while_cond
++     jmp     l_test_17_while_cond    #  28:     goto   17_while_cond
++ l_test_16:

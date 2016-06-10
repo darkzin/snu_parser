@@ -1,0 +1,22 @@
++     jmp     l_f0_45_if_false        #  57:     goto   45_if_false
+-     movl    $0, %eax                #  57:     if     0 = 0 goto 51_if_true
++     movl    $0, %eax                #  58:     if     0 = 0 goto 51_if_true
+-     jmp     l_f0_52_if_false        #  58:     goto   52_if_false
++     jmp     l_f0_52_if_false        #  59:     goto   52_if_false
+-     jmp     l_f0_50                 #  60:     goto   50
++     jmp     l_f0_50                 #  61:     goto   50
+-     jmp     l_f0_43                 #  63:     goto   43
++     jmp     l_f0_43                 #  64:     goto   43
++ l_f0_45_if_false:
++     jmp     l_f1_7                  #   8:     goto   7
++     jmp     l_f1_7                  #   9:     goto   7
+-     movl    $1, %eax                #   8:     assign t5 <- 1
++     movl    $1, %eax                #  10:     assign t5 <- 1
+-     jmp     l_f1_8                  #   9:     goto   8
++     jmp     l_f1_8                  #  11:     goto   8
+-     movl    $0, %eax                #  11:     assign t5 <- 0
++     movl    $0, %eax                #  13:     assign t5 <- 0
+-     movzbl  -14(%ebp), %eax         #  13:     return t5
++     movzbl  -14(%ebp), %eax         #  15:     return t5
+-     movl    $1, %eax                #  14:     assign v3 <- 1
++     movl    $1, %eax                #  16:     assign v3 <- 1

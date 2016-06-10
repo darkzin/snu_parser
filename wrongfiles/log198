@@ -1,0 +1,38 @@
++     jmp     l_f0_15                 #  18:     goto   15
+-     call    dummyBOOLfunc           #  18:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  19:     call   t3 <- dummyBOOLfunc
+-     jmp     l_f0_16_while_cond      #  19:     goto   16_while_cond
++     jmp     l_f0_16_while_cond      #  20:     goto   16_while_cond
++ l_f0_15:
++     jmp     l_f2_10                 #  14:     goto   10
+-     movl    $1, %eax                #  15:     assign t5 <- 1
++     movl    $1, %eax                #  16:     assign t5 <- 1
+-     jmp     l_f2_11                 #  16:     goto   11
++     jmp     l_f2_11                 #  17:     goto   11
++ l_f2_10:
+-     movl    $0, %eax                #  17:     assign t5 <- 0
++     movl    $0, %eax                #  19:     assign t5 <- 0
+-     movzbl  -22(%ebp), %eax         #  19:     return t5
++     movzbl  -22(%ebp), %eax         #  21:     return t5
+-     jmp     l_f2_6_while_cond       #  20:     goto   6_while_cond
++     jmp     l_f2_6_while_cond       #  22:     goto   6_while_cond
+-     movl    $76957, %eax            #  22:     if     76957 <= 93249 goto 14_if_true
++     movl    $76957, %eax            #  24:     if     76957 <= 93249 goto 14_if_true
+-     jmp     l_f2_15_if_false        #  23:     goto   15_if_false
++     jmp     l_f2_15_if_false        #  25:     goto   15_if_false
+-     call    dummyBOOLfunc           #  25:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  27:     call   t6 <- dummyBOOLfunc
+-     jmp     l_f2_18                 #  26:     goto   18
++     jmp     l_f2_18                 #  28:     goto   18
+-     jmp     l_f2_23_if_false        #  28:     goto   23_if_false
++     jmp     l_f2_23_if_false        #  30:     goto   23_if_false
+-     jmp     l_f2_21                 #  29:     goto   21
++     jmp     l_f2_21                 #  31:     goto   21
+-     call    dummyCHARfunc           #  32:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  34:     call   t7 <- dummyCHARfunc
+-     jmp     l_f2_25                 #  34:     goto   25
++     jmp     l_f2_25                 #  36:     goto   25
+-     jmp     l_f2_26_while_cond      #  35:     goto   26_while_cond
++     jmp     l_f2_26_while_cond      #  37:     goto   26_while_cond
+-     jmp     l_f2_13                 #  37:     goto   13
++     jmp     l_f2_13                 #  39:     goto   13

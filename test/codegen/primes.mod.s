@@ -87,7 +87,7 @@ CalcPrimes:
     rep     stosl                  
 
     # function body
-    leal    _str_23, %eax           #   0:     &()    t6 <- _str_23
+    leal    _str_1, %eax            #   0:     &()    t6 <- _str_1
     movl    %eax, -188(%ebp)       
     movl    -188(%ebp), %eax        #   1:     param  0 <- t6
     pushl   %eax                   
@@ -97,7 +97,7 @@ CalcPrimes:
     pushl   %eax                   
     call    WriteInt                #   4:     call   WriteInt
     addl    $4, %esp               
-    leal    _str_24, %eax           #   5:     &()    t7 <- _str_24
+    leal    _str_2, %eax            #   5:     &()    t7 <- _str_2
     movl    %eax, -192(%ebp)       
     movl    -192(%ebp), %eax        #   6:     param  0 <- t7
     pushl   %eax                   
@@ -295,7 +295,7 @@ l_CalcPrimes_32_if_true:
     je      l_CalcPrimes_38_if_true
     jmp     l_CalcPrimes_39_if_false #  82:     goto   39_if_false
 l_CalcPrimes_38_if_true:
-    leal    _str_25, %eax           #  84:     &()    t33 <- _str_25
+    leal    _str_3, %eax            #  84:     &()    t33 <- _str_3
     movl    %eax, -128(%ebp)       
     movl    -128(%ebp), %eax        #  85:     param  0 <- t33
     pushl   %eax                   
@@ -373,7 +373,7 @@ l_CalcPrimes_45_if_true:
     jge     l_CalcPrimes_50_if_true
     jmp     l_CalcPrimes_51_if_false # 113:     goto   51_if_false
 l_CalcPrimes_50_if_true:
-    leal    _str_26, %eax           # 115:     &()    t45 <- _str_26
+    leal    _str_4, %eax            # 115:     &()    t45 <- _str_4
     movl    %eax, -176(%ebp)       
     movl    -176(%ebp), %eax        # 116:     param  0 <- t45
     pushl   %eax                   
@@ -389,7 +389,7 @@ l_CalcPrimes_46_if_false:
 l_CalcPrimes_44:
     jmp     l_CalcPrimes_15_while_cond # 125:     goto   15_while_cond
 l_CalcPrimes_14:
-    leal    _str_27, %eax           # 127:     &()    t46 <- _str_27
+    leal    _str_5, %eax            # 127:     &()    t46 <- _str_5
     movl    %eax, -180(%ebp)       
     movl    -180(%ebp), %eax        # 128:     param  0 <- t46
     pushl   %eax                   
@@ -399,7 +399,7 @@ l_CalcPrimes_14:
     pushl   %eax                   
     call    WriteInt                # 131:     call   WriteInt
     addl    $4, %esp               
-    leal    _str_28, %eax           # 132:     &()    t47 <- _str_28
+    leal    _str_6, %eax            # 132:     &()    t47 <- _str_6
     movl    %eax, -184(%ebp)       
     movl    -184(%ebp), %eax        # 133:     param  0 <- t47
     pushl   %eax                   
@@ -450,7 +450,7 @@ PrintPrimes:
     rep     stosl                  
 
     # function body
-    leal    _str_29, %eax           #   0:     &()    t6 <- _str_29
+    leal    _str_7, %eax            #   0:     &()    t6 <- _str_7
     movl    %eax, -40(%ebp)        
     movl    -40(%ebp), %eax         #   1:     param  0 <- t6
     pushl   %eax                   
@@ -470,7 +470,7 @@ l_PrintPrimes_5_while_cond:
     jl      l_PrintPrimes_6_while_body
     jmp     l_PrintPrimes_4         #   9:     goto   4
 l_PrintPrimes_6_while_body:
-    leal    _str_30, %eax           #  11:     &()    t7 <- _str_30
+    leal    _str_8, %eax            #  11:     &()    t7 <- _str_8
     movl    %eax, -44(%ebp)        
     movl    -44(%ebp), %eax         #  12:     param  0 <- t7
     pushl   %eax                   
@@ -561,14 +561,14 @@ main:
     rep     stosl                  
 
     # function body
-    leal    _str_31, %eax           #   0:     &()    t0 <- _str_31
+    leal    _str_9, %eax            #   0:     &()    t0 <- _str_9
     movl    %eax, -16(%ebp)        
     movl    -16(%ebp), %eax         #   1:     param  0 <- t0
     pushl   %eax                   
     call    WriteStr                #   2:     call   WriteStr
     addl    $4, %esp               
     call    WriteLn                 #   3:     call   WriteLn
-    leal    _str_32, %eax           #   4:     &()    t1 <- _str_32
+    leal    _str_10, %eax           #   4:     &()    t1 <- _str_10
     movl    %eax, -20(%ebp)        
     movl    -20(%ebp), %eax         #   5:     param  0 <- t1
     pushl   %eax                   
@@ -619,53 +619,53 @@ l_primes_exit:
     .align 4
 
     # scope: primes
-_str_23:                            # <array 30 of <char>>
+_str_1:                             # <array 30 of <char>>
     .long    1
     .long   30
     .asciz "  computing primes from 1 to "
     .align   4
-_str_24:                            # <array 4 of <char>>
+_str_10:                            # <array 24 of <char>>
+    .long    1
+    .long   24
+    .asciz "Compute primes up to : "
+_str_2:                             # <array 4 of <char>>
     .long    1
     .long    4
     .asciz "..."
-_str_25:                            # <array 45 of <char>>
+_str_3:                             # <array 45 of <char>>
     .long    1
     .long   45
     .asciz "WARNING: array too small to hold all primes."
     .align   4
-_str_26:                            # <array 7 of <char>>
+_str_4:                             # <array 7 of <char>>
     .long    1
     .long    7
     .asciz "ERROR."
     .align   4
-_str_27:                            # <array 7 of <char>>
+_str_5:                             # <array 7 of <char>>
     .long    1
     .long    7
     .asciz "done. "
     .align   4
-_str_28:                            # <array 15 of <char>>
+_str_6:                             # <array 15 of <char>>
     .long    1
     .long   15
     .asciz " primes found."
     .align   4
-_str_29:                            # <array 20 of <char>>
+_str_7:                             # <array 20 of <char>>
     .long    1
     .long   20
     .asciz "Prime numbers 1 to "
-_str_30:                            # <array 3 of <char>>
+_str_8:                             # <array 3 of <char>>
     .long    1
     .long    3
     .asciz "  "
     .align   4
-_str_31:                            # <array 14 of <char>>
+_str_9:                             # <array 14 of <char>>
     .long    1
     .long   14
     .asciz "Prime numbers"
     .align   4
-_str_32:                            # <array 24 of <char>>
-    .long    1
-    .long   24
-    .asciz "Compute primes up to : "
 n:                                  # <int>
     .skip    4
 p:                                  # <array 1000000 of <int>>

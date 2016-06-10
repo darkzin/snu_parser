@@ -1,0 +1,18 @@
++     jmp     l_f0_6                  #  12:     goto   6
+-     movl    $1, %eax                #  12:     assign t9 <- 1
++     movl    $1, %eax                #  13:     assign t9 <- 1
+-     jmp     l_f0_7                  #  13:     goto   7
++     jmp     l_f0_7                  #  14:     goto   7
++ l_f0_6:
+-     movl    $0, %eax                #  14:     assign t9 <- 0
++     movl    $0, %eax                #  16:     assign t9 <- 0
+-     movzbl  -41(%ebp), %eax         #  16:     assign v0 <- t9
++     movzbl  -41(%ebp), %eax         #  18:     assign v0 <- t9
+-     call    dummyCHARfunc           #  17:     call   t10 <- dummyCHARfunc
++     call    dummyCHARfunc           #  19:     call   t10 <- dummyCHARfunc
+-     movzbl  -13(%ebp), %eax         #  18:     assign v2 <- t10
++     movzbl  -13(%ebp), %eax         #  20:     assign v2 <- t10
+-     #-1611870736(%ebp)1611870648  [ $v4       <array 39 of <array 57 of <array 24 of <array 91 of <array 83 of <int>>>>>> %ebp-1611870736 ]
++     #   -1611870736(%ebp)  1611870648  [ $v4       <array 39 of <array 57 of <array 24 of <array 91 of <array 83 of <int>>>>>> %ebp-1611870736 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               

@@ -1,0 +1,25 @@
++     jmp     l_test_2                #   4:     goto   2
+-     movl    $1, %eax                #   4:     assign t1 <- 1
++     movl    $1, %eax                #   5:     assign t1 <- 1
+-     jmp     l_test_3                #   5:     goto   3
++     jmp     l_test_3                #   6:     goto   3
+-     movl    $0, %eax                #   7:     assign t1 <- 0
++     movl    $0, %eax                #   8:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #   9:     assign v0 <- t1
++     movzbl  -14(%ebp), %eax         #  10:     assign v0 <- t1
+-     call    dummyCHARfunc           #  10:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  11:     call   t2 <- dummyCHARfunc
+-     movzbl  -15(%ebp), %eax         #  11:     assign v1 <- t2
++     movzbl  -15(%ebp), %eax         #  12:     assign v1 <- t2
+-     movl    $19221, %eax            #  12:     mul    t3 <- 19221, 4200
++     movl    $19221, %eax            #  13:     mul    t3 <- 19221, 4200
+-     movl    -20(%ebp), %eax         #  13:     if     t3 <= 57662 goto 7_if_true
++     movl    -20(%ebp), %eax         #  14:     if     t3 <= 57662 goto 7_if_true
+-     jmp     l_test_8_if_false       #  14:     goto   8_if_false
++     jmp     l_test_8_if_false       #  15:     goto   8_if_false
+-     jmp     l_test_13_if_false      #  17:     goto   13_if_false
++     jmp     l_test_13_if_false      #  18:     goto   13_if_false
+-     jmp     l_test_11               #  18:     goto   11
++     jmp     l_test_11               #  19:     goto   11
+-     jmp     l_test_6                #  21:     goto   6
++     jmp     l_test_6                #  22:     goto   6

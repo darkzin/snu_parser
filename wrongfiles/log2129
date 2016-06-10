@@ -1,0 +1,42 @@
+-     jmp     l_f1_3                  #   1:     goto   3
++     jmp     l_f1_4                  #   1:     goto   4
++     jmp     l_f1_5                  #   2:     goto   5
+- l_f1_3:
++ l_f1_4:
+-     movl    $1, %eax                #   3:     assign t3 <- 1
++     movl    $1, %eax                #   4:     assign t3 <- 1
+-     jmp     l_f1_5                  #   4:     goto   5
++     jmp     l_f1_6                  #   5:     goto   6
++ l_f1_5:
+-     movl    $0, %eax                #   5:     assign t3 <- 0
++     movl    $0, %eax                #   7:     assign t3 <- 0
+- l_f1_5:
++ l_f1_6:
+-     jmp     l_f1_7                  #   7:     goto   7
++     jmp     l_f1_8                  #   9:     goto   8
+- l_f1_7:
++ l_f1_8:
+-     movl    $1, %eax                #   9:     assign t4 <- 1
++     movl    $1, %eax                #  11:     assign t4 <- 1
+-     jmp     l_f1_9                  #  10:     goto   9
++     jmp     l_f1_10                 #  12:     goto   10
+-     movl    $0, %eax                #  11:     assign t4 <- 0
++     movl    $0, %eax                #  13:     assign t4 <- 0
+- l_f1_9:
++ l_f1_10:
+-     movzbl  -13(%ebp), %eax         #  13:     if     t3 # t4 goto 2_while_body
++     movzbl  -13(%ebp), %eax         #  15:     if     t3 # t4 goto 2_while_body
+-     jmp     l_f1_0                  #  14:     goto   0
++     jmp     l_f1_0                  #  16:     goto   0
+-     jmp     l_f1_1_while_cond       #  16:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #  18:     goto   1_while_cond
+-     call    dummyINTfunc            #  18:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #  20:     call   t5 <- dummyINTfunc
+-     movl    -20(%ebp), %eax         #  19:     sub    t6 <- t5, 95211
++     movl    -20(%ebp), %eax         #  21:     sub    t6 <- t5, 95211
+-     movl    -24(%ebp), %eax         #  20:     return t6
++     movl    -24(%ebp), %eax         #  22:     return t6
+-     call    dummyBOOLfunc           #  21:     call   t7 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  23:     call   t7 <- dummyBOOLfunc
+-     #-201123524(%ebp)201123492  [ $v1       <array 52 of <array 87 of <array 29 of <array 73 of <array 21 of <bool>>>>>> %ebp-201123524 ]
++     #   -201123524(%ebp)  201123492  [ $v1       <array 52 of <array 87 of <array 29 of <array 73 of <array 21 of <bool>>>>>> %ebp-201123524 ]

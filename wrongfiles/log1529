@@ -1,0 +1,48 @@
++     jmp     l_f0_7_if_false         #   8:     goto   7_if_false
+-     jmp     l_f0_12                 #   9:     goto   12
++     jmp     l_f0_12                 #  10:     goto   12
+-     jmp     l_f0_13_while_cond      #  10:     goto   13_while_cond
++     jmp     l_f0_13_while_cond      #  11:     goto   13_while_cond
+-     jmp     l_f0_5                  #  12:     goto   5
++     jmp     l_f0_5                  #  13:     goto   5
++ l_f0_7_if_false:
++     jmp     l_test_8_if_false       #   7:     goto   8_if_false
++     jmp     l_test_8_if_false       #   8:     goto   8_if_false
++     jmp     l_test_8_if_false       #   9:     goto   8_if_false
+-     jmp     l_test_15               #   8:     goto   15
++     jmp     l_test_15               #  11:     goto   15
+-     movl    $100, %eax              #  10:     assign v1 <- 100
++     movl    $100, %eax              #  13:     assign v1 <- 100
+-     jmp     l_test_19               #  12:     goto   19
++     jmp     l_test_19               #  15:     goto   19
+-     jmp     l_test_20_while_cond    #  13:     goto   20_while_cond
++     jmp     l_test_20_while_cond    #  16:     goto   20_while_cond
+-     jmp     l_test_6                #  15:     goto   6
++     jmp     l_test_6                #  18:     goto   6
++ l_test_8_if_false:
+-     leal    v2, %eax                #  17:     &()    t1 <- v2
++     leal    v2, %eax                #  21:     &()    t1 <- v2
+-     movl    -20(%ebp), %eax         #  18:     param  3 <- t1
++     movl    -20(%ebp), %eax         #  22:     param  3 <- t1
+-     movl    $47145, %eax            #  19:     param  2 <- 47145
++     movl    $47145, %eax            #  23:     param  2 <- 47145
+-     movl    $51052, %eax            #  20:     if     51052 <= 79467 goto 23
++     movl    $51052, %eax            #  24:     if     51052 <= 79467 goto 23
+-     jmp     l_test_24               #  21:     goto   24
++     jmp     l_test_24               #  25:     goto   24
+-     movl    $1, %eax                #  23:     assign t2 <- 1
++     movl    $1, %eax                #  27:     assign t2 <- 1
+-     jmp     l_test_25               #  24:     goto   25
++     jmp     l_test_25               #  28:     goto   25
+-     movl    $0, %eax                #  26:     assign t2 <- 0
++     movl    $0, %eax                #  30:     assign t2 <- 0
+-     movzbl  -21(%ebp), %eax         #  28:     param  1 <- t2
++     movzbl  -21(%ebp), %eax         #  32:     param  1 <- t2
+-     call    dummyCHARfunc           #  29:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  33:     call   t3 <- dummyCHARfunc
+-     movzbl  -22(%ebp), %eax         #  30:     param  0 <- t3
++     movzbl  -22(%ebp), %eax         #  34:     param  0 <- t3
+-     call    f1                      #  31:     call   t4 <- f1
++     call    f1                      #  35:     call   t4 <- f1
+-     addl    $10, %esp              
++     addl    $16, %esp              

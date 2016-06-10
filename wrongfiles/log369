@@ -1,0 +1,10 @@
+-     #   -232(%ebp) 204  [ $v3       <array 6 of <array 2 of <array 1 of <array 3 of <array 5 of <bool>>>>>> %ebp-232 ]
++     #   -232(%ebp)  204  [ $v3       <array 6 of <array 2 of <array 1 of <array 3 of <array 5 of <bool>>>>>> %ebp-232 ]
+-     #  -1096(%ebp) 864  [ $v4       <array 7 of <array 1 of <array 6 of <array 4 of <array 5 of <char>>>>>> %ebp-1096 ]
++     #   -1096(%ebp)  864  [ $v4       <array 7 of <array 1 of <array 6 of <array 4 of <array 5 of <char>>>>>> %ebp-1096 ]
++     jmp     l_test_1                #   6:     goto   1
++     jmp     l_test_1                #   7:     goto   1
++     jmp     l_test_1                #   8:     goto   1
+-     jmp     l_test_2_while_cond     #   6:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #   9:     goto   2_while_cond
++ l_test_1:

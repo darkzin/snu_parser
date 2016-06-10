@@ -1,0 +1,58 @@
++     jmp     l_f1_9                  #   2:     goto   9
+-     movl    $1, %eax                #   2:     assign t10 <- 1
++     movl    $1, %eax                #   3:     assign t10 <- 1
+-     jmp     l_f1_9                  #   3:     goto   9
++     jmp     l_f1_10                 #   4:     goto   10
+-     movl    $0, %eax                #   4:     assign t10 <- 0
+-     movb    %al, -13(%ebp)         
++     movl    $0, %eax                #   6:     assign t10 <- 0
++     movb    %al, -13(%ebp)         
++ l_f1_10:
+-     movl    $0, %eax                #   6:     if     0 # t10 goto 4
++     movl    $0, %eax                #   8:     if     0 # t10 goto 4
+-     jmp     l_f1_5                  #   7:     goto   5
++     jmp     l_f1_5                  #   9:     goto   5
+-     movl    $1, %eax                #   9:     assign t11 <- 1
++     movl    $1, %eax                #  11:     assign t11 <- 1
+-     jmp     l_f1_6                  #  10:     goto   6
++     jmp     l_f1_6                  #  12:     goto   6
+-     movl    $0, %eax                #  12:     assign t11 <- 0
++     movl    $0, %eax                #  14:     assign t11 <- 0
+-     movzbl  -14(%ebp), %eax         #  14:     param  0 <- t11
++     movzbl  -14(%ebp), %eax         #  16:     param  0 <- t11
+-     call    f0                      #  15:     call   t12 <- f0
++     call    f0                      #  17:     call   t12 <- f0
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     movzbl  -15(%ebp), %eax         #  16:     param  0 <- t12
++     movzbl  -15(%ebp), %eax         #  18:     param  0 <- t12
+-     call    WriteChar               #  17:     call   WriteChar
++     call    WriteChar               #  19:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_f1_0                  #  18:     goto   0
++     jmp     l_f1_0                  #  20:     goto   0
+-     call    dummyINTfunc            #  21:     call   t13 <- dummyINTfunc
++     call    dummyINTfunc            #  23:     call   t13 <- dummyINTfunc
+-     movl    $44809, %eax            #  22:     assign v2 <- 44809
++     movl    $44809, %eax            #  24:     assign v2 <- 44809
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     movzbl  -38(%ebp), %eax         #  68:     if     t7 > 100 goto 43
++     movzbl  -38(%ebp), %eax         #  68:     if     t7 > 100 goto 44
+-     jg      l_test_43              
++     jg      l_test_44              
+-     jmp     l_test_44               #  69:     goto   44
++     jmp     l_test_45               #  69:     goto   45
+- l_test_43:
++ l_test_44:
+-     jmp     l_test_45               #  72:     goto   45
++     jmp     l_test_46               #  72:     goto   46
+- l_test_44:
++ l_test_45:
+- l_test_45:
++ l_test_46:
+-     addl    $5, %esp               
++     addl    $8, %esp               

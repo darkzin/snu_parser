@@ -1,0 +1,14 @@
++     jmp     l_f1_5_if_false         #   0:     goto   5_if_false
+-     jmp     l_f1_3                  #   0:     goto   3
++     jmp     l_f1_3                  #   1:     goto   3
++ l_f1_5_if_false:
+-     jmp     l_f1_0                  #   2:     goto   0
++     jmp     l_f1_0                  #   4:     goto   0
+-     movl    $52902, %eax            #   4:     div    t1 <- 52902, 67450
++     movl    $52902, %eax            #   6:     div    t1 <- 52902, 67450
+-     movl    $67440, %eax            #   5:     add    t2 <- 67440, t1
++     movl    $67440, %eax            #   7:     add    t2 <- 67440, t1
+-     movl    -20(%ebp), %eax         #   6:     assign v2 <- t2
++     movl    -20(%ebp), %eax         #   8:     assign v2 <- t2
+-     call    dummyCHARfunc           #   7:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #   9:     call   t3 <- dummyCHARfunc

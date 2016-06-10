@@ -1,0 +1,36 @@
++     jmp     l_f1_4                  #   1:     goto   4
++ l_f1_4:
+-     jmp     l_f1_2_while_body       #   1:     goto   2_while_body
++     jmp     l_f1_2_while_body       #   3:     goto   2_while_body
++     jmp     l_f1_0                  #   4:     goto   0
+-     jmp     l_f1_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   6:     goto   1_while_cond
++ l_f1_0:
+-     movl    $6518, %eax             #   4:     sub    t3 <- 6518, 81181
++     movl    $6518, %eax             #   8:     sub    t3 <- 6518, 81181
+-     movl    -16(%ebp), %eax         #   5:     assign v3 <- t3
++     movl    -16(%ebp), %eax         #   9:     assign v3 <- t3
+-     call    dummyCHARfunc           #   6:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  10:     call   t4 <- dummyCHARfunc
+-     movzbl  -17(%ebp), %eax         #   7:     return t4
++     movzbl  -17(%ebp), %eax         #  11:     return t4
++     jmp     l_test_4_if_false       #   2:     goto   4_if_false
+-     movl    $68270, %eax            #   2:     assign v1 <- 68270
++     movl    $68270, %eax            #   3:     assign v1 <- 68270
+-     jmp     l_test_2                #   3:     goto   2
++     jmp     l_test_2                #   4:     goto   2
++ l_test_4_if_false:
+-     movl    $97, %eax               #   5:     if     97 > 97 goto 8_if_true
++     movl    $97, %eax               #   7:     if     97 > 97 goto 8_if_true
+-     jmp     l_test_9_if_false       #   6:     goto   9_if_false
++     jmp     l_test_9_if_false       #   8:     goto   9_if_false
+-     call    ReadInt                 #   8:     call   t0 <- ReadInt
++     call    ReadInt                 #  10:     call   t0 <- ReadInt
+-     jmp     l_test_7                #   9:     goto   7
++     jmp     l_test_7                #  11:     goto   7
+-     movl    $6654, %eax             #  12:     add    t1 <- 6654, 11873
++     movl    $6654, %eax             #  14:     add    t1 <- 6654, 11873
+-     movl    -20(%ebp), %eax         #  13:     sub    t2 <- t1, 28383
++     movl    -20(%ebp), %eax         #  15:     sub    t2 <- t1, 28383
+-     movl    -24(%ebp), %eax         #  14:     assign v1 <- t2
++     movl    -24(%ebp), %eax         #  16:     assign v1 <- t2

@@ -1,0 +1,16 @@
++     jmp     l_f0_8                  #  10:     goto   8
+-     call    dummyBOOLfunc           #  10:     call   t0 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  11:     call   t0 <- dummyBOOLfunc
+-     jmp     l_f0_13                 #  12:     goto   13
++     jmp     l_f0_13                 #  13:     goto   13
+-     jmp     l_f0_14_while_cond      #  13:     goto   14_while_cond
++     jmp     l_f0_14_while_cond      #  14:     goto   14_while_cond
+-     jmp     l_f0_9_while_cond       #  15:     goto   9_while_cond
++     jmp     l_f0_9_while_cond       #  16:     goto   9_while_cond
++ l_f0_8:
+-     call    WriteLn                 #  16:     call   WriteLn
++     call    WriteLn                 #  18:     call   WriteLn
+-     #   -456(%ebp) 424  [ $v3       <array 1 of <array 10 of <array 1 of <array 5 of <array 8 of <bool>>>>>> %ebp-456 ]
++     #   -456(%ebp)  424  [ $v3       <array 1 of <array 10 of <array 1 of <array 5 of <array 8 of <bool>>>>>> %ebp-456 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              

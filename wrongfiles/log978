@@ -1,0 +1,6 @@
+-     #  -5516(%ebp)5400  [ $v5       <array 4 of <array 6 of <array 4 of <array 8 of <array 7 of <char>>>>>> %ebp-5516 ]
++     #   -5516(%ebp)  5400  [ $v5       <array 4 of <array 6 of <array 4 of <array 8 of <array 7 of <char>>>>>> %ebp-5516 ]
+-     #  -5517(%ebp)   1  [ $v6       <bool> %ebp-5517 ]
++     #   -5517(%ebp)   1  [ $v6       <bool> %ebp-5517 ]
+-     addl    $1, %esp               
++     addl    $4, %esp               

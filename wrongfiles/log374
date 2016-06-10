@@ -1,0 +1,34 @@
++     jmp     l_test_0                #   1:     goto   0
+-     jmp     l_test_6_while_cond     #   2:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #   3:     goto   6_while_cond
+-     jmp     l_test_1_while_cond     #   3:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   4:     goto   1_while_cond
++ l_test_0:
+-     call    dummyBOOLfunc           #   4:     call   t0 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   6:     call   t0 <- dummyBOOLfunc
+-     movl    $76046, %eax            #   5:     param  0 <- 76046
++     movl    $76046, %eax            #   7:     param  0 <- 76046
+-     call    WriteInt                #   6:     call   WriteInt
++     call    WriteInt                #   8:     call   WriteInt
+-     movl    $62576, %eax            #   7:     if     62576 <= 54676 goto 14
++     movl    $62576, %eax            #   9:     if     62576 <= 54676 goto 14
+-     jmp     l_test_15               #   8:     goto   15
++     jmp     l_test_15               #  10:     goto   15
+-     movl    $1, %eax                #  10:     assign t1 <- 1
++     movl    $1, %eax                #  12:     assign t1 <- 1
+-     jmp     l_test_16               #  11:     goto   16
++     jmp     l_test_16               #  13:     goto   16
+-     movl    $0, %eax                #  13:     assign t1 <- 0
++     movl    $0, %eax                #  15:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #  15:     assign v0 <- t1
++     movzbl  -14(%ebp), %eax         #  17:     assign v0 <- t1
+-     movl    $65281, %eax            #  17:     if     65281 >= 19432 goto 20_while_body
++     movl    $65281, %eax            #  19:     if     65281 >= 19432 goto 20_while_body
+-     jmp     l_test_18               #  18:     goto   18
++     jmp     l_test_18               #  20:     goto   18
+-     jmp     l_test_19_while_cond    #  20:     goto   19_while_cond
++     jmp     l_test_19_while_cond    #  22:     goto   19_while_cond
+-     jmp     l_test_8                #  22:     goto   8
++     jmp     l_test_8                #  24:     goto   8
+-     call    dummyBOOLfunc           #  24:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  26:     call   t2 <- dummyBOOLfunc

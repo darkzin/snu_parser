@@ -1,0 +1,40 @@
++     jmp     l_test_2                #   5:     goto   2
+-     call    dummyINTfunc            #   6:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #   7:     call   t2 <- dummyINTfunc
+-     jmp     l_test_3_while_cond     #   7:     goto   3_while_cond
++     jmp     l_test_3_while_cond     #   8:     goto   3_while_cond
++ l_test_2:
+-     jmp     l_test_11_if_false      #   8:     goto   11_if_false
++     jmp     l_test_11_if_false      #  10:     goto   11_if_false
+-     jmp     l_test_9                #  11:     goto   9
++     jmp     l_test_9                #  13:     goto   9
+-     jmp     l_test_14               #  15:     goto   14
++     jmp     l_test_14               #  17:     goto   14
+-     jmp     l_test_19_while_body    #  17:     goto   19_while_body
++     jmp     l_test_19_while_body    #  19:     goto   19_while_body
+-     jmp     l_test_18_while_cond    #  19:     goto   18_while_cond
++     jmp     l_test_18_while_cond    #  21:     goto   18_while_cond
+-     jmp     l_test_15_while_cond    #  20:     goto   15_while_cond
++     jmp     l_test_15_while_cond    #  22:     goto   15_while_cond
+-     call    f0                      #  23:     call   t3 <- f0
++     call    f0                      #  25:     call   t3 <- f0
+-     movzbl  -25(%ebp), %eax         #  24:     if     t3 = 1 goto 26
++     movzbl  -25(%ebp), %eax         #  26:     if     t3 = 1 goto 27
+-     je      l_test_26              
++     je      l_test_27              
+- l_test_26:
++ l_test_27:
+-     movl    $1, %eax                #  26:     assign t4 <- 1
++     movl    $1, %eax                #  28:     assign t4 <- 1
+-     jmp     l_test_28               #  27:     goto   28
++     jmp     l_test_29               #  29:     goto   29
+-     movl    $0, %eax                #  28:     assign t4 <- 0
++     movl    $0, %eax                #  30:     assign t4 <- 0
+- l_test_28:
++ l_test_29:
+-     movl    $0, %eax                #  30:     if     0 = t4 goto 25_while_body
++     movl    $0, %eax                #  32:     if     0 = t4 goto 25_while_body
+-     jmp     l_test_23               #  31:     goto   23
++     jmp     l_test_23               #  33:     goto   23
+-     jmp     l_test_24_while_cond    #  33:     goto   24_while_cond
++     jmp     l_test_24_while_cond    #  35:     goto   24_while_cond

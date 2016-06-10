@@ -1,0 +1,11 @@
++     jmp     l_test_2                #   3:     goto   2
++     jmp     l_test_2                #   4:     goto   2
+-     jmp     l_test_3_while_cond     #   3:     goto   3_while_cond
++     jmp     l_test_3_while_cond     #   5:     goto   3_while_cond
++ l_test_2:
+-     movl    $37040, %eax            #   4:     div    t1 <- 37040, 10795
++     movl    $37040, %eax            #   7:     div    t1 <- 37040, 10795
+-     movl    -20(%ebp), %eax         #   5:     div    t2 <- t1, 10828
++     movl    -20(%ebp), %eax         #   8:     div    t2 <- t1, 10828
+-     movl    -24(%ebp), %eax         #   6:     assign v0 <- t2
++     movl    -24(%ebp), %eax         #   9:     assign v0 <- t2

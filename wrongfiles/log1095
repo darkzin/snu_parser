@@ -1,0 +1,16 @@
++     jmp     l_f2_5                  #   3:     goto   5
+-     movl    $1, %eax                #   4:     assign t1 <- 1
++     movl    $1, %eax                #   5:     assign t1 <- 1
+-     jmp     l_f2_6                  #   5:     goto   6
++     jmp     l_f2_6                  #   6:     goto   6
++ l_f2_5:
+-     movl    $0, %eax                #   6:     assign t1 <- 0
++     movl    $0, %eax                #   8:     assign t1 <- 0
+-     movzbl  -13(%ebp), %eax         #   8:     assign v2 <- t1
++     movzbl  -13(%ebp), %eax         #  10:     assign v2 <- t1
+-     jmp     l_f2_1_while_cond       #   9:     goto   1_while_cond
++     jmp     l_f2_1_while_cond       #  11:     goto   1_while_cond
+-     call    dummyINTfunc            #  10:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #  12:     call   t2 <- dummyINTfunc
+-     movl    $97, %eax               #  11:     assign v0 <- 97
++     movl    $97, %eax               #  13:     assign v0 <- 97

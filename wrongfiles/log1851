@@ -1,0 +1,10 @@
++     jmp     l_test_23_if_false      #  25:     goto   23_if_false
+-     movl    $86827, %eax            #  27:     assign v1 <- 86827
++     movl    $86827, %eax            #  28:     assign v1 <- 86827
+-     jmp     l_test_21               #  28:     goto   21
++     jmp     l_test_21               #  29:     goto   21
++ l_test_23_if_false:
+-     movl    $0, %eax                #  30:     assign v0 <- 0
++     movl    $0, %eax                #  32:     assign v0 <- 0
+-     jmp     l_test_28               #  31:     goto   28
++     jmp     l_test_28               #  33:     goto   28

@@ -1,0 +1,40 @@
++     jmp     l_test_3                #   2:     goto   3
+-     movl    $1, %eax                #   3:     assign t1 <- 1
++     movl    $1, %eax                #   4:     assign t1 <- 1
+-     jmp     l_test_4                #   4:     goto   4
++     jmp     l_test_4                #   5:     goto   4
++ l_test_3:
+-     movl    $0, %eax                #   5:     assign t1 <- 0
++     movl    $0, %eax                #   7:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #   7:     assign v0 <- t1
++     movzbl  -14(%ebp), %eax         #   9:     assign v0 <- t1
+-     movl    $56332, %eax            #   8:     add    t2 <- 56332, 78184
++     movl    $56332, %eax            #  10:     add    t2 <- 56332, 78184
+-     movl    -20(%ebp), %eax         #   9:     add    t3 <- t2, 18801
++     movl    -20(%ebp), %eax         #  11:     add    t3 <- t2, 18801
+-     movl    -24(%ebp), %eax         #  10:     add    t4 <- t3, 97370
++     movl    -24(%ebp), %eax         #  12:     add    t4 <- t3, 97370
+-     movl    -28(%ebp), %eax         #  11:     sub    t5 <- t4, 49712
++     movl    -28(%ebp), %eax         #  13:     sub    t5 <- t4, 49712
+-     movl    -32(%ebp), %eax         #  12:     param  0 <- t5
++     movl    -32(%ebp), %eax         #  14:     param  0 <- t5
+-     call    WriteInt                #  13:     call   WriteInt
++     call    WriteInt                #  15:     call   WriteInt
+-     call    dummyBOOLfunc           #  14:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  16:     call   t6 <- dummyBOOLfunc
+-     movzbl  -33(%ebp), %eax         #  15:     if     t6 = 1 goto 9
++     movzbl  -33(%ebp), %eax         #  17:     if     t6 = 1 goto 9
+-     jmp     l_test_9                #  16:     goto   9
++     jmp     l_test_9                #  18:     goto   9
++     jmp     l_test_10               #  19:     goto   10
+-     movl    $1, %eax                #  18:     assign t7 <- 1
++     movl    $1, %eax                #  21:     assign t7 <- 1
+-     jmp     l_test_11               #  19:     goto   11
++     jmp     l_test_11               #  22:     goto   11
++ l_test_10:
+-     movl    $0, %eax                #  20:     assign t7 <- 0
++     movl    $0, %eax                #  24:     assign t7 <- 0
+-     movzbl  -34(%ebp), %eax         #  22:     assign v0 <- t7
++     movzbl  -34(%ebp), %eax         #  26:     assign v0 <- t7
+-     call    ReadInt                 #  23:     call   t8 <- ReadInt
++     call    ReadInt                 #  27:     call   t8 <- ReadInt

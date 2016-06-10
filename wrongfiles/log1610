@@ -1,0 +1,38 @@
++     jmp     l_test_2_if_false       #   1:     goto   2_if_false
+-     movl    $97, %eax               #   2:     if     97 >= 98 goto 9_if_true
++     movl    $97, %eax               #   3:     if     97 >= 98 goto 9_if_true
+-     jmp     l_test_10_if_false      #   3:     goto   10_if_false
++     jmp     l_test_10_if_false      #   4:     goto   10_if_false
+-     jmp     l_test_8                #   5:     goto   8
++     jmp     l_test_8                #   6:     goto   8
+-     jmp     l_test_0                #   8:     goto   0
++     jmp     l_test_0                #   9:     goto   0
++ l_test_2_if_false:
+-     movl    $76397, %eax            #  10:     if     76397 # 21037 goto 13
++     movl    $76397, %eax            #  12:     if     76397 # 21037 goto 13
+-     jmp     l_test_14               #  11:     goto   14
++     jmp     l_test_14               #  13:     goto   14
+-     movl    $1, %eax                #  13:     assign t0 <- 1
++     movl    $1, %eax                #  15:     assign t0 <- 1
+-     jmp     l_test_15               #  14:     goto   15
++     jmp     l_test_15               #  16:     goto   15
+-     movl    $0, %eax                #  16:     assign t0 <- 0
++     movl    $0, %eax                #  18:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #  18:     assign v0 <- t0
++     movzbl  -13(%ebp), %eax         #  20:     assign v0 <- t0
+-     call    dummyINTfunc            #  19:     call   t1 <- dummyINTfunc
++     call    dummyINTfunc            #  21:     call   t1 <- dummyINTfunc
+-     movl    -20(%ebp), %eax         #  20:     assign v1 <- t1
++     movl    -20(%ebp), %eax         #  22:     assign v1 <- t1
+-     movl    $100, %eax              #  21:     if     100 >= 100 goto 19_if_true
++     movl    $100, %eax              #  23:     if     100 >= 100 goto 19_if_true
+-     jmp     l_test_20_if_false      #  22:     goto   20_if_false
++     jmp     l_test_20_if_false      #  24:     goto   20_if_false
+-     movl    $100, %eax              #  24:     assign v2 <- 100
++     movl    $100, %eax              #  26:     assign v2 <- 100
+-     call    dummyBOOLfunc           #  25:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  27:     call   t2 <- dummyBOOLfunc
+-     jmp     l_test_18               #  26:     goto   18
++     jmp     l_test_18               #  28:     goto   18
+-     call    dummyBOOLfunc           #  29:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  31:     call   t3 <- dummyBOOLfunc

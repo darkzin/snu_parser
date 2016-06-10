@@ -1,0 +1,12 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_10_if_false      #   5:     goto   10_if_false
+-     call    dummyBOOLfunc           #   5:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   6:     call   t1 <- dummyBOOLfunc
+-     jmp     l_test_8                #   6:     goto   8
++     jmp     l_test_8                #   7:     goto   8
++ l_test_10_if_false:
+-     movl    $97, %eax               #   9:     assign v0 <- 97
++     movl    $97, %eax               #  11:     assign v0 <- 97
+-     call    f2                      #  10:     call   t2 <- f2
++     call    f2                      #  12:     call   t2 <- f2

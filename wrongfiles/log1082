@@ -1,0 +1,12 @@
++     jmp     l_f0_21                 #  25:     goto   21
++     jmp     l_f0_21                 #  26:     goto   21
++     jmp     l_f0_21                 #  27:     goto   21
+-     jmp     l_f0_22_while_cond      #  25:     goto   22_while_cond
++     jmp     l_f0_22_while_cond      #  28:     goto   22_while_cond
++ l_f0_21:
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $6, %esp               
++     addl    $12, %esp              

@@ -1,0 +1,15 @@
+-     #  -1844(%ebp)1824  [ $v4       <array 6 of <array 1 of <array 10 of <array 6 of <array 5 of <bool>>>>>> %ebp-1844 ]
++     #   -1844(%ebp)  1824  [ $v4       <array 6 of <array 1 of <array 10 of <array 6 of <array 5 of <bool>>>>>> %ebp-1844 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     addl    $3, %esp               
++     addl    $12, %esp              
++     jmp     l_test_11               #  16:     goto   11
+-     call    dummyBOOLfunc           #  16:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  17:     call   t1 <- dummyBOOLfunc
+-     movzbl  -14(%ebp), %eax         #  17:     if     t1 = 1 goto 13_while_body
++     movzbl  -14(%ebp), %eax         #  18:     if     t1 = 1 goto 13_while_body
+-     jmp     l_test_11               #  18:     goto   11
++     jmp     l_test_11               #  19:     goto   11
+-     jmp     l_test_12_while_cond    #  20:     goto   12_while_cond
++     jmp     l_test_12_while_cond    #  21:     goto   12_while_cond

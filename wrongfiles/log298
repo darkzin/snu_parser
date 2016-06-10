@@ -1,0 +1,8 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_10               #  21:     goto   10
+-     jmp     l_test_11_while_cond    #  21:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  22:     goto   11_while_cond
++ l_test_10:
+-     jmp     l_test_6                #  22:     goto   6
++     jmp     l_test_6                #  24:     goto   6

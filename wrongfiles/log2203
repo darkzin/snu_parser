@@ -1,0 +1,33 @@
++     jmp     l_f2_1                  #   3:     goto   1
+-     movl    $100, %eax              #   3:     param  1 <- 100
++     movl    $100, %eax              #   4:     param  1 <- 100
+-     movl    $17035, %eax            #   4:     sub    t5 <- 17035, 33984
++     movl    $17035, %eax            #   5:     sub    t5 <- 17035, 33984
+-     movl    -20(%ebp), %eax         #   5:     param  0 <- t5
++     movl    -20(%ebp), %eax         #   6:     param  0 <- t5
+-     call    f1                      #   6:     call   t6 <- f1
++     call    f1                      #   7:     call   t6 <- f1
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     movzbl  -21(%ebp), %eax         #   7:     if     t6 = 1 goto 3_while_body
++     movzbl  -21(%ebp), %eax         #   8:     if     t6 = 1 goto 3_while_body
+-     jmp     l_f2_1                  #   8:     goto   1
++     jmp     l_f2_1                  #   9:     goto   1
+-     jmp     l_f2_2_while_cond       #  10:     goto   2_while_cond
++     jmp     l_f2_2_while_cond       #  11:     goto   2_while_cond
+-     call    dummyCHARfunc           #  12:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  13:     call   t7 <- dummyCHARfunc
+-     movzbl  -22(%ebp), %eax         #  13:     return t7
++     movzbl  -22(%ebp), %eax         #  14:     return t7
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_14               #  23:     goto   14
+-     jmp     l_test_18               #  23:     goto   18
++     jmp     l_test_18               #  24:     goto   18
+-     jmp     l_test_15_while_cond    #  25:     goto   15_while_cond
++     jmp     l_test_15_while_cond    #  26:     goto   15_while_cond
++ l_test_14:
+-     call    dummyBOOLfunc           #  26:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  28:     call   t3 <- dummyBOOLfunc

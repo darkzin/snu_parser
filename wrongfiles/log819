@@ -1,0 +1,12 @@
++     jmp     l_f0_2_if_false         #   3:     goto   2_if_false
+-     call    dummyCHARfunc           #   4:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #   5:     call   t1 <- dummyCHARfunc
+-     movl    $100, %eax              #   5:     assign v1 <- 100
++     movl    $100, %eax              #   6:     assign v1 <- 100
+-     jmp     l_f0_0                  #   6:     goto   0
++     jmp     l_f0_0                  #   7:     goto   0
++ l_f0_2_if_false:
+-     call    dummyCHARfunc           #   8:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  10:     call   t2 <- dummyCHARfunc
+-     movzbl  -14(%ebp), %eax         #   9:     assign v1 <- t2
++     movzbl  -14(%ebp), %eax         #  11:     assign v1 <- t2

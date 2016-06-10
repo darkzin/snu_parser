@@ -1,0 +1,34 @@
++     jmp     l_f0_8                  #  13:     goto   8
+-     movl    $1, %eax                #  13:     assign t7 <- 1
++     movl    $1, %eax                #  14:     assign t7 <- 1
+-     jmp     l_f0_9                  #  14:     goto   9
++     jmp     l_f0_9                  #  15:     goto   9
+-     movl    $0, %eax                #  16:     assign t7 <- 0
++     movl    $0, %eax                #  17:     assign t7 <- 0
+-     movzbl  -15(%ebp), %eax         #  18:     return t7
++     movzbl  -15(%ebp), %eax         #  19:     return t7
+-     call    dummyCHARfunc           #  19:     call   t8 <- dummyCHARfunc
++     call    dummyCHARfunc           #  20:     call   t8 <- dummyCHARfunc
++     jmp     l_f1_2_if_false         #   0:     goto   2_if_false
+-     call    f0                      #   0:     call   t5 <- f0
++     call    f0                      #   1:     call   t5 <- f0
+-     movzbl  -13(%ebp), %eax         #   1:     if     t5 = 1 goto 1_if_true
++     movzbl  -13(%ebp), %eax         #   2:     if     t5 = 1 goto 1_if_true
+-     jmp     l_f1_2_if_false         #   2:     goto   2_if_false
++     jmp     l_f1_2_if_false         #   3:     goto   2_if_false
+-     jmp     l_f1_0                  #   4:     goto   0
++     jmp     l_f1_0                  #   5:     goto   0
+-     movl    $93078, %eax            #   8:     if     93078 <= 4419 goto 6_while_body
++     movl    $93078, %eax            #   9:     if     93078 <= 4419 goto 6_while_body
+-     jmp     l_f1_4                  #   9:     goto   4
++     jmp     l_f1_4                  #  10:     goto   4
+-     call    dummyCHARfunc           #  11:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #  12:     call   t6 <- dummyCHARfunc
+-     jmp     l_f1_5_while_cond       #  12:     goto   5_while_cond
++     jmp     l_f1_5_while_cond       #  13:     goto   5_while_cond
+-     movl    $81148, %eax            #  14:     add    t7 <- 81148, 60642
++     movl    $81148, %eax            #  15:     add    t7 <- 81148, 60642
+-     movl    -20(%ebp), %eax         #  15:     sub    t8 <- t7, 6507
++     movl    -20(%ebp), %eax         #  16:     sub    t8 <- t7, 6507
+-     movl    -24(%ebp), %eax         #  16:     return t8
++     movl    -24(%ebp), %eax         #  17:     return t8

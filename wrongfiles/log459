@@ -1,0 +1,24 @@
++     jmp     l_f2_6                  #   0:     goto   6
+-     jmp     l_f2_1                  #   0:     goto   1
++     jmp     l_f2_1                  #   1:     goto   1
++ l_f2_6:
++     jmp     l_f2_2                  #   3:     goto   2
+-     movl    $1, %eax                #   2:     assign t1 <- 1
++     movl    $1, %eax                #   5:     assign t1 <- 1
+-     jmp     l_f2_3                  #   3:     goto   3
++     jmp     l_f2_3                  #   6:     goto   3
++ l_f2_2:
+-     movl    $0, %eax                #   4:     assign t1 <- 0
++     movl    $0, %eax                #   8:     assign t1 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     return t1
++     movzbl  -13(%ebp), %eax         #  10:     return t1
+-     call    dummyProcedure          #   7:     call   dummyProcedure
++     call    dummyProcedure          #  11:     call   dummyProcedure
+-     jmp     l_f2_15                 #  10:     goto   15
++     jmp     l_f2_15                 #  14:     goto   15
+-     jmp     l_f2_16_while_cond      #  11:     goto   16_while_cond
++     jmp     l_f2_16_while_cond      #  15:     goto   16_while_cond
+-     movl    $97282, %eax            #  13:     assign v0 <- 97282
++     movl    $97282, %eax            #  17:     assign v0 <- 97282
+-     jmp     l_f2_13_while_cond      #  14:     goto   13_while_cond
++     jmp     l_f2_13_while_cond      #  18:     goto   13_while_cond

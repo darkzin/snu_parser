@@ -1,0 +1,24 @@
+-     # -30360(%ebp)30264  [ $v4       <array 10 of <array 6 of <array 6 of <array 7 of <array 3 of <int>>>>>> %ebp-30360 ]
++     #   -30360(%ebp)  30264  [ $v4       <array 10 of <array 6 of <array 6 of <array 7 of <array 3 of <int>>>>>> %ebp-30360 ]
+-     # -30528(%ebp) 168  [ $v5       <array 1 of <array 1 of <array 6 of <array 2 of <array 3 of <int>>>>>> %ebp-30528 ]
++     #   -30528(%ebp)  168  [ $v5       <array 1 of <array 1 of <array 6 of <array 2 of <array 3 of <int>>>>>> %ebp-30528 ]
++     jmp     l_test_15               #  23:     goto   15
+-     movl    $100, %eax              #  23:     param  0 <- 100
++     movl    $100, %eax              #  24:     param  0 <- 100
+-     call    WriteChar               #  24:     call   WriteChar
++     call    WriteChar               #  25:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movl    $100, %eax              #  25:     param  0 <- 100
++     movl    $100, %eax              #  26:     param  0 <- 100
+-     call    WriteChar               #  26:     call   WriteChar
++     call    WriteChar               #  27:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movl    $41155, %eax            #  27:     assign v0 <- 41155
++     movl    $41155, %eax            #  28:     assign v0 <- 41155
+-     call    dummyBOOLfunc           #  28:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  29:     call   t3 <- dummyBOOLfunc
+-     jmp     l_test_16_while_cond    #  29:     goto   16_while_cond
++     jmp     l_test_16_while_cond    #  30:     goto   16_while_cond
++ l_test_15:

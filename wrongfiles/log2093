@@ -1,0 +1,36 @@
+-     jmp     l_test_34               #  38:     goto   34
++     jmp     l_test_35               #  38:     goto   35
++     jmp     l_test_36               #  39:     goto   36
+- l_test_34:
++ l_test_35:
+-     movl    $1, %eax                #  40:     assign t6 <- 1
++     movl    $1, %eax                #  41:     assign t6 <- 1
+-     jmp     l_test_36               #  41:     goto   36
++     jmp     l_test_37               #  42:     goto   37
++ l_test_36:
+-     movl    $0, %eax                #  42:     assign t6 <- 0
++     movl    $0, %eax                #  44:     assign t6 <- 0
+- l_test_36:
++ l_test_37:
+-     movzbl  -31(%ebp), %eax         #  44:     if     t6 = 0 goto 32_if_true
++     movzbl  -31(%ebp), %eax         #  46:     if     t6 = 0 goto 32_if_true
+-     jmp     l_test_33_if_false      #  45:     goto   33_if_false
++     jmp     l_test_33_if_false      #  47:     goto   33_if_false
+-     movl    $100, %eax              #  47:     if     100 < 98 goto 42_if_true
++     movl    $100, %eax              #  49:     if     100 < 98 goto 42_if_true
+-     jmp     l_test_43_if_false      #  48:     goto   43_if_false
++     jmp     l_test_43_if_false      #  50:     goto   43_if_false
+-     jmp     l_test_41               #  50:     goto   41
++     jmp     l_test_41               #  52:     goto   41
+-     jmp     l_test_31               #  53:     goto   31
++     jmp     l_test_31               #  55:     goto   31
+-     leal    v3, %eax                #  56:     &()    t7 <- v3
++     leal    v3, %eax                #  58:     &()    t7 <- v3
+-     movl    -36(%ebp), %eax         #  57:     param  1 <- t7
++     movl    -36(%ebp), %eax         #  59:     param  1 <- t7
+-     leal    v2, %eax                #  58:     &()    t8 <- v2
++     leal    v2, %eax                #  60:     &()    t8 <- v2
+-     movl    -40(%ebp), %eax         #  59:     param  0 <- t8
++     movl    -40(%ebp), %eax         #  61:     param  0 <- t8
+-     call    f0                      #  60:     call   t9 <- f0
++     call    f0                      #  62:     call   t9 <- f0

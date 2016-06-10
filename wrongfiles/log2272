@@ -1,0 +1,6 @@
++     jmp     l_test_5                #  12:     goto   5
+-     jmp     l_test_6_while_cond     #  13:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #  14:     goto   6_while_cond
++ l_test_5:
+-     call    dummyBOOLfunc           #  14:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  16:     call   t2 <- dummyBOOLfunc

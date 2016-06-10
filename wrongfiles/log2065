@@ -1,0 +1,17 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_8                #  12:     goto   8
+-     movl    $1, %eax                #  12:     assign t1 <- 1
++     movl    $1, %eax                #  13:     assign t1 <- 1
+-     jmp     l_test_9                #  13:     goto   9
++     jmp     l_test_9                #  14:     goto   9
+-     movl    $0, %eax                #  15:     assign t1 <- 0
++     movl    $0, %eax                #  16:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #  17:     assign v0 <- t1
++     movzbl  -14(%ebp), %eax         #  18:     assign v0 <- t1
+-     movl    $100, %eax              #  20:     if     100 < 100 goto 14_while_body
++     movl    $100, %eax              #  21:     if     100 < 100 goto 14_while_body
+-     jmp     l_test_12               #  21:     goto   12
++     jmp     l_test_12               #  22:     goto   12
+-     jmp     l_test_13_while_cond    #  23:     goto   13_while_cond
++     jmp     l_test_13_while_cond    #  24:     goto   13_while_cond

@@ -1,0 +1,38 @@
++     jmp     l_f0_2                  #   0:     goto   2
++     jmp     l_f0_2                  #   1:     goto   2
++     jmp     l_f0_2                  #   2:     goto   2
++     jmp     l_f0_2                  #   3:     goto   2
++     jmp     l_f0_2                  #   4:     goto   2
+-     movl    $1, %eax                #   0:     assign t1 <- 1
++     movl    $1, %eax                #   5:     assign t1 <- 1
+-     jmp     l_f0_3                  #   1:     goto   3
++     jmp     l_f0_3                  #   6:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   2:     assign t1 <- 0
++     movl    $0, %eax                #   8:     assign t1 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     return t1
++     movzbl  -13(%ebp), %eax         #  10:     return t1
+-     call    dummyBOOLfunc           #   5:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  11:     call   t2 <- dummyBOOLfunc
+-     movl    $1, %eax                #   6:     assign t3 <- 1
++     movl    $1, %eax                #  12:     assign t3 <- 1
+-     jmp     l_f0_16                 #   7:     goto   16
++     jmp     l_f0_17                 #  13:     goto   17
+-     movl    $0, %eax                #   8:     assign t3 <- 0
++     movl    $0, %eax                #  14:     assign t3 <- 0
+- l_f0_16:
++ l_f0_17:
+-     movzbl  -14(%ebp), %eax         #  10:     if     t2 # t3 goto 11
++     movzbl  -14(%ebp), %eax         #  16:     if     t2 # t3 goto 11
+-     jmp     l_f0_12                 #  11:     goto   12
++     jmp     l_f0_12                 #  17:     goto   12
+-     movl    $1, %eax                #  13:     assign t4 <- 1
++     movl    $1, %eax                #  19:     assign t4 <- 1
+-     jmp     l_f0_13                 #  14:     goto   13
++     jmp     l_f0_13                 #  20:     goto   13
+-     movl    $0, %eax                #  16:     assign t4 <- 0
++     movl    $0, %eax                #  22:     assign t4 <- 0
+-     movzbl  -16(%ebp), %eax         #  18:     return t4
++     movzbl  -16(%ebp), %eax         #  24:     return t4
+-     call    dummyINTfunc            #  19:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #  25:     call   t5 <- dummyINTfunc

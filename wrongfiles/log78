@@ -1,0 +1,12 @@
++     jmp     l_f1_4                  #   3:     goto   4
++ l_f1_4:
+-     jmp     l_f1_1                  #   3:     goto   1
++     jmp     l_f1_1                  #   5:     goto   1
+-     jmp     l_f1_7_if_true          #   5:     goto   7_if_true
++     jmp     l_f1_7_if_true          #   7:     goto   7_if_true
+-     jmp     l_f1_7_if_true          #   6:     goto   7_if_true
++     jmp     l_f1_7_if_true          #   8:     goto   7_if_true
+-     movl    $73597, %eax            #   8:     return 73597
++     movl    $73597, %eax            #  10:     return 73597
+-     jmp     l_f1_6                  #   9:     goto   6
++     jmp     l_f1_6                  #  11:     goto   6

@@ -1,0 +1,18 @@
+-     movl    $97, %eax               #  30:     if     97 = 98 goto 30
++     movl    $97, %eax               #  30:     if     97 = 98 goto 31
+-     je      l_test_30              
++     je      l_test_31              
+-     jmp     l_test_31               #  31:     goto   31
++     jmp     l_test_32               #  31:     goto   32
+- l_test_30:
++ l_test_31:
+-     jmp     l_test_32               #  34:     goto   32
++     jmp     l_test_33               #  34:     goto   33
+- l_test_31:
++ l_test_32:
+- l_test_32:
++ l_test_33:
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     addl    $5, %esp               
++     addl    $8, %esp               

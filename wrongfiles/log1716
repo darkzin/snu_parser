@@ -1,0 +1,36 @@
++     jmp     l_test_27               #  33:     goto   27
+-     jmp     l_test_32               #  33:     goto   32
++     jmp     l_test_32               #  34:     goto   32
+-     jmp     l_test_36_while_cond    #  36:     goto   36_while_cond
++     jmp     l_test_36_while_cond    #  37:     goto   36_while_cond
+-     jmp     l_test_28_while_cond    #  38:     goto   28_while_cond
++     jmp     l_test_28_while_cond    #  39:     goto   28_while_cond
++ l_test_27:
+-     movl    $84969, %eax            #  41:     if     84969 <= 56017 goto 44_while_body
++     movl    $84969, %eax            #  43:     if     84969 <= 56017 goto 44_while_body
+-     jmp     l_test_42               #  42:     goto   42
++     jmp     l_test_42               #  44:     goto   42
+-     jmp     l_test_43_while_cond    #  44:     goto   43_while_cond
++     jmp     l_test_43_while_cond    #  46:     goto   43_while_cond
+-     movl    $1, %eax                #  46:     if     1 = 0 goto 47_if_true
++     movl    $1, %eax                #  48:     if     1 = 0 goto 47_if_true
+-     jmp     l_test_48_if_false      #  47:     goto   48_if_false
++     jmp     l_test_48_if_false      #  49:     goto   48_if_false
+-     jmp     l_test_46               #  49:     goto   46
++     jmp     l_test_46               #  51:     goto   46
+-     movl    $16649, %eax            #  52:     if     16649 # 9529 goto 51
++     movl    $16649, %eax            #  54:     if     16649 # 9529 goto 51
+-     jmp     l_test_52               #  53:     goto   52
++     jmp     l_test_52               #  55:     goto   52
+-     movl    $1, %eax                #  55:     assign t3 <- 1
++     movl    $1, %eax                #  57:     assign t3 <- 1
+-     jmp     l_test_53               #  56:     goto   53
++     jmp     l_test_53               #  58:     goto   53
+-     movl    $0, %eax                #  58:     assign t3 <- 0
++     movl    $0, %eax                #  60:     assign t3 <- 0
+-     movzbl  -16(%ebp), %eax         #  60:     assign v0 <- t3
++     movzbl  -16(%ebp), %eax         #  62:     assign v0 <- t3
+-     jmp     l_test_40_while_cond    #  61:     goto   40_while_cond
++     jmp     l_test_40_while_cond    #  63:     goto   40_while_cond
+-     call    dummyINTfunc            #  62:     call   t4 <- dummyINTfunc
++     call    dummyINTfunc            #  64:     call   t4 <- dummyINTfunc

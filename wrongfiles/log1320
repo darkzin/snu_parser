@@ -1,0 +1,9 @@
++     jmp     l_f2_4_if_false         #   2:     goto   4_if_false
++     jmp     l_f2_4_if_false         #   3:     goto   4_if_false
++     jmp     l_f2_4_if_false         #   4:     goto   4_if_false
++     jmp     l_f2_4_if_false         #   5:     goto   4_if_false
+-     jmp     l_f2_9                  #   2:     goto   9
++     jmp     l_f2_9                  #   6:     goto   9
+-     jmp     l_f2_2                  #   4:     goto   2
++     jmp     l_f2_2                  #   8:     goto   2
++ l_f2_4_if_false:

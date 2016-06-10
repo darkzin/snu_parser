@@ -1,0 +1,38 @@
++     jmp     l_f1_0                  #   1:     goto   0
+-     leal    _str_1, %eax            #   1:     &()    t3 <- _str_1
++     leal    _str_1, %eax            #   2:     &()    t3 <- _str_1
+-     movl    -16(%ebp), %eax         #   2:     param  0 <- t3
++     movl    -16(%ebp), %eax         #   3:     param  0 <- t3
+-     call    WriteStr                #   3:     call   WriteStr
++     call    WriteStr                #   4:     call   WriteStr
+-     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   5:     goto   1_while_cond
++ l_f1_0:
+-     movl    $37500, %eax            #   6:     add    t4 <- 37500, 60986
++     movl    $37500, %eax            #   8:     add    t4 <- 37500, 60986
+-     movl    -20(%ebp), %eax         #   7:     if     t4 > 73345 goto 8_while_body
++     movl    -20(%ebp), %eax         #   9:     if     t4 > 73345 goto 8_while_body
+-     jmp     l_f1_6                  #   8:     goto   6
++     jmp     l_f1_6                  #  10:     goto   6
+-     movl    $8203, %eax             #  10:     assign v0 <- 8203
++     movl    $8203, %eax             #  12:     assign v0 <- 8203
+-     jmp     l_f1_7_while_cond       #  11:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #  13:     goto   7_while_cond
+-     movl    $99, %eax               #  13:     if     99 > 97 goto 12_if_true
++     movl    $99, %eax               #  15:     if     99 > 97 goto 12_if_true
+-     jmp     l_f1_13_if_false        #  14:     goto   13_if_false
++     jmp     l_f1_13_if_false        #  16:     goto   13_if_false
+-     movl    $51725, %eax            #  16:     if     51725 # 64334 goto 16_if_true
++     movl    $51725, %eax            #  18:     if     51725 # 64334 goto 16_if_true
+-     jmp     l_f1_17_if_false        #  17:     goto   17_if_false
++     jmp     l_f1_17_if_false        #  19:     goto   17_if_false
+-     jmp     l_f1_15                 #  19:     goto   15
++     jmp     l_f1_15                 #  21:     goto   15
+-     movl    $0, %eax                #  23:     if     0 = 0 goto 21_while_body
++     movl    $0, %eax                #  25:     if     0 = 0 goto 21_while_body
+-     jmp     l_f1_19                 #  24:     goto   19
++     jmp     l_f1_19                 #  26:     goto   19
+-     jmp     l_f1_20_while_cond      #  26:     goto   20_while_cond
++     jmp     l_f1_20_while_cond      #  28:     goto   20_while_cond
+-     jmp     l_f1_11                 #  28:     goto   11
++     jmp     l_f1_11                 #  30:     goto   11

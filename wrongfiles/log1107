@@ -1,0 +1,39 @@
++     jmp     l_f0_2_if_false         #   0:     goto   2_if_false
++     jmp     l_f0_2_if_false         #   1:     goto   2_if_false
+-     jmp     l_f0_0                  #   0:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
++ l_f0_2_if_false:
+-     jmp     l_f0_7_if_true          #   2:     goto   7_if_true
++     jmp     l_f0_7_if_true          #   5:     goto   7_if_true
+-     jmp     l_f0_7_if_true          #   3:     goto   7_if_true
++     jmp     l_f0_7_if_true          #   6:     goto   7_if_true
+-     jmp     l_f0_7_if_true          #   4:     goto   7_if_true
++     jmp     l_f0_7_if_true          #   7:     goto   7_if_true
+-     jmp     l_f0_6                  #   6:     goto   6
++     jmp     l_f0_6                  #   9:     goto   6
+-     call    ReadInt                 #   8:     call   t3 <- ReadInt
++     call    ReadInt                 #  11:     call   t3 <- ReadInt
+-     addl    $4, %esp               
++     addl    $16, %esp              
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_14               #  21:     goto   14
+-     movl    $0, %eax                #  22:     if     0 = 1 goto 21_while_body
++     movl    $0, %eax                #  23:     if     0 = 1 goto 21_while_body
+-     jmp     l_test_19               #  23:     goto   19
++     jmp     l_test_19               #  24:     goto   19
+-     jmp     l_test_20_while_cond    #  25:     goto   20_while_cond
++     jmp     l_test_20_while_cond    #  26:     goto   20_while_cond
+-     jmp     l_test_15_while_cond    #  27:     goto   15_while_cond
++     jmp     l_test_15_while_cond    #  28:     goto   15_while_cond
++ l_test_14:
+-     movl    $19170, %eax            #  28:     sub    t0 <- 19170, 73979
++     movl    $19170, %eax            #  30:     sub    t0 <- 19170, 73979
+-     movl    -16(%ebp), %eax         #  29:     add    t1 <- t0, 29431
++     movl    -16(%ebp), %eax         #  31:     add    t1 <- t0, 29431
+-     movl    -20(%ebp), %eax         #  30:     sub    t2 <- t1, 64977
++     movl    -20(%ebp), %eax         #  32:     sub    t2 <- t1, 64977
+-     movl    -24(%ebp), %eax         #  31:     assign v0 <- t2
++     movl    -24(%ebp), %eax         #  33:     assign v0 <- t2
+-     jmp     l_test_25               #  33:     goto   25
++     jmp     l_test_25               #  35:     goto   25

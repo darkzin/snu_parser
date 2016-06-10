@@ -1,0 +1,12 @@
++     jmp     l_f1_13                 #  21:     goto   13
++     jmp     l_f1_13                 #  22:     goto   13
++     jmp     l_f1_13                 #  23:     goto   13
+-     movl    $1, %eax                #  21:     assign t9 <- 1
++     movl    $1, %eax                #  24:     assign t9 <- 1
+-     jmp     l_f1_14                 #  22:     goto   14
++     jmp     l_f1_14                 #  25:     goto   14
++ l_f1_13:
+-     movl    $0, %eax                #  23:     assign t9 <- 0
++     movl    $0, %eax                #  27:     assign t9 <- 0
+-     movzbl  -26(%ebp), %eax         #  25:     return t9
++     movzbl  -26(%ebp), %eax         #  29:     return t9

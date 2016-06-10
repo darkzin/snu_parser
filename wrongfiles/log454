@@ -1,0 +1,32 @@
++     jmp     l_f0_1                  #   2:     goto   1
+-     jmp     l_f0_2_while_cond       #   2:     goto   2_while_cond
++     jmp     l_f0_2_while_cond       #   3:     goto   2_while_cond
++ l_f0_1:
++     jmp     l_f0_5                  #   6:     goto   5
+-     movl    $99, %eax               #   4:     assign v0 <- 99
++     movl    $99, %eax               #   7:     assign v0 <- 99
+-     jmp     l_f0_6_while_cond       #   5:     goto   6_while_cond
++     jmp     l_f0_6_while_cond       #   8:     goto   6_while_cond
++ l_f0_5:
++     jmp     l_f2_2_if_false         #   0:     goto   2_if_false
++     jmp     l_f2_2_if_false         #   1:     goto   2_if_false
++     jmp     l_f2_2_if_false         #   2:     goto   2_if_false
+-     call    f0                      #   0:     call   t1 <- f0
++     call    f0                      #   3:     call   t1 <- f0
+-     jmp     l_f2_0                  #   1:     goto   0
++     jmp     l_f2_0                  #   4:     goto   0
++ l_f2_2_if_false:
+-     jmp     l_f2_9                  #   3:     goto   9
++     jmp     l_f2_9                  #   7:     goto   9
++     jmp     l_f2_10                 #   8:     goto   10
+-     movl    $1, %eax                #   5:     assign t2 <- 1
++     movl    $1, %eax                #  10:     assign t2 <- 1
+-     jmp     l_f2_11                 #   6:     goto   11
++     jmp     l_f2_11                 #  11:     goto   11
++ l_f2_10:
+-     movl    $0, %eax                #   7:     assign t2 <- 0
++     movl    $0, %eax                #  13:     assign t2 <- 0
+-     movzbl  -17(%ebp), %eax         #   9:     return t2
++     movzbl  -17(%ebp), %eax         #  15:     return t2
+-     call    WriteLn                 #  10:     call   WriteLn
++     call    WriteLn                 #  16:     call   WriteLn

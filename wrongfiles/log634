@@ -1,0 +1,10 @@
++     jmp     l_f1_6                  #   3:     goto   6
+-     jmp     l_f1_4_while_body       #   3:     goto   4_while_body
++     jmp     l_f1_4_while_body       #   4:     goto   4_while_body
++ l_f1_6:
++     jmp     l_f1_2                  #   6:     goto   2
+-     jmp     l_f1_3_while_cond       #   5:     goto   3_while_cond
++     jmp     l_f1_3_while_cond       #   8:     goto   3_while_cond
++ l_f1_2:
+-     addl    $6, %esp               
++     addl    $12, %esp              

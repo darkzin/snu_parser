@@ -1,0 +1,34 @@
+-     #-192234284(%ebp)192234264  [ $v3       <array 82 of <array 44 of <array 15 of <array 48 of <array 74 of <bool>>>>>> %ebp-192234284 ]
++     #   -192234284(%ebp)  192234264  [ $v3       <array 82 of <array 44 of <array 15 of <array 48 of <array 74 of <bool>>>>>> %ebp-192234284 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     jmp     l_test_3                #   0:     goto   3
++     jmp     l_test_4                #   0:     goto   4
++     jmp     l_test_5                #   1:     goto   5
+- l_test_3:
++ l_test_4:
+-     movl    $1, %eax                #   2:     assign t0 <- 1
++     movl    $1, %eax                #   3:     assign t0 <- 1
+-     jmp     l_test_5                #   3:     goto   5
++     jmp     l_test_6                #   4:     goto   6
++ l_test_5:
+-     movl    $0, %eax                #   4:     assign t0 <- 0
++     movl    $0, %eax                #   6:     assign t0 <- 0
+- l_test_5:
++ l_test_6:
+-     movl    $1, %eax                #   6:     if     1 = t0 goto 1_if_true
++     movl    $1, %eax                #   8:     if     1 = t0 goto 1_if_true
+-     jmp     l_test_2_if_false       #   7:     goto   2_if_false
++     jmp     l_test_2_if_false       #   9:     goto   2_if_false
+-     jmp     l_test_0                #   9:     goto   0
++     jmp     l_test_0                #  11:     goto   0
+-     call    dummyCHARfunc           #  12:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  14:     call   t1 <- dummyCHARfunc
+-     call    dummyINTfunc            #  13:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #  15:     call   t2 <- dummyINTfunc
+-     call    dummyINTfunc            #  14:     call   t3 <- dummyINTfunc
++     call    dummyINTfunc            #  16:     call   t3 <- dummyINTfunc
+-     movl    -24(%ebp), %eax         #  15:     mul    t4 <- t3, 69427
++     movl    -24(%ebp), %eax         #  17:     mul    t4 <- t3, 69427
+-     movl    -28(%ebp), %eax         #  16:     assign v0 <- t4
++     movl    -28(%ebp), %eax         #  18:     assign v0 <- t4

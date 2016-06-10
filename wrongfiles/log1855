@@ -1,0 +1,38 @@
++     jmp     l_f1_0                  #   3:     goto   0
+-     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   5:     goto   1_while_cond
++ l_f1_0:
+-     call    dummyBOOLfunc           #   6:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   8:     call   t5 <- dummyBOOLfunc
+-     movl    $0, %eax                #   7:     if     0 = t5 goto 10
++     movl    $0, %eax                #   9:     if     0 = t5 goto 10
+-     jmp     l_f1_11                 #   8:     goto   11
++     jmp     l_f1_11                 #  10:     goto   11
+-     movl    $1, %eax                #  10:     assign t6 <- 1
++     movl    $1, %eax                #  12:     assign t6 <- 1
+-     jmp     l_f1_12                 #  11:     goto   12
++     jmp     l_f1_12                 #  13:     goto   12
+-     movl    $0, %eax                #  13:     assign t6 <- 0
++     movl    $0, %eax                #  15:     assign t6 <- 0
+-     movzbl  -14(%ebp), %eax         #  15:     return t6
++     movzbl  -14(%ebp), %eax         #  17:     return t6
+-     jmp     l_f1_7_while_cond       #  16:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #  18:     goto   7_while_cond
++     jmp     l_f1_19                 #  19:     goto   19
++ l_f1_19:
++     jmp     l_f1_16                 #  21:     goto   16
+-     movl    $1, %eax                #  17:     assign t7 <- 1
++     movl    $1, %eax                #  22:     assign t7 <- 1
+-     jmp     l_f1_17                 #  18:     goto   17
++     jmp     l_f1_17                 #  23:     goto   17
++ l_f1_16:
+-     movl    $0, %eax                #  19:     assign t7 <- 0
++     movl    $0, %eax                #  25:     assign t7 <- 0
+-     movzbl  -15(%ebp), %eax         #  21:     assign v2 <- t7
++     movzbl  -15(%ebp), %eax         #  27:     assign v2 <- t7
+-     #-319872052(%ebp)319872024  [ $v1       <array 56 of <array 100 of <array 85 of <array 12 of <array 14 of <int>>>>>> %ebp-319872052 ]
++     #   -319872052(%ebp)  319872024  [ $v1       <array 56 of <array 100 of <array 85 of <array 12 of <array 14 of <int>>>>>> %ebp-319872052 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     addl    $9, %esp               
++     addl    $12, %esp              

@@ -1,0 +1,38 @@
++     jmp     l_f0_11                 #  18:     goto   11
+-     movl    $97, %eax               #  19:     if     97 = 100 goto 16_if_true
++     movl    $97, %eax               #  20:     if     97 = 100 goto 16_if_true
+-     jmp     l_f0_17_if_false        #  20:     goto   17_if_false
++     jmp     l_f0_17_if_false        #  21:     goto   17_if_false
+-     jmp     l_f0_15                 #  22:     goto   15
++     jmp     l_f0_15                 #  23:     goto   15
+-     jmp     l_f0_19                 #  26:     goto   19
++     jmp     l_f0_19                 #  27:     goto   19
+-     jmp     l_f0_20_while_cond      #  27:     goto   20_while_cond
++     jmp     l_f0_20_while_cond      #  28:     goto   20_while_cond
+-     jmp     l_f0_12_while_cond      #  29:     goto   12_while_cond
++     jmp     l_f0_12_while_cond      #  30:     goto   12_while_cond
++ l_f0_11:
+-     jmp     l_f0_24_if_false        #  30:     goto   24_if_false
++     jmp     l_f0_24_if_false        #  32:     goto   24_if_false
+-     jmp     l_f0_27_if_false        #  31:     goto   27_if_false
++     jmp     l_f0_27_if_false        #  33:     goto   27_if_false
+-     movl    $97, %eax               #  32:     assign v0 <- 97
++     movl    $97, %eax               #  34:     assign v0 <- 97
+-     movl    $0, %eax                #  33:     if     0 # 1 goto 30
++     movl    $0, %eax                #  35:     if     0 # 1 goto 30
+-     jmp     l_f0_31                 #  34:     goto   31
++     jmp     l_f0_31                 #  36:     goto   31
+-     movl    $1, %eax                #  36:     assign t6 <- 1
++     movl    $1, %eax                #  38:     assign t6 <- 1
+-     jmp     l_f0_32                 #  37:     goto   32
++     jmp     l_f0_32                 #  39:     goto   32
+-     movl    $0, %eax                #  39:     assign t6 <- 0
++     movl    $0, %eax                #  41:     assign t6 <- 0
+-     movzbl  -14(%ebp), %eax         #  41:     assign v3 <- t6
++     movzbl  -14(%ebp), %eax         #  43:     assign v3 <- t6
+-     jmp     l_f0_35_while_cond      #  43:     goto   35_while_cond
++     jmp     l_f0_35_while_cond      #  45:     goto   35_while_cond
+-     jmp     l_f0_25                 #  44:     goto   25
++     jmp     l_f0_25                 #  46:     goto   25
+-     jmp     l_f0_22                 #  47:     goto   22
++     jmp     l_f0_22                 #  49:     goto   22

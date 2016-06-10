@@ -1,0 +1,30 @@
+-     #  -1256(%ebp)1224  [ $v5       <array 5 of <array 2 of <array 8 of <array 3 of <array 5 of <bool>>>>>> %ebp-1256 ]
++     #   -1256(%ebp)  1224  [ $v5       <array 5 of <array 2 of <array 8 of <array 3 of <array 5 of <bool>>>>>> %ebp-1256 ]
+-     # -27200(%ebp)25944  [ $v6       <array 2 of <array 9 of <array 10 of <array 4 of <array 9 of <int>>>>>> %ebp-27200 ]
++     #   -27200(%ebp)  25944  [ $v6       <array 2 of <array 9 of <array 10 of <array 4 of <array 9 of <int>>>>>> %ebp-27200 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              
++     jmp     l_test_31               #  45:     goto   31
+-     movl    $1, %eax                #  45:     assign t3 <- 1
++     movl    $1, %eax                #  46:     assign t3 <- 1
+-     jmp     l_test_32               #  46:     goto   32
++     jmp     l_test_32               #  47:     goto   32
++ l_test_31:
+-     movl    $0, %eax                #  47:     assign t3 <- 0
++     movl    $0, %eax                #  49:     assign t3 <- 0
+-     movzbl  -25(%ebp), %eax         #  49:     assign v0 <- t3
++     movzbl  -25(%ebp), %eax         #  51:     assign v0 <- t3
+-     leal    v2, %eax                #  50:     &()    t4 <- v2
++     leal    v2, %eax                #  52:     &()    t4 <- v2
+-     movl    -32(%ebp), %eax         #  51:     param  2 <- t4
++     movl    -32(%ebp), %eax         #  53:     param  2 <- t4
+-     movl    $97, %eax               #  52:     param  1 <- 97
++     movl    $97, %eax               #  54:     param  1 <- 97
+-     leal    v1, %eax                #  53:     &()    t5 <- v1
++     leal    v1, %eax                #  55:     &()    t5 <- v1
+-     movl    -36(%ebp), %eax         #  54:     param  0 <- t5
++     movl    -36(%ebp), %eax         #  56:     param  0 <- t5
+-     call    f0                      #  55:     call   t6 <- f0
++     call    f0                      #  57:     call   t6 <- f0
+-     addl    $9, %esp               
++     addl    $12, %esp              

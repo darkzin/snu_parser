@@ -1,0 +1,33 @@
++     jmp     l_f0_11_if_false        #  10:     goto   11_if_false
+-     movl    $1, %eax                #  11:     if     1 = 1 goto 15_if_true
++     movl    $1, %eax                #  12:     if     1 = 1 goto 15_if_true
+-     jmp     l_f0_16_if_false        #  12:     goto   16_if_false
++     jmp     l_f0_16_if_false        #  13:     goto   16_if_false
+-     jmp     l_f0_14                 #  14:     goto   14
++     jmp     l_f0_14                 #  15:     goto   14
+-     jmp     l_f0_9                  #  17:     goto   9
++     jmp     l_f0_9                  #  18:     goto   9
++ l_f0_11_if_false:
+-     call    dummyBOOLfunc           #  19:     call   t9 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  21:     call   t9 <- dummyBOOLfunc
+-     movzbl  -14(%ebp), %eax         #  20:     if     t9 = 1 goto 24
++     movzbl  -14(%ebp), %eax         #  22:     if     t9 = 1 goto 24
+-     jmp     l_f0_20                 #  21:     goto   20
++     jmp     l_f0_20                 #  23:     goto   20
++     jmp     l_f0_20                 #  25:     goto   20
+-     movl    $1, %eax                #  23:     assign t10 <- 1
++     movl    $1, %eax                #  26:     assign t10 <- 1
+-     jmp     l_f0_21                 #  24:     goto   21
++     jmp     l_f0_21                 #  27:     goto   21
+-     movl    $0, %eax                #  26:     assign t10 <- 0
++     movl    $0, %eax                #  29:     assign t10 <- 0
+-     movzbl  -13(%ebp), %eax         #  28:     return t10
++     movzbl  -13(%ebp), %eax         #  31:     return t10
+-     jmp     l_f1_6                  #   3:     goto   6
++     jmp     l_f1_7                  #   3:     goto   7
+- l_f1_6:
++ l_f1_7:
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $10, %esp              
++     addl    $16, %esp              

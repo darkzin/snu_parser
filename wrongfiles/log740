@@ -1,0 +1,12 @@
++     jmp     l_f0_6                  #   9:     goto   6
++     jmp     l_f0_6                  #  10:     goto   6
+-     jmp     l_f0_7_while_cond       #   9:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  11:     goto   7_while_cond
+-     #   -340(%ebp) 312  [ $v4       <array 1 of <array 2 of <array 2 of <array 6 of <array 3 of <int>>>>>> %ebp-340 ]
++     #   -340(%ebp)  312  [ $v4       <array 1 of <array 2 of <array 2 of <array 6 of <array 3 of <int>>>>>> %ebp-340 ]
+-     #  -1516(%ebp)1176  [ $v5       <array 4 of <array 8 of <array 3 of <array 2 of <array 6 of <bool>>>>>> %ebp-1516 ]
++     #   -1516(%ebp)  1176  [ $v5       <array 4 of <array 8 of <array 3 of <array 2 of <array 6 of <bool>>>>>> %ebp-1516 ]
+-     # -93700(%ebp)92184  [ $v6       <array 9 of <array 8 of <array 4 of <array 10 of <array 8 of <int>>>>>> %ebp-93700 ]
++     #   -93700(%ebp)  92184  [ $v6       <array 9 of <array 8 of <array 4 of <array 10 of <array 8 of <int>>>>>> %ebp-93700 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              

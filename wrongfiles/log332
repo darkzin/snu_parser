@@ -1,0 +1,19 @@
++     jmp     l_f1_7                  #  32:     goto   7
++     jmp     l_f1_7                  #  33:     goto   7
+-     movl    $1, %eax                #  32:     assign t17 <- 1
++     movl    $1, %eax                #  34:     assign t17 <- 1
+-     jmp     l_f1_8                  #  33:     goto   8
++     jmp     l_f1_8                  #  35:     goto   8
++ l_f1_7:
+-     movl    $0, %eax                #  34:     assign t17 <- 0
++     movl    $0, %eax                #  37:     assign t17 <- 0
+-     movzbl  -45(%ebp), %eax         #  36:     assign v1 <- t17
++     movzbl  -45(%ebp), %eax         #  39:     assign v1 <- t17
+-     call    dummyINTfunc            #  37:     call   t18 <- dummyINTfunc
++     call    dummyINTfunc            #  40:     call   t18 <- dummyINTfunc
+-     #  -8044(%ebp)8024  [ $v2       <array 1 of <array 10 of <array 10 of <array 10 of <array 8 of <char>>>>>> %ebp-8044 ]
++     #   -8044(%ebp)  8024  [ $v2       <array 1 of <array 10 of <array 10 of <array 10 of <array 8 of <char>>>>>> %ebp-8044 ]
+-     #  -8045(%ebp)   1  [ $v3       <bool> %ebp-8045 ]
++     #   -8045(%ebp)   1  [ $v3       <bool> %ebp-8045 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               

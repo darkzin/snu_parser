@@ -1,0 +1,16 @@
++     jmp     l_f0_0                  #   1:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
++     jmp     l_f0_0                  #   3:     goto   0
+-     jmp     l_f0_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   4:     goto   1_while_cond
++ l_f0_0:
+-     call    ReadInt                 #   2:     call   t0 <- ReadInt
++     call    ReadInt                 #   6:     call   t0 <- ReadInt
++     jmp     l_f0_17                 #   8:     goto   17
+-     jmp     l_f0_12_while_body      #   4:     goto   12_while_body
++     jmp     l_f0_12_while_body      #   9:     goto   12_while_body
++ l_f0_17:
++     jmp     l_f0_10                 #  11:     goto   10
+-     jmp     l_f0_11_while_cond      #   6:     goto   11_while_cond
++     jmp     l_f0_11_while_cond      #  13:     goto   11_while_cond
++ l_f0_10:

@@ -1,0 +1,31 @@
++     jmp     l_f0_4                  #   0:     goto   4
++     jmp     l_f0_4                  #   1:     goto   4
+-     jmp     l_f0_1                  #   0:     goto   1
++     jmp     l_f0_1                  #   2:     goto   1
++ l_f0_4:
+-     movl    $1, %eax                #   2:     assign t0 <- 1
++     movl    $1, %eax                #   5:     assign t0 <- 1
+-     jmp     l_f0_3                  #   3:     goto   3
++     jmp     l_f0_3                  #   6:     goto   3
+-     movl    $0, %eax                #   4:     assign t0 <- 0
++     movl    $0, %eax                #   7:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     return t0
++     movzbl  -13(%ebp), %eax         #   9:     return t0
+-     jmp     l_f0_14_while_body      #   8:     goto   14_while_body
+-     jmp     l_f0_14_while_body      #   9:     goto   14_while_body
+-     jmp     l_f0_14_while_body      #  10:     goto   14_while_body
++     jmp     l_f0_14_while_body      #  11:     goto   14_while_body
++     jmp     l_f0_14_while_body      #  12:     goto   14_while_body
++     jmp     l_f0_14_while_body      #  13:     goto   14_while_body
++     jmp     l_f0_12                 #  14:     goto   12
+-     call    WriteLn                 #  12:     call   WriteLn
++     call    WriteLn                 #  16:     call   WriteLn
+-     jmp     l_f0_13_while_cond      #  13:     goto   13_while_cond
++     jmp     l_f0_13_while_cond      #  17:     goto   13_while_cond
++ l_f0_12:
+-     call    dummyCHARfunc           #  14:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  19:     call   t1 <- dummyCHARfunc
+-     #  -6368(%ebp)6324  [ $v5       <array 10 of <array 6 of <array 7 of <array 3 of <array 5 of <char>>>>>> %ebp-6368 ]
++     #   -6368(%ebp)  6324  [ $v5       <array 10 of <array 6 of <array 7 of <array 3 of <array 5 of <char>>>>>> %ebp-6368 ]
+-     #  -8408(%ebp)2040  [ $v6       <array 1 of <array 6 of <array 6 of <array 8 of <array 7 of <char>>>>>> %ebp-8408 ]
++     #   -8408(%ebp)  2040  [ $v6       <array 1 of <array 6 of <array 6 of <array 8 of <array 7 of <char>>>>>> %ebp-8408 ]

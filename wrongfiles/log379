@@ -1,0 +1,22 @@
+-     #  -6788(%ebp)6744  [ $v3       <array 6 of <array 10 of <array 2 of <array 7 of <array 8 of <char>>>>>> %ebp-6788 ]
++     #   -6788(%ebp)  6744  [ $v3       <array 6 of <array 10 of <array 2 of <array 7 of <array 8 of <char>>>>>> %ebp-6788 ]
+-     # -10412(%ebp)3624  [ $v4       <array 3 of <array 5 of <array 5 of <array 6 of <array 8 of <char>>>>>> %ebp-10412 ]
++     #   -10412(%ebp)  3624  [ $v4       <array 3 of <array 5 of <array 5 of <array 6 of <array 8 of <char>>>>>> %ebp-10412 ]
+-     # -11664(%ebp)1249  [ $v5       <array 1 of <array 5 of <array 7 of <array 5 of <array 7 of <char>>>>>> %ebp-11664 ]
++     #   -11664(%ebp)  1249  [ $v5       <array 1 of <array 5 of <array 7 of <array 5 of <array 7 of <char>>>>>> %ebp-11664 ]
+-     # -35688(%ebp)24024  [ $v6       <array 6 of <array 5 of <array 5 of <array 4 of <array 10 of <int>>>>>> %ebp-35688 ]
++     #   -35688(%ebp)  24024  [ $v6       <array 6 of <array 5 of <array 5 of <array 4 of <array 10 of <int>>>>>> %ebp-35688 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              
++     jmp     l_test_8_if_false       #   7:     goto   8_if_false
++     jmp     l_test_8_if_false       #   8:     goto   8_if_false
++     jmp     l_test_8_if_false       #   9:     goto   8_if_false
+-     movl    $90767, %eax            #   8:     if     90767 <= 40647 goto 13_while_body
++     movl    $90767, %eax            #  11:     if     90767 <= 40647 goto 13_while_body
+-     jmp     l_test_11               #   9:     goto   11
++     jmp     l_test_11               #  12:     goto   11
+-     jmp     l_test_12_while_cond    #  11:     goto   12_while_cond
++     jmp     l_test_12_while_cond    #  14:     goto   12_while_cond
+-     jmp     l_test_6                #  13:     goto   6
++     jmp     l_test_6                #  16:     goto   6
++ l_test_8_if_false:

@@ -1,0 +1,23 @@
++     jmp     l_f1_0                  #   1:     goto   0
+-     jmp     l_f1_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   2:     goto   1_while_cond
++ l_f1_0:
+-     jmp     l_f1_6                  #   3:     goto   6
++     jmp     l_f1_6                  #   5:     goto   6
+-     movl    $100, %eax              #   4:     assign v5 <- 100
++     movl    $100, %eax              #   6:     assign v5 <- 100
+-     jmp     l_f1_7_while_cond       #   5:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #   7:     goto   7_while_cond
+-     #-102322508(%ebp)102322464  [ $v5       <array 66 of <array 33 of <array 6 of <array 87 of <array 90 of <char>>>>>> %ebp-102322508 ]
++     #   -102322508(%ebp)  102322464  [ $v5       <array 66 of <array 33 of <array 6 of <array 87 of <array 90 of <char>>>>>> %ebp-102322508 ]
+-     #-1093501292(%ebp)991178784  [ $v6       <array 55 of <array 59 of <array 89 of <array 78 of <array 44 of <char>>>>>> %ebp-1093501292 ]
++     #   -1093501292(%ebp)  991178784  [ $v6       <array 55 of <array 59 of <array 89 of <array 78 of <array 44 of <char>>>>>> %ebp-1093501292 ]
+-     #803462060(%ebp)-1896963352  [ $v7       <array 78 of <array 94 of <array 69 of <array 60 of <array 79 of <char>>>>>> %ebp+803462060 ]
++     #   803462060(%ebp)  -1896963352  [ $v7       <array 78 of <array 94 of <array 69 of <array 60 of <array 79 of <char>>>>>> %ebp+803462060 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $-200865518, %ecx      
++     mov     %esp, %edi             
++     rep     stosl                  
+-     addl    $1, %esp               
++     addl    $4, %esp               

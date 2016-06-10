@@ -1,0 +1,11 @@
++     jmp     l_test_5                #   8:     goto   5
+-     movl    $114, %eax              #   8:     assign v0 <- 114
++     movl    $114, %eax              #   9:     assign v0 <- 114
+-     jmp     l_test_6_while_cond     #   9:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #  10:     goto   6_while_cond
++ l_test_5:
++     jmp     l_test_10               #  13:     goto   10
++     jmp     l_test_10               #  14:     goto   10
+-     jmp     l_test_11_while_cond    #  11:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  15:     goto   11_while_cond
++ l_test_10:

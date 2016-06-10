@@ -1,0 +1,26 @@
++     jmp     l_f0_6                  #   8:     goto   6
+-     movl    $0, %eax                #   9:     assign v2 <- 0
++     movl    $0, %eax                #  10:     assign v2 <- 0
+-     jmp     l_f0_7_while_cond       #  10:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  11:     goto   7_while_cond
++ l_f0_6:
+-     call    dummyBOOLfunc           #  11:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  13:     call   t1 <- dummyBOOLfunc
++     jmp     l_f2_7_if_false         #  10:     goto   7_if_false
+-     movl    $0, %eax                #  11:     assign v4 <- 0
++     movl    $0, %eax                #  12:     assign v4 <- 0
+-     jmp     l_f2_10                 #  13:     goto   10
++     jmp     l_f2_10                 #  14:     goto   10
+-     jmp     l_f2_11_while_cond      #  14:     goto   11_while_cond
++     jmp     l_f2_11_while_cond      #  15:     goto   11_while_cond
+-     jmp     l_f2_5                  #  16:     goto   5
++     jmp     l_f2_5                  #  17:     goto   5
++ l_f2_7_if_false:
+-     jmp     l_f2_14_if_true         #  18:     goto   14_if_true
+-     jmp     l_f2_14_if_true         #  19:     goto   14_if_true
++     jmp     l_f2_14_if_true         #  21:     goto   14_if_true
++     jmp     l_f2_14_if_true         #  22:     goto   14_if_true
++     jmp     l_f2_15_if_false        #  23:     goto   15_if_false
+-     jmp     l_f2_13                 #  22:     goto   13
++     jmp     l_f2_13                 #  25:     goto   13
++ l_f2_15_if_false:

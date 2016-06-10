@@ -1,0 +1,18 @@
++     jmp     l_test_0                #   1:     goto   0
+-     jmp     l_test_1_while_cond     #   3:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   4:     goto   1_while_cond
++ l_test_0:
+-     jmp     l_test_8_if_false       #   4:     goto   8_if_false
++     jmp     l_test_8_if_false       #   6:     goto   8_if_false
+-     movl    $40482, %eax            #   5:     assign v0 <- 40482
++     movl    $40482, %eax            #   7:     assign v0 <- 40482
+-     movl    $98, %eax               #   6:     assign v1 <- 98
++     movl    $98, %eax               #   8:     assign v1 <- 98
+-     call    dummyCHARfunc           #   8:     call   t0 <- dummyCHARfunc
++     call    dummyCHARfunc           #  10:     call   t0 <- dummyCHARfunc
+-     movl    $21961, %eax            #   9:     param  0 <- 21961
++     movl    $21961, %eax            #  11:     param  0 <- 21961
+-     call    WriteInt                #  10:     call   WriteInt
++     call    WriteInt                #  12:     call   WriteInt
+-     jmp     l_test_6                #  11:     goto   6
++     jmp     l_test_6                #  13:     goto   6

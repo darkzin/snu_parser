@@ -1,0 +1,18 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_8_if_false       #   9:     goto   8_if_false
+-     jmp     l_test_6                #  10:     goto   6
++     jmp     l_test_6                #  11:     goto   6
++ l_test_8_if_false:
+-     movl    $100, %eax              #  12:     param  0 <- 100
++     movl    $100, %eax              #  14:     param  0 <- 100
+-     call    WriteChar               #  13:     call   WriteChar
++     call    WriteChar               #  15:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     call    dummyCHARfunc           #  14:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  16:     call   t1 <- dummyCHARfunc
+-     movzbl  -14(%ebp), %eax         #  15:     assign v0 <- t1
++     movzbl  -14(%ebp), %eax         #  17:     assign v0 <- t1
+-     call    dummyBOOLfunc           #  16:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  18:     call   t2 <- dummyBOOLfunc

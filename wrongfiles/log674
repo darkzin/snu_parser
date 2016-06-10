@@ -1,0 +1,10 @@
+-     #  -3080(%ebp)2964  [ $v2       <array 6 of <array 10 of <array 7 of <array 7 of <array 1 of <char>>>>>> %ebp-3080 ]
++     #   -3080(%ebp)  2964  [ $v2       <array 6 of <array 10 of <array 7 of <array 7 of <array 1 of <char>>>>>> %ebp-3080 ]
+-     # -36704(%ebp)33624  [ $v3       <array 4 of <array 10 of <array 6 of <array 7 of <array 5 of <int>>>>>> %ebp-36704 ]
++     #   -36704(%ebp)  33624  [ $v3       <array 4 of <array 10 of <array 6 of <array 7 of <array 5 of <int>>>>>> %ebp-36704 ]
+-     # -37512(%ebp) 808  [ $v4       <array 8 of <array 1 of <array 7 of <array 2 of <array 7 of <bool>>>>>> %ebp-37512 ]
++     #   -37512(%ebp)  808  [ $v4       <array 8 of <array 1 of <array 7 of <array 2 of <array 7 of <bool>>>>>> %ebp-37512 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     addl    $10, %esp              
++     addl    $16, %esp              

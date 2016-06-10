@@ -1,0 +1,35 @@
+-     movzbl  -14(%ebp), %eax         #   3:     if     t2 = 1 goto 4
++     movzbl  -14(%ebp), %eax         #   3:     if     t2 = 1 goto 5
+-     je      l_f0_4                 
++     je      l_f0_5                 
+- l_f0_4:
++ l_f0_5:
+-     jmp     l_f0_6                  #   6:     goto   6
++     jmp     l_f0_7                  #   6:     goto   7
+- l_f0_6:
++ l_f0_7:
+-     #1831649108(%ebp)-1831649272  [ $v6       <array 39 of <array 99 of <array 50 of <array 58 of <array 55 of <int>>>>>> %ebp+1831649108 ]
++     #   1831649108(%ebp)  -1831649272  [ $v6       <array 39 of <array 99 of <array 50 of <array 58 of <array 55 of <int>>>>>> %ebp+1831649108 ]
+-     #1048958268(%ebp)782690840  [ $v7       <array 100 of <array 99 of <array 84 of <array 75 of <array 72 of <int>>>>>> %ebp+1048958268 ]
++     #   1048958268(%ebp)  782690840  [ $v7       <array 100 of <array 99 of <array 84 of <array 75 of <array 72 of <int>>>>>> %ebp+1048958268 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $-262239570, %ecx      
++     mov     %esp, %edi             
++     rep     stosl                  
+-     #-79212732(%ebp)79212696  [ $v4       <array 6 of <array 76 of <array 44 of <array 42 of <array 94 of <char>>>>>> %ebp-79212732 ]
++     #   -79212732(%ebp)  79212696  [ $v4       <array 6 of <array 76 of <array 44 of <array 42 of <array 94 of <char>>>>>> %ebp-79212732 ]
+-     #-1625484756(%ebp)1546272024  [ $v5       <array 75 of <array 96 of <array 59 of <array 14 of <array 65 of <int>>>>>> %ebp-1625484756 ]
++     #   -1625484756(%ebp)  1546272024  [ $v5       <array 75 of <array 96 of <array 59 of <array 14 of <array 65 of <int>>>>>> %ebp-1625484756 ]
+-     #-1688153580(%ebp)62668824  [ $v6       <array 64 of <array 25 of <array 36 of <array 64 of <array 17 of <bool>>>>>> %ebp-1688153580 ]
++     #   -1688153580(%ebp)  62668824  [ $v6       <array 64 of <array 25 of <array 36 of <array 64 of <array 17 of <bool>>>>>> %ebp-1688153580 ]
+-     #-2075669700(%ebp)387516120  [ $v7       <array 64 of <array 33 of <array 87 of <array 37 of <array 57 of <char>>>>>> %ebp-2075669700 ]
++     #   -2075669700(%ebp)  387516120  [ $v7       <array 64 of <array 33 of <array 87 of <array 37 of <array 57 of <char>>>>>> %ebp-2075669700 ]
+-     jmp     l_test_12               #  11:     goto   12
++     jmp     l_test_13               #  11:     goto   13
+- l_test_12:
++ l_test_13:
+-     jmp     l_test_14               #  14:     goto   14
++     jmp     l_test_15               #  14:     goto   15
+- l_test_14:
++ l_test_15:

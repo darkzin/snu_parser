@@ -1,0 +1,15 @@
+-     #   -204(%ebp) 171  [ $v1       <array 3 of <array 1 of <array 7 of <array 7 of <array 1 of <bool>>>>>> %ebp-204 ]
++     #   -204(%ebp)  171  [ $v1       <array 3 of <array 1 of <array 7 of <array 7 of <array 1 of <bool>>>>>> %ebp-204 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              
++     jmp     l_test_13               #  14:     goto   13
++     jmp     l_test_13               #  15:     goto   13
++ l_test_13:
+-     jmp     l_test_11_while_cond    #  14:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  17:     goto   11_while_cond
+-     movl    $1, %eax                #  15:     assign v0 <- 1
++     movl    $1, %eax                #  18:     assign v0 <- 1
+-     call    f2                      #  16:     call   t2 <- f2
++     call    f2                      #  19:     call   t2 <- f2
+-     movl    $64032, %eax            #  17:     assign v1 <- 64032
++     movl    $64032, %eax            #  20:     assign v1 <- 64032

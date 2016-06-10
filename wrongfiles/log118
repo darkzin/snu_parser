@@ -1,0 +1,30 @@
++     jmp     l_test_2_if_false       #   1:     goto   2_if_false
+-     jmp     l_test_0                #   3:     goto   0
++     jmp     l_test_0                #   4:     goto   0
++ l_test_2_if_false:
+-     call    dummyINTfunc            #   6:     call   t0 <- dummyINTfunc
++     call    dummyINTfunc            #   8:     call   t0 <- dummyINTfunc
+-     movl    $52935, %eax            #   7:     mul    t1 <- 52935, 29851
++     movl    $52935, %eax            #   9:     mul    t1 <- 52935, 29851
+-     movl    -20(%ebp), %eax         #   8:     mul    t2 <- t1, 90905
++     movl    -20(%ebp), %eax         #  10:     mul    t2 <- t1, 90905
+-     movl    -24(%ebp), %eax         #   9:     mul    t3 <- t2, 7144
++     movl    -24(%ebp), %eax         #  11:     mul    t3 <- t2, 7144
+-     movl    -28(%ebp), %eax         #  10:     div    t4 <- t3, 47281
++     movl    -28(%ebp), %eax         #  12:     div    t4 <- t3, 47281
+-     movl    -32(%ebp), %eax         #  11:     assign v0 <- t4
++     movl    -32(%ebp), %eax         #  13:     assign v0 <- t4
+-     movl    $14975, %eax            #  13:     add    t5 <- 14975, 19688
++     movl    $14975, %eax            #  15:     add    t5 <- 14975, 19688
+-     movl    -36(%ebp), %eax         #  14:     add    t6 <- t5, 42332
++     movl    -36(%ebp), %eax         #  16:     add    t6 <- t5, 42332
+-     movl    -40(%ebp), %eax         #  15:     add    t7 <- t6, 46729
++     movl    -40(%ebp), %eax         #  17:     add    t7 <- t6, 46729
+-     movl    -44(%ebp), %eax         #  16:     add    t8 <- t7, 50118
++     movl    -44(%ebp), %eax         #  18:     add    t8 <- t7, 50118
+-     movl    -48(%ebp), %eax         #  17:     if     t8 < 10936 goto 10_while_body
++     movl    -48(%ebp), %eax         #  19:     if     t8 < 10936 goto 10_while_body
+-     jmp     l_test_8                #  18:     goto   8
++     jmp     l_test_8                #  20:     goto   8
+-     jmp     l_test_9_while_cond     #  22:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #  24:     goto   9_while_cond

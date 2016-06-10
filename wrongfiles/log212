@@ -1,0 +1,24 @@
+-     #  -9008(%ebp)8984  [ $v0       <array 8 of <array 7 of <array 8 of <array 2 of <array 10 of <char>>>>>> %ebp-9008 ]
++     #   -9008(%ebp)  8984  [ $v0       <array 8 of <array 7 of <array 8 of <array 2 of <array 10 of <char>>>>>> %ebp-9008 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     #  -9020(%ebp)8984  [ $v2       <array 8 of <array 7 of <array 8 of <array 2 of <array 10 of <char>>>>>> %ebp-9020 ]
++     #   -9020(%ebp)  8984  [ $v2       <array 8 of <array 7 of <array 8 of <array 2 of <array 10 of <char>>>>>> %ebp-9020 ]
+-     #  -9024(%ebp)   4  [ $v3       <int> %ebp-9024 ]
++     #   -9024(%ebp)   4  [ $v3       <int> %ebp-9024 ]
+-     movl    $100, %eax              #  15:     if     100 = t6 goto 9
++     movl    $100, %eax              #  15:     if     100 = t6 goto 10
+-     je      l_f2_9                 
++     je      l_f2_10                
+-     jmp     l_f2_10                 #  16:     goto   10
++     jmp     l_f2_11                 #  16:     goto   11
+- l_f2_9:
++ l_f2_10:
+-     jmp     l_f2_11                 #  19:     goto   11
++     jmp     l_f2_12                 #  19:     goto   12
+- l_f2_10:
++ l_f2_11:
+- l_f2_11:
++ l_f2_12:
+-     addl    $5, %esp               
++     addl    $8, %esp               

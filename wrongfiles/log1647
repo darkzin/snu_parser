@@ -1,0 +1,14 @@
+-     movl    $30442, %eax            #   1:     if     30442 # 78248 goto 4
++     movl    $30442, %eax            #   1:     if     30442 # 78248 goto 5
+-     jne     l_test_4               
++     jne     l_test_5               
+-     jmp     l_test_5                #   2:     goto   5
++     jmp     l_test_6                #   2:     goto   6
+- l_test_4:
++ l_test_5:
+-     jmp     l_test_6                #   5:     goto   6
++     jmp     l_test_7                #   5:     goto   7
+- l_test_5:
++ l_test_6:
+- l_test_6:
++ l_test_7:

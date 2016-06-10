@@ -1,0 +1,62 @@
++     jmp     l_f0_3                  #   1:     goto   3
+-     movl    $1, %eax                #   1:     assign t5 <- 1
++     movl    $1, %eax                #   2:     assign t5 <- 1
+-     jmp     l_f0_4                  #   2:     goto   4
++     jmp     l_f0_4                  #   3:     goto   4
++ l_f0_3:
+-     movl    $0, %eax                #   3:     assign t5 <- 0
++     movl    $0, %eax                #   5:     assign t5 <- 0
+-     movzbl  -13(%ebp), %eax         #   5:     return t5
++     movzbl  -13(%ebp), %eax         #   7:     return t5
+-     movl    $97, %eax               #   7:     if     97 # 99 goto 10_while_body
++     movl    $97, %eax               #   9:     if     97 # 99 goto 10_while_body
+-     jmp     l_f0_8                  #   8:     goto   8
++     jmp     l_f0_8                  #  10:     goto   8
+-     call    dummyCHARfunc           #  10:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #  12:     call   t6 <- dummyCHARfunc
+-     jmp     l_f0_9_while_cond       #  11:     goto   9_while_cond
++     jmp     l_f0_9_while_cond       #  13:     goto   9_while_cond
+-     #  -2304(%ebp)2184  [ $v3       <array 3 of <array 4 of <array 4 of <array 9 of <array 5 of <char>>>>>> %ebp-2304 ]
++     #   -2304(%ebp)  2184  [ $v3       <array 3 of <array 4 of <array 4 of <array 9 of <array 5 of <char>>>>>> %ebp-2304 ]
+-     # -26328(%ebp)24024  [ $v4       <array 10 of <array 8 of <array 10 of <array 6 of <array 5 of <bool>>>>>> %ebp-26328 ]
++     #   -26328(%ebp)  24024  [ $v4       <array 10 of <array 8 of <array 10 of <array 6 of <array 5 of <bool>>>>>> %ebp-26328 ]
+-     # -26329(%ebp)   1  [ $v5       <char> %ebp-26329 ]
++     #   -26329(%ebp)   1  [ $v5       <char> %ebp-26329 ]
+-     addl    $10, %esp              
++     addl    $16, %esp              
++     jmp     l_test_12               #  10:     goto   12
+-     movl    $1, %eax                #  10:     assign t1 <- 1
++     movl    $1, %eax                #  11:     assign t1 <- 1
+-     jmp     l_test_12               #  11:     goto   12
++     jmp     l_test_13               #  12:     goto   13
++ l_test_12:
+-     movl    $0, %eax                #  12:     assign t1 <- 0
++     movl    $0, %eax                #  14:     assign t1 <- 0
+- l_test_12:
++ l_test_13:
+-     movzbl  -14(%ebp), %eax         #  14:     if     t1 # 1 goto 7
++     movzbl  -14(%ebp), %eax         #  16:     if     t1 # 1 goto 7
+-     jmp     l_test_8                #  15:     goto   8
++     jmp     l_test_8                #  17:     goto   8
+-     movl    $1, %eax                #  17:     assign t2 <- 1
++     movl    $1, %eax                #  19:     assign t2 <- 1
+-     jmp     l_test_9                #  18:     goto   9
++     jmp     l_test_9                #  20:     goto   9
+-     movl    $0, %eax                #  20:     assign t2 <- 0
++     movl    $0, %eax                #  22:     assign t2 <- 0
+-     movzbl  -15(%ebp), %eax         #  22:     assign v0 <- t2
++     movzbl  -15(%ebp), %eax         #  24:     assign v0 <- t2
+-     call    ReadInt                 #  24:     call   t3 <- ReadInt
++     call    ReadInt                 #  26:     call   t3 <- ReadInt
+-     movl    -20(%ebp), %eax         #  25:     if     t3 = 90580 goto 17
++     movl    -20(%ebp), %eax         #  27:     if     t3 = 90580 goto 17
+-     jmp     l_test_18               #  26:     goto   18
++     jmp     l_test_18               #  28:     goto   18
+-     movl    $1, %eax                #  28:     assign t4 <- 1
++     movl    $1, %eax                #  30:     assign t4 <- 1
+-     jmp     l_test_19               #  29:     goto   19
++     jmp     l_test_19               #  31:     goto   19
+-     movl    $0, %eax                #  31:     assign t4 <- 0
++     movl    $0, %eax                #  33:     assign t4 <- 0
+-     movzbl  -21(%ebp), %eax         #  33:     assign v0 <- t4
++     movzbl  -21(%ebp), %eax         #  35:     assign v0 <- t4

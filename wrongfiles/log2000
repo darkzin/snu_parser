@@ -1,0 +1,28 @@
++     jmp     l_test_6                #   7:     goto   6
+-     movl    $1, %eax                #   7:     assign t1 <- 1
++     movl    $1, %eax                #   8:     assign t1 <- 1
+-     jmp     l_test_7                #   8:     goto   7
++     jmp     l_test_7                #   9:     goto   7
++ l_test_6:
+-     movl    $0, %eax                #   9:     assign t1 <- 0
++     movl    $0, %eax                #  11:     assign t1 <- 0
+-     movzbl  -17(%ebp), %eax         #  11:     param  1 <- t1
++     movzbl  -17(%ebp), %eax         #  13:     param  1 <- t1
+-     leal    v2, %eax                #  12:     &()    t2 <- v2
++     leal    v2, %eax                #  14:     &()    t2 <- v2
+-     movl    -24(%ebp), %eax         #  13:     param  0 <- t2
++     movl    -24(%ebp), %eax         #  15:     param  0 <- t2
+-     call    f2                      #  14:     call   t3 <- f2
++     call    f2                      #  16:     call   t3 <- f2
+-     addl    $13, %esp              
++     addl    $16, %esp              
+-     movzbl  -25(%ebp), %eax         #  15:     assign v1 <- t3
++     movzbl  -25(%ebp), %eax         #  17:     assign v1 <- t3
+-     call    dummyCHARfunc           #  17:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  19:     call   t4 <- dummyCHARfunc
+-     movzbl  -26(%ebp), %eax         #  18:     if     t4 >= 99 goto 11_while_body
++     movzbl  -26(%ebp), %eax         #  20:     if     t4 >= 99 goto 11_while_body
+-     jmp     l_test_9                #  19:     goto   9
++     jmp     l_test_9                #  21:     goto   9
+-     jmp     l_test_10_while_cond    #  21:     goto   10_while_cond
++     jmp     l_test_10_while_cond    #  23:     goto   10_while_cond

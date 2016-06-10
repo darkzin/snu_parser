@@ -1,0 +1,12 @@
+-     # -20212(%ebp)20184  [ $v1       <array 4 of <array 4 of <array 7 of <array 9 of <array 5 of <int>>>>>> %ebp-20212 ]
++     #   -20212(%ebp)  20184  [ $v1       <array 4 of <array 4 of <array 7 of <array 9 of <array 5 of <int>>>>>> %ebp-20212 ]
+-     # -20213(%ebp)   1  [ $v2       <char> %ebp-20213 ]
++     #   -20213(%ebp)   1  [ $v2       <char> %ebp-20213 ]
+-     # -20220(%ebp)   4  [ $v3       <int> %ebp-20220 ]
++     #   -20220(%ebp)   4  [ $v3       <int> %ebp-20220 ]
++     jmp     l_f2_12                 #  19:     goto   12
+-     movl    $13250, %eax            #  19:     assign v3 <- 13250
++     movl    $13250, %eax            #  20:     assign v3 <- 13250
+-     jmp     l_f2_13_while_cond      #  20:     goto   13_while_cond
++     jmp     l_f2_13_while_cond      #  21:     goto   13_while_cond
++ l_f2_12:

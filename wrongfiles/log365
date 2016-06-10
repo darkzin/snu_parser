@@ -1,0 +1,12 @@
++     jmp     l_f2_7_if_false         #   8:     goto   7_if_false
+-     movl    $98, %eax               #   8:     if     98 = 100 goto 12_if_true
++     movl    $98, %eax               #   9:     if     98 = 100 goto 12_if_true
+-     jmp     l_f2_13_if_false        #   9:     goto   13_if_false
++     jmp     l_f2_13_if_false        #  10:     goto   13_if_false
+-     jmp     l_f2_11                 #  11:     goto   11
++     jmp     l_f2_11                 #  12:     goto   11
+-     jmp     l_f2_5                  #  14:     goto   5
++     jmp     l_f2_5                  #  15:     goto   5
++ l_f2_7_if_false:
+-     call    dummyINTfunc            #  16:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #  18:     call   t2 <- dummyINTfunc

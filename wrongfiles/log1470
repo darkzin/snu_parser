@@ -1,0 +1,90 @@
++     jmp     l_f0_9_if_false         #  12:     goto   9_if_false
++     jmp     l_f0_9_if_false         #  13:     goto   9_if_false
+-     jmp     l_f0_7                  #  12:     goto   7
++     jmp     l_f0_7                  #  14:     goto   7
+-     movl    $41592, %eax            #  15:     div    t17 <- 41592, 3165
++     movl    $41592, %eax            #  17:     div    t17 <- 41592, 3165
+-     movl    $2, %eax                #  16:     param  1 <- 2
++     movl    $2, %eax                #  18:     param  1 <- 2
+-     movl    8(%ebp), %eax           #  17:     param  0 <- v1
++     movl    8(%ebp), %eax           #  19:     param  0 <- v1
+-     call    DIM                     #  18:     call   t18 <- DIM
++     call    DIM                     #  20:     call   t18 <- DIM
+-     movl    $5947, %eax             #  19:     mul    t19 <- 5947, t18
++     movl    $5947, %eax             #  21:     mul    t19 <- 5947, t18
+-     movl    -24(%ebp), %eax         #  20:     add    t20 <- t19, 77024
++     movl    -24(%ebp), %eax         #  22:     add    t20 <- t19, 77024
+-     movl    $3, %eax                #  21:     param  1 <- 3
++     movl    $3, %eax                #  23:     param  1 <- 3
+-     movl    8(%ebp), %eax           #  22:     param  0 <- v1
++     movl    8(%ebp), %eax           #  24:     param  0 <- v1
+-     call    DIM                     #  23:     call   t21 <- DIM
++     call    DIM                     #  25:     call   t21 <- DIM
+-     movl    -28(%ebp), %eax         #  24:     mul    t22 <- t20, t21
++     movl    -28(%ebp), %eax         #  26:     mul    t22 <- t20, t21
+-     movl    -36(%ebp), %eax         #  25:     add    t23 <- t22, 65889
++     movl    -36(%ebp), %eax         #  27:     add    t23 <- t22, 65889
+-     movl    $4, %eax                #  26:     param  1 <- 4
++     movl    $4, %eax                #  28:     param  1 <- 4
+-     movl    8(%ebp), %eax           #  27:     param  0 <- v1
++     movl    8(%ebp), %eax           #  29:     param  0 <- v1
+-     call    DIM                     #  28:     call   t24 <- DIM
++     call    DIM                     #  30:     call   t24 <- DIM
+-     movl    -40(%ebp), %eax         #  29:     mul    t25 <- t23, t24
++     movl    -40(%ebp), %eax         #  31:     mul    t25 <- t23, t24
+-     movl    -48(%ebp), %eax         #  30:     add    t26 <- t25, 22164
++     movl    -48(%ebp), %eax         #  32:     add    t26 <- t25, 22164
+-     movl    $5, %eax                #  31:     param  1 <- 5
++     movl    $5, %eax                #  33:     param  1 <- 5
+-     movl    8(%ebp), %eax           #  32:     param  0 <- v1
++     movl    8(%ebp), %eax           #  34:     param  0 <- v1
+-     call    DIM                     #  33:     call   t27 <- DIM
++     call    DIM                     #  35:     call   t27 <- DIM
+-     movl    -52(%ebp), %eax         #  34:     mul    t28 <- t26, t27
++     movl    -52(%ebp), %eax         #  36:     mul    t28 <- t26, t27
+-     movl    -60(%ebp), %eax         #  35:     add    t29 <- t28, 1977
++     movl    -60(%ebp), %eax         #  37:     add    t29 <- t28, 1977
+-     movl    -64(%ebp), %eax         #  36:     mul    t30 <- t29, 4
++     movl    -64(%ebp), %eax         #  38:     mul    t30 <- t29, 4
+-     movl    8(%ebp), %eax           #  37:     param  0 <- v1
++     movl    8(%ebp), %eax           #  39:     param  0 <- v1
+-     call    DOFS                    #  38:     call   t31 <- DOFS
++     call    DOFS                    #  40:     call   t31 <- DOFS
+-     movl    -68(%ebp), %eax         #  39:     add    t32 <- t30, t31
++     movl    -68(%ebp), %eax         #  41:     add    t32 <- t30, t31
+-     movl    8(%ebp), %eax           #  40:     add    t33 <- v1, t32
++     movl    8(%ebp), %eax           #  42:     add    t33 <- v1, t32
+-     movl    -16(%ebp), %eax         #  41:     assign @t33 <- t17
++     movl    -16(%ebp), %eax         #  43:     assign @t33 <- t17
++     jmp     l_f1_14                 #  18:     goto   14
+-     movl    $1, %eax                #  19:     assign t18 <- 1
++     movl    $1, %eax                #  20:     assign t18 <- 1
+-     jmp     l_f1_15                 #  20:     goto   15
++     jmp     l_f1_15                 #  21:     goto   15
++ l_f1_14:
+-     movl    $0, %eax                #  21:     assign t18 <- 0
++     movl    $0, %eax                #  23:     assign t18 <- 0
+-     movzbl  -14(%ebp), %eax         #  23:     return t18
++     movzbl  -14(%ebp), %eax         #  25:     return t18
+-     movl    $85955, %eax            #  24:     if     85955 # 62852 goto 20_if_true
++     movl    $85955, %eax            #  26:     if     85955 # 62852 goto 20_if_true
+-     jmp     l_f1_21_if_false        #  25:     goto   21_if_false
++     jmp     l_f1_21_if_false        #  27:     goto   21_if_false
+-     movl    $99, %eax               #  27:     assign v2 <- 99
++     movl    $99, %eax               #  29:     assign v2 <- 99
+-     jmp     l_f1_25_while_cond      #  29:     goto   25_while_cond
++     jmp     l_f1_25_while_cond      #  31:     goto   25_while_cond
+-     movl    $86616, %eax            #  30:     if     86616 # 82684 goto 28_if_true
++     movl    $86616, %eax            #  32:     if     86616 # 82684 goto 28_if_true
+-     jmp     l_f1_29_if_false        #  31:     goto   29_if_false
++     jmp     l_f1_29_if_false        #  33:     goto   29_if_false
+-     jmp     l_f1_27                 #  33:     goto   27
++     jmp     l_f1_27                 #  35:     goto   27
+-     movl    $99, %eax               #  36:     if     99 > 97 goto 32_if_true
++     movl    $99, %eax               #  38:     if     99 > 97 goto 32_if_true
+-     jmp     l_f1_33_if_false        #  37:     goto   33_if_false
++     jmp     l_f1_33_if_false        #  39:     goto   33_if_false
+-     jmp     l_f1_31                 #  39:     goto   31
++     jmp     l_f1_31                 #  41:     goto   31
+-     jmp     l_f1_19                 #  42:     goto   19
++     jmp     l_f1_19                 #  44:     goto   19

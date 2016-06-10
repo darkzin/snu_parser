@@ -1,0 +1,4 @@
+-     #   -700(%ebp) 672  [ $v1       <array 6 of <array 6 of <array 3 of <array 3 of <array 2 of <char>>>>>> %ebp-700 ]
++     #   -700(%ebp)  672  [ $v1       <array 6 of <array 6 of <array 3 of <array 3 of <array 2 of <char>>>>>> %ebp-700 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              

@@ -1,0 +1,43 @@
+-     addl    $6, %esp               
++     addl    $12, %esp              
++     jmp     l_f2_8                  #  13:     goto   8
++     jmp     l_f2_8                  #  14:     goto   8
+-     movl    $1, %eax                #  13:     assign t12 <- 1
++     movl    $1, %eax                #  15:     assign t12 <- 1
+-     jmp     l_f2_8                  #  14:     goto   8
++     jmp     l_f2_9                  #  16:     goto   9
++ l_f2_8:
+-     movl    $0, %eax                #  15:     assign t12 <- 0
++     movl    $0, %eax                #  18:     assign t12 <- 0
+- l_f2_8:
++ l_f2_9:
+-     movzbl  -21(%ebp), %eax         #  17:     if     t12 = 0 goto 3
++     movzbl  -21(%ebp), %eax         #  20:     if     t12 = 0 goto 3
+-     jmp     l_f2_4                  #  18:     goto   4
++     jmp     l_f2_4                  #  21:     goto   4
+-     movl    $1, %eax                #  20:     assign t13 <- 1
++     movl    $1, %eax                #  23:     assign t13 <- 1
+-     jmp     l_f2_5                  #  21:     goto   5
++     jmp     l_f2_5                  #  24:     goto   5
+-     movl    $0, %eax                #  23:     assign t13 <- 0
++     movl    $0, %eax                #  26:     assign t13 <- 0
+-     movzbl  -22(%ebp), %eax         #  25:     return t13
++     movzbl  -22(%ebp), %eax         #  28:     return t13
++     jmp     l_test_13               #  13:     goto   13
++     jmp     l_test_13               #  14:     goto   13
++     jmp     l_test_13               #  15:     goto   13
+-     movl    $1, %eax                #  13:     assign t3 <- 1
++     movl    $1, %eax                #  16:     assign t3 <- 1
+-     jmp     l_test_13               #  14:     goto   13
++     jmp     l_test_14               #  17:     goto   14
++ l_test_13:
+-     movl    $0, %eax                #  15:     assign t3 <- 0
++     movl    $0, %eax                #  19:     assign t3 <- 0
+- l_test_13:
++ l_test_14:
+-     movzbl  -22(%ebp), %eax         #  17:     if     t3 = 0 goto 10_while_body
++     movzbl  -22(%ebp), %eax         #  21:     if     t3 = 0 goto 10_while_body
+-     jmp     l_test_8                #  18:     goto   8
++     jmp     l_test_8                #  22:     goto   8
+-     jmp     l_test_9_while_cond     #  20:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #  24:     goto   9_while_cond

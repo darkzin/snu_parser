@@ -1,0 +1,31 @@
++     jmp     l_f0_5                  #   1:     goto   5
++     jmp     l_f0_5                  #   2:     goto   5
+-     movl    $1, %eax                #   1:     assign t2 <- 1
++     movl    $1, %eax                #   3:     assign t2 <- 1
+-     jmp     l_f0_5                  #   2:     goto   5
++     jmp     l_f0_6                  #   4:     goto   6
++ l_f0_5:
+-     movl    $0, %eax                #   3:     assign t2 <- 0
++     movl    $0, %eax                #   6:     assign t2 <- 0
+- l_f0_5:
++ l_f0_6:
+-     movzbl  -13(%ebp), %eax         #   5:     if     t2 # 1 goto 2_while_body
++     movzbl  -13(%ebp), %eax         #   8:     if     t2 # 1 goto 2_while_body
+-     jmp     l_f0_0                  #   6:     goto   0
++     jmp     l_f0_0                  #   9:     goto   0
+-     movl    $35110, %eax            #   8:     if     35110 = 27536 goto 11_if_true
++     movl    $35110, %eax            #  11:     if     35110 = 27536 goto 11_if_true
+-     jmp     l_f0_12_if_false        #   9:     goto   12_if_false
++     jmp     l_f0_12_if_false        #  12:     goto   12_if_false
+-     jmp     l_f0_10                 #  11:     goto   10
++     jmp     l_f0_10                 #  14:     goto   10
+-     jmp     l_f0_1_while_cond       #  14:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #  17:     goto   1_while_cond
+-     movl    $74122, %eax            #  16:     if     74122 < 87231 goto 15_if_true
++     movl    $74122, %eax            #  19:     if     74122 < 87231 goto 15_if_true
++     jmp     l_f0_16_if_false        #  20:     goto   16_if_false
+-     jmp     l_f0_14                 #  18:     goto   14
++     jmp     l_f0_14                 #  22:     goto   14
++ l_f0_16_if_false:
+-     call    WriteLn                 #  20:     call   WriteLn
++     call    WriteLn                 #  25:     call   WriteLn

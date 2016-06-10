@@ -1,0 +1,24 @@
++     jmp     l_f0_7                  #   2:     goto   7
++     jmp     l_f0_7                  #   3:     goto   7
+-     jmp     l_f0_3                  #   2:     goto   3
++     jmp     l_f0_3                  #   4:     goto   3
++ l_f0_7:
++     jmp     l_f0_4                  #   6:     goto   4
+-     movl    $1, %eax                #   4:     assign t4 <- 1
++     movl    $1, %eax                #   8:     assign t4 <- 1
+-     jmp     l_f0_5                  #   5:     goto   5
++     jmp     l_f0_5                  #   9:     goto   5
++ l_f0_4:
+-     movl    $0, %eax                #   6:     assign t4 <- 0
++     movl    $0, %eax                #  11:     assign t4 <- 0
+-     movzbl  -21(%ebp), %eax         #   8:     return t4
++     movzbl  -21(%ebp), %eax         #  13:     return t4
++     jmp     l_f1_10_if_false        #  11:     goto   10_if_false
++     jmp     l_f1_10_if_false        #  12:     goto   10_if_false
+-     call    ReadInt                 #  11:     call   t6 <- ReadInt
++     call    ReadInt                 #  13:     call   t6 <- ReadInt
+-     jmp     l_f1_16                 #  12:     goto   16
++     jmp     l_f1_16                 #  14:     goto   16
+-     jmp     l_f1_8                  #  14:     goto   8
++     jmp     l_f1_8                  #  16:     goto   8
++ l_f1_10_if_false:

@@ -1,0 +1,34 @@
+-     #-446724140(%ebp)446724120  [ $v3       <array 24 of <array 64 of <array 68 of <array 91 of <array 47 of <bool>>>>>> %ebp-446724140 ]
++     #   -446724140(%ebp)  446724120  [ $v3       <array 24 of <array 64 of <array 68 of <array 91 of <array 47 of <bool>>>>>> %ebp-446724140 ]
++     jmp     l_test_0                #   1:     goto   0
+-     jmp     l_test_5_while_cond     #   2:     goto   5_while_cond
++     jmp     l_test_5_while_cond     #   3:     goto   5_while_cond
+-     jmp     l_test_8_while_cond     #   4:     goto   8_while_cond
++     jmp     l_test_8_while_cond     #   5:     goto   8_while_cond
+-     jmp     l_test_1_while_cond     #   5:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   6:     goto   1_while_cond
++ l_test_0:
+-     movl    $45515, %eax            #   7:     param  2 <- 45515
++     movl    $45515, %eax            #   9:     param  2 <- 45515
+-     leal    v2, %eax                #   8:     &()    t0 <- v2
++     leal    v2, %eax                #  10:     &()    t0 <- v2
+-     movl    -16(%ebp), %eax         #   9:     param  1 <- t0
++     movl    -16(%ebp), %eax         #  11:     param  1 <- t0
+-     leal    v1, %eax                #  10:     &()    t1 <- v1
++     leal    v1, %eax                #  12:     &()    t1 <- v1
+-     movl    -20(%ebp), %eax         #  11:     param  0 <- t1
++     movl    -20(%ebp), %eax         #  13:     param  0 <- t1
+-     call    f1                      #  12:     call   t2 <- f1
++     call    f1                      #  14:     call   t2 <- f1
+-     movzbl  -21(%ebp), %eax         #  13:     if     t2 < 97 goto 12
++     movzbl  -21(%ebp), %eax         #  15:     if     t2 < 97 goto 12
+-     jmp     l_test_13               #  14:     goto   13
++     jmp     l_test_13               #  16:     goto   13
+-     movl    $1, %eax                #  16:     assign t3 <- 1
++     movl    $1, %eax                #  18:     assign t3 <- 1
+-     jmp     l_test_14               #  17:     goto   14
++     jmp     l_test_14               #  19:     goto   14
+-     movl    $0, %eax                #  19:     assign t3 <- 0
++     movl    $0, %eax                #  21:     assign t3 <- 0
+-     movzbl  -22(%ebp), %eax         #  21:     assign v0 <- t3
++     movzbl  -22(%ebp), %eax         #  23:     assign v0 <- t3

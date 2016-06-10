@@ -1,0 +1,56 @@
++     jmp     l_f0_0                  #   1:     goto   0
+-     movl    $61041, %eax            #   1:     return 61041
++     movl    $61041, %eax            #   2:     return 61041
+-     jmp     l_f0_1_while_cond       #   2:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   3:     goto   1_while_cond
++ l_f0_0:
+-     call    dummyBOOLfunc           #   4:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   6:     call   t4 <- dummyBOOLfunc
+-     movzbl  -13(%ebp), %eax         #   5:     if     t4 = 1 goto 9
++     movzbl  -13(%ebp), %eax         #   7:     if     t4 = 1 goto 9
+-     jmp     l_f0_6                  #   6:     goto   6
++     jmp     l_f0_6                  #   8:     goto   6
++     jmp     l_f0_6                  #  10:     goto   6
+-     jmp     l_f0_7_while_cond       #   8:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  11:     goto   7_while_cond
+-     call    ReadInt                 #  10:     call   t5 <- ReadInt
++     call    ReadInt                 #  13:     call   t5 <- ReadInt
+-     movl    -20(%ebp), %eax         #  11:     assign v1 <- t5
++     movl    -20(%ebp), %eax         #  14:     assign v1 <- t5
++     jmp     l_f1_2                  #   3:     goto   2
+-     movl    $74096, %eax            #   3:     if     74096 = 40169 goto 4_while_body
++     movl    $74096, %eax            #   4:     if     74096 = 40169 goto 4_while_body
+-     jmp     l_f1_2                  #   4:     goto   2
++     jmp     l_f1_2                  #   5:     goto   2
+-     jmp     l_f1_3_while_cond       #   6:     goto   3_while_cond
++     jmp     l_f1_3_while_cond       #   7:     goto   3_while_cond
+-     #-110000936(%ebp)110000904  [ $v5       <array 38 of <array 85 of <array 66 of <array 43 of <array 3 of <int>>>>>> %ebp-110000936 ]
++     #   -110000936(%ebp)  110000904  [ $v5       <array 38 of <array 85 of <array 66 of <array 43 of <array 3 of <int>>>>>> %ebp-110000936 ]
+-     #-174089600(%ebp)64088664  [ $v6       <array 34 of <array 34 of <array 5 of <array 28 of <array 99 of <int>>>>>> %ebp-174089600 ]
++     #   -174089600(%ebp)  64088664  [ $v6       <array 34 of <array 34 of <array 5 of <array 28 of <array 99 of <int>>>>>> %ebp-174089600 ]
++     jmp     l_test_4                #   3:     goto   4
+-     movl    $1, %eax                #   4:     assign t1 <- 1
++     movl    $1, %eax                #   5:     assign t1 <- 1
+-     jmp     l_test_5                #   5:     goto   5
++     jmp     l_test_5                #   6:     goto   5
++ l_test_4:
+-     movl    $0, %eax                #   6:     assign t1 <- 0
++     movl    $0, %eax                #   8:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #   8:     assign v1 <- t1
++     movzbl  -14(%ebp), %eax         #  10:     assign v1 <- t1
+-     call    ReadInt                 #   9:     call   t2 <- ReadInt
++     call    ReadInt                 #  11:     call   t2 <- ReadInt
+-     movl    $78617, %eax            #  11:     add    t3 <- 78617, 18211
++     movl    $78617, %eax            #  13:     add    t3 <- 78617, 18211
+-     movl    $71151, %eax            #  12:     if     71151 = t3 goto 10_while_body
++     movl    $71151, %eax            #  14:     if     71151 = t3 goto 10_while_body
+-     jmp     l_test_8                #  13:     goto   8
++     jmp     l_test_8                #  15:     goto   8
+-     movl    $99, %eax               #  16:     if     99 > 99 goto 14_while_body
++     movl    $99, %eax               #  18:     if     99 > 99 goto 14_while_body
+-     jmp     l_test_12               #  17:     goto   12
++     jmp     l_test_12               #  19:     goto   12
+-     jmp     l_test_13_while_cond    #  19:     goto   13_while_cond
++     jmp     l_test_13_while_cond    #  21:     goto   13_while_cond
+-     jmp     l_test_9_while_cond     #  22:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #  24:     goto   9_while_cond

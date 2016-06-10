@@ -1,0 +1,32 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movl    $99, %eax               #  40:     if     99 # 97 goto 36
++     movl    $99, %eax               #  40:     if     99 # 97 goto 37
+-     jne     l_test_36              
++     jne     l_test_37              
+-     jmp     l_test_37               #  41:     goto   37
++     jmp     l_test_38               #  41:     goto   38
+- l_test_36:
++ l_test_37:
+-     jmp     l_test_38               #  44:     goto   38
++     jmp     l_test_39               #  44:     goto   39
+- l_test_37:
++ l_test_38:
+- l_test_38:
++ l_test_39:
+-     movl    $87654, %eax            #  53:     if     87654 < t3 goto 40
++     movl    $87654, %eax            #  53:     if     87654 < t3 goto 41
+-     jl      l_test_40              
++     jl      l_test_41              
+-     jmp     l_test_41               #  54:     goto   41
++     jmp     l_test_42               #  54:     goto   42
+- l_test_40:
++ l_test_41:
+-     jmp     l_test_42               #  57:     goto   42
++     jmp     l_test_43               #  57:     goto   43
+- l_test_41:
++ l_test_42:
+- l_test_42:
++ l_test_43:
+-     addl    $10, %esp              
++     addl    $16, %esp              

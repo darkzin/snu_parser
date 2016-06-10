@@ -1,0 +1,25 @@
+-     jmp     l_f1_3                  #   0:     goto   3
++     jmp     l_f1_4                  #   0:     goto   4
+-     movl    $98, %eax               #   1:     if     98 >= 100 goto 3
++     movl    $98, %eax               #   1:     if     98 >= 100 goto 4
+-     jge     l_f1_3                 
++     jge     l_f1_4                 
+-     jmp     l_f1_4                  #   2:     goto   4
++     jmp     l_f1_5                  #   2:     goto   5
+- l_f1_3:
++ l_f1_4:
+-     jmp     l_f1_5                  #   5:     goto   5
++     jmp     l_f1_6                  #   5:     goto   6
+- l_f1_4:
++ l_f1_5:
+- l_f1_5:
++ l_f1_6:
++     jmp     l_f1_27                 #  39:     goto   27
++     jmp     l_f1_27                 #  40:     goto   27
+-     jmp     l_f1_28_while_cond      #  39:     goto   28_while_cond
++     jmp     l_f1_28_while_cond      #  41:     goto   28_while_cond
++ l_f1_27:
+-     jmp     l_f1_16_while_cond      #  40:     goto   16_while_cond
++     jmp     l_f1_16_while_cond      #  43:     goto   16_while_cond
+-     addl    $1, %esp               
++     addl    $4, %esp               

@@ -1,0 +1,12 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_5                #   4:     goto   5
+-     movl    $1, %eax                #   5:     assign t0 <- 1
++     movl    $1, %eax                #   6:     assign t0 <- 1
+-     jmp     l_test_6                #   6:     goto   6
++     jmp     l_test_6                #   7:     goto   6
++ l_test_5:
+-     movl    $0, %eax                #   7:     assign t0 <- 0
++     movl    $0, %eax                #   9:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #   9:     assign v1 <- t0
++     movzbl  -13(%ebp), %eax         #  11:     assign v1 <- t0

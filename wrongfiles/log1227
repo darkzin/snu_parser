@@ -1,0 +1,30 @@
++     jmp     l_f1_6                  #   6:     goto   6
++     jmp     l_f1_6                  #   7:     goto   6
++     jmp     l_f1_6                  #   8:     goto   6
+-     movl    $1, %eax                #   7:     assign t5 <- 1
++     movl    $1, %eax                #  10:     assign t5 <- 1
+-     jmp     l_f1_7                  #   8:     goto   7
++     jmp     l_f1_7                  #  11:     goto   7
++ l_f1_6:
+-     movl    $0, %eax                #   9:     assign t5 <- 0
++     movl    $0, %eax                #  13:     assign t5 <- 0
+-     movzbl  -13(%ebp), %eax         #  11:     return t5
++     movzbl  -13(%ebp), %eax         #  15:     return t5
+-     call    dummyCHARfunc           #  12:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #  16:     call   t6 <- dummyCHARfunc
++     jmp     l_f2_2                  #   0:     goto   2
+-     movl    $1, %eax                #   0:     assign t5 <- 1
++     movl    $1, %eax                #   1:     assign t5 <- 1
+-     jmp     l_f2_3                  #   1:     goto   3
++     jmp     l_f2_3                  #   2:     goto   3
++ l_f2_2:
+-     movl    $0, %eax                #   2:     assign t5 <- 0
++     movl    $0, %eax                #   4:     assign t5 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v2 <- t5
++     movzbl  -13(%ebp), %eax         #   6:     assign v2 <- t5
+-     movl    $98, %eax               #   5:     assign v3 <- 98
++     movl    $98, %eax               #   7:     assign v3 <- 98
+-     jmp     l_f2_7_if_true          #   6:     goto   7_if_true
++     jmp     l_f2_7_if_true          #   8:     goto   7_if_true
+-     jmp     l_f2_6                  #   8:     goto   6
++     jmp     l_f2_6                  #  10:     goto   6

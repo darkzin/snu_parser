@@ -1,0 +1,58 @@
++     jmp     l_f0_7                  #  38:     goto   7
+-     call    dummyBOOLfunc           #  39:     call   t22 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  40:     call   t22 <- dummyBOOLfunc
+-     call    dummyBOOLfunc           #  40:     call   t23 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  41:     call   t23 <- dummyBOOLfunc
+-     call    WriteLn                 #  41:     call   WriteLn
++     call    WriteLn                 #  42:     call   WriteLn
+-     jmp     l_f0_8_while_cond       #  42:     goto   8_while_cond
++     jmp     l_f0_8_while_cond       #  43:     goto   8_while_cond
++ l_f0_7:
++     jmp     l_f2_6                  #   9:     goto   6
+-     movl    $1, %eax                #  10:     assign t6 <- 1
++     movl    $1, %eax                #  11:     assign t6 <- 1
+-     jmp     l_f2_7                  #  11:     goto   7
++     jmp     l_f2_7                  #  12:     goto   7
++ l_f2_6:
+-     movl    $0, %eax                #  12:     assign t6 <- 0
++     movl    $0, %eax                #  14:     assign t6 <- 0
+-     movzbl  -26(%ebp), %eax         #  14:     return t6
++     movzbl  -26(%ebp), %eax         #  16:     return t6
+-     movl    $43577, %eax            #  15:     sub    t7 <- 43577, 40791
++     movl    $43577, %eax            #  17:     sub    t7 <- 43577, 40791
+-     movl    -32(%ebp), %eax         #  16:     sub    t8 <- t7, 18277
++     movl    -32(%ebp), %eax         #  18:     sub    t8 <- t7, 18277
+-     movl    $37438, %eax            #  17:     add    t9 <- 37438, 41947
++     movl    $37438, %eax            #  19:     add    t9 <- 37438, 41947
+-     movl    -40(%ebp), %eax         #  18:     add    t10 <- t9, 63453
++     movl    -40(%ebp), %eax         #  20:     add    t10 <- t9, 63453
+-     movl    -36(%ebp), %eax         #  19:     if     t8 # t10 goto 10
++     movl    -36(%ebp), %eax         #  21:     if     t8 # t10 goto 10
+-     jmp     l_f2_11                 #  20:     goto   11
++     jmp     l_f2_11                 #  22:     goto   11
+-     movl    $1, %eax                #  22:     assign t11 <- 1
++     movl    $1, %eax                #  24:     assign t11 <- 1
+-     jmp     l_f2_12                 #  23:     goto   12
++     jmp     l_f2_12                 #  25:     goto   12
+-     movl    $0, %eax                #  25:     assign t11 <- 0
++     movl    $0, %eax                #  27:     assign t11 <- 0
+-     movzbl  -17(%ebp), %eax         #  27:     return t11
++     movzbl  -17(%ebp), %eax         #  29:     return t11
++     jmp     l_test_10               #  14:     goto   10
+-     jmp     l_test_11_while_cond    #  15:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  16:     goto   11_while_cond
++ l_test_10:
+-     jmp     l_test_6_while_cond     #  16:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #  18:     goto   6_while_cond
+-     leal    v2, %eax                #  18:     &()    t0 <- v2
++     leal    v2, %eax                #  20:     &()    t0 <- v2
+-     movl    -16(%ebp), %eax         #  19:     param  1 <- t0
++     movl    -16(%ebp), %eax         #  21:     param  1 <- t0
+-     leal    v1, %eax                #  20:     &()    t1 <- v1
++     leal    v1, %eax                #  22:     &()    t1 <- v1
+-     movl    -20(%ebp), %eax         #  21:     param  0 <- t1
++     movl    -20(%ebp), %eax         #  23:     param  0 <- t1
+-     call    f0                      #  22:     call   t2 <- f0
++     call    f0                      #  24:     call   t2 <- f0
+-     call    dummyBOOLfunc           #  23:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  25:     call   t3 <- dummyBOOLfunc

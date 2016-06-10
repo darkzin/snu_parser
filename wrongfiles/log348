@@ -1,0 +1,24 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_13               #  15:     goto   13
+-     movl    $1, %eax                #  16:     assign t7 <- 1
++     movl    $1, %eax                #  17:     assign t7 <- 1
+-     jmp     l_test_14               #  17:     goto   14
++     jmp     l_test_14               #  18:     goto   14
++ l_test_13:
+-     movl    $0, %eax                #  18:     assign t7 <- 0
++     movl    $0, %eax                #  20:     assign t7 <- 0
+-     movzbl  -35(%ebp), %eax         #  20:     param  0 <- t7
++     movzbl  -35(%ebp), %eax         #  22:     param  0 <- t7
+-     call    f0                      #  21:     call   t8 <- f0
++     call    f0                      #  23:     call   t8 <- f0
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movzbl  -36(%ebp), %eax         #  22:     if     t8 = 1 goto 9_if_true
++     movzbl  -36(%ebp), %eax         #  24:     if     t8 = 1 goto 9_if_true
++     jmp     l_test_10_if_false      #  25:     goto   10_if_false
+-     jmp     l_test_8                #  24:     goto   8
++     jmp     l_test_8                #  27:     goto   8
++ l_test_10_if_false:

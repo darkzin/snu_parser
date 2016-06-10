@@ -1,0 +1,8 @@
++     jmp     l_f0_5                  #  14:     goto   5
+-     jmp     l_f0_6_while_cond       #  15:     goto   6_while_cond
++     jmp     l_f0_6_while_cond       #  16:     goto   6_while_cond
++ l_f0_5:
+-     call    dummyINTfunc            #  16:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #  18:     call   t5 <- dummyINTfunc
+-     addl    $1, %esp               
++     addl    $4, %esp               

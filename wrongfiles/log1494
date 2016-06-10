@@ -1,0 +1,4 @@
++     jmp     l_test_23_if_false      #  32:     goto   23_if_false
+-     jmp     l_test_21               #  34:     goto   21
++     jmp     l_test_21               #  35:     goto   21
++ l_test_23_if_false:

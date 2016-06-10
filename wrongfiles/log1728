@@ -1,0 +1,6 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $2, %esp               
++     addl    $8, %esp               

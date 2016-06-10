@@ -1,0 +1,26 @@
+-     jmp     l_f2_26                 #  32:     goto   26
++     jmp     l_f2_27                 #  32:     goto   27
++     jmp     l_f2_28                 #  33:     goto   28
+- l_f2_26:
++ l_f2_27:
+-     movl    $1, %eax                #  34:     assign t4 <- 1
++     movl    $1, %eax                #  35:     assign t4 <- 1
+-     jmp     l_f2_28                 #  35:     goto   28
++     jmp     l_f2_29                 #  36:     goto   29
++ l_f2_28:
+-     movl    $0, %eax                #  36:     assign t4 <- 0
++     movl    $0, %eax                #  38:     assign t4 <- 0
+- l_f2_28:
++ l_f2_29:
+-     movzbl  -13(%ebp), %eax         #  38:     if     t4 = 1 goto 24_if_true
++     movzbl  -13(%ebp), %eax         #  40:     if     t4 = 1 goto 24_if_true
+-     jmp     l_f2_25_if_false        #  39:     goto   25_if_false
++     jmp     l_f2_25_if_false        #  41:     goto   25_if_false
+-     movl    $99, %eax               #  41:     if     99 <= 98 goto 33_if_true
++     movl    $99, %eax               #  43:     if     99 <= 98 goto 33_if_true
+-     jmp     l_f2_34_if_false        #  42:     goto   34_if_false
++     jmp     l_f2_34_if_false        #  44:     goto   34_if_false
+-     jmp     l_f2_32                 #  44:     goto   32
++     jmp     l_f2_32                 #  46:     goto   32
+-     jmp     l_f2_23                 #  47:     goto   23
++     jmp     l_f2_23                 #  49:     goto   23

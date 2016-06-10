@@ -1,0 +1,10 @@
++     jmp     l_test_12               #  19:     goto   12
+-     movl    $13103, %eax            #  20:     if     13103 <= 40288 goto 19_if_true
++     movl    $13103, %eax            #  21:     if     13103 <= 40288 goto 19_if_true
+-     jmp     l_test_20_if_false      #  21:     goto   20_if_false
++     jmp     l_test_20_if_false      #  22:     goto   20_if_false
+-     jmp     l_test_18               #  23:     goto   18
++     jmp     l_test_18               #  24:     goto   18
+-     jmp     l_test_13_while_cond    #  26:     goto   13_while_cond
++     jmp     l_test_13_while_cond    #  27:     goto   13_while_cond
++ l_test_12:

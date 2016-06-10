@@ -1,0 +1,19 @@
+-     #   -124(%ebp) 104  [ $v4       <array 10 of <array 2 of <array 2 of <array 1 of <array 2 of <bool>>>>>> %ebp-124 ]
++     #   -124(%ebp)  104  [ $v4       <array 10 of <array 2 of <array 2 of <array 1 of <array 2 of <bool>>>>>> %ebp-124 ]
++     jmp     l_f2_2                  #   2:     goto   2
++     jmp     l_f2_2                  #   3:     goto   2
+-     movl    $1, %eax                #   2:     assign t2 <- 1
++     movl    $1, %eax                #   4:     assign t2 <- 1
+-     jmp     l_f2_3                  #   3:     goto   3
++     jmp     l_f2_3                  #   5:     goto   3
++ l_f2_2:
+-     movl    $0, %eax                #   4:     assign t2 <- 0
++     movl    $0, %eax                #   7:     assign t2 <- 0
+-     movzbl  -17(%ebp), %eax         #   6:     param  0 <- t2
++     movzbl  -17(%ebp), %eax         #   9:     param  0 <- t2
+-     call    f1                      #   7:     call   t3 <- f1
++     call    f1                      #  10:     call   t3 <- f1
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     call    dummyBOOLfunc           #   8:     call   t4 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  11:     call   t4 <- dummyBOOLfunc

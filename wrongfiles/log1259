@@ -1,0 +1,32 @@
++     jmp     l_f1_0                  #   4:     goto   0
++     jmp     l_f1_0                  #   5:     goto   0
+-     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   6:     goto   1_while_cond
+-     call    dummyCHARfunc           #   6:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t6 <- dummyCHARfunc
+-     movzbl  -13(%ebp), %eax         #   7:     if     t6 < 99 goto 7
++     movzbl  -13(%ebp), %eax         #   9:     if     t6 < 99 goto 7
+-     jmp     l_f1_8                  #   8:     goto   8
++     jmp     l_f1_8                  #  10:     goto   8
+-     movl    $1, %eax                #  10:     assign t7 <- 1
++     movl    $1, %eax                #  12:     assign t7 <- 1
+-     jmp     l_f1_9                  #  11:     goto   9
++     jmp     l_f1_9                  #  13:     goto   9
+-     movl    $0, %eax                #  13:     assign t7 <- 0
++     movl    $0, %eax                #  15:     assign t7 <- 0
+-     movzbl  -14(%ebp), %eax         #  15:     return t7
++     movzbl  -14(%ebp), %eax         #  17:     return t7
++     jmp     l_f1_16                 #  18:     goto   16
++ l_f1_16:
+-     jmp     l_f1_12                 #  16:     goto   12
++     jmp     l_f1_12                 #  20:     goto   12
++     jmp     l_f1_13                 #  21:     goto   13
+-     movl    $1, %eax                #  18:     assign t8 <- 1
++     movl    $1, %eax                #  23:     assign t8 <- 1
+-     jmp     l_f1_14                 #  19:     goto   14
++     jmp     l_f1_14                 #  24:     goto   14
++ l_f1_13:
+-     movl    $0, %eax                #  20:     assign t8 <- 0
++     movl    $0, %eax                #  26:     assign t8 <- 0
+-     movzbl  -15(%ebp), %eax         #  22:     return t8
++     movzbl  -15(%ebp), %eax         #  28:     return t8

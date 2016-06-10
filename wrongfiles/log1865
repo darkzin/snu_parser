@@ -1,0 +1,21 @@
++     jmp     l_f0_0                  #   1:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
+-     call    ReadInt                 #   1:     call   t3 <- ReadInt
++     call    ReadInt                 #   3:     call   t3 <- ReadInt
+-     movl    -16(%ebp), %eax         #   2:     param  0 <- t3
++     movl    -16(%ebp), %eax         #   4:     param  0 <- t3
+-     call    WriteInt                #   3:     call   WriteInt
++     call    WriteInt                #   5:     call   WriteInt
+-     jmp     l_f0_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   6:     goto   1_while_cond
++ l_f0_0:
+-     call    dummyCHARfunc           #   5:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t4 <- dummyCHARfunc
+-     call    dummyINTfunc            #   6:     call   t5 <- dummyINTfunc
++     call    dummyINTfunc            #   9:     call   t5 <- dummyINTfunc
+-     #-11748056(%ebp)11748024  [ $v0       <array 50 of <array 15 of <array 4 of <array 89 of <array 44 of <bool>>>>>> %ebp-11748056 ]
++     #   -11748056(%ebp)  11748024  [ $v0       <array 50 of <array 15 of <array 4 of <array 89 of <array 44 of <bool>>>>>> %ebp-11748056 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              
+-     addl    $10, %esp              
++     addl    $16, %esp              

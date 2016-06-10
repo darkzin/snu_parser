@@ -1,0 +1,32 @@
++     jmp     l_test_6                #  12:     goto   6
+-     movl    $42756, %eax            #  14:     assign v1 <- 42756
++     movl    $42756, %eax            #  15:     assign v1 <- 42756
+-     jmp     l_test_7_while_cond     #  15:     goto   7_while_cond
++     jmp     l_test_7_while_cond     #  16:     goto   7_while_cond
++ l_test_6:
+-     movl    $97, %eax               #  16:     assign v2 <- 97
++     movl    $97, %eax               #  18:     assign v2 <- 97
+-     jmp     l_test_12               #  17:     goto   12
++     jmp     l_test_12               #  19:     goto   12
+-     jmp     l_test_17_if_true       #  19:     goto   17_if_true
++     jmp     l_test_17_if_true       #  21:     goto   17_if_true
++     jmp     l_test_18_if_false      #  22:     goto   18_if_false
+-     jmp     l_test_16               #  21:     goto   16
++     jmp     l_test_16               #  24:     goto   16
++ l_test_18_if_false:
+-     jmp     l_test_23               #  24:     goto   23
++     jmp     l_test_23               #  28:     goto   23
+-     movl    $51172, %eax            #  25:     assign v1 <- 51172
++     movl    $51172, %eax            #  29:     assign v1 <- 51172
+-     movl    $54587, %eax            #  26:     if     54587 > 99834 goto 28_if_true
++     movl    $54587, %eax            #  30:     if     54587 > 99834 goto 28_if_true
+-     jmp     l_test_29_if_false      #  27:     goto   29_if_false
++     jmp     l_test_29_if_false      #  31:     goto   29_if_false
+-     jmp     l_test_27               #  29:     goto   27
++     jmp     l_test_27               #  33:     goto   27
+-     jmp     l_test_33_if_false      #  32:     goto   33_if_false
++     jmp     l_test_33_if_false      #  36:     goto   33_if_false
+-     jmp     l_test_31               #  33:     goto   31
++     jmp     l_test_31               #  37:     goto   31
+-     jmp     l_test_24_while_cond    #  36:     goto   24_while_cond
++     jmp     l_test_24_while_cond    #  40:     goto   24_while_cond

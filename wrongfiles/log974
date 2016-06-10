@@ -1,0 +1,32 @@
++     jmp     l_test_7_if_false       #   9:     goto   7_if_false
++     jmp     l_test_7_if_false       #  10:     goto   7_if_false
++     jmp     l_test_7_if_false       #  11:     goto   7_if_false
+-     movl    $3685, %eax             #  10:     if     3685 < 51106 goto 14_while_body
++     movl    $3685, %eax             #  13:     if     3685 < 51106 goto 14_while_body
+-     jmp     l_test_12               #  11:     goto   12
++     jmp     l_test_12               #  14:     goto   12
+-     jmp     l_test_13_while_cond    #  13:     goto   13_while_cond
++     jmp     l_test_13_while_cond    #  16:     goto   13_while_cond
+-     jmp     l_test_18_if_false      #  15:     goto   18_if_false
++     jmp     l_test_18_if_false      #  18:     goto   18_if_false
+-     jmp     l_test_16               #  16:     goto   16
++     jmp     l_test_16               #  19:     goto   16
+-     jmp     l_test_20_while_cond    #  20:     goto   20_while_cond
++     jmp     l_test_20_while_cond    #  23:     goto   20_while_cond
+-     movl    $93330, %eax            #  21:     assign v0 <- 93330
++     movl    $93330, %eax            #  24:     assign v0 <- 93330
+-     call    dummyCHARfunc           #  22:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  25:     call   t2 <- dummyCHARfunc
+-     movl    $1, %eax                #  23:     assign v1 <- 1
++     movl    $1, %eax                #  26:     assign v1 <- 1
+-     call    dummyINTfunc            #  24:     call   t3 <- dummyINTfunc
++     call    dummyINTfunc            #  27:     call   t3 <- dummyINTfunc
+-     leal    _str_1, %eax            #  26:     &()    t4 <- _str_1
++     leal    _str_1, %eax            #  29:     &()    t4 <- _str_1
+-     movl    -32(%ebp), %eax         #  27:     param  0 <- t4
++     movl    -32(%ebp), %eax         #  30:     param  0 <- t4
+-     call    WriteStr                #  28:     call   WriteStr
++     call    WriteStr                #  31:     call   WriteStr
+-     jmp     l_test_5                #  29:     goto   5
++     jmp     l_test_5                #  32:     goto   5
++ l_test_7_if_false:

@@ -1,0 +1,25 @@
++     jmp     l_f0_3                  #   1:     goto   3
+-     movl    $42493, %eax            #   1:     if     42493 # 54091 goto 2
++     movl    $42493, %eax            #   2:     if     42493 # 54091 goto 2
+-     jmp     l_f0_3                  #   2:     goto   3
++     jmp     l_f0_3                  #   3:     goto   3
+-     movl    $1, %eax                #   4:     assign t4 <- 1
++     movl    $1, %eax                #   5:     assign t4 <- 1
+-     jmp     l_f0_4                  #   5:     goto   4
++     jmp     l_f0_4                  #   6:     goto   4
+-     movl    $0, %eax                #   7:     assign t4 <- 0
++     movl    $0, %eax                #   8:     assign t4 <- 0
+-     movzbl  -14(%ebp), %eax         #   9:     assign v4 <- t4
++     movzbl  -14(%ebp), %eax         #  10:     assign v4 <- t4
+-     movl    $20431, %eax            #  10:     sub    t5 <- 20431, 39252
++     movl    $20431, %eax            #  11:     sub    t5 <- 20431, 39252
+-     movl    $40464, %eax            #  11:     div    t6 <- 40464, 26252
++     movl    $40464, %eax            #  12:     div    t6 <- 40464, 26252
+-     movl    -24(%ebp), %eax         #  12:     div    t7 <- t6, 38116
++     movl    -24(%ebp), %eax         #  13:     div    t7 <- t6, 38116
+-     movl    -20(%ebp), %eax         #  13:     sub    t8 <- t5, t7
++     movl    -20(%ebp), %eax         #  14:     sub    t8 <- t5, t7
+-     movl    -32(%ebp), %eax         #  14:     param  0 <- t8
++     movl    -32(%ebp), %eax         #  15:     param  0 <- t8
+-     call    WriteInt                #  15:     call   WriteInt
++     call    WriteInt                #  16:     call   WriteInt

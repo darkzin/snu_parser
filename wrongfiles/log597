@@ -1,0 +1,13 @@
++     jmp     l_f0_5                  #   1:     goto   5
++     jmp     l_f0_5                  #   2:     goto   5
++ l_f0_5:
+-     jmp     l_f0_2_while_body       #   1:     goto   2_while_body
++     jmp     l_f0_2_while_body       #   4:     goto   2_while_body
+-     jmp     l_f0_2_while_body       #   2:     goto   2_while_body
++     jmp     l_f0_2_while_body       #   5:     goto   2_while_body
+-     jmp     l_f0_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   7:     goto   1_while_cond
+-     call    dummyProcedure          #   5:     call   dummyProcedure
++     call    dummyProcedure          #   8:     call   dummyProcedure
+-     call    dummyBOOLfunc           #   6:     call   t11 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   9:     call   t11 <- dummyBOOLfunc

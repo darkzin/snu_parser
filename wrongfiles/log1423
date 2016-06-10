@@ -1,0 +1,30 @@
++     jmp     l_f0_2_if_false         #   0:     goto   2_if_false
+-     movl    $99, %eax               #   0:     if     99 <= 98 goto 6_if_true
++     movl    $99, %eax               #   1:     if     99 <= 98 goto 6_if_true
+-     jmp     l_f0_7_if_false         #   1:     goto   7_if_false
++     jmp     l_f0_7_if_false         #   2:     goto   7_if_false
+-     jmp     l_f0_5                  #   3:     goto   5
++     jmp     l_f0_5                  #   4:     goto   5
+-     call    ReadInt                 #   6:     call   t5 <- ReadInt
++     call    ReadInt                 #   7:     call   t5 <- ReadInt
+-     jmp     l_f0_0                  #   7:     goto   0
++     jmp     l_f0_0                  #   8:     goto   0
++ l_f0_2_if_false:
+-     call    dummyCHARfunc           #   9:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #  11:     call   t6 <- dummyCHARfunc
+-     movzbl  -17(%ebp), %eax         #  10:     return t6
++     movzbl  -17(%ebp), %eax         #  12:     return t6
+-     jmp     l_f0_15_while_cond      #  12:     goto   15_while_cond
++     jmp     l_f0_15_while_cond      #  14:     goto   15_while_cond
+-     movl    $97, %eax               #  13:     return 97
++     movl    $97, %eax               #  15:     return 97
+-     movl    $100, %eax              #  14:     return 100
++     movl    $100, %eax              #  16:     return 100
+-     jmp     l_f0_11                 #  15:     goto   11
++     jmp     l_f0_11                 #  17:     goto   11
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               

@@ -1,0 +1,22 @@
+digraph IR {
+  graph [fontname="Times New Roman",fontsize=10];
+  node  [fontname="Courier New",fontsize=10];
+  edge  [fontname="Times New Roman",fontsize=10];
+
+  // scope 'test'
+  test_cb [label="test\r  0: 1_while_cond:\l  1:     call   t0 <- dummyBOOLfunc\l  2:     if     t0 = 1 goto 2_while_body\l  3:     goto   0\l  4: 2_while_body:\l  5: 4_while_cond:\l  6:     if     56727 <= 12298 goto 5_while_body\l  7:     goto   3\l  8: 5_while_body:\l  9:     goto   4_while_cond\l 10: 3:\l 11:     goto   1_while_cond\l 12: 0:\l 13: 8_while_cond:\l 14:     if     98 # 97 goto 9_while_body\l 15:     goto   7\l 16: 9_while_body:\l 17:     assign v0 <- 100\l 18:     goto   14_if_false\l 19:     goto   12\l 20: 14_if_false:\l 21: 12:\l 22:     goto   8_while_cond\l 23: 7:\l 24:     call   dummyProcedure\l 25:     call   t1 <- dummyBOOLfunc\l",shape=box]
+  // scope 'dummyINTfunc'
+  dummyINTfunc_cb [label="dummyINTfunc\r",shape=box]
+  // scope 'dummyCHARfunc'
+  dummyCHARfunc_cb [label="dummyCHARfunc\r",shape=box]
+  // scope 'dummyBOOLfunc'
+  dummyBOOLfunc_cb [label="dummyBOOLfunc\r",shape=box]
+  // scope 'dummyProcedure'
+  dummyProcedure_cb [label="dummyProcedure\r",shape=box]
+  // scope 'f0'
+  f0_cb [label="f0\r  0:     return \l  1:     call   t0 <- dummyBOOLfunc\l  2:     return \l",shape=box]
+  // scope 'f1'
+  f1_cb [label="f1\r  0: 1_while_cond:\l  1:     goto   3\l  2:     goto   2_while_body\l  3: 3:\l  4:     goto   0\l  5: 2_while_body:\l  6:     goto   1_while_cond\l  7: 0:\l  8:     call   t0 <- dummyCHARfunc\l  9:     param  0 <- t0\l 10:     call   WriteChar\l 11: 8_while_cond:\l 12:     call   t1 <- dummyBOOLfunc\l 13:     if     t1 = 1 goto 9_while_body\l 14:     goto   9_while_body\l 15:     goto   7\l 16: 9_while_body:\l 17:     goto   8_while_cond\l 18: 7:\l",shape=box]
+  // scope 'f2'
+  f2_cb [label="f2\r  0: 1_while_cond:\l  1:     goto   4\l  2:     goto   5\l  3: 4:\l  4:     assign t0 <- 1\l  5:     goto   6\l  6: 5:\l  7:     assign t0 <- 0\l  8: 6:\l  9:     if     t0 # 0 goto 2_while_body\l 10:     goto   0\l 11: 2_while_body:\l 12:     if     100 > 99 goto 10_if_true\l 13:     goto   11_if_false\l 14: 10_if_true:\l 15:     goto   9\l 16: 11_if_false:\l 17: 9:\l 18:     goto   1_while_cond\l 19: 0:\l 20: 14_while_cond:\l 21:     goto   21\l 22:     goto   21\l 23:     goto   21\l 24:     assign t1 <- 1\l 25:     goto   22\l 26: 21:\l 27:     assign t1 <- 0\l 28: 22:\l 29:     if     t1 = 1 goto 17_if_true\l 30:     goto   18_if_false\l 31: 17_if_true:\l 32:     goto   16\l 33: 18_if_false:\l 34: 16:\l 35:     goto   14_while_cond\l 36:     assign v0 <- 98\l",shape=box]
+};

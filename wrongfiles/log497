@@ -1,0 +1,38 @@
+-     jmp     l_f1_2                  #   1:     goto   2
++     jmp     l_f1_8                  #   1:     goto   8
++ l_f1_8:
++     jmp     l_f1_2                  #   4:     goto   2
+-     movl    $1, %eax                #   4:     assign t3 <- 1
++     movl    $1, %eax                #   6:     assign t3 <- 1
+-     jmp     l_f1_4                  #   5:     goto   4
++     jmp     l_f1_4                  #   7:     goto   4
+-     movl    $0, %eax                #   6:     assign t3 <- 0
++     movl    $0, %eax                #   8:     assign t3 <- 0
+-     movzbl  -17(%ebp), %eax         #   8:     return t3
++     movzbl  -17(%ebp), %eax         #  10:     return t3
+-     movl    $5911, %eax             #   9:     add    t4 <- 5911, 92907
++     movl    $5911, %eax             #  11:     add    t4 <- 5911, 92907
+-     movl    -24(%ebp), %eax         #  10:     add    t5 <- t4, 23676
++     movl    -24(%ebp), %eax         #  12:     add    t5 <- t4, 23676
+-     movl    -28(%ebp), %eax         #  11:     if     t5 # 24961 goto 12
++     movl    -28(%ebp), %eax         #  13:     if     t5 # 24961 goto 12
+-     jmp     l_f1_13                 #  12:     goto   13
++     jmp     l_f1_13                 #  14:     goto   13
+-     movl    $1, %eax                #  14:     assign t6 <- 1
++     movl    $1, %eax                #  16:     assign t6 <- 1
+-     jmp     l_f1_14                 #  15:     goto   14
++     jmp     l_f1_14                 #  17:     goto   14
+-     movl    $0, %eax                #  17:     assign t6 <- 0
++     movl    $0, %eax                #  19:     assign t6 <- 0
+-     movzbl  -29(%ebp), %eax         #  19:     return t6
++     movzbl  -29(%ebp), %eax         #  21:     return t6
++     jmp     l_f2_2_if_false         #   0:     goto   2_if_false
+-     jmp     l_f2_4                  #   1:     goto   4
++     jmp     l_f2_4                  #   2:     goto   4
+-     jmp     l_f2_5_while_cond       #   2:     goto   5_while_cond
++     jmp     l_f2_5_while_cond       #   3:     goto   5_while_cond
+-     jmp     l_f2_0                  #   5:     goto   0
++     jmp     l_f2_0                  #   6:     goto   0
++ l_f2_2_if_false:
+-     call    dummyCHARfunc           #   8:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  10:     call   t2 <- dummyCHARfunc

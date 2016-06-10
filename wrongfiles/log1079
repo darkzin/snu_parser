@@ -1,0 +1,34 @@
++     jmp     l_f1_18_if_false        #  14:     goto   18_if_false
+-     jmp     l_f1_16                 #  14:     goto   16
++     jmp     l_f1_16                 #  15:     goto   16
++ l_f1_18_if_false:
+-     jmp     l_f1_9                  #  16:     goto   9
++     jmp     l_f1_9                  #  18:     goto   9
++     jmp     l_f1_23                 #  20:     goto   23
++     jmp     l_f1_23                 #  21:     goto   23
+-     movl    $99, %eax               #  18:     if     99 < 99 goto 22
++     movl    $99, %eax               #  22:     if     99 < 99 goto 22
+-     jmp     l_f1_23                 #  19:     goto   23
++     jmp     l_f1_23                 #  23:     goto   23
+-     movl    $1, %eax                #  21:     assign t3 <- 1
++     movl    $1, %eax                #  25:     assign t3 <- 1
+-     jmp     l_f1_24                 #  22:     goto   24
++     jmp     l_f1_24                 #  26:     goto   24
+-     movl    $0, %eax                #  24:     assign t3 <- 0
++     movl    $0, %eax                #  28:     assign t3 <- 0
+-     movzbl  -13(%ebp), %eax         #  26:     assign v0 <- t3
++     movzbl  -13(%ebp), %eax         #  30:     assign v0 <- t3
+-     movl    $62052, %eax            #   1:     if     62052 >= 22041 goto 5
++     movl    $62052, %eax            #   1:     if     62052 >= 22041 goto 6
+-     jge     l_test_5               
++     jge     l_test_6               
+-     jmp     l_test_6                #   2:     goto   6
++     jmp     l_test_7                #   2:     goto   7
+- l_test_5:
++ l_test_6:
+-     jmp     l_test_7                #   5:     goto   7
++     jmp     l_test_8                #   5:     goto   8
+- l_test_6:
++ l_test_7:
+- l_test_7:
++ l_test_8:

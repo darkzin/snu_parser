@@ -1,0 +1,46 @@
++     jmp     l_f0_3                  #   3:     goto   3
+-     movl    $1, %eax                #   4:     assign t6 <- 1
++     movl    $1, %eax                #   5:     assign t6 <- 1
+-     jmp     l_f0_4                  #   5:     goto   4
++     jmp     l_f0_4                  #   6:     goto   4
++ l_f0_3:
+-     movl    $0, %eax                #   6:     assign t6 <- 0
++     movl    $0, %eax                #   8:     assign t6 <- 0
+-     movzbl  -17(%ebp), %eax         #   8:     assign v0 <- t6
++     movzbl  -17(%ebp), %eax         #  10:     assign v0 <- t6
+-     call    dummyINTfunc            #   9:     call   t7 <- dummyINTfunc
++     call    dummyINTfunc            #  11:     call   t7 <- dummyINTfunc
++     jmp     l_f1_7_if_false         #   3:     goto   7_if_false
++     jmp     l_f1_7_if_false         #   4:     goto   7_if_false
+-     jmp     l_f1_11_if_false        #   3:     goto   11_if_false
++     jmp     l_f1_11_if_false        #   5:     goto   11_if_false
+-     jmp     l_f1_9                  #   4:     goto   9
++     jmp     l_f1_9                  #   6:     goto   9
+-     movl    $76272, %eax            #   8:     if     76272 >= 25034 goto 14_while_body
++     movl    $76272, %eax            #  10:     if     76272 >= 25034 goto 14_while_body
+-     jmp     l_f1_12                 #   9:     goto   12
++     jmp     l_f1_12                 #  11:     goto   12
+-     jmp     l_f1_13_while_cond      #  11:     goto   13_while_cond
++     jmp     l_f1_13_while_cond      #  13:     goto   13_while_cond
+-     movl    $100, %eax              #  13:     return 100
++     movl    $100, %eax              #  15:     return 100
+-     jmp     l_f1_5                  #  14:     goto   5
++     jmp     l_f1_5                  #  16:     goto   5
++ l_f1_7_if_false:
+-     #-28188236(%ebp)28188184  [ $v3       <array 32 of <array 13 of <array 7 of <array 55 of <array 44 of <int>>>>>> %ebp-28188236 ]
++     #   -28188236(%ebp)  28188184  [ $v3       <array 32 of <array 13 of <array 7 of <array 55 of <array 44 of <int>>>>>> %ebp-28188236 ]
+-     #-1970874980(%ebp)1942686744  [ $v4       <array 94 of <array 15 of <array 69 of <array 96 of <array 52 of <int>>>>>> %ebp-1970874980 ]
++     #   -1970874980(%ebp)  1942686744  [ $v4       <array 94 of <array 15 of <array 69 of <array 96 of <array 52 of <int>>>>>> %ebp-1970874980 ]
+-     #1890940292(%ebp)433152024  [ $v5       <array 96 of <array 40 of <array 94 of <array 25 of <array 48 of <char>>>>>> %ebp+1890940292 ]
++     #   1890940292(%ebp)  433152024  [ $v5       <array 96 of <array 40 of <array 94 of <array 25 of <array 48 of <char>>>>>> %ebp+1890940292 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $601006748, %ecx       
++     mov     %esp, %edi             
++     rep     stosl                  
++     jmp     l_f2_9                  #  22:     goto   9
+-     jmp     l_f2_10_while_cond      #  23:     goto   10_while_cond
++     jmp     l_f2_10_while_cond      #  24:     goto   10_while_cond
++ l_f2_9:
+-     jmp     l_f2_3_while_cond       #  24:     goto   3_while_cond
++     jmp     l_f2_3_while_cond       #  26:     goto   3_while_cond

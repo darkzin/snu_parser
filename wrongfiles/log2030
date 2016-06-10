@@ -1,0 +1,6 @@
++     jmp     l_f1_16_if_false        #  23:     goto   16_if_false
+-     call    f0                      #  23:     call   t5 <- f0
++     call    f0                      #  24:     call   t5 <- f0
+-     jmp     l_f1_14                 #  24:     goto   14
++     jmp     l_f1_14                 #  25:     goto   14
++ l_f1_16_if_false:

@@ -1,0 +1,36 @@
++     jmp     l_f1_3_if_false         #   1:     goto   3_if_false
+-     jmp     l_f1_5                  #   2:     goto   5
++     jmp     l_f1_5                  #   3:     goto   5
+-     jmp     l_f1_6_while_cond       #   3:     goto   6_while_cond
++     jmp     l_f1_6_while_cond       #   4:     goto   6_while_cond
+-     jmp     l_f1_1                  #   5:     goto   1
++     jmp     l_f1_1                  #   6:     goto   1
++ l_f1_3_if_false:
+-     call    dummyBOOLfunc           #   7:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   9:     call   t2 <- dummyBOOLfunc
+-     jmp     l_f1_12                 #   8:     goto   12
++     jmp     l_f1_13                 #  10:     goto   13
+-     jmp     l_f1_12                 #   9:     goto   12
++     jmp     l_f1_13                 #  11:     goto   13
+- l_f1_12:
++ l_f1_13:
+-     movl    $1, %eax                #  11:     assign t3 <- 1
++     movl    $1, %eax                #  13:     assign t3 <- 1
+-     jmp     l_f1_14                 #  12:     goto   14
++     jmp     l_f1_15                 #  14:     goto   15
+-     movl    $0, %eax                #  13:     assign t3 <- 0
++     movl    $0, %eax                #  15:     assign t3 <- 0
+- l_f1_14:
++ l_f1_15:
+-     movzbl  -13(%ebp), %eax         #  15:     if     t2 # t3 goto 9
++     movzbl  -13(%ebp), %eax         #  17:     if     t2 # t3 goto 9
+-     jmp     l_f1_10                 #  16:     goto   10
++     jmp     l_f1_10                 #  18:     goto   10
+-     movl    $1, %eax                #  18:     assign t4 <- 1
++     movl    $1, %eax                #  20:     assign t4 <- 1
+-     jmp     l_f1_11                 #  19:     goto   11
++     jmp     l_f1_11                 #  21:     goto   11
+-     movl    $0, %eax                #  21:     assign t4 <- 0
++     movl    $0, %eax                #  23:     assign t4 <- 0
+-     movzbl  -15(%ebp), %eax         #  23:     return t4
++     movzbl  -15(%ebp), %eax         #  25:     return t4

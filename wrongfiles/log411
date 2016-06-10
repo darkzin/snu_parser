@@ -1,0 +1,8 @@
++     jmp     l_f1_11                 #  11:     goto   11
+-     jmp     l_f1_12_while_cond      #  12:     goto   12_while_cond
++     jmp     l_f1_12_while_cond      #  13:     goto   12_while_cond
++ l_f1_11:
+-     call    ReadInt                 #  13:     call   t3 <- ReadInt
++     call    ReadInt                 #  15:     call   t3 <- ReadInt
+-     movl    -20(%ebp), %eax         #  14:     assign v3 <- t3
++     movl    -20(%ebp), %eax         #  16:     assign v3 <- t3

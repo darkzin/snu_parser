@@ -1,0 +1,35 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f2_0                  #   1:     goto   0
++     jmp     l_f2_0                  #   2:     goto   0
+-     jmp     l_f2_6_while_cond       #   2:     goto   6_while_cond
++     jmp     l_f2_6_while_cond       #   4:     goto   6_while_cond
+-     call    ReadInt                 #   3:     call   t5 <- ReadInt
++     call    ReadInt                 #   5:     call   t5 <- ReadInt
+-     movl    $97753, %eax            #   4:     assign v4 <- 97753
++     movl    $97753, %eax            #   6:     assign v4 <- 97753
+-     jmp     l_f2_13_if_false        #   6:     goto   13_if_false
++     jmp     l_f2_13_if_false        #   8:     goto   13_if_false
+-     jmp     l_f2_11                 #   7:     goto   11
++     jmp     l_f2_11                 #   9:     goto   11
+-     jmp     l_f2_1_while_cond       #  10:     goto   1_while_cond
++     jmp     l_f2_1_while_cond       #  12:     goto   1_while_cond
++ l_f2_0:
+-     movl    $100, %eax              #  11:     if     100 > 100 goto 15_if_true
++     movl    $100, %eax              #  14:     if     100 > 100 goto 15_if_true
+-     jmp     l_f2_16_if_false        #  12:     goto   16_if_false
++     jmp     l_f2_16_if_false        #  15:     goto   16_if_false
+-     jmp     l_f2_20_if_false        #  14:     goto   20_if_false
++     jmp     l_f2_20_if_false        #  17:     goto   20_if_false
+-     movl    $4734, %eax             #  17:     if     4734 # 5700 goto 24_while_body
++     movl    $4734, %eax             #  20:     if     4734 # 5700 goto 24_while_body
+-     jmp     l_f2_22                 #  18:     goto   22
++     jmp     l_f2_22                 #  21:     goto   22
+-     jmp     l_f2_23_while_cond      #  20:     goto   23_while_cond
++     jmp     l_f2_23_while_cond      #  23:     goto   23_while_cond
+-     jmp     l_f2_18                 #  22:     goto   18
++     jmp     l_f2_18                 #  25:     goto   18
+-     jmp     l_f2_14                 #  25:     goto   14
++     jmp     l_f2_14                 #  28:     goto   14

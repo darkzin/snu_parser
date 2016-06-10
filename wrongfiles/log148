@@ -1,0 +1,12 @@
++     jmp     l_f2_14_if_false        #  18:     goto   14_if_false
+-     movl    $1279, %eax             #  18:     if     1279 >= 71916 goto 18_if_true
++     movl    $1279, %eax             #  19:     if     1279 >= 71916 goto 18_if_true
+-     jmp     l_f2_19_if_false        #  19:     goto   19_if_false
++     jmp     l_f2_19_if_false        #  20:     goto   19_if_false
+-     jmp     l_f2_17                 #  21:     goto   17
++     jmp     l_f2_17                 #  22:     goto   17
+-     call    WriteLn                 #  24:     call   WriteLn
++     call    WriteLn                 #  25:     call   WriteLn
+-     jmp     l_f2_12                 #  25:     goto   12
++     jmp     l_f2_12                 #  26:     goto   12
++ l_f2_14_if_false:

@@ -1,0 +1,30 @@
++     jmp     l_f2_5                  #  12:     goto   5
+-     jmp     l_f2_6_while_cond       #  13:     goto   6_while_cond
++     jmp     l_f2_6_while_cond       #  14:     goto   6_while_cond
++ l_f2_5:
+-     call    dummyINTfunc            #  14:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  16:     call   t6 <- dummyINTfunc
++     jmp     l_test_11               #  13:     goto   11
+-     jmp     l_test_9_if_true        #  13:     goto   9_if_true
++     jmp     l_test_9_if_true        #  14:     goto   9_if_true
++ l_test_11:
+-     jmp     l_test_8                #  15:     goto   8
++     jmp     l_test_8                #  17:     goto   8
+-     call    dummyBOOLfunc           #  17:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  19:     call   t1 <- dummyBOOLfunc
+-     movl    $18434, %eax            #  19:     param  3 <- 18434
++     movl    $18434, %eax            #  21:     param  3 <- 18434
+-     movl    $99, %eax               #  20:     param  2 <- 99
++     movl    $99, %eax               #  22:     param  2 <- 99
+-     leal    v1, %eax                #  21:     &()    t2 <- v1
++     leal    v1, %eax                #  23:     &()    t2 <- v1
+-     movl    -24(%ebp), %eax         #  22:     param  1 <- t2
++     movl    -24(%ebp), %eax         #  24:     param  1 <- t2
+-     leal    v0, %eax                #  23:     &()    t3 <- v0
++     leal    v0, %eax                #  25:     &()    t3 <- v0
+-     movl    -28(%ebp), %eax         #  24:     param  0 <- t3
++     movl    -28(%ebp), %eax         #  26:     param  0 <- t3
+-     call    f0                      #  25:     call   f0
++     call    f0                      #  27:     call   f0
+-     addl    $13, %esp              
++     addl    $16, %esp              

@@ -1,0 +1,14 @@
++     jmp     l_f0_10_if_false        #   8:     goto   10_if_false
+-     movl    $97, %eax               #   8:     assign v4 <- 97
++     movl    $97, %eax               #   9:     assign v4 <- 97
+-     jmp     l_f0_8                  #   9:     goto   8
++     jmp     l_f0_8                  #  10:     goto   8
++ l_f0_10_if_false:
+-     jmp     l_f1_3_while_body       #   2:     goto   3_while_body
++     jmp     l_f1_7                  #   2:     goto   7
++ l_f1_7:
++     jmp     l_f1_3_while_body       #   5:     goto   3_while_body
+-     jmp     l_f1_2_while_cond       #   5:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #   7:     goto   2_while_cond
+-     movl    $0, %eax                #   6:     assign v1 <- 0
++     movl    $0, %eax                #   8:     assign v1 <- 0

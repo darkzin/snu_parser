@@ -1,0 +1,33 @@
++     jmp     l_f2_7                  #   8:     goto   7
++     jmp     l_f2_7                  #   9:     goto   7
+-     movl    $100, %eax              #   8:     assign v0 <- 100
++     movl    $100, %eax              #  10:     assign v0 <- 100
+-     movl    $69633, %eax            #  10:     if     69633 > 27926 goto 14_while_body
++     movl    $69633, %eax            #  12:     if     69633 > 27926 goto 14_while_body
+-     jmp     l_f2_12                 #  11:     goto   12
++     jmp     l_f2_12                 #  13:     goto   12
+-     jmp     l_f2_13_while_cond      #  13:     goto   13_while_cond
++     jmp     l_f2_13_while_cond      #  15:     goto   13_while_cond
+-     movl    $98, %eax               #  15:     if     98 # 100 goto 17_if_true
++     movl    $98, %eax               #  17:     if     98 # 100 goto 17_if_true
+-     jmp     l_f2_18_if_false        #  16:     goto   18_if_false
++     jmp     l_f2_18_if_false        #  18:     goto   18_if_false
+-     jmp     l_f2_16                 #  18:     goto   16
++     jmp     l_f2_16                 #  20:     goto   16
+-     movl    $0, %eax                #  21:     assign v4 <- 0
++     movl    $0, %eax                #  23:     assign v4 <- 0
+-     jmp     l_f2_8_while_cond       #  22:     goto   8_while_cond
++     jmp     l_f2_8_while_cond       #  24:     goto   8_while_cond
++ l_f2_7:
+-     jmp     l_f2_23_if_false        #  23:     goto   23_if_false
++     jmp     l_f2_23_if_false        #  26:     goto   23_if_false
+-     movl    $66764, %eax            #  24:     if     66764 <= 23541 goto 25_if_true
++     movl    $66764, %eax            #  27:     if     66764 <= 23541 goto 25_if_true
+-     jmp     l_f2_26_if_false        #  25:     goto   26_if_false
++     jmp     l_f2_26_if_false        #  28:     goto   26_if_false
+-     jmp     l_f2_24                 #  27:     goto   24
++     jmp     l_f2_24                 #  30:     goto   24
+-     call    dummyBOOLfunc           #  30:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  33:     call   t6 <- dummyBOOLfunc
+-     jmp     l_f2_21                 #  32:     goto   21
++     jmp     l_f2_21                 #  35:     goto   21

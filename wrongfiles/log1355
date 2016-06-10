@@ -1,0 +1,14 @@
++     jmp     l_f1_11_if_false        #  14:     goto   11_if_false
+-     movl    $0, %eax                #  16:     if     0 = 0 goto 16_while_body
++     movl    $0, %eax                #  17:     if     0 = 0 goto 16_while_body
+-     jmp     l_f1_14                 #  17:     goto   14
++     jmp     l_f1_14                 #  18:     goto   14
+-     jmp     l_f1_15_while_cond      #  19:     goto   15_while_cond
++     jmp     l_f1_15_while_cond      #  20:     goto   15_while_cond
+-     jmp     l_f1_9                  #  21:     goto   9
++     jmp     l_f1_9                  #  22:     goto   9
++ l_f1_11_if_false:
+-     call    dummyINTfunc            #  23:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  25:     call   t6 <- dummyINTfunc
+-     addl    $9, %esp               
++     addl    $12, %esp              

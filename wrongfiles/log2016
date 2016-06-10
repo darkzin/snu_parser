@@ -1,0 +1,54 @@
++     jmp     l_f0_2                  #   1:     goto   2
++     jmp     l_f0_2                  #   2:     goto   2
+-     movl    $1, %eax                #   2:     assign t4 <- 1
++     movl    $1, %eax                #   4:     assign t4 <- 1
+-     jmp     l_f0_3                  #   3:     goto   3
++     jmp     l_f0_3                  #   5:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   4:     assign t4 <- 0
++     movl    $0, %eax                #   7:     assign t4 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     return t4
++     movzbl  -13(%ebp), %eax         #   9:     return t4
+-     movl    $30849, %eax            #   7:     assign v4 <- 30849
++     movl    $30849, %eax            #  10:     assign v4 <- 30849
+-     call    dummyCHARfunc           #   8:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #  11:     call   t5 <- dummyCHARfunc
+-     movzbl  -14(%ebp), %eax         #   9:     assign v1 <- t5
++     movzbl  -14(%ebp), %eax         #  12:     assign v1 <- t5
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_2_if_false       #   0:     goto   2_if_false
++     jmp     l_test_2_if_false       #   1:     goto   2_if_false
+-     movl    $98, %eax               #   0:     param  0 <- 98
++     movl    $98, %eax               #   2:     param  0 <- 98
+-     call    WriteChar               #   1:     call   WriteChar
++     call    WriteChar               #   3:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_test_10               #   3:     goto   10
++     jmp     l_test_10               #   5:     goto   10
+-     jmp     l_test_11_while_cond    #   4:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #   6:     goto   11_while_cond
+-     jmp     l_test_0                #   6:     goto   0
++     jmp     l_test_0                #   8:     goto   0
++ l_test_2_if_false:
+-     call    dummyINTfunc            #   9:     call   t0 <- dummyINTfunc
++     call    dummyINTfunc            #  12:     call   t0 <- dummyINTfunc
+-     call    dummyCHARfunc           #  11:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  14:     call   t1 <- dummyCHARfunc
+-     movzbl  -17(%ebp), %eax         #  12:     if     t1 # 98 goto 17
++     movzbl  -17(%ebp), %eax         #  15:     if     t1 # 98 goto 17
+-     jmp     l_test_18               #  13:     goto   18
++     jmp     l_test_18               #  16:     goto   18
+-     movl    $1, %eax                #  15:     assign t2 <- 1
++     movl    $1, %eax                #  18:     assign t2 <- 1
+-     jmp     l_test_19               #  16:     goto   19
++     jmp     l_test_19               #  19:     goto   19
+-     movl    $0, %eax                #  18:     assign t2 <- 0
++     movl    $0, %eax                #  21:     assign t2 <- 0
+-     movzbl  -18(%ebp), %eax         #  20:     assign v0 <- t2
++     movzbl  -18(%ebp), %eax         #  23:     assign v0 <- t2
+-     call    dummyCHARfunc           #  21:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  24:     call   t3 <- dummyCHARfunc
+-     movzbl  -19(%ebp), %eax         #  22:     assign v1 <- t3
++     movzbl  -19(%ebp), %eax         #  25:     assign v1 <- t3

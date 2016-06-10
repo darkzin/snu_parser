@@ -1,0 +1,28 @@
++     jmp     l_f2_2                  #   1:     goto   2
+-     movl    $1, %eax                #   2:     assign t4 <- 1
++     movl    $1, %eax                #   3:     assign t4 <- 1
+-     jmp     l_f2_3                  #   3:     goto   3
++     jmp     l_f2_3                  #   4:     goto   3
++ l_f2_2:
+-     movl    $0, %eax                #   4:     assign t4 <- 0
++     movl    $0, %eax                #   6:     assign t4 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     return t4
++     movzbl  -13(%ebp), %eax         #   8:     return t4
+-     call    dummyBOOLfunc           #   7:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   9:     call   t5 <- dummyBOOLfunc
+-     movzbl  -14(%ebp), %eax         #   8:     return t5
++     movzbl  -14(%ebp), %eax         #  10:     return t5
+-     jmp     l_f2_10_if_false        #   9:     goto   10_if_false
++     jmp     l_f2_10_if_false        #  11:     goto   10_if_false
+-     call    WriteLn                 #  10:     call   WriteLn
++     call    WriteLn                 #  12:     call   WriteLn
+-     jmp     l_f2_8                  #  11:     goto   8
++     jmp     l_f2_8                  #  13:     goto   8
+-     jmp     l_test_3                #   1:     goto   3
++     jmp     l_test_4                #   1:     goto   4
+- l_test_3:
++ l_test_4:
+-     jmp     l_test_5                #   4:     goto   5
++     jmp     l_test_6                #   4:     goto   6
+- l_test_5:
++ l_test_6:

@@ -1,0 +1,4 @@
+-     jmp     l_test_27               #  36:     goto   27
++     jmp     l_test_28               #  36:     goto   28
+- l_test_27:
++ l_test_28:

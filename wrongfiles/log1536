@@ -1,0 +1,42 @@
++     jmp     l_test_2_if_false       #   0:     goto   2_if_false
+-     jmp     l_test_5_while_cond     #   1:     goto   5_while_cond
++     jmp     l_test_5_while_cond     #   2:     goto   5_while_cond
+-     jmp     l_test_0                #   2:     goto   0
++     jmp     l_test_0                #   3:     goto   0
++ l_test_2_if_false:
+-     call    dummyCHARfunc           #   5:     call   t0 <- dummyCHARfunc
++     call    dummyCHARfunc           #   7:     call   t0 <- dummyCHARfunc
+-     movl    $100, %eax              #   6:     if     100 >= t0 goto 9_while_body
++     movl    $100, %eax              #   8:     if     100 >= t0 goto 9_while_body
+-     jmp     l_test_7                #   7:     goto   7
++     jmp     l_test_7                #   9:     goto   7
+-     jmp     l_test_8_while_cond     #   9:     goto   8_while_cond
++     jmp     l_test_8_while_cond     #  11:     goto   8_while_cond
+-     movl    $100, %eax              #  11:     assign v0 <- 100
++     movl    $100, %eax              #  13:     assign v0 <- 100
+-     movl    $100, %eax              #  12:     if     100 = 98 goto 13_if_true
++     movl    $100, %eax              #  14:     if     100 = 98 goto 13_if_true
+-     jmp     l_test_14_if_false      #  13:     goto   14_if_false
++     jmp     l_test_14_if_false      #  15:     goto   14_if_false
+-     call    ReadInt                 #  15:     call   t1 <- ReadInt
++     call    ReadInt                 #  17:     call   t1 <- ReadInt
+-     movl    $0, %eax                #  16:     if     0 # 0 goto 18_if_true
++     movl    $0, %eax                #  18:     if     0 # 0 goto 18_if_true
+-     jmp     l_test_19_if_false      #  17:     goto   19_if_false
++     jmp     l_test_19_if_false      #  19:     goto   19_if_false
+-     movl    $100, %eax              #  19:     assign v0 <- 100
++     movl    $100, %eax              #  21:     assign v0 <- 100
+-     jmp     l_test_17               #  20:     goto   17
++     jmp     l_test_17               #  22:     goto   17
+-     jmp     l_test_12               #  23:     goto   12
++     jmp     l_test_12               #  25:     goto   12
+-     leal    v1, %eax                #  26:     &()    t2 <- v1
++     leal    v1, %eax                #  28:     &()    t2 <- v1
+-     movl    -24(%ebp), %eax         #  27:     param  1 <- t2
++     movl    -24(%ebp), %eax         #  29:     param  1 <- t2
+-     movl    $100, %eax              #  28:     param  0 <- 100
++     movl    $100, %eax              #  30:     param  0 <- 100
+-     call    f0                      #  29:     call   t3 <- f0
++     call    f0                      #  31:     call   t3 <- f0
+-     addl    $5, %esp               
++     addl    $8, %esp               

@@ -1,0 +1,47 @@
++     jmp     l_test_8                #   6:     goto   8
++     jmp     l_test_8                #   7:     goto   8
+-     jmp     l_test_9_while_cond     #   6:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #   8:     goto   9_while_cond
++ l_test_8:
+-     jmp     l_test_1                #   7:     goto   1
++     jmp     l_test_1                #  10:     goto   1
+-     movl    $0, %eax                #   9:     if     0 # 0 goto 14_if_true
++     movl    $0, %eax                #  12:     if     0 # 0 goto 14_if_true
+-     jmp     l_test_15_if_false      #  10:     goto   15_if_false
++     jmp     l_test_15_if_false      #  13:     goto   15_if_false
+-     movl    $47319, %eax            #  12:     if     47319 > 91453 goto 18_if_true
++     movl    $47319, %eax            #  15:     if     47319 > 91453 goto 18_if_true
+-     jmp     l_test_19_if_false      #  13:     goto   19_if_false
++     jmp     l_test_19_if_false      #  16:     goto   19_if_false
+-     jmp     l_test_17               #  15:     goto   17
++     jmp     l_test_17               #  18:     goto   17
+-     jmp     l_test_21               #  19:     goto   21
++     jmp     l_test_21               #  22:     goto   21
+-     jmp     l_test_22_while_cond    #  20:     goto   22_while_cond
++     jmp     l_test_22_while_cond    #  23:     goto   22_while_cond
+-     leal    v1, %eax                #  22:     &()    t1 <- v1
++     leal    v1, %eax                #  25:     &()    t1 <- v1
+-     movl    -20(%ebp), %eax         #  23:     param  0 <- t1
++     movl    -20(%ebp), %eax         #  26:     param  0 <- t1
+-     call    f1                      #  24:     call   t2 <- f1
++     call    f1                      #  27:     call   t2 <- f1
+-     jmp     l_test_13               #  26:     goto   13
++     jmp     l_test_13               #  29:     goto   13
+-     leal    v2, %eax                #  29:     &()    t3 <- v2
++     leal    v2, %eax                #  32:     &()    t3 <- v2
+-     movl    -28(%ebp), %eax         #  30:     param  0 <- t3
++     movl    -28(%ebp), %eax         #  33:     param  0 <- t3
+-     call    f0                      #  31:     call   t4 <- f0
++     call    f0                      #  34:     call   t4 <- f0
+-     movl    $32055, %eax            #  32:     if     32055 = 22709 goto 28_if_true
++     movl    $32055, %eax            #  35:     if     32055 = 22709 goto 28_if_true
+-     jmp     l_test_29_if_false      #  33:     goto   29_if_false
++     jmp     l_test_29_if_false      #  36:     goto   29_if_false
+-     movl    $97, %eax               #  35:     if     97 <= 100 goto 32_if_true
++     movl    $97, %eax               #  38:     if     97 <= 100 goto 32_if_true
+-     jmp     l_test_33_if_false      #  36:     goto   33_if_false
++     jmp     l_test_33_if_false      #  39:     goto   33_if_false
+-     jmp     l_test_31               #  39:     goto   31
++     jmp     l_test_31               #  42:     goto   31
+-     jmp     l_test_27               #  42:     goto   27
++     jmp     l_test_27               #  45:     goto   27

@@ -1,0 +1,10 @@
++     jmp     l_test_9                #   8:     goto   9
+-     jmp     l_test_8_while_body     #   8:     goto   8_while_body
++     jmp     l_test_8_while_body     #   9:     goto   8_while_body
++ l_test_9:
++     jmp     l_test_6                #  11:     goto   6
+-     jmp     l_test_7_while_cond     #  10:     goto   7_while_cond
++     jmp     l_test_7_while_cond     #  13:     goto   7_while_cond
++ l_test_6:
+-     call    dummyCHARfunc           #  13:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  17:     call   t2 <- dummyCHARfunc

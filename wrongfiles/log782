@@ -1,0 +1,50 @@
++     jmp     l_f0_13                 #  13:     goto   13
+-     movl    $49741, %eax            #  14:     if     49741 >= 63796 goto 19
++     movl    $49741, %eax            #  15:     if     49741 >= 63796 goto 19
+-     jmp     l_f0_20                 #  15:     goto   20
++     jmp     l_f0_20                 #  16:     goto   20
+-     movl    $1, %eax                #  17:     assign t2 <- 1
++     movl    $1, %eax                #  18:     assign t2 <- 1
+-     jmp     l_f0_21                 #  18:     goto   21
++     jmp     l_f0_21                 #  19:     goto   21
+-     movl    $0, %eax                #  20:     assign t2 <- 0
++     movl    $0, %eax                #  21:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #  22:     return t2
++     movzbl  -13(%ebp), %eax         #  23:     return t2
+-     jmp     l_f0_23                 #  24:     goto   23
++     jmp     l_f0_23                 #  25:     goto   23
+-     jmp     l_f0_24_while_cond      #  25:     goto   24_while_cond
++     jmp     l_f0_24_while_cond      #  26:     goto   24_while_cond
+-     movl    $98, %eax               #  27:     if     98 < 100 goto 27
++     movl    $98, %eax               #  28:     if     98 < 100 goto 27
+-     jmp     l_f0_28                 #  28:     goto   28
++     jmp     l_f0_28                 #  29:     goto   28
+-     movl    $1, %eax                #  30:     assign t3 <- 1
++     movl    $1, %eax                #  31:     assign t3 <- 1
+-     jmp     l_f0_29                 #  31:     goto   29
++     jmp     l_f0_29                 #  32:     goto   29
+-     movl    $0, %eax                #  33:     assign t3 <- 0
++     movl    $0, %eax                #  34:     assign t3 <- 0
+-     movzbl  -14(%ebp), %eax         #  35:     return t3
++     movzbl  -14(%ebp), %eax         #  36:     return t3
+-     jmp     l_f0_31                 #  36:     goto   31
++     jmp     l_f0_31                 #  37:     goto   31
+-     call    ReadInt                 #  38:     call   t4 <- ReadInt
++     call    ReadInt                 #  39:     call   t4 <- ReadInt
+-     movl    $0, %eax                #  39:     return 0
++     movl    $0, %eax                #  40:     return 0
+-     movl    $97, %eax               #  40:     if     97 < 100 goto 37_if_true
++     movl    $97, %eax               #  41:     if     97 < 100 goto 37_if_true
+-     jmp     l_f0_38_if_false        #  41:     goto   38_if_false
++     jmp     l_f0_38_if_false        #  42:     goto   38_if_false
+-     jmp     l_f0_36                 #  43:     goto   36
++     jmp     l_f0_36                 #  44:     goto   36
+-     call    ReadInt                 #  46:     call   t5 <- ReadInt
++     call    ReadInt                 #  47:     call   t5 <- ReadInt
+-     jmp     l_f0_14_while_cond      #  47:     goto   14_while_cond
++     jmp     l_f0_14_while_cond      #  48:     goto   14_while_cond
++ l_f0_13:
+-     #   -192(%ebp) 168  [ $v1       <array 2 of <array 6 of <array 6 of <array 2 of <array 1 of <char>>>>>> %ebp-192 ]
++     #   -192(%ebp)  168  [ $v1       <array 2 of <array 6 of <array 6 of <array 2 of <array 1 of <char>>>>>> %ebp-192 ]
+-     addl    $10, %esp              
++     addl    $16, %esp              

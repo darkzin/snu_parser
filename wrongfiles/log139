@@ -1,0 +1,37 @@
++     jmp     l_f2_9                  #  10:     goto   9
++     jmp     l_f2_9                  #  11:     goto   9
+-     movl    $1, %eax                #  10:     assign t3 <- 1
++     movl    $1, %eax                #  12:     assign t3 <- 1
+-     jmp     l_f2_9                  #  11:     goto   9
++     jmp     l_f2_10                 #  13:     goto   10
++ l_f2_9:
+-     movl    $0, %eax                #  12:     assign t3 <- 0
++     movl    $0, %eax                #  15:     assign t3 <- 0
+- l_f2_9:
++ l_f2_10:
+-     movzbl  -25(%ebp), %eax         #  14:     if     t3 # 0 goto 6_while_body
++     movzbl  -25(%ebp), %eax         #  17:     if     t3 # 0 goto 6_while_body
+-     jmp     l_f2_4                  #  15:     goto   4
++     jmp     l_f2_4                  #  18:     goto   4
+-     call    dummyProcedure          #  17:     call   dummyProcedure
++     call    dummyProcedure          #  20:     call   dummyProcedure
+-     jmp     l_f2_5_while_cond       #  18:     goto   5_while_cond
++     jmp     l_f2_5_while_cond       #  21:     goto   5_while_cond
+-     movl    $100, %eax              #  20:     assign v1 <- 100
++     movl    $100, %eax              #  23:     assign v1 <- 100
++     jmp     l_test_10_if_false      #  11:     goto   10_if_false
++     jmp     l_test_10_if_false      #  12:     goto   10_if_false
++     jmp     l_test_10_if_false      #  13:     goto   10_if_false
++     jmp     l_test_10_if_false      #  14:     goto   10_if_false
++     jmp     l_test_10_if_false      #  15:     goto   10_if_false
++     jmp     l_test_10_if_false      #  16:     goto   10_if_false
++     jmp     l_test_10_if_false      #  17:     goto   10_if_false
+-     jmp     l_test_8                #  11:     goto   8
++     jmp     l_test_8                #  18:     goto   8
++ l_test_10_if_false:
++     jmp     l_test_20               #  22:     goto   20
+-     movl    $25257, %eax            #  14:     assign v1 <- 25257
++     movl    $25257, %eax            #  23:     assign v1 <- 25257
+-     jmp     l_test_21_while_cond    #  15:     goto   21_while_cond
++     jmp     l_test_21_while_cond    #  24:     goto   21_while_cond
++ l_test_20:

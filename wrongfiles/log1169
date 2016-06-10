@@ -1,0 +1,52 @@
+-     #-803046940(%ebp)803046840  [ $v5       <array 74 of <array 51 of <array 39 of <array 62 of <array 88 of <bool>>>>>> %ebp-803046940 ]
++     #   -803046940(%ebp)  803046840  [ $v5       <array 74 of <array 51 of <array 39 of <array 62 of <array 88 of <bool>>>>>> %ebp-803046940 ]
+-     #-1419064964(%ebp)616018024  [ $v6       <array 38 of <array 58 of <array 65 of <array 100 of <array 43 of <char>>>>>> %ebp-1419064964 ]
++     #   -1419064964(%ebp)  616018024  [ $v6       <array 38 of <array 58 of <array 65 of <array 100 of <array 43 of <char>>>>>> %ebp-1419064964 ]
+-     addl    $10, %esp              
++     addl    $16, %esp              
++     jmp     l_test_12               #  13:     goto   12
+-     movl    $1, %eax                #  13:     assign t1 <- 1
++     movl    $1, %eax                #  14:     assign t1 <- 1
+-     jmp     l_test_13               #  14:     goto   13
++     jmp     l_test_13               #  15:     goto   13
++ l_test_12:
+-     movl    $0, %eax                #  15:     assign t1 <- 0
++     movl    $0, %eax                #  17:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #  17:     assign v0 <- t1
++     movzbl  -14(%ebp), %eax         #  19:     assign v0 <- t1
+-     movl    $69815, %eax            #  18:     add    t2 <- 69815, 62302
++     movl    $69815, %eax            #  20:     add    t2 <- 69815, 62302
+-     movl    -20(%ebp), %eax         #  19:     sub    t3 <- t2, 92551
++     movl    -20(%ebp), %eax         #  21:     sub    t3 <- t2, 92551
+-     movl    -24(%ebp), %eax         #  20:     param  0 <- t3
++     movl    -24(%ebp), %eax         #  22:     param  0 <- t3
+-     call    WriteInt                #  21:     call   WriteInt
++     call    WriteInt                #  23:     call   WriteInt
+-     movl    $63599, %eax            #  22:     if     63599 >= 98531 goto 18_if_true
++     movl    $63599, %eax            #  24:     if     63599 >= 98531 goto 18_if_true
+-     jmp     l_test_19_if_false      #  23:     goto   19_if_false
++     jmp     l_test_19_if_false      #  25:     goto   19_if_false
+-     call    dummyCHARfunc           #  25:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  27:     call   t4 <- dummyCHARfunc
+-     movl    $1, %eax                #  27:     if     1 = 0 goto 24_while_body
++     movl    $1, %eax                #  29:     if     1 = 0 goto 24_while_body
+-     jmp     l_test_22               #  28:     goto   22
++     jmp     l_test_22               #  30:     goto   22
+-     jmp     l_test_23_while_cond    #  30:     goto   23_while_cond
++     jmp     l_test_23_while_cond    #  32:     goto   23_while_cond
+-     jmp     l_test_17               #  32:     goto   17
++     jmp     l_test_17               #  34:     goto   17
+-     jmp     l_test_32               #  37:     goto   32
++     jmp     l_test_32               #  39:     goto   32
+-     jmp     l_test_33_while_cond    #  38:     goto   33_while_cond
++     jmp     l_test_33_while_cond    #  40:     goto   33_while_cond
+-     jmp     l_test_35               #  40:     goto   35
++     jmp     l_test_35               #  42:     goto   35
+-     call    dummyCHARfunc           #  42:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #  44:     call   t5 <- dummyCHARfunc
+-     movl    $100, %eax              #  43:     assign v1 <- 100
++     movl    $100, %eax              #  45:     assign v1 <- 100
+-     jmp     l_test_29               #  44:     goto   29
++     jmp     l_test_29               #  46:     goto   29
+-     jmp     l_test_27_while_cond    #  46:     goto   27_while_cond
++     jmp     l_test_27_while_cond    #  48:     goto   27_while_cond

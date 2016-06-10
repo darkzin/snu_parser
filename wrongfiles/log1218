@@ -1,0 +1,106 @@
++     jmp     l_f0_2                  #   0:     goto   2
+-     movl    $1, %eax                #   0:     assign t3 <- 1
++     movl    $1, %eax                #   1:     assign t3 <- 1
+-     jmp     l_f0_3                  #   1:     goto   3
++     jmp     l_f0_3                  #   2:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   2:     assign t3 <- 0
++     movl    $0, %eax                #   4:     assign t3 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     return t3
++     movzbl  -13(%ebp), %eax         #   6:     return t3
+-     movl    $55010, %eax            #   5:     add    t4 <- 55010, 60915
++     movl    $55010, %eax            #   7:     add    t4 <- 55010, 60915
+-     movl    -20(%ebp), %eax         #   6:     assign v4 <- t4
++     movl    -20(%ebp), %eax         #   8:     assign v4 <- t4
+-     jmp     l_f0_12                 #   7:     goto   12
++     jmp     l_f0_13                 #   9:     goto   13
+- l_f0_12:
++ l_f0_13:
+-     movl    $1, %eax                #   9:     assign t5 <- 1
++     movl    $1, %eax                #  11:     assign t5 <- 1
+-     jmp     l_f0_14                 #  10:     goto   14
++     jmp     l_f0_15                 #  12:     goto   15
+-     movl    $0, %eax                #  11:     assign t5 <- 0
++     movl    $0, %eax                #  13:     assign t5 <- 0
+- l_f0_14:
++ l_f0_15:
++     jmp     l_f0_18                 #  15:     goto   18
+-     movl    $1, %eax                #  13:     assign t6 <- 1
++     movl    $1, %eax                #  16:     assign t6 <- 1
+-     jmp     l_f0_18                 #  14:     goto   18
++     jmp     l_f0_19                 #  17:     goto   19
++ l_f0_18:
+-     movl    $0, %eax                #  15:     assign t6 <- 0
++     movl    $0, %eax                #  19:     assign t6 <- 0
+- l_f0_18:
++ l_f0_19:
+-     movzbl  -21(%ebp), %eax         #  17:     if     t5 = t6 goto 9
++     movzbl  -21(%ebp), %eax         #  21:     if     t5 = t6 goto 9
+-     jmp     l_f0_10                 #  18:     goto   10
++     jmp     l_f0_10                 #  22:     goto   10
+-     movl    $1, %eax                #  20:     assign t7 <- 1
++     movl    $1, %eax                #  24:     assign t7 <- 1
+-     jmp     l_f0_11                 #  21:     goto   11
++     jmp     l_f0_11                 #  25:     goto   11
+-     movl    $0, %eax                #  23:     assign t7 <- 0
++     movl    $0, %eax                #  27:     assign t7 <- 0
+-     movzbl  -23(%ebp), %eax         #  25:     return t7
++     movzbl  -23(%ebp), %eax         #  29:     return t7
+-     #-135717172(%ebp)135717144  [ $v1       <array 68 of <array 84 of <array 36 of <array 30 of <array 22 of <char>>>>>> %ebp-135717172 ]
++     #   -135717172(%ebp)  135717144  [ $v1       <array 68 of <array 84 of <array 36 of <array 30 of <array 22 of <char>>>>>> %ebp-135717172 ]
+-     #-307701580(%ebp)171984408  [ $v2       <array 26 of <array 24 of <array 87 of <array 96 of <array 33 of <bool>>>>>> %ebp-307701580 ]
++     #   -307701580(%ebp)  171984408  [ $v2       <array 26 of <array 24 of <array 87 of <array 96 of <array 33 of <bool>>>>>> %ebp-307701580 ]
+-     addl    $10, %esp              
++     addl    $16, %esp              
+-     #-1401079724(%ebp)1401079704  [ $v0       <array 72 of <array 99 of <array 90 of <array 91 of <array 6 of <int>>>>>> %ebp-1401079724 ]
++     #   -1401079724(%ebp)  1401079704  [ $v0       <array 72 of <array 99 of <array 90 of <array 91 of <array 6 of <int>>>>>> %ebp-1401079724 ]
+-     #-1401079725(%ebp)   1  [ $v1       <bool> %ebp-1401079725 ]
++     #   -1401079725(%ebp)   1  [ $v1       <bool> %ebp-1401079725 ]
+-     #-1401079726(%ebp)   1  [ $v2       <char> %ebp-1401079726 ]
++     #   -1401079726(%ebp)   1  [ $v2       <char> %ebp-1401079726 ]
+-     movzbl  -18(%ebp), %eax         #   5:     if     t5 = 1 goto 5
++     movzbl  -18(%ebp), %eax         #   5:     if     t5 = 1 goto 6
+-     je      l_f2_5                 
++     je      l_f2_6                 
+-     jmp     l_f2_5                  #   6:     goto   5
++     jmp     l_f2_6                  #   6:     goto   6
+-     jmp     l_f2_5                  #   7:     goto   5
++     jmp     l_f2_6                  #   7:     goto   6
++     jmp     l_f2_7                  #   8:     goto   7
+- l_f2_5:
++ l_f2_6:
+-     movl    $1, %eax                #   9:     assign t6 <- 1
++     movl    $1, %eax                #  10:     assign t6 <- 1
+-     jmp     l_f2_7                  #  10:     goto   7
++     jmp     l_f2_8                  #  11:     goto   8
++ l_f2_7:
+-     movl    $0, %eax                #  11:     assign t6 <- 0
++     movl    $0, %eax                #  13:     assign t6 <- 0
+- l_f2_7:
++ l_f2_8:
+-     movzbl  -19(%ebp), %eax         #  13:     if     t6 # 1 goto 2
++     movzbl  -19(%ebp), %eax         #  15:     if     t6 # 1 goto 2
+-     jmp     l_f2_3                  #  14:     goto   3
++     jmp     l_f2_3                  #  16:     goto   3
+-     movl    $1, %eax                #  16:     assign t7 <- 1
++     movl    $1, %eax                #  18:     assign t7 <- 1
+-     jmp     l_f2_4                  #  17:     goto   4
++     jmp     l_f2_4                  #  19:     goto   4
+-     movl    $0, %eax                #  19:     assign t7 <- 0
++     movl    $0, %eax                #  21:     assign t7 <- 0
+-     movzbl  -20(%ebp), %eax         #  21:     assign v1 <- t7
++     movzbl  -20(%ebp), %eax         #  23:     assign v1 <- t7
+-     movl    $100, %eax              #  22:     if     100 < 98 goto 13_if_true
++     movl    $100, %eax              #  24:     if     100 < 98 goto 13_if_true
+-     jmp     l_f2_14_if_false        #  23:     goto   14_if_false
++     jmp     l_f2_14_if_false        #  25:     goto   14_if_false
+-     movl    $98, %eax               #  25:     assign v2 <- 98
++     movl    $98, %eax               #  27:     assign v2 <- 98
+-     movl    $81226, %eax            #  27:     if     81226 <= 99206 goto 19_while_body
++     movl    $81226, %eax            #  29:     if     81226 <= 99206 goto 19_while_body
+-     jmp     l_f2_17                 #  28:     goto   17
++     jmp     l_f2_17                 #  30:     goto   17
+-     jmp     l_f2_18_while_cond      #  30:     goto   18_while_cond
++     jmp     l_f2_18_while_cond      #  32:     goto   18_while_cond
+-     jmp     l_f2_12                 #  32:     goto   12
++     jmp     l_f2_12                 #  34:     goto   12

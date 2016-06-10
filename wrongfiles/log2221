@@ -1,0 +1,13 @@
++     jmp     l_f1_4_if_false         #   2:     goto   4_if_false
++     jmp     l_f1_4_if_false         #   3:     goto   4_if_false
+-     movl    $100, %eax              #   2:     if     100 < 99 goto 8_if_true
++     movl    $100, %eax              #   4:     if     100 < 99 goto 8_if_true
+-     jmp     l_f1_9_if_false         #   3:     goto   9_if_false
++     jmp     l_f1_9_if_false         #   5:     goto   9_if_false
+-     jmp     l_f1_7                  #   5:     goto   7
++     jmp     l_f1_7                  #   7:     goto   7
+-     call    dummyBOOLfunc           #   8:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  10:     call   t3 <- dummyBOOLfunc
+-     jmp     l_f1_2                  #   9:     goto   2
++     jmp     l_f1_2                  #  11:     goto   2
++ l_f1_4_if_false:

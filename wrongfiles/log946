@@ -1,0 +1,43 @@
++     jmp     l_f1_10                 #  16:     goto   10
+-     movl    $1, %eax                #  16:     assign t2 <- 1
++     movl    $1, %eax                #  17:     assign t2 <- 1
+-     jmp     l_f1_11                 #  17:     goto   11
++     jmp     l_f1_11                 #  18:     goto   11
+-     movl    $0, %eax                #  19:     assign t2 <- 0
++     movl    $0, %eax                #  20:     assign t2 <- 0
+-     movzbl  -18(%ebp), %eax         #  21:     return t2
++     movzbl  -18(%ebp), %eax         #  22:     return t2
+-     #  -1156(%ebp)1104  [ $v4       <array 6 of <array 2 of <array 5 of <array 2 of <array 9 of <bool>>>>>> %ebp-1156 ]
++     #   -1156(%ebp)  1104  [ $v4       <array 6 of <array 2 of <array 5 of <array 2 of <array 9 of <bool>>>>>> %ebp-1156 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              
++     jmp     l_f2_11                 #  22:     goto   11
+-     movl    $1, %eax                #  22:     assign t10 <- 1
++     movl    $1, %eax                #  23:     assign t10 <- 1
+-     jmp     l_f2_11                 #  23:     goto   11
++     jmp     l_f2_12                 #  24:     goto   12
++ l_f2_11:
+-     movl    $0, %eax                #  24:     assign t10 <- 0
++     movl    $0, %eax                #  26:     assign t10 <- 0
+- l_f2_11:
++ l_f2_12:
+-     movl    $1, %eax                #  26:     if     1 = t10 goto 8_while_body
++     movl    $1, %eax                #  28:     if     1 = t10 goto 8_while_body
+-     jmp     l_f2_6                  #  27:     goto   6
++     jmp     l_f2_6                  #  29:     goto   6
+-     jmp     l_f2_7_while_cond       #  29:     goto   7_while_cond
++     jmp     l_f2_7_while_cond       #  31:     goto   7_while_cond
++     jmp     l_test_3_if_false       #   2:     goto   3_if_false
+-     jmp     l_test_1                #   5:     goto   1
++     jmp     l_test_1                #   6:     goto   1
++ l_test_3_if_false:
+-     movl    $0, %eax                #   8:     if     0 = 0 goto 9_while_body
++     movl    $0, %eax                #  10:     if     0 = 0 goto 9_while_body
+-     jmp     l_test_7                #   9:     goto   7
++     jmp     l_test_7                #  11:     goto   7
+-     jmp     l_test_12               #  13:     goto   12
++     jmp     l_test_12               #  15:     goto   12
+-     jmp     l_test_13_while_cond    #  14:     goto   13_while_cond
++     jmp     l_test_13_while_cond    #  16:     goto   13_while_cond
+-     jmp     l_test_8_while_cond     #  17:     goto   8_while_cond
++     jmp     l_test_8_while_cond     #  19:     goto   8_while_cond

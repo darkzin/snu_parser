@@ -1,0 +1,20 @@
++     jmp     l_f0_9                  #  21:     goto   9
+-     jmp     l_f0_10_while_cond      #  22:     goto   10_while_cond
++     jmp     l_f0_10_while_cond      #  23:     goto   10_while_cond
++ l_f0_9:
+-     jmp     l_f0_15                 #  24:     goto   15
++     jmp     l_f0_15                 #  26:     goto   15
+-     jmp     l_f0_18                 #  26:     goto   18
++     jmp     l_f0_18                 #  28:     goto   18
+-     jmp     l_f0_23_if_false        #  27:     goto   23_if_false
++     jmp     l_f0_23_if_false        #  29:     goto   23_if_false
+-     jmp     l_f0_21                 #  28:     goto   21
++     jmp     l_f0_21                 #  30:     goto   21
+-     jmp     l_f0_19_while_cond      #  31:     goto   19_while_cond
++     jmp     l_f0_19_while_cond      #  33:     goto   19_while_cond
+-     jmp     l_f0_16_while_cond      #  33:     goto   16_while_cond
++     jmp     l_f0_16_while_cond      #  35:     goto   16_while_cond
++     jmp     l_f1_20                 #  32:     goto   20
+-     jmp     l_f1_21_while_cond      #  33:     goto   21_while_cond
++     jmp     l_f1_21_while_cond      #  34:     goto   21_while_cond
++ l_f1_20:

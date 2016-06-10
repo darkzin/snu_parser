@@ -1,0 +1,29 @@
++     jmp     l_f1_0                  #   1:     goto   0
+-     movl    $98, %eax               #   1:     if     98 > 100 goto 2_while_body
++     movl    $98, %eax               #   2:     if     98 > 100 goto 2_while_body
+-     jmp     l_f1_0                  #   2:     goto   0
++     jmp     l_f1_0                  #   3:     goto   0
+-     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   5:     goto   1_while_cond
+-     call    ReadInt                 #   6:     call   t1 <- ReadInt
++     call    ReadInt                 #   7:     call   t1 <- ReadInt
+-     call    WriteLn                 #   7:     call   WriteLn
++     call    WriteLn                 #   8:     call   WriteLn
++     jmp     l_test_0                #   2:     goto   0
++     jmp     l_test_0                #   3:     goto   0
++     jmp     l_test_0                #   4:     goto   0
++     jmp     l_test_0                #   5:     goto   0
++     jmp     l_test_0                #   6:     goto   0
+-     jmp     l_test_1_while_cond     #   3:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   8:     goto   1_while_cond
++ l_test_0:
+-     jmp     l_test_11               #   5:     goto   11
++     jmp     l_test_11               #  11:     goto   11
+-     movl    $1, %eax                #   7:     assign t0 <- 1
++     movl    $1, %eax                #  13:     assign t0 <- 1
+-     jmp     l_test_13               #   8:     goto   13
++     jmp     l_test_13               #  14:     goto   13
+-     movl    $0, %eax                #   9:     assign t0 <- 0
++     movl    $0, %eax                #  15:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #  11:     assign v0 <- t0
++     movzbl  -13(%ebp), %eax         #  17:     assign v0 <- t0

@@ -1,0 +1,16 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_0                #   1:     goto   0
+-     jmp     l_test_1_while_cond     #   1:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   2:     goto   1_while_cond
++ l_test_0:
+-     call    dummyCHARfunc           #   3:     call   t0 <- dummyCHARfunc
++     call    dummyCHARfunc           #   5:     call   t0 <- dummyCHARfunc
+-     movzbl  -13(%ebp), %eax         #   4:     param  0 <- t0
++     movzbl  -13(%ebp), %eax         #   6:     param  0 <- t0
+-     call    WriteChar               #   5:     call   WriteChar
++     call    WriteChar               #   7:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               

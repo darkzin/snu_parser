@@ -1,0 +1,33 @@
++     jmp     l_f0_2                  #   0:     goto   2
+-     movl    $1, %eax                #   0:     assign t7 <- 1
++     movl    $1, %eax                #   1:     assign t7 <- 1
+-     jmp     l_f0_3                  #   1:     goto   3
++     jmp     l_f0_3                  #   2:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   2:     assign t7 <- 0
++     movl    $0, %eax                #   4:     assign t7 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v1 <- t7
++     movzbl  -13(%ebp), %eax         #   6:     assign v1 <- t7
+-     call    dummyCHARfunc           #   5:     call   t8 <- dummyCHARfunc
++     call    dummyCHARfunc           #   7:     call   t8 <- dummyCHARfunc
+-     call    dummyCHARfunc           #   6:     call   t9 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t9 <- dummyCHARfunc
+-     movzbl  -15(%ebp), %eax         #   7:     return t9
++     movzbl  -15(%ebp), %eax         #   9:     return t9
+-     #   -736(%ebp) 624  [ $v5       <array 2 of <array 2 of <array 5 of <array 6 of <array 5 of <char>>>>>> %ebp-736 ]
++     #   -736(%ebp)  624  [ $v5       <array 2 of <array 2 of <array 5 of <array 6 of <array 5 of <char>>>>>> %ebp-736 ]
++     jmp     l_f1_11                 #  52:     goto   11
++     jmp     l_f1_11                 #  53:     goto   11
+-     movl    $1, %eax                #  52:     assign t32 <- 1
++     movl    $1, %eax                #  54:     assign t32 <- 1
+-     jmp     l_f1_12                 #  53:     goto   12
++     jmp     l_f1_12                 #  55:     goto   12
++ l_f1_11:
+-     movl    $0, %eax                #  54:     assign t32 <- 0
++     movl    $0, %eax                #  57:     assign t32 <- 0
+-     movzbl  -98(%ebp), %eax         #  56:     param  0 <- t32
++     movzbl  -98(%ebp), %eax         #  59:     param  0 <- t32
+-     call    f0                      #  57:     call   t33 <- f0
++     call    f0                      #  60:     call   t33 <- f0
+-     addl    $7, %esp               
++     addl    $16, %esp              

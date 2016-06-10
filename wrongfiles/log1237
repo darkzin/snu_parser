@@ -1,0 +1,18 @@
++     jmp     l_f0_6_if_false         #   8:     goto   6_if_false
+-     movl    $42996, %eax            #   9:     assign v2 <- 42996
++     movl    $42996, %eax            #  10:     assign v2 <- 42996
+-     jmp     l_f0_4                  #  10:     goto   4
++     jmp     l_f0_4                  #  11:     goto   4
++ l_f0_6_if_false:
+-     movl    $99, %eax               #  12:     assign v3 <- 99
++     movl    $99, %eax               #  14:     assign v3 <- 99
++     jmp     l_f1_11                 #  14:     goto   11
+-     movl    $1, %eax                #  14:     assign t3 <- 1
++     movl    $1, %eax                #  15:     assign t3 <- 1
+-     jmp     l_f1_12                 #  15:     goto   12
++     jmp     l_f1_12                 #  16:     goto   12
++ l_f1_11:
+-     movl    $0, %eax                #  16:     assign t3 <- 0
++     movl    $0, %eax                #  18:     assign t3 <- 0
+-     movzbl  -21(%ebp), %eax         #  18:     assign v0 <- t3
++     movzbl  -21(%ebp), %eax         #  20:     assign v0 <- t3

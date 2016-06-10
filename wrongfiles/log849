@@ -1,0 +1,32 @@
++     jmp     l_f2_3_if_false         #   1:     goto   3_if_false
++     jmp     l_f2_3_if_false         #   2:     goto   3_if_false
++     jmp     l_f2_3_if_false         #   3:     goto   3_if_false
+-     movl    $100, %eax              #   1:     assign v2 <- 100
++     movl    $100, %eax              #   4:     assign v2 <- 100
+-     jmp     l_f2_1                  #   2:     goto   1
++     jmp     l_f2_1                  #   5:     goto   1
++ l_f2_3_if_false:
+-     movl    $1085, %eax             #   4:     if     1085 < 54006 goto 8_if_true
++     movl    $1085, %eax             #   8:     if     1085 < 54006 goto 8_if_true
+-     jmp     l_f2_9_if_false         #   5:     goto   9_if_false
++     jmp     l_f2_9_if_false         #   9:     goto   9_if_false
+-     jmp     l_f2_13_while_cond      #   9:     goto   13_while_cond
++     jmp     l_f2_13_while_cond      #  13:     goto   13_while_cond
+-     jmp     l_f2_7                  #  10:     goto   7
++     jmp     l_f2_7                  #  14:     goto   7
+-     movl    $100, %eax              #   4:     if     100 <= 98 goto 4
++     movl    $100, %eax              #   4:     if     100 <= 98 goto 5
+-     jle     l_test_4               
++     jle     l_test_5               
+-     jmp     l_test_5                #   5:     goto   5
++     jmp     l_test_6                #   5:     goto   6
+- l_test_4:
++ l_test_5:
+-     jmp     l_test_6                #   8:     goto   6
++     jmp     l_test_7                #   8:     goto   7
+- l_test_5:
++ l_test_6:
+- l_test_6:
++ l_test_7:
+-     addl    $5, %esp               
++     addl    $8, %esp               

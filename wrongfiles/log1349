@@ -1,0 +1,103 @@
++     jmp     l_f0_32                 #  42:     goto   32
++     jmp     l_f0_32                 #  43:     goto   32
++     jmp     l_f0_32                 #  44:     goto   32
+-     movl    $1, %eax                #  42:     assign t2 <- 1
++     movl    $1, %eax                #  45:     assign t2 <- 1
+-     jmp     l_f0_33                 #  43:     goto   33
++     jmp     l_f0_33                 #  46:     goto   33
++ l_f0_32:
+-     movl    $0, %eax                #  44:     assign t2 <- 0
++     movl    $0, %eax                #  48:     assign t2 <- 0
+-     movzbl  -15(%ebp), %eax         #  46:     return t2
++     movzbl  -15(%ebp), %eax         #  50:     return t2
+-     jmp     l_f2_9                  #  11:     goto   9
++     jmp     l_f2_10                 #  11:     goto   10
+-     jmp     l_f2_9                  #  12:     goto   9
++     jmp     l_f2_10                 #  12:     goto   10
+-     jmp     l_f2_9                  #  13:     goto   9
++     jmp     l_f2_10                 #  13:     goto   10
++     jmp     l_f2_11                 #  14:     goto   11
+- l_f2_9:
++ l_f2_10:
+-     movl    $1, %eax                #  15:     assign t2 <- 1
++     movl    $1, %eax                #  16:     assign t2 <- 1
+-     jmp     l_f2_11                 #  16:     goto   11
++     jmp     l_f2_12                 #  17:     goto   12
++ l_f2_11:
+-     movl    $0, %eax                #  17:     assign t2 <- 0
++     movl    $0, %eax                #  19:     assign t2 <- 0
+- l_f2_11:
++ l_f2_12:
++     jmp     l_f2_17                 #  21:     goto   17
++     jmp     l_f2_17                 #  22:     goto   17
++     jmp     l_f2_17                 #  23:     goto   17
++     jmp     l_f2_17                 #  24:     goto   17
+-     movl    $1, %eax                #  19:     assign t3 <- 1
++     movl    $1, %eax                #  25:     assign t3 <- 1
+-     jmp     l_f2_17                 #  20:     goto   17
++     jmp     l_f2_18                 #  26:     goto   18
++ l_f2_17:
+-     movl    $0, %eax                #  21:     assign t3 <- 0
++     movl    $0, %eax                #  28:     assign t3 <- 0
+- l_f2_17:
++ l_f2_18:
+-     movzbl  -15(%ebp), %eax         #  23:     if     t2 # t3 goto 6
++     movzbl  -15(%ebp), %eax         #  30:     if     t2 # t3 goto 6
+-     jmp     l_f2_7                  #  24:     goto   7
++     jmp     l_f2_7                  #  31:     goto   7
+-     movl    $1, %eax                #  26:     assign t4 <- 1
++     movl    $1, %eax                #  33:     assign t4 <- 1
+-     jmp     l_f2_8                  #  27:     goto   8
++     jmp     l_f2_8                  #  34:     goto   8
+-     movl    $0, %eax                #  29:     assign t4 <- 0
++     movl    $0, %eax                #  36:     assign t4 <- 0
+-     movzbl  -17(%ebp), %eax         #  31:     assign v2 <- t4
++     movzbl  -17(%ebp), %eax         #  38:     assign v2 <- t4
+-     jmp     l_f2_23                 #  33:     goto   23
++     jmp     l_f2_23                 #  40:     goto   23
+-     movl    $97, %eax               #  35:     if     97 > 98 goto 28_while_body
++     movl    $97, %eax               #  42:     if     97 > 98 goto 28_while_body
+-     jmp     l_f2_26                 #  36:     goto   26
++     jmp     l_f2_26                 #  43:     goto   26
+-     jmp     l_f2_27_while_cond      #  38:     goto   27_while_cond
++     jmp     l_f2_27_while_cond      #  45:     goto   27_while_cond
+-     movl    $0, %eax                #  40:     return 0
++     movl    $0, %eax                #  47:     return 0
+-     movl    $1, %eax                #  41:     return 1
++     movl    $1, %eax                #  48:     return 1
+-     movl    $97, %eax               #  42:     if     97 = 97 goto 33
++     movl    $97, %eax               #  49:     if     97 = 97 goto 33
+-     jmp     l_f2_34                 #  43:     goto   34
++     jmp     l_f2_34                 #  50:     goto   34
+-     movl    $1, %eax                #  45:     assign t5 <- 1
++     movl    $1, %eax                #  52:     assign t5 <- 1
+-     jmp     l_f2_35                 #  46:     goto   35
++     jmp     l_f2_35                 #  53:     goto   35
+-     movl    $0, %eax                #  48:     assign t5 <- 0
++     movl    $0, %eax                #  55:     assign t5 <- 0
+-     movzbl  -18(%ebp), %eax         #  50:     return t5
++     movzbl  -18(%ebp), %eax         #  57:     return t5
+-     jmp     l_f2_39_if_false        #  51:     goto   39_if_false
++     jmp     l_f2_39_if_false        #  58:     goto   39_if_false
+-     jmp     l_f2_37                 #  52:     goto   37
++     jmp     l_f2_37                 #  59:     goto   37
+-     call    dummyCHARfunc           #  55:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #  62:     call   t6 <- dummyCHARfunc
+-     movl    $46493, %eax            #  56:     if     46493 >= 81526 goto 42
++     movl    $46493, %eax            #  63:     if     46493 >= 81526 goto 42
+-     jmp     l_f2_43                 #  57:     goto   43
++     jmp     l_f2_43                 #  64:     goto   43
+-     movl    $1, %eax                #  59:     assign t7 <- 1
++     movl    $1, %eax                #  66:     assign t7 <- 1
+-     jmp     l_f2_44                 #  60:     goto   44
++     jmp     l_f2_44                 #  67:     goto   44
+-     movl    $0, %eax                #  62:     assign t7 <- 0
++     movl    $0, %eax                #  69:     assign t7 <- 0
+-     movzbl  -20(%ebp), %eax         #  64:     return t7
++     movzbl  -20(%ebp), %eax         #  71:     return t7
+-     movl    $0, %eax                #  65:     return 0
++     movl    $0, %eax                #  72:     return 0
+-     call    dummyCHARfunc           #  66:     call   t8 <- dummyCHARfunc
++     call    dummyCHARfunc           #  73:     call   t8 <- dummyCHARfunc
+-     jmp     l_f2_24_while_cond      #  67:     goto   24_while_cond
++     jmp     l_f2_24_while_cond      #  74:     goto   24_while_cond

@@ -1,0 +1,34 @@
++     jmp     l_f2_3                  #   1:     goto   3
++ l_f2_3:
+-     jmp     l_f2_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f2_1_while_cond       #   3:     goto   1_while_cond
+-     jmp     l_f2_11_while_body      #   4:     goto   11_while_body
++     jmp     l_f2_11_while_body      #   6:     goto   11_while_body
+-     jmp     l_f2_10_while_cond      #   6:     goto   10_while_cond
++     jmp     l_f2_10_while_cond      #   8:     goto   10_while_cond
+-     jmp     l_f2_7_while_cond       #   7:     goto   7_while_cond
++     jmp     l_f2_7_while_cond       #   9:     goto   7_while_cond
+-     jmp     l_f2_14                 #   8:     goto   14
++     jmp     l_f2_14                 #  10:     goto   14
++     jmp     l_f2_15                 #  11:     goto   15
+-     movl    $1, %eax                #  10:     assign t1 <- 1
++     movl    $1, %eax                #  13:     assign t1 <- 1
+-     jmp     l_f2_16                 #  11:     goto   16
++     jmp     l_f2_16                 #  14:     goto   16
++ l_f2_15:
+-     movl    $0, %eax                #  12:     assign t1 <- 0
++     movl    $0, %eax                #  16:     assign t1 <- 0
+-     movzbl  -13(%ebp), %eax         #  14:     return t1
++     movzbl  -13(%ebp), %eax         #  18:     return t1
++     jmp     l_test_7_if_false       #   7:     goto   7_if_false
+-     jmp     l_test_14_if_false      #   8:     goto   14_if_false
++     jmp     l_test_14_if_false      #   9:     goto   14_if_false
+-     jmp     l_test_12               #   9:     goto   12
++     jmp     l_test_12               #  10:     goto   12
+-     movl    $99, %eax               #  12:     assign v1 <- 99
++     movl    $99, %eax               #  13:     assign v1 <- 99
+-     jmp     l_test_16               #  13:     goto   16
++     jmp     l_test_16               #  14:     goto   16
+-     jmp     l_test_5                #  15:     goto   5
++     jmp     l_test_5                #  16:     goto   5
++ l_test_7_if_false:

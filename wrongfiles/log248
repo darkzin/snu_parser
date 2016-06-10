@@ -1,0 +1,17 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_17               #  27:     goto   17
++     jmp     l_test_17               #  28:     goto   17
+-     jmp     l_test_21               #  28:     goto   21
++     jmp     l_test_21               #  30:     goto   21
+-     jmp     l_test_22_while_cond    #  29:     goto   22_while_cond
++     jmp     l_test_22_while_cond    #  31:     goto   22_while_cond
+-     movl    $22082, %eax            #  31:     param  0 <- 22082
++     movl    $22082, %eax            #  33:     param  0 <- 22082
+-     call    WriteInt                #  32:     call   WriteInt
++     call    WriteInt                #  34:     call   WriteInt
+-     jmp     l_test_26_while_cond    #  34:     goto   26_while_cond
++     jmp     l_test_26_while_cond    #  36:     goto   26_while_cond
+-     jmp     l_test_18_while_cond    #  35:     goto   18_while_cond
++     jmp     l_test_18_while_cond    #  37:     goto   18_while_cond
++ l_test_17:

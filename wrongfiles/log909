@@ -1,0 +1,32 @@
++     jmp     l_f0_0                  #   1:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
++     jmp     l_f0_0                  #   3:     goto   0
+-     jmp     l_f0_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   4:     goto   1_while_cond
++ l_f0_0:
+-     call    dummyBOOLfunc           #   2:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   6:     call   t1 <- dummyBOOLfunc
+-     jmp     l_f0_9_while_body       #   4:     goto   9_while_body
++     jmp     l_f0_9_while_body       #   8:     goto   9_while_body
+-     jmp     l_f0_8_while_cond       #   6:     goto   8_while_cond
++     jmp     l_f0_8_while_cond       #  10:     goto   8_while_cond
++     jmp     l_f1_13_if_false        #  17:     goto   13_if_false
+-     jmp     l_f1_11                 #  19:     goto   11
++     jmp     l_f1_11                 #  20:     goto   11
++ l_f1_13_if_false:
+-     jmp     l_f1_20_while_body      #  22:     goto   20_while_body
++     jmp     l_f1_20_while_body      #  24:     goto   20_while_body
+-     movl    $97, %eax               #  25:     if     97 = 100 goto 24_while_body
++     movl    $97, %eax               #  27:     if     97 = 100 goto 24_while_body
+-     jmp     l_f1_22                 #  26:     goto   22
++     jmp     l_f1_22                 #  28:     goto   22
+-     jmp     l_f1_23_while_cond      #  28:     goto   23_while_cond
++     jmp     l_f1_23_while_cond      #  30:     goto   23_while_cond
+-     call    dummyCHARfunc           #  30:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  32:     call   t2 <- dummyCHARfunc
+-     jmp     l_f1_19_while_cond      #  31:     goto   19_while_cond
++     jmp     l_f1_19_while_cond      #  33:     goto   19_while_cond
++     jmp     l_f2_2                  #  32:     goto   2
+-     jmp     l_f2_3_while_cond       #  33:     goto   3_while_cond
++     jmp     l_f2_3_while_cond       #  34:     goto   3_while_cond
++ l_f2_2:

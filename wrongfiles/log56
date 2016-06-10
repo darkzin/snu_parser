@@ -1,0 +1,37 @@
++     jmp     l_test_10_if_false      #  10:     goto   10_if_false
++     jmp     l_test_10_if_false      #  11:     goto   10_if_false
++     jmp     l_test_10_if_false      #  12:     goto   10_if_false
++     jmp     l_test_10_if_false      #  13:     goto   10_if_false
+-     movl    $73125, %eax            #  10:     if     73125 # 70381 goto 21_if_true
++     movl    $73125, %eax            #  14:     if     73125 # 70381 goto 21_if_true
+-     jmp     l_test_22_if_false      #  11:     goto   22_if_false
++     jmp     l_test_22_if_false      #  15:     goto   22_if_false
+-     jmp     l_test_20               #  13:     goto   20
++     jmp     l_test_20               #  17:     goto   20
+-     movl    $97, %eax               #  16:     if     97 <= 97 goto 25_if_true
++     movl    $97, %eax               #  20:     if     97 <= 97 goto 25_if_true
+-     jmp     l_test_26_if_false      #  17:     goto   26_if_false
++     jmp     l_test_26_if_false      #  21:     goto   26_if_false
+-     jmp     l_test_24               #  19:     goto   24
++     jmp     l_test_24               #  23:     goto   24
+-     jmp     l_test_29_while_cond    #  23:     goto   29_while_cond
++     jmp     l_test_29_while_cond    #  27:     goto   29_while_cond
+-     jmp     l_test_31               #  25:     goto   31
++     jmp     l_test_31               #  29:     goto   31
+-     jmp     l_test_32_while_cond    #  26:     goto   32_while_cond
++     jmp     l_test_32_while_cond    #  30:     goto   32_while_cond
+-     movl    $1, %eax                #  28:     assign v0 <- 1
++     movl    $1, %eax                #  32:     assign v0 <- 1
+-     jmp     l_test_36               #  30:     goto   36
++     jmp     l_test_36               #  34:     goto   36
+-     movl    $99, %eax               #  35:     if     99 > 98 goto 43_while_body
++     movl    $99, %eax               #  39:     if     99 > 98 goto 43_while_body
+-     jmp     l_test_41               #  36:     goto   41
++     jmp     l_test_41               #  40:     goto   41
+-     jmp     l_test_42_while_cond    #  38:     goto   42_while_cond
++     jmp     l_test_42_while_cond    #  42:     goto   42_while_cond
+-     jmp     l_test_46               #  41:     goto   46
++     jmp     l_test_46               #  45:     goto   46
+-     jmp     l_test_8                #  43:     goto   8
++     jmp     l_test_8                #  47:     goto   8
++ l_test_10_if_false:

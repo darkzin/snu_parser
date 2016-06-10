@@ -254,13 +254,13 @@ main:
     rep     stosl                  
 
     # function body
-    leal    _str_34, %eax           #   0:     &()    t0 <- _str_34
+    leal    _str_1, %eax            #   0:     &()    t0 <- _str_1
     movl    %eax, -16(%ebp)        
     movl    -16(%ebp), %eax         #   1:     param  0 <- t0
     pushl   %eax                   
     call    WriteStr                #   2:     call   WriteStr
     addl    $4, %esp               
-    leal    _str_35, %eax           #   3:     &()    t1 <- _str_35
+    leal    _str_2, %eax            #   3:     &()    t1 <- _str_2
     movl    %eax, -20(%ebp)        
     movl    -20(%ebp), %eax         #   4:     param  0 <- t1
     pushl   %eax                   
@@ -276,7 +276,7 @@ l_test10_3_while_cond:
     jg      l_test10_4_while_body  
     jmp     l_test10_2              #   9:     goto   2
 l_test10_4_while_body:
-    leal    _str_36, %eax           #  11:     &()    t3 <- _str_36
+    leal    _str_3, %eax            #  11:     &()    t3 <- _str_3
     movl    %eax, -32(%ebp)        
     movl    -32(%ebp), %eax         #  12:     param  0 <- t3
     pushl   %eax                   
@@ -292,7 +292,7 @@ l_test10_4_while_body:
     call    WriteInt                #  17:     call   WriteInt
     addl    $4, %esp               
     call    WriteLn                 #  18:     call   WriteLn
-    leal    _str_37, %eax           #  19:     &()    t5 <- _str_37
+    leal    _str_4, %eax            #  19:     &()    t5 <- _str_4
     movl    %eax, -40(%ebp)        
     movl    -40(%ebp), %eax         #  20:     param  0 <- t5
     pushl   %eax                   
@@ -308,7 +308,7 @@ l_test10_4_while_body:
     call    WriteInt                #  25:     call   WriteInt
     addl    $4, %esp               
     call    WriteLn                 #  26:     call   WriteLn
-    leal    _str_38, %eax           #  27:     &()    t7 <- _str_38
+    leal    _str_5, %eax            #  27:     &()    t7 <- _str_5
     movl    %eax, -48(%ebp)        
     movl    -48(%ebp), %eax         #  28:     param  0 <- t7
     pushl   %eax                   
@@ -324,7 +324,7 @@ l_test10_4_while_body:
     call    WriteInt                #  33:     call   WriteInt
     addl    $4, %esp               
     call    WriteLn                 #  34:     call   WriteLn
-    leal    _str_39, %eax           #  35:     &()    t9 <- _str_39
+    leal    _str_6, %eax            #  35:     &()    t9 <- _str_6
     movl    %eax, -56(%ebp)        
     movl    -56(%ebp), %eax         #  36:     param  0 <- t9
     pushl   %eax                   
@@ -355,29 +355,29 @@ l_test10_exit:
     .align 4
 
     # scope: test10
-_str_34:                            # <array 25 of <char>>
+_str_1:                             # <array 25 of <char>>
     .long    1
     .long   25
     .asciz "Sum of natural numbers\n\n"
     .align   4
-_str_35:                            # <array 29 of <char>>
+_str_2:                             # <array 29 of <char>>
     .long    1
     .long   29
     .asciz "Enter a number (0 to exit): "
     .align   4
-_str_36:                            # <array 16 of <char>>
+_str_3:                             # <array 16 of <char>>
     .long    1
     .long   16
     .asciz " recursive   : "
-_str_37:                            # <array 16 of <char>>
+_str_4:                             # <array 16 of <char>>
     .long    1
     .long   16
     .asciz " iterative   : "
-_str_38:                            # <array 16 of <char>>
+_str_5:                             # <array 16 of <char>>
     .long    1
     .long   16
     .asciz " algorithmic : "
-_str_39:                            # <array 29 of <char>>
+_str_6:                             # <array 29 of <char>>
     .long    1
     .long   29
     .asciz "Enter a number (0 to exit): "

@@ -1,0 +1,18 @@
++     jmp     l_f0_5                  #  13:     goto   5
+-     jmp     l_f0_6_while_cond       #  14:     goto   6_while_cond
++     jmp     l_f0_6_while_cond       #  15:     goto   6_while_cond
++ l_f0_5:
+-     movl    $25708, %eax            #  15:     div    t5 <- 25708, 10400
++     movl    $25708, %eax            #  17:     div    t5 <- 25708, 10400
+-     movl    -28(%ebp), %eax         #  16:     mul    t6 <- t5, 5245
++     movl    -28(%ebp), %eax         #  18:     mul    t6 <- t5, 5245
+-     movl    -32(%ebp), %eax         #  17:     add    t7 <- t6, 45644
++     movl    -32(%ebp), %eax         #  19:     add    t7 <- t6, 45644
+-     movl    -36(%ebp), %eax         #  18:     sub    t8 <- t7, 58270
++     movl    -36(%ebp), %eax         #  20:     sub    t8 <- t7, 58270
+-     movl    -40(%ebp), %eax         #  19:     add    t9 <- t8, 66537
++     movl    -40(%ebp), %eax         #  21:     add    t9 <- t8, 66537
+-     movl    -44(%ebp), %eax         #  20:     sub    t10 <- t9, 77075
++     movl    -44(%ebp), %eax         #  22:     sub    t10 <- t9, 77075
+-     movl    -16(%ebp), %eax         #  21:     return t10
++     movl    -16(%ebp), %eax         #  23:     return t10

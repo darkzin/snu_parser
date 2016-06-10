@@ -1,0 +1,26 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_0                #   2:     goto   0
+-     jmp     l_test_1_while_cond     #   3:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   4:     goto   1_while_cond
++ l_test_0:
+-     movl    $99, %eax               #   4:     if     99 < 100 goto 6_if_true
++     movl    $99, %eax               #   6:     if     99 < 100 goto 6_if_true
+-     jmp     l_test_7_if_false       #   5:     goto   7_if_false
++     jmp     l_test_7_if_false       #   7:     goto   7_if_false
+-     jmp     l_test_5                #   8:     goto   5
++     jmp     l_test_5                #  10:     goto   5
+-     jmp     l_test_10               #  12:     goto   10
++     jmp     l_test_10               #  14:     goto   10
+-     movl    $74806, %eax            #  13:     assign v0 <- 74806
++     movl    $74806, %eax            #  15:     assign v0 <- 74806
+-     jmp     l_test_14               #  14:     goto   14
++     jmp     l_test_14               #  16:     goto   14
+-     call    ReadInt                 #  16:     call   t0 <- ReadInt
++     call    ReadInt                 #  18:     call   t0 <- ReadInt
+-     jmp     l_test_11_while_cond    #  17:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  19:     goto   11_while_cond
+-     call    dummyCHARfunc           #  19:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  21:     call   t1 <- dummyCHARfunc
+-     call    f0                      #  20:     call   t2 <- f0
++     call    f0                      #  22:     call   t2 <- f0

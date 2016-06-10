@@ -1,0 +1,40 @@
++     jmp     l_f0_6                  #   6:     goto   6
+-     movl    $1, %eax                #   7:     assign t2 <- 1
++     movl    $1, %eax                #   8:     assign t2 <- 1
+-     jmp     l_f0_7                  #   8:     goto   7
++     jmp     l_f0_7                  #   9:     goto   7
++ l_f0_6:
+-     movl    $0, %eax                #   9:     assign t2 <- 0
++     movl    $0, %eax                #  11:     assign t2 <- 0
+-     movzbl  -14(%ebp), %eax         #  11:     return t2
++     movzbl  -14(%ebp), %eax         #  13:     return t2
+-     jmp     l_f0_14                 #  13:     goto   14
+-     jmp     l_f0_14                 #  14:     goto   14
+-     jmp     l_f0_14                 #  15:     goto   14
++     jmp     l_f0_15                 #  15:     goto   15
++     jmp     l_f0_15                 #  16:     goto   15
++     jmp     l_f0_15                 #  17:     goto   15
+- l_f0_14:
++ l_f0_15:
+-     movl    $1, %eax                #  17:     assign t3 <- 1
++     movl    $1, %eax                #  19:     assign t3 <- 1
+-     jmp     l_f0_16                 #  18:     goto   16
++     jmp     l_f0_17                 #  20:     goto   17
+-     movl    $0, %eax                #  19:     assign t3 <- 0
++     movl    $0, %eax                #  21:     assign t3 <- 0
+- l_f0_16:
++ l_f0_17:
+-     movl    $0, %eax                #  21:     if     0 # t3 goto 13_while_body
++     movl    $0, %eax                #  23:     if     0 # t3 goto 13_while_body
+-     jmp     l_f0_11                 #  22:     goto   11
++     jmp     l_f0_11                 #  24:     goto   11
+-     jmp     l_f0_12_while_cond      #  24:     goto   12_while_cond
++     jmp     l_f0_12_while_cond      #  26:     goto   12_while_cond
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_1                #   3:     goto   1
+-     jmp     l_test_2_while_cond     #   4:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #   5:     goto   2_while_cond
++ l_test_1:
+-     call    ReadInt                 #   5:     call   t0 <- ReadInt
++     call    ReadInt                 #   7:     call   t0 <- ReadInt

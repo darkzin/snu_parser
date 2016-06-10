@@ -1,0 +1,18 @@
++     jmp     l_test_21               #  22:     goto   21
+-     movl    $1, %eax                #  22:     assign t3 <- 1
++     movl    $1, %eax                #  23:     assign t3 <- 1
+-     jmp     l_test_21               #  23:     goto   21
++     jmp     l_test_22               #  24:     goto   22
++ l_test_21:
+-     movl    $0, %eax                #  24:     assign t3 <- 0
++     movl    $0, %eax                #  26:     assign t3 <- 0
+- l_test_21:
++ l_test_22:
+-     movzbl  -25(%ebp), %eax         #  26:     if     t3 # 0 goto 18_while_body
++     movzbl  -25(%ebp), %eax         #  28:     if     t3 # 0 goto 18_while_body
+-     jmp     l_test_16               #  27:     goto   16
++     jmp     l_test_16               #  29:     goto   16
+-     movl    $1, %eax                #  29:     assign v2 <- 1
++     movl    $1, %eax                #  31:     assign v2 <- 1
+-     jmp     l_test_17_while_cond    #  30:     goto   17_while_cond
++     jmp     l_test_17_while_cond    #  32:     goto   17_while_cond

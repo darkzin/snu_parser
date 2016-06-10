@@ -1,0 +1,30 @@
+-     movl    $99, %eax               #  16:     if     99 >= 99 goto 14
++     movl    $99, %eax               #  16:     if     99 >= 99 goto 15
+-     jge     l_f0_14                
++     jge     l_f0_15                
+-     jmp     l_f0_15                 #  17:     goto   15
++     jmp     l_f0_16                 #  17:     goto   16
+- l_f0_14:
++ l_f0_15:
+-     jmp     l_f0_16                 #  20:     goto   16
++     jmp     l_f0_17                 #  20:     goto   17
+- l_f0_15:
++ l_f0_16:
+- l_f0_16:
++ l_f0_17:
+-     movl    $99, %eax               #  21:     if     99 < 98 goto 19
++     movl    $99, %eax               #  21:     if     99 < 98 goto 20
+-     jl      l_test_19              
++     jl      l_test_20              
+-     jmp     l_test_20               #  22:     goto   20
++     jmp     l_test_21               #  22:     goto   21
+- l_test_19:
++ l_test_20:
+-     jmp     l_test_21               #  25:     goto   21
++     jmp     l_test_22               #  25:     goto   22
+- l_test_20:
++ l_test_21:
+- l_test_21:
++ l_test_22:
+-     addl    $5, %esp               
++     addl    $8, %esp               

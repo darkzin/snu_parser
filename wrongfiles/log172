@@ -1,0 +1,6 @@
++     jmp     l_f1_1                  #   4:     goto   1
+-     jmp     l_f1_2_while_cond       #   5:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #   6:     goto   2_while_cond
++ l_f1_1:
+-     call    WriteLn                 #   6:     call   WriteLn
++     call    WriteLn                 #   8:     call   WriteLn

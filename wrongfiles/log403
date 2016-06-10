@@ -1,0 +1,37 @@
+-     #   -808(%ebp) 780  [ $v1       <array 3 of <array 3 of <array 7 of <array 4 of <array 3 of <bool>>>>>> %ebp-808 ]
++     #   -808(%ebp)  780  [ $v1       <array 3 of <array 3 of <array 7 of <array 4 of <array 3 of <bool>>>>>> %ebp-808 ]
++     jmp     l_f2_2_if_false         #   0:     goto   2_if_false
+-     leal    -808(%ebp), %eax        #   0:     &()    t2 <- v1
++     leal    -808(%ebp), %eax        #   1:     &()    t2 <- v1
+-     movl    -16(%ebp), %eax         #   1:     param  0 <- t2
++     movl    -16(%ebp), %eax         #   2:     param  0 <- t2
+-     call    f0                      #   2:     call   t3 <- f0
++     call    f0                      #   3:     call   t3 <- f0
+-     movzbl  -17(%ebp), %eax         #   3:     if     t3 = 1 goto 1_if_true
++     movzbl  -17(%ebp), %eax         #   4:     if     t3 = 1 goto 1_if_true
+-     jmp     l_f2_2_if_false         #   4:     goto   2_if_false
++     jmp     l_f2_2_if_false         #   5:     goto   2_if_false
+-     jmp     l_f2_0                  #   6:     goto   0
++     jmp     l_f2_0                  #   7:     goto   0
+-     leal    -808(%ebp), %eax        #   9:     &()    t4 <- v1
++     leal    -808(%ebp), %eax        #  10:     &()    t4 <- v1
+-     movl    -24(%ebp), %eax         #  10:     param  0 <- t4
++     movl    -24(%ebp), %eax         #  11:     param  0 <- t4
+-     call    f0                      #  11:     call   t5 <- f0
++     call    f0                      #  12:     call   t5 <- f0
+-     movzbl  -25(%ebp), %eax         #  12:     if     t5 = 1 goto 9
++     movzbl  -25(%ebp), %eax         #  13:     if     t5 = 1 goto 9
+-     jmp     l_f2_7                  #  13:     goto   7
++     jmp     l_f2_7                  #  14:     goto   7
+-     movl    $1, %eax                #  15:     assign t6 <- 1
++     movl    $1, %eax                #  16:     assign t6 <- 1
+-     jmp     l_f2_8                  #  16:     goto   8
++     jmp     l_f2_8                  #  17:     goto   8
+-     movl    $0, %eax                #  18:     assign t6 <- 0
++     movl    $0, %eax                #  19:     assign t6 <- 0
+-     movzbl  -26(%ebp), %eax         #  20:     return t6
++     movzbl  -26(%ebp), %eax         #  21:     return t6
+-     call    dummyCHARfunc           #  21:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  22:     call   t7 <- dummyCHARfunc
+-     addl    $1, %esp               
++     addl    $4, %esp               

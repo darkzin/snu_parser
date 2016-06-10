@@ -1,0 +1,8 @@
++     jmp     l_f0_13                 #  21:     goto   13
+-     movl    $56235, %eax            #  21:     assign v2 <- 56235
++     movl    $56235, %eax            #  22:     assign v2 <- 56235
+-     jmp     l_f0_14_while_cond      #  22:     goto   14_while_cond
++     jmp     l_f0_14_while_cond      #  23:     goto   14_while_cond
++ l_f0_13:
+-     addl    $1, %esp               
++     addl    $4, %esp               

@@ -1,0 +1,36 @@
+-     #-1895325764(%ebp)1895325720  [ $v4       <array 38 of <array 64 of <array 99 of <array 82 of <array 96 of <bool>>>>>> %ebp-1895325764 ]
++     #   -1895325764(%ebp)  1895325720  [ $v4       <array 38 of <array 64 of <array 99 of <array 82 of <array 96 of <bool>>>>>> %ebp-1895325764 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              
++     jmp     l_f1_16                 #  23:     goto   16
+-     movl    $1, %eax                #  23:     assign t8 <- 1
++     movl    $1, %eax                #  24:     assign t8 <- 1
+-     jmp     l_f1_16                 #  24:     goto   16
++     jmp     l_f1_17                 #  25:     goto   17
++ l_f1_16:
+-     movl    $0, %eax                #  25:     assign t8 <- 0
++     movl    $0, %eax                #  27:     assign t8 <- 0
+- l_f1_16:
++ l_f1_17:
+-     movl    $0, %eax                #  27:     if     0 # t8 goto 11
++     movl    $0, %eax                #  29:     if     0 # t8 goto 11
+-     jmp     l_f1_12                 #  28:     goto   12
++     jmp     l_f1_12                 #  30:     goto   12
+-     movl    $1, %eax                #  30:     assign t9 <- 1
++     movl    $1, %eax                #  32:     assign t9 <- 1
+-     jmp     l_f1_13                 #  31:     goto   13
++     jmp     l_f1_13                 #  33:     goto   13
+-     movl    $0, %eax                #  33:     assign t9 <- 0
++     movl    $0, %eax                #  35:     assign t9 <- 0
+-     movzbl  -42(%ebp), %eax         #  35:     param  0 <- t9
++     movzbl  -42(%ebp), %eax         #  37:     param  0 <- t9
+-     call    f0                      #  36:     call   t10 <- f0
++     call    f0                      #  38:     call   t10 <- f0
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     jmp     l_test_9_while_body     #   6:     goto   9_while_body
++     jmp     l_test_12               #   6:     goto   12
++ l_test_12:
++     jmp     l_test_9_while_body     #   9:     goto   9_while_body
+-     jmp     l_test_8_while_cond     #   9:     goto   8_while_cond
++     jmp     l_test_8_while_cond     #  11:     goto   8_while_cond

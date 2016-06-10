@@ -1,0 +1,34 @@
++     jmp     l_f0_0                  #   5:     goto   0
+-     jmp     l_f0_1_while_cond       #   6:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   7:     goto   1_while_cond
++ l_f0_0:
+-     movl    $45199, %eax            #   7:     mul    t0 <- 45199, 24157
++     movl    $45199, %eax            #   9:     mul    t0 <- 45199, 24157
+-     movl    $23177, %eax            #   8:     if     23177 > t0 goto 9_if_true
++     movl    $23177, %eax            #  10:     if     23177 > t0 goto 9_if_true
+-     jmp     l_f0_10_if_false        #   9:     goto   10_if_false
++     jmp     l_f0_10_if_false        #  11:     goto   10_if_false
+-     leal    _str_1, %eax            #  11:     &()    t1 <- _str_1
++     leal    _str_1, %eax            #  13:     &()    t1 <- _str_1
+-     movl    -20(%ebp), %eax         #  12:     param  0 <- t1
++     movl    -20(%ebp), %eax         #  14:     param  0 <- t1
+-     call    WriteStr                #  13:     call   WriteStr
++     call    WriteStr                #  15:     call   WriteStr
+-     jmp     l_f0_8                  #  14:     goto   8
++     jmp     l_f0_8                  #  16:     goto   8
+-     call    dummyCHARfunc           #  17:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  19:     call   t2 <- dummyCHARfunc
++     jmp     l_f1_0                  #   2:     goto   0
+-     jmp     l_f1_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++ l_f1_0:
+-     movl    $98, %eax               #   4:     assign v1 <- 98
++     movl    $98, %eax               #   6:     assign v1 <- 98
+-     jmp     l_f1_9                  #   7:     goto   9
++     jmp     l_f1_9                  #   9:     goto   9
+-     jmp     l_f1_10_while_cond      #   8:     goto   10_while_cond
++     jmp     l_f1_10_while_cond      #  10:     goto   10_while_cond
+-     jmp     l_f1_12                 #  10:     goto   12
++     jmp     l_f1_12                 #  12:     goto   12
+-     jmp     l_f1_7_while_cond       #  12:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #  14:     goto   7_while_cond

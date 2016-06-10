@@ -1,0 +1,38 @@
++     jmp     l_f0_2                  #   5:     goto   2
+-     movl    $97, %eax               #   5:     return 97
++     movl    $97, %eax               #   6:     return 97
+-     jmp     l_f0_3_while_cond       #   6:     goto   3_while_cond
++     jmp     l_f0_3_while_cond       #   7:     goto   3_while_cond
++ l_f0_2:
+-     #-38808512(%ebp)38808474  [ $v1       <array 2 of <array 75 of <array 57 of <array 89 of <array 51 of <char>>>>>> %ebp-38808512 ]
++     #   -38808512(%ebp)  38808474  [ $v1       <array 2 of <array 75 of <array 57 of <array 89 of <array 51 of <char>>>>>> %ebp-38808512 ]
+-     #-423901400(%ebp)385092888  [ $v2       <array 52 of <array 48 of <array 43 of <array 13 of <array 69 of <int>>>>>> %ebp-423901400 ]
++     #   -423901400(%ebp)  385092888  [ $v2       <array 52 of <array 48 of <array 43 of <array 13 of <array 69 of <int>>>>>> %ebp-423901400 ]
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $10, %esp              
++     addl    $16, %esp              
+-     addl    $10, %esp              
++     addl    $16, %esp              
+-     #-38808592(%ebp)38808474  [ $v4       <array 2 of <array 75 of <array 57 of <array 89 of <array 51 of <char>>>>>> %ebp-38808592 ]
++     #   -38808592(%ebp)  38808474  [ $v4       <array 2 of <array 75 of <array 57 of <array 89 of <array 51 of <char>>>>>> %ebp-38808592 ]
+-     #-423901480(%ebp)385092888  [ $v5       <array 52 of <array 48 of <array 43 of <array 13 of <array 69 of <int>>>>>> %ebp-423901480 ]
++     #   -423901480(%ebp)  385092888  [ $v5       <array 52 of <array 48 of <array 43 of <array 13 of <array 69 of <int>>>>>> %ebp-423901480 ]
+-     #-423901484(%ebp)   4  [ $v6       <int> %ebp-423901484 ]
++     #   -423901484(%ebp)   4  [ $v6       <int> %ebp-423901484 ]
+-     movl    $100, %eax              #   5:     if     100 # t3 goto 4
++     movl    $100, %eax              #   5:     if     100 # t3 goto 5
+-     jne     l_f2_4                 
++     jne     l_f2_5                 
+-     jmp     l_f2_5                  #   6:     goto   5
++     jmp     l_f2_6                  #   6:     goto   6
+- l_f2_4:
++ l_f2_5:
+-     jmp     l_f2_6                  #   9:     goto   6
++     jmp     l_f2_7                  #   9:     goto   7
+- l_f2_5:
++ l_f2_6:
+- l_f2_6:
++ l_f2_7:
+-     addl    $10, %esp              
++     addl    $16, %esp              

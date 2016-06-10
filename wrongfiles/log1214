@@ -1,0 +1,51 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f0_6                  #  14:     goto   6
++     jmp     l_f0_6                  #  15:     goto   6
++     jmp     l_f0_6                  #  16:     goto   6
++     jmp     l_f0_6                  #  17:     goto   6
+-     jmp     l_f0_7_while_cond       #  14:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  18:     goto   7_while_cond
++ l_f0_6:
+-     #-186701808(%ebp)186701784  [ $v5       <array 27 of <array 63 of <array 80 of <array 49 of <array 7 of <int>>>>>> %ebp-186701808 ]
++     #   -186701808(%ebp)  186701784  [ $v5       <array 27 of <array 63 of <array 80 of <array 49 of <array 7 of <int>>>>>> %ebp-186701808 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     movzbl  -17(%ebp), %eax         #  32:     if     t11 = 1 goto 22
++     movzbl  -17(%ebp), %eax         #  32:     if     t11 = 1 goto 23
+-     je      l_f1_22                
++     je      l_f1_23                
+- l_f1_22:
++ l_f1_23:
+-     jmp     l_f1_24                 #  35:     goto   24
++     jmp     l_f1_25                 #  35:     goto   25
+- l_f1_24:
++ l_f1_25:
+-     #-6718192(%ebp)6718164  [ $v5       <array 78 of <array 33 of <array 30 of <array 87 of <array 1 of <char>>>>>> %ebp-6718192 ]
++     #   -6718192(%ebp)  6718164  [ $v5       <array 78 of <array 33 of <array 30 of <array 87 of <array 1 of <char>>>>>> %ebp-6718192 ]
+-     #-166260088(%ebp)159541896  [ $v6       <array 34 of <array 93 of <array 17 of <array 56 of <array 53 of <char>>>>>> %ebp-166260088 ]
++     #   -166260088(%ebp)  159541896  [ $v6       <array 34 of <array 93 of <array 17 of <array 56 of <array 53 of <char>>>>>> %ebp-166260088 ]
+-     #-1825869676(%ebp)1659609588  [ $v7       <array 67 of <array 87 of <array 79 of <array 17 of <array 53 of <int>>>>>> %ebp-1825869676 ]
++     #   -1825869676(%ebp)  1659609588  [ $v7       <array 67 of <array 87 of <array 79 of <array 17 of <array 53 of <int>>>>>> %ebp-1825869676 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              
+-     addl    $5, %esp               
++     addl    $8, %esp               
++     jmp     l_test_6                #  18:     goto   6
+-     jmp     l_test_7_while_cond     #  19:     goto   7_while_cond
++     jmp     l_test_7_while_cond     #  20:     goto   7_while_cond
++ l_test_6:
+-     call    dummyINTfunc            #  20:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  22:     call   t6 <- dummyINTfunc
+-     movl    -36(%ebp), %eax         #  21:     assign v2 <- t6
++     movl    -36(%ebp), %eax         #  23:     assign v2 <- t6
+-     movl    $98, %eax               #  22:     if     98 < 100 goto 12_if_true
++     movl    $98, %eax               #  24:     if     98 < 100 goto 12_if_true
+-     jmp     l_test_13_if_false      #  23:     goto   13_if_false
++     jmp     l_test_13_if_false      #  25:     goto   13_if_false
+-     call    dummyCHARfunc           #  25:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  27:     call   t7 <- dummyCHARfunc
+-     movzbl  -37(%ebp), %eax         #  26:     assign v3 <- t7
++     movzbl  -37(%ebp), %eax         #  28:     assign v3 <- t7
+-     jmp     l_test_11               #  27:     goto   11
++     jmp     l_test_11               #  29:     goto   11

@@ -1,0 +1,26 @@
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     addl    $5, %esp               
++     addl    $8, %esp               
++     jmp     l_test_1                #   6:     goto   1
+-     jmp     l_test_7                #   8:     goto   7
++     jmp     l_test_7                #   9:     goto   7
+-     jmp     l_test_8_while_cond     #   9:     goto   8_while_cond
++     jmp     l_test_8_while_cond     #  10:     goto   8_while_cond
+-     movl    $0, %eax                #  11:     assign v1 <- 0
++     movl    $0, %eax                #  12:     assign v1 <- 0
+-     jmp     l_test_2_while_cond     #  12:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #  13:     goto   2_while_cond
++ l_test_1:
+-     jmp     l_test_12               #  13:     goto   12
++     jmp     l_test_12               #  15:     goto   12
+-     movl    $1, %eax                #  15:     assign t1 <- 1
++     movl    $1, %eax                #  17:     assign t1 <- 1
+-     jmp     l_test_14               #  16:     goto   14
++     jmp     l_test_14               #  18:     goto   14
+-     movl    $0, %eax                #  17:     assign t1 <- 0
++     movl    $0, %eax                #  19:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #  19:     assign v1 <- t1
++     movzbl  -14(%ebp), %eax         #  21:     assign v1 <- t1

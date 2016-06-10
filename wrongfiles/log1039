@@ -1,0 +1,15 @@
++     jmp     l_test_40               #  53:     goto   40
++     jmp     l_test_40               #  54:     goto   40
+-     movl    $1, %eax                #  53:     assign t5 <- 1
++     movl    $1, %eax                #  55:     assign t5 <- 1
+-     jmp     l_test_41               #  54:     goto   41
++     jmp     l_test_41               #  56:     goto   41
++ l_test_40:
+-     movl    $0, %eax                #  55:     assign t5 <- 0
++     movl    $0, %eax                #  58:     assign t5 <- 0
+-     movzbl  -18(%ebp), %eax         #  57:     assign v0 <- t5
++     movzbl  -18(%ebp), %eax         #  60:     assign v0 <- t5
++     jmp     l_test_49               #  62:     goto   49
++ l_test_49:
+-     jmp     l_test_47_while_cond    #  59:     goto   47_while_cond
++     jmp     l_test_47_while_cond    #  64:     goto   47_while_cond

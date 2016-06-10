@@ -1,0 +1,15 @@
++     jmp     l_f1_2_if_false         #   4:     goto   2_if_false
+-     jmp     l_f1_0                  #   4:     goto   0
++     jmp     l_f1_0                  #   5:     goto   0
+-     movl    $100, %eax              #   8:     if     100 < 98 goto 8_while_body
++     movl    $100, %eax              #   9:     if     100 < 98 goto 8_while_body
+-     jmp     l_f1_6                  #   9:     goto   6
++     jmp     l_f1_6                  #  10:     goto   6
+-     jmp     l_f1_11_while_cond      #  12:     goto   11_while_cond
++     jmp     l_f1_11_while_cond      #  13:     goto   11_while_cond
+-     jmp     l_f1_7_while_cond       #  13:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #  14:     goto   7_while_cond
+-     call    dummyProcedure          #  15:     call   dummyProcedure
++     call    dummyProcedure          #  16:     call   dummyProcedure
+-     addl    $5, %esp               
++     addl    $8, %esp               

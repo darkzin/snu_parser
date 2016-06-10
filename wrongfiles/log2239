@@ -1,0 +1,40 @@
++     jmp     l_f0_7_if_false         #  16:     goto   7_if_false
++     jmp     l_f0_7_if_false         #  17:     goto   7_if_false
++     jmp     l_f0_7_if_false         #  18:     goto   7_if_false
+-     jmp     l_f0_5                  #  16:     goto   5
++     jmp     l_f0_5                  #  19:     goto   5
+-     #-1223651572(%ebp)1223651544  [ $v1       <array 70 of <array 92 of <array 91 of <array 87 of <array 24 of <bool>>>>>> %ebp-1223651572 ]
++     #   -1223651572(%ebp)  1223651544  [ $v1       <array 70 of <array 92 of <array 91 of <array 87 of <array 24 of <bool>>>>>> %ebp-1223651572 ]
+-     #1785010680(%ebp)1286305044  [ $v2       <array 55 of <array 59 of <array 39 of <array 33 of <array 77 of <int>>>>>> %ebp+1785010680 ]
++     #   1785010680(%ebp)  1286305044  [ $v2       <array 55 of <array 59 of <array 39 of <array 33 of <array 77 of <int>>>>>> %ebp+1785010680 ]
+-     #1777110456(%ebp)7900224  [ $v3       <array 66 of <array 63 of <array 5 of <array 10 of <array 38 of <char>>>>>> %ebp+1777110456 ]
++     #   1777110456(%ebp)  7900224  [ $v3       <array 66 of <array 63 of <array 5 of <array 10 of <array 38 of <char>>>>>> %ebp+1777110456 ]
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $629464207, %ecx       
++     mov     %esp, %edi             
++     rep     stosl                  
+-     addl    $13, %esp              
++     addl    $16, %esp              
++     jmp     l_f1_7                  #  11:     goto   7
+-     movl    $1, %eax                #  11:     assign t6 <- 1
++     movl    $1, %eax                #  12:     assign t6 <- 1
+-     jmp     l_f1_7                  #  12:     goto   7
++     jmp     l_f1_8                  #  13:     goto   8
++ l_f1_7:
+-     movl    $0, %eax                #  13:     assign t6 <- 0
++     movl    $0, %eax                #  15:     assign t6 <- 0
+- l_f1_7:
++ l_f1_8:
+-     movzbl  -25(%ebp), %eax         #  15:     if     t5 = t6 goto 4_while_body
++     movzbl  -25(%ebp), %eax         #  17:     if     t5 = t6 goto 4_while_body
+-     jmp     l_f1_2                  #  16:     goto   2
++     jmp     l_f1_2                  #  18:     goto   2
+-     jmp     l_f1_3_while_cond       #  18:     goto   3_while_cond
++     jmp     l_f1_3_while_cond       #  20:     goto   3_while_cond
++     jmp     l_test_22_if_false      #  23:     goto   22_if_false
+-     jmp     l_test_20               #  23:     goto   20
++     jmp     l_test_20               #  24:     goto   20
++ l_test_22_if_false:
+-     jmp     l_test_17               #  25:     goto   17
++     jmp     l_test_17               #  27:     goto   17

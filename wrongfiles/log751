@@ -1,0 +1,18 @@
++     jmp     l_f0_8                  #  15:     goto   8
+-     jmp     l_f0_9_while_cond       #  15:     goto   9_while_cond
++     jmp     l_f0_9_while_cond       #  16:     goto   9_while_cond
++ l_f0_8:
+-     call    dummyBOOLfunc           #  16:     call   t8 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  18:     call   t8 <- dummyBOOLfunc
+-     movzbl  -14(%ebp), %eax         #  17:     if     t8 = 1 goto 13
++     movzbl  -14(%ebp), %eax         #  19:     if     t8 = 1 goto 13
++     jmp     l_f0_14                 #  20:     goto   14
+-     movl    $1, %eax                #  19:     assign t9 <- 1
++     movl    $1, %eax                #  22:     assign t9 <- 1
+-     jmp     l_f0_15                 #  20:     goto   15
++     jmp     l_f0_15                 #  23:     goto   15
++ l_f0_14:
+-     movl    $0, %eax                #  21:     assign t9 <- 0
++     movl    $0, %eax                #  25:     assign t9 <- 0
+-     movzbl  -15(%ebp), %eax         #  23:     assign v2 <- t9
++     movzbl  -15(%ebp), %eax         #  27:     assign v2 <- t9

@@ -1,0 +1,8 @@
++     jmp     l_f1_3_if_false         #   3:     goto   3_if_false
+-     movl    $98, %eax               #   3:     assign v5 <- 98
++     movl    $98, %eax               #   4:     assign v5 <- 98
+-     jmp     l_f1_1                  #   4:     goto   1
++     jmp     l_f1_1                  #   5:     goto   1
++ l_f1_3_if_false:
+-     call    dummyCHARfunc           #   6:     call   t9 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t9 <- dummyCHARfunc

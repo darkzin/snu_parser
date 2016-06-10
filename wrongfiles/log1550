@@ -1,0 +1,38 @@
+-     #-8648688(%ebp)8648664  [ $v4       <array 13 of <array 16 of <array 77 of <array 3 of <array 45 of <int>>>>>> %ebp-8648688 ]
++     #   -8648688(%ebp)  8648664  [ $v4       <array 13 of <array 16 of <array 77 of <array 3 of <array 45 of <int>>>>>> %ebp-8648688 ]
+-     #-60442272(%ebp)51793584  [ $v5       <array 21 of <array 93 of <array 85 of <array 78 of <array 1 of <int>>>>>> %ebp-60442272 ]
++     #   -60442272(%ebp)  51793584  [ $v5       <array 21 of <array 93 of <array 85 of <array 78 of <array 1 of <int>>>>>> %ebp-60442272 ]
++     jmp     l_f2_17                 #  20:     goto   17
+-     jmp     l_f2_18_while_cond      #  21:     goto   18_while_cond
++     jmp     l_f2_18_while_cond      #  22:     goto   18_while_cond
++ l_f2_17:
++     jmp     l_test_3                #   4:     goto   3
+-     jmp     l_test_4_while_cond     #   5:     goto   4_while_cond
++     jmp     l_test_4_while_cond     #   6:     goto   4_while_cond
++ l_test_3:
+-     jmp     l_test_1_while_cond     #   6:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   8:     goto   1_while_cond
+-     movl    $98, %eax               #   8:     assign v0 <- 98
++     movl    $98, %eax               #  10:     assign v0 <- 98
+-     movl    $99, %eax               #   9:     param  0 <- 99
++     movl    $99, %eax               #  11:     param  0 <- 99
+-     call    WriteChar               #  10:     call   WriteChar
++     call    WriteChar               #  12:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     call    dummyBOOLfunc           #  12:     call   t0 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  14:     call   t0 <- dummyBOOLfunc
+-     movzbl  -13(%ebp), %eax         #  13:     if     t0 = 1 goto 11_while_body
++     movzbl  -13(%ebp), %eax         #  15:     if     t0 = 1 goto 11_while_body
+-     jmp     l_test_9                #  14:     goto   9
++     jmp     l_test_9                #  16:     goto   9
+-     call    dummyINTfunc            #  16:     call   t1 <- dummyINTfunc
++     call    dummyINTfunc            #  18:     call   t1 <- dummyINTfunc
+-     jmp     l_test_13               #  18:     goto   13
++     jmp     l_test_13               #  20:     goto   13
+-     jmp     l_test_14_while_cond    #  19:     goto   14_while_cond
++     jmp     l_test_14_while_cond    #  21:     goto   14_while_cond
+-     movl    $1, %eax                #  21:     assign v1 <- 1
++     movl    $1, %eax                #  23:     assign v1 <- 1
+-     jmp     l_test_10_while_cond    #  22:     goto   10_while_cond
++     jmp     l_test_10_while_cond    #  24:     goto   10_while_cond

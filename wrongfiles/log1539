@@ -1,0 +1,18 @@
++     jmp     l_f0_15                 #  22:     goto   15
+-     movl    $37775, %eax            #  23:     return 37775
++     movl    $37775, %eax            #  24:     return 37775
+-     movl    $99, %eax               #  24:     if     99 < 98 goto 24_if_true
++     movl    $99, %eax               #  25:     if     99 < 98 goto 24_if_true
+-     jmp     l_f0_25_if_false        #  25:     goto   25_if_false
++     jmp     l_f0_25_if_false        #  26:     goto   25_if_false
+-     jmp     l_f0_23                 #  27:     goto   23
++     jmp     l_f0_23                 #  28:     goto   23
+-     jmp     l_f0_16_while_cond      #  30:     goto   16_while_cond
++     jmp     l_f0_16_while_cond      #  31:     goto   16_while_cond
++ l_f0_15:
+-     #-2453244(%ebp)2453124  [ $v4       <array 17 of <array 2 of <array 30 of <array 37 of <array 65 of <bool>>>>>> %ebp-2453244 ]
++     #   -2453244(%ebp)  2453124  [ $v4       <array 17 of <array 2 of <array 30 of <array 37 of <array 65 of <bool>>>>>> %ebp-2453244 ]
+-     #-28304148(%ebp)25850904  [ $v5       <array 64 of <array 51 of <array 6 of <array 60 of <array 22 of <char>>>>>> %ebp-28304148 ]
++     #   -28304148(%ebp)  25850904  [ $v5       <array 64 of <array 51 of <array 6 of <array 60 of <array 22 of <char>>>>>> %ebp-28304148 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              

@@ -1,0 +1,38 @@
++     jmp     l_f1_4_if_false         #   7:     goto   4_if_false
+-     movl    $47624, %eax            #   8:     return 47624
++     movl    $47624, %eax            #   9:     return 47624
+-     jmp     l_f1_2                  #   9:     goto   2
++     jmp     l_f1_2                  #  10:     goto   2
++ l_f1_4_if_false:
++     jmp     l_f2_10                 #  35:     goto   10
+-     movl    $1, %eax                #  35:     assign t19 <- 1
++     movl    $1, %eax                #  36:     assign t19 <- 1
+-     jmp     l_f2_10                 #  36:     goto   10
++     jmp     l_f2_11                 #  37:     goto   11
++ l_f2_10:
+-     movl    $0, %eax                #  37:     assign t19 <- 0
++     movl    $0, %eax                #  39:     assign t19 <- 0
+- l_f2_10:
++ l_f2_11:
+-     movzbl  -53(%ebp), %eax         #  39:     if     t19 # 1 goto 6_if_true
++     movzbl  -53(%ebp), %eax         #  41:     if     t19 # 1 goto 6_if_true
+-     jmp     l_f2_7_if_false         #  40:     goto   7_if_false
++     jmp     l_f2_7_if_false         #  42:     goto   7_if_false
+-     movl    $73485, %eax            #  42:     assign v3 <- 73485
++     movl    $73485, %eax            #  44:     assign v3 <- 73485
+-     jmp     l_f2_5                  #  43:     goto   5
++     jmp     l_f2_5                  #  45:     goto   5
+-     call    dummyCHARfunc           #  46:     call   t20 <- dummyCHARfunc
++     call    dummyCHARfunc           #  48:     call   t20 <- dummyCHARfunc
+-     movzbl  -55(%ebp), %eax         #  47:     return t20
++     movzbl  -55(%ebp), %eax         #  49:     return t20
++     jmp     l_test_28_if_false      #  39:     goto   28_if_false
+-     movl    $99, %eax               #  40:     if     99 # 98 goto 33_while_body
++     movl    $99, %eax               #  41:     if     99 # 98 goto 33_while_body
+-     jmp     l_test_31               #  41:     goto   31
++     jmp     l_test_31               #  42:     goto   31
+-     jmp     l_test_32_while_cond    #  43:     goto   32_while_cond
++     jmp     l_test_32_while_cond    #  44:     goto   32_while_cond
+-     jmp     l_test_26               #  45:     goto   26
++     jmp     l_test_26               #  46:     goto   26
++ l_test_28_if_false:

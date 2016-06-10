@@ -1121,6 +1121,7 @@ void CParser::varDecl(CAstScope *s, CSymProc *procedureSymbol) {
   const CType *varType;
   CSymtab *symbolTable = s->GetSymbolTable();
   CSymParam *symbol = NULL;
+  int paramCount = 0;
 
   // ident
   Consume(tIdent, &nextToken);
@@ -1140,6 +1141,7 @@ void CParser::varDecl(CAstScope *s, CSymProc *procedureSymbol) {
   int size = identTokens.size();
   
   if(procedureSymbol != NULL){
+    paramCount = procedureSymbol->GetNParams();
     varType = typep(NULL);
   }
   else {
@@ -1159,7 +1161,7 @@ void CParser::varDecl(CAstScope *s, CSymProc *procedureSymbol) {
     if(procedureSymbol != NULL) {
       // if var type is array, this is wrapped with pointer type.
       // because paramter of array should be pointer(reference) of array.
-      symbol = new CSymParam(i, identTokens[i].GetValue(), varType);
+      symbol = new CSymParam(paramCount + i, identTokens[i].GetValue(), varType);
       procedureSymbol->AddParam(symbol);
       symbolTable->AddSymbol(symbol);
     }

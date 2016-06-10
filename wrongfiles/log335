@@ -1,0 +1,50 @@
+-     #  -5240(%ebp)5208  [ $v5       <array 6 of <array 6 of <array 1 of <array 9 of <array 4 of <int>>>>>> %ebp-5240 ]
++     #   -5240(%ebp)  5208  [ $v5       <array 6 of <array 6 of <array 1 of <array 9 of <array 4 of <int>>>>>> %ebp-5240 ]
+-     #  -9800(%ebp)4560  [ $v6       <array 9 of <array 1 of <array 9 of <array 7 of <array 2 of <int>>>>>> %ebp-9800 ]
++     #   -9800(%ebp)  4560  [ $v6       <array 9 of <array 1 of <array 9 of <array 7 of <array 2 of <int>>>>>> %ebp-9800 ]
+-     movl    $97, %eax               #  14:     if     97 # 98 goto 10
++     movl    $97, %eax               #  14:     if     97 # 98 goto 11
+-     jne     l_f2_10                
++     jne     l_f2_11                
+-     jmp     l_f2_11                 #  15:     goto   11
++     jmp     l_f2_12                 #  15:     goto   12
+- l_f2_10:
++ l_f2_11:
+-     jmp     l_f2_12                 #  18:     goto   12
++     jmp     l_f2_13                 #  18:     goto   13
+- l_f2_11:
++ l_f2_12:
+- l_f2_12:
++ l_f2_13:
++     jmp     l_f2_16                 #  23:     goto   16
+-     movl    $1, %eax                #  23:     assign t14 <- 1
++     movl    $1, %eax                #  24:     assign t14 <- 1
+-     jmp     l_f2_16                 #  24:     goto   16
++     jmp     l_f2_17                 #  25:     goto   17
++ l_f2_16:
+-     movl    $0, %eax                #  25:     assign t14 <- 0
++     movl    $0, %eax                #  27:     assign t14 <- 0
+- l_f2_16:
++ l_f2_17:
+-     movzbl  -26(%ebp), %eax         #  27:     param  0 <- t14
++     movzbl  -26(%ebp), %eax         #  29:     param  0 <- t14
+-     call    f1                      #  28:     call   t15 <- f1
++     call    f1                      #  30:     call   t15 <- f1
+-     addl    $10, %esp              
++     addl    $16, %esp              
+-     movzbl  -27(%ebp), %eax         #  29:     if     t15 <= 99 goto 7
++     movzbl  -27(%ebp), %eax         #  31:     if     t15 <= 99 goto 7
+-     jmp     l_f2_8                  #  30:     goto   8
++     jmp     l_f2_8                  #  32:     goto   8
+-     movl    $1, %eax                #  32:     assign t16 <- 1
++     movl    $1, %eax                #  34:     assign t16 <- 1
+-     jmp     l_f2_9                  #  33:     goto   9
++     jmp     l_f2_9                  #  35:     goto   9
+-     movl    $0, %eax                #  35:     assign t16 <- 0
++     movl    $0, %eax                #  37:     assign t16 <- 0
+-     movzbl  -28(%ebp), %eax         #  37:     return t16
++     movzbl  -28(%ebp), %eax         #  39:     return t16
+-     call    dummyINTfunc            #  38:     call   t17 <- dummyINTfunc
++     call    dummyINTfunc            #  40:     call   t17 <- dummyINTfunc
+-     addl    $13, %esp              
++     addl    $16, %esp              

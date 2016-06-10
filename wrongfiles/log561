@@ -1,0 +1,6 @@
++     jmp     l_f0_29                 #  42:     goto   29
+-     call    dummyBOOLfunc           #  43:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  44:     call   t5 <- dummyBOOLfunc
+-     jmp     l_f0_30_while_cond      #  44:     goto   30_while_cond
++     jmp     l_f0_30_while_cond      #  45:     goto   30_while_cond
++ l_f0_29:

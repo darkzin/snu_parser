@@ -1,0 +1,77 @@
+-     jmp     l_f0_4                  #   0:     goto   4
++     jmp     l_f0_5                  #   0:     goto   5
++     jmp     l_f0_6                  #   1:     goto   6
+- l_f0_4:
++ l_f0_5:
+-     movl    $1, %eax                #   2:     assign t8 <- 1
++     movl    $1, %eax                #   3:     assign t8 <- 1
+-     jmp     l_f0_6                  #   3:     goto   6
++     jmp     l_f0_7                  #   4:     goto   7
++ l_f0_6:
+-     movl    $0, %eax                #   4:     assign t8 <- 0
++     movl    $0, %eax                #   6:     assign t8 <- 0
+- l_f0_6:
++ l_f0_7:
+-     movl    $1, %eax                #   6:     if     1 = t8 goto 1
++     movl    $1, %eax                #   8:     if     1 = t8 goto 1
+-     jmp     l_f0_2                  #   7:     goto   2
++     jmp     l_f0_2                  #   9:     goto   2
+-     movl    $1, %eax                #   9:     assign t9 <- 1
++     movl    $1, %eax                #  11:     assign t9 <- 1
+-     jmp     l_f0_3                  #  10:     goto   3
++     jmp     l_f0_3                  #  12:     goto   3
+-     movl    $0, %eax                #  12:     assign t9 <- 0
++     movl    $0, %eax                #  14:     assign t9 <- 0
+-     movzbl  -15(%ebp), %eax         #  14:     assign v1 <- t9
++     movzbl  -15(%ebp), %eax         #  16:     assign v1 <- t9
+-     call    dummyCHARfunc           #  15:     call   t10 <- dummyCHARfunc
++     call    dummyCHARfunc           #  17:     call   t10 <- dummyCHARfunc
+-     movl    $100, %eax              #  16:     if     100 <= t10 goto 13_if_true
++     movl    $100, %eax              #  18:     if     100 <= t10 goto 13_if_true
+-     jmp     l_f0_14_if_false        #  17:     goto   14_if_false
++     jmp     l_f0_14_if_false        #  19:     goto   14_if_false
+-     movl    $4480, %eax             #  19:     if     4480 < 33702 goto 17_if_true
++     movl    $4480, %eax             #  21:     if     4480 < 33702 goto 17_if_true
+-     jmp     l_f0_18_if_false        #  20:     goto   18_if_false
++     jmp     l_f0_18_if_false        #  22:     goto   18_if_false
+-     jmp     l_f0_16                 #  22:     goto   16
++     jmp     l_f0_16                 #  24:     goto   16
+-     jmp     l_f0_12                 #  25:     goto   12
++     jmp     l_f0_12                 #  27:     goto   12
+-     #1027851072(%ebp)-1027851112  [ $v4       <array 98 of <array 33 of <array 35 of <array 88 of <array 82 of <int>>>>>> %ebp+1027851072 ]
++     #   1027851076(%ebp)  -1027851112  [ $v4       <array 98 of <array 33 of <array 35 of <array 88 of <array 82 of <int>>>>>> %ebp+1027851076 ]
+-     pushl   %ebp                   
+-     movl    %esp, %ebp             
+-     pushl   %ebx                    # save callee saved registers
+-     pushl   %esi                   
++     pushl   %ebp                   
++     movl    %esp, %ebp             
++     pushl   %ebx                    # save callee saved registers
+-     pushl   %edi                   
++     pushl   %esi                   
++     pushl   %edi                   
+-     subl    $-1027851084, %esp      # make room for locals
++     subl    $-1027851088, %esp      # make room for locals
++     cld                             # memset local stack area to 0
++     xorl    %eax, %eax             
++     movl    $-256962772, %ecx      
++     mov     %esp, %edi             
++     rep     stosl                  
+-     movl    $5,1027851072(%ebp)     # local array 'v4': 5 dimensions
++     movl    $5,1027851076(%ebp)     # local array 'v4': 5 dimensions
+-     movl    $98,1027851076(%ebp)    #   dimension 1: 98 elements
++     movl    $98,1027851080(%ebp)    #   dimension 1: 98 elements
+-     movl    $33,1027851080(%ebp)    #   dimension 2: 33 elements
++     movl    $33,1027851084(%ebp)    #   dimension 2: 33 elements
+-     movl    $35,1027851084(%ebp)    #   dimension 3: 35 elements
++     movl    $35,1027851088(%ebp)    #   dimension 3: 35 elements
+-     movl    $88,1027851088(%ebp)    #   dimension 4: 88 elements
++     movl    $88,1027851092(%ebp)    #   dimension 4: 88 elements
+-     movl    $82,1027851092(%ebp)    #   dimension 5: 82 elements
++     movl    $82,1027851096(%ebp)    #   dimension 5: 82 elements
+-     leal    1027851072(%ebp), %eax  #   9:     &()    t11 <- v4
++     leal    1027851076(%ebp), %eax  #   9:     &()    t11 <- v4
+-     addl    $5, %esp               
++     addl    $8, %esp               
+-     addl    $-1027851084, %esp      # remove locals
++     addl    $-1027851088, %esp      # remove locals

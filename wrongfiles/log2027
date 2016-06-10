@@ -1,0 +1,13 @@
++     jmp     l_f0_3_if_false         #   2:     goto   3_if_false
++     jmp     l_f0_3_if_false         #   3:     goto   3_if_false
++     jmp     l_f0_3_if_false         #   4:     goto   3_if_false
++     jmp     l_f0_3_if_false         #   5:     goto   3_if_false
+-     jmp     l_f0_10_if_false        #   2:     goto   10_if_false
++     jmp     l_f0_10_if_false        #   6:     goto   10_if_false
+-     jmp     l_f0_8                  #   3:     goto   8
++     jmp     l_f0_8                  #   7:     goto   8
+-     jmp     l_f0_1                  #   6:     goto   1
++     jmp     l_f0_1                  #  10:     goto   1
++ l_f0_3_if_false:
+-     call    dummyCHARfunc           #   8:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  13:     call   t3 <- dummyCHARfunc

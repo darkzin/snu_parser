@@ -1,0 +1,79 @@
++     jmp     l_f2_4                  #   0:     goto   4
++     jmp     l_f2_4                  #   1:     goto   4
++ l_f2_4:
+-     movl    $1, %eax                #   0:     assign t3 <- 1
++     movl    $1, %eax                #   3:     assign t3 <- 1
+-     jmp     l_f2_3                  #   1:     goto   3
++     jmp     l_f2_3                  #   4:     goto   3
+-     movl    $0, %eax                #   2:     assign t3 <- 0
++     movl    $0, %eax                #   5:     assign t3 <- 0
+-     movzbl  -37(%ebp), %eax         #   4:     return t3
++     movzbl  -37(%ebp), %eax         #   7:     return t3
+-     movl    $52212, %eax            #   5:     sub    t4 <- 52212, 73409
++     movl    $52212, %eax            #   8:     sub    t4 <- 52212, 73409
+-     movl    $18942, %eax            #   6:     add    t5 <- 18942, 34042
++     movl    $18942, %eax            #   9:     add    t5 <- 18942, 34042
+-     movl    -48(%ebp), %eax         #   7:     add    t6 <- t5, 52097
++     movl    -48(%ebp), %eax         #  10:     add    t6 <- t5, 52097
+-     movl    -52(%ebp), %eax         #   8:     sub    t7 <- t6, 43591
++     movl    -52(%ebp), %eax         #  11:     sub    t7 <- t6, 43591
+-     movl    -56(%ebp), %eax         #   9:     sub    t8 <- t7, 70362
++     movl    -56(%ebp), %eax         #  12:     sub    t8 <- t7, 70362
+-     movl    -60(%ebp), %eax         #  10:     sub    t9 <- t8, 23045
++     movl    -60(%ebp), %eax         #  13:     sub    t9 <- t8, 23045
+-     movl    -64(%ebp), %eax         #  11:     add    t10 <- t9, 80196
++     movl    -64(%ebp), %eax         #  14:     add    t10 <- t9, 80196
+-     movl    -16(%ebp), %eax         #  12:     add    t11 <- t10, 35596
++     movl    -16(%ebp), %eax         #  15:     add    t11 <- t10, 35596
+-     movl    -20(%ebp), %eax         #  13:     add    t12 <- t11, 28558
++     movl    -20(%ebp), %eax         #  16:     add    t12 <- t11, 28558
+-     movl    -24(%ebp), %eax         #  14:     sub    t13 <- t12, 27572
++     movl    -24(%ebp), %eax         #  17:     sub    t13 <- t12, 27572
+-     movl    -44(%ebp), %eax         #  15:     if     t4 # t13 goto 11
++     movl    -44(%ebp), %eax         #  18:     if     t4 # t13 goto 11
+-     jmp     l_f2_12                 #  16:     goto   12
++     jmp     l_f2_12                 #  19:     goto   12
+-     movl    $1, %eax                #  18:     assign t14 <- 1
++     movl    $1, %eax                #  21:     assign t14 <- 1
+-     jmp     l_f2_13                 #  19:     goto   13
++     jmp     l_f2_13                 #  22:     goto   13
+-     movl    $0, %eax                #  21:     assign t14 <- 0
++     movl    $0, %eax                #  24:     assign t14 <- 0
+-     movzbl  -29(%ebp), %eax         #  23:     return t14
++     movzbl  -29(%ebp), %eax         #  26:     return t14
+-     jmp     l_f2_15                 #  25:     goto   15
++     jmp     l_f2_15                 #  28:     goto   15
+-     jmp     l_f2_18                 #  26:     goto   18
++     jmp     l_f2_18                 #  29:     goto   18
+-     movl    $99, %eax               #  28:     if     99 <= 99 goto 22
++     movl    $99, %eax               #  31:     if     99 <= 99 goto 22
+-     jmp     l_f2_23                 #  29:     goto   23
++     jmp     l_f2_23                 #  32:     goto   23
+-     movl    $1, %eax                #  31:     assign t15 <- 1
++     movl    $1, %eax                #  34:     assign t15 <- 1
+-     jmp     l_f2_24                 #  32:     goto   24
++     jmp     l_f2_24                 #  35:     goto   24
+-     movl    $0, %eax                #  34:     assign t15 <- 0
++     movl    $0, %eax                #  37:     assign t15 <- 0
+-     movzbl  -30(%ebp), %eax         #  36:     return t15
++     movzbl  -30(%ebp), %eax         #  39:     return t15
+-     movl    $0, %eax                #  37:     assign v2 <- 0
++     movl    $0, %eax                #  40:     assign v2 <- 0
+-     movl    $98, %eax               #  38:     if     98 <= 99 goto 28_if_true
++     movl    $98, %eax               #  41:     if     98 <= 99 goto 28_if_true
+-     jmp     l_f2_29_if_false        #  39:     goto   29_if_false
++     jmp     l_f2_29_if_false        #  42:     goto   29_if_false
+-     jmp     l_f2_27                 #  41:     goto   27
++     jmp     l_f2_27                 #  44:     goto   27
+-     call    ReadInt                 #  44:     call   t16 <- ReadInt
++     call    ReadInt                 #  47:     call   t16 <- ReadInt
+-     movl    $0, %eax                #  45:     assign v2 <- 0
++     movl    $0, %eax                #  48:     assign v2 <- 0
+-     movl    $99, %eax               #  47:     if     99 < 98 goto 35_while_body
++     movl    $99, %eax               #  50:     if     99 < 98 goto 35_while_body
+-     jmp     l_f2_33                 #  48:     goto   33
++     jmp     l_f2_33                 #  51:     goto   33
+-     jmp     l_f2_34_while_cond      #  50:     goto   34_while_cond
++     jmp     l_f2_34_while_cond      #  53:     goto   34_while_cond
+-     jmp     l_f2_16_while_cond      #  52:     goto   16_while_cond
++     jmp     l_f2_16_while_cond      #  55:     goto   16_while_cond

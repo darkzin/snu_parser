@@ -1,0 +1,28 @@
++     jmp     l_f0_2                  #  30:     goto   2
+-     movl    $27705, %eax            #  31:     if     27705 # 86928 goto 8_while_body
++     movl    $27705, %eax            #  32:     if     27705 # 86928 goto 8_while_body
+-     jmp     l_f0_6                  #  32:     goto   6
++     jmp     l_f0_6                  #  33:     goto   6
+-     jmp     l_f0_7_while_cond       #  34:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  35:     goto   7_while_cond
+-     jmp     l_f0_3_while_cond       #  36:     goto   3_while_cond
++     jmp     l_f0_3_while_cond       #  37:     goto   3_while_cond
++ l_f0_2:
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f2_1                  #   2:     goto   1
+-     call    ReadInt                 #   2:     call   t8 <- ReadInt
++     call    ReadInt                 #   3:     call   t8 <- ReadInt
+-     jmp     l_f2_2_while_cond       #   3:     goto   2_while_cond
++     jmp     l_f2_2_while_cond       #   4:     goto   2_while_cond
++ l_f2_1:
+-     movl    $99, %eax               #   4:     if     99 > 97 goto 8_if_true
++     movl    $99, %eax               #   6:     if     99 > 97 goto 8_if_true
+-     jmp     l_f2_9_if_false         #   5:     goto   9_if_false
++     jmp     l_f2_9_if_false         #   7:     goto   9_if_false
+-     jmp     l_f2_11                 #   7:     goto   11
++     jmp     l_f2_11                 #   9:     goto   11
+-     movl    $98, %eax               #   9:     assign v3 <- 98
++     movl    $98, %eax               #  11:     assign v3 <- 98
+-     jmp     l_f2_7                  #  10:     goto   7
++     jmp     l_f2_7                  #  12:     goto   7

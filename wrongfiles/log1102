@@ -1,0 +1,39 @@
++     jmp     l_f1_0                  #   3:     goto   0
+-     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   5:     goto   1_while_cond
++ l_f1_0:
+-     movl    $80596, %eax            #   6:     sub    t6 <- 80596, 74989
++     movl    $80596, %eax            #   8:     sub    t6 <- 80596, 74989
+-     movl    -16(%ebp), %eax         #   7:     return t6
++     movl    -16(%ebp), %eax         #   9:     return t6
+-     jmp     l_f1_8_while_cond       #   8:     goto   8_while_cond
++     jmp     l_f1_8_while_cond       #  10:     goto   8_while_cond
+-     call    dummyCHARfunc           #   9:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  11:     call   t7 <- dummyCHARfunc
+-     movl    $100, %eax              #  10:     if     100 # t7 goto 12
++     movl    $100, %eax              #  12:     if     100 # t7 goto 12
+-     jmp     l_f1_13                 #  11:     goto   13
++     jmp     l_f1_13                 #  13:     goto   13
+-     movl    $1, %eax                #  13:     assign t8 <- 1
++     movl    $1, %eax                #  15:     assign t8 <- 1
+-     jmp     l_f1_14                 #  14:     goto   14
++     jmp     l_f1_14                 #  16:     goto   14
+-     movl    $0, %eax                #  16:     assign t8 <- 0
++     movl    $0, %eax                #  18:     assign t8 <- 0
+-     movzbl  -18(%ebp), %eax         #  18:     assign v2 <- t8
++     movzbl  -18(%ebp), %eax         #  20:     assign v2 <- t8
++     jmp     l_f2_9_if_false         #   9:     goto   9_if_false
+-     call    dummyBOOLfunc           #   9:     call   t7 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  10:     call   t7 <- dummyBOOLfunc
+-     movzbl  -17(%ebp), %eax         #  10:     if     t7 = 1 goto 8_if_true
++     movzbl  -17(%ebp), %eax         #  11:     if     t7 = 1 goto 8_if_true
+-     jmp     l_f2_9_if_false         #  11:     goto   9_if_false
++     jmp     l_f2_9_if_false         #  12:     goto   9_if_false
+-     jmp     l_f2_7                  #  13:     goto   7
++     jmp     l_f2_7                  #  14:     goto   7
+-     movl    $80185, %eax            #  16:     sub    t8 <- 80185, 28707
++     movl    $80185, %eax            #  17:     sub    t8 <- 80185, 28707
+-     movl    -24(%ebp), %eax         #  17:     sub    t9 <- t8, 22603
++     movl    -24(%ebp), %eax         #  18:     sub    t9 <- t8, 22603
+-     movl    -28(%ebp), %eax         #  18:     return t9
++     movl    -28(%ebp), %eax         #  19:     return t9

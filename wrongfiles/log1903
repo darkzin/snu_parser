@@ -1,0 +1,42 @@
++     jmp     l_f0_5                  #   0:     goto   5
+-     movl    $1, %eax                #   0:     assign t2 <- 1
++     movl    $1, %eax                #   1:     assign t2 <- 1
+-     jmp     l_f0_5                  #   1:     goto   5
++     jmp     l_f0_6                  #   2:     goto   6
++ l_f0_5:
+-     movl    $0, %eax                #   2:     assign t2 <- 0
++     movl    $0, %eax                #   4:     assign t2 <- 0
+- l_f0_5:
++ l_f0_6:
+-     movl    $1, %eax                #   4:     if     1 # t2 goto 1_if_true
++     movl    $1, %eax                #   6:     if     1 # t2 goto 1_if_true
+-     jmp     l_f0_2_if_false         #   5:     goto   2_if_false
++     jmp     l_f0_2_if_false         #   7:     goto   2_if_false
+-     call    ReadInt                 #   7:     call   t3 <- ReadInt
++     call    ReadInt                 #   9:     call   t3 <- ReadInt
+-     movl    -20(%ebp), %eax         #   8:     param  0 <- t3
++     movl    -20(%ebp), %eax         #  10:     param  0 <- t3
+-     call    WriteInt                #   9:     call   WriteInt
++     call    WriteInt                #  11:     call   WriteInt
+-     jmp     l_f0_0                  #  10:     goto   0
++     jmp     l_f0_0                  #  12:     goto   0
++     jmp     l_f0_9                  #  16:     goto   9
+-     jmp     l_f0_16_if_false        #  14:     goto   16_if_false
++     jmp     l_f0_16_if_false        #  17:     goto   16_if_false
+-     jmp     l_f0_14                 #  15:     goto   14
++     jmp     l_f0_14                 #  18:     goto   14
+-     jmp     l_f0_10_while_cond      #  18:     goto   10_while_cond
++     jmp     l_f0_10_while_cond      #  21:     goto   10_while_cond
++ l_f0_9:
+-     call    WriteLn                 #  20:     call   WriteLn
++     call    WriteLn                 #  24:     call   WriteLn
+-     call    dummyCHARfunc           #  21:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  25:     call   t4 <- dummyCHARfunc
+-     jmp     l_f0_24_if_false        #  22:     goto   24_if_false
++     jmp     l_f0_24_if_false        #  26:     goto   24_if_false
+-     jmp     l_f0_22                 #  23:     goto   22
++     jmp     l_f0_22                 #  27:     goto   22
+-     movl    $68654, %eax            #  26:     assign v1 <- 68654
++     movl    $68654, %eax            #  30:     assign v1 <- 68654
+-     jmp     l_f0_18_while_cond      #  27:     goto   18_while_cond
++     jmp     l_f0_18_while_cond      #  31:     goto   18_while_cond

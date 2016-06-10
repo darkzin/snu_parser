@@ -1,0 +1,250 @@
++     jmp     l_f0_9                  #  16:     goto   9
+-     jmp     l_f0_10_while_cond      #  17:     goto   10_while_cond
++     jmp     l_f0_10_while_cond      #  18:     goto   10_while_cond
++ l_f0_9:
+-     movl    $97, %eax               #  18:     assign v5 <- 97
++     movl    $97, %eax               #  20:     assign v5 <- 97
+-     #    -80(%ebp)   4  [ $t26      <int> %ebp-80 ]
+-     #    -84(%ebp)   4  [ $t27      <int> %ebp-84 ]
+-     #    -88(%ebp)   4  [ $t28      <int> %ebp-88 ]
+-     #    -92(%ebp)   4  [ $t29      <int> %ebp-92 ]
+-     #    -93(%ebp)   1  [ $t30      <bool> %ebp-93 ]
++     #    -77(%ebp)   1  [ $t26      <bool> %ebp-77 ]
+-     #   -100(%ebp)   4  [ $t31      <ptr(4) to <array 58 of <array 36 of <array 96 of <array 55 of <array 39 of <bool>>>>>>> %ebp-100 ]
++     #    -84(%ebp)   4  [ $t27      <ptr(4) to <array 58 of <array 36 of <array 96 of <array 55 of <array 39 of <bool>>>>>>> %ebp-84 ]
+-     #   -104(%ebp)   4  [ $t32      <ptr(4) to <array 63 of <array 81 of <array 85 of <array 2 of <array 3 of <int>>>>>>> %ebp-104 ]
++     #    -88(%ebp)   4  [ $t28      <ptr(4) to <array 63 of <array 81 of <array 85 of <array 2 of <array 3 of <int>>>>>>> %ebp-88 ]
+-     #   -105(%ebp)   1  [ $t33      <char> %ebp-105 ]
++     #    -89(%ebp)   1  [ $t29      <char> %ebp-89 ]
+-     #   -112(%ebp)   4  [ $t6       <int> %ebp-112 ]
++     #    -96(%ebp)   4  [ $t6       <int> %ebp-96 ]
+-     #   -116(%ebp)   4  [ $t7       <int> %ebp-116 ]
++     #   -100(%ebp)   4  [ $t7       <int> %ebp-100 ]
+-     #   -120(%ebp)   4  [ $t8       <int> %ebp-120 ]
++     #   -104(%ebp)   4  [ $t8       <int> %ebp-104 ]
+-     #   -124(%ebp)   4  [ $t9       <int> %ebp-124 ]
++     #   -108(%ebp)   4  [ $t9       <int> %ebp-108 ]
+-     #   -125(%ebp)   1  [ $v6       <char> %ebp-125 ]
++     #   -109(%ebp)   1  [ $v6       <char> %ebp-109 ]
+-     #-10410272(%ebp)10410144  [ $v7       <array 63 of <array 81 of <array 85 of <array 2 of <array 3 of <int>>>>>> %ebp-10410272 ]
++     #   -10410256(%ebp)  10410144  [ $v7       <array 63 of <array 81 of <array 85 of <array 2 of <array 3 of <int>>>>>> %ebp-10410256 ]
+-     #-440371256(%ebp)429960984  [ $v8       <array 58 of <array 36 of <array 96 of <array 55 of <array 39 of <bool>>>>>> %ebp-440371256 ]
++     #   -440371240(%ebp)  429960984  [ $v8       <array 58 of <array 36 of <array 96 of <array 55 of <array 39 of <bool>>>>>> %ebp-440371240 ]
+-     pushl   %ebp                   
+-     movl    %esp, %ebp             
+-     pushl   %ebx                    # save callee saved registers
+-     pushl   %esi                   
++     pushl   %ebp                   
++     movl    %esp, %ebp             
++     pushl   %ebx                    # save callee saved registers
+-     pushl   %edi                   
++     pushl   %esi                   
++     pushl   %edi                   
+-     subl    $440371244, %esp        # make room for locals
++     subl    $440371228, %esp        # make room for locals
+-     movl    $110092811, %ecx       
++     movl    $110092807, %ecx       
+-     movl    $5,-10410272(%ebp)      # local array 'v7': 5 dimensions
++     movl    $5,-10410256(%ebp)      # local array 'v7': 5 dimensions
+-     movl    $63,-10410268(%ebp)     #   dimension 1: 63 elements
++     movl    $63,-10410252(%ebp)     #   dimension 1: 63 elements
+-     movl    $81,-10410264(%ebp)     #   dimension 2: 81 elements
++     movl    $81,-10410248(%ebp)     #   dimension 2: 81 elements
+-     movl    $85,-10410260(%ebp)     #   dimension 3: 85 elements
++     movl    $85,-10410244(%ebp)     #   dimension 3: 85 elements
+-     movl    $2,-10410256(%ebp)      #   dimension 4: 2 elements
++     movl    $2,-10410240(%ebp)      #   dimension 4: 2 elements
+-     movl    $3,-10410252(%ebp)      #   dimension 5: 3 elements
++     movl    $3,-10410236(%ebp)      #   dimension 5: 3 elements
+-     movl    $5,-440371256(%ebp)     # local array 'v8': 5 dimensions
++     movl    $5,-440371240(%ebp)     # local array 'v8': 5 dimensions
+-     movl    $58,-440371252(%ebp)    #   dimension 1: 58 elements
++     movl    $58,-440371236(%ebp)    #   dimension 1: 58 elements
+-     movl    $36,-440371248(%ebp)    #   dimension 2: 36 elements
++     movl    $36,-440371232(%ebp)    #   dimension 2: 36 elements
+-     movl    $96,-440371244(%ebp)    #   dimension 3: 96 elements
++     movl    $96,-440371228(%ebp)    #   dimension 3: 96 elements
+-     movl    $55,-440371240(%ebp)    #   dimension 4: 55 elements
++     movl    $55,-440371224(%ebp)    #   dimension 4: 55 elements
+-     movl    $39,-440371236(%ebp)    #   dimension 5: 39 elements
++     movl    $39,-440371220(%ebp)    #   dimension 5: 39 elements
+-     movb    %al, -125(%ebp)        
++     movb    %al, -109(%ebp)        
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     movl    %eax, -112(%ebp)       
++     movl    %eax, -96(%ebp)        
+-     movl    -112(%ebp), %eax        #  11:     div    t7 <- t6, 32614
++     movl    -96(%ebp), %eax         #  11:     div    t7 <- t6, 32614
+-     movl    %eax, -116(%ebp)       
++     movl    %eax, -100(%ebp)       
+-     movl    -116(%ebp), %eax        #  12:     mul    t8 <- t7, 89085
++     movl    -100(%ebp), %eax        #  12:     mul    t8 <- t7, 89085
+-     movl    %eax, -120(%ebp)       
++     movl    %eax, -104(%ebp)       
+-     movl    -120(%ebp), %ebx       
++     movl    -104(%ebp), %ebx       
+-     movl    %eax, -124(%ebp)       
++     movl    %eax, -108(%ebp)       
+-     movl    $36562, %eax            #  17:     div    t12 <- 36562, 95846
+-     movl    $95846, %ebx           
+-     cdq                            
+-     idivl   %ebx                   
+-     movl    %eax, -24(%ebp)        
+-     movl    -24(%ebp), %eax         #  18:     div    t13 <- t12, 32614
+-     movl    $32614, %ebx           
+-     cdq                            
+-     idivl   %ebx                   
+-     movl    %eax, -28(%ebp)        
+-     movl    -28(%ebp), %eax         #  19:     mul    t14 <- t13, 89085
+-     movl    $89085, %ebx           
+-     imull   %ebx                   
+-     movl    %eax, -32(%ebp)        
+-     movl    $28910, %eax            #  20:     sub    t15 <- 28910, t14
+-     movl    -32(%ebp), %ebx        
+-     subl    %ebx, %eax             
+-     movl    %eax, -36(%ebp)        
+-     movl    -124(%ebp), %eax        #  21:     mul    t11 <- t9, t10
++     movl    -108(%ebp), %eax        #  17:     mul    t11 <- t9, t10
+-     movl    -20(%ebp), %eax         #  22:     add    t16 <- t11, 21004
++     movl    -20(%ebp), %eax         #  18:     add    t12 <- t11, 21004
+-     movl    %eax, -40(%ebp)        
++     movl    %eax, -24(%ebp)        
+-     movl    $3, %eax                #  23:     param  1 <- 3
++     movl    $3, %eax                #  19:     param  1 <- 3
+-     movl    20(%ebp), %eax          #  24:     param  0 <- v5
++     movl    20(%ebp), %eax          #  20:     param  0 <- v5
+-     call    DIM                     #  25:     call   t17 <- DIM
++     call    DIM                     #  21:     call   t13 <- DIM
+-     movl    %eax, -44(%ebp)        
++     movl    %eax, -28(%ebp)        
+-     movl    -40(%ebp), %eax         #  26:     mul    t18 <- t16, t17
++     movl    -24(%ebp), %eax         #  22:     mul    t14 <- t12, t13
+-     movl    -44(%ebp), %ebx        
++     movl    -28(%ebp), %ebx        
+-     movl    %eax, -48(%ebp)        
++     movl    %eax, -32(%ebp)        
+-     movl    -48(%ebp), %eax         #  27:     add    t19 <- t18, 47370
++     movl    -32(%ebp), %eax         #  23:     add    t15 <- t14, 47370
+-     movl    %eax, -52(%ebp)        
++     movl    %eax, -36(%ebp)        
+-     movl    $4, %eax                #  28:     param  1 <- 4
++     movl    $4, %eax                #  24:     param  1 <- 4
+-     movl    20(%ebp), %eax          #  29:     param  0 <- v5
++     movl    20(%ebp), %eax          #  25:     param  0 <- v5
+-     call    DIM                     #  30:     call   t20 <- DIM
++     call    DIM                     #  26:     call   t16 <- DIM
+-     movl    %eax, -56(%ebp)        
++     movl    %eax, -40(%ebp)        
+-     movl    -52(%ebp), %eax         #  31:     mul    t21 <- t19, t20
++     movl    -36(%ebp), %eax         #  27:     mul    t17 <- t15, t16
+-     movl    -56(%ebp), %ebx        
++     movl    -40(%ebp), %ebx        
+-     movl    %eax, -60(%ebp)        
++     movl    %eax, -44(%ebp)        
+-     movl    -60(%ebp), %eax         #  32:     add    t22 <- t21, 52941
++     movl    -44(%ebp), %eax         #  28:     add    t18 <- t17, 52941
+-     movl    %eax, -64(%ebp)        
++     movl    %eax, -48(%ebp)        
+-     movl    $5, %eax                #  33:     param  1 <- 5
++     movl    $5, %eax                #  29:     param  1 <- 5
+-     movl    20(%ebp), %eax          #  34:     param  0 <- v5
++     movl    20(%ebp), %eax          #  30:     param  0 <- v5
+-     call    DIM                     #  35:     call   t23 <- DIM
++     call    DIM                     #  31:     call   t19 <- DIM
+-     movl    %eax, -68(%ebp)        
++     movl    %eax, -52(%ebp)        
+-     movl    -64(%ebp), %eax         #  36:     mul    t24 <- t22, t23
++     movl    -48(%ebp), %eax         #  32:     mul    t20 <- t18, t19
+-     movl    -68(%ebp), %ebx        
++     movl    -52(%ebp), %ebx        
+-     movl    %eax, -72(%ebp)        
++     movl    %eax, -56(%ebp)        
+-     movl    -72(%ebp), %eax         #  37:     add    t25 <- t24, 92039
++     movl    -56(%ebp), %eax         #  33:     add    t21 <- t20, 92039
+-     movl    %eax, -76(%ebp)        
++     movl    %eax, -60(%ebp)        
+-     movl    -76(%ebp), %eax         #  38:     mul    t26 <- t25, 1
++     movl    -60(%ebp), %eax         #  34:     mul    t22 <- t21, 1
+-     movl    %eax, -80(%ebp)        
++     movl    %eax, -64(%ebp)        
+-     movl    20(%ebp), %eax          #  39:     param  0 <- v5
++     movl    20(%ebp), %eax          #  35:     param  0 <- v5
+-     call    DOFS                    #  40:     call   t27 <- DOFS
++     call    DOFS                    #  36:     call   t23 <- DOFS
+-     movl    %eax, -84(%ebp)        
++     movl    %eax, -68(%ebp)        
+-     movl    -80(%ebp), %eax         #  41:     add    t28 <- t26, t27
++     movl    -64(%ebp), %eax         #  37:     add    t24 <- t22, t23
+-     movl    -84(%ebp), %ebx        
++     movl    -68(%ebp), %ebx        
+-     movl    %eax, -88(%ebp)        
++     movl    %eax, -72(%ebp)        
+-     movl    20(%ebp), %eax          #  42:     add    t29 <- v5, t28
++     movl    20(%ebp), %eax          #  38:     add    t25 <- v5, t24
+-     movl    -88(%ebp), %ebx        
++     movl    -72(%ebp), %ebx        
+-     movl    %eax, -92(%ebp)        
++     movl    %eax, -76(%ebp)        
+-     movl    $1, %eax                #  43:     assign @t29 <- 1
++     movl    $1, %eax                #  39:     assign @t25 <- 1
+-     movl    -92(%ebp), %edi        
++     movl    -76(%ebp), %edi        
+-     jmp     l_f1_11_if_false        #  44:     goto   11_if_false
++     jmp     l_f1_11_if_false        #  40:     goto   11_if_false
+-     jmp     l_f1_12                 #  45:     goto   12
++     jmp     l_f1_12                 #  41:     goto   12
+-     movl    $99, %eax               #  47:     param  3 <- 99
++     movl    $99, %eax               #  43:     param  3 <- 99
+-     movl    $4973, %eax             #  48:     if     4973 = 97041 goto 16
++     movl    $4973, %eax             #  44:     if     4973 = 97041 goto 16
+-     jmp     l_f1_17                 #  49:     goto   17
++     jmp     l_f1_17                 #  45:     goto   17
+-     movl    $1, %eax                #  51:     assign t30 <- 1
++     movl    $1, %eax                #  47:     assign t26 <- 1
+-     movb    %al, -93(%ebp)         
++     movb    %al, -77(%ebp)         
+-     jmp     l_f1_18                 #  52:     goto   18
++     jmp     l_f1_18                 #  48:     goto   18
+-     movl    $0, %eax                #  54:     assign t30 <- 0
++     movl    $0, %eax                #  50:     assign t26 <- 0
+-     movb    %al, -93(%ebp)         
++     movb    %al, -77(%ebp)         
+-     movzbl  -93(%ebp), %eax         #  56:     param  2 <- t30
++     movzbl  -77(%ebp), %eax         #  52:     param  2 <- t26
+-     leal    -440371256(%ebp), %eax  #  57:     &()    t31 <- v8
++     leal    -440371240(%ebp), %eax  #  53:     &()    t27 <- v8
+-     movl    %eax, -100(%ebp)       
+-     movl    -100(%ebp), %eax        #  58:     param  1 <- t31
+-     pushl   %eax                   
+-     leal    -10410272(%ebp), %eax   #  59:     &()    t32 <- v7
+-     movl    %eax, -104(%ebp)       
++     movl    %eax, -84(%ebp)        
++     movl    -84(%ebp), %eax         #  54:     param  1 <- t27
++     pushl   %eax                   
++     leal    -10410256(%ebp), %eax   #  55:     &()    t28 <- v7
++     movl    %eax, -88(%ebp)        
+-     movl    -104(%ebp), %eax        #  60:     param  0 <- t32
++     movl    -88(%ebp), %eax         #  56:     param  0 <- t28
+-     call    f0                      #  61:     call   t33 <- f0
++     call    f0                      #  57:     call   t29 <- f0
+-     addl    $10, %esp              
++     addl    $16, %esp              
+-     movb    %al, -105(%ebp)        
++     movb    %al, -89(%ebp)         
+-     jmp     l_f1_9                  #  62:     goto   9
++     jmp     l_f1_9                  #  58:     goto   9
+-     addl    $440371244, %esp        # remove locals
++     addl    $440371228, %esp        # remove locals
+-     addl    $10, %esp              
++     addl    $16, %esp              
++     jmp     l_test_14               #  22:     goto   14
+-     movl    $1, %eax                #  22:     assign t5 <- 1
++     movl    $1, %eax                #  23:     assign t5 <- 1
+-     jmp     l_test_15               #  23:     goto   15
++     jmp     l_test_15               #  24:     goto   15
++ l_test_14:
+-     movl    $0, %eax                #  24:     assign t5 <- 0
++     movl    $0, %eax                #  26:     assign t5 <- 0
+-     movzbl  -27(%ebp), %eax         #  26:     assign v0 <- t5
++     movzbl  -27(%ebp), %eax         #  28:     assign v0 <- t5

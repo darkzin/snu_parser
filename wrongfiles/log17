@@ -1,0 +1,19 @@
++     jmp     l_f0_1                  #   2:     goto   1
+-     jmp     l_f0_2_while_cond       #   3:     goto   2_while_cond
++     jmp     l_f0_2_while_cond       #   4:     goto   2_while_cond
++ l_f0_1:
++     jmp     l_f1_9                  #  15:     goto   9
++     jmp     l_f1_9                  #  16:     goto   9
+-     movl    $98, %eax               #  16:     if     98 # 100 goto 15_while_body
++     movl    $98, %eax               #  18:     if     98 # 100 goto 15_while_body
+-     jmp     l_f1_13                 #  17:     goto   13
++     jmp     l_f1_13                 #  19:     goto   13
+-     jmp     l_f1_14_while_cond      #  19:     goto   14_while_cond
++     jmp     l_f1_14_while_cond      #  21:     goto   14_while_cond
+-     jmp     l_f1_17                 #  21:     goto   17
++     jmp     l_f1_17                 #  23:     goto   17
+-     movl    $73965, %eax            #  23:     return 73965
++     movl    $73965, %eax            #  25:     return 73965
+-     jmp     l_f1_10_while_cond      #  24:     goto   10_while_cond
++     jmp     l_f1_10_while_cond      #  26:     goto   10_while_cond
++ l_f1_9:

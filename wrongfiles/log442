@@ -1,0 +1,10 @@
++     jmp     l_f2_10_if_false        #  15:     goto   10_if_false
+-     jmp     l_f2_8                  #  16:     goto   8
++     jmp     l_f2_8                  #  17:     goto   8
++ l_f2_10_if_false:
+-     jmp     l_f2_5_while_cond       #  18:     goto   5_while_cond
++     jmp     l_f2_5_while_cond       #  20:     goto   5_while_cond
+-     call    dummyINTfunc            #  20:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  22:     call   t6 <- dummyINTfunc
+-     addl    $1, %esp               
++     addl    $4, %esp               

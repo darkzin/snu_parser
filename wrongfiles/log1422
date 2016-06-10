@@ -1,0 +1,29 @@
++     jmp     l_f0_10                 #  10:     goto   10
++     jmp     l_f0_10                 #  11:     goto   10
+-     movl    $1, %eax                #  10:     assign t5 <- 1
++     movl    $1, %eax                #  12:     assign t5 <- 1
+-     jmp     l_f0_11                 #  11:     goto   11
++     jmp     l_f0_11                 #  13:     goto   11
++ l_f0_10:
+-     movl    $0, %eax                #  12:     assign t5 <- 0
++     movl    $0, %eax                #  15:     assign t5 <- 0
+-     movzbl  -14(%ebp), %eax         #  14:     return t5
++     movzbl  -14(%ebp), %eax         #  17:     return t5
+-     jmp     l_f0_1_while_cond       #  15:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #  18:     goto   1_while_cond
+-     call    dummyCHARfunc           #  16:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #  19:     call   t6 <- dummyCHARfunc
+-     call    dummyCHARfunc           #  17:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  20:     call   t7 <- dummyCHARfunc
+-     movzbl  -15(%ebp), %eax         #  18:     if     t6 <= t7 goto 14_if_true
++     movzbl  -15(%ebp), %eax         #  21:     if     t6 <= t7 goto 14_if_true
+-     jmp     l_f0_15_if_false        #  19:     goto   15_if_false
++     jmp     l_f0_15_if_false        #  22:     goto   15_if_false
+-     jmp     l_f0_13                 #  21:     goto   13
++     jmp     l_f0_13                 #  24:     goto   13
+-     leal    _str_1, %eax            #  24:     &()    t8 <- _str_1
++     leal    _str_1, %eax            #  27:     &()    t8 <- _str_1
+-     movl    -20(%ebp), %eax         #  25:     param  0 <- t8
++     movl    -20(%ebp), %eax         #  28:     param  0 <- t8
+-     call    WriteStr                #  26:     call   WriteStr
++     call    WriteStr                #  29:     call   WriteStr

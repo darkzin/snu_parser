@@ -1,0 +1,18 @@
++     jmp     l_f0_4                  #   3:     goto   4
+-     movl    $1, %eax                #   4:     assign t5 <- 1
++     movl    $1, %eax                #   5:     assign t5 <- 1
+-     jmp     l_f0_5                  #   5:     goto   5
++     jmp     l_f0_5                  #   6:     goto   5
++ l_f0_4:
+-     movl    $0, %eax                #   6:     assign t5 <- 0
++     movl    $0, %eax                #   8:     assign t5 <- 0
+-     movzbl  -21(%ebp), %eax         #   8:     assign v0 <- t5
++     movzbl  -21(%ebp), %eax         #  10:     assign v0 <- t5
+-     # -18204(%ebp)18168  [ $v4       <array 7 of <array 8 of <array 6 of <array 6 of <array 9 of <bool>>>>>> %ebp-18204 ]
++     #   -18204(%ebp)  18168  [ $v4       <array 7 of <array 8 of <array 6 of <array 6 of <array 9 of <bool>>>>>> %ebp-18204 ]
+-     # -18948(%ebp) 744  [ $v5       <array 5 of <array 2 of <array 1 of <array 8 of <array 9 of <char>>>>>> %ebp-18948 ]
++     #   -18948(%ebp)  744  [ $v5       <array 5 of <array 2 of <array 1 of <array 8 of <array 9 of <char>>>>>> %ebp-18948 ]
+-     # -19212(%ebp) 264  [ $v6       <array 4 of <array 6 of <array 2 of <array 1 of <array 5 of <bool>>>>>> %ebp-19212 ]
++     #   -19212(%ebp)  264  [ $v6       <array 4 of <array 6 of <array 2 of <array 1 of <array 5 of <bool>>>>>> %ebp-19212 ]
+-     addl    $13, %esp              
++     addl    $16, %esp              

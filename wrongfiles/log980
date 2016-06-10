@@ -1,0 +1,18 @@
+-     #  -2480(%ebp)2454  [ $v3       <array 9 of <array 9 of <array 1 of <array 3 of <array 10 of <char>>>>>> %ebp-2480 ]
++     #   -2480(%ebp)  2454  [ $v3       <array 9 of <array 9 of <array 1 of <array 3 of <array 10 of <char>>>>>> %ebp-2480 ]
+-     #  -2480(%ebp)2454  [ $v4       <array 9 of <array 9 of <array 1 of <array 3 of <array 10 of <char>>>>>> %ebp-2480 ]
++     #   -2480(%ebp)  2454  [ $v4       <array 9 of <array 9 of <array 1 of <array 3 of <array 10 of <char>>>>>> %ebp-2480 ]
+-     movl    $97, %eax               #   7:     if     97 = t3 goto 9
++     movl    $97, %eax               #   7:     if     97 = t3 goto 10
+-     je      l_f2_9                 
++     je      l_f2_10                
+-     jmp     l_f2_10                 #   8:     goto   10
++     jmp     l_f2_11                 #   8:     goto   11
+- l_f2_9:
++ l_f2_10:
+-     jmp     l_f2_11                 #  11:     goto   11
++     jmp     l_f2_12                 #  11:     goto   12
+- l_f2_10:
++ l_f2_11:
+- l_f2_11:
++ l_f2_12:

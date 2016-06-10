@@ -1,0 +1,19 @@
++     jmp     l_f0_0                  #   1:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
+-     call    dummyBOOLfunc           #   1:     call   t2 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   3:     call   t2 <- dummyBOOLfunc
+-     jmp     l_f0_1_while_cond       #   2:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   4:     goto   1_while_cond
++ l_f0_0:
+-     jmp     l_f0_10                 #   5:     goto   10
++     jmp     l_f0_10                 #   8:     goto   10
+-     jmp     l_f0_11_while_cond      #   6:     goto   11_while_cond
++     jmp     l_f0_11_while_cond      #   9:     goto   11_while_cond
+-     jmp     l_f0_13                 #   8:     goto   13
++     jmp     l_f0_13                 #  11:     goto   13
+-     jmp     l_f0_8_while_cond       #  10:     goto   8_while_cond
++     jmp     l_f0_8_while_cond       #  13:     goto   8_while_cond
+-     call    dummyCHARfunc           #  11:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  14:     call   t3 <- dummyCHARfunc
+-     addl    $1, %esp               
++     addl    $4, %esp               

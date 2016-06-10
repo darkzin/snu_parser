@@ -1,0 +1,16 @@
++     jmp     l_f0_19_if_false        #  25:     goto   19_if_false
+-     movl    $31084, %eax            #  25:     add    t5 <- 31084, 72145
++     movl    $31084, %eax            #  26:     add    t5 <- 31084, 72145
+-     movl    -16(%ebp), %eax         #  26:     add    t6 <- t5, 46114
++     movl    -16(%ebp), %eax         #  27:     add    t6 <- t5, 46114
+-     movl    -20(%ebp), %eax         #  27:     add    t7 <- t6, 68846
++     movl    -20(%ebp), %eax         #  28:     add    t7 <- t6, 68846
+-     movl    -24(%ebp), %eax         #  28:     sub    t8 <- t7, 10171
++     movl    -24(%ebp), %eax         #  29:     sub    t8 <- t7, 10171
+-     movl    -28(%ebp), %eax         #  29:     param  0 <- t8
++     movl    -28(%ebp), %eax         #  30:     param  0 <- t8
+-     call    WriteInt                #  30:     call   WriteInt
++     call    WriteInt                #  31:     call   WriteInt
+-     jmp     l_f0_17                 #  31:     goto   17
++     jmp     l_f0_17                 #  32:     goto   17
++ l_f0_19_if_false:

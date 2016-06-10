@@ -1,0 +1,66 @@
++     jmp     l_f0_5                  #   0:     goto   5
+-     movl    $1, %eax                #   0:     assign t12 <- 1
++     movl    $1, %eax                #   1:     assign t12 <- 1
+-     jmp     l_f0_5                  #   1:     goto   5
++     jmp     l_f0_6                  #   2:     goto   6
++ l_f0_5:
+-     movl    $0, %eax                #   2:     assign t12 <- 0
++     movl    $0, %eax                #   4:     assign t12 <- 0
+- l_f0_5:
++ l_f0_6:
+-     movzbl  -13(%ebp), %eax         #   4:     if     t12 = 1 goto 1_if_true
++     movzbl  -13(%ebp), %eax         #   6:     if     t12 = 1 goto 1_if_true
+-     jmp     l_f0_2_if_false         #   5:     goto   2_if_false
++     jmp     l_f0_2_if_false         #   7:     goto   2_if_false
+-     call    dummyCHARfunc           #   7:     call   t13 <- dummyCHARfunc
++     call    dummyCHARfunc           #   9:     call   t13 <- dummyCHARfunc
+-     jmp     l_f0_0                  #   8:     goto   0
++     jmp     l_f0_0                  #  10:     goto   0
+-     movl    $41531, %eax            #  11:     sub    t14 <- 41531, 67884
++     movl    $41531, %eax            #  13:     sub    t14 <- 41531, 67884
+-     movl    $6586, %eax             #  12:     div    t15 <- 6586, 62746
++     movl    $6586, %eax             #  14:     div    t15 <- 6586, 62746
+-     movl    -24(%ebp), %eax         #  13:     mul    t16 <- t15, 97304
++     movl    -24(%ebp), %eax         #  15:     mul    t16 <- t15, 97304
+-     movl    -28(%ebp), %eax         #  14:     div    t17 <- t16, 65124
++     movl    -28(%ebp), %eax         #  16:     div    t17 <- t16, 65124
+-     movl    -32(%ebp), %eax         #  15:     div    t18 <- t17, 21000
++     movl    -32(%ebp), %eax         #  17:     div    t18 <- t17, 21000
+-     movl    -20(%ebp), %eax         #  16:     sub    t19 <- t14, t18
++     movl    -20(%ebp), %eax         #  18:     sub    t19 <- t14, t18
+-     movl    -40(%ebp), %eax         #  17:     if     t19 <= 59043 goto 10
++     movl    -40(%ebp), %eax         #  19:     if     t19 <= 59043 goto 10
+-     jmp     l_f0_11                 #  18:     goto   11
++     jmp     l_f0_11                 #  20:     goto   11
+-     movl    $1, %eax                #  20:     assign t20 <- 1
++     movl    $1, %eax                #  22:     assign t20 <- 1
+-     jmp     l_f0_12                 #  21:     goto   12
++     jmp     l_f0_12                 #  23:     goto   12
+-     movl    $0, %eax                #  23:     assign t20 <- 0
++     movl    $0, %eax                #  25:     assign t20 <- 0
+-     movzbl  -41(%ebp), %eax         #  25:     assign v1 <- t20
++     movzbl  -41(%ebp), %eax         #  27:     assign v1 <- t20
+-     jmp     l_f0_15                 #  26:     goto   15
++     jmp     l_f0_15                 #  28:     goto   15
+-     movl    $1, %eax                #  28:     assign t21 <- 1
++     movl    $1, %eax                #  30:     assign t21 <- 1
+-     jmp     l_f0_17                 #  29:     goto   17
++     jmp     l_f0_17                 #  31:     goto   17
+-     movl    $0, %eax                #  30:     assign t21 <- 0
++     movl    $0, %eax                #  32:     assign t21 <- 0
+-     movzbl  -42(%ebp), %eax         #  32:     assign v1 <- t21
++     movzbl  -42(%ebp), %eax         #  34:     assign v1 <- t21
+-     #-563513328(%ebp)563513304  [ $v5       <array 15 of <array 88 of <array 73 of <array 86 of <array 68 of <bool>>>>>> %ebp-563513328 ]
++     #   -563513328(%ebp)  563513304  [ $v5       <array 15 of <array 88 of <array 73 of <array 86 of <array 68 of <bool>>>>>> %ebp-563513328 ]
+-     #-578243496(%ebp)14730168  [ $v6       <array 22 of <array 39 of <array 74 of <array 29 of <array 8 of <bool>>>>>> %ebp-578243496 ]
++     #   -578243496(%ebp)  14730168  [ $v6       <array 22 of <array 39 of <array 74 of <array 29 of <array 8 of <bool>>>>>> %ebp-578243496 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     addl    $10, %esp              
++     addl    $16, %esp              
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     addl    $1, %esp               
++     addl    $4, %esp               

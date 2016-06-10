@@ -1,0 +1,14 @@
+-     jmp     l_test_6                #   6:     goto   6
++     jmp     l_test_7                #   6:     goto   7
+-     jmp     l_test_6                #   7:     goto   6
++     jmp     l_test_7                #   7:     goto   7
+-     jmp     l_test_6                #   8:     goto   6
++     jmp     l_test_7                #   8:     goto   7
+-     jmp     l_test_6                #   9:     goto   6
++     jmp     l_test_7                #   9:     goto   7
+- l_test_6:
++ l_test_7:
+-     jmp     l_test_8                #  12:     goto   8
++     jmp     l_test_9                #  12:     goto   9
+- l_test_8:
++ l_test_9:

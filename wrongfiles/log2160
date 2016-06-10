@@ -1,0 +1,14 @@
++     jmp     l_f1_2                  #   9:     goto   2
+-     movl    $100, %eax              #  10:     assign v2 <- 100
++     movl    $100, %eax              #  11:     assign v2 <- 100
+-     jmp     l_f1_3_while_cond       #  11:     goto   3_while_cond
++     jmp     l_f1_3_while_cond       #  12:     goto   3_while_cond
++ l_f1_2:
++     jmp     l_test_3                #   1:     goto   3
++     jmp     l_test_3                #   2:     goto   3
++     jmp     l_test_3                #   3:     goto   3
++ l_test_3:
++     jmp     l_test_0                #   5:     goto   0
+-     jmp     l_test_1_while_cond     #   1:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   6:     goto   1_while_cond
++ l_test_0:

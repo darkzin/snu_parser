@@ -1,0 +1,10 @@
++     jmp     l_f2_4_if_false         #   4:     goto   4_if_false
+-     movl    $0, %eax                #   5:     if     0 = 0 goto 8_while_body
++     movl    $0, %eax                #   6:     if     0 = 0 goto 8_while_body
+-     jmp     l_f2_6                  #   6:     goto   6
++     jmp     l_f2_6                  #   7:     goto   6
+-     jmp     l_f2_7_while_cond       #   8:     goto   7_while_cond
++     jmp     l_f2_7_while_cond       #   9:     goto   7_while_cond
+-     jmp     l_f2_2                  #  10:     goto   2
++     jmp     l_f2_2                  #  11:     goto   2
++ l_f2_4_if_false:

@@ -1,0 +1,44 @@
+-     jmp     l_f0_20                 #  19:     goto   20
++     jmp     l_f0_21                 #  19:     goto   21
+- l_f0_20:
++ l_f0_21:
+-     movl    $100, %eax              #  22:     if     100 > 97 goto 22
++     movl    $100, %eax              #  22:     if     100 > 97 goto 23
+-     jg      l_f0_22                
++     jg      l_f0_23                
+-     jmp     l_f0_23                 #  23:     goto   23
++     jmp     l_f0_24                 #  23:     goto   24
+- l_f0_22:
++ l_f0_23:
+-     jmp     l_f0_24                 #  26:     goto   24
++     jmp     l_f0_25                 #  26:     goto   25
+- l_f0_23:
++ l_f0_24:
+- l_f0_24:
++ l_f0_25:
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_22_if_false      #  24:     goto   22_if_false
+-     movl    $28930, %eax            #  24:     assign v1 <- 28930
++     movl    $28930, %eax            #  25:     assign v1 <- 28930
+-     movl    $97, %eax               #  25:     if     97 = 99 goto 26
++     movl    $97, %eax               #  26:     if     97 = 99 goto 26
+-     jmp     l_test_27               #  26:     goto   27
++     jmp     l_test_27               #  27:     goto   27
+-     movl    $1, %eax                #  28:     assign t3 <- 1
++     movl    $1, %eax                #  29:     assign t3 <- 1
+-     jmp     l_test_28               #  29:     goto   28
++     jmp     l_test_28               #  30:     goto   28
+-     movl    $0, %eax                #  31:     assign t3 <- 0
++     movl    $0, %eax                #  32:     assign t3 <- 0
+-     movzbl  -22(%ebp), %eax         #  33:     assign v2 <- t3
++     movzbl  -22(%ebp), %eax         #  34:     assign v2 <- t3
+-     jmp     l_test_32_if_false      #  34:     goto   32_if_false
++     jmp     l_test_32_if_false      #  35:     goto   32_if_false
+-     jmp     l_test_30               #  35:     goto   30
++     jmp     l_test_30               #  36:     goto   30
+-     jmp     l_test_20               #  38:     goto   20
++     jmp     l_test_20               #  39:     goto   20
++ l_test_22_if_false:
+-     call    f1                      #  40:     call   t4 <- f1
++     call    f1                      #  42:     call   t4 <- f1

@@ -1,0 +1,10 @@
+-     #  -1724(%ebp)1704  [ $v4       <array 6 of <array 2 of <array 5 of <array 1 of <array 7 of <int>>>>>> %ebp-1724 ]
++     #   -1724(%ebp)  1704  [ $v4       <array 6 of <array 2 of <array 5 of <array 1 of <array 7 of <int>>>>>> %ebp-1724 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
++     jmp     l_test_30               #  45:     goto   30
+-     jmp     l_test_35               #  46:     goto   35
++     jmp     l_test_35               #  47:     goto   35
+-     jmp     l_test_31_while_cond    #  48:     goto   31_while_cond
++     jmp     l_test_31_while_cond    #  49:     goto   31_while_cond
++ l_test_30:

@@ -1,0 +1,12 @@
++     jmp     l_f1_4                  #  12:     goto   4
+-     jmp     l_f1_5_while_cond       #  13:     goto   5_while_cond
++     jmp     l_f1_5_while_cond       #  14:     goto   5_while_cond
++ l_f1_4:
+-     call    dummyINTfunc            #  14:     call   t6 <- dummyINTfunc
++     call    dummyINTfunc            #  16:     call   t6 <- dummyINTfunc
+-     #   -800(%ebp) 672  [ $v5       <array 1 of <array 2 of <array 9 of <array 9 of <array 1 of <int>>>>>> %ebp-800 ]
++     #   -800(%ebp)  672  [ $v5       <array 1 of <array 2 of <array 9 of <array 9 of <array 1 of <int>>>>>> %ebp-800 ]
+-     #  -6584(%ebp)5784  [ $v6       <array 1 of <array 2 of <array 8 of <array 9 of <array 10 of <int>>>>>> %ebp-6584 ]
++     #   -6584(%ebp)  5784  [ $v6       <array 1 of <array 2 of <array 8 of <array 9 of <array 10 of <int>>>>>> %ebp-6584 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              

@@ -1,0 +1,44 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_0                #   3:     goto   0
+-     jmp     l_test_1_while_cond     #   4:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   5:     goto   1_while_cond
++ l_test_0:
+-     jmp     l_test_7_if_false       #   5:     goto   7_if_false
++     jmp     l_test_7_if_false       #   7:     goto   7_if_false
+-     jmp     l_test_9_while_cond     #   7:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #   9:     goto   9_while_cond
+-     movl    $97, %eax               #   8:     if     97 >= 98 goto 15_if_true
++     movl    $97, %eax               #  10:     if     97 >= 98 goto 15_if_true
+-     jmp     l_test_16_if_false      #   9:     goto   16_if_false
++     jmp     l_test_16_if_false      #  11:     goto   16_if_false
+-     jmp     l_test_14               #  11:     goto   14
++     jmp     l_test_14               #  13:     goto   14
+-     jmp     l_test_11               #  14:     goto   11
++     jmp     l_test_11               #  16:     goto   11
+-     jmp     l_test_5                #  16:     goto   5
++     jmp     l_test_5                #  18:     goto   5
+-     movl    $37826, %eax            #  20:     sub    t1 <- 37826, 10557
++     movl    $37826, %eax            #  22:     sub    t1 <- 37826, 10557
+-     movl    -20(%ebp), %eax         #  21:     sub    t2 <- t1, 75358
++     movl    -20(%ebp), %eax         #  23:     sub    t2 <- t1, 75358
+-     movl    -24(%ebp), %eax         #  22:     add    t3 <- t2, 42423
++     movl    -24(%ebp), %eax         #  24:     add    t3 <- t2, 42423
+-     movl    -28(%ebp), %eax         #  23:     if     t3 <= 87161 goto 20_while_body
++     movl    -28(%ebp), %eax         #  25:     if     t3 <= 87161 goto 20_while_body
+-     jmp     l_test_18               #  24:     goto   18
++     jmp     l_test_18               #  26:     goto   18
+-     jmp     l_test_19_while_cond    #  26:     goto   19_while_cond
++     jmp     l_test_19_while_cond    #  28:     goto   19_while_cond
+-     jmp     l_test_23_if_true       #  28:     goto   23_if_true
++     jmp     l_test_23_if_true       #  30:     goto   23_if_true
++     jmp     l_test_24_if_false      #  31:     goto   24_if_false
+-     jmp     l_test_22               #  30:     goto   22
++     jmp     l_test_22               #  33:     goto   22
++ l_test_24_if_false:
+-     call    ReadInt                 #  32:     call   t4 <- ReadInt
++     call    ReadInt                 #  36:     call   t4 <- ReadInt
+-     jmp     l_test_29_if_true       #  33:     goto   29_if_true
++     jmp     l_test_29_if_true       #  37:     goto   29_if_true
+-     jmp     l_test_28               #  36:     goto   28
++     jmp     l_test_28               #  40:     goto   28

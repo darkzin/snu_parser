@@ -1,0 +1,13 @@
++     jmp     l_f0_17                 #  26:     goto   17
++     jmp     l_f0_17                 #  27:     goto   17
+-     jmp     l_f0_18_while_cond      #  26:     goto   18_while_cond
++     jmp     l_f0_18_while_cond      #  28:     goto   18_while_cond
++ l_f0_17:
+-     call    dummyCHARfunc           #  27:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  30:     call   t4 <- dummyCHARfunc
+-     movzbl  -18(%ebp), %eax         #  28:     param  0 <- t4
++     movzbl  -18(%ebp), %eax         #  31:     param  0 <- t4
+-     call    WriteChar               #  29:     call   WriteChar
++     call    WriteChar               #  32:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               

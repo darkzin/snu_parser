@@ -1,0 +1,37 @@
++     jmp     l_f0_2                  #   3:     goto   2
+-     movl    $1, %eax                #   3:     assign t3 <- 1
++     movl    $1, %eax                #   4:     assign t3 <- 1
+-     jmp     l_f0_3                  #   4:     goto   3
++     jmp     l_f0_3                  #   5:     goto   3
+-     movl    $0, %eax                #   6:     assign t3 <- 0
++     movl    $0, %eax                #   7:     assign t3 <- 0
+-     movzbl  -13(%ebp), %eax         #   8:     return t3
++     movzbl  -13(%ebp), %eax         #   9:     return t3
+-     call    dummyCHARfunc           #   9:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  10:     call   t4 <- dummyCHARfunc
+-     movl    $97, %eax               #  10:     if     97 >= t4 goto 7
++     movl    $97, %eax               #  11:     if     97 >= t4 goto 7
+-     jmp     l_f0_8                  #  11:     goto   8
++     jmp     l_f0_8                  #  12:     goto   8
+-     movl    $1, %eax                #  13:     assign t5 <- 1
++     movl    $1, %eax                #  14:     assign t5 <- 1
+-     jmp     l_f0_9                  #  14:     goto   9
++     jmp     l_f0_9                  #  15:     goto   9
+-     movl    $0, %eax                #  16:     assign t5 <- 0
++     movl    $0, %eax                #  17:     assign t5 <- 0
+-     movzbl  -15(%ebp), %eax         #  18:     return t5
++     movzbl  -15(%ebp), %eax         #  19:     return t5
+-     call    dummyBOOLfunc           #  19:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  20:     call   t6 <- dummyBOOLfunc
+-     jmp     l_f0_11                 #  20:     goto   11
++     jmp     l_f0_11                 #  21:     goto   11
+-     jmp     l_f1_6                  #   2:     goto   6
++     jmp     l_f1_7                  #   2:     goto   7
+- l_f1_6:
++ l_f1_7:
+-     jmp     l_f1_8                  #   5:     goto   8
++     jmp     l_f1_9                  #   5:     goto   9
+- l_f1_8:
++ l_f1_9:
+-     addl    $5, %esp               
++     addl    $8, %esp               

@@ -1,0 +1,29 @@
++     jmp     l_f0_3                  #   0:     goto   3
++     jmp     l_f0_3                  #   1:     goto   3
++ l_f0_3:
+-     jmp     l_f0_0                  #   0:     goto   0
++     jmp     l_f0_0                  #   3:     goto   0
+-     movl    $99, %eax               #   2:     assign v2 <- 99
++     movl    $99, %eax               #   5:     assign v2 <- 99
+-     call    dummyINTfunc            #   3:     call   t7 <- dummyINTfunc
++     call    dummyINTfunc            #   6:     call   t7 <- dummyINTfunc
+-     movl    -16(%ebp), %eax         #   4:     assign v5 <- t7
++     movl    -16(%ebp), %eax         #   7:     assign v5 <- t7
+-     jmp     l_test_12               #  23:     goto   12
++     jmp     l_test_17               #  23:     goto   17
++ l_test_17:
++     jmp     l_test_12               #  26:     goto   12
+-     movl    $1, %eax                #  26:     assign t4 <- 1
++     movl    $1, %eax                #  28:     assign t4 <- 1
+-     jmp     l_test_14               #  27:     goto   14
++     jmp     l_test_14               #  29:     goto   14
+-     movl    $0, %eax                #  28:     assign t4 <- 0
++     movl    $0, %eax                #  30:     assign t4 <- 0
+-     movzbl  -20(%ebp), %eax         #  30:     param  0 <- t4
++     movzbl  -20(%ebp), %eax         #  32:     param  0 <- t4
+-     call    f0                      #  31:     call   t5 <- f0
++     call    f0                      #  33:     call   t5 <- f0
+-     addl    $4, %esp               
++     addl    $16, %esp              
+-     call    dummyBOOLfunc           #  32:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  34:     call   t6 <- dummyBOOLfunc

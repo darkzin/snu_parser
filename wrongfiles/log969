@@ -1,0 +1,24 @@
+-     #  -2208(%ebp)2184  [ $v2       <array 4 of <array 10 of <array 9 of <array 6 of <array 1 of <char>>>>>> %ebp-2208 ]
++     #   -2208(%ebp)  2184  [ $v2       <array 4 of <array 10 of <array 9 of <array 6 of <array 1 of <char>>>>>> %ebp-2208 ]
++     jmp     l_f2_16                 #  13:     goto   16
+-     movl    $1, %eax                #  13:     assign t5 <- 1
++     movl    $1, %eax                #  14:     assign t5 <- 1
+-     jmp     l_f2_16                 #  14:     goto   16
++     jmp     l_f2_17                 #  15:     goto   17
++ l_f2_16:
+-     movl    $0, %eax                #  15:     assign t5 <- 0
++     movl    $0, %eax                #  17:     assign t5 <- 0
+- l_f2_16:
++ l_f2_17:
+-     movl    $1, %eax                #  17:     if     1 = t5 goto 11
++     movl    $1, %eax                #  19:     if     1 = t5 goto 11
+-     jmp     l_f2_12                 #  18:     goto   12
++     jmp     l_f2_12                 #  20:     goto   12
+-     movl    $1, %eax                #  20:     assign t6 <- 1
++     movl    $1, %eax                #  22:     assign t6 <- 1
+-     jmp     l_f2_13                 #  21:     goto   13
++     jmp     l_f2_13                 #  23:     goto   13
+-     movl    $0, %eax                #  23:     assign t6 <- 0
++     movl    $0, %eax                #  25:     assign t6 <- 0
+-     movzbl  -18(%ebp), %eax         #  25:     assign v2 <- t6
++     movzbl  -18(%ebp), %eax         #  27:     assign v2 <- t6

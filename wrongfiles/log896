@@ -1,0 +1,32 @@
+-     #  -1584(%ebp)1560  [ $v4       <array 8 of <array 2 of <array 2 of <array 6 of <array 2 of <int>>>>>> %ebp-1584 ]
++     #   -1584(%ebp)  1560  [ $v4       <array 8 of <array 2 of <array 2 of <array 6 of <array 2 of <int>>>>>> %ebp-1584 ]
++     jmp     l_test_8                #  13:     goto   8
+-     movl    $98, %eax               #  14:     if     98 >= 99 goto 16
++     movl    $98, %eax               #  15:     if     98 >= 99 goto 16
+-     jmp     l_test_17               #  15:     goto   17
++     jmp     l_test_17               #  16:     goto   17
+-     movl    $1, %eax                #  17:     assign t1 <- 1
++     movl    $1, %eax                #  18:     assign t1 <- 1
+-     jmp     l_test_18               #  18:     goto   18
++     jmp     l_test_18               #  19:     goto   18
+-     movl    $0, %eax                #  20:     assign t1 <- 0
++     movl    $0, %eax                #  21:     assign t1 <- 0
+-     movzbl  -14(%ebp), %eax         #  22:     assign v0 <- t1
++     movzbl  -14(%ebp), %eax         #  23:     assign v0 <- t1
+-     call    dummyCHARfunc           #  23:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  24:     call   t2 <- dummyCHARfunc
+-     jmp     l_test_9_while_cond     #  24:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #  25:     goto   9_while_cond
++ l_test_8:
+-     leal    v1, %eax                #  26:     &()    t3 <- v1
++     leal    v1, %eax                #  28:     &()    t3 <- v1
+-     movl    -20(%ebp), %eax         #  27:     param  0 <- t3
++     movl    -20(%ebp), %eax         #  29:     param  0 <- t3
+-     call    f1                      #  28:     call   t4 <- f1
++     call    f1                      #  30:     call   t4 <- f1
+-     movzbl  -21(%ebp), %eax         #  29:     if     t4 = 1 goto 23_while_body
++     movzbl  -21(%ebp), %eax         #  31:     if     t4 = 1 goto 23_while_body
++     jmp     l_test_21               #  32:     goto   21
+-     jmp     l_test_22_while_cond    #  31:     goto   22_while_cond
++     jmp     l_test_22_while_cond    #  34:     goto   22_while_cond
++ l_test_21:

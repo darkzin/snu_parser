@@ -1,0 +1,18 @@
++     jmp     l_f2_3                  #   1:     goto   3
+-     movl    $1, %eax                #   1:     assign t3 <- 1
++     movl    $1, %eax                #   2:     assign t3 <- 1
+-     jmp     l_f2_4                  #   2:     goto   4
++     jmp     l_f2_4                  #   3:     goto   4
++ l_f2_3:
+-     movl    $0, %eax                #   3:     assign t3 <- 0
++     movl    $0, %eax                #   5:     assign t3 <- 0
+-     movzbl  -14(%ebp), %eax         #   5:     assign v0 <- t3
++     movzbl  -14(%ebp), %eax         #   7:     assign v0 <- t3
+-     call    dummyCHARfunc           #   6:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t4 <- dummyCHARfunc
+-     movzbl  -15(%ebp), %eax         #   7:     param  0 <- t4
++     movzbl  -15(%ebp), %eax         #   9:     param  0 <- t4
+-     call    WriteChar               #   8:     call   WriteChar
++     call    WriteChar               #  10:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               

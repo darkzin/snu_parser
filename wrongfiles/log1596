@@ -1,0 +1,21 @@
++     jmp     l_f1_2                  #   0:     goto   2
+-     movl    $31580, %eax            #   0:     if     31580 > 78786 goto 1
++     movl    $31580, %eax            #   1:     if     31580 > 78786 goto 1
+-     jmp     l_f1_2                  #   1:     goto   2
++     jmp     l_f1_2                  #   2:     goto   2
+-     movl    $1, %eax                #   3:     assign t5 <- 1
++     movl    $1, %eax                #   4:     assign t5 <- 1
+-     jmp     l_f1_3                  #   4:     goto   3
++     jmp     l_f1_3                  #   5:     goto   3
+-     movl    $0, %eax                #   6:     assign t5 <- 0
++     movl    $0, %eax                #   7:     assign t5 <- 0
+-     movzbl  -13(%ebp), %eax         #   8:     return t5
++     movzbl  -13(%ebp), %eax         #   9:     return t5
+-     call    dummyBOOLfunc           #   9:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  10:     call   t6 <- dummyBOOLfunc
+-     call    dummyCHARfunc           #  10:     call   t7 <- dummyCHARfunc
++     call    dummyCHARfunc           #  11:     call   t7 <- dummyCHARfunc
++     jmp     l_f2_2                  #   9:     goto   2
+-     jmp     l_f2_3_while_cond       #   9:     goto   3_while_cond
++     jmp     l_f2_3_while_cond       #  10:     goto   3_while_cond
++ l_f2_2:

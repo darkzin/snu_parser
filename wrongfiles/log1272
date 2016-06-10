@@ -1,0 +1,8 @@
++     jmp     l_test_0                #   2:     goto   0
+-     call    dummyBOOLfunc           #   3:     call   t0 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   4:     call   t0 <- dummyBOOLfunc
+-     jmp     l_test_1_while_cond     #   4:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #   5:     goto   1_while_cond
++ l_test_0:
+-     call    dummyCHARfunc           #   7:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #   9:     call   t1 <- dummyCHARfunc

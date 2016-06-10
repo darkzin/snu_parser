@@ -1,0 +1,40 @@
++     jmp     l_f0_2                  #   1:     goto   2
+-     movl    $1, %eax                #   2:     assign t1 <- 1
++     movl    $1, %eax                #   3:     assign t1 <- 1
+-     jmp     l_f0_3                  #   3:     goto   3
++     jmp     l_f0_3                  #   4:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   4:     assign t1 <- 0
++     movl    $0, %eax                #   6:     assign t1 <- 0
+-     movzbl  -13(%ebp), %eax         #   6:     assign v3 <- t1
++     movzbl  -13(%ebp), %eax         #   8:     assign v3 <- t1
+-     call    dummyINTfunc            #   7:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #   9:     call   t2 <- dummyINTfunc
+-     movl    $54715, %eax            #   8:     if     54715 <= 47291 goto 8
++     movl    $54715, %eax            #  10:     if     54715 <= 47291 goto 8
++     jmp     l_f0_9                  #  11:     goto   9
+-     movl    $1, %eax                #  10:     assign t3 <- 1
++     movl    $1, %eax                #  13:     assign t3 <- 1
+-     jmp     l_f0_10                 #  11:     goto   10
++     jmp     l_f0_10                 #  14:     goto   10
++ l_f0_9:
+-     movl    $0, %eax                #  12:     assign t3 <- 0
++     movl    $0, %eax                #  16:     assign t3 <- 0
+-     movzbl  -21(%ebp), %eax         #  14:     return t3
++     movzbl  -21(%ebp), %eax         #  18:     return t3
++     jmp     l_test_1                #   2:     goto   1
++     jmp     l_test_1                #   3:     goto   1
++     jmp     l_test_1                #   4:     goto   1
+-     jmp     l_test_2_while_cond     #   2:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #   5:     goto   2_while_cond
++ l_test_1:
++     jmp     l_test_9                #   7:     goto   9
+-     movl    $1, %eax                #   3:     assign t0 <- 1
++     movl    $1, %eax                #   8:     assign t0 <- 1
+-     jmp     l_test_10               #   4:     goto   10
++     jmp     l_test_10               #   9:     goto   10
++ l_test_9:
+-     movl    $0, %eax                #   5:     assign t0 <- 0
++     movl    $0, %eax                #  11:     assign t0 <- 0
+-     movzbl  -13(%ebp), %eax         #   7:     assign v1 <- t0
++     movzbl  -13(%ebp), %eax         #  13:     assign v1 <- t0

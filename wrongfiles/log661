@@ -1,0 +1,10 @@
++     jmp     l_f1_12                 #  17:     goto   12
+-     jmp     l_f1_10_if_true         #  17:     goto   10_if_true
++     jmp     l_f1_10_if_true         #  18:     goto   10_if_true
++ l_f1_12:
+-     jmp     l_f1_9                  #  19:     goto   9
++     jmp     l_f1_9                  #  21:     goto   9
+-     #   -288(%ebp) 264  [ $v2       <array 6 of <array 5 of <array 8 of <array 1 of <array 1 of <bool>>>>>> %ebp-288 ]
++     #   -288(%ebp)  264  [ $v2       <array 6 of <array 5 of <array 8 of <array 1 of <array 1 of <bool>>>>>> %ebp-288 ]
+-     addl    $1, %esp               
++     addl    $4, %esp               

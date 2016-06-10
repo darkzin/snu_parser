@@ -1,0 +1,13 @@
++     jmp     l_f2_14_if_false        #  18:     goto   14_if_false
++     jmp     l_f2_14_if_false        #  19:     goto   14_if_false
+-     movl    $1, %eax                #  18:     if     1 = 1 goto 19_if_true
++     movl    $1, %eax                #  20:     if     1 = 1 goto 19_if_true
+-     jmp     l_f2_20_if_false        #  19:     goto   20_if_false
++     jmp     l_f2_20_if_false        #  21:     goto   20_if_false
+-     jmp     l_f2_18                 #  21:     goto   18
++     jmp     l_f2_18                 #  23:     goto   18
+-     jmp     l_f2_12                 #  24:     goto   12
++     jmp     l_f2_12                 #  26:     goto   12
++ l_f2_14_if_false:
+-     addl    $1, %esp               
++     addl    $4, %esp               

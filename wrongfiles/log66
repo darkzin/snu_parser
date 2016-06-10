@@ -1,0 +1,36 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     #   -724(%ebp) 696  [ $v3       <array 7 of <array 8 of <array 3 of <array 4 of <array 1 of <char>>>>>> %ebp-724 ]
++     #   -724(%ebp)  696  [ $v3       <array 7 of <array 8 of <array 3 of <array 4 of <array 1 of <char>>>>>> %ebp-724 ]
++     jmp     l_f1_3                  #   2:     goto   3
+-     movl    $1, %eax                #   3:     assign t6 <- 1
++     movl    $1, %eax                #   4:     assign t6 <- 1
+-     jmp     l_f1_4                  #   4:     goto   4
++     jmp     l_f1_4                  #   5:     goto   4
++ l_f1_3:
+-     movl    $0, %eax                #   5:     assign t6 <- 0
++     movl    $0, %eax                #   7:     assign t6 <- 0
+-     movzbl  -13(%ebp), %eax         #   7:     return t6
++     movzbl  -13(%ebp), %eax         #   9:     return t6
+-     movl    $98, %eax               #   9:     if     98 <= 100 goto 10_while_body
++     movl    $98, %eax               #  11:     if     98 <= 100 goto 10_while_body
+-     jmp     l_f1_8                  #  10:     goto   8
++     jmp     l_f1_8                  #  12:     goto   8
+-     movl    $97, %eax               #  12:     param  2 <- 97
++     movl    $97, %eax               #  14:     param  2 <- 97
+-     movl    $37897, %eax            #  13:     param  1 <- 37897
++     movl    $37897, %eax            #  15:     param  1 <- 37897
+-     leal    -724(%ebp), %eax        #  14:     &()    t7 <- v3
++     leal    -724(%ebp), %eax        #  16:     &()    t7 <- v3
+-     movl    -20(%ebp), %eax         #  15:     param  0 <- t7
++     movl    -20(%ebp), %eax         #  17:     param  0 <- t7
+-     call    f0                      #  16:     call   t8 <- f0
++     call    f0                      #  18:     call   t8 <- f0
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     movzbl  -21(%ebp), %eax         #  17:     return t8
++     movzbl  -21(%ebp), %eax         #  19:     return t8
+-     jmp     l_f1_9_while_cond       #  18:     goto   9_while_cond
++     jmp     l_f1_9_while_cond       #  20:     goto   9_while_cond
+-     addl    $1, %esp               
++     addl    $4, %esp               

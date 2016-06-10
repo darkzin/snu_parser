@@ -1,0 +1,77 @@
++     jmp     l_f1_14                 #  23:     goto   14
++     jmp     l_f1_14                 #  24:     goto   14
++     jmp     l_f1_14                 #  25:     goto   14
++     jmp     l_f1_14                 #  26:     goto   14
+-     jmp     l_f1_15_while_cond      #  24:     goto   15_while_cond
++     jmp     l_f1_15_while_cond      #  28:     goto   15_while_cond
++ l_f1_14:
+-     #   -480(%ebp) 456  [ $v1       <array 2 of <array 2 of <array 2 of <array 9 of <array 6 of <char>>>>>> %ebp-480 ]
++     #   -480(%ebp)  456  [ $v1       <array 2 of <array 2 of <array 2 of <array 9 of <array 6 of <char>>>>>> %ebp-480 ]
++     jmp     l_test_6                #   2:     goto   6
+-     movl    $1, %eax                #   2:     assign t1 <- 1
++     movl    $1, %eax                #   3:     assign t1 <- 1
+-     jmp     l_test_6                #   3:     goto   6
++     jmp     l_test_7                #   4:     goto   7
++ l_test_6:
+-     movl    $0, %eax                #   4:     assign t1 <- 0
++     movl    $0, %eax                #   6:     assign t1 <- 0
+- l_test_6:
++ l_test_7:
+-     movzbl  -14(%ebp), %eax         #   6:     if     t1 = 1 goto 3_while_body
++     movzbl  -14(%ebp), %eax         #   8:     if     t1 = 1 goto 3_while_body
+-     jmp     l_test_1                #   7:     goto   1
++     jmp     l_test_1                #   9:     goto   1
+-     movl    $0, %eax                #   9:     if     0 # 0 goto 11_if_true
++     movl    $0, %eax                #  11:     if     0 # 0 goto 11_if_true
+-     jmp     l_test_12_if_false      #  10:     goto   12_if_false
++     jmp     l_test_12_if_false      #  12:     goto   12_if_false
+-     jmp     l_test_10               #  12:     goto   10
++     jmp     l_test_10               #  14:     goto   10
+-     jmp     l_test_2_while_cond     #  15:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #  17:     goto   2_while_cond
+-     call    dummyINTfunc            #  17:     call   t2 <- dummyINTfunc
++     call    dummyINTfunc            #  19:     call   t2 <- dummyINTfunc
+-     movl    $67409, %eax            #  18:     if     67409 <= 9299 goto 16_if_true
++     movl    $67409, %eax            #  20:     if     67409 <= 9299 goto 16_if_true
+-     jmp     l_test_17_if_false      #  19:     goto   17_if_false
++     jmp     l_test_17_if_false      #  21:     goto   17_if_false
+-     movl    $93116, %eax            #  21:     if     93116 >= 36588 goto 20
++     movl    $93116, %eax            #  23:     if     93116 >= 36588 goto 20
+-     jmp     l_test_21               #  22:     goto   21
++     jmp     l_test_21               #  24:     goto   21
+-     movl    $1, %eax                #  24:     assign t3 <- 1
++     movl    $1, %eax                #  26:     assign t3 <- 1
+-     jmp     l_test_22               #  25:     goto   22
++     jmp     l_test_22               #  27:     goto   22
+-     movl    $0, %eax                #  27:     assign t3 <- 0
++     movl    $0, %eax                #  29:     assign t3 <- 0
+-     movzbl  -21(%ebp), %eax         #  29:     assign v0 <- t3
++     movzbl  -21(%ebp), %eax         #  31:     assign v0 <- t3
+-     movl    $85489, %eax            #  30:     param  0 <- 85489
++     movl    $85489, %eax            #  32:     param  0 <- 85489
+-     call    WriteInt                #  31:     call   WriteInt
++     call    WriteInt                #  33:     call   WriteInt
+-     movl    $98569, %eax            #  33:     if     98569 <= 72674 goto 27_while_body
++     movl    $98569, %eax            #  35:     if     98569 <= 72674 goto 27_while_body
+-     jmp     l_test_25               #  34:     goto   25
++     jmp     l_test_25               #  36:     goto   25
+-     jmp     l_test_26_while_cond    #  36:     goto   26_while_cond
++     jmp     l_test_26_while_cond    #  38:     goto   26_while_cond
+-     movl    $0, %eax                #  38:     if     0 # 1 goto 30_if_true
++     movl    $0, %eax                #  40:     if     0 # 1 goto 30_if_true
+-     jmp     l_test_31_if_false      #  39:     goto   31_if_false
++     jmp     l_test_31_if_false      #  41:     goto   31_if_false
+-     jmp     l_test_29               #  41:     goto   29
++     jmp     l_test_29               #  43:     goto   29
+-     jmp     l_test_15               #  44:     goto   15
++     jmp     l_test_15               #  46:     goto   15
+-     jmp     l_test_35_while_body    #  48:     goto   35_while_body
++     jmp     l_test_35_while_body    #  50:     goto   35_while_body
+-     jmp     l_test_35_while_body    #  49:     goto   35_while_body
++     jmp     l_test_35_while_body    #  51:     goto   35_while_body
+-     jmp     l_test_34_while_cond    #  51:     goto   34_while_cond
++     jmp     l_test_34_while_cond    #  53:     goto   34_while_cond
+-     jmp     l_test_41               #  52:     goto   41
++     jmp     l_test_41               #  54:     goto   41
+-     jmp     l_test_38               #  54:     goto   38
++     jmp     l_test_38               #  56:     goto   38

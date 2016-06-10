@@ -1,0 +1,20 @@
++     jmp     l_f0_0                  #   2:     goto   0
+-     movl    $97534, %eax            #   3:     return 97534
++     movl    $97534, %eax            #   4:     return 97534
+-     jmp     l_f0_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   5:     goto   1_while_cond
++ l_f0_0:
+-     movl    $54453, %eax            #   5:     div    t1 <- 54453, 6352
++     movl    $54453, %eax            #   7:     div    t1 <- 54453, 6352
+-     movl    -16(%ebp), %eax         #   6:     return t1
++     movl    -16(%ebp), %eax         #   8:     return t1
+-     call    dummyCHARfunc           #   7:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #   9:     call   t2 <- dummyCHARfunc
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     #-1041258292(%ebp)1041258264  [ $v0       <array 11 of <array 90 of <array 44 of <array 83 of <array 72 of <int>>>>>> %ebp-1041258292 ]
++     #   -1041258292(%ebp)  1041258264  [ $v0       <array 11 of <array 90 of <array 44 of <array 83 of <array 72 of <int>>>>>> %ebp-1041258292 ]
+-     #-1110350668(%ebp)69092376  [ $v1       <array 72 of <array 63 of <array 14 of <array 17 of <array 16 of <int>>>>>> %ebp-1110350668 ]
++     #   -1110350668(%ebp)  69092376  [ $v1       <array 72 of <array 63 of <array 14 of <array 17 of <array 16 of <int>>>>>> %ebp-1110350668 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              

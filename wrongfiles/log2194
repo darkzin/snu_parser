@@ -1,0 +1,4 @@
++     jmp     l_f0_2                  #   9:     goto   2
++     jmp     l_f0_2                  #  10:     goto   2
+-     jmp     l_f0_3_while_cond       #   9:     goto   3_while_cond
++     jmp     l_f0_3_while_cond       #  11:     goto   3_while_cond

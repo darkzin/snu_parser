@@ -1,0 +1,16 @@
+-     jmp     l_f2_10                 #  12:     goto   10
++     jmp     l_f2_11                 #  12:     goto   11
+-     movzbl  -27(%ebp), %eax         #  14:     if     t9 = 1 goto 10
++     movzbl  -27(%ebp), %eax         #  14:     if     t9 = 1 goto 11
+-     je      l_f2_10                
++     je      l_f2_11                
+-     jmp     l_f2_11                 #  15:     goto   11
++     jmp     l_f2_12                 #  15:     goto   12
+- l_f2_10:
++ l_f2_11:
+-     jmp     l_f2_12                 #  18:     goto   12
++     jmp     l_f2_13                 #  18:     goto   13
+- l_f2_11:
++ l_f2_12:
+- l_f2_12:
++ l_f2_13:

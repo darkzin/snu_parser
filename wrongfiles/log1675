@@ -1,0 +1,13 @@
++     jmp     l_f2_7                  #   6:     goto   7
++     jmp     l_f2_7                  #   7:     goto   7
+-     jmp     l_f2_6_while_body       #   6:     goto   6_while_body
++     jmp     l_f2_6_while_body       #   8:     goto   6_while_body
++ l_f2_7:
+-     jmp     l_f2_5_while_cond       #   8:     goto   5_while_cond
++     jmp     l_f2_5_while_cond       #  11:     goto   5_while_cond
++     jmp     l_f2_14                 #  13:     goto   14
+-     jmp     l_f2_15_while_cond      #  10:     goto   15_while_cond
++     jmp     l_f2_15_while_cond      #  14:     goto   15_while_cond
++ l_f2_14:
+-     jmp     l_f2_11                 #  11:     goto   11
++     jmp     l_f2_11                 #  16:     goto   11

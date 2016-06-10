@@ -1,0 +1,40 @@
++     jmp     l_test_5                #  12:     goto   5
+-     jmp     l_test_6_while_cond     #  13:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #  14:     goto   6_while_cond
++ l_test_5:
+-     jmp     l_test_13               #  15:     goto   13
++     jmp     l_test_17               #  17:     goto   17
++     jmp     l_test_14               #  18:     goto   14
+- l_test_13:
++ l_test_17:
++ l_test_14:
+-     movl    $1, %eax                #  17:     assign t2 <- 1
++     movl    $1, %eax                #  21:     assign t2 <- 1
+-     jmp     l_test_15               #  18:     goto   15
++     jmp     l_test_16               #  22:     goto   16
+-     movl    $0, %eax                #  19:     assign t2 <- 0
++     movl    $0, %eax                #  23:     assign t2 <- 0
+- l_test_15:
++ l_test_16:
+-     movl    $1, %eax                #  21:     if     1 # t2 goto 12_while_body
++     movl    $1, %eax                #  25:     if     1 # t2 goto 12_while_body
+-     jmp     l_test_10               #  22:     goto   10
++     jmp     l_test_10               #  26:     goto   10
+-     jmp     l_test_11_while_cond    #  24:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  28:     goto   11_while_cond
+-     leal    v1, %eax                #  26:     &()    t3 <- v1
++     leal    v1, %eax                #  30:     &()    t3 <- v1
+-     movl    -24(%ebp), %eax         #  27:     param  0 <- t3
++     movl    -24(%ebp), %eax         #  31:     param  0 <- t3
+-     call    f1                      #  28:     call   t4 <- f1
++     call    f1                      #  32:     call   t4 <- f1
+-     jmp     l_test_20               #  30:     goto   20
++     jmp     l_test_20               #  34:     goto   20
+-     movl    $1, %eax                #  32:     assign t5 <- 1
++     movl    $1, %eax                #  36:     assign t5 <- 1
+-     jmp     l_test_28               #  33:     goto   28
++     jmp     l_test_28               #  37:     goto   28
+-     movl    $0, %eax                #  34:     assign t5 <- 0
++     movl    $0, %eax                #  38:     assign t5 <- 0
+-     movzbl  -26(%ebp), %eax         #  36:     assign v0 <- t5
++     movzbl  -26(%ebp), %eax         #  40:     assign v0 <- t5

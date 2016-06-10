@@ -1,0 +1,54 @@
++     jmp     l_f1_34_if_false        #  41:     goto   34_if_false
+-     movl    $99, %eax               #  41:     param  2 <- 99
++     movl    $99, %eax               #  42:     param  2 <- 99
+-     movl    $61247, %eax            #  42:     param  1 <- 61247
++     movl    $61247, %eax            #  43:     param  1 <- 61247
+-     movl    $99, %eax               #  43:     param  0 <- 99
++     movl    $99, %eax               #  44:     param  0 <- 99
+-     call    f0                      #  44:     call   t2 <- f0
++     call    f0                      #  45:     call   t2 <- f0
+-     addl    $6, %esp               
++     addl    $12, %esp              
+-     jmp     l_f1_40_if_false        #  45:     goto   40_if_false
++     jmp     l_f1_40_if_false        #  46:     goto   40_if_false
+-     jmp     l_f1_38                 #  46:     goto   38
++     jmp     l_f1_38                 #  47:     goto   38
+-     movl    $100, %eax              #  50:     if     100 <= 98 goto 43_if_true
++     movl    $100, %eax              #  51:     if     100 <= 98 goto 43_if_true
+-     jmp     l_f1_44_if_false        #  51:     goto   44_if_false
++     jmp     l_f1_44_if_false        #  52:     goto   44_if_false
+-     jmp     l_f1_42                 #  53:     goto   42
++     jmp     l_f1_42                 #  54:     goto   42
+-     jmp     l_f1_32                 #  57:     goto   32
++     jmp     l_f1_32                 #  58:     goto   32
++ l_f1_34_if_false:
+-     addl    $6, %esp               
++     addl    $12, %esp              
+-     addl    $6, %esp               
++     addl    $12, %esp              
++     jmp     l_test_0                #   3:     goto   0
+-     jmp     l_test_6                #   6:     goto   6
++     jmp     l_test_6                #   7:     goto   6
+-     jmp     l_test_7_while_cond     #   7:     goto   7_while_cond
++     jmp     l_test_7_while_cond     #   8:     goto   7_while_cond
+-     jmp     l_test_1_while_cond     #   9:     goto   1_while_cond
++     jmp     l_test_1_while_cond     #  10:     goto   1_while_cond
++ l_test_0:
+-     movl    $100, %eax              #  10:     if     100 # 99 goto 10_if_true
++     movl    $100, %eax              #  12:     if     100 # 99 goto 10_if_true
+-     jmp     l_test_10_if_true       #  11:     goto   10_if_true
++     jmp     l_test_10_if_true       #  13:     goto   10_if_true
+-     jmp     l_test_10_if_true       #  12:     goto   10_if_true
++     jmp     l_test_10_if_true       #  14:     goto   10_if_true
++     jmp     l_test_11_if_false      #  15:     goto   11_if_false
+-     jmp     l_test_9                #  14:     goto   9
++     jmp     l_test_9                #  17:     goto   9
++ l_test_11_if_false:
+-     movl    $1373, %eax             #  16:     assign v0 <- 1373
++     movl    $1373, %eax             #  20:     assign v0 <- 1373
+-     movl    $99, %eax               #  17:     param  0 <- 99
++     movl    $99, %eax               #  21:     param  0 <- 99
+-     call    WriteChar               #  18:     call   WriteChar
++     call    WriteChar               #  22:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               

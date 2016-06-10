@@ -1,0 +1,12 @@
++     jmp     l_f0_17                 #  22:     goto   17
+-     call    dummyBOOLfunc           #  22:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  23:     call   t6 <- dummyBOOLfunc
+-     movl    $97, %eax               #  23:     return 97
++     movl    $97, %eax               #  24:     return 97
+-     jmp     l_f0_18_while_cond      #  24:     goto   18_while_cond
++     jmp     l_f0_18_while_cond      #  25:     goto   18_while_cond
++ l_f0_17:
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $13, %esp              
++     addl    $16, %esp              

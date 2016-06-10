@@ -1,0 +1,27 @@
++     jmp     l_f2_15                 #  17:     goto   15
+-     call    dummyBOOLfunc           #  17:     call   t11 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  18:     call   t11 <- dummyBOOLfunc
+-     movzbl  -17(%ebp), %eax         #  18:     if     t11 = 1 goto 13
++     movzbl  -17(%ebp), %eax         #  19:     if     t11 = 1 goto 14
+-     je      l_f2_13                
++     je      l_f2_14                
+-     jmp     l_f2_14                 #  19:     goto   14
++     jmp     l_f2_15                 #  20:     goto   15
+- l_f2_13:
++ l_f2_14:
+-     movl    $1, %eax                #  21:     assign t12 <- 1
++     movl    $1, %eax                #  22:     assign t12 <- 1
+-     jmp     l_f2_15                 #  22:     goto   15
++     jmp     l_f2_16                 #  23:     goto   16
+- l_f2_14:
++ l_f2_15:
+-     movl    $0, %eax                #  24:     assign t12 <- 0
++     movl    $0, %eax                #  25:     assign t12 <- 0
+- l_f2_15:
++ l_f2_16:
+-     movl    $0, %eax                #  26:     if     0 = t12 goto 12_while_body
++     movl    $0, %eax                #  27:     if     0 = t12 goto 12_while_body
+-     jmp     l_f2_10                 #  27:     goto   10
++     jmp     l_f2_10                 #  28:     goto   10
+-     jmp     l_f2_11_while_cond      #  29:     goto   11_while_cond
++     jmp     l_f2_11_while_cond      #  30:     goto   11_while_cond

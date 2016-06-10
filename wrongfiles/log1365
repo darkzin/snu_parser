@@ -1,0 +1,41 @@
++     jmp     l_f0_12                 #  40:     goto   12
++     jmp     l_f0_12                 #  41:     goto   12
++     jmp     l_f0_12                 #  42:     goto   12
++     jmp     l_f0_12                 #  43:     goto   12
+-     movl    $1, %eax                #  40:     assign t22 <- 1
++     movl    $1, %eax                #  44:     assign t22 <- 1
+-     jmp     l_f0_13                 #  41:     goto   13
++     jmp     l_f0_13                 #  45:     goto   13
++ l_f0_12:
+-     movl    $0, %eax                #  42:     assign t22 <- 0
++     movl    $0, %eax                #  47:     assign t22 <- 0
+-     movzbl  -58(%ebp), %eax         #  44:     return t22
++     movzbl  -58(%ebp), %eax         #  49:     return t22
+-     call    dummyCHARfunc           #  46:     call   t23 <- dummyCHARfunc
++     call    dummyCHARfunc           #  51:     call   t23 <- dummyCHARfunc
+-     movzbl  -59(%ebp), %eax         #  47:     if     t23 < 100 goto 19_while_body
++     movzbl  -59(%ebp), %eax         #  52:     if     t23 < 100 goto 19_while_body
+-     jmp     l_f0_17                 #  48:     goto   17
++     jmp     l_f0_17                 #  53:     goto   17
+-     movl    $97, %eax               #  50:     assign v3 <- 97
++     movl    $97, %eax               #  55:     assign v3 <- 97
+-     call    dummyINTfunc            #  51:     call   t24 <- dummyINTfunc
++     call    dummyINTfunc            #  56:     call   t24 <- dummyINTfunc
+-     movl    $97, %eax               #  52:     assign v3 <- 97
++     movl    $97, %eax               #  57:     assign v3 <- 97
+-     call    dummyCHARfunc           #  53:     call   t25 <- dummyCHARfunc
++     call    dummyCHARfunc           #  58:     call   t25 <- dummyCHARfunc
+-     movl    $0, %eax                #  54:     return 0
++     movl    $0, %eax                #  59:     return 0
+-     call    ReadInt                 #  55:     call   t26 <- ReadInt
++     call    ReadInt                 #  60:     call   t26 <- ReadInt
+-     movl    $98, %eax               #  56:     assign v3 <- 98
++     movl    $98, %eax               #  61:     assign v3 <- 98
+-     movl    $1, %eax                #  58:     if     1 # 0 goto 30_while_body
++     movl    $1, %eax                #  63:     if     1 # 0 goto 30_while_body
+-     jmp     l_f0_28                 #  59:     goto   28
++     jmp     l_f0_28                 #  64:     goto   28
+-     jmp     l_f0_29_while_cond      #  61:     goto   29_while_cond
++     jmp     l_f0_29_while_cond      #  66:     goto   29_while_cond
+-     jmp     l_f0_18_while_cond      #  63:     goto   18_while_cond
++     jmp     l_f0_18_while_cond      #  68:     goto   18_while_cond

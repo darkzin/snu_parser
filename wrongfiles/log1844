@@ -1,0 +1,6 @@
++     jmp     l_test_14_if_false      #  16:     goto   14_if_false
++     jmp     l_test_14_if_false      #  17:     goto   14_if_false
++     jmp     l_test_14_if_false      #  18:     goto   14_if_false
+-     jmp     l_test_12               #  17:     goto   12
++     jmp     l_test_12               #  20:     goto   12
++ l_test_14_if_false:

@@ -1,0 +1,22 @@
++     jmp     l_f0_8                  #   9:     goto   8
+-     jmp     l_f0_6_if_true          #   9:     goto   6_if_true
++     jmp     l_f0_6_if_true          #  10:     goto   6_if_true
++ l_f0_8:
+-     jmp     l_f0_5                  #  11:     goto   5
++     jmp     l_f0_5                  #  13:     goto   5
+-     movl    $87169, %eax            #  13:     sub    t6 <- 87169, 96087
++     movl    $87169, %eax            #  15:     sub    t6 <- 87169, 96087
+-     movl    -20(%ebp), %eax         #  14:     if     t6 >= 72303 goto 13_if_true
++     movl    -20(%ebp), %eax         #  16:     if     t6 >= 72303 goto 13_if_true
+-     jmp     l_f0_14_if_false        #  15:     goto   14_if_false
++     jmp     l_f0_14_if_false        #  17:     goto   14_if_false
+-     movl    $99, %eax               #  18:     if     99 > 98 goto 18_while_body
++     movl    $99, %eax               #  20:     if     99 > 98 goto 18_while_body
+-     jmp     l_f0_16                 #  19:     goto   16
++     jmp     l_f0_16                 #  21:     goto   16
+-     jmp     l_f0_17_while_cond      #  21:     goto   17_while_cond
++     jmp     l_f0_17_while_cond      #  23:     goto   17_while_cond
+-     jmp     l_f0_12                 #  23:     goto   12
++     jmp     l_f0_12                 #  25:     goto   12
+-     addl    $1, %esp               
++     addl    $4, %esp               

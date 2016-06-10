@@ -1,0 +1,26 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_4_if_false       #   4:     goto   4_if_false
+-     movl    $52349, %eax            #   5:     if     52349 <= 60179 goto 10_while_body
++     movl    $52349, %eax            #   6:     if     52349 <= 60179 goto 10_while_body
+-     jmp     l_test_8                #   6:     goto   8
++     jmp     l_test_8                #   7:     goto   8
+-     jmp     l_test_9_while_cond     #   8:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #   9:     goto   9_while_cond
+-     call    ReadInt                 #  10:     call   t2 <- ReadInt
++     call    ReadInt                 #  11:     call   t2 <- ReadInt
+-     jmp     l_test_2                #  11:     goto   2
++     jmp     l_test_2                #  12:     goto   2
++ l_test_4_if_false:
+-     call    dummyBOOLfunc           #  14:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  16:     call   t3 <- dummyBOOLfunc
+-     movzbl  -21(%ebp), %eax         #  15:     assign v0 <- t3
++     movzbl  -21(%ebp), %eax         #  17:     assign v0 <- t3
+-     movl    $53846, %eax            #  16:     mul    t4 <- 53846, 57754
++     movl    $53846, %eax            #  18:     mul    t4 <- 53846, 57754
+-     movl    -28(%ebp), %eax         #  17:     add    t5 <- t4, 82904
++     movl    -28(%ebp), %eax         #  19:     add    t5 <- t4, 82904
+-     movl    -32(%ebp), %eax         #  18:     assign v1 <- t5
++     movl    -32(%ebp), %eax         #  20:     assign v1 <- t5

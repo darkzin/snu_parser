@@ -1,0 +1,40 @@
+-     movl    $84016, %eax            #   0:     if     84016 < 23406 goto 3
++     movl    $84016, %eax            #   0:     if     84016 < 23406 goto 4
+-     jl      l_f1_3                 
++     jl      l_f1_4                 
+-     jmp     l_f1_4                  #   1:     goto   4
++     jmp     l_f1_5                  #   1:     goto   5
+- l_f1_3:
++ l_f1_4:
+-     jmp     l_f1_5                  #   4:     goto   5
++     jmp     l_f1_6                  #   4:     goto   6
+- l_f1_4:
++ l_f1_5:
+- l_f1_5:
++ l_f1_6:
++     jmp     l_f2_20                 #  27:     goto   20
+-     movl    $0, %eax                #  27:     assign v1 <- 0
++     movl    $0, %eax                #  28:     assign v1 <- 0
+-     call    ReadInt                 #  28:     call   t3 <- ReadInt
++     call    ReadInt                 #  29:     call   t3 <- ReadInt
+-     jmp     l_f2_26                 #  30:     goto   26
++     jmp     l_f2_26                 #  31:     goto   26
+-     jmp     l_f2_27_while_cond      #  31:     goto   27_while_cond
++     jmp     l_f2_27_while_cond      #  32:     goto   27_while_cond
+-     movl    $45165, %eax            #  33:     return 45165
++     movl    $45165, %eax            #  34:     return 45165
+-     movl    $16047, %eax            #  34:     return 16047
++     movl    $16047, %eax            #  35:     return 16047
+-     movl    $19982, %eax            #  35:     return 19982
++     movl    $19982, %eax            #  36:     return 19982
+-     jmp     l_f2_21_while_cond      #  36:     goto   21_while_cond
++     jmp     l_f2_21_while_cond      #  37:     goto   21_while_cond
++ l_f2_20:
++     jmp     l_test_2                #   5:     goto   2
+-     jmp     l_test_3_while_cond     #   6:     goto   3_while_cond
++     jmp     l_test_3_while_cond     #   7:     goto   3_while_cond
++ l_test_2:
+-     call    dummyCHARfunc           #   7:     call   t0 <- dummyCHARfunc
++     call    dummyCHARfunc           #   9:     call   t0 <- dummyCHARfunc
+-     movl    $97, %eax               #   8:     assign v0 <- 97
++     movl    $97, %eax               #  10:     assign v0 <- 97

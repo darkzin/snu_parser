@@ -1,0 +1,22 @@
++     jmp     l_test_2_if_false       #   1:     goto   2_if_false
+-     call    dummyBOOLfunc           #   2:     call   t0 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   3:     call   t0 <- dummyBOOLfunc
+-     jmp     l_test_0                #   3:     goto   0
++     jmp     l_test_0                #   4:     goto   0
++ l_test_2_if_false:
+-     jmp     l_test_14_if_false      #   5:     goto   14_if_false
++     jmp     l_test_14_if_false      #   7:     goto   14_if_false
+-     jmp     l_test_12               #   7:     goto   12
++     jmp     l_test_12               #   9:     goto   12
+-     call    ReadInt                 #  10:     call   t1 <- ReadInt
++     call    ReadInt                 #  12:     call   t1 <- ReadInt
+-     movl    $57658, %eax            #  11:     if     57658 <= 78742 goto 18_if_true
++     movl    $57658, %eax            #  13:     if     57658 <= 78742 goto 18_if_true
+-     jmp     l_test_19_if_false      #  12:     goto   19_if_false
++     jmp     l_test_19_if_false      #  14:     goto   19_if_false
+-     jmp     l_test_24_if_false      #  15:     goto   24_if_false
++     jmp     l_test_24_if_false      #  17:     goto   24_if_false
+-     jmp     l_test_22               #  16:     goto   22
++     jmp     l_test_22               #  18:     goto   22
+-     jmp     l_test_17               #  19:     goto   17
++     jmp     l_test_17               #  21:     goto   17

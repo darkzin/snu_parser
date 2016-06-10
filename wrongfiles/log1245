@@ -1,0 +1,38 @@
++     jmp     l_f0_2                  #   2:     goto   2
+-     movl    $1, %eax                #   3:     assign t2 <- 1
++     movl    $1, %eax                #   4:     assign t2 <- 1
+-     jmp     l_f0_3                  #   4:     goto   3
++     jmp     l_f0_3                  #   5:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   5:     assign t2 <- 0
++     movl    $0, %eax                #   7:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #   7:     assign v1 <- t2
++     movzbl  -13(%ebp), %eax         #   9:     assign v1 <- t2
+-     call    dummyBOOLfunc           #   8:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  10:     call   t3 <- dummyBOOLfunc
+-     jmp     l_f0_11                 #   9:     goto   11
++     jmp     l_f0_12                 #  11:     goto   12
+- l_f0_11:
++ l_f0_12:
+-     movl    $1, %eax                #  11:     assign t4 <- 1
++     movl    $1, %eax                #  13:     assign t4 <- 1
+-     jmp     l_f0_13                 #  12:     goto   13
++     jmp     l_f0_14                 #  14:     goto   14
+-     movl    $0, %eax                #  13:     assign t4 <- 0
++     movl    $0, %eax                #  15:     assign t4 <- 0
+- l_f0_13:
++ l_f0_14:
+-     movzbl  -14(%ebp), %eax         #  15:     if     t3 # t4 goto 8
++     movzbl  -14(%ebp), %eax         #  17:     if     t3 # t4 goto 8
+-     jmp     l_f0_9                  #  16:     goto   9
++     jmp     l_f0_9                  #  18:     goto   9
+-     movl    $1, %eax                #  18:     assign t5 <- 1
++     movl    $1, %eax                #  20:     assign t5 <- 1
+-     jmp     l_f0_10                 #  19:     goto   10
++     jmp     l_f0_10                 #  21:     goto   10
+-     movl    $0, %eax                #  21:     assign t5 <- 0
++     movl    $0, %eax                #  23:     assign t5 <- 0
+-     movzbl  -16(%ebp), %eax         #  23:     return t5
++     movzbl  -16(%ebp), %eax         #  25:     return t5
+-     call    dummyBOOLfunc           #  24:     call   t6 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  26:     call   t6 <- dummyBOOLfunc

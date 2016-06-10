@@ -1,0 +1,49 @@
++     jmp     l_f1_7                  #   6:     goto   7
++     jmp     l_f1_7                  #   7:     goto   7
++     jmp     l_f1_7                  #   8:     goto   7
++     jmp     l_f1_7                  #   9:     goto   7
+-     movl    $1, %eax                #   6:     assign t6 <- 1
++     movl    $1, %eax                #  10:     assign t6 <- 1
+-     jmp     l_f1_7                  #   7:     goto   7
++     jmp     l_f1_8                  #  11:     goto   8
++ l_f1_7:
+-     movl    $0, %eax                #   8:     assign t6 <- 0
++     movl    $0, %eax                #  13:     assign t6 <- 0
+- l_f1_7:
++ l_f1_8:
+-     movl    $1, %eax                #  10:     if     1 # t6 goto 4_while_body
++     movl    $1, %eax                #  15:     if     1 # t6 goto 4_while_body
+-     jmp     l_f1_2                  #  11:     goto   2
++     jmp     l_f1_2                  #  16:     goto   2
+-     movl    $99, %eax               #  13:     assign v1 <- 99
++     movl    $99, %eax               #  18:     assign v1 <- 99
+-     jmp     l_f1_15_if_false        #  14:     goto   15_if_false
++     jmp     l_f1_15_if_false        #  19:     goto   15_if_false
+-     jmp     l_f1_13                 #  15:     goto   13
++     jmp     l_f1_13                 #  20:     goto   13
+-     jmp     l_f1_18_if_false        #  18:     goto   18_if_false
++     jmp     l_f1_18_if_false        #  23:     goto   18_if_false
+-     jmp     l_f1_16                 #  19:     goto   16
++     jmp     l_f1_16                 #  24:     goto   16
+-     jmp     l_f1_19                 #  22:     goto   19
++     jmp     l_f1_19                 #  27:     goto   19
+-     call    dummyBOOLfunc           #  24:     call   t7 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  29:     call   t7 <- dummyBOOLfunc
+-     jmp     l_f1_23                 #  26:     goto   23
++     jmp     l_f1_23                 #  31:     goto   23
+-     jmp     l_f1_24_while_cond      #  27:     goto   24_while_cond
++     jmp     l_f1_24_while_cond      #  32:     goto   24_while_cond
+-     jmp     l_f1_3_while_cond       #  30:     goto   3_while_cond
++     jmp     l_f1_3_while_cond       #  35:     goto   3_while_cond
+-     #1742297276(%ebp)-1742297320  [ $v4       <array 51 of <array 62 of <array 68 of <array 53 of <array 56 of <int>>>>>> %ebp+1742297276 ]
++     #   1742297276(%ebp)  -1742297320  [ $v4       <array 51 of <array 62 of <array 68 of <array 53 of <array 56 of <int>>>>>> %ebp+1742297276 ]
+-     #1697800772(%ebp)44496504  [ $v5       <array 34 of <array 21 of <array 76 of <array 82 of <array 10 of <char>>>>>> %ebp+1697800772 ]
++     #   1697800772(%ebp)  44496504  [ $v5       <array 34 of <array 21 of <array 76 of <array 82 of <array 10 of <char>>>>>> %ebp+1697800772 ]
+-     #-1985326240(%ebp)-611840284  [ $v6       <array 71 of <array 69 of <array 93 of <array 94 of <array 86 of <char>>>>>> %ebp-1985326240 ]
++     #   -1985326240(%ebp)  -611840284  [ $v6       <array 71 of <array 69 of <array 93 of <array 94 of <array 86 of <char>>>>>> %ebp-1985326240 ]
+-     #-1985326241(%ebp)   1  [ $v7       <char> %ebp-1985326241 ]
++     #   -1985326241(%ebp)   1  [ $v7       <char> %ebp-1985326241 ]
+-     movl    $496331558, %ecx       
++     movl    $-577410266, %ecx      
+-     addl    $1, %esp               
++     addl    $4, %esp               

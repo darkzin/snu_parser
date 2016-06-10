@@ -1,0 +1,47 @@
++     jmp     l_f0_14                 #  15:     goto   14
++     jmp     l_f0_14                 #  16:     goto   14
++ l_f0_14:
+-     jmp     l_f0_10                 #  15:     goto   10
++     jmp     l_f0_10                 #  18:     goto   10
+-     movl    $1, %eax                #  17:     assign t3 <- 1
++     movl    $1, %eax                #  20:     assign t3 <- 1
+-     jmp     l_f0_12                 #  18:     goto   12
++     jmp     l_f0_12                 #  21:     goto   12
+-     movl    $0, %eax                #  19:     assign t3 <- 0
++     movl    $0, %eax                #  22:     assign t3 <- 0
+-     movzbl  -17(%ebp), %eax         #  21:     return t3
++     movzbl  -17(%ebp), %eax         #  24:     return t3
+-     movl    $100, %eax              #  22:     assign v1 <- 100
++     movl    $100, %eax              #  25:     assign v1 <- 100
+-     movl    $39309, %eax            #  23:     if     39309 > 67364 goto 22
++     movl    $39309, %eax            #  26:     if     39309 > 67364 goto 22
+-     jmp     l_f0_23                 #  24:     goto   23
++     jmp     l_f0_23                 #  27:     goto   23
+-     movl    $1, %eax                #  26:     assign t4 <- 1
++     movl    $1, %eax                #  29:     assign t4 <- 1
+-     jmp     l_f0_24                 #  27:     goto   24
++     jmp     l_f0_24                 #  30:     goto   24
+-     movl    $0, %eax                #  29:     assign t4 <- 0
++     movl    $0, %eax                #  32:     assign t4 <- 0
+-     movzbl  -18(%ebp), %eax         #  31:     return t4
++     movzbl  -18(%ebp), %eax         #  34:     return t4
+-     call    dummyProcedure          #  32:     call   dummyProcedure
++     call    dummyProcedure          #  35:     call   dummyProcedure
+-     jmp     l_f0_29_if_false        #  33:     goto   29_if_false
++     jmp     l_f0_29_if_false        #  36:     goto   29_if_false
+-     jmp     l_f0_27                 #  34:     goto   27
++     jmp     l_f0_27                 #  37:     goto   27
+-     jmp     l_f0_17                 #  37:     goto   17
++     jmp     l_f0_17                 #  40:     goto   17
++     jmp     l_test_8_if_false       #   9:     goto   8_if_false
+-     jmp     l_test_6                #  10:     goto   6
++     jmp     l_test_6                #  11:     goto   6
++ l_test_8_if_false:
+-     call    dummyCHARfunc           #  14:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  16:     call   t1 <- dummyCHARfunc
+-     movl    $99, %eax               #  15:     if     99 # t1 goto 15_while_body
++     movl    $99, %eax               #  17:     if     99 # t1 goto 15_while_body
+-     jmp     l_test_13               #  16:     goto   13
++     jmp     l_test_13               #  18:     goto   13
+-     jmp     l_test_14_while_cond    #  18:     goto   14_while_cond
++     jmp     l_test_14_while_cond    #  20:     goto   14_while_cond

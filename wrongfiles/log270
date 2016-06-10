@@ -1,0 +1,22 @@
+-     #  -3084(%ebp)3048  [ $v5       <array 7 of <array 6 of <array 6 of <array 6 of <array 2 of <char>>>>>> %ebp-3084 ]
++     #   -3084(%ebp)  3048  [ $v5       <array 7 of <array 6 of <array 6 of <array 6 of <array 2 of <char>>>>>> %ebp-3084 ]
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f1_9                  #  17:     goto   9
+-     movl    $1, %eax                #  17:     assign t13 <- 1
++     movl    $1, %eax                #  18:     assign t13 <- 1
+-     jmp     l_f1_10                 #  18:     goto   10
++     jmp     l_f1_10                 #  19:     goto   10
++ l_f1_9:
+-     movl    $0, %eax                #  19:     assign t13 <- 0
++     movl    $0, %eax                #  21:     assign t13 <- 0
+-     movzbl  -25(%ebp), %eax         #  21:     param  0 <- t13
++     movzbl  -25(%ebp), %eax         #  23:     param  0 <- t13
+-     call    f0                      #  22:     call   t14 <- f0
++     call    f0                      #  24:     call   t14 <- f0
+-     addl    $7, %esp               
++     addl    $16, %esp              
+-     movzbl  -26(%ebp), %eax         #  23:     return t14
++     movzbl  -26(%ebp), %eax         #  25:     return t14
+-     addl    $7, %esp               
++     addl    $16, %esp              

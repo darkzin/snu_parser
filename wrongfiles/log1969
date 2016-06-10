@@ -1,0 +1,48 @@
++     jmp     l_f0_2                  #   2:     goto   2
+-     movl    $1, %eax                #   3:     assign t7 <- 1
++     movl    $1, %eax                #   4:     assign t7 <- 1
+-     jmp     l_f0_3                  #   4:     goto   3
++     jmp     l_f0_3                  #   5:     goto   3
++ l_f0_2:
+-     movl    $0, %eax                #   5:     assign t7 <- 0
++     movl    $0, %eax                #   7:     assign t7 <- 0
+-     movzbl  -33(%ebp), %eax         #   7:     return t7
++     movzbl  -33(%ebp), %eax         #   9:     return t7
+-     movl    $64472, %eax            #   8:     sub    t8 <- 64472, 31098
++     movl    $64472, %eax            #  10:     sub    t8 <- 64472, 31098
+-     movl    -40(%ebp), %eax         #   9:     add    t9 <- t8, 63258
++     movl    -40(%ebp), %eax         #  11:     add    t9 <- t8, 63258
+-     movl    -44(%ebp), %eax         #  10:     sub    t10 <- t9, 47513
++     movl    -44(%ebp), %eax         #  12:     sub    t10 <- t9, 47513
+-     movl    $33282, %eax            #  11:     div    t11 <- 33282, 61324
++     movl    $33282, %eax            #  13:     div    t11 <- 33282, 61324
+-     movl    -20(%ebp), %eax         #  12:     mul    t12 <- t11, 59712
++     movl    -20(%ebp), %eax         #  14:     mul    t12 <- t11, 59712
+-     movl    -24(%ebp), %eax         #  13:     div    t13 <- t12, 21445
++     movl    -24(%ebp), %eax         #  15:     div    t13 <- t12, 21445
+-     movl    -16(%ebp), %eax         #  14:     if     t10 < t13 goto 9_if_true
++     movl    -16(%ebp), %eax         #  16:     if     t10 < t13 goto 9_if_true
+-     jmp     l_f0_10_if_false        #  15:     goto   10_if_false
++     jmp     l_f0_10_if_false        #  17:     goto   10_if_false
+-     jmp     l_f0_8                  #  17:     goto   8
++     jmp     l_f0_8                  #  19:     goto   8
+-     call    ReadInt                 #  20:     call   t14 <- ReadInt
++     call    ReadInt                 #  22:     call   t14 <- ReadInt
+-     #-27104288(%ebp)27104244  [ $v3       <array 66 of <array 39 of <array 81 of <array 26 of <array 5 of <char>>>>>> %ebp-27104288 ]
++     #   -27104288(%ebp)  27104244  [ $v3       <array 66 of <array 39 of <array 81 of <array 26 of <array 5 of <char>>>>>> %ebp-27104288 ]
+-     #-123299696(%ebp)96195408  [ $v4       <array 34 of <array 67 of <array 92 of <array 51 of <array 9 of <bool>>>>>> %ebp-123299696 ]
++     #   -123299696(%ebp)  96195408  [ $v4       <array 34 of <array 67 of <array 92 of <array 51 of <array 9 of <bool>>>>>> %ebp-123299696 ]
+-     #-902351240(%ebp)779051544  [ $v5       <array 34 of <array 40 of <array 51 of <array 36 of <array 78 of <int>>>>>> %ebp-902351240 ]
++     #   -902351240(%ebp)  779051544  [ $v5       <array 34 of <array 40 of <array 51 of <array 36 of <array 78 of <int>>>>>> %ebp-902351240 ]
+-     #-1002773408(%ebp)100422168  [ $v6       <array 31 of <array 64 of <array 37 of <array 18 of <array 19 of <int>>>>>> %ebp-1002773408 ]
++     #   -1002773408(%ebp)  100422168  [ $v6       <array 31 of <array 64 of <array 37 of <array 18 of <array 19 of <int>>>>>> %ebp-1002773408 ]
+-     #-27104300(%ebp)27104244  [ $v3       <array 66 of <array 39 of <array 81 of <array 26 of <array 5 of <char>>>>>> %ebp-27104300 ]
++     #   -27104300(%ebp)  27104244  [ $v3       <array 66 of <array 39 of <array 81 of <array 26 of <array 5 of <char>>>>>> %ebp-27104300 ]
+-     #-123299708(%ebp)96195408  [ $v4       <array 34 of <array 67 of <array 92 of <array 51 of <array 9 of <bool>>>>>> %ebp-123299708 ]
++     #   -123299708(%ebp)  96195408  [ $v4       <array 34 of <array 67 of <array 92 of <array 51 of <array 9 of <bool>>>>>> %ebp-123299708 ]
+-     #-902351252(%ebp)779051544  [ $v5       <array 34 of <array 40 of <array 51 of <array 36 of <array 78 of <int>>>>>> %ebp-902351252 ]
++     #   -902351252(%ebp)  779051544  [ $v5       <array 34 of <array 40 of <array 51 of <array 36 of <array 78 of <int>>>>>> %ebp-902351252 ]
+-     #-1002773420(%ebp)100422168  [ $v6       <array 31 of <array 64 of <array 37 of <array 18 of <array 19 of <int>>>>>> %ebp-1002773420 ]
++     #   -1002773420(%ebp)  100422168  [ $v6       <array 31 of <array 64 of <array 37 of <array 18 of <array 19 of <int>>>>>> %ebp-1002773420 ]
+-     #-1002773421(%ebp)   1  [ $v7       <char> %ebp-1002773421 ]
++     #   -1002773421(%ebp)   1  [ $v7       <char> %ebp-1002773421 ]

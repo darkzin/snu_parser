@@ -1,0 +1,36 @@
++     jmp     l_f1_21                 #  20:     goto   21
+-     movl    $1, %eax                #  20:     assign t3 <- 1
++     movl    $1, %eax                #  21:     assign t3 <- 1
+-     jmp     l_f1_21                 #  21:     goto   21
++     jmp     l_f1_22                 #  22:     goto   22
++ l_f1_21:
+-     movl    $0, %eax                #  22:     assign t3 <- 0
++     movl    $0, %eax                #  24:     assign t3 <- 0
+- l_f1_21:
++ l_f1_22:
+-     jmp     l_f1_26                 #  24:     goto   26
++     jmp     l_f1_27                 #  26:     goto   27
++     jmp     l_f1_28                 #  27:     goto   28
+- l_f1_26:
++ l_f1_27:
+-     movl    $1, %eax                #  26:     assign t4 <- 1
++     movl    $1, %eax                #  29:     assign t4 <- 1
+-     jmp     l_f1_28                 #  27:     goto   28
++     jmp     l_f1_29                 #  30:     goto   29
++ l_f1_28:
+-     movl    $0, %eax                #  28:     assign t4 <- 0
++     movl    $0, %eax                #  32:     assign t4 <- 0
+- l_f1_28:
++ l_f1_29:
+-     movzbl  -14(%ebp), %eax         #  30:     if     t3 = t4 goto 17_if_true
++     movzbl  -14(%ebp), %eax         #  34:     if     t3 = t4 goto 17_if_true
+-     jmp     l_f1_18_if_false        #  31:     goto   18_if_false
++     jmp     l_f1_18_if_false        #  35:     goto   18_if_false
+-     jmp     l_f1_16                 #  33:     goto   16
++     jmp     l_f1_16                 #  37:     goto   16
+-     #  -6536(%ebp)6504  [ $v4       <array 3 of <array 10 of <array 6 of <array 9 of <array 1 of <int>>>>>> %ebp-6536 ]
++     #   -6536(%ebp)  6504  [ $v4       <array 3 of <array 10 of <array 6 of <array 9 of <array 1 of <int>>>>>> %ebp-6536 ]
+-     jmp     l_f2_5                  #   1:     goto   5
++     jmp     l_f2_6                  #   1:     goto   6
+- l_f2_5:
++ l_f2_6:

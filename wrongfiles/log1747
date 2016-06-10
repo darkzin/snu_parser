@@ -1,0 +1,21 @@
++     jmp     l_f0_0                  #   1:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
+-     jmp     l_f0_1_while_cond       #   1:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   3:     goto   1_while_cond
++ l_f0_0:
+-     movl    $98, %eax               #   3:     if     98 <= 100 goto 9_while_body
++     movl    $98, %eax               #   6:     if     98 <= 100 goto 9_while_body
+-     jmp     l_f0_7                  #   4:     goto   7
++     jmp     l_f0_7                  #   7:     goto   7
+-     jmp     l_f0_8_while_cond       #   6:     goto   8_while_cond
++     jmp     l_f0_8_while_cond       #   9:     goto   8_while_cond
+-     #-41017660(%ebp)41017624  [ $v3       <array 32 of <array 68 of <array 50 of <array 29 of <array 13 of <char>>>>>> %ebp-41017660 ]
++     #   -41017660(%ebp)  41017624  [ $v3       <array 32 of <array 68 of <array 50 of <array 29 of <array 13 of <char>>>>>> %ebp-41017660 ]
+-     #-1517369684(%ebp)1476352024  [ $v4       <array 40 of <array 73 of <array 79 of <array 40 of <array 40 of <int>>>>>> %ebp-1517369684 ]
++     #   -1517369684(%ebp)  1476352024  [ $v4       <array 40 of <array 73 of <array 79 of <array 40 of <array 40 of <int>>>>>> %ebp-1517369684 ]
+-     addl    $10, %esp              
++     addl    $16, %esp              
++     jmp     l_test_6                #  13:     goto   6
+-     jmp     l_test_7_while_cond     #  14:     goto   7_while_cond
++     jmp     l_test_7_while_cond     #  15:     goto   7_while_cond
++ l_test_6:

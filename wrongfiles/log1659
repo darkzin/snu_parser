@@ -1,0 +1,17 @@
++     jmp     l_test_1                #   6:     goto   1
+-     jmp     l_test_2_while_cond     #   6:     goto   2_while_cond
++     jmp     l_test_2_while_cond     #   7:     goto   2_while_cond
+-     call    dummyBOOLfunc           #   8:     call   t1 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   9:     call   t1 <- dummyBOOLfunc
+-     jmp     l_test_11_if_false      #   9:     goto   11_if_false
++     jmp     l_test_11_if_false      #  10:     goto   11_if_false
+-     movl    $97, %eax               #  10:     assign v0 <- 97
++     movl    $97, %eax               #  11:     assign v0 <- 97
+-     jmp     l_test_13               #  11:     goto   13
++     jmp     l_test_13               #  12:     goto   13
+-     jmp     l_test_9                #  13:     goto   9
++     jmp     l_test_9                #  14:     goto   9
+-     jmp     l_test_6                #  16:     goto   6
++     jmp     l_test_6                #  17:     goto   6
+-     call    ReadInt                 #  18:     call   t2 <- ReadInt
++     call    ReadInt                 #  19:     call   t2 <- ReadInt

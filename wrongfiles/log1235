@@ -1,0 +1,62 @@
++     jmp     l_f2_7                  #   0:     goto   7
++ l_f2_7:
+-     movl    $1, %eax                #   0:     assign t11 <- 1
++     movl    $1, %eax                #   2:     assign t11 <- 1
+-     jmp     l_f2_3                  #   1:     goto   3
++     jmp     l_f2_3                  #   3:     goto   3
+-     movl    $0, %eax                #   2:     assign t11 <- 0
++     movl    $0, %eax                #   4:     assign t11 <- 0
+-     movzbl  -13(%ebp), %eax         #   4:     assign v4 <- t11
++     movzbl  -13(%ebp), %eax         #   6:     assign v4 <- t11
+-     call    dummyBOOLfunc           #   6:     call   t12 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   8:     call   t12 <- dummyBOOLfunc
++     jmp     l_test_5                #   0:     goto   5
+-     movl    $1, %eax                #   0:     assign t0 <- 1
++     movl    $1, %eax                #   1:     assign t0 <- 1
+-     jmp     l_test_5                #   1:     goto   5
++     jmp     l_test_6                #   2:     goto   6
+-     movl    $0, %eax                #   2:     assign t0 <- 0
+-     movb    %al, -13(%ebp)         
++     movl    $0, %eax                #   4:     assign t0 <- 0
++     movb    %al, -13(%ebp)         
++ l_test_6:
+-     movzbl  -13(%ebp), %eax         #   4:     if     t0 # 1 goto 1_if_true
++     movzbl  -13(%ebp), %eax         #   6:     if     t0 # 1 goto 1_if_true
+-     jmp     l_test_2_if_false       #   5:     goto   2_if_false
++     jmp     l_test_2_if_false       #   7:     goto   2_if_false
+-     jmp     l_test_0                #   7:     goto   0
++     jmp     l_test_0                #   9:     goto   0
+-     jmp     l_test_9_while_cond     #  12:     goto   9_while_cond
++     jmp     l_test_9_while_cond     #  14:     goto   9_while_cond
+-     jmp     l_test_13_if_true       #  13:     goto   13_if_true
++     jmp     l_test_13_if_true       #  15:     goto   13_if_true
+-     movl    $51750, %eax            #  15:     assign v0 <- 51750
++     movl    $51750, %eax            #  17:     assign v0 <- 51750
+-     jmp     l_test_12               #  16:     goto   12
++     jmp     l_test_12               #  18:     goto   12
+-     movl    $64112, %eax            #  19:     mul    t1 <- 64112, 74825
++     movl    $64112, %eax            #  21:     mul    t1 <- 64112, 74825
+-     movl    -20(%ebp), %eax         #  20:     mul    t2 <- t1, 37295
++     movl    -20(%ebp), %eax         #  22:     mul    t2 <- t1, 37295
+-     movl    -28(%ebp), %eax         #  21:     mul    t3 <- t2, 7743
++     movl    -28(%ebp), %eax         #  23:     mul    t3 <- t2, 7743
+-     movl    -32(%ebp), %eax         #  22:     div    t4 <- t3, 73067
++     movl    -32(%ebp), %eax         #  24:     div    t4 <- t3, 73067
+-     movl    $47010, %eax            #  23:     sub    t5 <- 47010, 82797
++     movl    $47010, %eax            #  25:     sub    t5 <- 47010, 82797
+-     movl    -40(%ebp), %eax         #  24:     sub    t6 <- t5, 89027
++     movl    -40(%ebp), %eax         #  26:     sub    t6 <- t5, 89027
+-     movl    -44(%ebp), %eax         #  25:     add    t7 <- t6, 47128
++     movl    -44(%ebp), %eax         #  27:     add    t7 <- t6, 47128
+-     movl    -48(%ebp), %eax         #  26:     add    t8 <- t7, 66825
++     movl    -48(%ebp), %eax         #  28:     add    t8 <- t7, 66825
+-     movl    -52(%ebp), %eax         #  27:     sub    t9 <- t8, 51498
++     movl    -52(%ebp), %eax         #  29:     sub    t9 <- t8, 51498
+-     movl    -36(%ebp), %eax         #  28:     if     t4 < t9 goto 19_while_body
++     movl    -36(%ebp), %eax         #  30:     if     t4 < t9 goto 19_while_body
+-     jmp     l_test_17               #  29:     goto   17
++     jmp     l_test_17               #  31:     goto   17
+-     jmp     l_test_18_while_cond    #  31:     goto   18_while_cond
++     jmp     l_test_18_while_cond    #  33:     goto   18_while_cond
+-     call    dummyINTfunc            #  33:     call   t10 <- dummyINTfunc
++     call    dummyINTfunc            #  35:     call   t10 <- dummyINTfunc

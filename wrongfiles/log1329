@@ -1,0 +1,28 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f1_5                  #  12:     goto   5
+-     jmp     l_f1_6_while_cond       #  13:     goto   6_while_cond
++     jmp     l_f1_6_while_cond       #  14:     goto   6_while_cond
++ l_f1_5:
++     jmp     l_test_6                #   6:     goto   6
++ l_test_6:
+-     jmp     l_test_4_while_cond     #   6:     goto   4_while_cond
++     jmp     l_test_4_while_cond     #   8:     goto   4_while_cond
+-     movl    $97, %eax               #   7:     if     97 < 97 goto 10_if_true
++     movl    $97, %eax               #   9:     if     97 < 97 goto 10_if_true
+-     jmp     l_test_11_if_false      #   8:     goto   11_if_false
++     jmp     l_test_11_if_false      #  10:     goto   11_if_false
+-     call    dummyCHARfunc           #  10:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  12:     call   t2 <- dummyCHARfunc
+-     movl    $97, %eax               #  12:     if     97 <= 99 goto 16_while_body
++     movl    $97, %eax               #  14:     if     97 <= 99 goto 16_while_body
+-     jmp     l_test_14               #  13:     goto   14
++     jmp     l_test_14               #  15:     goto   14
+-     jmp     l_test_20_if_false      #  15:     goto   20_if_false
++     jmp     l_test_20_if_false      #  17:     goto   20_if_false
+-     jmp     l_test_18               #  16:     goto   18
++     jmp     l_test_18               #  18:     goto   18
+-     jmp     l_test_15_while_cond    #  19:     goto   15_while_cond
++     jmp     l_test_15_while_cond    #  21:     goto   15_while_cond
+-     jmp     l_test_9                #  21:     goto   9
++     jmp     l_test_9                #  23:     goto   9

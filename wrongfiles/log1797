@@ -1,0 +1,12 @@
++     jmp     l_f0_42                 #  49:     goto   42
+-     movl    $1, %eax                #  50:     assign t4 <- 1
++     movl    $1, %eax                #  51:     assign t4 <- 1
+-     jmp     l_f0_43                 #  51:     goto   43
++     jmp     l_f0_43                 #  52:     goto   43
++ l_f0_42:
+-     movl    $0, %eax                #  52:     assign t4 <- 0
++     movl    $0, %eax                #  54:     assign t4 <- 0
+-     movzbl  -19(%ebp), %eax         #  54:     return t4
++     movzbl  -19(%ebp), %eax         #  56:     return t4
+-     jmp     l_f0_34                 #  55:     goto   34
++     jmp     l_f0_34                 #  57:     goto   34

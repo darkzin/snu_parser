@@ -1,0 +1,28 @@
++     jmp     l_f0_0                  #   2:     goto   0
+-     movl    $20348, %eax            #   4:     if     20348 < 37073 goto 6_while_body
++     movl    $20348, %eax            #   5:     if     20348 < 37073 goto 6_while_body
+-     jmp     l_f0_4                  #   5:     goto   4
++     jmp     l_f0_4                  #   6:     goto   4
+-     jmp     l_f0_5_while_cond       #   7:     goto   5_while_cond
++     jmp     l_f0_5_while_cond       #   8:     goto   5_while_cond
+-     jmp     l_f0_1_while_cond       #   9:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #  10:     goto   1_while_cond
++ l_f0_0:
+-     movl    $29106, %eax            #  10:     add    t1 <- 29106, 42817
++     movl    $29106, %eax            #  12:     add    t1 <- 29106, 42817
+-     movl    -16(%ebp), %eax         #  11:     add    t2 <- t1, 37905
++     movl    -16(%ebp), %eax         #  13:     add    t2 <- t1, 37905
+-     movl    -20(%ebp), %eax         #  12:     add    t3 <- t2, 60451
++     movl    -20(%ebp), %eax         #  14:     add    t3 <- t2, 60451
+-     movl    -24(%ebp), %eax         #  13:     assign v1 <- t3
++     movl    -24(%ebp), %eax         #  15:     assign v1 <- t3
+-     movl    $100, %eax              #  14:     if     100 # 99 goto 10_if_true
++     movl    $100, %eax              #  16:     if     100 # 99 goto 10_if_true
+-     jmp     l_f0_11_if_false        #  15:     goto   11_if_false
++     jmp     l_f0_11_if_false        #  17:     goto   11_if_false
+-     movl    $0, %eax                #  17:     assign v2 <- 0
++     movl    $0, %eax                #  19:     assign v2 <- 0
+-     jmp     l_f0_9                  #  18:     goto   9
++     jmp     l_f0_9                  #  20:     goto   9
+-     #-427744848(%ebp)427744824  [ $v0       <array 14 of <array 45 of <array 23 of <array 90 of <array 82 of <int>>>>>> %ebp-427744848 ]
++     #   -427744848(%ebp)  427744824  [ $v0       <array 14 of <array 45 of <array 23 of <array 90 of <array 82 of <int>>>>>> %ebp-427744848 ]

@@ -1,0 +1,34 @@
++     jmp     l_f0_5                  #   1:     goto   5
+-     movl    $1, %eax                #   1:     assign t2 <- 1
++     movl    $1, %eax                #   2:     assign t2 <- 1
+-     jmp     l_f0_5                  #   2:     goto   5
++     jmp     l_f0_6                  #   3:     goto   6
++ l_f0_5:
+-     movl    $0, %eax                #   3:     assign t2 <- 0
++     movl    $0, %eax                #   5:     assign t2 <- 0
+- l_f0_5:
++ l_f0_6:
+-     movl    $1, %eax                #   5:     if     1 = t2 goto 2_while_body
++     movl    $1, %eax                #   7:     if     1 = t2 goto 2_while_body
+-     jmp     l_f0_0                  #   6:     goto   0
++     jmp     l_f0_0                  #   8:     goto   0
+-     movl    $97, %eax               #   8:     param  0 <- 97
++     movl    $97, %eax               #  10:     param  0 <- 97
+-     call    WriteChar               #   9:     call   WriteChar
++     call    WriteChar               #  11:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     jmp     l_f0_1_while_cond       #  10:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #  12:     goto   1_while_cond
+-     call    ReadInt                 #  12:     call   t3 <- ReadInt
++     call    ReadInt                 #  14:     call   t3 <- ReadInt
+-     movl    $72589, %eax            #  13:     sub    t4 <- 72589, t3
++     movl    $72589, %eax            #  15:     sub    t4 <- 72589, t3
+-     movl    -24(%ebp), %eax         #  14:     return t4
++     movl    -24(%ebp), %eax         #  16:     return t4
+-     movl    $99468, %eax            #  15:     mul    t5 <- 99468, 14121
++     movl    $99468, %eax            #  17:     mul    t5 <- 99468, 14121
+-     movl    -28(%ebp), %eax         #  16:     mul    t6 <- t5, 65499
++     movl    -28(%ebp), %eax         #  18:     mul    t6 <- t5, 65499
+-     movl    -32(%ebp), %eax         #  17:     assign v2 <- t6
++     movl    -32(%ebp), %eax         #  19:     assign v2 <- t6

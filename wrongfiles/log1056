@@ -1,0 +1,13 @@
+-     #-1260693136(%ebp)1260693116  [ $v1       <array 41 of <array 97 of <array 86 of <array 38 of <array 97 of <char>>>>>> %ebp-1260693136 ]
++     #   -1260693136(%ebp)  1260693116  [ $v1       <array 41 of <array 97 of <array 86 of <array 38 of <array 97 of <char>>>>>> %ebp-1260693136 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
++     jmp     l_test_11               #  13:     goto   11
++     jmp     l_test_11               #  14:     goto   11
+-     movl    $0, %eax                #  13:     assign v0 <- 0
++     movl    $0, %eax                #  15:     assign v0 <- 0
+-     movl    $76747, %eax            #  14:     assign v1 <- 76747
++     movl    $76747, %eax            #  16:     assign v1 <- 76747
+-     jmp     l_test_12_while_cond    #  15:     goto   12_while_cond
++     jmp     l_test_12_while_cond    #  17:     goto   12_while_cond
++ l_test_11:

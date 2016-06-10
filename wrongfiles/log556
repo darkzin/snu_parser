@@ -1,0 +1,28 @@
++     jmp     l_f1_0                  #   1:     goto   0
++     jmp     l_f1_0                  #   2:     goto   0
++     jmp     l_f1_0                  #   3:     goto   0
+-     movl    $98, %eax               #   1:     return 98
++     movl    $98, %eax               #   4:     return 98
+-     movl    $0, %eax                #   3:     if     0 # 1 goto 8_while_body
++     movl    $0, %eax                #   6:     if     0 # 1 goto 8_while_body
+-     jmp     l_f1_6                  #   4:     goto   6
++     jmp     l_f1_6                  #   7:     goto   6
+-     jmp     l_f1_7_while_cond       #   6:     goto   7_while_cond
++     jmp     l_f1_7_while_cond       #   9:     goto   7_while_cond
+-     jmp     l_f1_1_while_cond       #   8:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #  11:     goto   1_while_cond
++ l_f1_0:
+-     movl    $98, %eax               #   9:     if     98 > 99 goto 11_if_true
++     movl    $98, %eax               #  13:     if     98 > 99 goto 11_if_true
+-     jmp     l_f1_12_if_false        #  10:     goto   12_if_false
++     jmp     l_f1_12_if_false        #  14:     goto   12_if_false
+-     movl    $98, %eax               #  13:     if     98 < 98 goto 16_while_body
++     movl    $98, %eax               #  17:     if     98 < 98 goto 16_while_body
+-     jmp     l_f1_14                 #  14:     goto   14
++     jmp     l_f1_14                 #  18:     goto   14
+-     jmp     l_f1_15_while_cond      #  16:     goto   15_while_cond
++     jmp     l_f1_15_while_cond      #  20:     goto   15_while_cond
+-     jmp     l_f1_10                 #  18:     goto   10
++     jmp     l_f1_10                 #  22:     goto   10
+-     call    dummyCHARfunc           #  21:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #  25:     call   t1 <- dummyCHARfunc

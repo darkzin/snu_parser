@@ -1,0 +1,48 @@
++     jmp     l_f0_7                  #   2:     goto   7
++     jmp     l_f0_7                  #   3:     goto   7
+-     movl    $1, %eax                #   2:     assign t9 <- 1
++     movl    $1, %eax                #   4:     assign t9 <- 1
+-     jmp     l_f0_7                  #   3:     goto   7
++     jmp     l_f0_8                  #   5:     goto   8
++ l_f0_7:
+-     movl    $0, %eax                #   4:     assign t9 <- 0
++     movl    $0, %eax                #   7:     assign t9 <- 0
+- l_f0_7:
++ l_f0_8:
+-     movl    $1, %eax                #   6:     if     1 = t9 goto 2
++     movl    $1, %eax                #   9:     if     1 = t9 goto 2
+-     jmp     l_f0_3                  #   7:     goto   3
++     jmp     l_f0_3                  #  10:     goto   3
+-     movl    $1, %eax                #   9:     assign t10 <- 1
++     movl    $1, %eax                #  12:     assign t10 <- 1
+-     jmp     l_f0_4                  #  10:     goto   4
++     jmp     l_f0_4                  #  13:     goto   4
+-     movl    $0, %eax                #  12:     assign t10 <- 0
++     movl    $0, %eax                #  15:     assign t10 <- 0
+-     movzbl  -13(%ebp), %eax         #  14:     assign v0 <- t10
++     movzbl  -13(%ebp), %eax         #  17:     assign v0 <- t10
+-     movl    $49306, %eax            #  15:     assign v1 <- 49306
++     movl    $49306, %eax            #  18:     assign v1 <- 49306
++     jmp     l_test_11_if_false      #  14:     goto   11_if_false
++     jmp     l_test_11_if_false      #  15:     goto   11_if_false
+-     jmp     l_test_9                #  15:     goto   9
++     jmp     l_test_9                #  17:     goto   9
++ l_test_11_if_false:
+-     movl    $34752, %eax            #  17:     sub    t1 <- 34752, 60610
++     movl    $34752, %eax            #  20:     sub    t1 <- 34752, 60610
+-     movl    -20(%ebp), %eax         #  18:     sub    t2 <- t1, 63376
++     movl    -20(%ebp), %eax         #  21:     sub    t2 <- t1, 63376
+-     movl    -24(%ebp), %eax         #  19:     add    t3 <- t2, 73976
++     movl    -24(%ebp), %eax         #  22:     add    t3 <- t2, 73976
+-     movl    -28(%ebp), %eax         #  20:     sub    t4 <- t3, 56803
++     movl    -28(%ebp), %eax         #  23:     sub    t4 <- t3, 56803
+-     movl    -32(%ebp), %eax         #  21:     add    t5 <- t4, 82670
++     movl    -32(%ebp), %eax         #  24:     add    t5 <- t4, 82670
+-     movl    -36(%ebp), %eax         #  22:     add    t6 <- t5, 28890
++     movl    -36(%ebp), %eax         #  25:     add    t6 <- t5, 28890
+-     movl    -40(%ebp), %eax         #  23:     param  0 <- t6
++     movl    -40(%ebp), %eax         #  26:     param  0 <- t6
+-     call    WriteInt                #  24:     call   WriteInt
++     call    WriteInt                #  27:     call   WriteInt
+-     call    dummyBOOLfunc           #  25:     call   t7 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  28:     call   t7 <- dummyBOOLfunc

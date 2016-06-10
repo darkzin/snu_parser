@@ -1,0 +1,30 @@
+-     jmp     l_test_3                #   0:     goto   3
++     jmp     l_test_4                #   0:     goto   4
++     jmp     l_test_5                #   1:     goto   5
+- l_test_3:
++ l_test_4:
+-     movl    $1, %eax                #   2:     assign t0 <- 1
++     movl    $1, %eax                #   3:     assign t0 <- 1
+-     jmp     l_test_5                #   3:     goto   5
++     jmp     l_test_6                #   4:     goto   6
++ l_test_5:
+-     movl    $0, %eax                #   4:     assign t0 <- 0
++     movl    $0, %eax                #   6:     assign t0 <- 0
+- l_test_5:
++ l_test_6:
+-     movzbl  -13(%ebp), %eax         #   6:     if     t0 = 1 goto 1_if_true
++     movzbl  -13(%ebp), %eax         #   8:     if     t0 = 1 goto 1_if_true
+-     jmp     l_test_2_if_false       #   7:     goto   2_if_false
++     jmp     l_test_2_if_false       #   9:     goto   2_if_false
+-     movl    $98, %eax               #  10:     if     98 = 100 goto 13_while_body
++     movl    $98, %eax               #  12:     if     98 = 100 goto 13_while_body
+-     jmp     l_test_11               #  11:     goto   11
++     jmp     l_test_11               #  13:     goto   11
+-     jmp     l_test_12_while_cond    #  13:     goto   12_while_cond
++     jmp     l_test_12_while_cond    #  15:     goto   12_while_cond
+-     jmp     l_test_0                #  15:     goto   0
++     jmp     l_test_0                #  17:     goto   0
+-     jmp     l_test_17_while_cond    #  21:     goto   17_while_cond
++     jmp     l_test_17_while_cond    #  23:     goto   17_while_cond
+-     call    dummyINTfunc            #  22:     call   t1 <- dummyINTfunc
++     call    dummyINTfunc            #  24:     call   t1 <- dummyINTfunc

@@ -1,0 +1,28 @@
+-     jmp     l_f0_10                 #  13:     goto   10
++     jmp     l_f0_11                 #  13:     goto   11
+- l_f0_10:
++ l_f0_11:
+-     movl    $100, %eax              #  22:     if     100 = 97 goto 18
++     movl    $100, %eax              #  22:     if     100 = 97 goto 19
+-     je      l_f0_18                
++     je      l_f0_19                
+-     jmp     l_f0_19                 #  23:     goto   19
++     jmp     l_f0_20                 #  23:     goto   20
+- l_f0_18:
++ l_f0_19:
+-     jmp     l_f0_20                 #  26:     goto   20
++     jmp     l_f0_21                 #  26:     goto   21
+- l_f0_19:
++ l_f0_20:
+- l_f0_20:
++ l_f0_21:
+-     jmp     l_f0_22                 #  30:     goto   22
++     jmp     l_f0_23                 #  30:     goto   23
+- l_f0_22:
++ l_f0_23:
+-     jmp     l_f0_24                 #  33:     goto   24
++     jmp     l_f0_25                 #  33:     goto   25
+- l_f0_24:
++ l_f0_25:
+-     addl    $1, %esp               
++     addl    $4, %esp               

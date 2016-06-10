@@ -1,0 +1,38 @@
++     jmp     l_f1_0                  #   1:     goto   0
+-     movl    $0, %eax                #   1:     return 0
++     movl    $0, %eax                #   2:     return 0
+-     jmp     l_f1_1_while_cond       #   2:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   3:     goto   1_while_cond
++ l_f1_0:
+-     movl    $100, %eax              #   4:     if     100 > 98 goto 7_while_body
++     movl    $100, %eax              #   6:     if     100 > 98 goto 7_while_body
+-     jmp     l_f1_5                  #   5:     goto   5
++     jmp     l_f1_5                  #   7:     goto   5
+-     jmp     l_f1_9                  #   7:     goto   9
++     jmp     l_f1_9                  #   9:     goto   9
+-     jmp     l_f1_14_while_body      #  10:     goto   14_while_body
++     jmp     l_f1_14_while_body      #  12:     goto   14_while_body
++     jmp     l_f1_12                 #  13:     goto   12
+-     jmp     l_f1_13_while_cond      #  12:     goto   13_while_cond
++     jmp     l_f1_13_while_cond      #  15:     goto   13_while_cond
++ l_f1_12:
+-     jmp     l_f1_6_while_cond       #  13:     goto   6_while_cond
++     jmp     l_f1_6_while_cond       #  17:     goto   6_while_cond
+-     call    dummyINTfunc            #  15:     call   t10 <- dummyINTfunc
++     call    dummyINTfunc            #  19:     call   t10 <- dummyINTfunc
+-     movl    $84645, %eax            #  16:     if     84645 >= t10 goto 17
++     movl    $84645, %eax            #  20:     if     84645 >= t10 goto 17
+-     jmp     l_f1_18                 #  17:     goto   18
++     jmp     l_f1_18                 #  21:     goto   18
+-     movl    $1, %eax                #  19:     assign t11 <- 1
++     movl    $1, %eax                #  23:     assign t11 <- 1
+-     jmp     l_f1_19                 #  20:     goto   19
++     jmp     l_f1_19                 #  24:     goto   19
+-     movl    $0, %eax                #  22:     assign t11 <- 0
++     movl    $0, %eax                #  26:     assign t11 <- 0
+-     movzbl  -17(%ebp), %eax         #  24:     return t11
++     movzbl  -17(%ebp), %eax         #  28:     return t11
+-     #-1012914720(%ebp)1012914696  [ $v2       <array 98 of <array 51 of <array 47 of <array 56 of <array 77 of <char>>>>>> %ebp-1012914720 ]
++     #   -1012914720(%ebp)  1012914696  [ $v2       <array 98 of <array 51 of <array 47 of <array 56 of <array 77 of <char>>>>>> %ebp-1012914720 ]
+-     #-1091786712(%ebp)78871992  [ $v3       <array 69 of <array 42 of <array 9 of <array 12 of <array 63 of <int>>>>>> %ebp-1091786712 ]
++     #   -1091786712(%ebp)  78871992  [ $v3       <array 69 of <array 42 of <array 9 of <array 12 of <array 63 of <int>>>>>> %ebp-1091786712 ]

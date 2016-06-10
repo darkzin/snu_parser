@@ -1,0 +1,42 @@
+-     #   -416(%ebp) 384  [ $v5       <array 5 of <array 2 of <array 3 of <array 3 of <array 1 of <int>>>>>> %ebp-416 ]
++     #   -416(%ebp)  384  [ $v5       <array 5 of <array 2 of <array 3 of <array 3 of <array 1 of <int>>>>>> %ebp-416 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              
++     jmp     l_f1_13                 #  27:     goto   13
+-     movl    $1, %eax                #  28:     assign t12 <- 1
++     movl    $1, %eax                #  29:     assign t12 <- 1
+-     jmp     l_f1_14                 #  29:     goto   14
++     jmp     l_f1_14                 #  30:     goto   14
++ l_f1_13:
+-     movl    $0, %eax                #  30:     assign t12 <- 0
++     movl    $0, %eax                #  32:     assign t12 <- 0
+-     movzbl  -15(%ebp), %eax         #  32:     assign v4 <- t12
++     movzbl  -15(%ebp), %eax         #  34:     assign v4 <- t12
++     jmp     l_test_18               #  22:     goto   18
+-     movl    $1, %eax                #  22:     assign t2 <- 1
++     movl    $1, %eax                #  23:     assign t2 <- 1
+-     jmp     l_test_18               #  23:     goto   18
++     jmp     l_test_19               #  24:     goto   19
++ l_test_18:
+-     movl    $0, %eax                #  24:     assign t2 <- 0
++     movl    $0, %eax                #  26:     assign t2 <- 0
+- l_test_18:
++ l_test_19:
++     jmp     l_test_22               #  28:     goto   22
+-     movl    $1, %eax                #  26:     assign t3 <- 1
++     movl    $1, %eax                #  29:     assign t3 <- 1
+-     jmp     l_test_22               #  27:     goto   22
++     jmp     l_test_23               #  30:     goto   23
++ l_test_22:
+-     movl    $0, %eax                #  28:     assign t3 <- 0
++     movl    $0, %eax                #  32:     assign t3 <- 0
+- l_test_22:
++ l_test_23:
+-     movzbl  -21(%ebp), %eax         #  30:     if     t2 # t3 goto 15_while_body
++     movzbl  -21(%ebp), %eax         #  34:     if     t2 # t3 goto 15_while_body
+-     jmp     l_test_13               #  31:     goto   13
++     jmp     l_test_13               #  35:     goto   13
+-     jmp     l_test_14_while_cond    #  33:     goto   14_while_cond
++     jmp     l_test_14_while_cond    #  37:     goto   14_while_cond
+-     call    dummyCHARfunc           #  36:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  40:     call   t4 <- dummyCHARfunc

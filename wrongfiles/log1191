@@ -1,0 +1,32 @@
+-     #-147865580(%ebp)147865560  [ $v0       <array 98 of <array 13 of <array 62 of <array 12 of <array 39 of <int>>>>>> %ebp-147865580 ]
++     #   -147865580(%ebp)  147865560  [ $v0       <array 98 of <array 13 of <array 62 of <array 12 of <array 39 of <int>>>>>> %ebp-147865580 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
++     jmp     l_f2_17                 #  19:     goto   17
+-     movl    $1, %eax                #  19:     assign t2 <- 1
++     movl    $1, %eax                #  20:     assign t2 <- 1
+-     jmp     l_f2_17                 #  20:     goto   17
++     jmp     l_f2_18                 #  21:     goto   18
++ l_f2_17:
+-     movl    $0, %eax                #  21:     assign t2 <- 0
++     movl    $0, %eax                #  23:     assign t2 <- 0
+- l_f2_17:
++ l_f2_18:
+-     movzbl  -17(%ebp), %eax         #  23:     if     t2 # 0 goto 14_while_body
++     movzbl  -17(%ebp), %eax         #  25:     if     t2 # 0 goto 14_while_body
+-     jmp     l_f2_12                 #  24:     goto   12
++     jmp     l_f2_12                 #  26:     goto   12
+-     call    dummyCHARfunc           #  26:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  28:     call   t3 <- dummyCHARfunc
+-     jmp     l_f2_22                 #  28:     goto   22
++     jmp     l_f2_22                 #  30:     goto   22
+-     jmp     l_f2_23_while_cond      #  29:     goto   23_while_cond
++     jmp     l_f2_23_while_cond      #  31:     goto   23_while_cond
+-     jmp     l_f2_13_while_cond      #  31:     goto   13_while_cond
++     jmp     l_f2_13_while_cond      #  33:     goto   13_while_cond
+-     call    dummyCHARfunc           #  33:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  35:     call   t4 <- dummyCHARfunc
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     addl    $1, %esp               
++     addl    $4, %esp               

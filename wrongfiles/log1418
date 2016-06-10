@@ -1,0 +1,16 @@
++     jmp     l_f0_0                  #   1:     goto   0
+-     movl    $97, %eax               #   1:     assign v2 <- 97
++     movl    $97, %eax               #   2:     assign v2 <- 97
+-     jmp     l_f0_1_while_cond       #   2:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   3:     goto   1_while_cond
++ l_f0_0:
+-     movl    $23899, %eax            #   4:     sub    t4 <- 23899, 45593
++     movl    $23899, %eax            #   6:     sub    t4 <- 23899, 45593
+-     movl    $32468, %eax            #   5:     if     32468 > t4 goto 8_while_body
++     movl    $32468, %eax            #   7:     if     32468 > t4 goto 8_while_body
+-     jmp     l_f0_6                  #   6:     goto   6
++     jmp     l_f0_6                  #   8:     goto   6
+-     jmp     l_f0_7_while_cond       #   8:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  10:     goto   7_while_cond
+-     call    dummyBOOLfunc           #  10:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  12:     call   t5 <- dummyBOOLfunc

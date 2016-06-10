@@ -1,0 +1,6 @@
+-     #  -2356(%ebp)2328  [ $v2       <array 2 of <array 6 of <array 8 of <array 4 of <array 6 of <char>>>>>> %ebp-2356 ]
++     #   -2356(%ebp)  2328  [ $v2       <array 2 of <array 6 of <array 8 of <array 4 of <array 6 of <char>>>>>> %ebp-2356 ]
+-     #  -2360(%ebp)   4  [ $v3       <int> %ebp-2360 ]
++     #   -2360(%ebp)   4  [ $v3       <int> %ebp-2360 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              

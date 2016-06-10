@@ -1,0 +1,43 @@
++     jmp     l_f0_12                 #   5:     goto   12
++     jmp     l_f0_12                 #   6:     goto   12
+-     jmp     l_f0_8_if_true          #   5:     goto   8_if_true
++     jmp     l_f0_8_if_true          #   7:     goto   8_if_true
++ l_f0_12:
+-     jmp     l_f0_8_if_true          #   6:     goto   8_if_true
++     jmp     l_f0_8_if_true          #   9:     goto   8_if_true
+-     jmp     l_f0_7                  #   8:     goto   7
++     jmp     l_f0_7                  #  11:     goto   7
+-     call    ReadInt                 #  10:     call   t3 <- ReadInt
++     call    ReadInt                 #  13:     call   t3 <- ReadInt
+-     movl    -16(%ebp), %eax         #  11:     sub    t4 <- t3, 66018
++     movl    -16(%ebp), %eax         #  14:     sub    t4 <- t3, 66018
+-     movl    -20(%ebp), %eax         #  12:     add    t5 <- t4, 17104
++     movl    -20(%ebp), %eax         #  15:     add    t5 <- t4, 17104
+-     movl    -24(%ebp), %eax         #  13:     sub    t6 <- t5, 35602
++     movl    -24(%ebp), %eax         #  16:     sub    t6 <- t5, 35602
+-     movl    -28(%ebp), %eax         #  14:     return t6
++     movl    -28(%ebp), %eax         #  17:     return t6
+-     # -12152(%ebp)12120  [ $v3       <array 3 of <array 2 of <array 9 of <array 7 of <array 8 of <int>>>>>> %ebp-12152 ]
++     #   -12152(%ebp)  12120  [ $v3       <array 3 of <array 2 of <array 9 of <array 7 of <array 8 of <int>>>>>> %ebp-12152 ]
+-     # -12848(%ebp) 696  [ $v4       <array 4 of <array 1 of <array 8 of <array 3 of <array 7 of <bool>>>>>> %ebp-12848 ]
++     #   -12848(%ebp)  696  [ $v4       <array 4 of <array 1 of <array 8 of <array 3 of <array 7 of <bool>>>>>> %ebp-12848 ]
+-     # -14792(%ebp)1944  [ $v5       <array 4 of <array 5 of <array 8 of <array 6 of <array 2 of <char>>>>>> %ebp-14792 ]
++     #   -14792(%ebp)  1944  [ $v5       <array 4 of <array 5 of <array 8 of <array 6 of <array 2 of <char>>>>>> %ebp-14792 ]
++     jmp     l_f2_0                  #   3:     goto   0
+-     jmp     l_f2_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f2_1_while_cond       #   5:     goto   1_while_cond
++ l_f2_0:
+-     leal    -14792(%ebp), %eax      #   5:     &()    t4 <- v5
++     leal    -14792(%ebp), %eax      #   7:     &()    t4 <- v5
+-     movl    -20(%ebp), %eax         #   6:     param  2 <- t4
++     movl    -20(%ebp), %eax         #   8:     param  2 <- t4
+-     leal    -12848(%ebp), %eax      #   7:     &()    t5 <- v4
++     leal    -12848(%ebp), %eax      #   9:     &()    t5 <- v4
+-     movl    -24(%ebp), %eax         #   8:     param  1 <- t5
++     movl    -24(%ebp), %eax         #  10:     param  1 <- t5
+-     leal    -12152(%ebp), %eax      #   9:     &()    t6 <- v3
++     leal    -12152(%ebp), %eax      #  11:     &()    t6 <- v3
+-     movl    -28(%ebp), %eax         #  10:     param  0 <- t6
++     movl    -28(%ebp), %eax         #  12:     param  0 <- t6
+-     call    f1                      #  11:     call   t7 <- f1
++     call    f1                      #  13:     call   t7 <- f1

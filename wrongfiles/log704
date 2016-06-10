@@ -1,0 +1,22 @@
+-     addl    $2, %esp               
++     addl    $8, %esp               
+-     addl    $2, %esp               
++     addl    $8, %esp               
++     jmp     l_test_8                #  10:     goto   8
+-     jmp     l_test_7_while_body     #  10:     goto   7_while_body
++     jmp     l_test_7_while_body     #  11:     goto   7_while_body
++ l_test_8:
+-     jmp     l_test_6_while_cond     #  12:     goto   6_while_cond
++     jmp     l_test_6_while_cond     #  14:     goto   6_while_cond
+-     call    ReadInt                 #  15:     call   t1 <- ReadInt
++     call    ReadInt                 #  17:     call   t1 <- ReadInt
+-     movl    $1884, %eax             #  16:     if     1884 > 882 goto 17_if_true
++     movl    $1884, %eax             #  18:     if     1884 > 882 goto 17_if_true
+-     jmp     l_test_18_if_false      #  17:     goto   18_if_false
++     jmp     l_test_18_if_false      #  19:     goto   18_if_false
+-     jmp     l_test_16               #  19:     goto   16
++     jmp     l_test_16               #  21:     goto   16
+-     movl    $37184, %eax            #  22:     assign v1 <- 37184
++     movl    $37184, %eax            #  24:     assign v1 <- 37184
+-     jmp     l_test_13               #  23:     goto   13
++     jmp     l_test_13               #  25:     goto   13

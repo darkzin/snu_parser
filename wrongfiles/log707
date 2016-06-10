@@ -1,0 +1,16 @@
+-     #  -9848(%ebp)9824  [ $v1       <array 7 of <array 4 of <array 5 of <array 10 of <array 7 of <bool>>>>>> %ebp-9848 ]
++     #   -9848(%ebp)  9824  [ $v1       <array 7 of <array 4 of <array 5 of <array 10 of <array 7 of <bool>>>>>> %ebp-9848 ]
+-     addl    $6, %esp               
++     addl    $12, %esp              
++     jmp     l_f2_3                  #   6:     goto   3
+-     movl    $1, %eax                #   7:     assign t5 <- 1
++     movl    $1, %eax                #   8:     assign t5 <- 1
+-     jmp     l_f2_4                  #   8:     goto   4
++     jmp     l_f2_4                  #   9:     goto   4
++ l_f2_3:
+-     movl    $0, %eax                #   9:     assign t5 <- 0
++     movl    $0, %eax                #  11:     assign t5 <- 0
+-     movzbl  -18(%ebp), %eax         #  11:     return t5
++     movzbl  -18(%ebp), %eax         #  13:     return t5
+-     call    ReadInt                 #  12:     call   t6 <- ReadInt
++     call    ReadInt                 #  14:     call   t6 <- ReadInt

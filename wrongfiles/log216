@@ -1,0 +1,34 @@
++     jmp     l_f0_2                  #   5:     goto   2
+-     jmp     l_f0_3_while_cond       #   5:     goto   3_while_cond
++     jmp     l_f0_3_while_cond       #   6:     goto   3_while_cond
++ l_f0_2:
+-     jmp     l_f1_2_while_body       #   1:     goto   2_while_body
++     jmp     l_f1_4                  #   1:     goto   4
++ l_f1_4:
++     jmp     l_f1_2_while_body       #   4:     goto   2_while_body
++     jmp     l_f1_0                  #   5:     goto   0
+-     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   7:     goto   1_while_cond
++ l_f1_0:
+-     call    dummyBOOLfunc           #   5:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   9:     call   t3 <- dummyBOOLfunc
+-     movl    $99, %eax               #   6:     assign v5 <- 99
++     movl    $99, %eax               #  10:     assign v5 <- 99
++     jmp     l_f2_13                 #  19:     goto   13
+-     movl    $1, %eax                #  20:     assign t5 <- 1
++     movl    $1, %eax                #  21:     assign t5 <- 1
+-     jmp     l_f2_14                 #  21:     goto   14
++     jmp     l_f2_14                 #  22:     goto   14
++ l_f2_13:
+-     movl    $0, %eax                #  22:     assign t5 <- 0
++     movl    $0, %eax                #  24:     assign t5 <- 0
+-     movzbl  -15(%ebp), %eax         #  24:     return t5
++     movzbl  -15(%ebp), %eax         #  26:     return t5
+-     call    dummyCHARfunc           #  25:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #  27:     call   t6 <- dummyCHARfunc
+-     movzbl  -16(%ebp), %eax         #  26:     param  0 <- t6
++     movzbl  -16(%ebp), %eax         #  28:     param  0 <- t6
+-     call    WriteChar               #  27:     call   WriteChar
++     call    WriteChar               #  29:     call   WriteChar
+-     addl    $1, %esp               
++     addl    $4, %esp               

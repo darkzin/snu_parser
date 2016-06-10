@@ -1,0 +1,24 @@
++     jmp     l_f1_15_if_false        #  18:     goto   15_if_false
+-     jmp     l_f1_13                 #  19:     goto   13
++     jmp     l_f1_13                 #  20:     goto   13
++ l_f1_15_if_false:
+-     jmp     l_f1_6_while_cond       #  21:     goto   6_while_cond
++     jmp     l_f1_6_while_cond       #  23:     goto   6_while_cond
+-     call    ReadInt                 #  23:     call   t3 <- ReadInt
++     call    ReadInt                 #  25:     call   t3 <- ReadInt
+-     movl    $40076, %eax            #  24:     add    t4 <- 40076, t3
++     movl    $40076, %eax            #  26:     add    t4 <- 40076, t3
+-     movl    -24(%ebp), %eax         #  25:     return t4
++     movl    -24(%ebp), %eax         #  27:     return t4
+-     jmp     l_test_3                #   0:     goto   3
++     jmp     l_test_4                #   0:     goto   4
+-     jmp     l_test_3                #   1:     goto   3
++     jmp     l_test_4                #   1:     goto   4
+-     jmp     l_test_3                #   2:     goto   3
++     jmp     l_test_4                #   2:     goto   4
+- l_test_3:
++ l_test_4:
+-     jmp     l_test_5                #   5:     goto   5
++     jmp     l_test_6                #   5:     goto   6
+- l_test_5:
++ l_test_6:

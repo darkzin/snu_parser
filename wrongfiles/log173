@@ -1,0 +1,34 @@
+-     #  -1128(%ebp)1104  [ $v4       <array 8 of <array 3 of <array 5 of <array 3 of <array 3 of <bool>>>>>> %ebp-1128 ]
++     #   -1128(%ebp)  1104  [ $v4       <array 8 of <array 3 of <array 5 of <array 3 of <array 3 of <bool>>>>>> %ebp-1128 ]
++     jmp     l_f2_17                 #  19:     goto   17
+-     movl    $1, %eax                #  19:     assign t6 <- 1
++     movl    $1, %eax                #  20:     assign t6 <- 1
+-     jmp     l_f2_17                 #  20:     goto   17
++     jmp     l_f2_18                 #  21:     goto   18
++ l_f2_17:
+-     movl    $0, %eax                #  21:     assign t6 <- 0
++     movl    $0, %eax                #  23:     assign t6 <- 0
+- l_f2_17:
++ l_f2_18:
+-     movzbl  -16(%ebp), %eax         #  23:     param  1 <- t6
++     movzbl  -16(%ebp), %eax         #  25:     param  1 <- t6
+-     leal    -1128(%ebp), %eax       #  24:     &()    t7 <- v4
++     leal    -1128(%ebp), %eax       #  26:     &()    t7 <- v4
+-     movl    -20(%ebp), %eax         #  25:     param  0 <- t7
++     movl    -20(%ebp), %eax         #  27:     param  0 <- t7
+-     call    f1                      #  26:     call   t8 <- f1
++     call    f1                      #  28:     call   t8 <- f1
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     movl    $98, %eax               #  27:     if     98 >= t8 goto 12
++     movl    $98, %eax               #  29:     if     98 >= t8 goto 12
+-     jmp     l_f2_13                 #  28:     goto   13
++     jmp     l_f2_13                 #  30:     goto   13
+-     movl    $1, %eax                #  30:     assign t9 <- 1
++     movl    $1, %eax                #  32:     assign t9 <- 1
+-     jmp     l_f2_14                 #  31:     goto   14
++     jmp     l_f2_14                 #  33:     goto   14
+-     movl    $0, %eax                #  33:     assign t9 <- 0
++     movl    $0, %eax                #  35:     assign t9 <- 0
+-     movzbl  -22(%ebp), %eax         #  35:     return t9
++     movzbl  -22(%ebp), %eax         #  37:     return t9

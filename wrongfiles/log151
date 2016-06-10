@@ -1,0 +1,30 @@
++     jmp     l_f0_3_if_false         #   1:     goto   3_if_false
+-     movl    $97, %eax               #   1:     return 97
++     movl    $97, %eax               #   2:     return 97
+-     jmp     l_f0_1                  #   2:     goto   1
++     jmp     l_f0_1                  #   3:     goto   1
++ l_f0_3_if_false:
+-     jmp     l_f0_6                  #   5:     goto   6
++     jmp     l_f0_6                  #   7:     goto   6
+-     jmp     l_f0_9                  #   6:     goto   9
++     jmp     l_f0_9                  #   8:     goto   9
+-     movl    $71010, %eax            #   9:     if     71010 > 17326 goto 14_while_body
++     movl    $71010, %eax            #  11:     if     71010 > 17326 goto 14_while_body
+-     jmp     l_f0_12                 #  10:     goto   12
++     jmp     l_f0_12                 #  12:     goto   12
+-     jmp     l_f0_13_while_cond      #  12:     goto   13_while_cond
++     jmp     l_f0_13_while_cond      #  14:     goto   13_while_cond
+-     jmp     l_f0_7_while_cond       #  14:     goto   7_while_cond
++     jmp     l_f0_7_while_cond       #  16:     goto   7_while_cond
+-     addl    $1, %esp               
++     addl    $4, %esp               
+-     #   -768(%ebp) 744  [ $v2       <array 1 of <array 1 of <array 10 of <array 6 of <array 3 of <int>>>>>> %ebp-768 ]
++     #   -768(%ebp)  744  [ $v2       <array 1 of <array 1 of <array 10 of <array 6 of <array 3 of <int>>>>>> %ebp-768 ]
+-     addl    $5, %esp               
++     addl    $8, %esp               
++     jmp     l_f2_5                  #  14:     goto   5
+-     jmp     l_f2_6_while_cond       #  15:     goto   6_while_cond
++     jmp     l_f2_6_while_cond       #  16:     goto   6_while_cond
++ l_f2_5:
+-     call    dummyCHARfunc           #  16:     call   t10 <- dummyCHARfunc
++     call    dummyCHARfunc           #  18:     call   t10 <- dummyCHARfunc

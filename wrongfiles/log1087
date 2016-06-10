@@ -1,0 +1,12 @@
+-     jmp     l_f2_7_while_body       #  11:     goto   7_while_body
++     jmp     l_f2_10                 #  11:     goto   10
++ l_f2_10:
+-     jmp     l_f2_7_while_body       #  13:     goto   7_while_body
++     jmp     l_f2_7_while_body       #  14:     goto   7_while_body
++     jmp     l_f2_7_while_body       #  15:     goto   7_while_body
++     jmp     l_f2_5                  #  16:     goto   5
+-     jmp     l_f2_6_while_cond       #  15:     goto   6_while_cond
++     jmp     l_f2_6_while_cond       #  18:     goto   6_while_cond
++ l_f2_5:
+-     call    dummyCHARfunc           #  16:     call   t6 <- dummyCHARfunc
++     call    dummyCHARfunc           #  20:     call   t6 <- dummyCHARfunc

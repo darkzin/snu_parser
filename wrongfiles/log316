@@ -1,0 +1,28 @@
+-     #  -3500(%ebp)3480  [ $v3       <array 2 of <array 6 of <array 9 of <array 4 of <array 8 of <bool>>>>>> %ebp-3500 ]
++     #   -3500(%ebp)  3480  [ $v3       <array 2 of <array 6 of <array 9 of <array 4 of <array 8 of <bool>>>>>> %ebp-3500 ]
++     jmp     l_f2_2                  #   4:     goto   2
+-     movl    $1, %eax                #   4:     assign t7 <- 1
++     movl    $1, %eax                #   5:     assign t7 <- 1
+-     jmp     l_f2_3                  #   5:     goto   3
++     jmp     l_f2_3                  #   6:     goto   3
++ l_f2_2:
+-     movl    $0, %eax                #   6:     assign t7 <- 0
++     movl    $0, %eax                #   8:     assign t7 <- 0
+-     movzbl  -17(%ebp), %eax         #   8:     param  0 <- t7
++     movzbl  -17(%ebp), %eax         #  10:     param  0 <- t7
+-     call    f0                      #   9:     call   t8 <- f0
++     call    f0                      #  11:     call   t8 <- f0
+-     addl    $7, %esp               
++     addl    $16, %esp              
+-     movl    $100, %eax              #  10:     if     100 < 98 goto 6
++     movl    $100, %eax              #  12:     if     100 < 98 goto 6
+-     jmp     l_f2_7                  #  11:     goto   7
++     jmp     l_f2_7                  #  13:     goto   7
+-     movl    $1, %eax                #  13:     assign t9 <- 1
++     movl    $1, %eax                #  15:     assign t9 <- 1
+-     jmp     l_f2_8                  #  14:     goto   8
++     jmp     l_f2_8                  #  16:     goto   8
+-     movl    $0, %eax                #  16:     assign t9 <- 0
++     movl    $0, %eax                #  18:     assign t9 <- 0
+-     movzbl  -19(%ebp), %eax         #  18:     assign v2 <- t9
++     movzbl  -19(%ebp), %eax         #  20:     assign v2 <- t9

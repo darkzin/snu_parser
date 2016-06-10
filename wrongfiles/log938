@@ -1,0 +1,46 @@
+-     jmp     l_f0_11                 #  11:     goto   11
++     jmp     l_f0_12                 #  11:     goto   12
+-     jmp     l_f0_11                 #  12:     goto   11
++     jmp     l_f0_12                 #  12:     goto   12
++     jmp     l_f0_13                 #  13:     goto   13
+- l_f0_11:
++ l_f0_12:
+-     movl    $1, %eax                #  14:     assign t5 <- 1
++     movl    $1, %eax                #  15:     assign t5 <- 1
+-     jmp     l_f0_13                 #  15:     goto   13
++     jmp     l_f0_14                 #  16:     goto   14
++ l_f0_13:
+-     movl    $0, %eax                #  16:     assign t5 <- 0
++     movl    $0, %eax                #  18:     assign t5 <- 0
+- l_f0_13:
++ l_f0_14:
+-     movl    $1, %eax                #  18:     if     1 # t5 goto 9_if_true
++     movl    $1, %eax                #  20:     if     1 # t5 goto 9_if_true
+-     jmp     l_f0_10_if_false        #  19:     goto   10_if_false
++     jmp     l_f0_10_if_false        #  21:     goto   10_if_false
+-     jmp     l_f0_8                  #  22:     goto   8
++     jmp     l_f0_8                  #  24:     goto   8
+-     jmp     l_f1_8                  #   7:     goto   8
++     jmp     l_f1_9                  #   7:     goto   9
+- l_f1_8:
++ l_f1_9:
+-     jmp     l_f1_10                 #  10:     goto   10
++     jmp     l_f1_11                 #  10:     goto   11
+- l_f1_10:
++ l_f1_11:
+-     movzbl  -14(%ebp), %eax         #   1:     if     t3 = 1 goto 7
++     movzbl  -14(%ebp), %eax         #   1:     if     t3 = 1 goto 8
+-     je      l_f2_7                 
++     je      l_f2_8                 
+-     jmp     l_f2_5                  #   2:     goto   5
++     jmp     l_f2_6                  #   2:     goto   6
+- l_f2_7:
++ l_f2_8:
+-     jmp     l_f2_6                  #   5:     goto   6
++     jmp     l_f2_7                  #   5:     goto   7
+- l_f2_5:
++ l_f2_6:
+- l_f2_6:
++ l_f2_7:
+-     addl    $10, %esp              
++     addl    $16, %esp              

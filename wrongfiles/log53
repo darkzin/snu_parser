@@ -1,0 +1,8 @@
+-     #  -2756(%ebp)2712  [ $v1       <array 3 of <array 4 of <array 7 of <array 4 of <array 8 of <char>>>>>> %ebp-2756 ]
++     #   -2756(%ebp)  2712  [ $v1       <array 3 of <array 4 of <array 7 of <array 4 of <array 8 of <char>>>>>> %ebp-2756 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              
+-     #  -2748(%ebp)2712  [ $v4       <array 3 of <array 4 of <array 7 of <array 4 of <array 8 of <char>>>>>> %ebp-2748 ]
++     #   -2748(%ebp)  2712  [ $v4       <array 3 of <array 4 of <array 7 of <array 4 of <array 8 of <char>>>>>> %ebp-2748 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              

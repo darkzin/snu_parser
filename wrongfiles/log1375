@@ -1,0 +1,27 @@
++     jmp     l_f0_0                  #   1:     goto   0
++     jmp     l_f0_0                  #   2:     goto   0
+-     call    WriteLn                 #   1:     call   WriteLn
++     call    WriteLn                 #   3:     call   WriteLn
+-     call    dummyCHARfunc           #   2:     call   t1 <- dummyCHARfunc
++     call    dummyCHARfunc           #   4:     call   t1 <- dummyCHARfunc
+-     movl    $98, %eax               #   3:     if     98 < 99 goto 7_if_true
++     movl    $98, %eax               #   5:     if     98 < 99 goto 7_if_true
+-     jmp     l_f0_8_if_false         #   4:     goto   8_if_false
++     jmp     l_f0_8_if_false         #   6:     goto   8_if_false
+-     jmp     l_f0_6                  #   6:     goto   6
++     jmp     l_f0_6                  #   8:     goto   6
+-     movl    $98, %eax               #   9:     if     98 # 99 goto 11_if_true
++     movl    $98, %eax               #  11:     if     98 # 99 goto 11_if_true
+-     jmp     l_f0_12_if_false        #  10:     goto   12_if_false
++     jmp     l_f0_12_if_false        #  12:     goto   12_if_false
+-     jmp     l_f0_10                 #  12:     goto   10
++     jmp     l_f0_10                 #  14:     goto   10
+-     jmp     l_f0_1_while_cond       #  15:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #  17:     goto   1_while_cond
++ l_f0_0:
++     jmp     l_f0_14                 #  20:     goto   14
+-     jmp     l_f0_15_while_cond      #  17:     goto   15_while_cond
++     jmp     l_f0_15_while_cond      #  21:     goto   15_while_cond
++ l_f0_14:
+-     addl    $1, %esp               
++     addl    $4, %esp               

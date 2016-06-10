@@ -1,0 +1,20 @@
++     jmp     l_f1_2                  #   2:     goto   2
+-     movl    $1, %eax                #   3:     assign t2 <- 1
++     movl    $1, %eax                #   4:     assign t2 <- 1
+-     jmp     l_f1_3                  #   4:     goto   3
++     jmp     l_f1_3                  #   5:     goto   3
++ l_f1_2:
+-     movl    $0, %eax                #   5:     assign t2 <- 0
++     movl    $0, %eax                #   7:     assign t2 <- 0
+-     movzbl  -13(%ebp), %eax         #   7:     assign v3 <- t2
++     movzbl  -13(%ebp), %eax         #   9:     assign v3 <- t2
+-     movl    $100, %eax              #   8:     assign v4 <- 100
++     movl    $100, %eax              #  10:     assign v4 <- 100
+-     call    dummyINTfunc            #   9:     call   t3 <- dummyINTfunc
++     call    dummyINTfunc            #  11:     call   t3 <- dummyINTfunc
+-     #-59270452(%ebp)59270424  [ $v4       <array 20 of <array 63 of <array 49 of <array 64 of <array 15 of <bool>>>>>> %ebp-59270452 ]
++     #   -59270452(%ebp)  59270424  [ $v4       <array 20 of <array 63 of <array 49 of <array 64 of <array 15 of <bool>>>>>> %ebp-59270452 ]
+-     #-350320972(%ebp)291050520  [ $v5       <array 22 of <array 27 of <array 58 of <array 64 of <array 33 of <int>>>>>> %ebp-350320972 ]
++     #   -350320972(%ebp)  291050520  [ $v5       <array 22 of <array 27 of <array 58 of <array 64 of <array 33 of <int>>>>>> %ebp-350320972 ]
+-     addl    $9, %esp               
++     addl    $12, %esp              

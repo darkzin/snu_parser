@@ -1,0 +1,20 @@
++     jmp     l_f0_7                  #  11:     goto   7
++     jmp     l_f0_7                  #  12:     goto   7
++     jmp     l_f0_7                  #  13:     goto   7
+-     movl    $1, %eax                #  11:     assign t11 <- 1
++     movl    $1, %eax                #  14:     assign t11 <- 1
+-     jmp     l_f0_7                  #  12:     goto   7
++     jmp     l_f0_8                  #  15:     goto   8
++ l_f0_7:
+-     movl    $0, %eax                #  13:     assign t11 <- 0
++     movl    $0, %eax                #  17:     assign t11 <- 0
+- l_f0_7:
++ l_f0_8:
+-     movl    $0, %eax                #  15:     if     0 = t11 goto 3_if_true
++     movl    $0, %eax                #  19:     if     0 = t11 goto 3_if_true
+-     jmp     l_f0_4_if_false         #  16:     goto   4_if_false
++     jmp     l_f0_4_if_false         #  20:     goto   4_if_false
+-     movl    $37143, %eax            #  18:     return 37143
++     movl    $37143, %eax            #  22:     return 37143
+-     jmp     l_f0_2                  #  19:     goto   2
++     jmp     l_f0_2                  #  23:     goto   2

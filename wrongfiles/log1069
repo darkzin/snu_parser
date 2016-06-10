@@ -1,0 +1,24 @@
++     jmp     l_f2_3_if_false         #   2:     goto   3_if_false
+-     jmp     l_f2_6                  #   4:     goto   6
++     jmp     l_f2_6                  #   5:     goto   6
+-     jmp     l_f2_7_while_cond       #   5:     goto   7_while_cond
++     jmp     l_f2_7_while_cond       #   6:     goto   7_while_cond
+-     movl    $1, %eax                #   7:     return 1
++     movl    $1, %eax                #   8:     return 1
+-     jmp     l_f2_1                  #   8:     goto   1
++     jmp     l_f2_1                  #   9:     goto   1
++ l_f2_3_if_false:
+-     movl    $20842, %eax            #  10:     sub    t1 <- 20842, 51540
++     movl    $20842, %eax            #  12:     sub    t1 <- 20842, 51540
+-     movl    $94451, %eax            #  11:     if     94451 # t1 goto 11
++     movl    $94451, %eax            #  13:     if     94451 # t1 goto 11
+-     jmp     l_f2_12                 #  12:     goto   12
++     jmp     l_f2_12                 #  14:     goto   12
+-     movl    $1, %eax                #  14:     assign t2 <- 1
++     movl    $1, %eax                #  16:     assign t2 <- 1
+-     jmp     l_f2_13                 #  15:     goto   13
++     jmp     l_f2_13                 #  17:     goto   13
+-     movl    $0, %eax                #  17:     assign t2 <- 0
++     movl    $0, %eax                #  19:     assign t2 <- 0
+-     movzbl  -17(%ebp), %eax         #  19:     return t2
++     movzbl  -17(%ebp), %eax         #  21:     return t2

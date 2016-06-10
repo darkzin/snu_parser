@@ -1,0 +1,69 @@
++     jmp     l_f2_2                  #   0:     goto   2
+-     movl    $91926, %eax            #   0:     if     91926 # 73583 goto 1
++     movl    $91926, %eax            #   1:     if     91926 # 73583 goto 1
+-     jmp     l_f2_2                  #   1:     goto   2
++     jmp     l_f2_2                  #   2:     goto   2
+-     movl    $1, %eax                #   3:     assign t5 <- 1
++     movl    $1, %eax                #   4:     assign t5 <- 1
+-     jmp     l_f2_3                  #   4:     goto   3
++     jmp     l_f2_3                  #   5:     goto   3
+-     movl    $0, %eax                #   6:     assign t5 <- 0
++     movl    $0, %eax                #   7:     assign t5 <- 0
+-     movzbl  -13(%ebp), %eax         #   8:     return t5
++     movzbl  -13(%ebp), %eax         #   9:     return t5
+-     jmp     l_f2_8                  #   9:     goto   8
++     jmp     l_f2_8                  #  13:     goto   8
++     jmp     l_f2_9                  #  14:     goto   9
+-     movl    $1, %eax                #  14:     assign t6 <- 1
++     movl    $1, %eax                #  16:     assign t6 <- 1
+-     jmp     l_f2_10                 #  15:     goto   10
++     jmp     l_f2_10                 #  17:     goto   10
++ l_f2_9:
+-     movl    $0, %eax                #  16:     assign t6 <- 0
++     movl    $0, %eax                #  19:     assign t6 <- 0
+-     movzbl  -14(%ebp), %eax         #  18:     return t6
++     movzbl  -14(%ebp), %eax         #  21:     return t6
+-     movl    $1, %eax                #  20:     if     1 # 0 goto 18_while_body
++     movl    $1, %eax                #  23:     if     1 # 0 goto 18_while_body
+-     jmp     l_f2_16                 #  21:     goto   16
++     jmp     l_f2_16                 #  24:     goto   16
+-     movl    $69883, %eax            #  23:     if     69883 # 71295 goto 21
++     movl    $69883, %eax            #  26:     if     69883 # 71295 goto 21
+-     jmp     l_f2_22                 #  24:     goto   22
++     jmp     l_f2_22                 #  27:     goto   22
+-     movl    $1, %eax                #  26:     assign t7 <- 1
++     movl    $1, %eax                #  29:     assign t7 <- 1
+-     jmp     l_f2_23                 #  27:     goto   23
++     jmp     l_f2_23                 #  30:     goto   23
+-     movl    $0, %eax                #  29:     assign t7 <- 0
++     movl    $0, %eax                #  32:     assign t7 <- 0
+-     movzbl  -15(%ebp), %eax         #  31:     return t7
++     movzbl  -15(%ebp), %eax         #  34:     return t7
+-     jmp     l_f2_25                 #  32:     goto   25
++     jmp     l_f2_25                 #  35:     goto   25
+-     movl    $0, %eax                #  34:     assign v0 <- 0
++     movl    $0, %eax                #  37:     assign v0 <- 0
+-     movl    $1, %eax                #  35:     return 1
++     movl    $1, %eax                #  38:     return 1
+-     movl    $7422, %eax             #  36:     if     7422 < 13928 goto 31_if_true
++     movl    $7422, %eax             #  39:     if     7422 < 13928 goto 31_if_true
+-     jmp     l_f2_32_if_false        #  37:     goto   32_if_false
++     jmp     l_f2_32_if_false        #  40:     goto   32_if_false
+-     jmp     l_f2_30                 #  39:     goto   30
++     jmp     l_f2_30                 #  42:     goto   30
+-     call    dummyCHARfunc           #  42:     call   t8 <- dummyCHARfunc
++     call    dummyCHARfunc           #  45:     call   t8 <- dummyCHARfunc
+-     movl    $19819, %eax            #  43:     if     19819 >= 37392 goto 36_if_true
++     movl    $19819, %eax            #  46:     if     19819 >= 37392 goto 36_if_true
+-     jmp     l_f2_37_if_false        #  44:     goto   37_if_false
++     jmp     l_f2_37_if_false        #  47:     goto   37_if_false
+-     jmp     l_f2_35                 #  46:     goto   35
++     jmp     l_f2_35                 #  49:     goto   35
+-     movl    $91107, %eax            #  50:     if     91107 <= 99196 goto 41_while_body
++     movl    $91107, %eax            #  53:     if     91107 <= 99196 goto 41_while_body
+-     jmp     l_f2_39                 #  51:     goto   39
++     jmp     l_f2_39                 #  54:     goto   39
+-     jmp     l_f2_40_while_cond      #  53:     goto   40_while_cond
++     jmp     l_f2_40_while_cond      #  56:     goto   40_while_cond
+-     jmp     l_f2_17_while_cond      #  55:     goto   17_while_cond
++     jmp     l_f2_17_while_cond      #  58:     goto   17_while_cond

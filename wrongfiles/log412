@@ -1,0 +1,70 @@
++     jmp     l_f0_0                  #   2:     goto   0
+-     jmp     l_f0_1_while_cond       #   3:     goto   1_while_cond
++     jmp     l_f0_1_while_cond       #   4:     goto   1_while_cond
++ l_f0_0:
+-     call    ReadInt                 #   4:     call   t1 <- ReadInt
++     call    ReadInt                 #   6:     call   t1 <- ReadInt
+-     movl    $36269, %eax            #   5:     div    t2 <- 36269, t1
++     movl    $36269, %eax            #   7:     div    t2 <- 36269, t1
+-     movl    -20(%ebp), %eax         #   6:     return t2
++     movl    -20(%ebp), %eax         #   8:     return t2
+-     movl    $38733, %eax            #   7:     add    t3 <- 38733, 24629
++     movl    $38733, %eax            #   9:     add    t3 <- 38733, 24629
+-     movl    $76519, %eax            #   8:     if     76519 <= t3 goto 7
++     movl    $76519, %eax            #  10:     if     76519 <= t3 goto 7
+-     jmp     l_f0_8                  #   9:     goto   8
++     jmp     l_f0_8                  #  11:     goto   8
+-     movl    $1, %eax                #  11:     assign t4 <- 1
++     movl    $1, %eax                #  13:     assign t4 <- 1
+-     jmp     l_f0_9                  #  12:     goto   9
++     jmp     l_f0_9                  #  14:     goto   9
+-     movl    $0, %eax                #  14:     assign t4 <- 0
++     movl    $0, %eax                #  16:     assign t4 <- 0
+-     movzbl  -25(%ebp), %eax         #  16:     assign v1 <- t4
++     movzbl  -25(%ebp), %eax         #  18:     assign v1 <- t4
++     jmp     l_f1_4_if_false         #   5:     goto   4_if_false
+-     movl    $97, %eax               #   6:     return 97
++     movl    $97, %eax               #   7:     return 97
+-     leal    _str_1, %eax            #   7:     &()    t3 <- _str_1
++     leal    _str_1, %eax            #   8:     &()    t3 <- _str_1
+-     movl    -20(%ebp), %eax         #   8:     param  0 <- t3
++     movl    -20(%ebp), %eax         #   9:     param  0 <- t3
+-     call    WriteStr                #   9:     call   WriteStr
++     call    WriteStr                #  10:     call   WriteStr
+-     movl    $100, %eax              #  10:     assign v1 <- 100
++     movl    $100, %eax              #  11:     assign v1 <- 100
+-     movl    $81282, %eax            #  11:     assign v4 <- 81282
++     movl    $81282, %eax            #  12:     assign v4 <- 81282
+-     jmp     l_f1_10                 #  13:     goto   10
++     jmp     l_f1_10                 #  14:     goto   10
+-     jmp     l_f1_11_while_cond      #  14:     goto   11_while_cond
++     jmp     l_f1_11_while_cond      #  15:     goto   11_while_cond
+-     movl    $18049, %eax            #  17:     if     18049 < 57350 goto 15_while_body
++     movl    $18049, %eax            #  18:     if     18049 < 57350 goto 15_while_body
+-     jmp     l_f1_13                 #  18:     goto   13
++     jmp     l_f1_13                 #  19:     goto   13
+-     jmp     l_f1_14_while_cond      #  20:     goto   14_while_cond
++     jmp     l_f1_14_while_cond      #  21:     goto   14_while_cond
+-     call    dummyCHARfunc           #  22:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  23:     call   t4 <- dummyCHARfunc
+-     movl    $98, %eax               #  23:     return 98
++     movl    $98, %eax               #  24:     return 98
+-     call    dummyBOOLfunc           #  24:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  25:     call   t5 <- dummyBOOLfunc
+-     jmp     l_f1_21_while_cond      #  26:     goto   21_while_cond
++     jmp     l_f1_21_while_cond      #  27:     goto   21_while_cond
+-     call    dummyProcedure          #  27:     call   dummyProcedure
++     call    dummyProcedure          #  28:     call   dummyProcedure
+-     jmp     l_f1_2                  #  28:     goto   2
++     jmp     l_f1_2                  #  29:     goto   2
++ l_f1_4_if_false:
++     jmp     l_test_14_if_false      #   8:     goto   14_if_false
+-     movl    $2331, %eax             #   8:     if     2331 # 75857 goto 17_if_true
++     movl    $2331, %eax             #   9:     if     2331 # 75857 goto 17_if_true
+-     jmp     l_test_18_if_false      #   9:     goto   18_if_false
++     jmp     l_test_18_if_false      #  10:     goto   18_if_false
+-     jmp     l_test_16               #  11:     goto   16
++     jmp     l_test_16               #  12:     goto   16
+-     jmp     l_test_12               #  14:     goto   12
++     jmp     l_test_12               #  15:     goto   12
++ l_test_14_if_false:

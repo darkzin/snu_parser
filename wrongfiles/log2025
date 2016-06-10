@@ -1,0 +1,10 @@
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_f1_13                 #  14:     goto   13
+-     jmp     l_f1_14_while_cond      #  14:     goto   14_while_cond
++     jmp     l_f1_14_while_cond      #  15:     goto   14_while_cond
++ l_f1_13:
+-     jmp     l_f1_8_while_cond       #  15:     goto   8_while_cond
++     jmp     l_f1_8_while_cond       #  17:     goto   8_while_cond
+-     call    dummyCHARfunc           #  17:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #  19:     call   t2 <- dummyCHARfunc

@@ -1,0 +1,12 @@
++     jmp     l_f2_4                  #   6:     goto   4
+-     jmp     l_f2_5_while_cond       #   7:     goto   5_while_cond
++     jmp     l_f2_5_while_cond       #   8:     goto   5_while_cond
++ l_f2_4:
+-     jmp     l_f2_1_while_cond       #   8:     goto   1_while_cond
++     jmp     l_f2_1_while_cond       #  10:     goto   1_while_cond
+-     call    dummyCHARfunc           #  10:     call   t3 <- dummyCHARfunc
++     call    dummyCHARfunc           #  12:     call   t3 <- dummyCHARfunc
+-     movzbl  -13(%ebp), %eax         #  11:     return t3
++     movzbl  -13(%ebp), %eax         #  13:     return t3
+-     movl    $97, %eax               #  12:     return 97
++     movl    $97, %eax               #  14:     return 97

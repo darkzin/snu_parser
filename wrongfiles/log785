@@ -1,0 +1,34 @@
+-     movl    $82909, %eax            #   3:     if     82909 <= 22029 goto 4
++     movl    $82909, %eax            #   3:     if     82909 <= 22029 goto 5
+-     jle     l_f2_4                 
++     jle     l_f2_5                 
+-     jmp     l_f2_5                  #   4:     goto   5
++     jmp     l_f2_6                  #   4:     goto   6
+- l_f2_4:
++ l_f2_5:
+-     jmp     l_f2_6                  #   7:     goto   6
++     jmp     l_f2_7                  #   7:     goto   7
+- l_f2_5:
++ l_f2_6:
+- l_f2_6:
++ l_f2_7:
+-     movl    $78835, %eax            #  15:     if     78835 > t2 goto 8
++     movl    $78835, %eax            #  15:     if     78835 > t2 goto 9
+-     jg      l_f2_8                 
++     jg      l_f2_9                 
+-     jmp     l_f2_9                  #  16:     goto   9
++     jmp     l_f2_10                 #  16:     goto   10
+- l_f2_8:
++ l_f2_9:
+-     jmp     l_f2_10                 #  19:     goto   10
++     jmp     l_f2_11                 #  19:     goto   11
+- l_f2_9:
++ l_f2_10:
+- l_f2_10:
++ l_f2_11:
+-     addl    $4, %esp               
++     addl    $16, %esp              
+-     addl    $4, %esp               
++     addl    $16, %esp              
+-     addl    $4, %esp               
++     addl    $16, %esp              

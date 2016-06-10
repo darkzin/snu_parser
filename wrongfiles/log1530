@@ -1,0 +1,23 @@
++     jmp     l_f1_10_if_false        #  10:     goto   10_if_false
+-     movl    $34280, %eax            #  11:     assign v2 <- 34280
++     movl    $34280, %eax            #  12:     assign v2 <- 34280
+-     jmp     l_f1_8                  #  12:     goto   8
++     jmp     l_f1_8                  #  13:     goto   8
++ l_f1_10_if_false:
+-     #-103017644(%ebp)103017624  [ $v4       <array 80 of <array 60 of <array 3 of <array 98 of <array 73 of <bool>>>>>> %ebp-103017644 ]
++     #   -103017644(%ebp)  103017624  [ $v4       <array 80 of <array 60 of <array 3 of <array 98 of <array 73 of <bool>>>>>> %ebp-103017644 ]
++     jmp     l_test_15               #  17:     goto   15
++     jmp     l_test_15               #  18:     goto   15
++     jmp     l_test_15               #  19:     goto   15
++     jmp     l_test_15               #  20:     goto   15
++     jmp     l_test_15               #  21:     goto   15
++     jmp     l_test_15               #  22:     goto   15
+-     movl    $1, %eax                #  17:     assign t3 <- 1
++     movl    $1, %eax                #  23:     assign t3 <- 1
+-     jmp     l_test_16               #  18:     goto   16
++     jmp     l_test_16               #  24:     goto   16
++ l_test_15:
+-     movl    $0, %eax                #  19:     assign t3 <- 0
++     movl    $0, %eax                #  26:     assign t3 <- 0
+-     movzbl  -22(%ebp), %eax         #  21:     assign v0 <- t3
++     movzbl  -22(%ebp), %eax         #  28:     assign v0 <- t3

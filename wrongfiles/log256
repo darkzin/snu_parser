@@ -1,0 +1,25 @@
++     jmp     l_f0_17                 #  13:     goto   17
++     jmp     l_f0_17                 #  14:     goto   17
+-     jmp     l_f0_15_if_true         #  13:     goto   15_if_true
++     jmp     l_f0_15_if_true         #  15:     goto   15_if_true
++ l_f0_17:
+-     jmp     l_f0_14                 #  15:     goto   14
++     jmp     l_f0_14                 #  18:     goto   14
+-     call    dummyCHARfunc           #  17:     call   t4 <- dummyCHARfunc
++     call    dummyCHARfunc           #  20:     call   t4 <- dummyCHARfunc
+-     movzbl  -13(%ebp), %eax         #  18:     if     t4 <= 97 goto 21_if_true
++     movzbl  -13(%ebp), %eax         #  21:     if     t4 <= 97 goto 21_if_true
+-     jmp     l_f0_22_if_false        #  19:     goto   22_if_false
++     jmp     l_f0_22_if_false        #  22:     goto   22_if_false
+-     call    dummyCHARfunc           #  21:     call   t5 <- dummyCHARfunc
++     call    dummyCHARfunc           #  24:     call   t5 <- dummyCHARfunc
+-     jmp     l_f0_20                 #  22:     goto   20
++     jmp     l_f0_20                 #  25:     goto   20
+-     addl    $1, %esp               
++     addl    $4, %esp               
++     jmp     l_test_10               #  14:     goto   10
+-     call    dummyINTfunc            #  15:     call   t3 <- dummyINTfunc
++     call    dummyINTfunc            #  16:     call   t3 <- dummyINTfunc
+-     jmp     l_test_11_while_cond    #  16:     goto   11_while_cond
++     jmp     l_test_11_while_cond    #  17:     goto   11_while_cond
++ l_test_10:

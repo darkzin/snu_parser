@@ -1,0 +1,6 @@
++     jmp     l_f1_3_if_false         #   1:     goto   3_if_false
+-     jmp     l_f1_1                  #   1:     goto   1
++     jmp     l_f1_1                  #   2:     goto   1
++ l_f1_3_if_false:
+-     movl    $77246, %eax            #   3:     assign v1 <- 77246
++     movl    $77246, %eax            #   5:     assign v1 <- 77246

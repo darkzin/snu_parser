@@ -1,0 +1,40 @@
++     jmp     l_f1_3                  #   2:     goto   3
+-     movl    $1, %eax                #   3:     assign t7 <- 1
++     movl    $1, %eax                #   4:     assign t7 <- 1
+-     jmp     l_f1_4                  #   4:     goto   4
++     jmp     l_f1_4                  #   5:     goto   4
++ l_f1_3:
+-     movl    $0, %eax                #   5:     assign t7 <- 0
++     movl    $0, %eax                #   7:     assign t7 <- 0
+-     movzbl  -13(%ebp), %eax         #   7:     assign v1 <- t7
++     movzbl  -13(%ebp), %eax         #   9:     assign v1 <- t7
+-     movl    $98, %eax               #   9:     if     98 < 98 goto 9_while_body
++     movl    $98, %eax               #  11:     if     98 < 98 goto 9_while_body
+-     jmp     l_f1_7                  #  10:     goto   7
++     jmp     l_f1_7                  #  12:     goto   7
+-     movl    $70728, %eax            #  12:     assign v2 <- 70728
++     movl    $70728, %eax            #  14:     assign v2 <- 70728
+-     movl    $1, %eax                #  13:     assign v1 <- 1
++     movl    $1, %eax                #  15:     assign v1 <- 1
++     jmp     l_f1_13                 #  17:     goto   13
++     jmp     l_f1_13                 #  18:     goto   13
+-     jmp     l_f1_14_while_cond      #  15:     goto   14_while_cond
++     jmp     l_f1_14_while_cond      #  19:     goto   14_while_cond
++ l_f1_13:
+-     jmp     l_f1_8_while_cond       #  16:     goto   8_while_cond
++     jmp     l_f1_8_while_cond       #  21:     goto   8_while_cond
++     jmp     l_f2_3                  #   1:     goto   3
++     jmp     l_f2_3                  #   2:     goto   3
+-     movl    $1, %eax                #   1:     assign t7 <- 1
++     movl    $1, %eax                #   3:     assign t7 <- 1
+-     jmp     l_f2_4                  #   2:     goto   4
++     jmp     l_f2_4                  #   4:     goto   4
++ l_f2_3:
+-     movl    $0, %eax                #   3:     assign t7 <- 0
++     movl    $0, %eax                #   6:     assign t7 <- 0
+-     movzbl  -13(%ebp), %eax         #   5:     return t7
++     movzbl  -13(%ebp), %eax         #   8:     return t7
+-     movl    $98, %eax               #   6:     assign v1 <- 98
++     movl    $98, %eax               #   9:     assign v1 <- 98
+-     addl    $6, %esp               
++     addl    $12, %esp              

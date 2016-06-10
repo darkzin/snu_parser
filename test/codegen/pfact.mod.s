@@ -60,7 +60,7 @@ l_primefactor_2_if_false:
     je      l_primefactor_6_if_true
     jmp     l_primefactor_7_if_false #   7:     goto   7_if_false
 l_primefactor_6_if_true:
-    leal    _str_17, %eax           #   9:     &()    t5 <- _str_17
+    leal    _str_1, %eax            #   9:     &()    t5 <- _str_1
     movl    %eax, -24(%ebp)        
     movl    -24(%ebp), %eax         #  10:     param  0 <- t5
     pushl   %eax                   
@@ -96,7 +96,7 @@ l_primefactor_14_while_body:
     je      l_primefactor_17_if_true
     jmp     l_primefactor_18_if_false #  24:     goto   18_if_false
 l_primefactor_17_if_true:
-    leal    _str_18, %eax           #  26:     &()    t8 <- _str_18
+    leal    _str_2, %eax            #  26:     &()    t8 <- _str_2
     movl    %eax, -36(%ebp)        
     movl    -36(%ebp), %eax         #  27:     param  0 <- t8
     pushl   %eax                   
@@ -160,7 +160,7 @@ main:
     rep     stosl                  
 
     # function body
-    leal    _str_19, %eax           #   0:     &()    t0 <- _str_19
+    leal    _str_3, %eax            #   0:     &()    t0 <- _str_3
     movl    %eax, -16(%ebp)        
     movl    -16(%ebp), %eax         #   1:     param  0 <- t0
     pushl   %eax                   
@@ -168,7 +168,7 @@ main:
     addl    $4, %esp               
     call    WriteLn                 #   3:     call   WriteLn
     call    WriteLn                 #   4:     call   WriteLn
-    leal    _str_20, %eax           #   5:     &()    t1 <- _str_20
+    leal    _str_4, %eax            #   5:     &()    t1 <- _str_4
     movl    %eax, -20(%ebp)        
     movl    -20(%ebp), %eax         #   6:     param  0 <- t1
     pushl   %eax                   
@@ -178,7 +178,7 @@ main:
     movl    %eax, -24(%ebp)        
     movl    -24(%ebp), %eax         #   9:     assign n <- t2
     movl    %eax, n                
-    leal    _str_21, %eax           #  10:     &()    t3 <- _str_21
+    leal    _str_5, %eax            #  10:     &()    t3 <- _str_5
     movl    %eax, -28(%ebp)        
     movl    -28(%ebp), %eax         #  11:     param  0 <- t3
     pushl   %eax                   
@@ -188,7 +188,7 @@ main:
     pushl   %eax                   
     call    WriteInt                #  14:     call   WriteInt
     addl    $4, %esp               
-    leal    _str_22, %eax           #  15:     &()    t4 <- _str_22
+    leal    _str_6, %eax            #  15:     &()    t4 <- _str_6
     movl    %eax, -32(%ebp)        
     movl    -32(%ebp), %eax         #  16:     param  0 <- t4
     pushl   %eax                   
@@ -219,30 +219,30 @@ l_pfact_exit:
     .align 4
 
     # scope: pfact
-_str_17:                            # <array 2 of <char>>
+_str_1:                             # <array 2 of <char>>
     .long    1
     .long    2
     .asciz " "
     .align   4
-_str_18:                            # <array 2 of <char>>
+_str_2:                             # <array 2 of <char>>
     .long    1
     .long    2
     .asciz " "
     .align   4
-_str_19:                            # <array 16 of <char>>
+_str_3:                             # <array 16 of <char>>
     .long    1
     .long   16
     .asciz "Prime factoring"
-_str_20:                            # <array 25 of <char>>
+_str_4:                             # <array 25 of <char>>
     .long    1
     .long   25
     .asciz "Enter number to factor: "
     .align   4
-_str_21:                            # <array 20 of <char>>
+_str_5:                             # <array 20 of <char>>
     .long    1
     .long   20
     .asciz "  prime factors of "
-_str_22:                            # <array 3 of <char>>
+_str_6:                             # <array 3 of <char>>
     .long    1
     .long    3
     .asciz ": "

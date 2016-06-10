@@ -1,0 +1,12 @@
+-     jmp     l_f0_9                  #   7:     goto   9
++     jmp     l_f0_10                 #   7:     goto   10
+- l_f0_9:
++ l_f0_10:
+-     jmp     l_f0_11                 #  10:     goto   11
++     jmp     l_f0_12                 #  10:     goto   12
+- l_f0_11:
++ l_f0_12:
+-     addl    $4, %esp               
++     addl    $16, %esp              
+-     addl    $1, %esp               
++     addl    $4, %esp               

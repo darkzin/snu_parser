@@ -1,0 +1,19 @@
++     jmp     l_f0_16                 #  33:     goto   16
+-     jmp     l_f0_17_while_cond      #  33:     goto   17_while_cond
++     jmp     l_f0_17_while_cond      #  34:     goto   17_while_cond
++     jmp     l_f1_1                  #   3:     goto   1
+-     call    WriteLn                 #   4:     call   WriteLn
++     call    WriteLn                 #   5:     call   WriteLn
+-     jmp     l_f1_2_while_cond       #   5:     goto   2_while_cond
++     jmp     l_f1_2_while_cond       #   6:     goto   2_while_cond
++ l_f1_1:
+-     call    dummyCHARfunc           #   6:     call   t9 <- dummyCHARfunc
++     call    dummyCHARfunc           #   8:     call   t9 <- dummyCHARfunc
+-     #-132627512(%ebp)132627480  [ $v5       <array 78 of <array 82 of <array 1 of <array 81 of <array 64 of <int>>>>>> %ebp-132627512 ]
++     #   -132627512(%ebp)  132627480  [ $v5       <array 78 of <array 82 of <array 1 of <array 81 of <array 64 of <int>>>>>> %ebp-132627512 ]
+-     #-164994416(%ebp)32366904  [ $v6       <array 42 of <array 3 of <array 95 of <array 26 of <array 26 of <int>>>>>> %ebp-164994416 ]
++     #   -164994416(%ebp)  32366904  [ $v6       <array 42 of <array 3 of <array 95 of <array 26 of <array 26 of <int>>>>>> %ebp-164994416 ]
+-     addl    $10, %esp              
++     addl    $16, %esp              
+-     addl    $13, %esp              
++     addl    $16, %esp              

@@ -1,0 +1,38 @@
++     jmp     l_f2_2                  #   3:     goto   2
+-     movl    $1, %eax                #   4:     assign t4 <- 1
++     movl    $1, %eax                #   5:     assign t4 <- 1
+-     jmp     l_f2_3                  #   5:     goto   3
++     jmp     l_f2_3                  #   6:     goto   3
++ l_f2_2:
+-     movl    $0, %eax                #   6:     assign t4 <- 0
++     movl    $0, %eax                #   8:     assign t4 <- 0
+-     movzbl  -14(%ebp), %eax         #   8:     return t4
++     movzbl  -14(%ebp), %eax         #  10:     return t4
+-     call    dummyBOOLfunc           #   9:     call   t5 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #  11:     call   t5 <- dummyBOOLfunc
+-     movl    $100, %eax              #  11:     param  2 <- 100
++     movl    $100, %eax              #  13:     param  2 <- 100
+-     movl    $92548, %eax            #  12:     param  1 <- 92548
++     movl    $92548, %eax            #  14:     param  1 <- 92548
++     jmp     l_f2_12                 #  15:     goto   12
+-     movl    $1, %eax                #  13:     assign t6 <- 1
++     movl    $1, %eax                #  16:     assign t6 <- 1
+-     jmp     l_f2_12                 #  14:     goto   12
++     jmp     l_f2_13                 #  17:     goto   13
++ l_f2_12:
+-     movl    $0, %eax                #  15:     assign t6 <- 0
++     movl    $0, %eax                #  19:     assign t6 <- 0
+- l_f2_12:
++ l_f2_13:
+-     movzbl  -16(%ebp), %eax         #  17:     param  0 <- t6
++     movzbl  -16(%ebp), %eax         #  21:     param  0 <- t6
+-     call    f0                      #  18:     call   t7 <- f0
++     call    f0                      #  22:     call   t7 <- f0
+-     addl    $6, %esp               
++     addl    $12, %esp              
+-     movzbl  -17(%ebp), %eax         #  19:     if     t7 # 97 goto 9_while_body
++     movzbl  -17(%ebp), %eax         #  23:     if     t7 # 97 goto 9_while_body
+-     jmp     l_f2_7                  #  20:     goto   7
++     jmp     l_f2_7                  #  24:     goto   7
+-     jmp     l_f2_8_while_cond       #  22:     goto   8_while_cond
++     jmp     l_f2_8_while_cond       #  26:     goto   8_while_cond

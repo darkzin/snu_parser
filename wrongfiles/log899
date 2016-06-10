@@ -1,0 +1,12 @@
++     jmp     l_f1_0                  #   3:     goto   0
+-     jmp     l_f1_1_while_cond       #   4:     goto   1_while_cond
++     jmp     l_f1_1_while_cond       #   5:     goto   1_while_cond
++ l_f1_0:
+-     call    dummyCHARfunc           #   5:     call   t2 <- dummyCHARfunc
++     call    dummyCHARfunc           #   7:     call   t2 <- dummyCHARfunc
+-     movzbl  -14(%ebp), %eax         #   6:     assign v2 <- t2
++     movzbl  -14(%ebp), %eax         #   8:     assign v2 <- t2
+-     call    dummyBOOLfunc           #   7:     call   t3 <- dummyBOOLfunc
++     call    dummyBOOLfunc           #   9:     call   t3 <- dummyBOOLfunc
+-     movzbl  -15(%ebp), %eax         #   8:     assign v3 <- t3
++     movzbl  -15(%ebp), %eax         #  10:     assign v3 <- t3

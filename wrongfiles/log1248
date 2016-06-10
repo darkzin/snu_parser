@@ -1,0 +1,14 @@
+-     movl    $99, %eax               #   2:     if     99 = 98 goto 4
++     movl    $99, %eax               #   2:     if     99 = 98 goto 5
+-     je      l_f0_4                 
++     je      l_f0_5                 
+-     jmp     l_f0_5                  #   3:     goto   5
++     jmp     l_f0_6                  #   3:     goto   6
+- l_f0_4:
++ l_f0_5:
+-     jmp     l_f0_6                  #   6:     goto   6
++     jmp     l_f0_7                  #   6:     goto   7
+- l_f0_5:
++ l_f0_6:
+- l_f0_6:
++ l_f0_7:
